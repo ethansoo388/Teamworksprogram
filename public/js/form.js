@@ -37,17 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 timestamp: new Date().toISOString()
             };
 
-            // TODO: Replace with your actual Google Web App URL
-            const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+            // Google Apps Script Web App URL
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMunBs-hCW0FZ4h_sjoX3zm-QkUeK9akyQIRanfBlxMzW_NOjKldmlfnTAhx-ne4DP7Q/exec';
 
             // Submit to Google Sheets via Web App
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors', // Important for Google Apps Script
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
+                body: new URLSearchParams(data)
             })
             .then(() => {
                 // Show success message
