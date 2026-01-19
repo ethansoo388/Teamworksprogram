@@ -68,9 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
         form.classList.add('hidden');
         successMessage.classList.remove('hidden');
         successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Auto-redirect back to the main page after 3 seconds (requested behavior)
+        // We keep the thank-you message visible during the delay.
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 3000);
       } else {
-        alert('Thank you! We will contact you shortly.');
+        alert('We got your message, thank you! We will contact you shortly.');
         form.reset();
+
+        // If we don't have a successMessage section, still redirect after 3 seconds.
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 3000);
       }
 
     } catch (err) {
