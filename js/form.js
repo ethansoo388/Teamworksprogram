@@ -1,121 +1,95 @@
-// Form submission handler for Google Web App
+// TeamWorks lead capture form submission
+// Sends x-www-form-urlencoded to Google Apps Script Web App (no CORS preflight).
+// Works on static hosting (Hostinger) behind Cloudflare.
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('consultation-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const submitText = document.getElementById('submit-text');
-    const successMessage = document.getElementById('success-message');
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMunBs-hCW0FZ4h_sjoX3zm-QkUeK9akyQIRanfBlxMzW_NOjKldmlfnTAhx-ne4DP7Q/exec';
 
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+function buildUrlEncodedPayload(form) {
+  const fd = new FormData(form);
+  const params = new URLSearchParams();
 
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitText.textContent = 'Submitting...';
-            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-
-            // Collect form data
-            const formData = new FormData(form);
-            
-            // Collect all selected outcomes
-            const outcomes = [];
-            const outcomeCheckboxes = form.querySelectorAll('input[name="outcomes"]:checked');
-            outcomeCheckboxes.forEach(checkbox => {
-                outcomes.push(checkbox.value);
-            });
-
-            // Create data object
-            const data = {
-                fullName: formData.get('fullName'),
-                workEmail: formData.get('workEmail'),
-                companyName: formData.get('companyName'),
-                teamSize: formData.get('teamSize'),
-                deliveryFormat: formData.get('deliveryFormat'),
-                outcomes: outcomes.join(', '),
-                contactMethod: formData.get('contactMethod'),
-                timestamp: new Date().toISOString()
-            };
-
-            // Google Apps Script Web App URL
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMunBs-hCW0FZ4h_sjoX3zm-QkUeK9akyQIRanfBlxMzW_NOjKldmlfnTAhx-ne4DP7Q/exec';
-
-            // Submit to Google Sheets via Web App
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors', // Important for Google Apps Script
-                body: new URLSearchParams(data)
-            })
-            .then(() => {
-                // Show success message
-                form.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                // Optional: Redirect after 3 seconds
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 5000);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                
-                // Show error message
-                alert('Sorry, something went wrong. Please try again or contact us directly.');
-                
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitText.textContent = 'Get My Custom Plan';
-                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-            });
-        });
-    }
-});
-
-// Google Apps Script Code (Deploy as Web App)
-// Copy this to your Google Apps Script and deploy as Web App:
-/*
-
-function doPost(e) {
-  try {
-    const data = JSON.parse(e.postData.contents);
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    
-    // Add headers if first row is empty
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow([
-        'Timestamp',
-        'Full Name',
-        'Work Email',
-        'Company Name',
-        'Team Size',
-        'Delivery Format',
-        'Outcomes',
-        'Contact Method'
-      ]);
-    }
-    
-    // Append data
-    sheet.appendRow([
-      data.timestamp,
-      data.fullName,
-      data.workEmail,
-      data.companyName,
-      data.teamSize,
-      data.deliveryFormat,
-      data.outcomes,
-      data.contactMethod
-    ]);
-    
-    return ContentService.createTextOutput(JSON.stringify({ status: 'success' }))
-      .setMimeType(ContentService.MimeType.JSON);
-      
-  } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+  // Append all fields (including multiple checkboxes)
+  for (const [key, value] of fd.entries()) {
+    if (value === null || value === undefined) continue;
+    const v = String(value).trim();
+    if (v.length === 0) continue;
+    params.append(key, v);
   }
+
+  // Add timestamp (server will also add one if missing)
+  params.set('timestamp', new Date().toISOString());
+
+  return params;
 }
 
-*/
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('consultation-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitText = document.getElementById('submit-text');
+  const successMessage = document.getElementById('success-message');
+
+  if (!form) {
+    console.error('[TeamWorks] consultation-form not found.');
+    return;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Basic required checks (mirror HTML required fields)
+    const fullName = (form.querySelector('[name="fullName"]')?.value || '').trim();
+    const workEmail = (form.querySelector('[name="workEmail"]')?.value || '').trim();
+    if (!fullName || !workEmail) {
+      alert('Please fill in your Full Name and Work Email.');
+      return;
+    }
+
+    // UX: disable submit
+    const originalText = submitText ? submitText.textContent : null;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+    }
+    if (submitText) submitText.textContent = 'Submitting...';
+
+    try {
+      const payload = buildUrlEncodedPayload(form);
+
+      // NOTE: mode:no-cors means we cannot read the response in the browser.
+      // If the network request is made successfully, Apps Script will log doPost + append rows.
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload
+      });
+
+      // Optimistic success UI
+      if (successMessage) {
+        form.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert('Thank you! We will contact you shortly.');
+        form.reset();
+      }
+
+    } catch (err) {
+      console.error('[TeamWorks] form submit failed:', err);
+      alert('Submission failed. Please try again.');
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+      }
+      if (submitText && originalText !== null) submitText.textContent = originalText;
+      return;
+    }
+
+    // Re-enable button (optional, in case user stays on page)
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+    }
+    if (submitText && originalText !== null) submitText.textContent = originalText || 'Submit';
+  });
+});
