@@ -6,7 +6,7 @@ const courses = [
     id: "01",
     title: "Creating Super Teams",
     description: "Build high-performance teams through our famous Airplane Game and Tornado Challenge. Learn trust, collaboration, and proven team-building methodologies.",
-    image: "https://images.unsplash.com/photo-1739298061740-5ed03045b280?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzY4MjEyMTExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://i.postimg.cc/4xWR2vp9/hyper-productive-Asia-teams-discussing-and-standing-doing-activities-smiling-vibrant-colours-with.jpg",
     icon: Users,
     colors: {
       primary: "#6D28D9",
@@ -18,7 +18,7 @@ const courses = [
     id: "02",
     title: "Design Like Apple",
     description: "Master Apple's design thinking principles through hands-on prototyping. Create products and experiences that customers truly love.",
-    image: "https://images.unsplash.com/photo-1565351167686-7a19c5114965?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBicmFpbnN0b3JtaW5nfGVufDF8fHx8MTc2ODI2ODE5NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://i.postimg.cc/BvqbBQ5z/A-team-working-on-amazing-ideas-young-asia-smiling-happy.jpg",
     icon: Palette,
     colors: {
       primary: "#EC4899",
@@ -30,7 +30,7 @@ const courses = [
     id: "03",
     title: "Work Clear, Work Fast",
     description: "Adopt Amazon's operational excellence frameworks. Eliminate waste, accelerate delivery, and optimize your team's workflow.",
-    image: "https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzY4MjIzNTI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://i.postimg.cc/hvbTt3KV/Untitled-design-(14).png",
     icon: Zap,
     colors: {
       primary: "#F59E0B",
@@ -42,7 +42,7 @@ const courses = [
     id: "04",
     title: "Lean Six Sigma Problem Solving",
     description: "Apply data-driven techniques to eliminate defects. Simplified, non-technical approach with practical tools your team will actually use.",
-    image: "https://images.unsplash.com/photo-1573496130103-a442a3754d0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwYnVzaW5lc3MlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc2ODI4MjY5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://i.postimg.cc/W11141nG/an-asian-team-looking-happy-solving-problems-young-vibrant-bright-with-white-background-boards.jpg",
     icon: TrendingUp,
     colors: {
       primary: "#16A34A",
@@ -54,7 +54,7 @@ const courses = [
     id: "05",
     title: "Prompt Your AI Better",
     description: "Harness AI tools through strategic prompting and workflow integration. Hands-on practice with real tools and business scenarios.",
-    image: "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxlYWRlcnNoaXB8ZW58MXx8fHwxNzY4MjE0MjEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "https://i.postimg.cc/XY4ykWkt/Untitled-design-(18).png",
     icon: Sparkles,
     colors: {
       primary: "#0EA5E9",
@@ -66,7 +66,7 @@ const courses = [
 
 export function DiscoverCoursesV2() {
   return (
-    <section className="py-32 bg-white">
+    <section id="courses" className="py-32 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -214,7 +214,7 @@ export function DiscoverCoursesV2() {
               {/* Right: Image */}
               <div className="relative h-[400px] lg:h-[600px]">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRhdGlvbiUyMG1lZXRpbmclMjBhZHZpc29yfGVufDF8fHx8MTc2ODM5NTQxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="https://i.postimg.cc/dQWqxYFz/j-APANESE-consultant-WEARING-CASUAL-not-corporaty-clothing-sitting-talking-to-clients-happy-confiden.jpg"
                   alt="Free consultation"
                   className="w-full h-full object-cover"
                 />

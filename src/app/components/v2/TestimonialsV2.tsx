@@ -18,7 +18,7 @@ const testimonials = [
 
 export function TestimonialsV2() {
   return (
-    <section className="py-32 bg-gray-50">
+    <section id="testimonials" className="py-32 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -41,7 +41,7 @@ export function TestimonialsV2() {
                 "{testimonial.quote}"
               </p>
               <div className="pt-6 border-t border-gray-200">
-                <div className="mb-1">{testimonial.author}</div>
+                <div className="mb-1 font-semibold">{testimonial.author}</div>
                 <div className="text-sm text-gray-500">{testimonial.role}</div>
               </div>
             </div>

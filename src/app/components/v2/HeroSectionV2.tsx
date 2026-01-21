@@ -35,15 +35,15 @@ export function HeroSectionV2() {
             {/* Clean Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
               <div>
-                <div className="text-3xl mb-1">5K+</div>
+                <div className="text-3xl mb-1 font-semibold">5K+</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">Students</div>
               </div>
               <div>
-                <div className="text-3xl mb-1">60%</div>
+                <div className="text-3xl mb-1 font-semibold">60%</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">Hands-On</div>
               </div>
               <div>
-                <div className="text-3xl mb-1">Free*</div>
+                <div className="text-3xl mb-1 font-semibold">Free*</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">HRD Funding</div>
               </div>
             </div>
@@ -53,16 +53,24 @@ export function HeroSectionV2() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758691736995-fd7222612210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBtb2Rlcm4lMjBvZmZpY2V8ZW58MXx8fHwxNzY4MzkwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://i.postimg.cc/65PR8Kdb/Two-young-asian-ladies-discussing-and-standing-smiling-vibrant-colours-with-white-background.jpg"
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6">
-              <div className="text-sm text-gray-500 mb-1">Starting from</div>
-              <div className="text-3xl mb-1">FREE</div>
-              <div className="text-xs text-gray-500">with HRD funding</div>
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[200px]">
+              <div className="flex flex-col items-center text-center gap-3">
+                <img 
+                  src="https://www.ideavit.co/web/image/996-da30adeb/HRD-Corp-Claimable-Logo-1024x1024-removebg-preview.webp" 
+                  alt="HRD Corp Claimable" 
+                  className="w-24 h-24 object-contain"
+                />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900 mb-1">100%</div>
+                  <div className="text-xs text-gray-600 font-medium">HRD Claimable</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

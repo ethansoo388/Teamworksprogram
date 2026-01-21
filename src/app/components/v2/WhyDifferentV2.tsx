@@ -89,7 +89,7 @@ export function WhyDifferentV2() {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-lg mb-2">{feature.title}</h4>
+                      <h4 className="text-lg mb-2 font-semibold">{feature.title}</h4>
                       <p className="text-gray-600 leading-relaxed">
                         {feature.description}
                       </p>
@@ -104,7 +104,7 @@ export function WhyDifferentV2() {
           <div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1761250246894-ee2314939662?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFpbmluZyUyMHdvcmtzaG9wJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2ODM5MDUzNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://i.postimg.cc/Jn7tTYNJ/Untitled-design-(13).png"
                 alt="Workshop in action"
                 className="w-full h-full object-cover"
               />
@@ -138,7 +138,7 @@ export function WhyDifferentV2() {
               }}
             >
               <div className="text-5xl mb-4">{activity.emoji}</div>
-              <h4 className="text-lg mb-3">{activity.name}</h4>
+              <h4 className="text-lg mb-3 font-semibold">{activity.name}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">
                 {activity.description}
               </p>

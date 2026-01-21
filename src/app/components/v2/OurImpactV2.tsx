@@ -19,7 +19,7 @@ export function OurImpactV2() {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
+    <section id="impact" className="py-32 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section Header - Apollo Style */}
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -39,7 +39,7 @@ export function OurImpactV2() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {impacts.map((impact, index) => (
             <div key={index} className="text-center">
-              <div className="text-6xl lg:text-7xl mb-4 tracking-tight">
+              <div className="text-6xl lg:text-7xl mb-4 tracking-tight font-bold">
                 {impact.number}
               </div>
               <div className="text-sm text-gray-600 leading-relaxed max-w-[200px] mx-auto">

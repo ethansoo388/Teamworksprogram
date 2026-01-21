@@ -5,7 +5,7 @@ export function FooterV2() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="text-3xl mb-4 tracking-tight">TeamWorks</div>
+            <div className="text-3xl mb-4 tracking-tight font-semibold">TeamWorks</div>
             <p className="text-gray-600 max-w-md leading-relaxed">
               Fun, hands-on training workshops for SME teams across Southeast Asia. 
               Transform your team in just 2 days.
@@ -14,7 +14,7 @@ export function FooterV2() {
 
           {/* Courses */}
           <div>
-            <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500">Courses</h4>
+            <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Courses</h4>
             <div className="space-y-3 text-sm">
               <div><a href="#" className="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
               <div><a href="#" className="hover:text-gray-600 transition-colors">Design Like Apple</a></div>
@@ -26,7 +26,7 @@ export function FooterV2() {
 
           {/* Company */}
           <div>
-            <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500">Company</h4>
+            <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Company</h4>
             <div className="space-y-3 text-sm">
               <div><a href="#" className="hover:text-gray-600 transition-colors">About Us</a></div>
               <div><a href="#" className="hover:text-gray-600 transition-colors">Our Instructors</a></div>

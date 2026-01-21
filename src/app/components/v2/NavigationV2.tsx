@@ -9,7 +9,7 @@ export function NavigationV2() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="text-2xl tracking-tight">TeamWorks</div>
+          <div className="text-2xl tracking-tight font-semibold">TeamWorks</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
