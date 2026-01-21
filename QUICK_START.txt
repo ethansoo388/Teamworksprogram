@@ -1,0 +1,98 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║        TEAMWORKS - QUICK DEPLOYMENT GUIDE                    ║
+║        Ready to deploy in 5 simple steps!                    ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 WHAT'S DONE:
+   ✅ New page created: /creating-super-teams.html
+   ✅ Main page updated: Course 01 button now says "Learn more"
+   ✅ All files ready for deployment
+
+📁 FILES YOU NEED:
+   1. /public/creating-super-teams.html (NEW - copy this!)
+   2. /public/index.html (UPDATED - copy this!)
+   3. /public/css/style.css (should already exist)
+   4. /public/js/main.js (should already exist)
+
+🚀 DEPLOY IN 5 STEPS:
+
+STEP 1: Login to Hostinger
+   → Go to hpanel.hostinger.com
+   → Enter your credentials
+   → Click on "File Manager"
+
+STEP 2: Navigate to Your Website Folder
+   → Click "public_html" folder
+   → You should see index.html and other files
+
+STEP 3: Create New File (creating-super-teams.html)
+   → Click "New File" button at top
+   → Name it exactly: creating-super-teams.html
+   → Click the file name to edit it
+   → Copy ALL content from Figma Make file
+   → Paste into editor
+   → Click "Save"
+
+STEP 4: Update Existing File (index.html)
+   → Click on existing "index.html" file
+   → Click "Edit" button
+   → Select All (Ctrl+A) and Delete
+   → Copy ALL content from Figma Make file
+   → Paste into editor
+   → Click "Save"
+
+STEP 5: Test Your Website
+   → Visit: https://teamworks.ciagile.com
+   → Scroll down to "Course 01: Creating Super Teams"
+   → Button should say "Learn more"
+   → Click the button
+   → You should see your new course detail page!
+
+🎯 EXPECTED RESULT:
+   Homepage → Course 01 "Learn more" → Course Detail Page → "Book this course" → Booking Page
+
+✅ SUCCESS INDICATORS:
+   - Course 01 button says "Learn more" (not "Book this course")
+   - Clicking button goes to /creating-super-teams
+   - New page shows purple theme
+   - All sections display properly
+   - Mobile menu works
+
+🆘 QUICK FIXES:
+   
+   Problem: Button still says "Book this course"
+   Fix: Clear browser cache (Ctrl+Shift+R or Cmd+Shift+R)
+
+   Problem: 404 error on new page
+   Fix: Check filename is exactly: creating-super-teams.html
+
+   Problem: Page looks broken
+   Fix: Make sure css/style.css file exists
+
+   Problem: Icons don't show
+   Fix: Check internet connection (icons load from CDN)
+
+📖 DETAILED GUIDES:
+   → DEPLOYMENT_GUIDE.md - Full deployment instructions
+   → FILES_TO_DOWNLOAD.md - File reference
+   → DOWNLOAD_PACKAGE.md - Complete project overview
+
+💡 PRO TIPS:
+   1. Backup your current index.html before overwriting
+   2. Test on mobile after deploying
+   3. Clear cache if changes don't appear
+   4. File permissions should be 644 for files, 755 for folders
+
+🎉 THAT'S IT!
+   Your website is ready. Just copy, paste, and deploy!
+
+   Total Time: ~10 minutes
+   Difficulty: Easy
+   Risk: Low (you can always restore backup)
+
+───────────────────────────────────────────────────────────────
+Last Updated: January 21, 2026
+Status: ✅ READY TO DEPLOY
+───────────────────────────────────────────────────────────────

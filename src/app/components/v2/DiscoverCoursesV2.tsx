@@ -12,7 +12,9 @@ const courses = [
       primary: "#6D28D9",
       light: "#EDE9FE",
       dark: "#5B21B6"
-    }
+    },
+    buttonText: "Learn more",
+    buttonLink: "/creating-super-teams.html"
   },
   {
     id: "02",
@@ -24,7 +26,9 @@ const courses = [
       primary: "#EC4899",
       light: "#FCE7F3",
       dark: "#DB2777"
-    }
+    },
+    buttonText: "Book this course",
+    buttonLink: "/bookConsultation.html"
   },
   {
     id: "03",
@@ -36,7 +40,9 @@ const courses = [
       primary: "#F59E0B",
       light: "#FEF3C7",
       dark: "#D97706"
-    }
+    },
+    buttonText: "Book this course",
+    buttonLink: "/bookConsultation.html"
   },
   {
     id: "04",
@@ -48,7 +54,9 @@ const courses = [
       primary: "#16A34A",
       light: "#DCFCE7",
       dark: "#15803D"
-    }
+    },
+    buttonText: "Book this course",
+    buttonLink: "/bookConsultation.html"
   },
   {
     id: "05",
@@ -60,7 +68,9 @@ const courses = [
       primary: "#0EA5E9",
       light: "#E0F2FE",
       dark: "#0284C7"
-    }
+    },
+    buttonText: "Book this course",
+    buttonLink: "/bookConsultation.html"
   }
 ];
 
@@ -169,8 +179,11 @@ export function DiscoverCoursesV2() {
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor = course.colors.primary;
                       }}
+                      onClick={() => {
+                        window.location.href = course.buttonLink;
+                      }}
                     >
-                      <span>Book this course</span>
+                      <span>{course.buttonText}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>

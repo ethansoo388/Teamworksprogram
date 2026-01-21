@@ -27,7 +27,15 @@ export function HeroSectionV2() {
                 <span>Book Free Consultation</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-full hover:border-black transition-all">
+              <button 
+                className="border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-full hover:border-black transition-all"
+                onClick={() => {
+                  const coursesSection = document.getElementById('courses');
+                  if (coursesSection) {
+                    coursesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+              >
                 View Courses
               </button>
             </div>
