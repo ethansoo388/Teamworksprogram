@@ -21,24 +21,32 @@
 <body class="antialiased">
     
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl tracking-tight font-semibold hover:text-gray-700 transition-colors">TeamWorks</a>
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900">
+                        <i data-lucide="users-2" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 01</div>
+                        <div class="font-bold text-lg -mt-0.5">Creating Super Teams</div>
+                    </div>
+                </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html#courses" class="text-sm hover:text-gray-600 transition-colors">Courses</a>
-                    <a href="index.html#impact" class="text-sm hover:text-gray-600 transition-colors">Impact</a>
-                    <a href="index.html#testimonials" class="text-sm hover:text-gray-600 transition-colors">Testimonials</a>
-                    <a href="index.html#pricing" class="text-sm hover:text-gray-600 transition-colors">Pricing</a>
+                    <a href="#modules" class="text-sm hover:text-gray-600 transition-colors">Modules</a>
+                    <a href="#outcomes" class="text-sm hover:text-gray-600 transition-colors">Outcomes</a>
+                    <a href="#testimonials" class="text-sm hover:text-gray-600 transition-colors">Reviews</a>
+                    <a href="#faq" class="text-sm hover:text-gray-600 transition-colors">FAQ</a>
                 </div>
 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="bookConsultation.html" class="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
-                        Book Consultation
+                    <a href="bookConsultation.html" class="bg-purple-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
+                        Book This Course
                     </a>
                 </div>
 
@@ -51,12 +59,12 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden py-6 border-t border-gray-200">
                 <div class="flex flex-col gap-4">
-                    <a href="index.html#courses" class="text-sm py-2">Courses</a>
-                    <a href="index.html#impact" class="text-sm py-2">Impact</a>
-                    <a href="index.html#testimonials" class="text-sm py-2">Testimonials</a>
-                    <a href="index.html#pricing" class="text-sm py-2">Pricing</a>
-                    <a href="bookConsultation.html" class="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
-                        Book Consultation
+                    <a href="#modules" class="text-sm py-2">Modules</a>
+                    <a href="#outcomes" class="text-sm py-2">Outcomes</a>
+                    <a href="#testimonials" class="text-sm py-2">Reviews</a>
+                    <a href="#faq" class="text-sm py-2">FAQ</a>
+                    <a href="bookConsultation.html" class="bg-purple-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                        Book This Course
                     </a>
                 </div>
             </div>
@@ -203,7 +211,7 @@
         </section>
 
         <!-- Course Modules Section -->
-        <section class="bg-white py-20 lg:py-32">
+        <section class="bg-white py-20 lg:py-32" id="modules">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
                     <!-- Left: Modules -->
@@ -321,8 +329,239 @@
             </div>
         </section>
 
+        <!-- Business Struggles Section -->
+        <section class="bg-white py-20 lg:py-32" id="outcomes">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-5xl mb-6 tracking-tight">Is Your Business Struggling With These?</h2>
+                    <p class="text-xl text-gray-600">If these sound familiar, your current way of working is costing you money.</p>
+                </div>
+
+                <!-- Problems Grid -->
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
+                    <div class="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+                        <div class="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">⏱️</div>
+                        <h3 class="text-xl mb-3 text-gray-900 font-semibold relative z-10">Constant Delays</h3>
+                        <p class="text-gray-700 leading-relaxed relative z-10">Projects that should take weeks are taking months.</p>
+                    </div>
+
+                    <div class="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+                        <div class="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">💬</div>
+                        <h3 class="text-xl mb-3 text-gray-900 font-semibold relative z-10">Broken Communication</h3>
+                        <p class="text-gray-700 leading-relaxed relative z-10">Things get "lost in translation" between you and your team.</p>
+                    </div>
+
+                    <div class="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+                        <div class="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">😔</div>
+                        <h3 class="text-xl mb-3 text-gray-900 font-semibold relative z-10">Demotivated Staff</h3>
+                        <p class="text-gray-700 leading-relaxed relative z-10">Good people are burnt out because priorities change every day.</p>
+                    </div>
+
+                    <div class="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+                        <div class="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">🎯</div>
+                        <h3 class="text-xl mb-3 text-gray-900 font-semibold relative z-10">Lack of Ownership</h3>
+                        <p class="text-gray-700 leading-relaxed relative z-10">You feel like you have to micromanage everything just to get it done.</p>
+                    </div>
+                </div>
+
+                <!-- The Payoff Section -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-5xl mb-3 tracking-tight">There Is a Better Way to Work. We'll Guide You.</h2>
+                    <p class="text-3xl lg:text-4xl text-purple-600 tracking-tight font-bold">The Payoff</p>
+                </div>
+
+                <!-- Payoff Grid -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- For the Boss -->
+                    <div class="border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl text-purple-600 mb-6 font-bold">For the Boss:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">Teams that solve problems before they reach your desk.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">Total visibility without the need to micromanage.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">Faster delivery cycles and zero handoff errors.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For the Team -->
+                    <div class="border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl text-purple-600 mb-6 font-bold">For the Team:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">Clear roles and zero "guessing" what the priority is.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">A culture of excellence where high performers actually want to stay.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700 leading-relaxed">The satisfaction of actually shipping great work on time.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who Should Attend -->
+        <section class="bg-gray-50 py-20 lg:py-32">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-5xl mb-6 tracking-tight">Who Should Attend</h2>
+                    <p class="text-xl text-gray-600">This course is designed for teams and leaders who want to elevate their performance.</p>
+                </div>
+
+                <!-- Audience Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users-2" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Team Leaders</h3>
+                        <p class="text-gray-600 text-sm">
+                            Department heads and team managers looking to build stronger teams.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="target" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Project Managers</h3>
+                        <p class="text-gray-600 text-sm">
+                            PMs who need to coordinate cross-functional teams effectively.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Business Owners</h3>
+                        <p class="text-gray-600 text-sm">
+                            SME owners wanting to create a high-performance culture.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">HR Professionals</h3>
+                        <p class="text-gray-600 text-sm">
+                            HR leaders focused on organizational development and culture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Participants Say -->
+        <section class="bg-white py-20 lg:py-32" id="testimonials">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-5xl mb-6 tracking-tight">What Participants Say</h2>
+                    <p class="text-xl text-gray-600">Real feedback from leaders who've transformed their teams.</p>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed italic flex-grow">
+                            "This program changed how we think about work, delivery, and results. Practical, empowering, and immediately applicable to real teams."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-semibold">FA</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Farhana Aina Fu'ad</div>
+                                <div class="text-sm text-gray-600">Head of Digital Services</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed italic flex-grow">
+                            "This course provide hands on involvement that helps the participant to learn and visualize quickly"
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-semibold">TM</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Tham Meng Tat</div>
+                                <div class="text-sm text-gray-600">Manager</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed italic flex-grow">
+                            "This program helps small teams work faster and smarter, breaking silos, building accountability, and delivering more results without adding headcount."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-semibold">NM</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Nazira Mohamed</div>
+                                <div class="text-sm text-gray-600">Business Analyst</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ Section -->
-        <section class="bg-white py-20 lg:py-32">
+        <section class="bg-white py-20 lg:py-32" id="faq">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl lg:text-5xl mb-6 tracking-tight">Common Questions</h2>
