@@ -96,7 +96,11 @@ export function PricingCTAV2() {
 
             {/* CTA Button */}
             <div className="mt-12 text-center">
-              <button className="bg-black text-white px-10 py-5 rounded-full hover:bg-gray-800 transition-all inline-flex items-center gap-3 group text-lg">
+              <button className="bg-black text-white px-10 py-5 rounded-full hover:bg-gray-800 transition-all inline-flex items-center gap-3 group text-lg"
+                onClick={() => {
+                  window.location.href = '/bookConsultation.html';
+                }}
+              >
                 <span>Book Free Consultation</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

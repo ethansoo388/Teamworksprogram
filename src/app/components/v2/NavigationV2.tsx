@@ -65,9 +65,9 @@ export function NavigationV2() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
+            <a href="/bookConsultation.html" className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
               Book Consultation
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -123,9 +123,9 @@ export function NavigationV2() {
               >
                 Pricing
               </a>
-              <button className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2">
+              <a href="/bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
                 Book Consultation
-              </button>
+              </a>
             </div>
           </div>
         )}

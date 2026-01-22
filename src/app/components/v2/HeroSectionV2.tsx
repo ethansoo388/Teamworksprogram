@@ -23,10 +23,10 @@ export function HeroSectionV2() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all inline-flex items-center justify-center gap-2 group">
+              <a href="/bookConsultation.html" className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all inline-flex items-center justify-center gap-2 group">
                 <span>Book Free Consultation</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
               <button 
                 className="border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-full hover:border-black transition-all"
                 onClick={() => {

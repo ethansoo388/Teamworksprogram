@@ -6,8 +6,14 @@ import { WhyDifferentV2 } from "@/app/components/v2/WhyDifferentV2";
 import { TestimonialsV2 } from "@/app/components/v2/TestimonialsV2";
 import { PricingCTAV2 } from "@/app/components/v2/PricingCTAV2";
 import { FooterV2 } from "@/app/components/v2/FooterV2";
+import { CoursePage } from "@/app/components/CoursePage";
 
 export default function App() {
+  // PREVIEW MODE: Showing Course 01 page
+  return <CoursePage />;
+  
+  // Uncomment below to show landing page instead
+  /*
   return (
     <div className="min-h-screen bg-white">
       <NavigationV2 />
@@ -20,4 +26,5 @@ export default function App() {
       <FooterV2 />
     </div>
   );
+  */
 }

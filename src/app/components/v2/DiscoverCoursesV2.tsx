@@ -208,7 +208,11 @@ export function DiscoverCoursesV2() {
                     Book a free consultation with our course advisor. We'll help you 
                     pick the perfect course for your team.
                   </p>
-                  <button className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-2 group text-lg font-medium">
+                  <button className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-2 group text-lg font-medium"
+                    onClick={() => {
+                      window.location.href = '/bookConsultation.html';
+                    }}
+                  >
                     <span>Schedule Free Consultation</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
