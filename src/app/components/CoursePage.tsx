@@ -1,25 +1,81 @@
 import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, ChevronDown } from "lucide-react";
-import { NavigationV2 } from "@/app/components/v2/NavigationV2";
 import { FooterV2 } from "@/app/components/v2/FooterV2";
+import { useState } from "react";
+
+const faqItems = [
+  {
+    question: "What makes this course different from other team-building workshops?",
+    answer: "Unlike traditional workshops that focus on trust falls and motivational speeches, we teach you a practical system based on Agile and Scrum methodologies. You'll learn frameworks you can implement immediately."
+  },
+  {
+    question: "Do we need to attend as an entire team?",
+    answer: "While not mandatory, we strongly recommend sending at least 5-10 people who work together regularly. The more team members who participate, the easier it is to implement the system back at your office."
+  },
+  {
+    question: "What's included in the course fee?",
+    answer: "The course fee includes a 2-day intensive workshop, all course materials and workbooks, digital toolkit and frameworks, 90-day email support, and alumni community access. We also provide refreshments and meals throughout the workshop."
+  },
+  {
+    question: "Is there a maximum team size for this course?",
+    answer: "Yes, we cap each session at 30 participants to ensure quality interaction and personalized attention. This allows everyone to participate actively in the exercises and simulations."
+  },
+  {
+    question: "What if we can't attend on the scheduled dates?",
+    answer: "We run this course multiple times throughout the year. If the current dates don't work for you, contact us and we'll help you find the next available session that fits your schedule."
+  }
+];
 
 export function CoursePage() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-white">
-      <NavigationV2 />
-      
-      {/* Breadcrumb */}
-      <section className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-3">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-gray-900 transition-colors">Home</a>
-            <span>/</span>
-            <a href="/#courses" className="hover:text-gray-900 transition-colors">Programs</a>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">Creating Super Teams</span>
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <a href="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900">
+                <Users2 className="w-5 h-5 text-white" />
+              </div>
+              <div className="flex flex-col">
+                <div className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 01</div>
+                <div className="font-bold text-lg -mt-0.5">Creating Super Teams</div>
+              </div>
+            </a>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#modules" className="text-sm hover:text-gray-600 transition-colors">Modules</a>
+              <a href="#outcomes" className="text-sm hover:text-gray-600 transition-colors">Outcomes</a>
+              <a href="#testimonials" className="text-sm hover:text-gray-600 transition-colors">Reviews</a>
+              <a href="#faq" className="text-sm hover:text-gray-600 transition-colors">FAQ</a>
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden md:block">
+              <a href="/bookConsultation.html" className="bg-purple-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
+                Book This Course
+              </a>
+            </div>
           </div>
         </div>
-      </section>
+      </nav>
 
+      {/* Breadcrumb Navigation */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <a href="https://www.ciagile.com" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#9333EA'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Home</a>
+            <span>/</span>
+            <a href="/index.html" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#9333EA'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Programs</a>
+            <span>/</span>
+            <span className="text-gray-900 font-bold">Creating Super Teams</span>
+          </div>
+        </div>
+      </div>
+      
       {/* Hero Section */}
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -150,7 +206,7 @@ export function CoursePage() {
       </section>
 
       {/* Course Modules Section */}
-      <section className="bg-white py-20 lg:py-32">
+      <section className="bg-white py-20 lg:py-32" id="modules">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left: Modules Content */}
@@ -243,7 +299,7 @@ export function CoursePage() {
       </section>
 
       {/* Business Struggles Section */}
-      <section className="bg-white py-20 lg:py-32">
+      <section className="bg-white py-20 lg:py-32" id="outcomes">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -394,7 +450,7 @@ export function CoursePage() {
       </section>
 
       {/* What Participants Say */}
-      <section className="bg-white py-20 lg:py-32">
+      <section className="bg-white py-20 lg:py-32" id="testimonials">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -468,65 +524,36 @@ export function CoursePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-50 py-20 lg:py-32">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          {/* Section Header */}
+      <section id="faq" className="bg-gray-50 py-20 lg:py-32">
+        <div className="max-w-[900px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Everything you need to know about Creating Super Teams.</p>
+            <h2 className="text-4xl lg:text-5xl mb-4 tracking-tight">Common Questions</h2>
+            <p className="text-base text-gray-600">
+              Everything you need to know about Creating Super Teams.
+            </p>
           </div>
 
-          {/* FAQ List */}
-          <div className="max-w-3xl mx-auto space-y-4">
-            <details className="bg-white border border-gray-200 rounded-2xl p-6 group">
-              <summary className="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-                What makes this course different from other team-building workshops?
-                <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                Unlike traditional workshops that focus on trust falls and motivational speeches, we teach you a practical system based on Agile and Scrum methodologies. You'll learn frameworks you can implement immediately.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-2xl p-6 group">
-              <summary className="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-                Do we need to attend as an entire team?
-                <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                While not mandatory, we strongly recommend sending at least 5-10 people who work together regularly. The more team members who participate, the easier it is to implement the system back at your office.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-2xl p-6 group">
-              <summary className="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-                What's included in the course fee?
-                <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                The course fee includes a 2-day intensive workshop, all course materials and workbooks, digital toolkit and frameworks, 90-day email support, and alumni community access. We also provide refreshments and meals throughout the workshop.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-2xl p-6 group">
-              <summary className="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-                Is there a maximum team size for this course?
-                <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                Yes, we cap each session at 30 participants to ensure quality interaction and personalized attention. This allows everyone to participate actively in the exercises and simulations.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-2xl p-6 group">
-              <summary className="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-                What if we can't attend on the scheduled dates?
-                <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                We run this course multiple times throughout the year. If the current dates don't work for you, contact us and we'll help you find the next available session that fits your schedule.
-              </p>
-            </details>
+          <div className="space-y-4">
+            {faqItems.map((item, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <button
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                >
+                  <span className="font-normal text-sm pr-4">{item.question}</span>
+                  <ChevronDown 
+                    className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${
+                      openFaqIndex === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openFaqIndex === index && (
+                  <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                    {item.answer}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

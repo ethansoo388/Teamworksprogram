@@ -7,10 +7,14 @@ import { TestimonialsV2 } from "@/app/components/v2/TestimonialsV2";
 import { PricingCTAV2 } from "@/app/components/v2/PricingCTAV2";
 import { FooterV2 } from "@/app/components/v2/FooterV2";
 import { CoursePage } from "@/app/components/CoursePage";
+import { Course02Page } from "@/app/components/Course02Page";
 
 export default function App() {
   // PREVIEW MODE: Showing Course 01 page
   return <CoursePage />;
+  
+  // Uncomment below to show Course 02 page instead
+  // return <Course02Page />;
   
   // Uncomment below to show landing page instead
   /*

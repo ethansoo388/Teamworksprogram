@@ -18,7 +18,7 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="antialiased bg-gray-50">
+<body class="antialiased">
     
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
@@ -65,48 +65,36 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-white py-20 lg:py-32">
+        <section class="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <div class="max-w-4xl mx-auto text-center">
-                    <div class="inline-block text-xs tracking-[0.2em] uppercase text-gray-500 mb-6">
-                        Free Consultation
+                    <div class="inline-block bg-gradient-to-r from-purple-100 via-pink-100 to-orange-100 rounded-full px-6 py-2 mb-6">
+                        <span class="text-sm font-semibold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent uppercase tracking-wide">
+                            Free Consultation
+                        </span>
                     </div>
-                    <h1 class="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
-                        Let's build your custom training plan
+
+                    <h1 class="text-4xl lg:text-6xl leading-tight mb-6 tracking-tight">
+                        Let's find the perfect course for your team
                     </h1>
-                    <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-12">
-                        Tell us about your team and goals. Our course advisor will create a personalized 
-                        recommendation—no pressure, just practical advice.
+
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        Tell us about your team's challenges and goals. We'll recommend the best course(s) and answer all your questions—completely free, no strings attached.
                     </p>
 
-                    <!-- Trust Badges -->
-                    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-12 mb-16">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
-                                <i data-lucide="users" class="w-6 h-6 text-purple-700"></i>
-                            </div>
-                            <div class="text-left">
-                                <div class="font-semibold">5,000+</div>
-                                <div class="text-sm text-gray-500">Students Trained</div>
-                            </div>
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600"></i>
+                            <span>Free consultation</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
-                                <i data-lucide="star" class="w-6 h-6 text-pink-600"></i>
-                            </div>
-                            <div class="text-left">
-                                <div class="font-semibold">10+ Years</div>
-                                <div class="text-sm text-gray-500">Instructor Experience</div>
-                            </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-blue-600"></i>
+                            <span>Response within 24 hours</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-green-600"></i>
-                            </div>
-                            <div class="text-left">
-                                <div class="font-semibold">FREE</div>
-                                <div class="text-sm text-gray-500">HRD Funding (MY)</div>
-                            </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-purple-600"></i>
+                            <span>No credit card needed</span>
                         </div>
                     </div>
                 </div>
@@ -114,235 +102,238 @@
         </section>
 
         <!-- Form Section -->
-        <section class="pb-32">
-            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-                <div class="max-w-3xl mx-auto">
-                    <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
-                        <!-- Success Message (hidden by default) -->
-                        <div id="success-message" class="hidden mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                                    <i data-lucide="check" class="w-5 h-5 text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold mb-2">Thank you! We've received your request.</h3>
-                                    <p class="text-gray-600">Our course advisor will contact you within 24 hours via your preferred method.</p>
-                                </div>
+        <section class="py-16 lg:py-24 bg-white">
+            <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+                <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 lg:p-12 shadow-xl">
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="success-message" class="hidden">
+                        <div class="text-center py-16">
+                            <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i data-lucide="check-circle" class="w-12 h-12 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Thank you! We've received your request.</h3>
+                                <p class="text-gray-600">Our course advisor will contact you within 24 hours via your preferred method.</p>
                             </div>
                         </div>
-
-                        <!-- Form -->
-                        <form id="consultation-form" action="#" method="POST">
-                            <!-- Row 1: Full Name & Work Email -->
-                            <div class="grid md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label for="fullName" class="block text-sm font-medium mb-2">
-                                        Full Name <span class="text-red-500">*</span>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="fullName"
-                                        name="fullName"
-                                        required
-                                        placeholder="e.g., John Tan"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
-                                    />
-                                </div>
-                                <div>
-                                    <label for="workEmail" class="block text-sm font-medium mb-2">
-                                        Work Email <span class="text-red-500">*</span>
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="workEmail"
-                                        name="workEmail"
-                                        required
-                                        placeholder="e.g., john@company.com"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
-                                    />
-                                </div>
-                            </div>
-
-                            <!-- Row 2: Company Name & Team Size -->
-                            <div class="grid md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label for="companyName" class="block text-sm font-medium mb-2">
-                                        Company Name <span class="text-red-500">*</span>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="companyName"
-                                        name="companyName"
-                                        required
-                                        placeholder="e.g., ABC Solutions Sdn Bhd"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
-                                    />
-                                </div>
-                                <div>
-                                    <label for="teamSize" class="block text-sm font-medium mb-2">
-                                        Team Size <span class="text-red-500">*</span>
-                                    </label>
-                                    <select
-                                        id="teamSize"
-                                        name="teamSize"
-                                        required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all appearance-none bg-white"
-                                        style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em;"
-                                    >
-                                        <option value="">Select team size</option>
-                                        <option value="1-10">1-10 people</option>
-                                        <option value="11-20">11-20 people</option>
-                                        <option value="21-30">21-30 people</option>
-                                        <option value="31-50">31-50 people</option>
-                                        <option value="51+">51+ people</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Preferred Delivery Format -->
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium mb-3">
-                                    Preferred Delivery Format <span class="text-red-500">*</span>
-                                </label>
-                                <div class="grid md:grid-cols-3 gap-4">
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="deliveryFormat" value="In-Person Workshop" required class="mr-3" />
-                                        <span class="text-sm font-medium">In-Person Workshop</span>
-                                    </label>
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="deliveryFormat" value="Virtual (Online)" required class="mr-3" />
-                                        <span class="text-sm font-medium">Virtual (Online)</span>
-                                    </label>
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="deliveryFormat" value="Hybrid" required class="mr-3" />
-                                        <span class="text-sm font-medium">Hybrid</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- What outcomes are you looking for? -->
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium mb-3">
-                                    What outcomes are you looking for? <span class="text-gray-500 font-normal">(Select all that apply)</span>
-                                </label>
-                                <div class="space-y-3">
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Eliminate Project Delays" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Eliminate Project Delays</div>
-                                            <div class="text-sm text-gray-600">Ship projects on time, every time—no more excuses</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Improve Team Collaboration" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Improve Team Collaboration</div>
-                                            <div class="text-sm text-gray-600">Break down silos and get everyone rowing in the same direction</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Increase Team Productivity" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Increase Team Productivity</div>
-                                            <div class="text-sm text-gray-600">Do more with less—eliminate waste and focus on what matters</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Gain Total Visibility & Transparency" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Gain Total Visibility & Transparency</div>
-                                            <div class="text-sm text-gray-600">See exactly what's happening without micromanaging</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Stop Firefighting & Start Preventing" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Stop Firefighting & Start Preventing</div>
-                                            <div class="text-sm text-gray-600">Catch problems early when they're cheap to fix</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="flex items-start p-4 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-all">
-                                        <input type="checkbox" name="outcomes" value="Build Accountability Culture" class="mt-1 mr-3 shrink-0" />
-                                        <div>
-                                            <div class="font-medium mb-1">Build Accountability Culture</div>
-                                            <div class="text-sm text-gray-600">Create teams that own their work and deliver results</div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- How would you like us to contact you? -->
-                            <div class="mb-8">
-                                <label class="block text-sm font-medium mb-3">
-                                    How would you like us to contact you? <span class="text-red-500">*</span>
-                                </label>
-                                <div class="space-y-3">
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="contactMethod" value="Email (I prefer written communication)" required class="mr-3" />
-                                        <span class="text-sm">📧 Email (I prefer written communication)</span>
-                                    </label>
-
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="contactMethod" value="Phone Call (I want to discuss immediately)" required class="mr-3" />
-                                        <span class="text-sm">📞 Phone Call (I want to discuss immediately)</span>
-                                    </label>
-
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="contactMethod" value="Video Call (Let's meet face-to-face virtually)" required class="mr-3" />
-                                        <span class="text-sm">🎥 Video Call (Let's meet face-to-face virtually)</span>
-                                    </label>
-
-                                    <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
-                                        <input type="radio" name="contactMethod" value="WhatsApp (Quick and convenient)" required class="mr-3" />
-                                        <span class="text-sm">💬 WhatsApp (Quick and convenient)</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button
-                                type="submit"
-                                id="submit-btn"
-                                class="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white py-5 rounded-xl font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3"
-                            >
-                                <i data-lucide="send" class="w-5 h-5"></i>
-                                <span id="submit-text">Get My Custom Plan</span>
-                            </button>
-
-                            <p class="text-center text-sm text-gray-500 mt-6">
-                                ✓ Free consultation · ✓ No credit card needed · ✓ Response within 24 hours
-                            </p>
-                        </form>
                     </div>
 
-                    <!-- Additional Trust Section -->
-                    <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="clock" class="w-8 h-8 text-purple-700"></i>
+                    <!-- Form -->
+                    <form id="consultation-form" action="#" method="POST">
+                        <!-- Row 1: Full Name & Work Email -->
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium mb-2">
+                                    Full Name <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors"
+                                    placeholder="e.g., Ahmad bin Abdullah"
+                                />
                             </div>
-                            <h3 class="font-semibold mb-2">Quick Response</h3>
-                            <p class="text-sm text-gray-600">We'll get back to you within 24 hours</p>
-                        </div>
-                        <div>
-                            <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="user-check" class="w-8 h-8 text-pink-600"></i>
+                            <div>
+                                <label for="workEmail" class="block text-sm font-medium mb-2">
+                                    Work Email <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="workEmail"
+                                    name="workEmail"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors"
+                                    placeholder="you@company.com"
+                                />
                             </div>
-                            <h3 class="font-semibold mb-2">Expert Advice</h3>
-                            <p class="text-sm text-gray-600">Speak with experienced course advisors</p>
                         </div>
-                        <div>
-                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="shield" class="w-8 h-8 text-green-600"></i>
+
+                        <!-- Row 2: Phone & Company Name -->
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-2">
+                                    Phone Number <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors"
+                                    placeholder="+60 12 345 6789"
+                                />
                             </div>
-                            <h3 class="font-semibold mb-2">No Pressure</h3>
-                            <p class="text-sm text-gray-600">Just honest recommendations for your team</p>
+                            <div>
+                                <label for="company" class="block text-sm font-medium mb-2">
+                                    Company Name <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors"
+                                    placeholder="Your Company Sdn Bhd"
+                                />
+                            </div>
                         </div>
+
+                        <!-- Row 3: Job Title & Team Size -->
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label for="jobTitle" class="block text-sm font-medium mb-2">
+                                    Job Title <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="jobTitle"
+                                    name="jobTitle"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors"
+                                    placeholder="e.g., HR Manager"
+                                />
+                            </div>
+                            <div>
+                                <label for="teamSize" class="block text-sm font-medium mb-2">
+                                    Team Size <span class="text-red-500">*</span>
+                                </label>
+                                <select
+                                    id="teamSize"
+                                    name="teamSize"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors bg-white"
+                                >
+                                    <option value="">Select team size</option>
+                                    <option value="1-10">1-10 people</option>
+                                    <option value="11-30">11-30 people</option>
+                                    <option value="31-50">31-50 people</option>
+                                    <option value="51-100">51-100 people</option>
+                                    <option value="100+">100+ people</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Which course(s) are you interested in? -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-medium mb-3">
+                                Which course(s) are you interested in? <span class="text-red-500">*</span>
+                            </label>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-purple-600 transition-all has-[:checked]:border-purple-600 has-[:checked]:bg-purple-50">
+                                    <input type="checkbox" name="courses" value="Creating Super Teams" class="mr-3" />
+                                    <span class="text-sm">🚀 Creating Super Teams</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-pink-600 transition-all has-[:checked]:border-pink-600 has-[:checked]:bg-pink-50">
+                                    <input type="checkbox" name="courses" value="Design Like Apple" class="mr-3" />
+                                    <span class="text-sm">🍎 Design Like Apple</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-amber-600 transition-all has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                                    <input type="checkbox" name="courses" value="Work Clear, Work Fast" class="mr-3" />
+                                    <span class="text-sm">⚡ Work Clear, Work Fast</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-green-600 transition-all has-[:checked]:border-green-600 has-[:checked]:bg-green-50">
+                                    <input type="checkbox" name="courses" value="Lean Six Sigma Problem Solving" class="mr-3" />
+                                    <span class="text-sm">📊 Lean Six Sigma Problem Solving</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-sky-600 transition-all has-[:checked]:border-sky-600 has-[:checked]:bg-sky-50">
+                                    <input type="checkbox" name="courses" value="Prompt Your AI Better" class="mr-3" />
+                                    <span class="text-sm">✨ Prompt Your AI Better</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-gray-600 transition-all has-[:checked]:border-gray-600 has-[:checked]:bg-gray-50">
+                                    <input type="checkbox" name="courses" value="Not sure yet" class="mr-3" />
+                                    <span class="text-sm">🤔 Not sure yet (help me choose!)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- How would you like us to contact you? -->
+                        <div class="mb-8">
+                            <label class="block text-sm font-medium mb-3">
+                                How would you like us to contact you? <span class="text-red-500">*</span>
+                            </label>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
+                                    <input type="radio" name="contactMethod" value="Email (I prefer written communication)" required class="mr-3" />
+                                    <span class="text-sm">📧 Email (I prefer written communication)</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
+                                    <input type="radio" name="contactMethod" value="Phone Call (I want to discuss immediately)" required class="mr-3" />
+                                    <span class="text-sm">📞 Phone Call (I want to discuss immediately)</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
+                                    <input type="radio" name="contactMethod" value="Video Call (Let's meet face-to-face virtually)" required class="mr-3" />
+                                    <span class="text-sm">🎥 Video Call (Let's meet face-to-face virtually)</span>
+                                </label>
+                                
+                                <label class="flex items-center p-4 border-2 border-gray-300 rounded-xl cursor-pointer hover:border-black transition-all has-[:checked]:border-black has-[:checked]:bg-gray-50">
+                                    <input type="radio" name="contactMethod" value="WhatsApp (Quick and convenient)" required class="mr-3" />
+                                    <span class="text-sm">💬 WhatsApp (Quick and convenient)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tell us about your team's challenges (optional) -->
+                        <div class="mb-8">
+                            <label for="message" class="block text-sm font-medium mb-2">
+                                Tell us about your team's challenges (Optional)
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-black focus:outline-none transition-colors resize-none"
+                                placeholder="E.g., Our team misses deadlines, communication is unclear, projects are always delayed..."
+                            ></textarea>
+                            <p class="text-xs text-gray-500 mt-2">This helps us understand your situation better and recommend the right course.</p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            id="submit-btn"
+                            class="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white py-5 rounded-xl font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3"
+                        >
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span id="submit-text">Get My Custom Plan</span>
+                        </button>
+
+                        <p class="text-center text-sm text-gray-500 mt-6">
+                            ✓ Free consultation · ✓ No credit card needed · ✓ Response within 24 hours
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Additional Trust Section -->
+                <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-8 h-8 text-purple-700"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Quick Response</h3>
+                        <p class="text-sm text-gray-600">We'll get back to you within 24 hours</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="user-check" class="w-8 h-8 text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Expert Guidance</h3>
+                        <p class="text-sm text-gray-600">Our advisors have 10+ years experience</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="heart" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">No Pressure</h3>
+                        <p class="text-sm text-gray-600">Free consultation, no strings attached</p>
                     </div>
                 </div>
             </div>
@@ -366,8 +357,8 @@
                 <div>
                     <h4 class="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Courses</h4>
                     <div class="space-y-3 text-sm">
-                        <div><a href="index.html#courses" class="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
-                        <div><a href="index.html#courses" class="hover:text-gray-600 transition-colors">Design Like Apple</a></div>
+                        <div><a href="creating-super-teams.html" class="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
+                        <div><a href="design-like-apple.html" class="hover:text-gray-600 transition-colors">Design Like Apple</a></div>
                         <div><a href="index.html#courses" class="hover:text-gray-600 transition-colors">Work Clear, Work Fast</a></div>
                         <div><a href="index.html#courses" class="hover:text-gray-600 transition-colors">Lean Six Sigma</a></div>
                         <div><a href="index.html#courses" class="hover:text-gray-600 transition-colors">Prompt Your AI Better</a></div>
@@ -381,7 +372,7 @@
                         <div><a href="#" class="hover:text-gray-600 transition-colors">About Us</a></div>
                         <div><a href="#" class="hover:text-gray-600 transition-colors">Our Instructors</a></div>
                         <div><a href="index.html#testimonials" class="hover:text-gray-600 transition-colors">Testimonials</a></div>
-                        <div><a href="bookConsultation.html" class="hover:text-gray-600 transition-colors">Contact</a></div>
+                        <div><a href="https://www.ciagile.com/contactus/" class="hover:text-gray-600 transition-colors">Contact</a></div>
                     </div>
                 </div>
             </div>
@@ -406,5 +397,6 @@
         // Initialize Lucide icons
         lucide.createIcons();
     </script>
+
 </body>
 </html>
