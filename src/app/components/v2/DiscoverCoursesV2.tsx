@@ -5,7 +5,7 @@ const courses = [
   {
     id: "01",
     title: "Creating Super Teams",
-    description: "Build high-performance teams through our famous Airplane Game and Tornado Challenge. Learn trust, collaboration, and proven team-building methodologies.",
+    description: "Build aligned, accountable teams that take ownership and deliver results together.",
     image: "https://i.postimg.cc/4xWR2vp9/hyper-productive-Asia-teams-discussing-and-standing-doing-activities-smiling-vibrant-colours-with.jpg",
     icon: Users,
     colors: {
@@ -14,12 +14,12 @@ const courses = [
       dark: "#5B21B6"
     },
     buttonText: "Learn more",
-    buttonLink: "/creating-super-teams.html"
+    buttonLink: "creating-super-teams.html"
   },
   {
     id: "02",
-    title: "Design Like Apple",
-    description: "Master Apple's design thinking principles through hands-on prototyping. Create products and experiences that customers truly love.",
+    title: "Win Customers Through Design",
+    description: "Design products and services customers actually choose — based on real customer insight.",
     image: "https://i.postimg.cc/BvqbBQ5z/A-team-working-on-amazing-ideas-young-asia-smiling-happy.jpg",
     icon: Palette,
     colors: {
@@ -27,13 +27,13 @@ const courses = [
       light: "#FCE7F3",
       dark: "#DB2777"
     },
-    buttonText: "Book this course",
-    buttonLink: "/bookConsultation.html"
+    buttonText: "Learn more",
+    buttonLink: "design-thinking.html"
   },
   {
     id: "03",
-    title: "Work Clear, Work Fast",
-    description: "Adopt Amazon's operational excellence frameworks. Eliminate waste, accelerate delivery, and optimize your team's workflow.",
+    title: "Critical Thinking for Better Work",
+    description: "Improve prioritisation, decision-making, and delivery using simple visual workflows.",
     image: "https://i.postimg.cc/hvbTt3KV/Untitled-design-(14).png",
     icon: Zap,
     colors: {
@@ -41,13 +41,13 @@ const courses = [
       light: "#FEF3C7",
       dark: "#D97706"
     },
-    buttonText: "Book this course",
-    buttonLink: "/bookConsultation.html"
+    buttonText: "Learn more",
+    buttonLink: "critical-thinking-kanban.html"
   },
   {
     id: "04",
-    title: "Lean Six Sigma Problem Solving",
-    description: "Apply data-driven techniques to eliminate defects. Simplified, non-technical approach with practical tools your team will actually use.",
+    title: "Practical Lean Problem Solving",
+    description: "Solve recurring work problems that cost time and money using practical Lean thinking.",
     image: "https://i.postimg.cc/W11141nG/an-asian-team-looking-happy-solving-problems-young-vibrant-bright-with-white-background-boards.jpg",
     icon: TrendingUp,
     colors: {
@@ -56,12 +56,12 @@ const courses = [
       dark: "#15803D"
     },
     buttonText: "Book this course",
-    buttonLink: "/bookConsultation.html"
+    buttonLink: "bookConsultation.html"
   },
   {
     id: "05",
-    title: "Prompt Your AI Better",
-    description: "Harness AI tools through strategic prompting and workflow integration. Hands-on practice with real tools and business scenarios.",
+    title: "AI Skills for YOUR Team",
+    description: "Equip your team with practical AI skills to work faster and smarter — without technical complexity.",
     image: "https://i.postimg.cc/XY4ykWkt/Untitled-design-(18).png",
     icon: Sparkles,
     colors: {
@@ -70,7 +70,7 @@ const courses = [
       dark: "#0284C7"
     },
     buttonText: "Book this course",
-    buttonLink: "/bookConsultation.html"
+    buttonLink: "bookConsultation.html"
   }
 ];
 
@@ -87,8 +87,7 @@ export function DiscoverCoursesV2() {
             Choose what your team needs
           </h2>
           <p className="text-lg text-gray-600">
-            Each 2-day workshop can be booked individually. Mix and match 
-            based on your team's development goals.
+            Each TeamWorks course builds a specific capability. Start where your team needs the most support — or combine courses for deeper impact.
           </p>
         </div>
 
@@ -168,24 +167,21 @@ export function DiscoverCoursesV2() {
                       </div>
                     </div>
 
-                    <button 
-                      className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm transition-all hover:gap-3"
+                    <a 
+                      href={course.buttonLink}
+                      className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm transition-all hover:gap-3 relative overflow-hidden"
                       style={{ 
                         backgroundColor: course.colors.primary,
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = course.colors.dark;
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = course.colors.primary;
-                      }}
-                      onClick={() => {
-                        window.location.href = course.buttonLink;
-                      }}
+                      } as React.CSSProperties}
                     >
-                      <span>{course.buttonText}</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                      {/* Hover overlay */}
+                      <span 
+                        className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-200"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="relative z-10">{course.buttonText}</span>
+                      <ArrowRight className="w-4 h-4 relative z-10" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -205,17 +201,15 @@ export function DiscoverCoursesV2() {
                     Not sure which course to choose?
                   </h3>
                   <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                    Book a free consultation with our course advisor. We'll help you 
-                    pick the perfect course for your team.
+                    Not sure where to start? Talk to us about your team's challenges and we'll recommend the right course — or combination — for your goals.
                   </p>
-                  <button className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-2 group text-lg font-medium"
-                    onClick={() => {
-                      window.location.href = '/bookConsultation.html';
-                    }}
+                  <a 
+                    href="bookConsultation.html"
+                    className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-2 group text-lg font-medium"
                   >
                     <span>Schedule Free Consultation</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                   
                   {/* Color accent bars - inspired by Apollo image */}
                   <div className="mt-12 flex gap-2">

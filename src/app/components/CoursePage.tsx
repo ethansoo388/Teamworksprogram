@@ -1,6 +1,5 @@
-import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, ChevronDown } from "lucide-react";
+import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star } from "lucide-react";
 import { FooterV2 } from "@/app/components/v2/FooterV2";
-import { useState } from "react";
 
 const faqItems = [
   {
@@ -13,21 +12,19 @@ const faqItems = [
   },
   {
     question: "What's included in the course fee?",
-    answer: "The course fee includes a 2-day intensive workshop, all course materials and workbooks, digital toolkit and frameworks, 90-day email support, and alumni community access. We also provide refreshments and meals throughout the workshop."
+    answer: "The course fee includes a 2-day intensive workshop, all course materials and workbooks, digital toolkit and frameworks, 90-day email support, and alumni community access."
   },
   {
     question: "Is there a maximum team size for this course?",
     answer: "Yes, we cap each session at 30 participants to ensure quality interaction and personalized attention. This allows everyone to participate actively in the exercises and simulations."
   },
   {
-    question: "What if we can't attend on the scheduled dates?",
-    answer: "We run this course multiple times throughout the year. If the current dates don't work for you, contact us and we'll help you find the next available session that fits your schedule."
+    question: "What if the scheduled dates don't work for us?",
+    answer: "All our programs are run as private sessions and scheduled around your team's availability. Get in touch with us and we'll plan the sessions at a time that fits your schedule."
   }
 ];
 
 export function CoursePage() {
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -35,7 +32,7 @@ export function CoursePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3">
+            <a href="index.html" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900">
                 <Users2 className="w-5 h-5 text-white" />
               </div>
@@ -49,14 +46,14 @@ export function CoursePage() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#modules" className="text-sm hover:text-gray-600 transition-colors">Modules</a>
               <a href="#outcomes" className="text-sm hover:text-gray-600 transition-colors">Outcomes</a>
-              <a href="#testimonials" className="text-sm hover:text-gray-600 transition-colors">Reviews</a>
+              <a href="#testimonials" className="text-sm hover:text-gray-600 transition-colors">Testimonials</a>
               <a href="#faq" className="text-sm hover:text-gray-600 transition-colors">FAQ</a>
             </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a href="/bookConsultation.html" className="bg-purple-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
-                Book This Course
+              <a href="bookConsultation.html" className="bg-purple-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
+                Book This Course for Your Team
               </a>
             </div>
           </div>
@@ -67,9 +64,9 @@ export function CoursePage() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="https://www.ciagile.com" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#9333EA'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Home</a>
+            <a href="https://www.ciagile.com" className="hover:text-purple-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="/index.html" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#9333EA'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Programs</a>
+            <a href="index.html" className="hover:text-purple-600 transition-colors">Programs</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">Creating Super Teams</span>
           </div>
@@ -85,18 +82,27 @@ export function CoursePage() {
               {/* Course Badge */}
               <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 rounded-full px-4 py-2 mb-6">
                 <Zap className="w-4 h-4 text-purple-600" />
-                <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide">Course 01</span>
+                <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide">TEAMWORKS · FOUNDATIONS</span>
               </div>
 
               {/* Heading */}
               <h1 className="text-4xl lg:text-6xl leading-tight mb-6 tracking-tight">
                 Creating Super Teams
+                <span className="block text-base lg:text-lg text-gray-600 font-normal italic mt-4 tracking-normal">
+                  Turn everyday teams into aligned, accountable teams that deliver results.
+                </span>
               </h1>
 
               {/* Description */}
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Build high-performance teams through our famous Airplane Game and Tornado Challenge. Learn trust, collaboration, and proven team-building methodologies.
-              </p>
+              <div className="text-xl text-gray-600 leading-relaxed mb-8 space-y-4">
+                <p>
+                  When teams aren't aligned, work slows down and leaders end up firefighting.
+                </p>
+                
+                <p>
+                  <span className="font-semibold text-gray-900 italic">Creating Super Teams</span> builds clear ownership and accountability so teams deliver results — without extra meetings or bureaucracy.
+                </p>
+              </div>
 
               {/* Course Info Cards */}
               <div className="bg-gray-50 rounded-2xl p-6 mb-8">
@@ -125,8 +131,8 @@ export function CoursePage() {
               </div>
 
               {/* CTA Button */}
-              <a href="/bookConsultation.html" className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all group">
-                <span className="font-medium">Book this course</span>
+              <a href="bookConsultation.html" className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all group">
+                <span className="font-medium">Talk to Us About Your Team</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -145,166 +151,13 @@ export function CoursePage() {
         </div>
       </section>
 
-      {/* A Practical System for Real-World Results Section */}
-      <section className="bg-gray-50 py-20 lg:py-32">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">A Practical System for Real-World Results</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              This is a 2-Day Masterclass, where you roll up your sleeves, designed to give you a repeatable "operating system" for your team.
-            </p>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Learn by Doing */}
-            <div className="bg-white rounded-2xl p-8">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                <Lightbulb className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg mb-3">Learn by Doing</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                We use fun exercises to show you why work gets stuck and how to un-stick it. You'll participate in simulations that mirror real business challenges.
-              </p>
-            </div>
-
-            {/* Immediate Application */}
-            <div className="bg-white rounded-2xl p-8">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg mb-3">Immediate Application</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                You won't leave with just a "theory." Everything you learn can be used in the following week.
-              </p>
-            </div>
-
-            {/* Built for Speed */}
-            <div className="bg-white rounded-2xl p-8">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg mb-3">Built for Speed</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Learn how to break big, scary goals into small, winnable tasks.
-              </p>
-            </div>
-
-            {/* Simple Tools */}
-            <div className="bg-white rounded-2xl p-8">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg mb-3">Simple Tools</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                You don't need expensive software. You just need a clear way to see who is doing what.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Modules Section */}
-      <section className="bg-white py-20 lg:py-32" id="modules">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left: Modules Content */}
-            <div>
-              {/* Section Header */}
-              <div className="mb-12">
-                <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Course Modules</h2>
-                <p className="text-xl text-gray-600">
-                  Four comprehensive modules designed to transform your team's performance from chaos to high-velocity execution.
-                </p>
-              </div>
-
-              {/* Modules List */}
-              <div className="space-y-6">
-                {/* Module 1 */}
-                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">1</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 1: The Cost of Chaos</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• The Foundation of High Performance</li>
-                      <li>• Identifying how traditional management slows down businesses</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Module 2 */}
-                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">2</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 2: The New Team Contract</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• Roles, Expectations & Decision Boundaries</li>
-                      <li>• Who decides what (and who shouldn't)</li>
-                      <li>• Define vision and align teams</li>
-                      <li>• Hyper-productive Systems</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Module 3 */}
-                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">3</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 3: Effective Delivery</h3>
-                    <p className="text-gray-600 mb-3">The "Work Packs" Fix: Method (A simple habit for a winning team)</p>
-                    <div className="space-y-2 text-gray-600">
-                      <p><span className="font-semibold">1. Focus:</span> Pick the most important job and get it done.</p>
-                      <p><span className="font-semibold">2. Check:</span> Spot big-spending problems early, not at deadline</p>
-                      <p><span className="font-semibold">3. Fix:</span> If it's wrong, fix it now—not 3 months from now when it's too expensive.</p>
-                      <p><span className="font-semibold">4. Repeat:</span> Keep the momentum going.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Module 4 */}
-                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">4</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 4: The "1% Sharper" Every time</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• Inspect, Improve, Repeat</li>
-                      <li>• Continuous Improvement Mindset</li>
-                      <li>• Turning mistakes into learning</li>
-                      <li>• Building a culture of continuous improvement</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Images */}
-            <div className="relative h-full min-h-[600px]">
-              <img 
-                src="https://i.postimg.cc/SQ1hX6rN/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg" 
-                alt="Team collaboration in workshop"
-                className="w-full h-full object-cover rounded-3xl shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Business Struggles Section */}
       <section className="bg-white py-20 lg:py-32" id="outcomes">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Is Your Business Struggling With These?</h2>
-            <p className="text-xl text-gray-600">If these sound familiar, your current way of working is costing you money.</p>
+            <p className="text-xl text-gray-600">If these sound familiar, the way your team is currently working is costing you time, money, and momentum.</p>
           </div>
 
           {/* Problems Grid */}
@@ -312,31 +165,33 @@ export function CoursePage() {
             <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
               <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">⏱️</div>
               <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Constant Delays</h3>
-              <p className="text-gray-700 leading-relaxed relative z-10">Projects that should take weeks are taking months.</p>
+              <p className="text-gray-700 leading-relaxed relative z-10">Projects that should take weeks keep dragging into months because teams aren't aligned on priorities.</p>
             </div>
 
             <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
-              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">💬</div>
+              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Broken Communication</h3>
-              <p className="text-gray-700 leading-relaxed relative z-10">Things get "lost in translation" between you and your team.</p>
+              <p className="text-gray-700 leading-relaxed relative z-10">Important details get lost between leaders and teams, causing misunderstandings and rework.</p>
             </div>
 
             <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
               <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">😔</div>
               <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Demotivated Staff</h3>
-              <p className="text-gray-700 leading-relaxed relative z-10">Good people are burnt out because priorities change every day.</p>
+              <p className="text-gray-700 leading-relaxed relative z-10">Good people feel frustrated and burned out when priorities keep changing and nothing sticks.</p>
             </div>
 
             <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
               <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">🎯</div>
               <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Lack of Ownership</h3>
-              <p className="text-gray-700 leading-relaxed relative z-10">You feel like you have to micromanage everything just to get it done.</p>
+              <p className="text-gray-700 leading-relaxed relative z-10">You end up micromanaging everything because no one is truly accountable for results.</p>
             </div>
           </div>
 
           {/* The Payoff Section */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl mb-3 tracking-tight">There Is a Better Way to Work. We'll Guide You.</h2>
+            <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">
+              There Is a Better Way to Work. We'll Guide You.
+            </h2>
             <p className="text-3xl lg:text-4xl text-purple-600 tracking-tight font-bold">The Payoff</p>
           </div>
 
@@ -395,13 +250,174 @@ export function CoursePage() {
         </div>
       </section>
 
+      {/* A Practical System for Real-World Results Section */}
+      <section className="bg-gray-50 py-20 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">A Practical System for Real-World Results</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              This course focuses on changing how teams work day to day — so results improve without adding more meetings, tools, or complexity.
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Clear Ownership & Accountability */}
+            <div className="bg-white rounded-2xl p-8">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <Lightbulb className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg mb-3">Clear Ownership & Accountability</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Teams know exactly who owns what. Less chasing, fewer dropped balls, and stronger follow-through.
+              </p>
+            </div>
+
+            {/* Stronger Alignment & Focus */}
+            <div className="bg-white rounded-2xl p-8">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <Zap className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg mb-3">Stronger Alignment & Focus</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Everyone understands priorities and works toward the same goals, reducing confusion and misalignment.
+              </p>
+            </div>
+
+            {/* Better Collaboration with Less Friction */}
+            <div className="bg-white rounded-2xl p-8">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg mb-3">Better Collaboration with Less Friction</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Teams work together effectively without extra meetings, resolving issues faster and avoiding rework.
+              </p>
+            </div>
+
+            {/* Consistent Results, Less Firefighting */}
+            <div className="bg-white rounded-2xl p-8">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg mb-3">Consistent Results, Less Firefighting</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Work flows more smoothly, delivery becomes predictable, and managers spend less time fixing problems.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <a href="bookConsultation.html" className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all group">
+              <span className="font-medium">See If This Course Fits Your Team</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <p className="text-sm text-gray-600 mt-4">A short conversation. No obligation.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Course Modules Section */}
+      <section className="bg-white py-20 lg:py-32" id="modules">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Left: Modules Content */}
+            <div>
+              {/* Section Header */}
+              <div className="mb-12">
+                <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Course Modules</h2>
+                <p className="text-xl text-gray-600">
+                  Four comprehensive modules designed to transform how teams work — from confusion and delays to clear ownership and consistent delivery.
+                </p>
+              </div>
+
+              {/* Modules List */}
+              <div className="space-y-6">
+                {/* Module 1 */}
+                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">1</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl mb-3">Module 1: The Cost of Chaos</h3>
+                    <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                      <li>Why teams struggle to perform consistently</li>
+                      <li>Identify how unclear ownership and traditional management practices slow teams down and create hidden business costs</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Module 2 */}
+                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">2</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl mb-3">Module 2: The New Team Contract</h3>
+                    <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                      <li>Clear roles, expectations, and decision boundaries</li>
+                      <li>Who decides what — and who shouldn't</li>
+                      <li>Align teams around a shared vision and priorities</li>
+                      <li>Build systems that enable teams to operate productively without constant escalation</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Module 3 */}
+                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">3</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl mb-3">Module 3: Effective Delivery</h3>
+                    <p className="text-gray-600 mb-3">The "Work Packs" Fix — a simple habit used by high-performing teams</p>
+                    <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                      <li><span className="font-semibold">Focus</span> — Pick the most important work and get it done without distraction</li>
+                      <li><span className="font-semibold">Check</span> — Spot risks and issues early, not at the last minute</li>
+                      <li><span className="font-semibold">Fix</span> — If it's wrong, fix it now—not 3 months from now when it's too expensive</li>
+                      <li><span className="font-semibold">Repeat</span> — Keep the momentum going</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Module 4 */}
+                <div className="bg-purple-50 rounded-2xl p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-lg">4</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl mb-3">Module 4: Sustaining High Performance</h3>
+                    <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                      <li>Turn teamwork behaviours into daily habits</li>
+                      <li>Create simple rhythms that keep teams aligned and accountable</li>
+                      <li>Ensure results remain consistent even as priorities change</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Images */}
+            <div className="relative h-full min-h-[600px]">
+              <img 
+                src="https://i.postimg.cc/SQ1hX6rN/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg" 
+                alt="Team collaboration in workshop"
+                className="w-full h-full object-cover rounded-3xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who Should Attend */}
       <section className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Who Should Attend</h2>
-            <p className="text-xl text-gray-600">This course is designed for teams and leaders who want to elevate their performance.</p>
+            <p className="text-xl text-gray-600">This course is designed for leaders and teams who want stronger ownership, better alignment, and more consistent results.</p>
           </div>
 
           {/* Audience Grid */}
@@ -412,7 +428,7 @@ export function CoursePage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Team Leaders</h3>
               <p className="text-gray-600 text-sm">
-                Department heads and team managers looking to build stronger teams.
+                Department heads and team leads who want aligned teams that take ownership and deliver without constant follow-up.
               </p>
             </div>
 
@@ -422,7 +438,7 @@ export function CoursePage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Project Managers</h3>
               <p className="text-gray-600 text-sm">
-                PMs who need to coordinate cross-functional teams effectively.
+                PMs responsible for coordinating cross-functional teams and keeping work moving without delays and confusion.
               </p>
             </div>
 
@@ -432,7 +448,7 @@ export function CoursePage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Business Owners</h3>
               <p className="text-gray-600 text-sm">
-                SME owners wanting to create a high-performance culture.
+                SME owners who want teams that execute reliably, reduce firefighting, and free leaders to focus on growth.
               </p>
             </div>
 
@@ -442,7 +458,7 @@ export function CoursePage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">HR Professionals</h3>
               <p className="text-gray-600 text-sm">
-                HR leaders focused on organizational development and culture.
+                HR leaders focused on building accountable teams, improving collaboration, and strengthening performance culture.
               </p>
             </div>
           </div>
@@ -476,6 +492,7 @@ export function CoursePage() {
                 <div>
                   <div className="font-semibold">Farhana Aina Fu'ad</div>
                   <div className="text-sm text-gray-600">Head of Digital Services</div>
+                  <div className="text-xs text-gray-500 mt-0.5">Aviation</div>
                 </div>
               </div>
             </div>
@@ -496,6 +513,7 @@ export function CoursePage() {
                 <div>
                   <div className="font-semibold">Tham Meng Tat</div>
                   <div className="text-sm text-gray-600">Manager</div>
+                  <div className="text-xs text-gray-500 mt-0.5">Government</div>
                 </div>
               </div>
             </div>
@@ -516,6 +534,7 @@ export function CoursePage() {
                 <div>
                   <div className="font-semibold">Nazira Mohamed</div>
                   <div className="text-sm text-gray-600">Business Analyst</div>
+                  <div className="text-xs text-gray-500 mt-0.5">Education and Training</div>
                 </div>
               </div>
             </div>
@@ -535,24 +554,22 @@ export function CoursePage() {
 
           <div className="space-y-4">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                >
+              <details key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+                <summary className="w-full px-6 py-5 flex items-center justify-between cursor-pointer list-none hover:bg-gray-50 transition-colors">
                   <span className="font-normal text-sm pr-4">{item.question}</span>
-                  <ChevronDown 
-                    className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${
-                      openFaqIndex === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                {openFaqIndex === index && (
-                  <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
-                    {item.answer}
-                  </div>
-                )}
-              </div>
+                  <svg 
+                    className="w-4 h-4 text-gray-400 transition-transform flex-shrink-0 group-open:rotate-180" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-5 pt-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                  {item.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>
@@ -563,7 +580,7 @@ export function CoursePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center text-white mb-12">
             <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">
-              Let's Unlock Your <span className="italic">Super Team</span>
+              There Is a Better Way to Work. We'll Guide You.
             </h2>
             <p className="text-xl lg:text-2xl max-w-3xl mx-auto">
               Click enroll now and transform your team's performance in just 2 days.
@@ -623,11 +640,14 @@ export function CoursePage() {
             </div>
 
             {/* Enroll Button */}
-            <div className="mt-12">
-              <a href="/bookConsultation.html" className="block w-full bg-purple-600 text-white text-center px-8 py-4 rounded-xl hover:bg-purple-700 transition-all font-semibold text-lg flex items-center justify-center gap-2 group">
-                Enroll Now
+            <div className="mt-12 text-center">
+              <a href="bookConsultation.html" className="inline-flex items-center justify-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-xl hover:bg-purple-700 transition-all font-semibold text-lg group">
+                Start Building a High-Performing Team
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
+              <p className="text-sm text-gray-600 mt-3">
+                Talk to us about running this course for your team.
+              </p>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
-import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck } from "lucide-react";
+import { FooterV2 } from "@/app/components/v2/FooterV2";
 
 const testimonials = [
   {
@@ -24,10 +24,6 @@ const testimonials = [
 
 const faqItems = [
   {
-    question: "Do I need design experience to attend?",
-    answer: "No design experience required. We teach you the principles and give you practical tools you can use immediately."
-  },
-  {
     question: "Will this work for non-tech products?",
     answer: "Absolutely! Apple's design principles apply to any product or service—physical, digital, or hybrid. We'll show you how."
   },
@@ -40,14 +36,16 @@ const faqItems = [
     answer: "Very hands-on! 70% practical exercises and real case studies. You'll leave with actionable frameworks and templates."
   },
   {
-    question: "Can I bring my team?",
-    answer: "Yes! We recommend bringing 2-5 team members. Team cohesion and shared learning lead to better implementation."
+    question: "What will we walk away with after the workshop?",
+    answer: "Your team will leave with clearer priorities, shared understanding, and practical actions you can apply immediately. The goal is tangible progress, not just new ideas."
+  },
+  {
+    question: "Is this practical for real SME teams?",
+    answer: "Yes. The course is designed specifically for SMEs and focuses on real constraints like limited time, resources, and fast decision-making."
   }
 ];
 
 export function Course02Page() {
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -55,7 +53,7 @@ export function Course02Page() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3">
+            <a href="index.html" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-pink-500 via-pink-600 to-fuchsia-600">
                 <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -63,7 +61,7 @@ export function Course02Page() {
               </div>
               <div className="flex flex-col">
                 <div className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 02</div>
-                <div className="font-bold text-lg -mt-0.5">Design Like Apple</div>
+                <div className="font-bold text-lg -mt-0.5">Win Customers Through Design</div>
               </div>
             </a>
 
@@ -71,14 +69,14 @@ export function Course02Page() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#modules" className="text-sm hover:text-gray-600 transition-colors">Modules</a>
               <a href="#outcomes" className="text-sm hover:text-gray-600 transition-colors">Outcomes</a>
-              <a href="#testimonials" className="text-sm hover:text-gray-600 transition-colors">Reviews</a>
+              <a href="#testimonials" className="text-sm hover:text-gray-600 transition-colors">Testimonials</a>
               <a href="#faq" className="text-sm hover:text-gray-600 transition-colors">FAQ</a>
             </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a href="/bookConsultation.html" className="text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all" style={{ backgroundColor: '#E91E8C' }}>
-                Book This Course
+              <a href="bookConsultation.html" className="text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all" style={{ backgroundColor: '#E91E8C' }}>
+                Book This Course for Your Team
               </a>
             </div>
           </div>
@@ -89,11 +87,11 @@ export function Course02Page() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="https://www.ciagile.com" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#E91E8C'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Home</a>
+            <a href="https://www.ciagile.com" className="hover:text-pink-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="/index.html" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#E91E8C'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Programs</a>
+            <a href="index.html" className="hover:text-pink-600 transition-colors">Programs</a>
             <span>/</span>
-            <span className="text-gray-900 font-bold">Design Like Apple</span>
+            <span className="text-gray-900 font-bold">Win Customers Through Design</span>
           </div>
         </div>
       </div>
@@ -107,40 +105,56 @@ export function Course02Page() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-pink-50 text-pink-600 px-4 py-2 rounded-full mb-8 text-sm">
                 <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                <span>Course 02 • Design Excellence</span>
+                <span>TEAMWORKS · CUSTOMER</span>
               </div>
 
               <h1 className="text-5xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
-                Design Like<br /><span style={{ color: '#E91E8C' }}>Apple.</span>
+                Win Customers Through<br /><span style={{ color: '#E91E8C' }}>Design.</span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                Master the art of designing and building products customers truly love, through hands-on learning that replaces guesswork with clarity.
+              <p className="text-lg text-gray-600 italic mb-6">
+                Create customer-focused products and services using design thinking.
               </p>
 
-              <a href="/bookConsultation.html" className="inline-flex items-center gap-2 text-white px-8 py-3.5 rounded-xl hover:opacity-90 transition-all group mb-12" style={{ backgroundColor: '#E91E8C' }}>
-                <span className="font-medium text-base">Enroll Now</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <p className="text-xl text-gray-600 leading-relaxed mb-4 max-w-lg">
+                Most teams don't fail because they lack ideas — they fail because they build the wrong things.
+              </p>
 
-              {/* Divider */}
-              <div className="border-t border-gray-200 mb-8"></div>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
+                <strong className="font-semibold">Win Customers Through Design</strong> helps teams understand customers and design products and services customers actually choose.
+              </p>
 
-              {/* Course Info Cards with Vertical Dividers */}
-              <div className="flex items-start divide-x divide-gray-200">
-                <div className="pr-8">
-                  <div className="text-3xl font-semibold mb-1">2 Days</div>
-                  <div className="text-base text-gray-500">Intensive</div>
-                </div>
-                <div className="px-8">
-                  <div className="text-3xl font-semibold mb-1">In-Person</div>
-                  <div className="text-base text-gray-500">Workshop</div>
-                </div>
-                <div className="pl-8">
-                  <div className="text-3xl font-semibold mb-1">Max 30</div>
-                  <div className="text-base text-gray-500">Participants</div>
+              {/* Course Info Cards */}
+              <div className="bg-gray-50 rounded-2xl p-6 mb-8">
+                <div className="grid grid-cols-3 gap-6">
+                  {/* Duration */}
+                  <div className="text-center">
+                    <Clock className="w-6 h-6 text-pink-600 mx-auto mb-2" />
+                    <div className="text-xs text-gray-600 mb-1">Duration</div>
+                    <div className="font-semibold text-gray-900">2 days</div>
+                  </div>
+                  
+                  {/* Format */}
+                  <div className="text-center">
+                    <Users className="w-6 h-6 text-pink-600 mx-auto mb-2" />
+                    <div className="text-xs text-gray-600 mb-1">Format</div>
+                    <div className="font-semibold text-gray-900">In-person</div>
+                  </div>
+                  
+                  {/* Capacity */}
+                  <div className="text-center">
+                    <UserCheck className="w-6 h-6 text-pink-600 mx-auto mb-2" />
+                    <div className="text-xs text-gray-600 mb-1">Capacity</div>
+                    <div className="font-semibold text-gray-900">Max 30</div>
+                  </div>
                 </div>
               </div>
+
+              {/* CTA Button */}
+              <a href="bookConsultation.html" className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full hover:opacity-90 transition-all group" style={{ backgroundColor: '#E91E8C' }}>
+                <span className="font-medium">Talk to Us About Your Team</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
 
             {/* Right: Image */}
@@ -164,58 +178,66 @@ export function Course02Page() {
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Stop Guessing. Start Solving.</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-4">
-              Learn the step-by-step way to understand your customers, fix their real problems, and stay ahead of your competitors.
+              Learn a practical, step-by-step approach to understanding your customers, testing real problems, and designing solutions that actually work.
             </p>
             <p className="text-xl text-gray-600">
-              This is a 2-day hands-on workshop to build products and services that people love.
+              This course helps teams move from opinions and assumptions to customer-driven decisions.
             </p>
           </div>
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Think Different */}
+            {/* Think Differently */}
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E91E8C' }}>
                 <Lightbulb className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Think Different</h3>
+              <h3 className="text-xl font-semibold mb-3">Think Differently</h3>
               <p className="text-gray-600 leading-relaxed">
-                Learn the principles behind Apple's iconic products, obsess over details, simplify relentlessly, and design for human emotion.
+                Shift from internal opinions to real customer insight
               </p>
             </div>
 
-            {/* Save Thousands in Wasted Development */}
+            {/* Save Time & Rework */}
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E91E8C' }}>
                 <PiggyBank className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Save Thousands in Wasted Development</h3>
+              <h3 className="text-xl font-semibold mb-3">Save Time & Rework</h3>
               <p className="text-gray-600 leading-relaxed">
-                Test fast, fail cheap. Learn to prototype and validate in days, not months.
+                Validate ideas early before investing time and money
               </p>
             </div>
 
-            {/* Ready to Compete */}
+            {/* Design What Customers Want */}
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E91E8C' }}>
                 <Trophy className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Ready to compete</h3>
+              <h3 className="text-xl font-semibold mb-3">Design What Customers Want</h3>
               <p className="text-gray-600 leading-relaxed">
-                Level the playing field and go beyond theory. Design experiences that solve real problems beautifully
+                Build solutions based on real needs, not assumptions
               </p>
             </div>
 
-            {/* From Good to Insanely Great */}
+            {/* From Good Ideas to Market Fit */}
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E91E8C' }}>
                 <Rocket className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">From Good to Insanely Great</h3>
+              <h3 className="text-xl font-semibold mb-3">From Good Ideas to Market Fit</h3>
               <p className="text-gray-600 leading-relaxed">
-                Aligning teams around customer value. Making customer focus a habit, not a slogan.
+                Turn insights into products and services customers choose
               </p>
             </div>
+          </div>
+
+          {/* Mid-section CTA */}
+          <div className="text-center mt-12">
+            <a href="bookConsultation.html" className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors text-lg font-medium">
+              <span>See If This Course Fits Your Team</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -227,7 +249,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Course Modules</h2>
             <p className="text-xl text-gray-600">
-              Five practical modules to transform how you understand customers and design solutions.
+              Five practical modules to help your team understand customers and design solutions that win.
             </p>
           </div>
 
@@ -251,11 +273,11 @@ export function Course02Page() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Separating opinions from evidence</span>
+                      <span>Go beyond surface feedback to uncover what customers truly need</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Asking better questions, not more questions</span>
+                      <span>Identify the real problems worth solving</span>
                     </li>
                   </ul>
                 </div>
@@ -273,11 +295,11 @@ export function Course02Page() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Where customers get stuck, annoyed, or confused</span>
+                      <span>See your product or service from the customer's perspective</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Identifying moments that matter</span>
+                      <span>Identify friction points that cause drop-offs or dissatisfaction</span>
                     </li>
                   </ul>
                 </div>
@@ -309,11 +331,11 @@ export function Course02Page() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Generating ideas that solve real problems</span>
+                      <span>Translate customer insight into clear solution concepts</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Avoiding "cool but useless" features</span>
+                      <span>Avoid feature overload and unfocused ideas</span>
                     </li>
                   </ul>
                 </div>
@@ -331,11 +353,11 @@ export function Course02Page() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Validate fast, cheap, and early</span>
+                      <span>Validate ideas early with customers</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Reduce risk before spending big money</span>
+                      <span>Reduce risk before spending time and budget</span>
                     </li>
                   </ul>
                 </div>
@@ -363,15 +385,15 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 5
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">From Idea to Action</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">From Ideas to Action</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Aligning teams around customer value</span>
+                      <span>Turn tested ideas into practical next steps</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Making customer focus a habit, not a slogan</span>
+                      <span>Align teams around what to build and why</span>
                     </li>
                   </ul>
                 </div>
@@ -396,28 +418,28 @@ export function Course02Page() {
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
                   <h3 className="font-semibold text-lg mb-2">Product Managers & Designers</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    You want to create products people love, not just use. Learn to blend functionality with emotional design like Apple does.
+                    Professionals who want to design solutions customers actually use and value.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
                   <h3 className="font-semibold text-lg mb-2">SME Founders & Innovators</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    You're building new products or services and want them to stand out. Apply Apple's design thinking to create competitive advantage.
+                    Business owners who want to reduce guesswork and invest in ideas that work.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
-                  <h3 className="font-semibold text-lg mb-2">Marketing & Brand Teams</h3>
+                  <h3 className="font-semibold text-lg mb-2">Marketing & Growth Teams</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    You need to communicate value through design. Learn how Apple makes every touchpoint an experience that builds brand loyalty.
+                    Teams looking to better understand customers and improve conversion and retention.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
-                  <h3 className="font-semibold text-lg mb-2">UX/UI & Creative Professionals</h3>
+                  <h3 className="font-semibold text-lg mb-2">UX & Creative Professionals</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    You want to elevate your craft. Study Apple's approach to simplicity, elegance, and user-centered design excellence.
+                    Practitioners who want to connect design decisions to real business outcomes.
                   </p>
                 </div>
               </div>
@@ -494,7 +516,7 @@ export function Course02Page() {
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <AlertCircle className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Products That Work But Don't Delight</h3>
+              <h3 className="text-xl font-semibold mb-3">Products That Don't Get Adopted</h3>
               <p className="text-gray-600 leading-relaxed">
                 Learn to design beyond functionality. Create experiences that customers fall in love with, not just tolerate.
               </p>
@@ -516,7 +538,7 @@ export function Course02Page() {
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <Users className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Can't Compete on Design Excellence</h3>
+              <h3 className="text-xl font-semibold mb-3">Teams Disagree on What to Build</h3>
               <p className="text-gray-600 leading-relaxed">
                 Apply Apple's simplicity and elegance principles. Stand out in crowded markets through superior design thinking and execution.
               </p>
@@ -526,7 +548,7 @@ export function Course02Page() {
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <Lightbulb className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Ideas That Never Get Validated</h3>
+              <h3 className="text-xl font-semibold mb-3">Designs That Don't Drive Results</h3>
               <p className="text-gray-600 leading-relaxed">
                 Use rapid prototyping to test concepts quickly and cheaply. Fail fast, learn faster, and build products people actually want.
               </p>
@@ -541,7 +563,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-4 tracking-tight">Excellence Stories</h2>
             <p className="text-xl text-gray-600">
-              Product leaders who transformed their approach in design principles.
+              See how teams changed the way they design — and the results they achieved.
             </p>
           </div>
 
@@ -621,24 +643,22 @@ export function Course02Page() {
 
           <div className="space-y-4">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                >
+              <details key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+                <summary className="w-full px-6 py-5 flex items-center justify-between cursor-pointer list-none hover:bg-gray-50 transition-colors">
                   <span className="font-normal text-sm pr-4">{item.question}</span>
-                  <ChevronDown 
-                    className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${
-                      openFaqIndex === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                {openFaqIndex === index && (
-                  <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
-                    {item.answer}
-                  </div>
-                )}
-              </div>
+                  <svg 
+                    className="w-4 h-4 text-gray-400 transition-transform flex-shrink-0 group-open:rotate-180" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-5 pt-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                  {item.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>
@@ -651,13 +671,13 @@ export function Course02Page() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
-                Investment
+                Course Investment
               </div>
               <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
-                Ready to Design Like Apple?
+                Ready to Win More Customers?
               </h2>
               <p className="text-lg text-gray-600">
-                Create products and experiences that customers truly love. Transform your approach to design excellence.
+                Give your team a practical, proven approach to understanding customers and building solutions that work.
               </p>
             </div>
 
@@ -724,7 +744,7 @@ export function Course02Page() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-700">Free pre-course consultation</span>
+                      <span className="text-gray-700">Pre-course alignment session for your team</span>
                     </div>
                   </div>
                 </div>
@@ -735,26 +755,26 @@ export function Course02Page() {
                   <div className="space-y-4 mb-8">
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">Customer-Centric Design</div>
-                      <div className="text-sm text-gray-600">Design products customers emotionally connect with</div>
+                      <div className="text-sm text-gray-600">Design products and services customers actually want — not based on assumptions.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">Rapid Prototyping</div>
-                      <div className="text-sm text-gray-600">Validate ideas before building</div>
+                      <div className="text-sm text-gray-600">Validate ideas early before investing time and budget.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
-                      <div className="font-medium mb-1">Apple's Simplicity Principles</div>
-                      <div className="text-sm text-gray-600">Solve complex problems elegantly</div>
+                      <div className="font-medium mb-1">Design for Clarity & Focus</div>
+                      <div className="text-sm text-gray-600">Simplify complex problems and design solutions that are easy to understand and use.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">User Journey Mapping</div>
-                      <div className="text-sm text-gray-600">Create delightful touchpoints</div>
+                      <div className="text-sm text-gray-600">Identify friction points and improve the end-to-end customer experience.</div>
                     </div>
                   </div>
 
                   <div className="bg-pink-50 rounded-xl p-6">
                     <div className="text-sm mb-2 font-semibold">💡 Real Impact</div>
                     <p className="text-sm text-gray-700">
-                      Teams applying design principles report 45% higher customer satisfaction scores and 60% increase in product adoption rates.
+                      Teams that apply customer-focused design principles consistently report higher customer satisfaction and stronger product adoption.
                     </p>
                   </div>
                 </div>
@@ -763,14 +783,15 @@ export function Course02Page() {
               {/* CTA Button */}
               <div className="mt-12 text-center">
                 <a 
-                  href="/bookConsultation.html" 
-                  className="bg-black text-white px-10 py-5 rounded-full hover:bg-gray-800 transition-all inline-flex items-center gap-3 group text-lg"
+                  href="bookConsultation.html" 
+                  className="text-white px-10 py-5 rounded-full hover:opacity-90 transition-all inline-flex items-center gap-3 group text-lg"
+                  style={{ backgroundColor: '#E91E8C' }}
                 >
-                  <span>Get Started Today</span>
+                  <span>Plan This Course for Your Team</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <p className="mt-6 text-sm text-gray-500">
-                  Talk to our course advisor to find the perfect fit for your team
+                  A short discussion to understand your goals and team needs.
                 </p>
               </div>
             </div>
@@ -779,54 +800,7 @@ export function Course02Page() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="text-3xl mb-4 tracking-tight font-semibold">TeamWorks</div>
-              <p className="text-gray-600 max-w-md leading-relaxed">
-                Fun, hands-on training workshops for SME teams across Southeast Asia. 
-                Transform your team in just 2 days.
-              </p>
-            </div>
-
-            {/* Courses */}
-            <div>
-              <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Courses</h4>
-              <div className="space-y-3 text-sm">
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Design Like Apple</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Work Clear, Work Fast</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Lean Six Sigma</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Prompt Your AI Better</a></div>
-              </div>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Company</h4>
-              <div className="space-y-3 text-sm">
-                <div><a href="/" className="hover:text-gray-600 transition-colors">About Us</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Our Instructors</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Testimonials</a></div>
-                <div><a href="/" className="hover:text-gray-600 transition-colors">Contact</a></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-500">
-              © 2026 TeamWorks. All rights reserved.
-            </div>
-            <div className="flex gap-8 text-sm text-gray-500">
-              <a href="/" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
-              <a href="/" className="hover:text-gray-900 transition-colors">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <FooterV2 />
     </div>
   );
 }

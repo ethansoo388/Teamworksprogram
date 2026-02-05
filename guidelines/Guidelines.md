@@ -1,13 +1,168 @@
 **Add your own guidelines here**
+# Guidelines.md
+# =========================================
+# Figma Make – Static Site (MPA) HARD RULES
+# =========================================
+#
+# This project is a STATIC MULTI-PAGE WEBSITE (MPA).
+# It is deployed to Hostinger shared hosting using Git.
+#
+# These rules are NON-NEGOTIABLE.
+# Any violation will BREAK production.
+#
+# -----------------------------------------
+# 1. ARCHITECTURE – ABSOLUTE RULES
+# -----------------------------------------
+#
+# - This is NOT an SPA.
+# - Do NOT use React Router, Next.js routing, or client-side routing of any kind.
+# - Do NOT use SSR, SSG frameworks, or server adapters.
+# - Each page MUST be a real, physical .html file.
+#
+# Required output pages (examples):
+# - index.html
+# - creating-super-teams.html
+# - design-like-apple.html
+# - operational-excellence.html
+# - bookConsultation.html
+#
+# -----------------------------------------
+# 2. BUILD OUTPUT – CRITICAL
+# -----------------------------------------
+#
+# - `npm run build` MUST output STATIC FILES ONLY.
+# - Build output directory MUST be:
+#
+#       /public
+#
+# - `/public` MUST contain:
+#     - index.html
+#     - other *.html pages
+#     - css/
+#     - js/
+#
+# - `/dist` MUST NOT be used.
+# - Do NOT generate nested folders like `/public/public`.
+#
+# -----------------------------------------
+# 3. DEPLOYMENT MODEL (HOSTINGER)
+# -----------------------------------------
+#
+# - Hostinger Git Tool deploys the BRANCH ROOT directly into `public_html`.
+# - Therefore:
+#
+#   The *contents* of `/public` must be copied to the repository root
+#   before deployment to the `hostinger` branch.
+#
+# - The `hostinger` branch MUST contain ONLY static site files:
+#
+#   Correct `hostinger` branch structure:
+#   ├── index.html
+#   ├── creating-super-teams.html
+#   ├── design-like-apple.html
+#   ├── operational-excellence.html
+#   ├── bookConsultation.html
+#   ├── css/
+#   └── js/
+#
+# - `node_modules`, `src`, build configs, and docs MUST NOT exist in `hostinger`.
+#
+# -----------------------------------------
+# 4. LINKS & NAVIGATION – STRICT
+# -----------------------------------------
+#
+# - ALL links MUST use RELATIVE URLs.
+#
+#   ✅ Correct:
+#     href="creating-super-teams.html"
+#     href="bookConsultation.html"
+#
+#   ❌ Forbidden:
+#     href="/creating-super-teams"
+#     href="/bookConsultation"
+#
+# - Do NOT use JavaScript click handlers for navigation.
+# - Buttons that navigate MUST be:
+#
+#     <a href="page.html">...</a>
+#
+# NOT:
+#     <button onclick="...">
+#
+# -----------------------------------------
+# 5. JAVASCRIPT – INTERACTIVITY ONLY
+# -----------------------------------------
+#
+# JavaScript is allowed ONLY for:
+# - FAQ accordion toggle
+# - Simple UI interactions
+# - Form submission
+#
+# JavaScript MUST:
+# - Be plain JS (no framework runtime)
+# - Be included via <script src="js/*.js">
+# - Never intercept navigation links
+#
+# -----------------------------------------
+# 6. FAQ / ACCORDION REQUIREMENTS
+# -----------------------------------------
+#
+# - FAQ MUST work with pure JavaScript.
+# - No React state, no hydration, no framework lifecycle.
+# - Click MUST toggle visibility via CSS classes or inline styles.
+#
+# -----------------------------------------
+# 7. REACT USAGE – CONSTRAINED
+# -----------------------------------------
+#
+# - React MAY be used internally during development ONLY.
+# - React MUST be fully compiled away at build time.
+# - Final output MUST be static HTML/CSS/JS.
+#
+# - Do NOT introduce:
+#   - React Router
+#   - useEffect for navigation
+#   - Dynamic imports for pages
+#
+# -----------------------------------------
+# 8. NODE / DEPENDENCIES
+# -----------------------------------------
+#
+# - `node_modules` MUST NEVER be committed.
+# - `.gitignore` MUST include:
+#
+#     node_modules/
+#
+# -----------------------------------------
+# 9. FILE SAFETY RULES
+# -----------------------------------------
+#
+# - Do NOT delete or rename existing HTML pages unless explicitly instructed.
+# - Do NOT refactor working navigation or layout.
+# - Do NOT “optimize” architecture.
+#
+# This project values STABILITY over cleverness.
+#
+# -----------------------------------------
+# 10. CHANGE POLICY
+# -----------------------------------------
+#
+# When modifying code:
+# - Preserve existing file structure
+# - Preserve existing URLs
+# - Preserve existing page behavior
+#
+# If unsure: DO NOTHING and ask.
+#
+# =========================================
+# END OF GUIDELINES
+# =========================================
 
 # General Guidelines
 
 ## Technology Constraints
 
-- Use **HTML and CSS only** for production output.
 - JavaScript is allowed **only when necessary** (interactions, toggles, analytics).
-- **Do NOT use Node.js, React, Vue, Next.js, Vite, or build pipelines**.
-- The final output must work by opening `index.html` directly in a browser.
 
 ## CSS & Layout
 

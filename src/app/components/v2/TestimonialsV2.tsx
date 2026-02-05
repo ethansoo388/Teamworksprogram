@@ -10,9 +10,9 @@ const testimonials = [
     role: "HR Director, Digital Solutions SG"
   },
   {
-    quote: "The Lean Six Sigma course was eye-opening. Explained complex concepts in simple terms. Reduced our defects by 30% in just 3 weeks!",
+    quote: "The Lean Problem Solving course was eye-opening. Explained complex concepts in simple terms. Reduced our defects by 30% in just 3 weeks!",
     author: "David Tan",
-    role: "Operations Manager"
+    role: "Operation Manager, Manufacturing Malaysia"
   }
 ];
 
@@ -28,6 +28,9 @@ export function TestimonialsV2() {
           <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
             What SME leaders say
           </h2>
+          <p className="text-lg text-gray-600">
+            Leaders share how TeamWorks helped their teams work better — fast.
+          </p>
         </div>
 
         {/* Testimonials Grid - Minimal Cards */}

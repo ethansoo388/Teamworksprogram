@@ -1,11 +1,14 @@
-import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp, Clock, Users, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/app/components/v2/FooterV2";
 import { useState } from "react";
-import imgImageWithFallback from "figma:asset/c4c6d9eeeebe6650cdc10ae0a9bcac6684ae5dd6.png";
-import imgImageWithFallback1 from "figma:asset/ccce80f32ae85f4ef385dd09c5b316f600e5094a.png";
-import imgImageWithFallback2 from "figma:asset/09fa8596b9e25fc2415289c627b981364389292f.png";
-import imgImageModernOfficeWorkspace from "figma:asset/2d5d0858df8af35125d4387d9c6ce2157063eb05.png";
-import imgContainer from "figma:asset/ee206343ea0ca4d20f3d455b1136ba6e57235c34.png";
+
+// Hero image
+const heroImage = "https://i.postimg.cc/W17qQ6Qz/an-asian-team-looking-happy-solving-problems-young-vibrant-bright-with-white-background-boards.jpg";
+
+// Course module images
+const moduleImage1 = "https://i.postimg.cc/7h7fXggd/Asia-young-executive-teams-discussing-HAPPY-standing-smiling-with-a-Kanban-board-vibrant-young.jpg";
+const moduleImage2 = "https://i.postimg.cc/2SCVFL3X/Happy-asians-team-of-a-SME-working-fast-and-efficient-without-laptop-more-interactive-with-board-(1.jpg";
+const moduleImage3 = "https://i.postimg.cc/d0psXhtY/Untitled-design-(19).png";
 
 export function Course03Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,30 +20,30 @@ export function Course03Page() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-orange-400 via-orange-600 to-orange-900">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            <a href="index.html" className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-orange-600">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <div className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 03</div>
-                <div className="font-bold text-lg -mt-0.5">Work Clear. Work Fast.</div>
+                <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES • COURSE 03</div>
+                <div className="font-bold text-base text-gray-900 -mt-0.5">Critical Thinking for Better Work</div>
               </div>
             </a>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#benefits" className="text-sm hover:text-gray-600 transition-colors">Benefits</a>
-              <a href="#modules" className="text-sm hover:text-gray-600 transition-colors">Modules</a>
-              <a href="#audience" className="text-sm hover:text-gray-600 transition-colors">Who's It For</a>
-              <a href="#faq" className="text-sm hover:text-gray-600 transition-colors">FAQ</a>
+              <a href="#modules" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a>
+              <a href="#outcomes" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Outcomes</a>
+              <a href="#reviews" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
+              <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
             </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a href="/bookConsultation.html" className="bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
-                Book This Course
+              <a href="bookConsultation.html" className="bg-orange-600 text-white px-6 py-2.5 rounded-lg text-sm hover:bg-orange-700 transition-all font-medium">
+                Book This Course for Your Team
               </a>
             </div>
 
@@ -57,11 +60,11 @@ export function Course03Page() {
           {mobileMenuOpen && (
             <div className="md:hidden py-6 border-t border-gray-200">
               <div className="flex flex-col gap-4">
-                <a href="#benefits" className="text-sm py-2" onClick={() => setMobileMenuOpen(false)}>Benefits</a>
-                <a href="#modules" className="text-sm py-2" onClick={() => setMobileMenuOpen(false)}>Modules</a>
-                <a href="#audience" className="text-sm py-2" onClick={() => setMobileMenuOpen(false)}>Who's It For</a>
-                <a href="#faq" className="text-sm py-2" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
-                <a href="/bookConsultation.html" className="bg-orange-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                <a href="#modules" className="text-sm py-2">Modules</a>
+                <a href="#outcomes" className="text-sm py-2">Outcomes</a>
+                <a href="#reviews" className="text-sm py-2">Reviews</a>
+                <a href="#faq" className="text-sm py-2">FAQ</a>
+                <a href="bookConsultation.html" className="bg-orange-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
                   Book This Course
                 </a>
               </div>
@@ -74,11 +77,11 @@ export function Course03Page() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="https://www.ciagile.com" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#EA580C'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Home</a>
+            <a href="https://www.ciagile.com" className="hover:text-orange-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="/index.html" className="transition-all" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#EA580C'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Programs</a>
+            <a href="index.html" className="hover:text-orange-600 transition-colors">Programs</a>
             <span>/</span>
-            <span className="text-gray-900 font-bold">Work Clear. Work Fast.</span>
+            <span className="text-gray-900 font-bold">Critical Thinking for Better Work</span>
           </div>
         </div>
       </div>
@@ -91,21 +94,26 @@ export function Course03Page() {
               {/* Left: Content */}
               <div>
                 {/* Course Badge */}
-                <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                  <svg className="w-4 h-4 text-orange-600" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                  <span className="text-sm font-semibold text-orange-600 uppercase tracking-wide">Course 03</span>
+                <div className="inline-flex items-center gap-3 bg-[#FFF9E6] border-2 border-[#FFD88A] rounded-full px-6 py-3 mb-8">
+                  <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                  <span className="text-base font-semibold text-[#8B4513]">TEAMWORKS · EXECUTION</span>
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
-                  Work Clear. <span className="text-orange-600">Work Fast.</span>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                  Critical Thinking for<br />
+                  <span className="text-orange-600">Better Work.</span>
                 </h1>
+                
+                {/* Sub-tagline */}
+                <p className="text-base lg:text-lg italic text-gray-600 mb-6">
+                  Use essential critical thinking techniques and Kanban to deliver faster.
+                </p>
 
                 {/* Description */}
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                  A 2-Day hands-on workshop to clear the mess, stop the bottlenecks, improves collaboration and get your team moving at double speed.
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  <strong>When work is unclear, teams slow down.</strong><br />
+                  Critical Thinking for Better Work helps teams prioritise clearly, make better decisions, and keep work moving — without overload or chaos.
                 </p>
 
                 {/* Course Info Cards */}
@@ -113,27 +121,21 @@ export function Course03Page() {
                   <div className="grid grid-cols-3 gap-6">
                     {/* Duration */}
                     <div className="text-center">
-                      <svg className="w-6 h-6 text-orange-600 mx-auto mb-2" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
+                      <Clock className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                       <div className="text-xs text-gray-600 mb-1">Duration</div>
                       <div className="font-semibold text-gray-900">2 days</div>
                     </div>
                     
                     {/* Format */}
                     <div className="text-center">
-                      <svg className="w-6 h-6 text-orange-600 mx-auto mb-2" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                      </svg>
+                      <Users className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                       <div className="text-xs text-gray-600 mb-1">Format</div>
                       <div className="font-semibold text-gray-900">In-person</div>
                     </div>
                     
                     {/* Capacity */}
                     <div className="text-center">
-                      <svg className="w-6 h-6 text-orange-600 mx-auto mb-2" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
+                      <UserCheck className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                       <div className="text-xs text-gray-600 mb-1">Capacity</div>
                       <div className="font-semibold text-gray-900">Max 30</div>
                     </div>
@@ -141,17 +143,17 @@ export function Course03Page() {
                 </div>
 
                 {/* CTA Button */}
-                <a href="/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 text-white px-8 py-4 rounded-full hover:bg-orange-700 transition-all group">
-                  <span className="font-medium">Book this course</span>
+                <a href="bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all group">
+                  <span className="font-medium">Talk to Us About Your Team</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
 
               {/* Right: Image */}
               <div className="relative">
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src={imgImageModernOfficeWorkspace}
+                    src={heroImage}
                     alt="Modern office workspace"
                     className="w-full h-full object-cover"
                   />
@@ -167,10 +169,11 @@ export function Course03Page() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
-                See the work. Remove the friction. <span className="text-orange-600">Deliver faster.</span>
+                See the work. Remove the friction.<br />
+                <span className="text-orange-600">Deliver faster.</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                A 2-Day hands-on workshop to clear the mess, stop the bottlenecks, improves collaboration and get your team moving at double speed.
+                This 2-day hands-on workshop helps teams think more clearly, prioritise better, and deliver work without constant firefighting.
               </p>
             </div>
 
@@ -181,9 +184,9 @@ export function Course03Page() {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundImage: "linear-gradient(135deg, rgb(255, 185, 0) 0%, rgb(255, 105, 0) 100%)" }}>
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Visualize Everything</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Visualise Everything</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  See your work in real-time. Understand bottlenecks instantly and make smarter decisions with visual management systems.
+                  Make work visible so teams can think clearly and spot problems early.
                 </p>
               </div>
 
@@ -194,7 +197,7 @@ export function Course03Page() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Cut Cycle Time in Half</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Deliver faster without working harder. Learn how to identify and eliminate delays that slow your team down.
+                  Reduce delays by focusing on the most important work first.
                 </p>
               </div>
 
@@ -203,9 +206,9 @@ export function Course03Page() {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundImage: "linear-gradient(135deg, rgb(255, 185, 0) 0%, rgb(255, 105, 0) 100%)" }}>
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Stop Starting, Start Finishing</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Stop Starting. Start Finishing.</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Focus on completion, not just activity. Limit work-in-progress to accelerate delivery and reduce stress.
+                  Limit work in progress so teams complete work faster.
                 </p>
               </div>
 
@@ -216,9 +219,19 @@ export function Course03Page() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">From Chaos to Control</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Transform reactive firefighting into predictable flow. Build systems that scale without burning out your team.
+                  Use simple Kanban practices to bring structure without bureaucracy.
                 </p>
               </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center mt-16">
+              <a href="bookConsultation.html" className="inline-flex flex-col items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
+                See If This Course Fits Your Team
+              </a>
+              <p className="text-sm text-gray-500 mt-4">
+                A short conversation. No obligation.
+              </p>
             </div>
           </div>
         </section>
@@ -233,7 +246,7 @@ export function Course03Page() {
                 <div className="mb-12">
                   <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Course Modules</h2>
                   <p className="text-xl text-gray-600">
-                    Learn the simple, visual way to manage your workflow and collaborate with others so you can stop guessing, start hitting your deadlines and achieve success.
+                    Learn a simple, visual way to manage work so teams think clearly and deliver consistently.
                   </p>
                 </div>
 
@@ -246,16 +259,9 @@ export function Course03Page() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 text-gray-900">Module 1: Why Work Gets Stuck</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>The hidden cost of multitasking</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Why "busy" ≠ productive</span>
-                        </li>
-                      </ul>
+                      <p className="text-gray-600">
+                        Understand how unclear priorities and overloaded teams slow delivery.
+                      </p>
                     </div>
                   </div>
 
@@ -266,16 +272,9 @@ export function Course03Page() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 text-gray-900">Module 2: Making Work Visible</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Seeing problems early instead of firefighting</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>One shared view across departments</span>
-                        </li>
-                      </ul>
+                      <p className="text-gray-600">
+                        Use visualisation to expose bottlenecks and improve decision-making.
+                      </p>
                     </div>
                   </div>
 
@@ -285,17 +284,10 @@ export function Course03Page() {
                       <span className="text-white font-bold text-lg">3</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 3: Limiting Work In Progress</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Doing less at the same time = more output</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Protecting teams from overload</span>
-                        </li>
-                      </ul>
+                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 3: Limiting Work in Progress</h3>
+                      <p className="text-gray-600">
+                        Focus on fewer things at a time to finish work faster.
+                      </p>
                     </div>
                   </div>
 
@@ -306,16 +298,9 @@ export function Course03Page() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 text-gray-900">Module 4: Managing Dependencies Across Teams</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>How departments can work together without chaos</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Reducing handover delays</span>
-                        </li>
-                      </ul>
+                      <p className="text-gray-600">
+                        Reduce delays caused by handoffs and waiting.
+                      </p>
                     </div>
                   </div>
 
@@ -326,16 +311,9 @@ export function Course03Page() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 text-gray-900">Module 5: From Chaos to Cadence</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Simple metrics that actually help</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0"></span>
-                          <span>Fixing bottlenecks step by step</span>
-                        </li>
-                      </ul>
+                      <p className="text-gray-600">
+                        Create simple working rhythms teams can sustain.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -345,22 +323,22 @@ export function Course03Page() {
               <div className="relative h-full min-h-[700px]">
                 <div className="absolute top-0 left-0 w-3/5 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src={imgImageWithFallback}
-                    alt="Team collaboration"
+                    src={moduleImage1}
+                    alt="Course module image 1"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 w-3/5 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src={imgImageWithFallback1}
-                    alt="Workshop activity"
+                    src={moduleImage2}
+                    alt="Course module image 2"
                     className="w-full h-auto object-cover"
                   />
                 </div>
                 <div className="absolute top-1/2 left-1/3 transform -translate-y-1/2 w-3/5 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src={imgImageWithFallback2}
-                    alt="Team planning"
+                    src={moduleImage3}
+                    alt="Course module image 3"
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -376,17 +354,14 @@ export function Course03Page() {
               {/* Left: Content */}
               <div>
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-orange-50 rounded-full px-4 py-2 mb-6">
-                  <span className="w-1.5 h-1.5 rounded-full bg-orange-600"></span>
-                  <span className="text-sm font-medium text-orange-900">Target Audience</span>
-                </div>
+
 
                 <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                   Who Is This Course For?
                 </h2>
 
                 <p className="text-xl text-gray-600 mb-12">
-                  Perfect for SME teams dealing with chaos, delay and the constant feeling of busyness but nothing gets done.
+                  Perfect for SME teams dealing with daily chaos, unclear priorities, and constant firefighting.
                 </p>
 
                 {/* Target Audience List */}
@@ -399,7 +374,7 @@ export function Course03Page() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">Operations Managers</h3>
-                      <p className="text-gray-600">Who need to coordinate workflows across multiple teams and departments.</p>
+                      <p className="text-gray-600">Juggling priorities and delivery pressure</p>
                     </div>
                   </div>
 
@@ -411,7 +386,7 @@ export function Course03Page() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">Team Leaders</h3>
-                      <p className="text-gray-600">Struggling with missed deadlines and unclear priorities.</p>
+                      <p className="text-gray-600">Managing busy teams with unclear focus</p>
                     </div>
                   </div>
 
@@ -423,7 +398,7 @@ export function Course03Page() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">Business Owners</h3>
-                      <p className="text-gray-600">Who want visibility without micromanaging every detail.</p>
+                      <p className="text-gray-600">Wanting better execution without micromanaging</p>
                     </div>
                   </div>
 
@@ -434,8 +409,8 @@ export function Course03Page() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1">Anyone Fed Up With Firefighting</h3>
-                      <p className="text-gray-600">And ready for predictable, sustainable workflows.</p>
+                      <h3 className="font-bold text-lg mb-1">Cross-functional Teams</h3>
+                      <p className="text-gray-600">Struggling with handoffs and dependencies</p>
                     </div>
                   </div>
                 </div>
@@ -453,7 +428,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-lg">Faster delivery cycles with less stress</p>
+                      <p className="text-lg">Faster delivery with fewer delays</p>
                     </div>
 
                     <div className="flex items-start gap-4">
@@ -462,7 +437,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-lg">Transparency that builds trust and accountability</p>
+                      <p className="text-lg">Clear priorities everyone understands</p>
                     </div>
 
                     <div className="flex items-start gap-4">
@@ -471,7 +446,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-lg">A simple visual system everyone understands</p>
+                      <p className="text-lg">Better decision-making at team level</p>
                     </div>
 
                     <div className="flex items-start gap-4">
@@ -480,7 +455,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-lg">Better collaboration between departments</p>
+                      <p className="text-lg">Reduced work overload and burnout</p>
                     </div>
 
                     <div className="flex items-start gap-4">
@@ -489,7 +464,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <p className="text-lg">Reduced firefighting and fewer surprises</p>
+                      <p className="text-lg">More predictable outcomes</p>
                     </div>
                   </div>
                 </div>
@@ -510,9 +485,9 @@ export function Course03Page() {
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Frustration 1 */}
               <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">I'm drowning in tasks...</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">I'm drowning in tasks</h3>
                 <p className="text-gray-600">
-                  You're juggling ten things at once, and nothing is actually finished. Every day feels like you're "busy" but you're not making progress.
+                  Too much work, no clear priority, and everything feels urgent.
                 </p>
               </div>
 
@@ -520,7 +495,7 @@ export function Course03Page() {
               <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Where's the bottleneck?</h3>
                 <p className="text-gray-600">
-                  Work just piles up. You don't know where it's stuck, who has it, or when it'll actually get done.
+                  Work gets stuck but no one knows why.
                 </p>
               </div>
 
@@ -528,15 +503,15 @@ export function Course03Page() {
               <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">My team is always firefighting</h3>
                 <p className="text-gray-600">
-                  Everything is urgent. Deadlines get missed. You only find out about problems when it's too late.
+                  Constant urgency leaves no time for real progress.
                 </p>
               </div>
 
               {/* Frustration 4 */}
               <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Coordination is a nightmare</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Communication is a nightmare</h3>
                 <p className="text-gray-600">
-                  Different teams use different systems. Handoffs fail. Nobody has a clear view of what's really happening.
+                  Too many handoffs and unclear ownership.
                 </p>
               </div>
             </div>
@@ -544,7 +519,7 @@ export function Course03Page() {
         </section>
 
         {/* By the end / Outcomes Section */}
-        <section className="bg-gray-50 py-20 lg:py-32">
+        <section id="outcomes" className="bg-gray-50 py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               {/* Left: By the end of this 2-day course */}
@@ -560,7 +535,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">A Kanban board system customized for your actual work</p>
+                    <p className="text-gray-700">A clear visual system for managing work</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -569,7 +544,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Clear WIP limits that prevent overload</p>
+                    <p className="text-gray-700">Practical techniques to prioritise better</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -578,7 +553,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Metrics that show where you're actually stuck</p>
+                    <p className="text-gray-700">Shared understanding across the team</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -587,16 +562,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Faster delivery without adding headcount</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full border-2 border-orange-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <p className="text-gray-700">A shared language your whole team can use</p>
+                    <p className="text-gray-700">A way to spot and fix problems early</p>
                   </div>
                 </div>
               </div>
@@ -614,7 +580,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Deliver 30–50% faster</p>
+                    <p className="text-gray-700">Better flow of work</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -623,7 +589,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Cut firefighting in half</p>
+                    <p className="text-gray-700">Fewer delays and surprises</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -632,7 +598,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Know exactly where work is stuck</p>
+                    <p className="text-gray-700">Reduced overload</p>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -641,25 +607,7 @@ export function Course03Page() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <p className="text-gray-700">Reduce team burnout and overtime</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full border-2 border-orange-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <p className="text-gray-700">Hit deadlines consistently</p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full border-2 border-orange-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <p className="text-gray-700">Build trust across departments</p>
+                    <p className="text-gray-700">Stronger team accountability</p>
                   </div>
                 </div>
               </div>
@@ -668,7 +616,7 @@ export function Course03Page() {
         </section>
 
         {/* What SME Teams Say Section */}
-        <section className="bg-white py-20 lg:py-32">
+        <section id="reviews" className="bg-white py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
@@ -778,24 +726,20 @@ export function Course03Page() {
           <div className="max-w-[900px] mx-auto px-6 lg:px-12">
             {/* FAQ Badge */}
             <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-medium">
-                <span className="text-orange-500">✦</span>
-                FAQ
-              </div>
             </div>
 
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Your Questions Answered</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Common Questions</h2>
               <p className="text-base text-gray-600">
-                Common concerns about adopting operational excellence in SMEs.
+                Straightforward answers to help you decide if this course is right for your team.
               </p>
             </div>
 
             <div className="space-y-4">
               <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-orange-500 transition-colors open:border-orange-500">
                 <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  Is this just theory or will we get practical tools?
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="flex-1">Is this just theory or will we get practical tools?</span>
+                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
@@ -806,20 +750,20 @@ export function Course03Page() {
 
               <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-orange-500 transition-colors open:border-orange-500">
                 <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  Our business is too small for 'operational excellence.' True?
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="flex-1">Is this suitable for smaller or growing teams?</span>
+                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
                 <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                  No. Small teams benefit the most—you can't afford waste. Operational excellence means less chaos, faster delivery, and happier clients. That's good for any business.
+                  Yes. This course is designed specifically for smaller and growing teams who need clarity and better ways of working without adding complexity. The practices are lightweight, practical, and easy to apply — even with limited time and resources.
                 </p>
               </details>
 
               <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-orange-500 transition-colors open:border-orange-500">
                 <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  Will this add bureaucracy and slow us down?
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="flex-1">Will this add bureaucracy and slow us down?</span>
+                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
@@ -830,8 +774,8 @@ export function Course03Page() {
 
               <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-orange-500 transition-colors open:border-orange-500">
                 <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  How long does it take to see results?
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="flex-1">How long does it take to see results?</span>
+                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
@@ -842,8 +786,8 @@ export function Course03Page() {
 
               <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-orange-500 transition-colors open:border-orange-500">
                 <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  Do we need to hire consultants to implement this?
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="flex-1">Do we need to hire consultants to implement this?</span>
+                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
@@ -860,24 +804,18 @@ export function Course03Page() {
           <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
             {/* Top Badge */}
             <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                </svg>
-                Limited Seats Available
-              </div>
             </div>
 
             {/* Main Heading */}
             <div className="text-center text-white mb-4">
               <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                Ready to Work Clear,<br />Work Fast?
+                Ready to Decide Better and Deliver Faster?
               </h2>
             </div>
 
             {/* Subheading */}
-            <p className="text-center text-white text-lg mb-12 max-w-3xl mx-auto">
-              Eliminate waste. Accelerate delivery. Transform your workflow with world-class frameworks.
+            <p className="text-center text-white text-lg mb-12 max-w-3xl mx-auto italic">
+              Give your team a practical way to think clearly, prioritise work, and deliver consistently.
             </p>
 
             {/* Pricing Card */}
@@ -885,7 +823,7 @@ export function Course03Page() {
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                 {/* Left Column - Pricing */}
                 <div>
-                  <div className="text-orange-600 text-sm font-medium mb-2">+ Early Bird Pricing</div>
+                  <div className="text-orange-600 text-sm font-medium mb-2">Team Rate</div>
                   <div className="text-orange-600 text-5xl lg:text-6xl font-bold mb-2">RM350</div>
                   <div className="text-gray-600 text-base mb-4">Per person per day</div>
                   <div className="text-gray-500 text-sm mb-8">Calculated based on the class of 30 pax</div>
@@ -923,7 +861,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <span className="text-gray-700">2-day intensive workshop</span>
+                      <span className="text-gray-700">2-day practical, hands-on workshop</span>
                     </div>
 
                     <div className="flex items-start gap-3">
@@ -932,7 +870,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <span className="text-gray-700">Operations toolkit & templates</span>
+                      <span className="text-gray-700">Work toolkit & templates tailored for your workplace</span>
                     </div>
 
                     <div className="flex items-start gap-3">
@@ -941,7 +879,7 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <span className="text-gray-700">Value stream mapping tools</span>
+                      <span className="text-gray-700">Value visualization & mapping tools</span>
                     </div>
 
                     <div className="flex items-start gap-3">
@@ -950,7 +888,16 @@ export function Course03Page() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                         </svg>
                       </div>
-                      <span className="text-gray-700">Post-workshop support & resources</span>
+                      <span className="text-gray-700">Practical reference materials for continued use</span>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-orange-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                      </div>
+                      <span className="text-gray-700">Post-workshop support, resources, and FREE consultation hours</span>
                     </div>
                   </div>
                 </div>
@@ -959,10 +906,10 @@ export function Course03Page() {
               {/* CTA Button */}
               <div className="mt-10">
                 <a 
-                  href="/bookConsultation.html" 
+                  href="bookConsultation.html" 
                   className="block w-full bg-white border-2 border-orange-600 text-orange-600 text-center px-8 py-4 rounded-xl hover:bg-orange-50 transition-all font-semibold text-lg flex items-center justify-center gap-2 group"
                 >
-                  Book This Course
+                  Book This Course for Your Team
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>

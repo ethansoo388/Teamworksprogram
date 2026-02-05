@@ -24,14 +24,13 @@ export function OurImpactV2() {
         {/* Section Header - Apollo Style */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
-            Our Impact
+            OUR RESULTS
           </div>
           <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
             Proven results across the region
           </h2>
           <p className="text-lg text-gray-600">
-            We've helped thousands of teams transform their performance with practical, 
-            fun training that actually works.
+            Trusted by SME and enterprise teams across Southeast Asia to improve teamwork, delivery, and decision-making.
           </p>
         </div>
 

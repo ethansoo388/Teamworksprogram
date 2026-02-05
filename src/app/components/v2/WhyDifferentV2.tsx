@@ -3,29 +3,29 @@ import { Gamepad2, GraduationCap, Zap, Users } from "lucide-react";
 
 const features = [
   {
-    title: "Hands-On Learning",
-    description: "60% of course time spent on fun activities, games, and real-world challenges. No boring PowerPoints.",
+    title: "Hands-on, not slides",
+    description: "Teams work on real scenarios, not generic case studies.",
     icon: Gamepad2,
     color: "#6D28D9", // Purple
     lightColor: "#EDE9FE"
   },
   {
-    title: "Expert Instructors",
-    description: "All courses taught by industry professionals with 10+ years of real-world experience.",
+    title: "Designed for real workplaces",
+    description: "Built for SMEs dealing with time, resource, and delivery pressure.",
     icon: GraduationCap,
     color: "#EC4899", // Pink
     lightColor: "#FCE7F3"
   },
   {
-    title: "Fast Results",
-    description: "Teams see immediate mindset shifts. Measurable improvements in just 2 weeks.",
+    title: "Focused on behaviour change",
+    description: "We don't just teach concepts — we change how teams work day to day.",
     icon: Zap,
     color: "#F59E0B", // Orange
     lightColor: "#FEF3C7"
   },
   {
-    title: "Non-Technical",
-    description: "Complex concepts explained in simple, easy-to-understand terms for all team members.",
+    title: "Built to be sustained",
+    description: "Simple practices teams can continue using long after the workshop.",
     icon: Users,
     color: "#16A34A", // Green
     lightColor: "#DCFCE7"
@@ -121,8 +121,7 @@ export function WhyDifferentV2() {
             Learning through play
           </h2>
           <p className="text-lg text-gray-600">
-            These aren't just games—they're carefully designed experiences that 
-            teach real business skills while keeping your team energized.
+            We use carefully designed simulations and activities to help teams experience better ways of working — not just talk about them.
           </p>
         </div>
 

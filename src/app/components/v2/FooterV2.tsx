@@ -16,11 +16,11 @@ export function FooterV2() {
           <div>
             <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Courses</h4>
             <div className="space-y-3 text-sm">
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Design Like Apple</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Work Clear, Work Fast</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Lean Six Sigma</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Prompt Your AI Better</a></div>
+              <div><a href="creating-super-teams.html" className="hover:text-gray-600 transition-colors">Creating Super Teams</a></div>
+              <div><a href="design-thinking.html" className="hover:text-gray-600 transition-colors">Win Customers Through Design</a></div>
+              <div><a href="critical-thinking-kanban.html" className="hover:text-gray-600 transition-colors">Critical Thinking for Better Work</a></div>
+              <div><a href="bookConsultation.html" className="hover:text-gray-600 transition-colors">Practical Lean Problem Solving</a></div>
+              <div><a href="bookConsultation.html" className="hover:text-gray-600 transition-colors">AI Skills for YOUR Team</a></div>
             </div>
           </div>
 
@@ -28,10 +28,8 @@ export function FooterV2() {
           <div>
             <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Company</h4>
             <div className="space-y-3 text-sm">
-              <div><a href="#" className="hover:text-gray-600 transition-colors">About Us</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Our Instructors</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Testimonials</a></div>
-              <div><a href="#" className="hover:text-gray-600 transition-colors">Contact</a></div>
+              <div><a href="https://www.ciagile.com" className="hover:text-gray-600 transition-colors">About Us</a></div>
+              <div><a href="bookConsultation.html" className="hover:text-gray-600 transition-colors">Contact Us</a></div>
             </div>
           </div>
         </div>

@@ -1,262 +1,192 @@
-# TeamWorks Website - Production Ready for Hostinger
+# CI Agile & TeamWorks - Unified Website
 
-## 🎯 Project Summary
+This repository contains two subsites built with React and exported to static HTML/CSS/JS:
 
-Your TeamWorks website is production-ready for deployment to Hostinger shared hosting. All files have been updated with the latest changes including enhanced visual design, fixed navigation links, and updated course content.
+1. **CI Agile Main Site** - Enterprise transformation services
+2. **TeamWorks** - SME team training programs
 
----
+## Quick Start
 
-## ✅ Latest Updates (January 2026)
-
-### 1. **Codebase Sync Complete** ✅
-Both React and static HTML/CSS/JS codebases are now fully synchronized:
-- ✅ All navigation links working (Book Consultation buttons)
-- ✅ Course modules updated across both codebases
-- ✅ Business Struggles section with enhanced visual design
-- ✅ Image URLs consistent between React and HTML
-- ✅ All CTAs properly linked to bookConsultation.html
-
-### 2. **Navigation Links Fixed** ✅
-- All "Book Consultation" buttons now properly link to `/bookConsultation.html`
-- Desktop and mobile navigation working correctly
-- All CTA buttons functional throughout the site
-- Hero section "Book Free Consultation" button working
-
-### 3. **Course Page Enhanced** ✅
-**File:** `/public/creating-super-teams.html`
-
-**Visual Design Improvements:**
-- **Updated Course Modules:** New purple cards layout with improved readability
-- **Business Struggles Section:** Enhanced problem cards with gradient backgrounds, hover effects, and decorative emojis
-- **Payoff Section:** Bold typography for "The Payoff", "For the Boss:", and "For the Team:"
-- **Hero Image:** Fixed to use correct postimg.cc URL
-- All content updated to match latest messaging
-
-**Content Updates:**
-- Module 2: "The New Team Contract" (updated from "Team Superpowers")
-- Module 3: "Effective Delivery" with "Work Packs" method breakdown
-- Module 4: "The 1% Sharper" (updated from "Your Action Plan")
-- New section: "Is Your Business Struggling With These?" with 4 problem cards
-- New section: "There Is a Better Way to Work. We'll Guide You." with payoff benefits
-
-### 4. **Production-Ready Status** ✅
-- ✅ All links validated and working
-- ✅ React components and HTML files in perfect sync
-- ✅ Pure HTML/CSS/JavaScript (no build tools needed)
-- ✅ Optimized for Hostinger shared hosting
-- ✅ Works by opening `index.html` directly in browser
-- ✅ Fully responsive design (mobile-first)
-- ✅ SEO-friendly structure with proper meta tags
-- ✅ Image URLs consistent across codebase
-
----
-
-## 🗂️ File Structure
-
-```
-/public/
-├── index.html                    ← UPDATED
-├── creating-super-teams.html     ← NEW
-├── bookConsultation.html         
-├── /css/
-│   └── style.css                 
-└── /js/
-    ├── main.js                   
-    └── form.js                   
-
-/docs/ (Documentation)
-├── README.md                     ← You are here
-├── QUICK_START.txt              ← Start with this!
-├── DEPLOYMENT_GUIDE.md          ← Detailed instructions
-├── FILES_TO_DOWNLOAD.md         ← File reference
-└── DOWNLOAD_PACKAGE.md          ← Complete overview
+### Development
+```bash
+npm install
+npm run dev
 ```
 
----
+Visit http://localhost:5173 to preview.
 
-## 🚀 How to Deploy
+**To preview different pages**, edit `/src/app/App.tsx`:
 
-### Option 1: Quick Method (Recommended)
+```tsx
+// Preview Main Site
+import { IndexPage } from "@/main-site/pages/IndexPage";
+export default function App() {
+  return <IndexPage />;
+}
 
-1. **Read:** `QUICK_START.txt` (5-step guide)
-2. **Copy:** Files from `/public/` folder
-3. **Paste:** Into Hostinger File Manager
-4. **Test:** Visit your website
-5. **Done!** ✅
+// Preview TeamWorks
+import { LandingPage } from "@/teamworks/pages/LandingPage";
+export default function App() {
+  return <LandingPage />;
+}
 
-### Option 2: Detailed Method
-
-1. **Read:** `DEPLOYMENT_GUIDE.md` (comprehensive guide)
-2. **Follow:** Step-by-step instructions
-3. **Troubleshoot:** Using provided solutions
-4. **Deploy:** All files systematically
-
----
-
-## 📋 Deployment Checklist
-
-### Before Deploying
-- [ ] Read `QUICK_START.txt`
-- [ ] Backup current website files
-- [ ] Identify required files
-- [ ] Have Hostinger login ready
-
-### During Deployment
-- [ ] Upload `creating-super-teams.html` (NEW)
-- [ ] Update `index.html` (UPDATED)
-- [ ] Verify CSS files exist
-- [ ] Verify JS files exist
-- [ ] Set correct file permissions (644)
-
-### After Deployment
-- [ ] Clear browser cache
-- [ ] Test homepage loads
-- [ ] Test Course 01 button
-- [ ] Test new course page
-- [ ] Test on mobile
-- [ ] Test all navigation links
-
----
-
-## 🎨 Technical Specifications
-
-### Technology Stack
-- **HTML5** - Semantic markup
-- **CSS** - Tailwind CSS v4 (CDN)
-- **JavaScript** - Vanilla ES6+
-- **Icons** - Lucide Icons (CDN)
-- **Hosting** - Hostinger shared hosting
-
-### Browser Support
-- ✅ Chrome, Firefox, Safari, Edge (latest)
-- ✅ Mobile Safari (iOS)
-- ✅ Chrome Mobile (Android)
-
-### Performance
-- Load time: < 2 seconds
-- Page size: ~100KB (excluding images)
-- Mobile-optimized
-- SEO-friendly
-
----
-
-## 🔗 Site Navigation Flow
-
-```
-Homepage (index.html)
-    ↓ [Click "Learn more" on Course 01]
-Creating Super Teams (creating-super-teams.html) ← NEW!
-    ↓ [Click "Book this course"]
-Book Consultation (bookConsultation.html)
+// Preview specific TeamWorks course
+import { CreatingSuperTeamsPage } from "@/teamworks/pages/CreatingSuperTeamsPage";
+export default function App() {
+  return <CreatingSuperTeamsPage />;
+}
 ```
 
----
+### Build for Production
+```bash
+npm run build
+```
 
-## 🎯 Testing URLs
+Generates `/public` directory with static HTML/CSS/JS files.
 
-After deployment, these URLs should work:
+### Test Build Locally
+```bash
+npm run build
+cd public
+python3 -m http.server 8000
+```
 
-- **Homepage:** `https://teamworks.ciagile.com/`
-- **Course Detail:** `https://teamworks.ciagile.com/creating-super-teams` ← NEW
-- **Booking:** `https://teamworks.ciagile.com/bookConsultation`
+Visit http://localhost:8000
 
----
+## Project Structure
 
-## 💡 Quick Tips
+```
+/src
+├── /main-site          # CI Agile main site
+│   ├── /pages          # Main site pages
+│   └── /components     # Main site components
+├── /teamworks          # TeamWorks training site
+│   ├── /pages          # TeamWorks pages
+│   └── /components     # TeamWorks components
+├── /app                # Original implementation (transitional)
+├── /imports            # Figma-imported components
+└── /shared             # Shared utilities
+```
 
-### If Button Text Hasn't Changed
-1. Clear browser cache (Ctrl+Shift+R)
-2. Check you uploaded the correct index.html
-3. Verify file saved properly in Hostinger
+## Available Pages
 
-### If New Page Shows 404
-1. Verify filename is exactly: `creating-super-teams.html`
-2. Check file is in correct folder (public_html)
-3. Verify file permissions are 644
+### Main Site
+- `/src/main-site/pages/IndexPage.tsx` - Homepage
+- `/src/main-site/pages/AboutUsPage.tsx` - About Us
+- `/src/main-site/pages/ContactUsPage.tsx` - Contact Us
 
-### If Page Looks Broken
-1. Check `css/style.css` exists
-2. Verify internet connection (for CDN resources)
-3. Check browser console for errors (F12)
+### TeamWorks
+- `/src/teamworks/pages/LandingPage.tsx` - Program overview
+- `/src/teamworks/pages/CreatingSuperTeamsPage.tsx` - Course 01
+- `/src/teamworks/pages/DesignLikeApplePage.tsx` - Course 02
+- `/src/teamworks/pages/OperationalExcellencePage.tsx` - Course 03
+- `/src/teamworks/pages/BookConsultationPage.tsx` - Consultation form
 
----
+## Build Output
 
-## 📞 Support Resources
+After running `npm run build`, the `/public` directory contains:
 
-### Documentation (In This Package)
-1. `QUICK_START.txt` - Fast deployment
-2. `DEPLOYMENT_GUIDE.md` - Detailed guide
-3. `FILES_TO_DOWNLOAD.md` - File reference
-4. `DOWNLOAD_PACKAGE.md` - Full specs
+```
+/public
+├── index.html                           # Main site
+├── aboutus.html
+├── contactus.html
+├── /teamworks
+│   ├── index.html                       # TeamWorks landing
+│   ├── creating-super-teams.html        # Course pages
+│   ├── design-thinking.html
+│   ├── critical-thinking-kanban.html
+│   └── bookConsultation.html            # Form
+├── /css
+│   └── style.css
+└── /js
+    ├── main.js
+    └── form.js
+```
 
-### Online Resources
-- Hostinger Help Center: https://support.hostinger.com
-- Tailwind CSS Docs: https://tailwindcss.com
-- Lucide Icons: https://lucide.dev
+## Deployment
 
----
+### To Hostinger
 
-## 🎉 Ready to Deploy!
+1. Build the site:
+   ```bash
+   npm run build
+   ```
 
-Your website is 100% production-ready. Follow these steps:
+2. Copy build output to hostinger branch:
+   ```bash
+   git checkout hostinger
+   cp -r public/* .
+   git add .
+   git commit -m "Deploy: update"
+   git push origin hostinger
+   ```
 
-1. **Start Here:** Read `QUICK_START.txt`
-2. **Deploy:** Copy files to Hostinger
-3. **Test:** Visit your website
-4. **Celebrate:** You're done! 🎊
+3. Hostinger Git Tool deploys the `hostinger` branch to `public_html`
 
----
+## Documentation
 
-## 📊 Project Status
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Complete architecture guide
+- **[MIGRATION_SUMMARY.md](./MIGRATION_SUMMARY.md)** - What changed and why
+- **[Guidelines.md](./Guidelines.md)** - Project-specific rules
 
-| Item | Status |
-|------|--------|
-| Course Detail Page | ✅ Complete |
-| Main Page Update | ✅ Complete |
-| Responsive Design | ✅ Complete |
-| Documentation | ✅ Complete |
-| Testing | ✅ Complete |
-| Production Ready | ✅ YES |
+## Important Rules
 
-**Deployment Time:** ~10 minutes  
-**Difficulty:** Easy  
-**Risk Level:** Low  
+### Do NOT
+- ❌ Create HTML files manually (use build script)
+- ❌ Modify frozen components without permission
+- ❌ Use absolute paths in links (always relative)
+- ❌ Commit `/node_modules`, `/dist`, or `/public`
+- ❌ Use React Router (pure static site)
 
----
+### DO
+- ✅ Use `npm run build` to generate HTML
+- ✅ Use relative links everywhere
+- ✅ Wrap pages in namespace divs (site-main or site-teamworks)
+- ✅ Test build locally before deploying
+- ✅ Follow existing patterns
 
-## 📝 Version History
+## Technology Stack
 
-**Version 1.0** (January 21, 2026)
-- Created new course detail page for "Creating Super Teams"
-- Updated main page Course 01 button
-- Added comprehensive documentation
-- Ready for production deployment
+### Development
+- React 18.3.1
+- Vite 6.3.5
+- Tailwind CSS 4.1.12
+- TypeScript (via .tsx)
 
----
+### Production
+- Pure HTML
+- Pure CSS (Tailwind via CDN)
+- Pure JavaScript
+- Lucide icons (via CDN)
 
-## 📧 Questions?
+## Common Tasks
 
-Refer to the documentation files for detailed answers:
-- Quick questions → `QUICK_START.txt`
-- Technical details → `DEPLOYMENT_GUIDE.md`
-- File information → `FILES_TO_DOWNLOAD.md`
-- Complete specs → `DOWNLOAD_PACKAGE.md`
+### Add a new Main Site page
+1. Create `/src/main-site/pages/NewPage.tsx`
+2. Wrap in `<div className="site-main">`
+3. Add to `scripts/export-static.mjs` pages array
+4. Update navigation
 
----
+### Add a new TeamWorks page
+1. Create `/src/teamworks/pages/NewPage.tsx`
+2. Wrap in `<div className="site-teamworks">`
+3. Add to `scripts/export-static.mjs` pages array
+4. Update navigation
 
-**Last Updated:** January 21, 2026  
-**Version:** 1.0  
-**Status:** ✅ Production Ready  
-**Deployment:** Ready for Hostinger
+### Preview a specific page
+Edit `/src/app/App.tsx` to import and render the desired page component.
 
----
+### Update form endpoint
+Edit `/scripts/export-static.mjs` in the `generateFormJS()` function to update the Google Apps Script URL.
 
-## 🏁 Next Steps
+## Support
 
-1. Read `QUICK_START.txt`
-2. Copy files from `/public/` folder
-3. Upload to Hostinger
-4. Test your website
-5. Enjoy your new course page! 🚀
+For issues or questions:
+1. Check [ARCHITECTURE.md](./ARCHITECTURE.md)
+2. Review [MIGRATION_SUMMARY.md](./MIGRATION_SUMMARY.md)
+3. Consult [Guidelines.md](./Guidelines.md)
 
-**Good luck with your deployment!** 🎉
+## License
+
+© 2025 CI Agile. All rights reserved.
