@@ -28,8 +28,8 @@ export function FooterV2() {
           <div>
             <h4 className="mb-4 text-sm tracking-wider uppercase text-gray-500 font-semibold">Company</h4>
             <div className="space-y-3 text-sm">
-              <div><a href="https://www.ciagile.com" className="hover:text-gray-600 transition-colors">About Us</a></div>
-              <div><a href="bookConsultation.html" className="hover:text-gray-600 transition-colors">Contact Us</a></div>
+              <div><a href="../aboutus.html" className="hover:text-gray-600 transition-colors">About Us</a></div>
+              <div><a href="../contactus.html" className="hover:text-gray-600 transition-colors">Contact Us</a></div>
             </div>
           </div>
         </div>

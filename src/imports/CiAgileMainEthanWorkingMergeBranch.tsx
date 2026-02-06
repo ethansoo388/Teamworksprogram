@@ -286,9 +286,11 @@ function Container1() {
 
 function ClientLogos() {
   return (
-    <div className="bg-[#f9fafb] content-stretch flex flex-col gap-16 min-h-[272px] items-start w-full max-w-[1213px] mx-auto px-8 py-16" data-name="ClientLogos">
-      <Container />
-      <Container1 />
+    <div className="bg-[#f9fafb] w-full py-16" data-name="ClientLogos">
+      <div className="content-stretch flex flex-col gap-16 min-h-[272px] items-start w-full max-w-[1213px] mx-auto px-8">
+        <Container />
+        <Container1 />
+      </div>
     </div>
   );
 }
@@ -462,7 +464,7 @@ function Container36() {
 function Heading7() {
   return (
     <div className="min-h-[24px] w-full" data-name="Heading 3">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#101828] text-[16px]">Proven Delivery Systems That Scale</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#364153] group-hover:text-[#101828] text-[16px] transition-colors">Proven Delivery Systems That Scale</p>
     </div>
   );
 }
@@ -470,7 +472,7 @@ function Heading7() {
 function Paragraph6() {
   return (
     <div className="min-h-[22.75px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] not-italic text-[#4a5565] text-[14px]">Frameworks adapted to enterprise operating requirements</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] not-italic text-[#6a7282] group-hover:text-[#4a5565] text-[14px] transition-colors">Frameworks adapted to enterprise operating requirements</p>
     </div>
   );
 }
@@ -478,14 +480,14 @@ function Paragraph6() {
 function Container37() {
   return (
     <div className="min-h-[16px] w-full" data-name="Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] not-italic text-[#101828] text-[12px] whitespace-pre-wrap">01</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] not-italic text-[#99a1af] group-hover:text-[#101828] text-[12px] whitespace-pre-wrap transition-colors">01</p>
     </div>
   );
 }
 
 function Button() {
   return (
-    <div className="bg-white border-[#101828] border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container37 />
       <Heading7 />
       <Paragraph6 />
@@ -519,7 +521,7 @@ function Container38() {
 
 function Button1() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] cursor-pointer group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container38 />
       <Heading8 />
       <Paragraph7 />
@@ -553,7 +555,7 @@ function Container39() {
 
 function Button2() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] cursor-pointer group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container39 />
       <Heading9 />
       <Paragraph8 />
@@ -587,7 +589,7 @@ function Container40() {
 
 function Button3() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] border-l-2 border-solid min-h-[125.5px] w-full max-w-[512px] cursor-pointer group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[125.5px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container40 />
       <Heading10 />
       <Paragraph9 />
@@ -609,7 +611,7 @@ function Container35() {
 
 function Container34() {
   return (
-    <div className="content-stretch flex flex-col gap-6 items-start w-full lg:w-1/2 py-16" data-name="Container">
+    <div className="content-stretch flex flex-col gap-6 items-start w-full lg:w-1/2" data-name="Container">
       <Heading6 />
       <Paragraph5 />
       <Container35 />
@@ -646,8 +648,8 @@ function Container41() {
 
 function CtaSection() {
   return (
-    <div className="bg-[#f7f9f8] w-full min-h-[957.75px] flex flex-col items-center justify-center py-16 px-[64px]" data-name="CTASection">
-      <div className="w-full max-w-[1341px] flex flex-col lg:flex-row gap-8 items-center">
+    <div className="bg-[#f7f9f8] w-full min-h-[957.75px] flex flex-col items-center justify-center py-16" data-name="CTASection">
+      <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 flex flex-col lg:flex-row gap-8 items-center">
         <Container34 />
         <Container41 />
       </div>
@@ -1565,7 +1567,7 @@ function Container110() {
 
 function Container106() {
   return (
-    <div className="gap-[48px] grid grid-cols-[repeat(2,_minmax(0,_1fr))] grid-rows-[__minmax(0,_96fr)_minmax(0,_1fr)] h-[214px] relative shrink-0 w-full" data-name="Container">
+    <div className="gap-[48px] grid grid-cols-[repeat(2,_minmax(0,_1fr))] grid-rows-[repeat(2,_auto)] relative w-full" data-name="Container">
       <Container107 />
       <Container108 />
       <Container109 />
@@ -1576,8 +1578,8 @@ function Container106() {
 
 function IndustriesSection() {
   return (
-    <div className="bg-white w-full py-24" data-name="IndustriesSection">
-      <div className="content-stretch flex flex-col gap-20 items-start w-full max-w-[1341px] mx-auto px-8 lg:px-16">
+    <div className="bg-white w-full py-20" data-name="IndustriesSection">
+      <div className="content-stretch flex flex-col gap-12 items-start w-full max-w-[1341px] mx-auto px-8 lg:px-16">
         <Container105 />
         <Container106 />
       </div>
@@ -1635,7 +1637,7 @@ function Paragraph25() {
 
 function Container119() {
   return (
-    <div className="flex flex-col gap-[24px] items-start w-full max-w-[574.5px]" data-name="Container">
+    <div className="flex flex-col gap-[24px] items-start justify-center flex-1" data-name="Container">
       <Heading24 />
       <Paragraph25 />
     </div>
@@ -1794,7 +1796,7 @@ function Container137() {
 
 function Container120() {
   return (
-    <div className="gap-[32px] grid grid-cols-2 w-full max-w-[574.5px]" data-name="Container">
+    <div className="gap-[32px] grid grid-cols-2 flex-1" data-name="Container">
       <Container121 />
       <Container127 />
       <Container132 />
@@ -1805,9 +1807,63 @@ function Container120() {
 
 function Container118() {
   return (
-    <div className="flex items-start justify-between w-full px-[64px] py-[128px] gap-[64px]" data-name="Container">
-      <Container119 />
-      <Container120 />
+    <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 py-20 lg:py-32" data-name="Container">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        {/* Left side - Heading and description */}
+        <div className="flex flex-col gap-6 flex-1 max-w-[500px]">
+          <h2 className="font-['Inter:Light',sans-serif] font-light leading-[75px] not-italic text-[60px] text-white tracking-[-0.6px]">
+            Proven Results
+          </h2>
+          <p className="font-['Inter:Light',sans-serif] font-light leading-[32.5px] not-italic text-[#d1d5dc] text-[20px]">
+            Real outcomes from real organizations. Our clients consistently achieve measurable improvements.
+          </p>
+        </div>
+
+        {/* Right side - Stats grid */}
+        <div className="grid grid-cols-2 gap-8 lg:gap-12 flex-1 max-w-[600px]">
+          {/* Stat 1 - 40% */}
+          <div className="flex flex-col gap-3">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+              40%
+            </div>
+            <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
+              Faster Time-to-Market
+            </div>
+          </div>
+
+          {/* Stat 2 - 60% */}
+          <div className="flex flex-col gap-3">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+              60%
+            </div>
+            <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
+              Team Productivity Boost
+            </div>
+          </div>
+
+          {/* Stat 3 - 3 Months */}
+          <div className="flex flex-col gap-3">
+            <div className="font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+              <span className="text-5xl lg:text-6xl">3</span>
+              <br />
+              <span className="text-[24px] lg:text-[30px]">Months</span>
+            </div>
+            <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
+              To Measurable Impact
+            </div>
+          </div>
+
+          {/* Stat 4 - 98% */}
+          <div className="flex flex-col gap-3">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+              98%
+            </div>
+            <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
+              Client Satisfaction
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -1932,9 +1988,41 @@ function Container141() {
 function Container140() {
   return (
     <div className="bg-white h-[501px] relative shrink-0 w-full" data-name="Container">
-      <div className="content-stretch flex flex-col gap-[64px] items-start pt-[96px] px-[64px] relative size-full">
-        <Heading25 />
-        <Container141 />
+      <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 py-20">
+        <h3 className="font-['Inter:Light',sans-serif] font-light leading-10 not-italic text-[#101828] text-4xl mb-12">
+          What Our Clients Say
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Testimonial 1 */}
+          <div className="flex flex-col gap-6">
+            <p className="font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] text-[#364153] text-[16px]">
+              "Agile isn't just a framework — it's a mindset shift. This program changed how we think about work, delivery, and results. Practical, empowering, and immediately applicable to real teams."
+            </p>
+            <div className="border-t border-[#e5e7eb] pt-4">
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-6 text-[#101828] text-base">
+                Head of Digital Services
+              </p>
+              <p className="font-['Inter:Light',sans-serif] font-light leading-5 text-[#6a7282] text-sm mt-1">
+                POS Aviation
+              </p>
+            </div>
+          </div>
+          
+          {/* Testimonial 2 */}
+          <div className="flex flex-col gap-6">
+            <p className="font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] text-[#364153] text-[16px]">
+              "This program reframed change and uncertainty as a competitive advantage. The training delivered practical insights, hands-on exercises, and clear ways to help organizations navigate complexity and perform better."
+            </p>
+            <div className="border-t border-[#e5e7eb] pt-4">
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-6 text-[#101828] text-base">
+                General Manager
+              </p>
+              <p className="font-['Inter:Light',sans-serif] font-light leading-5 text-[#6a7282] text-sm mt-1">
+                Malaysia Airport
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -2126,16 +2214,16 @@ function FinalCtaSection() {
 
 function ImageCiAgile() {
   return (
-    <div className="absolute h-[28px] left-0 top-0 w-[122.5px]" data-name="Image (CI Agile)">
-      <img alt="CI Agile Logo" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src="https://i.postimg.cc/sxywTrNc/Ci-Agile-Logo-white-01.png" />
+    <div className="h-[48px] w-[210px]" data-name="Image (CI Agile)">
+      <img alt="CI Agile Logo" className="h-full w-full object-contain object-left" src="https://i.postimg.cc/sxywTrNc/Ci-Agile-Logo-white-01.png" />
     </div>
   );
 }
 
 function Paragraph29() {
   return (
-    <div className="absolute h-[45.5px] left-0 top-[52px] w-[352px]" data-name="Paragraph">
-      <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[22.75px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px] w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+    <div className="w-full max-w-[352px]" data-name="Paragraph">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] text-[#99a1af] text-[14px] max-w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
     </div>
   );
 }
@@ -2214,7 +2302,7 @@ function Link5() {
 
 function Container165() {
   return (
-    <div className="absolute content-stretch flex gap-[16px] h-[40px] items-start left-0 top-[129.5px] w-[352px]" data-name="Container">
+    <div className="flex gap-[16px] items-start" data-name="Container">
       <Link3 />
       <Link4 />
       <Link5 />
@@ -2224,10 +2312,12 @@ function Container165() {
 
 function Container164() {
   return (
-    <div className="absolute h-[216px] left-0 top-[64px] w-[352px]" data-name="Container">
-      <ImageCiAgile />
-      <Paragraph29 />
-      <Container165 />
+    <div className="w-[352px]" data-name="Container">
+      <div className="flex flex-col gap-4">
+        <ImageCiAgile />
+        <Paragraph29 />
+        <Container165 />
+      </div>
     </div>
   );
 }
@@ -2283,7 +2373,7 @@ function List() {
 
 function Container166() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[20px] h-[216px] items-start left-[400px] top-[64px] w-[152px]" data-name="Container">
+    <div className="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
       <Heading27 />
       <List />
     </div>
@@ -2341,7 +2431,7 @@ function List1() {
 
 function Container167() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[20px] h-[216px] items-start left-[600px] top-[64px] w-[152px]" data-name="Container">
+    <div className="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
       <Heading28 />
       <List1 />
     </div>
@@ -2350,8 +2440,8 @@ function Container167() {
 
 function Heading29() {
   return (
-    <div className="absolute h-[16px] left-0 top-0 w-[352px]" data-name="Heading 3">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Contact</p>
+    <div className="w-full" data-name="Heading 3">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] text-[#6a7282] text-[12px] tracking-[1.2px] uppercase">Contact</p>
     </div>
   );
 }
@@ -2390,7 +2480,7 @@ function ListItem5() {
 
 function List2() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[12px] h-[52px] items-start left-0 top-[36px] w-[352px]" data-name="List">
+    <div className="flex flex-col gap-[12px] items-start w-full" data-name="List">
       <ListItem4 />
       <ListItem5 />
     </div>
@@ -2399,8 +2489,8 @@ function List2() {
 
 function Heading30() {
   return (
-    <div className="absolute h-[16px] left-0 top-[120px] w-[352px]" data-name="Heading 3">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Our Location</p>
+    <div className="w-full" data-name="Heading 3">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] text-[#6a7282] text-[12px] tracking-[1.2px] uppercase">Our Location</p>
     </div>
   );
 }
@@ -2439,7 +2529,7 @@ function ListItem7() {
 
 function List3() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[12px] h-[60px] items-start left-0 top-[156px] w-[352px]" data-name="List">
+    <div className="flex flex-col gap-[12px] items-start w-full" data-name="List">
       <ListItem6 />
       <ListItem7 />
     </div>
@@ -2448,23 +2538,29 @@ function List3() {
 
 function Container168() {
   return (
-    <div className="absolute h-[216px] left-[800px] top-[64px] w-[352px]" data-name="Container">
-      <Heading29 />
-      <List2 />
-      <Heading30 />
-      <List3 />
+    <div className="w-[352px]" data-name="Container">
+      <div className="flex flex-col gap-[20px]">
+        <Heading29 />
+        <List2 />
+        <Heading30 />
+        <List3 />
+      </div>
     </div>
   );
 }
 
 function Container163() {
   return (
-    <div className="h-[345px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full py-16" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#1e2939] border-b border-solid inset-0 pointer-events-none" />
-      <Container164 />
-      <Container166 />
-      <Container167 />
-      <Container168 />
+      <div className="flex items-start gap-8 w-full">
+        <Container164 />
+        <div className="flex gap-[48px] items-start ml-auto">
+          <Container166 />
+          <Container167 />
+          <Container168 />
+        </div>
+      </div>
     </div>
   );
 }

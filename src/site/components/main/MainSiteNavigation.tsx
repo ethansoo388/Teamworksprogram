@@ -1,14 +1,17 @@
 // Shared Navigation Component for Main Site
 // Logo is 50% larger, "Case Studies" and "Blogs" removed
 // Dropdown interactions use data attributes for static HTML compatibility
+// Fully responsive flexbox layout
 
 import { useState } from 'react';
 
-function ProgramsDropdown({ isOpen }: { isOpen: boolean }) {
+function ProgramsDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean; onMouseEnter: () => void; onMouseLeave: () => void }) {
   return (
     <div 
       data-dropdown="programs"
-      className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 ${isOpen ? '' : 'hidden'}`}
+      className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 ${isOpen ? 'block' : 'hidden'}`}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <a 
         href="teamworks/index.html"
@@ -28,11 +31,13 @@ function ProgramsDropdown({ isOpen }: { isOpen: boolean }) {
   );
 }
 
-function AboutDropdown({ isOpen }: { isOpen: boolean }) {
+function AboutDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean; onMouseEnter: () => void; onMouseLeave: () => void }) {
   return (
     <div 
       data-dropdown="about"
-      className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 ${isOpen ? '' : 'hidden'}`}
+      className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 ${isOpen ? 'block' : 'hidden'}`}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <a 
         href="aboutus.html"
@@ -55,10 +60,10 @@ export function MainSiteNavigation() {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <nav className="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 px-8 md:px-16 lg:px-24 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
-      <div className="flex h-[64px] items-center justify-between">
-        {/* Logo - 50% larger */}
-        <div className="h-[36px]">
+    <nav className="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
+      <div className="flex h-full items-center justify-between max-w-[1341px] mx-auto px-16 lg:px-24">
+        {/* Logo */}
+        <div className="flex items-center h-[48px]">
           <a href="index.html" className="no-underline flex items-center h-full">
             <img 
               alt="CI Agile Logo" 
@@ -69,10 +74,10 @@ export function MainSiteNavigation() {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-6 md:gap-8 items-center">
           {/* Programs Dropdown */}
           <div 
-            className="relative" 
+            className="relative flex items-center"
             data-dropdown-container="programs"
             onMouseEnter={() => {
               setProgramsOpen(true);
@@ -82,17 +87,17 @@ export function MainSiteNavigation() {
           >
             <button 
               data-dropdown-trigger="programs"
-              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 pb-4"
+              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0"
             >
               <span 
-                className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[14px] transition-colors" 
+                className="font-['Inter',sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" 
                 data-dropdown-text
                 style={{ color: programsOpen ? '#0066CC' : '#364153' }}
               >
                 Programs
               </span>
               <svg 
-                className="w-3.5 h-3.5 transition-colors" 
+                className="w-3.5 h-3.5 transition-colors flex-shrink-0" 
                 fill="none" 
                 viewBox="0 0 14 14" 
                 data-dropdown-icon
@@ -101,12 +106,16 @@ export function MainSiteNavigation() {
                 <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
               </svg>
             </button>
-            <ProgramsDropdown isOpen={programsOpen} />
+            <ProgramsDropdown 
+              isOpen={programsOpen} 
+              onMouseEnter={() => setProgramsOpen(true)}
+              onMouseLeave={() => setProgramsOpen(false)}
+            />
           </div>
 
           {/* About Dropdown */}
           <div 
-            className="relative" 
+            className="relative flex items-center"
             data-dropdown-container="about"
             onMouseEnter={() => {
               setAboutOpen(true);
@@ -116,17 +125,17 @@ export function MainSiteNavigation() {
           >
             <button 
               data-dropdown-trigger="about"
-              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 pb-4"
+              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0"
             >
               <span 
-                className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[14px] transition-colors" 
+                className="font-['Inter',sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" 
                 data-dropdown-text
                 style={{ color: aboutOpen ? '#0066CC' : '#364153' }}
               >
                 About
               </span>
               <svg 
-                className="w-3.5 h-3.5 transition-colors" 
+                className="w-3.5 h-3.5 transition-colors flex-shrink-0" 
                 fill="none" 
                 viewBox="0 0 14 14" 
                 data-dropdown-icon
@@ -135,15 +144,19 @@ export function MainSiteNavigation() {
                 <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
               </svg>
             </button>
-            <AboutDropdown isOpen={aboutOpen} />
+            <AboutDropdown 
+              isOpen={aboutOpen}
+              onMouseEnter={() => setAboutOpen(true)}
+              onMouseLeave={() => setAboutOpen(false)}
+            />
           </div>
 
           {/* Contact Button */}
           <a 
             href="contactus.html"
-            className="bg-[#101828] h-[40px] px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity"
+            className="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0"
           >
-            <span className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white">
+            <span className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">
               Talk to an Expert
             </span>
           </a>
