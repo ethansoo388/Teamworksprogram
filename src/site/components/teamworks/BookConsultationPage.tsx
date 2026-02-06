@@ -1,2 +1,2 @@
-// Temporary re-export - TODO: Copy actual implementation from /src/teamworks/components/
-export { BookConsultationPage } from "@/teamworks/components/BookConsultationPage";
+// Real implementation - imported from app during migration
+export { BookConsultationPage } from "@/app/components/BookConsultationPage";

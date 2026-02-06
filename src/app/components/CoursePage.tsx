@@ -1,5 +1,5 @@
 import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star } from "lucide-react";
-import { FooterV2 } from "@/app/components/v2/FooterV2";
+import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 
 const faqItems = [
   {
@@ -64,7 +64,7 @@ export function CoursePage() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="https://www.ciagile.com" className="hover:text-purple-600 transition-colors">Home</a>
+            <a href="#/index.html" className="hover:text-purple-600 transition-colors">Home</a>
             <span>/</span>
             <a href="index.html" className="hover:text-purple-600 transition-colors">Programs</a>
             <span>/</span>

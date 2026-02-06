@@ -1,5 +1,5 @@
 import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp, Clock, Users, UserCheck } from "lucide-react";
-import { FooterV2 } from "@/app/components/v2/FooterV2";
+import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 import { useState } from "react";
 
 // Hero image
@@ -77,7 +77,7 @@ export function Course03Page() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="https://www.ciagile.com" className="hover:text-orange-600 transition-colors">Home</a>
+            <a href="#/index.html" className="hover:text-orange-600 transition-colors">Home</a>
             <span>/</span>
             <a href="index.html" className="hover:text-orange-600 transition-colors">Programs</a>
             <span>/</span>

@@ -1,11 +1,11 @@
-import { NavigationV2 } from "@/app/components/v2/NavigationV2";
-import { HeroSectionV2 } from "@/app/components/v2/HeroSectionV2";
-import { OurImpactV2 } from "@/app/components/v2/OurImpactV2";
-import { DiscoverCoursesV2 } from "@/app/components/v2/DiscoverCoursesV2";
-import { WhyDifferentV2 } from "@/app/components/v2/WhyDifferentV2";
-import { TestimonialsV2 } from "@/app/components/v2/TestimonialsV2";
-import { PricingCTAV2 } from "@/app/components/v2/PricingCTAV2";
-import { FooterV2 } from "@/app/components/v2/FooterV2";
+import { NavigationV2 } from "@/site/components/teamworks/v2/NavigationV2";
+import { HeroSectionV2 } from "@/site/components/teamworks/v2/HeroSectionV2";
+import { OurImpactV2 } from "@/site/components/teamworks/v2/OurImpactV2";
+import { DiscoverCoursesV2 } from "@/site/components/teamworks/v2/DiscoverCoursesV2";
+import { WhyDifferentV2 } from "@/site/components/teamworks/v2/WhyDifferentV2";
+import { TestimonialsV2 } from "@/site/components/teamworks/v2/TestimonialsV2";
+import { PricingCTAV2 } from "@/site/components/teamworks/v2/PricingCTAV2";
+import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 
 export function LandingPage() {
   return (
