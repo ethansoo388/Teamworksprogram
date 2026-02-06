@@ -601,7 +601,7 @@ async function generateHTMLFiles() {
     const pages = [
       // Main site pages
       {
-        path: '/src/main-site/pages/IndexPage.tsx',
+        path: '/src/site/pages/index/IndexPage.tsx',
         componentName: 'IndexPage',
         filename: 'index.html',
         title: 'CI Agile - Transform Your Organization',
@@ -609,7 +609,7 @@ async function generateHTMLFiles() {
         siteType: 'main',
       },
       {
-        path: '/src/main-site/pages/AboutUsPage.tsx',
+        path: '/src/site/pages/about/AboutUsPage.tsx',
         componentName: 'AboutUsPage',
         filename: 'aboutus.html',
         title: 'About Us - CI Agile',
@@ -617,7 +617,7 @@ async function generateHTMLFiles() {
         siteType: 'main',
       },
       {
-        path: '/src/main-site/pages/ContactUsPage.tsx',
+        path: '/src/site/pages/contact/ContactUsPage.tsx',
         componentName: 'ContactUsPage',
         filename: 'contactus.html',
         title: 'Contact Us - CI Agile',
@@ -626,7 +626,7 @@ async function generateHTMLFiles() {
       },
       // TeamWorks pages
       {
-        path: '/src/teamworks/pages/LandingPage.tsx',
+        path: '/src/site/pages/teamworks/LandingPage.tsx',
         componentName: 'LandingPage',
         filename: 'teamworks/index.html',
         title: 'TeamWorks - Transform Your Team in Just 2 Days',
@@ -634,7 +634,7 @@ async function generateHTMLFiles() {
         siteType: 'teamworks',
       },
       {
-        path: '/src/teamworks/pages/CreatingSuperTeamsPage.tsx',
+        path: '/src/site/pages/teamworks/CreatingSuperTeamsPage.tsx',
         componentName: 'CreatingSuperTeamsPage',
         filename: 'teamworks/creating-super-teams.html',
         title: 'Creating Super Teams - TeamWorks Course 01',
@@ -642,7 +642,7 @@ async function generateHTMLFiles() {
         siteType: 'teamworks',
       },
       {
-        path: '/src/teamworks/pages/DesignLikeApplePage.tsx',
+        path: '/src/site/pages/teamworks/DesignLikeApplePage.tsx',
         componentName: 'DesignLikeApplePage',
         filename: 'teamworks/design-thinking.html',
         title: 'Win Customers Through Design - TeamWorks Course 02',
@@ -650,7 +650,7 @@ async function generateHTMLFiles() {
         siteType: 'teamworks',
       },
       {
-        path: '/src/teamworks/pages/OperationalExcellencePage.tsx',
+        path: '/src/site/pages/teamworks/OperationalExcellencePage.tsx',
         componentName: 'OperationalExcellencePage',
         filename: 'teamworks/critical-thinking-kanban.html',
         title: 'Critical Thinking for Better Work - TeamWorks Course 03',
@@ -658,7 +658,7 @@ async function generateHTMLFiles() {
         siteType: 'teamworks',
       },
       {
-        path: '/src/teamworks/pages/BookConsultationPage.tsx',
+        path: '/src/site/pages/teamworks/BookConsultationPage.tsx',
         componentName: 'BookConsultationPage',
         filename: 'teamworks/bookConsultation.html',
         title: 'Book Free Consultation - TeamWorks',

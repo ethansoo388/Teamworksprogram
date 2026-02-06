@@ -1,192 +1,85 @@
-# CI Agile & TeamWorks - Unified Website
+# CI Agile & TeamWorks Website
 
-This repository contains two subsites built with React and exported to static HTML/CSS/JS:
-
-1. **CI Agile Main Site** - Enterprise transformation services
-2. **TeamWorks** - SME team training programs
-
-## Quick Start
-
-### Development
-```bash
-npm install
-npm run dev
-```
-
-Visit http://localhost:5173 to preview.
-
-**To preview different pages**, edit `/src/app/App.tsx`:
-
-```tsx
-// Preview Main Site
-import { IndexPage } from "@/main-site/pages/IndexPage";
-export default function App() {
-  return <IndexPage />;
-}
-
-// Preview TeamWorks
-import { LandingPage } from "@/teamworks/pages/LandingPage";
-export default function App() {
-  return <LandingPage />;
-}
-
-// Preview specific TeamWorks course
-import { CreatingSuperTeamsPage } from "@/teamworks/pages/CreatingSuperTeamsPage";
-export default function App() {
-  return <CreatingSuperTeamsPage />;
-}
-```
-
-### Build for Production
-```bash
-npm run build
-```
-
-Generates `/public` directory with static HTML/CSS/JS files.
-
-### Test Build Locally
-```bash
-npm run build
-cd public
-python3 -m http.server 8000
-```
-
-Visit http://localhost:8000
+A unified static website combining the CI Agile main site and TeamWorks program site, built with React and deployed to Hostinger shared hosting.
 
 ## Project Structure
 
 ```
-/src
-├── /main-site          # CI Agile main site
-│   ├── /pages          # Main site pages
-│   └── /components     # Main site components
-├── /teamworks          # TeamWorks training site
-│   ├── /pages          # TeamWorks pages
-│   └── /components     # TeamWorks components
-├── /app                # Original implementation (transitional)
-├── /imports            # Figma-imported components
-└── /shared             # Shared utilities
-```
+src/
+├── site/                           # Main source directory (unified)
+│   ├── pages/                     # Page components
+│   │   ├── index/                # Main site homepage
+│   │   ├── about/                # About Us page
+│   │   ├── contact/              # Contact Us page
+│   │   └── teamworks/            # TeamWorks pages
+│   ├── components/               # Component library
+│   │   ├── main/                 # Main site components
+│   │   │   └── imported/         # Figma-imported components
+│   │   ├── teamworks/            # TeamWorks components
+│   │   │   └── v2/              # V2 design components
+│   │   └── common/               # Shared components
+│   ├── shared/                   # Shared utilities
+│   └── styles/                   # Global styles
+├── app/                           # Legacy (to be migrated)
+├── imports/                       # Legacy Figma imports (to be migrated)
+├── main-site/                    # Legacy (to be migrated)
+├── teamworks/                    # Legacy (to be migrated)
+└── shared/                       # Legacy (to be migrated)
 
-## Available Pages
+scripts/
+└── export-static.mjs             # Static HTML generator
 
-### Main Site
-- `/src/main-site/pages/IndexPage.tsx` - Homepage
-- `/src/main-site/pages/AboutUsPage.tsx` - About Us
-- `/src/main-site/pages/ContactUsPage.tsx` - Contact Us
-
-### TeamWorks
-- `/src/teamworks/pages/LandingPage.tsx` - Program overview
-- `/src/teamworks/pages/CreatingSuperTeamsPage.tsx` - Course 01
-- `/src/teamworks/pages/DesignLikeApplePage.tsx` - Course 02
-- `/src/teamworks/pages/OperationalExcellencePage.tsx` - Course 03
-- `/src/teamworks/pages/BookConsultationPage.tsx` - Consultation form
-
-## Build Output
-
-After running `npm run build`, the `/public` directory contains:
-
-```
-/public
-├── index.html                           # Main site
+public/                           # Generated output (not in git)
+├── index.html
 ├── aboutus.html
 ├── contactus.html
-├── /teamworks
-│   ├── index.html                       # TeamWorks landing
-│   ├── creating-super-teams.html        # Course pages
+├── teamworks/
+│   ├── index.html
+│   ├── creating-super-teams.html
 │   ├── design-thinking.html
 │   ├── critical-thinking-kanban.html
-│   └── bookConsultation.html            # Form
-├── /css
-│   └── style.css
-└── /js
-    ├── main.js
-    └── form.js
+│   └── bookConsultation.html
+├── css/
+├── js/
+└── assets/
 ```
 
-## Deployment
+## Build & Deploy
 
-### To Hostinger
+### Development
+```bash
+npm install
+npm run dev        # Start Vite dev server
+```
 
-1. Build the site:
-   ```bash
-   npm run build
-   ```
+### Production Build
+```bash
+npm run build      # Generates static HTML/CSS/JS in /public
+```
 
-2. Copy build output to hostinger branch:
-   ```bash
-   git checkout hostinger
-   cp -r public/* .
-   git add .
-   git commit -m "Deploy: update"
-   git push origin hostinger
-   ```
+### Deployment to Hostinger
+The `hostinger` branch must contain ONLY the contents of `/public`:
 
-3. Hostinger Git Tool deploys the `hostinger` branch to `public_html`
-
-## Documentation
-
-- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Complete architecture guide
-- **[MIGRATION_SUMMARY.md](./MIGRATION_SUMMARY.md)** - What changed and why
-- **[Guidelines.md](./Guidelines.md)** - Project-specific rules
+```bash
+# After building, copy /public contents to hostinger branch root
+# The Hostinger Git Tool deploys the branch root directly to public_html
+```
 
 ## Important Rules
 
-### Do NOT
-- ❌ Create HTML files manually (use build script)
-- ❌ Modify frozen components without permission
-- ❌ Use absolute paths in links (always relative)
-- ❌ Commit `/node_modules`, `/dist`, or `/public`
-- ❌ Use React Router (pure static site)
+1. **Static Export Only**: All HTML is generated by `scripts/export-static.mjs` during `npm run build`
+2. **No Manual HTML**: Never create .html files in the repo
+3. **Relative Links**: All internal links must be relative (no leading `/`)
+4. **No React Router**: This is a multi-page static site (MPA)
+5. **Two Subsites**: Main site at root, TeamWorks at `/teamworks`
 
-### DO
-- ✅ Use `npm run build` to generate HTML
-- ✅ Use relative links everywhere
-- ✅ Wrap pages in namespace divs (site-main or site-teamworks)
-- ✅ Test build locally before deploying
-- ✅ Follow existing patterns
+## Technology
 
-## Technology Stack
+- **React** - For component development (compiled to static HTML)
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling via CDN in generated HTML
+- **Vanilla JS** - Client-side interactivity in generated static site
 
-### Development
-- React 18.3.1
-- Vite 6.3.5
-- Tailwind CSS 4.1.12
-- TypeScript (via .tsx)
+## Migration Status
 
-### Production
-- Pure HTML
-- Pure CSS (Tailwind via CDN)
-- Pure JavaScript
-- Lucide icons (via CDN)
-
-## Common Tasks
-
-### Add a new Main Site page
-1. Create `/src/main-site/pages/NewPage.tsx`
-2. Wrap in `<div className="site-main">`
-3. Add to `scripts/export-static.mjs` pages array
-4. Update navigation
-
-### Add a new TeamWorks page
-1. Create `/src/teamworks/pages/NewPage.tsx`
-2. Wrap in `<div className="site-teamworks">`
-3. Add to `scripts/export-static.mjs` pages array
-4. Update navigation
-
-### Preview a specific page
-Edit `/src/app/App.tsx` to import and render the desired page component.
-
-### Update form endpoint
-Edit `/scripts/export-static.mjs` in the `generateFormJS()` function to update the Google Apps Script URL.
-
-## Support
-
-For issues or questions:
-1. Check [ARCHITECTURE.md](./ARCHITECTURE.md)
-2. Review [MIGRATION_SUMMARY.md](./MIGRATION_SUMMARY.md)
-3. Consult [Guidelines.md](./Guidelines.md)
-
-## License
-
-© 2025 CI Agile. All rights reserved.
+Currently migrating from scattered structure (`src/main-site`, `src/teamworks`, `src/app`) to unified `src/site` structure. Some components still use temporary re-exports during transition.
