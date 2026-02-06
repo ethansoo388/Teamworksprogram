@@ -11,15 +11,14 @@ function ProgramsDropdown({ isOpen }: { isOpen: boolean }) {
       className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 ${isOpen ? '' : 'hidden'}`}
     >
       <a 
-        href="#/teamworks/index.html"
+        href="teamworks/index.html"
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
         <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
       </a>
       <a 
-        href="#/index.html#enterprise-section"
-        data-scroll-to="enterprise-section"
+        href="#enterprise-section"
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
@@ -36,13 +35,13 @@ function AboutDropdown({ isOpen }: { isOpen: boolean }) {
       className={`absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 ${isOpen ? '' : 'hidden'}`}
     >
       <a 
-        href="#/aboutus.html"
+        href="aboutus.html"
         className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline"
       >
         About Us
       </a>
       <a 
-        href="#/contactus.html"
+        href="contactus.html"
         className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline"
       >
         Contact Us
@@ -60,7 +59,7 @@ export function MainSiteNavigation() {
       <div className="flex h-[64px] items-center justify-between">
         {/* Logo - 50% larger */}
         <div className="h-[36px]">
-          <a href="#/index.html" className="no-underline flex items-center h-full">
+          <a href="index.html" className="no-underline flex items-center h-full">
             <img 
               alt="CI Agile Logo" 
               className="h-full w-auto object-contain" 
@@ -141,7 +140,7 @@ export function MainSiteNavigation() {
 
           {/* Contact Button */}
           <a 
-            href="#/contactus.html"
+            href="contactus.html"
             className="bg-[#101828] h-[40px] px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity"
           >
             <span className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white">

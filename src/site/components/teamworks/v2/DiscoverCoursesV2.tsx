@@ -14,7 +14,7 @@ const courses = [
       dark: "#5B21B6"
     },
     buttonText: "Learn more",
-    buttonLink: "#/teamworks/creating-super-teams.html"
+    buttonLink: "creating-super-teams.html"
   },
   {
     id: "02",
@@ -28,7 +28,7 @@ const courses = [
       dark: "#DB2777"
     },
     buttonText: "Learn more",
-    buttonLink: "#/teamworks/design-thinking.html"
+    buttonLink: "design-thinking.html"
   },
   {
     id: "03",
@@ -42,7 +42,7 @@ const courses = [
       dark: "#D97706"
     },
     buttonText: "Learn more",
-    buttonLink: "#/teamworks/critical-thinking-kanban.html"
+    buttonLink: "critical-thinking-kanban.html"
   },
   {
     id: "04",
@@ -56,7 +56,7 @@ const courses = [
       dark: "#15803D"
     },
     buttonText: "Book this course",
-    buttonLink: "#/teamworks/bookConsultation.html"
+    buttonLink: "bookConsultation.html"
   },
   {
     id: "05",
@@ -70,7 +70,7 @@ const courses = [
       dark: "#0284C7"
     },
     buttonText: "Book this course",
-    buttonLink: "#/teamworks/bookConsultation.html"
+    buttonLink: "bookConsultation.html"
   }
 ];
 
@@ -204,7 +204,7 @@ export function DiscoverCoursesV2() {
                     Not sure where to start? Talk to us about your team's challenges and we'll recommend the right course — or combination — for your goals.
                   </p>
                   <a 
-                    href="#/teamworks/bookConsultation.html"
+                    href="bookConsultation.html"
                     className="bg-white text-slate-900 px-8 py-4 rounded-full hover:bg-gray-100 transition-all inline-flex items-center gap-2 group text-lg font-medium"
                   >
                     <span>Schedule Free Consultation</span>

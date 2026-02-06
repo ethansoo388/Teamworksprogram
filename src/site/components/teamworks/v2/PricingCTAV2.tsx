@@ -100,7 +100,7 @@ export function PricingCTAV2() {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <a 
-                href="#/teamworks/bookConsultation.html"
+                href="bookConsultation.html"
                 className="bg-black text-white px-10 py-5 rounded-full hover:bg-gray-800 transition-all inline-flex items-center gap-3 group text-lg"
               >
                 <span>Talk to Us About Your Team</span>

@@ -29,7 +29,7 @@ export function NavigationV2() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#/teamworks/bookConsultation.html" className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
+            <a href="bookConsultation.html" className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
               Book Consultation
             </a>
           </div>
@@ -59,7 +59,7 @@ export function NavigationV2() {
               <a href="#testimonials" className="text-sm py-2">
                 Testimonials
               </a>
-              <a href="#/teamworks/bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+              <a href="bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
                 Book Consultation
               </a>
             </div>

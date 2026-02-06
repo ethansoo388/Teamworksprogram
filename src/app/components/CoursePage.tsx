@@ -32,7 +32,7 @@ export function CoursePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="index.html" className="flex items-center gap-3">
+            <a href="../index.html" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900">
                 <Users2 className="w-5 h-5 text-white" />
               </div>
@@ -64,7 +64,7 @@ export function CoursePage() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="#/index.html" className="hover:text-purple-600 transition-colors">Home</a>
+            <a href="../index.html" className="hover:text-purple-600 transition-colors">Home</a>
             <span>/</span>
             <a href="index.html" className="hover:text-purple-600 transition-colors">Programs</a>
             <span>/</span>
