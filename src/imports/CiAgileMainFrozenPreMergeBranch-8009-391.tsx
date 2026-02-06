@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import svgPaths from "./svg-qtx8o74vey";
 import imgImageWithFallback from "figma:asset/f44f1eee345558c40d51a3aa3e2b9fceb7432cdb.png";
 import imgImageWithFallback1 from "figma:asset/e663da3af181c9fc2508e76fec0498f833ff10f0.png";
@@ -1528,9 +1527,6 @@ function Container59() {
 }
 
 function Section6() {
-  const [selectedChallenge, setSelectedChallenge] = useState('');
-  const [otherChallengeText, setOtherChallengeText] = useState('');
-
   return (
     <div className="bg-[#f7f9f8] relative w-full py-20" data-name="Section">
       <div aria-hidden="true" className="absolute border-[#d1d5dc] border-solid border-t inset-0 pointer-events-none" />
@@ -1646,8 +1642,6 @@ function Section6() {
                   <p className="text-xs text-[#6a7282] mb-1">Choose the one that hurts the most.</p>
                   <select
                     id="challenge"
-                    value={selectedChallenge}
-                    onChange={(e) => setSelectedChallenge(e.target.value)}
                     className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm text-[#6a7282] focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
                   >
                     <option value="">Select a challenge...</option>
@@ -1661,23 +1655,6 @@ function Section6() {
                     <option value="other">Other (please specify)</option>
                   </select>
                 </div>
-
-                {/* Conditional "Other" text field */}
-                {selectedChallenge === 'other' && (
-                  <div className="flex flex-col gap-1.5">
-                    <label htmlFor="otherChallenge" className="text-sm font-normal text-[#364153]">
-                      Please specify your challenge
-                    </label>
-                    <input
-                      type="text"
-                      id="otherChallenge"
-                      value={otherChallengeText}
-                      onChange={(e) => setOtherChallengeText(e.target.value)}
-                      placeholder="Describe your specific challenge..."
-                      className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm placeholder:text-[#99a1af] focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
-                    />
-                  </div>
-                )}
 
                 {/* Submit Button */}
                 <button

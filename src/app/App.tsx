@@ -1,6 +1,6 @@
-import { ContactUsPage } from "@/main-site/pages/ContactUsPage";
+import { IndexPage } from "@/main-site/pages/IndexPage";
 
 export default function App() {
-  // PREVIEW MODE: Show Contact Us Page
-  return <ContactUsPage />;
+  // PREVIEW MODE: Show Main Site Landing Page
+  return <IndexPage />;
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import svgPaths from "./svg-0jlmd5mwk8";
 import imgImageWithFallback from "figma:asset/6d210643b84c08db9772a3b123a072f99723cbe2.png";
 import imgImageWithFallback1 from "figma:asset/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
@@ -2157,12 +2156,12 @@ function Icon3() {
 
 function Link3() {
   return (
-    <div className="relative shrink-0 size-[40px]" data-name="Link">
+    <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" className="relative shrink-0 size-[40px] hover:opacity-80 transition-opacity" data-name="Link">
       <div aria-hidden="true" className="absolute border border-[#364153] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-px relative size-full">
         <Icon3 />
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -2181,12 +2180,12 @@ function Icon4() {
 
 function Link4() {
   return (
-    <div className="relative shrink-0 size-[40px]" data-name="Link">
+    <a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" className="relative shrink-0 size-[40px] hover:opacity-80 transition-opacity" data-name="Link">
       <div aria-hidden="true" className="absolute border border-[#364153] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-px relative size-full">
         <Icon4 />
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -2204,12 +2203,12 @@ function Icon5() {
 
 function Link5() {
   return (
-    <div className="relative shrink-0 size-[40px]" data-name="Link">
+    <a href="https://web.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" className="relative shrink-0 size-[40px] hover:opacity-80 transition-opacity" data-name="Link">
       <div aria-hidden="true" className="absolute border border-[#364153] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-px relative size-full">
         <Icon5 />
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -2258,16 +2257,8 @@ function ListItem() {
 }
 
 function Link7() {
-  const scrollToEnterprise = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const section = document.getElementById('enterprise-transformation');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-  
   return (
-    <a href="index.html#enterprise-transformation" onClick={scrollToEnterprise} className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
+    <a href="index.html#enterprise-section" data-scroll-to="enterprise-section" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">For Enterprises</p>
     </a>
   );
@@ -2367,7 +2358,7 @@ function Heading29() {
 
 function Link10() {
   return (
-    <a href="mailto:romanoff@ciagile.com" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+    <a href="mailto:romanoff@ciagile.com?subject=Service%20Inquiry" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">romanoff@ciagile.com</p>
     </a>
   );
@@ -2383,7 +2374,7 @@ function ListItem4() {
 
 function Link11() {
   return (
-    <a href="tel:+60192981055" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+    <a href="https://wa.me/60192981055?text=Service%20Inquiry" target="_blank" rel="noopener noreferrer" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">+60 19 298 1055</p>
     </a>
   );
@@ -2610,21 +2601,13 @@ function Link15() {
 }
 
 function Button6() {
-  const scrollToPrograms = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const section = document.getElementById('programs-section');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-  
   return (
-    <div className="bg-white h-[48px] relative shrink-0 w-auto" data-name="Button">
+    <a href="#programs-section" className="bg-white h-[48px] relative shrink-0 w-auto block no-underline" data-name="Button">
       <div aria-hidden="true" className="absolute border-2 border-[#101828] border-solid inset-0 pointer-events-none" />
-      <div onClick={scrollToPrograms} className="relative size-full flex items-center justify-center px-6 cursor-pointer hover:opacity-80 transition-opacity">
+      <div className="relative size-full flex items-center justify-center px-6 cursor-pointer hover:opacity-80 transition-opacity">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#101828] text-[16px] text-center whitespace-nowrap">View Our Programs</p>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -2785,7 +2768,7 @@ function HomePage() {
       <IndustriesSection />
       <ProvenResultsSection />
       <FinalCtaSection />
-      <Footer />
+      {/* Footer removed - will be added explicitly in IndexPage for consistency with other pages */}
     </div>
   );
 }
