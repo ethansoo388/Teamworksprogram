@@ -113,9 +113,14 @@ export function ContactCTASection() {
 
             {/* CTA Button */}
             <div className="flex flex-col gap-3 mt-2">
-              <button className="h-[48px] rounded-[8px] border-2 border-[#06c] font-['Inter:Medium',sans-serif] font-medium leading-[24px] not-italic text-[#06c] text-[16px] text-center hover:bg-[#06c] hover:text-white transition-colors">
+              <a 
+                href="https://wa.me/60192981055?text=Service%20Inquiry" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="h-[48px] rounded-[8px] border-2 border-[#06c] font-['Inter:Medium',sans-serif] font-medium leading-[24px] not-italic text-[#06c] text-[16px] text-center hover:bg-[#06c] hover:text-white transition-colors flex items-center justify-center no-underline"
+              >
                 Message us on WhatsApp
-              </button>
+              </a>
               <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#6a7282] text-[14px] text-center">
                 Responses during business hours
               </p>

@@ -6,19 +6,22 @@ function ProgramsDropdown() {
   return (
     <div 
       data-dropdown="programs"
-      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 hidden"
+      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 hidden"
     >
       <a 
         href="teamworks/index.html" 
-        className="block px-4 py-2 text-[14px] font-['Inter:Light',sans-serif] font-light text-[#364153] hover:bg-gray-50 no-underline"
+        className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-gray-50 transition-colors no-underline"
       >
-        TeamWorks Program
+        <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
+        <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
       </a>
       <a 
-        href="index.html#enterprise-transformation" 
-        className="block px-4 py-2 text-[14px] font-['Inter:Light',sans-serif] font-light text-[#364153] hover:bg-gray-50 no-underline"
+        href="index.html#enterprise-section" 
+        data-scroll-to="enterprise-section"
+        className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-gray-50 transition-colors no-underline"
       >
-        Enterprise Transformation
+        <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
+        <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div>
       </a>
     </div>
   );
@@ -32,15 +35,15 @@ function AboutDropdown() {
     >
       <a 
         href="aboutus.html" 
-        className="block px-4 py-2 text-[14px] font-['Inter:Light',sans-serif] font-light text-[#364153] hover:bg-gray-50 no-underline"
+        className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-gray-50 no-underline"
       >
         About Us
       </a>
       <a 
-        href="aboutus.html#our-team" 
-        className="block px-4 py-2 text-[14px] font-['Inter:Light',sans-serif] font-light text-[#364153] hover:bg-gray-50 no-underline"
+        href="contactus.html" 
+        className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-gray-50 no-underline"
       >
-        Our Team
+        Contact Us
       </a>
     </div>
   );
@@ -64,32 +67,32 @@ export function MainSiteNavigation() {
         {/* Navigation Links */}
         <div className="flex gap-8 items-center">
           {/* Programs Dropdown */}
-          <div className="relative">
+          <div className="relative" data-dropdown-container="programs">
             <button 
               data-dropdown-trigger="programs"
-              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer hover:opacity-80 transition-opacity py-2"
+              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 text-[#364153]"
             >
-              <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
+              <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[14px] transition-colors" data-dropdown-text>
                 Programs
               </span>
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 14 14">
-                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#364153" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
+              <svg className="w-3.5 h-3.5 transition-colors text-[#364153]" fill="none" viewBox="0 0 14 14" data-dropdown-icon>
+                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
               </svg>
             </button>
             <ProgramsDropdown />
           </div>
 
           {/* About Dropdown */}
-          <div className="relative">
+          <div className="relative" data-dropdown-container="about">
             <button 
               data-dropdown-trigger="about"
-              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer hover:opacity-80 transition-opacity py-2"
+              className="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 text-[#364153]"
             >
-              <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
+              <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[14px] transition-colors" data-dropdown-text>
                 About
               </span>
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 14 14">
-                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#364153" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
+              <svg className="w-3.5 h-3.5 transition-colors text-[#364153]" fill="none" viewBox="0 0 14 14" data-dropdown-icon>
+                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
               </svg>
             </button>
             <AboutDropdown />

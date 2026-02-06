@@ -7,41 +7,59 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // Dropdown navigation functionality (main site)
-  const dropdownTriggers = document.querySelectorAll('[data-dropdown-trigger]');
+  // Dropdown navigation functionality (main site) - HOVER BASED
+  const dropdownContainers = document.querySelectorAll('[data-dropdown-container]');
   
-  dropdownTriggers.forEach(trigger => {
-    const dropdownName = trigger.getAttribute('data-dropdown-trigger');
-    const dropdown = document.querySelector(`[data-dropdown="${dropdownName}"]`);
+  dropdownContainers.forEach(container => {
+    const dropdownName = container.getAttribute('data-dropdown-container');
+    const dropdown = container.querySelector(`[data-dropdown="${dropdownName}"]`);
+    const trigger = container.querySelector('[data-dropdown-trigger]');
+    const text = container.querySelector('[data-dropdown-text]');
+    const icon = container.querySelector('[data-dropdown-icon]');
     
-    if (dropdown) {
-      // Toggle dropdown on click
-      trigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        
-        // Close other dropdowns
-        document.querySelectorAll('[data-dropdown]').forEach(dd => {
-          if (dd !== dropdown) {
-            dd.classList.add('hidden');
-          }
-        });
-        
-        // Toggle current dropdown
-        dropdown.classList.toggle('hidden');
-      });
+    // Only proceed if all required elements exist
+    if (!dropdown || !trigger) {
+      console.warn('Dropdown elements not found for:', dropdownName);
+      return;
     }
-  });
-  
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', (e) => {
-    const isDropdownTrigger = e.target.closest('[data-dropdown-trigger]');
-    const isDropdown = e.target.closest('[data-dropdown]');
     
-    if (!isDropdownTrigger && !isDropdown) {
-      document.querySelectorAll('[data-dropdown]').forEach(dropdown => {
-        dropdown.classList.add('hidden');
+    // Show dropdown on hover
+    container.addEventListener('mouseenter', () => {
+      // Close all other dropdowns first
+      document.querySelectorAll('[data-dropdown]').forEach(dd => {
+        if (dd !== dropdown) {
+          dd.classList.add('hidden');
+        }
       });
-    }
+      
+      // Reset all other triggers to default color
+      document.querySelectorAll('[data-dropdown-text]').forEach(t => {
+        if (t !== text) {
+          t.style.color = '#364153';
+        }
+      });
+      document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
+        if (i !== icon) {
+          i.style.color = '#364153';
+        }
+      });
+      
+      // Show current dropdown
+      dropdown.classList.remove('hidden');
+      
+      // Change trigger text and icon to blue (#0066CC)
+      if (text) text.style.color = '#0066CC';
+      if (icon) icon.style.color = '#0066CC';
+    });
+    
+    // Hide dropdown when mouse leaves the entire container (trigger + dropdown)
+    container.addEventListener('mouseleave', () => {
+      dropdown.classList.add('hidden');
+      
+      // Reset color to default
+      if (text) text.style.color = '#364153';
+      if (icon) icon.style.color = '#364153';
+    });
   });
 
   // Mobile menu toggle
