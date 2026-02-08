@@ -1571,7 +1571,12 @@ function Section6() {
                 </p>
               </div>
 
-              <form className="flex flex-col gap-4">
+              <form className="flex flex-col gap-4" id="about-us-form">
+                {/* Error Message */}
+                <div id="aboutus-error-message" className="hidden message error">
+                  <p className="text-sm">Unable to submit form. Please try again.</p>
+                </div>
+
                 {/* Name */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-sm font-normal text-[#364153]">
@@ -1580,6 +1585,8 @@ function Section6() {
                   <input
                     type="text"
                     id="name"
+                    name="fullName"
+                    required
                     className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
                   />
                 </div>
@@ -1592,6 +1599,8 @@ function Section6() {
                   <input
                     type="email"
                     id="email"
+                    name="workEmail"
+                    required
                     className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
                   />
                 </div>
@@ -1604,6 +1613,7 @@ function Section6() {
                   <input
                     type="text"
                     id="org"
+                    name="organizationRole"
                     placeholder="e.g., Acme Corp / VP Engineering"
                     className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm placeholder:text-[#99a1af] focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
                   />
@@ -1616,19 +1626,19 @@ function Section6() {
                   </label>
                   <div className="flex flex-col gap-2">
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
+                      <input type="checkbox" name="interests" value="Public course" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
                       <span className="text-sm font-light text-[#364153]">Public course</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
+                      <input type="checkbox" name="interests" value="Private / in-house training" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
                       <span className="text-sm font-light text-[#364153]">Private / in-house training</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
+                      <input type="checkbox" name="interests" value="Enterprise transformation" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
                       <span className="text-sm font-light text-[#364153]">Enterprise transformation</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
-                      <input type="checkbox" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
+                      <input type="checkbox" name="interests" value="Not sure yet" className="w-4 h-4 border-[#d1d5dc] rounded-sm text-[#0066CC] focus:ring-[#0066CC]" />
                       <span className="text-sm font-light text-[#364153]">Not sure yet</span>
                     </label>
                   </div>
@@ -1642,6 +1652,7 @@ function Section6() {
                   <p className="text-xs text-[#6a7282] mb-1">Choose the one that hurts the most.</p>
                   <select
                     id="challenge"
+                    name="challenge"
                     className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm text-[#6a7282] focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent"
                   >
                     <option value="">Select a challenge...</option>

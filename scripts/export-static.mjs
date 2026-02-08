@@ -400,7 +400,7 @@ function generateFormJS() {
   const js = `// Form handling for TeamWorks consultation and main site Contact Us forms
 
 document.addEventListener('DOMContentLoaded', () => {
-  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzF0P4cFMBBEnEFxmEY3tC8tXTRqEYS0DOP8ru1UCYqDUEySnelgW69hrysgMauONdJsQ/exec';
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwMB8hyEciDVHNN_lCtwCpRFbouPj7nY1Hk7UPGk-nv2o4_0KTxaVIlEafUblZWceuqwQ/exec';
 
   // ========================================
   // TEAMWORKS CONSULTATION FORM HANDLER
@@ -621,6 +621,111 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ========================================
+  // ABOUT US FORM HANDLER
+  // ========================================
+  const aboutUsForm = document.getElementById('about-us-form');
+  
+  if (aboutUsForm) {
+    aboutUsForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(aboutUsForm);
+      
+      // Validate required fields
+      const fullName = formData.get('fullName') || '';
+      const workEmail = formData.get('workEmail') || '';
+      
+      if (!fullName.trim() || !workEmail.trim()) {
+        alert('Please fill in all required fields (Name and Work Email)');
+        return;
+      }
+      
+      // Build data object
+      const organizationRole = formData.get('organizationRole') || '';
+      const challenge = formData.get('challenge') || '';
+      
+      // Handle multiple interests checkboxes - collect all checked values
+      const interests = formData.getAll('interests').join(', ') || '';
+      
+      // Add tracking fields
+      const pageUrl = window.location.href;
+      const referrer = document.referrer || 'Direct';
+      const timestamp = new Date().toISOString();
+      
+      // Get elements
+      const submitButton = aboutUsForm.querySelector('button[type="submit"]');
+      const errorMessage = document.getElementById('aboutus-error-message');
+      
+      // Store original button text
+      const originalButtonText = submitButton.innerHTML;
+      
+      try {
+        // Disable submit button and show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+        
+        // Hide any previous messages
+        if (errorMessage) errorMessage.classList.add('hidden');
+        
+        // CRITICAL: Use URLSearchParams for form-encoded POST (NOT JSON)
+        const data = new URLSearchParams({
+          sheetName: 'AboutUsForm',
+          fullName,
+          workEmail,
+          organizationRole,
+          interests,
+          challenge,
+          pageUrl,
+          referrer,
+          timestamp,
+        });
+        
+        // Send to Google Web App using form-encoded data
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          body: data,
+        });
+
+        // Check if response is OK and parse JSON safely
+        if (!response.ok) {
+          throw new Error('Server responded with error status');
+        }
+
+        const result = await response.json().catch(() => null);
+
+        // Verify the response indicates success
+        if (!result || result.status !== 'success') {
+          throw new Error(result?.message || 'Form submission failed - invalid response from server');
+        }
+
+        // Reset form
+        aboutUsForm.reset();
+
+        // Redirect to Thank You page immediately
+        window.location.assign('thankyou.html');
+        return;
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+        
+        // Show error message (do NOT hide the form)
+        if (errorMessage) {
+          errorMessage.classList.remove('hidden');
+          const errorText = errorMessage.querySelector('p');
+          if (errorText) {
+            errorText.textContent = error.message || 'Unable to submit form. Please try again.';
+          }
+        }
+
+        // Restore button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }
+    });
+  }
 });
 `;
 
@@ -722,6 +827,7 @@ async function generateHTMLFiles() {
         title: 'About Us - CI Agile',
         description: 'Learn about CI Agile and our mission to transform organizations through proven delivery systems.',
         siteType: 'main',
+        includeFormJS: true,
       },
       {
         path: '/src/site/pages/contact/ContactUsPage.tsx',
