@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { IndexPage } from "@/site/pages/index/IndexPage";
 import { AboutUsPage } from "@/site/pages/about/AboutUsPage";
 import { ContactUsPage } from "@/site/pages/contact/ContactUsPage";
+import { ThankYouPage } from "@/site/pages/thankyou/ThankYouPage";
 import { LandingPage } from "@/site/pages/teamworks/LandingPage";
 import { CreatingSuperTeamsPage } from "@/site/pages/teamworks/CreatingSuperTeamsPage";
 import { DesignLikeApplePage } from "@/site/pages/teamworks/DesignLikeApplePage";
@@ -60,11 +61,12 @@ export default function App() {
 
   // Route mapping
   const routes: Record<string, React.ComponentType> = {
-    '': IndexPage,
+    '': ThankYouPage,
     '#/': IndexPage,
     '#/index.html': IndexPage,
     '#/aboutus.html': AboutUsPage,
     '#/contactus.html': ContactUsPage,
+    '#/thankyou.html': ThankYouPage,
     '#/teamworks/': LandingPage,
     '#/teamworks/index.html': LandingPage,
     '#/teamworks/creating-super-teams.html': CreatingSuperTeamsPage,
@@ -73,7 +75,7 @@ export default function App() {
     '#/teamworks/bookConsultation.html': BookConsultationPage,
   };
 
-  const Component = routes[hash] || IndexPage;
+  const Component = routes[hash] || ThankYouPage;
 
   return <Component />;
 }

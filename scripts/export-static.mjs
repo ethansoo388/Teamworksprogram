@@ -491,21 +491,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Verify the response indicates success
         if (!result || result.status !== 'success') {
-          throw new Error('Form submission failed - invalid response from server');
+          throw new Error(result?.message || 'Form submission failed - invalid response from server');
         }
-
-        // Show success message
-        consultationForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        errorMessage.classList.add('hidden');
 
         // Reset form
         consultationForm.reset();
 
-        // Redirect after 5 seconds
-        setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 5000);
+        // Redirect to Thank You page immediately
+        window.location.assign('../thankyou.html');
+        return;
 
       } catch (error) {
         console.error('Form submission error:', error);
@@ -604,20 +598,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Verify the response indicates success
         if (!result || result.status !== 'success') {
-          throw new Error('Form submission failed - invalid response from server');
+          throw new Error(result?.message || 'Form submission failed - invalid response from server');
         }
-
-        // Show success message
-        contactForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        errorMessage.classList.add('hidden');
 
         // Reset form
         contactForm.reset();
 
-        // Re-enable and restore button (no redirect for contact form)
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
+        // Redirect to Thank You page immediately
+        window.location.assign('thankyou.html');
+        return;
 
       } catch (error) {
         console.error('Form submission error:', error);
@@ -743,6 +732,14 @@ async function generateHTMLFiles() {
         siteType: 'main',
         includeFormJS: true,
       },
+      {
+        path: '/src/site/pages/thankyou/ThankYouPage.tsx',
+        componentName: 'ThankYouPage',
+        filename: 'thankyou.html',
+        title: 'Thank You - CI Agile',
+        description: 'Thank you for contacting CI Agile. We will get back to you within 24 hours.',
+        siteType: 'main',
+      },
       // TeamWorks pages
       {
         path: '/src/site/pages/teamworks/LandingPage.tsx',
@@ -850,6 +847,7 @@ async function exportStaticSite() {
     console.log('    - index.html');
     console.log('    - aboutus.html');
     console.log('    - contactus.html');
+    console.log('    - thankyou.html');
     console.log('  TeamWorks:');
     console.log('    - teamworks/index.html');
     console.log('    - teamworks/creating-super-teams.html');
