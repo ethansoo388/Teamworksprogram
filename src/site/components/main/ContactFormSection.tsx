@@ -71,14 +71,16 @@ export function ContactFormSection() {
               </p>
             </div>
 
-            <form className="flex flex-col gap-6">
+            <form id="contact-us-form" className="flex flex-col gap-6">
               {/* Full Name */}
               <div className="flex flex-col gap-1.5">
                 <label className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] not-italic text-[#1e2939] text-[14px]">
                   Full Name
                 </label>
                 <input 
-                  type="text" 
+                  type="text"
+                  name="fullName"
+                  required
                   className="h-[46px] px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828]"
                 />
               </div>
@@ -89,7 +91,9 @@ export function ContactFormSection() {
                   Work Email
                 </label>
                 <input 
-                  type="email" 
+                  type="email"
+                  name="workEmail"
+                  required
                   className="h-[46px] px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828]"
                 />
               </div>
@@ -101,13 +105,13 @@ export function ContactFormSection() {
                 </label>
                 <div className="flex flex-col gap-3">
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="radio" name="contact" className="w-4 h-4" />
+                    <input type="radio" name="contactMethod" value="email" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Email
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="radio" name="contact" className="w-4 h-4" />
+                    <input type="radio" name="contactMethod" value="whatsapp" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       WhatsApp
                       <span className="font-['Inter:Light',sans-serif] font-light leading-[16px] not-italic text-[#6a7282] text-[12px] ml-2">
@@ -116,7 +120,7 @@ export function ContactFormSection() {
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="radio" name="contact" className="w-4 h-4" />
+                    <input type="radio" name="contactMethod" value="phone" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Phone
                       <span className="font-['Inter:Light',sans-serif] font-light leading-[16px] not-italic text-[#6a7282] text-[12px] ml-2">
@@ -136,7 +140,8 @@ export function ContactFormSection() {
                   Organization / Role
                 </label>
                 <input 
-                  type="text" 
+                  type="text"
+                  name="organizationRole"
                   placeholder="e.g. Head of Operations, COO, VP Engineering"
                   className="h-[46px] px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828] placeholder:text-[#99a1af]"
                 />
@@ -149,31 +154,31 @@ export function ContactFormSection() {
                 </label>
                 <div className="flex flex-col gap-3">
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4" />
+                    <input type="checkbox" name="interests" value="private-inhouse-training" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Private / in-house training
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4" />
+                    <input type="checkbox" name="interests" value="team-effectiveness-delivery" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Team effectiveness & delivery
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4" />
+                    <input type="checkbox" name="interests" value="enterprise-transformation" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Enterprise transformation
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4" />
+                    <input type="checkbox" name="interests" value="ai-enabled-execution" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       AI-enabled execution
                     </span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4" />
+                    <input type="checkbox" name="interests" value="not-sure-yet" className="w-4 h-4" />
                     <span className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#364153] text-[14px]">
                       Not sure yet
                     </span>
@@ -186,15 +191,15 @@ export function ContactFormSection() {
                 <label className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] not-italic text-[#1e2939] text-[14px]">
                   What challenge do you relate to most?
                 </label>
-                <select className="h-[46px] px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828] bg-white">
-                  <option>Select a challenge...</option>
-                  <option>Work is slow and delivery keeps slipping</option>
-                  <option>Priorities keep changing</option>
-                  <option>Teams are busy but outcomes don't improve</option>
-                  <option>Too many dependencies across teams</option>
-                  <option>Leadership decisions don't translate into execution</option>
-                  <option>Processes are heavy or don't fit how we work</option>
-                  <option>We want to use AI but don't know where it creates value</option>
+                <select name="challenge" className="h-[46px] px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828] bg-white">
+                  <option value="">Select a challenge...</option>
+                  <option value="work-is-slow">Work is slow and delivery keeps slipping</option>
+                  <option value="priorities-changing">Priorities keep changing</option>
+                  <option value="busy-no-outcomes">Teams are busy but outcomes don't improve</option>
+                  <option value="too-many-dependencies">Too many dependencies across teams</option>
+                  <option value="decisions-not-translating">Leadership decisions don't translate into execution</option>
+                  <option value="heavy-processes">Processes are heavy or don't fit how we work</option>
+                  <option value="ai-uncertainty">We want to use AI but don't know where it creates value</option>
                 </select>
               </div>
 
@@ -204,6 +209,7 @@ export function ContactFormSection() {
                   Anything else you'd like us to know?
                 </label>
                 <textarea 
+                  name="message"
                   placeholder="(Optional) What's your current setup, biggest bottleneck, or something you're curious about?"
                   rows={4}
                   className="px-4 py-3 rounded-[8px] border border-[#d1d5dc] font-['Inter:Regular',sans-serif] font-normal text-[14px] text-[#101828] placeholder:text-[#99a1af] resize-none"
@@ -218,6 +224,26 @@ export function ContactFormSection() {
                 Send Message
               </button>
             </form>
+
+            {/* Success Message (hidden by default) */}
+            <div id="contact-success-message" className="hidden bg-[#d1fae5] border border-[#34d399] rounded-[8px] p-4">
+              <p className="font-['Inter:Medium',sans-serif] font-medium text-[#065f46] text-[14px] mb-1">
+                Message sent successfully!
+              </p>
+              <p className="font-['Inter:Light',sans-serif] font-light text-[#065f46] text-[13px]">
+                Thank you for reaching out. We'll get back to you within 24 hours.
+              </p>
+            </div>
+
+            {/* Error Message (hidden by default) */}
+            <div id="contact-error-message" className="hidden bg-[#fee2e2] border border-[#f87171] rounded-[8px] p-4">
+              <p className="font-['Inter:Medium',sans-serif] font-medium text-[#991b1b] text-[14px] mb-1">
+                Oops! Something went wrong.
+              </p>
+              <p className="font-['Inter:Light',sans-serif] font-light text-[#991b1b] text-[13px]">
+                Please try again or email us directly at hello@ciagile.com
+              </p>
+            </div>
           </div>
         </div>
       </div>
