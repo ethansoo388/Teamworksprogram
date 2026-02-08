@@ -92,21 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Verify the response indicates success
         if (!result || result.status !== 'success') {
-          throw new Error('Form submission failed - invalid response from server');
+          throw new Error(result?.message || 'Form submission failed - invalid response from server');
         }
-
-        // Show success message
-        consultationForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        errorMessage.classList.add('hidden');
 
         // Reset form
         consultationForm.reset();
 
-        // Redirect after 5 seconds
-        setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 5000);
+        // Redirect to Thank You page immediately
+        window.location.assign('../thankyou.html');
+        return;
 
       } catch (error) {
         console.error('Form submission error:', error);
@@ -205,20 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Verify the response indicates success
         if (!result || result.status !== 'success') {
-          throw new Error('Form submission failed - invalid response from server');
+          throw new Error(result?.message || 'Form submission failed - invalid response from server');
         }
-
-        // Show success message
-        contactForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        errorMessage.classList.add('hidden');
 
         // Reset form
         contactForm.reset();
 
-        // Re-enable and restore button (no redirect for contact form)
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
+        // Redirect to Thank You page immediately
+        window.location.assign('thankyou.html');
+        return;
 
       } catch (error) {
         console.error('Form submission error:', error);
