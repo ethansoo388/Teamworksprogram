@@ -10,6 +10,7 @@ import imageWithFallback48 from "@/assets/img/48aa90649a4e56f3a94eb6f4c6e253b63d
 import imageWithFallback6d from "@/assets/img/6d210643b84c08db9772a3b123a072f99723cbe2.png";
 import imageWithFallbackc6 from "@/assets/img/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
 import presenterImage from "@/assets/img/presenter-at-flip-chart-black-and-white.jpg";
+import ciAgileLogo from "@/assets/img/ci-agile-logo.png";
 
 function Paragraph() {
   return (
@@ -2222,7 +2223,7 @@ function FinalCtaSection() {
 function ImageCiAgile() {
   return (
     <div className="h-[48px] w-[210px]" data-name="Image (CI Agile)">
-      <img alt="CI Agile Logo" className="h-full w-full object-contain object-left" src="https://i.postimg.cc/sxywTrNc/Ci-Agile-Logo-white-01.png" />
+      <img alt="CI Agile Logo" className="h-full w-full object-contain object-left" src={ciAgileLogo} />
     </div>
   );
 }
@@ -2879,7 +2880,7 @@ function HomePage() {
 function Navigation1() {
   return (
     <div className="flex-[1_0_0] h-[36px] min-h-px min-w-px relative" data-name="Navigation">
-      <img alt="CI Agile Logo" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src="https://i.postimg.cc/C155yBn1/white-bg-big.jpg" />
+      <img alt="CI Agile Logo" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={ciAgileLogo} />
     </div>
   );
 }
@@ -2889,7 +2890,7 @@ function Link16() {
     <div className="h-[24px] relative shrink-0 w-[82.523px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
         <a href="index.html" className="no-underline flex items-center h-full">
-          <img alt="CI Agile Logo" className="h-full w-auto object-contain" src="https://i.postimg.cc/C155yBn1/white-bg-big.jpg" />
+          <img alt="CI Agile Logo" className="h-full w-auto object-contain" src={ciAgileLogo} />
         </a>
       </div>
     </div>

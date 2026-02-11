@@ -618,7 +618,7 @@ function Section3() {
           {/* Image */}
           <div className="flex-shrink-0">
             <img 
-              src="https://i.postimg.cc/HjGLSZ3r/Ethan-picture.png" 
+              src={ethanSooImage} 
               alt="Ethan Soo" 
               className="w-[240px] h-[240px] object-cover"
             />
