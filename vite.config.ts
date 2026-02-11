@@ -10,6 +10,38 @@ export default defineConfig({
     // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
+    // Custom plugin to resolve @/assets/img imports to proper paths
+    {
+      name: 'resolve-assets-img',
+      resolveId(id) {
+        if (id.startsWith('@/assets/img/')) {
+          // Extract filename from @/assets/img/filename
+          const filename = id.replace('@/assets/img/', '');
+          const assetPath = path.resolve(__dirname, 'src/assets/img', filename);
+          
+          // Check if file exists
+          if (!fs.existsSync(assetPath)) {
+            throw new Error(
+              `[@/assets/img] File not found: ${filename}\n` +
+              `Expected location: ${assetPath}\n` +
+              `Please ensure the file exists in src/assets/img/`
+            );
+          }
+          
+          // Return a virtual module ID
+          return '\0assets-img:' + filename;
+        }
+      },
+      load(id) {
+        if (id.startsWith('\0assets-img:')) {
+          // Extract filename from virtual module ID
+          const filename = id.replace('\0assets-img:', '');
+          
+          // Return absolute path (will be fixed by post-processing in export script)
+          return `export default "/src/assets/img/${filename}";`;
+        }
+      }
+    },
     // Custom plugin to resolve figma:asset imports
     {
       name: 'resolve-figma-assets',
@@ -37,8 +69,8 @@ export default defineConfig({
           // Extract filename from virtual module ID
           const filename = id.replace('\0figma:asset:', '');
           
-          // Return a module that exports the public URL path
-          return `export default "/assets/img/${filename}";`;
+          // Return absolute path (will be fixed by post-processing in export script)
+          return `export default "/src/assets/img/${filename}";`;
         }
       }
     }

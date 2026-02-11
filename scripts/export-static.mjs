@@ -798,6 +798,25 @@ async function renderPageWithVite(vite, pagePath, componentName) {
   }
 }
 
+// Fix image paths in HTML based on page location
+function fixImagePaths(html, isTeamworksPage) {
+  // Replace /src/assets/img/ with the correct relative path
+  const srcAssetsPattern = /src="\/src\/assets\/img\//g;
+  const assetsPattern = /src="assets\/img\//g;
+  
+  if (isTeamworksPage) {
+    // TeamWorks pages are in teamworks/ subdirectory, need ../assets/img/
+    return html
+      .replace(srcAssetsPattern, 'src="../assets/img/')
+      .replace(assetsPattern, 'src="../assets/img/');
+  } else {
+    // Main site pages are in root, need assets/img/
+    return html
+      .replace(srcAssetsPattern, 'src="assets/img/')
+      .replace(assetsPattern, 'src="assets/img/');
+  }
+}
+
 // Generate HTML files from React components using Vite SSR
 async function generateHTMLFiles() {
   console.log('📄 Generating HTML files from React components...');
@@ -897,7 +916,10 @@ async function generateHTMLFiles() {
         // Use Vite to load TSX component, React to render it
         const bodyHTML = await renderPageWithVite(vite, page.path, page.componentName);
         
-        const html = createHTMLShell(page.title, bodyHTML, {
+        // Fix image paths based on page location
+        const fixedBodyHTML = fixImagePaths(bodyHTML, page.siteType === 'teamworks');
+        
+        const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
           siteType: page.siteType,
