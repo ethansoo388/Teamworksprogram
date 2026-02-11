@@ -4,7 +4,7 @@
 // Fully responsive flexbox layout
 
 import { useState } from 'react';
-import ciAgileLogo from '@/assets/img/ci-agile-logo-white-background.png';
+import ciAgileLogo from '@/assets/img/ci-agile-logo.png';
 
 function ProgramsDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean; onMouseEnter: () => void; onMouseLeave: () => void }) {
   return (
