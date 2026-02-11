@@ -1,5 +1,7 @@
 import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import highEnergyTeamImage from "@/assets/img/high-energy-team-standing-together-smiling.jpg";
+import successfulAgileImage from "@/assets/img/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg";
 
 const faqItems = [
   {
@@ -141,7 +143,7 @@ export function CoursePage() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://i.postimg.cc/8zQjWkXx/hyper-productive-Asia-teams-discussing-and-standing-doing-activities-smiling-vibrant-colours-with.jpg" 
+                  src={highEnergyTeamImage} 
                   alt="Team collaboration workshop"
                   className="w-full h-full object-cover"
                 />
@@ -402,7 +404,7 @@ export function CoursePage() {
             {/* Right: Images */}
             <div className="relative h-full min-h-[600px]">
               <img 
-                src="https://i.postimg.cc/SQ1hX6rN/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg" 
+                src={successfulAgileImage} 
                 alt="Team collaboration in workshop"
                 className="w-full h-full object-cover rounded-3xl shadow-2xl"
               />

@@ -1,5 +1,6 @@
 import { CheckCircle2, Award, Users, TrendingUp, Target, Rocket, Gamepad2, Lightbulb } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import celebrationImage from "@/assets/img/team-celebration-high-five-with-laptop.jpg";
 
 const benefits = [
   {
@@ -42,8 +43,8 @@ export function WhyTeamWorks() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur-2xl opacity-30"></div>
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1739298061766-e2751d92e9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBjZWxlYnJhdGlvbnxlbnwxfHx8fDE3NjgyNTMxMDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Team celebration"
+                src={celebrationImage}
+                alt="Business team celebrating successful training outcomes and improvements"
                 className="relative rounded-2xl shadow-2xl w-full object-cover h-[600px]"
               />
             </div>

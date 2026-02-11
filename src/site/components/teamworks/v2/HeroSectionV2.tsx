@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import twoLadiesImage from "@/assets/img/young-asian-ladies-discussing-talking-with-phones.jpg";
+import hrdCorpLogo from "@/assets/img/hrd-corp-claimable-training-logo.webp";
 
 export function HeroSectionV2() {
   return (
@@ -62,7 +64,7 @@ export function HeroSectionV2() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src="https://i.postimg.cc/65PR8Kdb/Two-young-asian-ladies-discussing-and-standing-smiling-vibrant-colours-with-white-background.jpg"
+                src={twoLadiesImage}
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
               />
@@ -71,8 +73,8 @@ export function HeroSectionV2() {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[200px]">
               <div className="flex flex-col items-center text-center gap-3">
                 <img 
-                  src="https://www.ideavit.co/web/image/996-da30adeb/HRD-Corp-Claimable-Logo-1024x1024-removebg-preview.webp" 
-                  alt="HRD Corp Claimable" 
+                  src={hrdCorpLogo} 
+                  alt="HRD Corp Claimable Training Funding Logo" 
                   className="w-24 h-24 object-contain"
                 />
                 <div>

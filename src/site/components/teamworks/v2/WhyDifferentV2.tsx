@@ -1,5 +1,6 @@
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
 import { Gamepad2, GraduationCap, Zap, Users } from "lucide-react";
+import workshopImage from "@/assets/img/highly-interactivity.webp";
 
 const features = [
   {
@@ -104,8 +105,8 @@ export function WhyDifferentV2() {
           <div>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src="https://i.postimg.cc/Jn7tTYNJ/Untitled-design-(13).png"
-                alt="Workshop in action"
+                src={workshopImage}
+                alt="Highly interactive workshop training session"
                 className="w-full h-full object-cover"
               />
             </div>

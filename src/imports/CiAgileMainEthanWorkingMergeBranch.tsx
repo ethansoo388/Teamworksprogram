@@ -3,6 +3,13 @@ import imgImageWithFallback from "figma:asset/6d210643b84c08db9772a3b123a072f997
 import imgImageWithFallback1 from "figma:asset/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
 import imgImageCiAgile from "figma:asset/eb7ac0eb48b2cd72fb05c7e064977b3e1f292dd7.png";
 import imgImageWithFallback2 from "figma:asset/48aa90649a4e56f3a94eb6f4c6e253b63dfc1bc1.png";
+import agileTeamImage from "@/assets/img/team-working-together-sticky-note-on-wall.jpg";
+import businessPresentationImage from "@/assets/img/business-presentation-meeting-room.jpg";
+import ciAgileLogoSmall from "@/assets/img/eb7ac0eb48b2cd72fb05c7e064977b3e1f292dd7.png";
+import imageWithFallback48 from "@/assets/img/48aa90649a4e56f3a94eb6f4c6e253b63dfc1bc1.png";
+import imageWithFallback6d from "@/assets/img/6d210643b84c08db9772a3b123a072f99723cbe2.png";
+import imageWithFallbackc6 from "@/assets/img/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
+import presenterImage from "@/assets/img/presenter-at-flip-chart-black-and-white.jpg";
 
 function Paragraph() {
   return (
@@ -849,7 +856,7 @@ function ImageWithFallback() {
     <div className="w-full h-[500px]" data-name="ImageWithFallback">
       <div aria-hidden="true" className="relative h-full w-full">
         <div className="absolute bg-[#f3f4f6] inset-0" />
-        <img alt="Agile team collaboration" className="absolute max-w-none object-cover size-full" src="https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZ2lsZSUyMHNjcnVtJTIwdGVhbXxlbnwxfHx8fDE3NjkxMTUwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" />
+        <img alt="Agile team collaboration" className="absolute max-w-none object-cover size-full" src={agileTeamImage} />
       </div>
     </div>
   );
@@ -1040,7 +1047,7 @@ function ImageWithFallback1() {
     <div className="w-full h-[500px]" data-name="ImageWithFallback">
       <div aria-hidden="true" className="relative h-full w-full">
         <div className="absolute bg-[#f3f4f6] inset-0" />
-        <img alt="JESS (Jeff Sutherland's Enterprise Scrum System)" className="absolute max-w-none object-cover size-full" src="https://images.unsplash.com/photo-1758691736424-4b4273948341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjB0ZWFtJTIwc3RyYXRlZ3l8ZW58MXx8fHwxNzY5MTY5Mzc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" />
+        <img alt="JESS (Jeff Sutherland's Enterprise Scrum System)" className="absolute max-w-none object-cover size-full" src={businessPresentationImage} />
       </div>
     </div>
   );
@@ -2825,7 +2832,7 @@ function Container171() {
 function ImageWithFallback2() {
   return (
     <div className="w-full h-full min-h-[400px]" data-name="ImageWithFallback">
-      <img alt="Corporate training and consulting" className="w-full h-full object-cover pointer-events-none" src="https://images.unsplash.com/photo-1765438863717-49fca900f861?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB0cmFpbmluZyUyMHNlbWluYXJ8ZW58MXx8fHwxNzY5MTAwNjk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" />
+      <img alt="Corporate training and consulting" className="w-full h-full object-cover pointer-events-none" src={presenterImage} />
     </div>
   );
 }

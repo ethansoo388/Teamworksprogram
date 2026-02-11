@@ -4,6 +4,13 @@ import imgImageWithFallback1 from "figma:asset/e663da3af181c9fc2508e76fec0498f83
 import imgImageEthanSoo from "figma:asset/b8d869daa88d48a6817babfc3c89c4ce9638444a.png";
 import imgImageWithFallback2 from "figma:asset/40b1d8b8c250769ef13971a417b0e95fe4fbfc1f.png";
 import imgNavigation from "figma:asset/fd7a81c1c75169f5c53cda037245ef314f926517.png";
+import businessMeetingImage from "@/assets/img/one-on-one-office-discussion-with-laptop.jpg";
+import ciAgileConsultingImage from "@/assets/img/ci-agile-consulting-approach-methodology-overview.png";
+import ciAgileLogoImage from "@/assets/img/ci-agile-logo.png";
+import enterpriseTeamImage from "@/assets/img/enterprise-team-delivery-systems-execution-frameworks.png";
+import ethanSooImage from "@/assets/img/Ethan-picture.jpg";
+import stickyNotesWideImage from "@/assets/img/sticky-notes-on-whiteboard-workshop-wide.jpg";
+import teamCollabImage from "@/assets/img/team-collaboration-problem-solving-workshop.png";
 
 function Container1() {
   return <div className="absolute bg-[#06c] h-[4px] left-0 top-[32px] w-[48px]" data-name="Container" />;
@@ -365,7 +372,7 @@ function Section2() {
           {/* Image */}
           <div className="shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1758691737278-3af15b37af48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMGJ1c2luZXNzJTIwdGVhbSUyMG1lZXRpbmd8ZW58MXx8fHwxNzY5NDAwMjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={businessMeetingImage}
               alt="Business team meeting" 
               className="w-full h-[280px] object-cover"
             />
@@ -1535,7 +1542,7 @@ function Section6() {
           {/* Left side - Content */}
           <div className="flex flex-col gap-6">
             <img 
-              src="https://images.unsplash.com/photo-1735639013995-086e648eaa38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwd29ya3Nob3AlMjBjb2xsYWJvcmF0aW9uJTIwbWVldGluZ3xlbnwxfHx8fDE3Njk0MTA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+              src={stickyNotesWideImage} 
               alt="Team collaboration and problem-solving" 
               className="w-full h-auto rounded-lg"
             />

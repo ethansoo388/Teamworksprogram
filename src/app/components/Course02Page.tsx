@@ -1,5 +1,11 @@
 import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import moduleGraphicImage from "@/assets/img/designer-working-at-desk-with-drawing-tablet.jpg";
+import productDesignImage from "@/assets/img/product-design-customer-experience-creative-work.jpg";
+import professionalWomanImage from "@/assets/img/professional-woman-thinking-with-pen.jpg";
+import teamBuildingImage from "@/assets/img/team-building-collaboration-outdoors.jpg";
+import teamIdeasBrainstormImage from "@/assets/img/team-working-on-ideas-sticky-notes-brainstorming.jpg";
+import teamIdeasGroupImage from "@/assets/img/team-working-on-ideas-group-discussion.jpg";
 
 const testimonials = [
   {
@@ -161,7 +167,7 @@ export function Course02Page() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://i.postimg.cc/wBFsdRQS/A-happy-young-Japanese-lady-holding-pen-and-paper-smiling-and-thinking.jpg" 
+                  src={professionalWomanImage} 
                   alt="Design thinking workshop"
                   className="w-full h-full object-cover"
                 />
@@ -260,7 +266,7 @@ export function Course02Page() {
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
-                    src="https://i.postimg.cc/65mXFWZH/Creating-products-people-love-Have-a-person-delighted-on-designing-and-improving-customer-experien.jpg" 
+                    src={productDesignImage} 
                     alt="Understanding Real Customer Problems"
                     className="w-full h-full object-cover"
                   />
@@ -305,7 +311,7 @@ export function Course02Page() {
                 </div>
                 <div className="aspect-[4/3] lg:aspect-auto order-1 lg:order-2">
                   <img 
-                    src="https://i.postimg.cc/8zmqNTJd/A-team-working-on-amazing-ideas-young-asia-smiling-happy.jpg" 
+                    src={teamIdeasBrainstormImage} 
                     alt="Mapping the Customer Experience"
                     className="w-full h-full object-cover"
                   />
@@ -318,7 +324,7 @@ export function Course02Page() {
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
-                    src="https://i.postimg.cc/7YGHHJwn/A-team-working-on-amazing-ideas-young-asia-smiling-happy-(1).jpg" 
+                    src={teamIdeasGroupImage} 
                     alt="Turning Insights into Better Ideas"
                     className="w-full h-full object-cover"
                   />
@@ -363,7 +369,7 @@ export function Course02Page() {
                 </div>
                 <div className="aspect-[4/3] lg:aspect-auto order-1 lg:order-2">
                   <img 
-                    src="https://i.postimg.cc/cLkPrXhn/Untitled-design-(11).png" 
+                    src={moduleGraphicImage} 
                     alt="Testing Before Committing"
                     className="w-full h-full object-cover"
                   />
@@ -376,7 +382,7 @@ export function Course02Page() {
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
-                    src="https://i.postimg.cc/xdRJvNkN/a-team-building-something-together-asia-young-happy-bright-amazing.jpg" 
+                    src={teamBuildingImage} 
                     alt="From Idea to Action"
                     className="w-full h-full object-cover"
                   />

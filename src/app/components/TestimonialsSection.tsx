@@ -1,5 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import handsClayImage from "@/assets/img/hands-examining-clay-pot.jpg";
 
 const testimonials = [
   {
@@ -114,7 +115,7 @@ export function TestimonialsSection() {
             {/* Left: Image */}
             <div className="relative h-64 md:h-auto">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1759646828783-7e1b8f02f89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncm91cCUyMHdvcmtzaG9wJTIwaGFuZHN8ZW58MXx8fHwxNzY4Mjk5MDMwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={handsClayImage}
                 alt="Workshop success"
                 className="w-full h-full object-cover"
               />

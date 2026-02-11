@@ -1,3 +1,5 @@
+import groupLeaningImage from '@/assets/img/group-working-together-leaning-on-table.jpg';
+
 export function AboutHero() {
   return (
     <div className="bg-white relative w-full py-20" data-name="Section">
@@ -22,7 +24,7 @@ export function AboutHero() {
           {/* Right side - Image */}
           <div className="flex justify-center lg:justify-end">
             <img 
-              src="https://images.unsplash.com/photo-1768796370577-c6e8b708b980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjB3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzY5MzUyOTk5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+              src={groupLeaningImage} 
               alt="Team collaboration and workshop" 
               className="w-full max-w-md h-auto object-cover rounded-lg"
             />

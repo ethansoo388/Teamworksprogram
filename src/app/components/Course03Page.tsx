@@ -1,14 +1,10 @@
 import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp, Clock, Users, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 import { useState } from "react";
-
-// Hero image
-const heroImage = "https://i.postimg.cc/W17qQ6Qz/an-asian-team-looking-happy-solving-problems-young-vibrant-bright-with-white-background-boards.jpg";
-
-// Course module images
-const moduleImage1 = "https://i.postimg.cc/7h7fXggd/Asia-young-executive-teams-discussing-HAPPY-standing-smiling-with-a-Kanban-board-vibrant-young.jpg";
-const moduleImage2 = "https://i.postimg.cc/2SCVFL3X/Happy-asians-team-of-a-SME-working-fast-and-efficient-without-laptop-more-interactive-with-board-(1.jpg";
-const moduleImage3 = "https://i.postimg.cc/d0psXhtY/Untitled-design-(19).png";
+import heroImage from "@/assets/img/applying-critical-thinking.webp";
+import moduleImage1 from "@/assets/img/c3m1-kanban.webp";
+import moduleImage2 from "@/assets/img/c3m2-betterCommunication.webp";
+import moduleImage3 from "@/assets/img/c3m3-workVisible.webp";
 
 export function Course03Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

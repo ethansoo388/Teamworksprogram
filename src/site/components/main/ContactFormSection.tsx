@@ -1,4 +1,5 @@
 // Responsive Contact Form Section - refactored from Figma import
+import stickyNotesImage from '@/assets/img/sticky-notes-on-whiteboard-workshop.jpg';
 
 export function ContactFormSection() {
   return (
@@ -12,7 +13,7 @@ export function ContactFormSection() {
               <img 
                 alt="Team collaborating in workshop" 
                 className="w-full h-[280px] object-cover" 
-                src="https://images.unsplash.com/photo-1735639013995-086e648eaa38" 
+                src={stickyNotesImage} 
               />
             </div>
 

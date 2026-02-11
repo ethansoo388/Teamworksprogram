@@ -1,12 +1,18 @@
 import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import consultantImage from "@/assets/img/consultant-client-conversation-casual-setting.jpg";
+import creatingSuperTeamsImage from "@/assets/img/high-energy-team-standing-together-smiling.jpg";
+import designThinkingImage from "@/assets/img/team-working-on-ideas-sticky-notes-brainstorming.jpg";
+import criticalThinkingImage from "@/assets/img/applying-critical-thinking.webp";
+import leanProblemSolvingImage from "@/assets/img/team-working-on-ideas-group-discussion.jpg";
+import aiSkillsImage from "@/assets/img/designer-working-at-desk-with-drawing-tablet.jpg";
 
 const courses = [
   {
     id: "01",
     title: "Creating Super Teams",
     description: "Build aligned, accountable teams that take ownership and deliver results together.",
-    image: "https://i.postimg.cc/4xWR2vp9/hyper-productive-Asia-teams-discussing-and-standing-doing-activities-smiling-vibrant-colours-with.jpg",
+    image: creatingSuperTeamsImage,
     icon: Users,
     colors: {
       primary: "#6D28D9",
@@ -20,7 +26,7 @@ const courses = [
     id: "02",
     title: "Win Customers Through Design",
     description: "Design products and services customers actually choose — based on real customer insight.",
-    image: "https://i.postimg.cc/BvqbBQ5z/A-team-working-on-amazing-ideas-young-asia-smiling-happy.jpg",
+    image: designThinkingImage,
     icon: Palette,
     colors: {
       primary: "#EC4899",
@@ -34,7 +40,7 @@ const courses = [
     id: "03",
     title: "Critical Thinking for Better Work",
     description: "Improve prioritisation, decision-making, and delivery using simple visual workflows.",
-    image: "https://i.postimg.cc/hvbTt3KV/Untitled-design-(14).png",
+    image: criticalThinkingImage,
     icon: Zap,
     colors: {
       primary: "#F59E0B",
@@ -48,7 +54,7 @@ const courses = [
     id: "04",
     title: "Practical Lean Problem Solving",
     description: "Solve recurring work problems that cost time and money using practical Lean thinking.",
-    image: "https://i.postimg.cc/W11141nG/an-asian-team-looking-happy-solving-problems-young-vibrant-bright-with-white-background-boards.jpg",
+    image: leanProblemSolvingImage,
     icon: TrendingUp,
     colors: {
       primary: "#16A34A",
@@ -62,7 +68,7 @@ const courses = [
     id: "05",
     title: "AI Skills for YOUR Team",
     description: "Equip your team with practical AI skills to work faster and smarter — without technical complexity.",
-    image: "https://i.postimg.cc/XY4ykWkt/Untitled-design-(18).png",
+    image: aiSkillsImage,
     icon: Sparkles,
     colors: {
       primary: "#0EA5E9",
@@ -225,7 +231,7 @@ export function DiscoverCoursesV2() {
               {/* Right: Image */}
               <div className="relative h-[400px] lg:h-[600px]">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/dQWqxYFz/j-APANESE-consultant-WEARING-CASUAL-not-corporaty-clothing-sitting-talking-to-clients-happy-confiden.jpg"
+                  src={consultantImage}
                   alt="Free consultation"
                   className="w-full h-full object-cover"
                 />

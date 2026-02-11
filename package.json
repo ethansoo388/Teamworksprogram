@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-     "dev": "vite",
-  "build:vite": "vite build",
-  "build": "node scripts/export-static.mjs",
-  "verify:build": "node -e \"const fs=require('fs'); console.log('dist exists:', fs.existsSync('dist')); console.log('public exists:', fs.existsSync('public'));\""
-},
+    "dev": "vite",
+    "build": "node scripts/export-static.mjs",
+    "build:vite": "vite build",
+    "verify:build": "node -e \"const fs=require('fs'); console.log('dist exists:', fs.existsSync('dist')); console.log('public exists:', fs.existsSync('public'));\""
+  },
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
