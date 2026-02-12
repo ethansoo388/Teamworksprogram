@@ -285,6 +285,60 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
+  // Mobile hamburger menu (main site) - STATIC EXPORT FRIENDLY
+  // Markup is rendered as hidden by default; we toggle visibility via data attributes.
+  const mobileToggle = document.querySelector('[data-mobile-toggle]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]');
+  const mobileBackdrop = document.querySelector('[data-mobile-backdrop]');
+
+  const closeMobileMenu = () => {
+    if (!mobileMenu) return;
+    mobileMenu.classList.add('hidden');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const openMobileMenu = () => {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    // Prevent background scroll while menu is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  const toggleMobileMenu = () => {
+    if (!mobileMenu) return;
+    if (mobileMenu.classList.contains('hidden')) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
+  };
+
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMobileMenu();
+    });
+  }
+
+  if (mobileBackdrop) {
+    mobileBackdrop.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  }
+
+  if (mobileMenu) {
+    // Close when clicking any menu item marked with data-mobile-close
+    mobileMenu.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest('[data-mobile-close]')) {
+        closeMobileMenu();
+      }
+    });
+  }
+
   // Dropdown navigation functionality (main site) - HOVER BASED
   const dropdownContainers = document.querySelectorAll('[data-dropdown-container]');
   

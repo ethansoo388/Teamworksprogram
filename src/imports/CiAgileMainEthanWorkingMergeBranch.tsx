@@ -22,23 +22,23 @@ function SectionContainer({ children, className = "" }: SectionContainerProps) {
 
 function Paragraph() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
+    <div className="relative shrink-0 w-full" data-name="Paragraph">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-4 not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
     </div>
   );
 }
 
 function Heading1() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[40px] not-italic text-[#101828] text-[36px] text-center tracking-[-0.36px]">Transforming organizations across Asia Pacific</p>
+    <div className="relative shrink-0 w-full" data-name="Heading 2">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[40px] not-italic text-[#101828] text-2xl sm:text-3xl lg:text-[36px] text-center tracking-[-0.36px]">Transforming organizations across Asia Pacific</p>
     </div>
   );
 }
 
 function Container() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] h-[72px] items-start relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Container">
       <Paragraph />
       <Heading1 />
     </div>
@@ -313,8 +313,8 @@ function ClientLogos() {
 
 function Heading2() {
   return (
-    <div className="h-[48px] w-full" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Challenges We Solve</p>
+    <div className="w-full" data-name="Heading 2">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Challenges We Solve</p>
     </div>
   );
 }
@@ -653,7 +653,7 @@ function Container45() {
 
 function Container41() {
   return (
-    <div className="relative h-[600px] w-full lg:w-1/2 min-w-[400px]" data-name="Container">
+    <div className="relative h-[600px] w-full lg:w-1/2 min-w-0" data-name="Container">
       <Container42 />
       <Container43 />
       <Container44 />
@@ -675,8 +675,8 @@ function CtaSection() {
 
 function Heading11() {
   return (
-    <div className="h-[48px] w-full mb-12" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Programs</p>
+    <div className="w-full mb-12" data-name="Heading 2">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Programs</p>
     </div>
   );
 }
@@ -1082,7 +1082,7 @@ function Container47() {
 
 function ProgramsSection() {
   return (
-    <div id="programs-section" className="bg-[#f9fafb] content-stretch flex flex-col gap-20 min-h-[1313px] w-full py-16" data-name="ProgramsSection">
+    <div id="programs-section" className="bg-[#f9fafb] content-stretch flex flex-col gap-20 w-full py-16" data-name="ProgramsSection">
       <SectionContainer className="content-stretch flex flex-col gap-20 items-center">
         <div className="w-full">
           <Container46 />
@@ -1097,16 +1097,16 @@ function ProgramsSection() {
 
 function Paragraph15() {
   return (
-    <div className="h-[16px] w-full mb-8 mt-16" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Our Methodology</p>
+    <div className="w-full mb-8 mt-16" data-name="Paragraph">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-4 not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Our Methodology</p>
     </div>
   );
 }
 
 function Heading14() {
   return (
-    <div className="h-[60px] w-full mb-12" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[60px] not-italic text-[48px] text-center text-white tracking-[-0.48px]">How We Deliver Results</p>
+    <div className="w-full mb-12" data-name="Heading 2">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[60px] not-italic text-3xl sm:text-4xl lg:text-[48px] text-center text-white tracking-[-0.48px]">How We Deliver Results</p>
     </div>
   );
 }
@@ -1444,8 +1444,8 @@ function HowWeWorkSection() {
 
 function Heading19() {
   return (
-    <div className="h-[48px] w-full" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Industries We Transform</p>
+    <div className="w-full" data-name="Heading 2">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Industries We Transform</p>
     </div>
   );
 }
