@@ -1082,13 +1082,15 @@ function Container47() {
 
 function ProgramsSection() {
   return (
-    <div id="programs-section" className="bg-[#f9fafb] content-stretch flex flex-col gap-20 min-h-[1313px] items-center w-full py-16 px-8" data-name="ProgramsSection">
-      <div className="w-full max-w-7xl">
-        <Container46 />
-      </div>
-      <div className="w-full max-w-7xl">
-        <Container47 />
-      </div>
+    <div id="programs-section" className="bg-[#f9fafb] content-stretch flex flex-col gap-20 min-h-[1313px] w-full py-16" data-name="ProgramsSection">
+      <SectionContainer className="content-stretch flex flex-col gap-20 items-center">
+        <div className="w-full">
+          <Container46 />
+        </div>
+        <div className="w-full">
+          <Container47 />
+        </div>
+      </SectionContainer>
     </div>
   );
 }
