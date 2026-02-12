@@ -2646,7 +2646,7 @@ function Container169() {
 
 function Footer() {
   return (
-    <div className="bg-[#0f1419] content-stretch flex flex-col min-h-[425px] items-start w-full py-16 px-8 lg:px-24" data-name="Footer">
+    <div className="bg-[#0f1419] content-stretch flex flex-col min-h-[425px] items-start w-full py-16" data-name="Footer">
       <SectionContainer className="flex flex-col gap-8">
         <Container163 />
         <Container169 />
