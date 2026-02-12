@@ -62,7 +62,7 @@ export function MainSiteNavigation() {
 
   return (
     <nav className="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
-      <div className="flex h-full items-center justify-between max-w-[1341px] mx-auto px-16 lg:px-24">
+      <div className="flex h-full items-center justify-between max-w-7xl mx-auto px-16 lg:px-24">
         {/* Logo */}
         <div className="flex items-center h-[24px]">
           <a href="index.html" className="no-underline flex items-center h-full">

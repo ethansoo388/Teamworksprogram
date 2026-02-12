@@ -1,4 +1,5 @@
 import svgPaths from "./svg-0jlmd5mwk8";
+import { useState, type ReactNode } from "react";
 import agileTeamImage from "@/assets/img/main/team-working-together-sticky-note-on-wall.jpg";
 import businessPresentationImage from "@/assets/img/main/business-presentation-meeting-room.jpg";
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
@@ -7,6 +8,17 @@ import imageWithFallback6d from "@/assets/img/main/6d210643b84c08db9772a3b123a07
 import imageWithFallbackc6 from "@/assets/img/main/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
 import presenterImage from "@/assets/img/main/presenter-at-flip-chart-black-and-white.jpg";
 import ciAgileLogo from "@/assets/img/main/ci-agile-logo.png";
+
+type SectionContainerProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+function SectionContainer({ children, className = "" }: SectionContainerProps) {
+  const base = "w-full max-w-7xl mx-auto px-8 lg:px-16";
+  return <div className={`${base} ${className}`.trim()}>{children}</div>;
+}
+
 
 function Paragraph() {
   return (
@@ -291,10 +303,10 @@ function Container1() {
 function ClientLogos() {
   return (
     <div className="bg-[#f9fafb] w-full py-16" data-name="ClientLogos">
-      <div className="content-stretch flex flex-col gap-16 min-h-[272px] items-start w-full max-w-[1213px] mx-auto px-8">
+      <SectionContainer className="content-stretch flex flex-col gap-16 min-h-[272px] items-start">
         <Container />
         <Container1 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -438,10 +450,10 @@ function Container27() {
 
 function ProblemSection() {
   return (
-    <div className="bg-white content-stretch flex flex-col gap-20 min-h-[558px] items-start w-full max-w-[1341px] mx-auto pt-24 px-8 lg:px-16" data-name="ProblemSection">
+    <SectionContainer className="bg-white content-stretch flex flex-col gap-20 min-h-[558px] items-start pt-24">
       <Container26 />
       <Container27 />
-    </div>
+    </SectionContainer>
   );
 }
 
@@ -653,10 +665,10 @@ function Container41() {
 function CtaSection() {
   return (
     <div className="bg-[#f7f9f8] w-full min-h-[957.75px] flex flex-col items-center justify-center py-16" data-name="CTASection">
-      <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 flex flex-col lg:flex-row gap-8 items-center">
+      <SectionContainer className="flex flex-col lg:flex-row gap-8 items-center">
         <Container34 />
         <Container41 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -1071,10 +1083,10 @@ function Container47() {
 function ProgramsSection() {
   return (
     <div id="programs-section" className="bg-[#f9fafb] content-stretch flex flex-col gap-20 min-h-[1313px] items-center w-full py-16 px-8" data-name="ProgramsSection">
-      <div className="w-full max-w-[1213px]">
+      <div className="w-full max-w-7xl">
         <Container46 />
       </div>
-      <div className="w-full max-w-[1213px]">
+      <div className="w-full max-w-7xl">
         <Container47 />
       </div>
     </div>
@@ -1423,7 +1435,7 @@ function Container71() {
 function HowWeWorkSection() {
   return (
     <div className="bg-[#1a2837] w-full min-h-[843px] flex flex-col items-center justify-center py-16 px-[64px]" data-name="HowWeWorkSection">
-      <div className="w-full max-w-[1341px] flex flex-col gap-8">
+      <div className="w-full max-w-7xl flex flex-col gap-8">
         <Paragraph15 />
         <Heading14 />
         <Container71 />
@@ -1583,10 +1595,10 @@ function Container106() {
 function IndustriesSection() {
   return (
     <div className="bg-white w-full py-20" data-name="IndustriesSection">
-      <div className="content-stretch flex flex-col gap-12 items-start w-full max-w-[1341px] mx-auto px-8 lg:px-16">
+      <SectionContainer className="content-stretch flex flex-col gap-12 items-start">
         <Container105 />
         <Container106 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -1811,7 +1823,7 @@ function Container120() {
 
 function Container118() {
   return (
-    <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 py-20 lg:py-32" data-name="Container">
+    <SectionContainer className="py-20 lg:py-32">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
         {/* Left side - Heading and description */}
         <div className="flex flex-col gap-6 flex-1 max-w-[500px]">
@@ -1868,7 +1880,7 @@ function Container118() {
           </div>
         </div>
       </div>
-    </div>
+    </SectionContainer>
   );
 }
 
@@ -1992,7 +2004,7 @@ function Container141() {
 function Container140() {
   return (
     <div className="bg-white h-[501px] relative shrink-0 w-full" data-name="Container">
-      <div className="w-full max-w-[1341px] mx-auto px-8 lg:px-16 py-20">
+      <SectionContainer className="py-20">
         <h3 className="font-['Inter:Light',sans-serif] font-light leading-10 not-italic text-[#101828] text-4xl mb-12">
           What Our Clients Say
         </h3>
@@ -2027,7 +2039,7 @@ function Container140() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -2207,7 +2219,7 @@ function Container162() {
 function FinalCtaSection() {
   return (
     <div className="bg-[#101828] w-full flex items-center justify-center py-32 px-8" data-name="FinalCTASection">
-      <div className="w-full max-w-[1213px] flex flex-col items-center">
+      <div className="w-full max-w-7xl flex flex-col items-center">
         <Container150 />
         <Container152 />
         <Container162 />
@@ -2633,10 +2645,10 @@ function Container169() {
 function Footer() {
   return (
     <div className="bg-[#0f1419] content-stretch flex flex-col min-h-[425px] items-start w-full py-16 px-8 lg:px-24" data-name="Footer">
-      <div className="w-full max-w-[1341px] mx-auto flex flex-col gap-8">
+      <SectionContainer className="flex flex-col gap-8">
         <Container163 />
         <Container169 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -2849,10 +2861,10 @@ function Container183() {
 
 function Hero() {
   return (
-    <div className="bg-white grid grid-cols-1 lg:grid-cols-2 w-full max-w-[1341px] mx-auto pt-16 px-8 min-h-[864.75px]" data-name="Hero">
+    <SectionContainer className="bg-white grid grid-cols-1 lg:grid-cols-2 pt-16 min-h-[864.75px]">
       <Container171 />
       <Container183 />
-    </div>
+    </SectionContainer>
   );
 }
 
