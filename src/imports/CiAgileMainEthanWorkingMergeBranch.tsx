@@ -1436,12 +1436,12 @@ function Container71() {
 
 function HowWeWorkSection() {
   return (
-    <div className="bg-[#1a2837] w-full min-h-[843px] flex flex-col items-center justify-center py-16 px-[64px]" data-name="HowWeWorkSection">
-      <div className="w-full max-w-7xl flex flex-col gap-8">
+    <div className="bg-[#1a2837] w-full min-h-[843px] flex flex-col items-center justify-center py-16" data-name="HowWeWorkSection">
+      <SectionContainer className="flex flex-col gap-8">
         <Paragraph15 />
         <Heading14 />
         <Container71 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
@@ -2049,11 +2049,14 @@ function Container140() {
 function ProvenResultsSection() {
   return (
     <div className="bg-[#f9fafb] content-stretch flex flex-col items-start w-full" data-name="ProvenResultsSection">
+      <SectionContainer className="content-stretch flex flex-col items-start">
       <Container111 />
       <Container140 />
+      </SectionContainer>
     </div>
   );
 }
+
 
 function Container151() {
   return (
@@ -2220,12 +2223,12 @@ function Container162() {
 
 function FinalCtaSection() {
   return (
-    <div className="bg-[#101828] w-full flex items-center justify-center py-32 px-8" data-name="FinalCTASection">
-      <div className="w-full max-w-7xl flex flex-col items-center">
+    <div className="bg-[#101828] w-full flex items-center justify-center py-32" data-name="FinalCTASection">
+      <SectionContainer className="flex flex-col items-center">
         <Container150 />
         <Container152 />
         <Container162 />
-      </div>
+      </SectionContainer>
     </div>
   );
 }
