@@ -22,10 +22,8 @@ function SectionContainer({ children, className = "" }: SectionContainerProps) {
 
 function Paragraph() {
   return (
-    <div className="bg-[#f9fafb] w-full" data-name="Paragraph">
-      <SectionContainer className="content-stretch flex flex-col items-start">
-<p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
-      </SectionContainer>
+    <div className="h-[16px] relative shrink-0 w-full" data-name="Paragraph">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
     </div>
   );
 }
@@ -2052,11 +2050,9 @@ function ProvenResultsSection() {
   return (
     <div className="bg-[#f9fafb] w-full" data-name="ProvenResultsSection">
       <SectionContainer className="content-stretch flex flex-col items-start">
-<SectionContainer className="content-stretch flex flex-col items-start">
-      <Container111 />
+        <Container111 />
+      </SectionContainer>
       <Container140 />
-      </SectionContainer>
-      </SectionContainer>
     </div>
   );
 }
