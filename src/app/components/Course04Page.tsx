@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export function Course04Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   return (
     <div className="min-h-screen bg-white">
@@ -163,6 +164,11 @@ export function Course04Page() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             {/* Section Header */}
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  THE CHALLENGE
+                </span>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                 Small Operational Issues Are Quietly<br />
                 <span className="text-[#16A34A]">Draining Your Business.</span>
@@ -221,6 +227,11 @@ export function Course04Page() {
         <section className="bg-white py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  What Changes After This Workshop
+                </span>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                 The Transformation You'll Experience
               </h2>
@@ -286,6 +297,11 @@ export function Course04Page() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             {/* Section Header */}
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  HOW WE ACHIEVE THIS
+                </span>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                 A Structured, Practical<br />
                 <span className="text-[#16A34A]">Problem-Solving Framework</span>
@@ -548,6 +564,11 @@ export function Course04Page() {
         <section className="bg-gray-50 py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  Target Audience
+                </span>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                 Is This For You?
               </h2>
@@ -683,85 +704,237 @@ export function Course04Page() {
         {/* Testimonials Section */}
         <section id="testimonials" className="bg-white py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+            {/* Section Header */}
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  Success Stories
+                </span>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
-                Excellence Stories
+                What Our Clients Say
               </h2>
-              <p className="text-lg text-gray-600">
-                See how frontline teams transformed their problem-solving approach
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
+                Real results from teams who've transformed their problem-solving approach
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            {/* Testimonials Grid */}
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
               {/* Testimonial 1 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#16A34A] fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
+              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+                {/* Quote Icon */}
+                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  "This course completely transformed how our team handles daily challenges. We went from escalating every issue to confidently solving 80% of problems on the spot. Our customer satisfaction scores jumped 35% in just 3 months."
-                </p>
+
+                {/* Quote Text */}
+                <div className="mt-6 mb-6">
+                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
+                    "This course transformed how our customer service team handles issues. Instead of escalating everything, they now solve problems independently and confidently."
+                  </p>
+                </div>
+
+                {/* Author Info */}
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#16A34A" }}>
-                    <span className="text-white font-semibold text-sm">SC</span>
-                  </div>
                   <div>
-                    <div className="font-bold text-gray-900">Sarah Chen</div>
-                    <div className="text-sm text-gray-600">Customer Service Manager</div>
-                    <div className="text-sm text-[#16A34A] font-semibold">KLIA Ground Services</div>
+                    <h4 className="text-gray-900 font-medium text-base">
+                      Siti Nurhaliza
+                    </h4>
+                    <p className="text-gray-600 text-sm font-light">
+                      Head of Customer Experience
+                    </p>
+                    <p className="text-[#16A34A] text-sm font-medium">
+                      Technology
+                    </p>
                   </div>
                 </div>
+
+                {/* Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
               </div>
 
               {/* Testimonial 2 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#16A34A] fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
+              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+                {/* Quote Icon */}
+                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  "The A3 mindset module was a game-changer. My tellers now present solution proposals that are clear, data-driven, and actionable. Management approval time has been cut in half because the thinking is already done."
-                </p>
+
+                {/* Quote Text */}
+                <div className="mt-6 mb-6">
+                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
+                    "The practical tools and frameworks gave our operations team a systematic approach to tackle recurring issues. We've seen a 40% reduction in problem resolution time."
+                  </p>
+                </div>
+
+                {/* Author Info */}
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#16A34A" }}>
-                    <span className="text-white font-semibold text-sm">MT</span>
-                  </div>
                   <div>
-                    <div className="font-bold text-gray-900">Marcus Tan</div>
-                    <div className="text-sm text-gray-600">Branch Operations Lead</div>
-                    <div className="text-sm text-[#16A34A] font-semibold">Maybank</div>
+                    <h4 className="text-gray-900 font-medium text-base">
+                      Michael Chen
+                    </h4>
+                    <p className="text-gray-600 text-sm font-light">
+                      Operations Manager
+                    </p>
+                    <p className="text-[#16A34A] text-sm font-medium">
+                      Retail
+                    </p>
                   </div>
                 </div>
+
+                {/* Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
               </div>
 
               {/* Testimonial 3 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#16A34A] fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
+              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+                {/* Quote Icon */}
+                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  "Finally, a Lean course that speaks our language! No complicated formulas—just practical tools we could use immediately. Our patient wait times dropped by 25% and staff morale is at an all-time high."
-                </p>
+
+                {/* Quote Text */}
+                <div className="mt-6 mb-6">
+                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
+                    "Our frontline staff now feel empowered to make decisions and improve processes. This mindset has become part of our culture, not just a training program."
+                  </p>
+                </div>
+
+                {/* Author Info */}
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#16A34A" }}>
-                    <span className="text-white font-semibold text-sm">PN</span>
+                  <div>
+                    <h4 className="text-gray-900 font-medium text-base">
+                      Priya Sharma
+                    </h4>
+                    <p className="text-gray-600 text-sm font-light">
+                      Learning & Development Manager
+                    </p>
+                    <p className="text-[#16A34A] text-sm font-medium">
+                      Hospitality
+                    </p>
+                  </div>
+                </div>
+
+                {/* Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section - An Investment in Operational Efficiency */}
+        <section id="pricing" className="bg-white py-20 lg:py-32">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  INVESTMENT
+                </span>
+              </div>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
+                An Investment in Operational Efficiency
+              </h2>
+              <p className="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto font-light">
+                Most teams recover this investment by eliminating just ONE recurring operational mistake.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              {/* Left Column - Pricing & Inclusions */}
+              <div>
+                <p className="text-gray-500 font-light text-sm mb-4">Per 2-day course</p>
+
+                {/* Price */}
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-3 mb-3">
+                    <span className="text-6xl lg:text-7xl font-light text-gray-900">
+                      RM350
+                    </span>
+                    <span className="text-lg lg:text-xl text-gray-500 font-light">per person/day</span>
+                  </div>
+                  <p className="text-gray-700 font-light text-sm lg:text-base mb-8">
+                    Up to 30 participants per session
+                  </p>
+                </div>
+
+                {/* What's Included */}
+                <div className="space-y-4 mb-12">
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">2-day intensive workshop</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">All course materials & templates</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">Expert instructor (10+ years exp)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">Certificate of completion</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">Post-workshop support & community</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-gray-900 font-light">Pre-course alignment session for your team</span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="text-center">
+                  <a href="bookConsultation.html" className="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">
+                    Plan This Course for Your Team
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <p className="text-sm text-gray-500 mt-4 font-light">
+                    A short discussion to understand your goals and team needs.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - What You'll Master */}
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 lg:mb-10 tracking-tight">
+                  What You'll Master
+                </h2>
+
+                <div className="space-y-8 mb-10">
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">See Problems Clearly</h4>
+                    <p className="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Learn to separate symptoms from root causes using simple visual tools that work on the shop floor.</p>
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">Dr. Priya Nair</div>
-                    <div className="text-sm text-gray-600">Clinic Administrator</div>
-                    <div className="text-sm text-[#16A34A] font-semibold">HealthFirst Clinics</div>
+                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Analyze Systematically</h4>
+                    <p className="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Apply proven 5-Why and Fishbone techniques in real operational scenarios without complex theory.</p>
                   </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Design Practical Solutions</h4>
+                    <p className="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Develop sustainable countermeasures your team can actually implement and maintain long-term.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Make Solutions Stick</h4>
+                    <p className="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Build habits and systems to ensure solutions work and problems don't come back.</p>
+                  </div>
+                </div>
+
+                {/* Real Impact Box */}
+                <div className="bg-red-50 border border-red-100 p-5 lg:p-6 rounded-lg">
+                  <h4 className="font-medium text-gray-900 mb-3 flex items-center gap-2">
+                    <span className="text-red-500">&#128161;</span>
+                    Real Impact
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed font-light text-sm lg:text-base">
+                    Teams report 60% faster problem resolution and significantly fewer recurring issues within 3 months of training.
+                  </p>
                 </div>
               </div>
             </div>
@@ -772,6 +945,11 @@ export function Course04Page() {
         <section id="faq" className="bg-gray-50 py-20 lg:py-32">
           <div className="max-w-[900px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
+                  FAQ
+                </span>
+              </div>
               <h2 className="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Common Questions</h2>
               <p className="text-base text-gray-600">
                 Everything you need to know about this course
@@ -779,194 +957,92 @@ export function Course04Page() {
             </div>
 
             <div className="space-y-4">
-              <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-                <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  <span className="flex-1">Can this be customised to our industry?</span>
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                  Yes. Exercises are tailored to your real operational challenges.
-                </p>
-              </details>
-
-              <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-                <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  <span className="flex-1">Is this suitable for teams with no Lean background?</span>
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                  Absolutely. Tools are simple and practical.
-                </p>
-              </details>
-
-              <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-                <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  <span className="flex-1">Can we use our real workplace problems?</span>
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                  Yes. Teams are encouraged to bring actual cases.
-                </p>
-              </details>
-
-              <details className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-                <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-                  <span className="flex-1">Is this suitable for service industries?</span>
-                  <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                  Yes — retail, logistics, banking, healthcare, F&B, and more.
-                </p>
-              </details>
+              {[
+                {
+                  question: "Can this be customised to our industry?",
+                  answer: "Yes. Exercises are tailored to your real operational challenges."
+                },
+                {
+                  question: "Is this suitable for teams with no Lean background?",
+                  answer: "Absolutely. Tools are simple and practical."
+                },
+                {
+                  question: "Can we use our real workplace problems?",
+                  answer: "Yes. Teams are encouraged to bring actual cases."
+                },
+                {
+                  question: "Is this suitable for service industries?",
+                  answer: "Yes — retail, logistics, banking, healthcare, F&B, and more."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className={`bg-white border-2 rounded-xl p-6 transition-colors ${openFaqIndex === index ? "border-[#22C55E]" : "border-gray-200 hover:border-[#22C55E]"}`}
+                >
+                  <button
+                    className="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left"
+                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  >
+                    <span className="flex-1">{faq.question}</span>
+                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4 ${openFaqIndex === index ? "rotate-180" : ""}`} />
+                  </button>
+                  {openFaqIndex === index && (
+                    <p className="mt-4 text-gray-700 text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Pricing CTA Section */}
-        <section className="py-20 lg:py-32" style={{ backgroundColor: "#16A34A" }}>
-          <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-            {/* Main Heading */}
-            <div className="text-center text-white mb-4">
-              <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                Build a Team That Solves Problems — Not Escalates Them.
-              </h2>
+        {/* Final CTA Section */}
+        <section className="py-20 lg:py-24 bg-gradient-to-b from-white to-[#EAF6EF]">
+          <div className="max-w-[900px] mx-auto px-6 lg:px-12 text-center">
+            {/* Reassurance Bullets */}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
+              <div className="flex items-center gap-2 text-gray-600 text-sm">
+                <Check className="w-4 h-4 text-[#16A34A]" />
+                <span>Delivered in-house at your location</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600 text-sm">
+                <Check className="w-4 h-4 text-[#16A34A]" />
+                <span>Practical, hands-on format</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600 text-sm">
+                <Check className="w-4 h-4 text-[#16A34A]" />
+                <span>Immediate workplace application</span>
+              </div>
             </div>
 
-            {/* Subheading */}
-            <p className="text-center text-white text-lg mb-12 max-w-3xl mx-auto italic">
-              Stop daily firefighting and start systematic operational improvement. Let's design a private workshop tailored to your team.
+            {/* Bold Headline */}
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+              Build a Team That Solves Problems —{" "}
+              <span className="text-[#16A34A]">Not Escalates Them.</span>
+            </h2>
+
+            {/* Subheading Lines */}
+            <p className="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">
+              Stop daily firefighting and start systematic operational improvement.
+            </p>
+            <p className="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">
+              Let's design a private workshop tailored to your team.
             </p>
 
-            {/* Pricing Card */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                {/* Left Column - Pricing */}
-                <div>
-                  <div className="text-[#16A34A] text-sm font-medium mb-2">Team Rate</div>
-                  <div className="text-[#16A34A] text-5xl lg:text-6xl font-bold mb-2">RM350</div>
-                  <div className="text-gray-600 text-base mb-4">Per person per day</div>
-                  <div className="text-gray-500 text-sm mb-8">Up to 30 participants per session</div>
+            {/* CTA Button */}
+            <a
+              href="bookConsultation.html"
+              className="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group"
+            >
+              Request Private Training Proposal
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
 
-                  {/* Icons List */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-[#16A34A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">2-day intensive workshop</span>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-[#16A34A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Max 30 participants</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Column - What's Included */}
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">2-day practical, hands-on workshop</span>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">All course materials & templates</span>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Expert instructor (10+ years exp)</span>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Certificate of completion</span>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Post-workshop support & community</span>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "#16A34A" }}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Pre-course alignment session for your team</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="mt-10">
-                <a
-                  href="bookConsultation.html"
-                  className="block w-full border-2 border-[#16A34A] text-[#16A34A] text-center px-8 py-4 rounded-xl hover:bg-green-50 transition-all font-semibold text-lg flex items-center justify-center gap-2 group"
-                >
-                  Book This Course for Your Team
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </div>
-
-            {/* Bottom Badges */}
-            <div className="flex items-center justify-center gap-6 mt-8">
-              <div className="flex items-center gap-2 text-white text-sm">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"/>
-                </svg>
-                Secure booking
-              </div>
-              <div className="text-white text-sm">·</div>
-              <div className="flex items-center gap-2 text-white text-sm">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                </svg>
-                Limited availability
-              </div>
-            </div>
+            {/* Supporting Micro Text */}
+            <p className="text-sm text-gray-500 mt-4 font-light">
+              A short discussion to understand your goals and team needs. No commitment required.
+            </p>
           </div>
         </section>
       </main>
