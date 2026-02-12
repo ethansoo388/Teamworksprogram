@@ -61,8 +61,8 @@ const courses = [
       light: "#DCFCE7",
       dark: "#15803D"
     },
-    buttonText: "Book this course",
-    buttonLink: "bookConsultation.html"
+    buttonText: "Learn more",
+    buttonLink: "practical-lean-problem-solving.html"
   },
   {
     id: "05",

@@ -962,6 +962,14 @@ async function generateHTMLFiles() {
         siteType: 'teamworks',
       },
       {
+        path: '/src/site/pages/teamworks/PracticalLeanPage.tsx',
+        componentName: 'PracticalLeanPage',
+        filename: 'teamworks/practical-lean-problem-solving.html',
+        title: 'Practical Lean Problem Solving - TeamWorks Course 04',
+        description: 'Empower your frontline to solve problems using practical Lean thinking. Reduce recurring issues, improve customer satisfaction, and build a problem-solving culture.',
+        siteType: 'teamworks',
+      },
+      {
         path: '/src/site/pages/teamworks/BookConsultationPage.tsx',
         componentName: 'BookConsultationPage',
         filename: 'teamworks/bookConsultation.html',
