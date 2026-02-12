@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import fs from 'fs'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
@@ -52,4 +52,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-})
+  build: {
+    // Minify only for production builds (npm run build:prod)
+    minify: mode === 'production',
+  },
+}))

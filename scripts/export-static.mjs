@@ -11,6 +11,65 @@ const rootDir = path.resolve(__dirname, '..');
 const publicDir = path.join(rootDir, 'public');
 const distDir = path.join(rootDir, 'dist');
 
+// Pretty-print HTML with indentation ONLY (no text reflow).
+// This avoids breaking layouts that rely on whitespace-pre/whitespace-pre-wrap.
+function prettyIndentHtml(html) {
+  const voidTags = new Set([
+    'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'
+  ]);
+
+  // Only add newlines BETWEEN tags. This does not touch text nodes.
+  const withNewlines = html.replace(/>\s*</g, '>\n<');
+  const lines = withNewlines.split('\n');
+
+  let indent = 0;
+  const out = [];
+
+  for (const line of lines) {
+    const t = line.trim();
+
+    // Decrease indent before closing tags
+    if (t.startsWith('</')) {
+      indent = Math.max(indent - 1, 0);
+    }
+
+    out.push('  '.repeat(indent) + t);
+
+    // Increase indent after opening tags that aren't self/void/inline-closed
+    const m = t.match(/^<([a-zA-Z0-9-]+)(\s|>|\/>)/);
+    if (m) {
+      const tag = m[1].toLowerCase();
+      const isClosing = t.startsWith('</');
+      const isDecl = t.startsWith('<!') || t.startsWith('<?');
+      const isSelf = t.endsWith('/>') || voidTags.has(tag);
+      const inlineClose = !isClosing && t.includes(`</${tag}>`);
+
+      if (!isClosing && !isDecl && !isSelf && !inlineClose) {
+        indent += 1;
+      }
+    }
+  }
+
+  return out.join('\n') + '\n';
+}
+
+function prettifyHtmlFile(filePath) {
+  const html = fs.readFileSync(filePath, 'utf8');
+  const formatted = prettyIndentHtml(html);
+  fs.writeFileSync(filePath, formatted);
+}
+
+function prettifyAllHtmlInDir(dir) {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) prettifyAllHtmlInDir(fullPath);
+    else if (entry.isFile() && fullPath.endsWith('.html')) prettifyHtmlFile(fullPath);
+  }
+}
+
+
 // Helper to create HTML shell
 function createHTMLShell(title, bodyHTML, options = {}) {
   const {
@@ -971,6 +1030,14 @@ async function exportStaticSite() {
     // Step 6: Generate HTML files from React components using Vite SSR
     await generateHTMLFiles();
     console.log('');
+
+    // Step 7: Make HTML human-readable by default (indentation only; no text reflow)
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('🧼 Formatting HTML (indentation only)...');
+      prettifyAllHtmlInDir(publicDir);
+      console.log('  ✓ HTML formatted');
+      console.log('');
+    }
     
     console.log('✨ Static export complete!');
     console.log(`📁 Output directory: ${publicDir}`);
