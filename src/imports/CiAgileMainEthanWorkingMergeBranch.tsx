@@ -2829,7 +2829,7 @@ function Container173() {
 
 function Container171() {
   return (
-    <div className="flex flex-col items-start justify-center p-8 lg:p-16" data-name="Container">
+    <div className="flex flex-col items-start justify-center py-8 lg:py-16" data-name="Container">
       <Heading />
       <Paragraph31 />
       <Container172 />
