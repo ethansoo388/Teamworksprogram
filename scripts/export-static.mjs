@@ -803,16 +803,20 @@ function fixImagePaths(html, isTeamworksPage) {
   // Replace /src/assets/img/ with the correct relative path
   const srcAssetsPattern = /src="\/src\/assets\/img\//g;
   const assetsPattern = /src="assets\/img\//g;
+  // Some Vite builds emit absolute URLs like /assets/img/...
+  const absAssetsPattern = /src="\/assets\/img\//g;
   
   if (isTeamworksPage) {
     // TeamWorks pages are in teamworks/ subdirectory, need ../assets/img/
     return html
       .replace(srcAssetsPattern, 'src="../assets/img/')
+      .replace(absAssetsPattern, 'src="../assets/img/')
       .replace(assetsPattern, 'src="../assets/img/');
   } else {
     // Main site pages are in root, need assets/img/
     return html
       .replace(srcAssetsPattern, 'src="assets/img/')
+      .replace(absAssetsPattern, 'src="assets/img/')
       .replace(assetsPattern, 'src="assets/img/');
   }
 }

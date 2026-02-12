@@ -1,16 +1,16 @@
 import svgPaths from "./svg-qtx8o74vey";
-import imgImageWithFallback from "@/assets/img/f44f1eee345558c40d51a3aa3e2b9fceb7432cdb.png";
-import imgImageWithFallback1 from "@/assets/img/e663da3af181c9fc2508e76fec0498f833ff10f0.png";
-import imgImageEthanSoo from "@/assets/img/b8d869daa88d48a6817babfc3c89c4ce9638444a.png";
-import imgImageWithFallback2 from "@/assets/img/40b1d8b8c250769ef13971a417b0e95fe4fbfc1f.png";
-import imgNavigation from "@/assets/img/fd7a81c1c75169f5c53cda037245ef314f926517.png";
-import businessMeetingImage from "@/assets/img/one-on-one-office-discussion-with-laptop.jpg";
-import ciAgileConsultingImage from "@/assets/img/ci-agile-consulting-approach-methodology-overview.png";
-import ciAgileLogoImage from "@/assets/img/ci-agile-logo.png";
-import enterpriseTeamImage from "@/assets/img/enterprise-team-delivery-systems-execution-frameworks.png";
-import ethanSooImage from "@/assets/img/Ethan-picture.jpg";
-import stickyNotesWideImage from "@/assets/img/sticky-notes-on-whiteboard-workshop-wide.jpg";
-import teamCollabImage from "@/assets/img/team-collaboration-problem-solving-workshop.png";
+import imgImageWithFallback from "@/assets/img/jess/f44f1eee345558c40d51a3aa3e2b9fceb7432cdb.png";
+import imgImageWithFallback1 from "@/assets/img/jess/e663da3af181c9fc2508e76fec0498f833ff10f0.png";
+import imgImageEthanSoo from "@/assets/img/jess/b8d869daa88d48a6817babfc3c89c4ce9638444a.png";
+import imgImageWithFallback2 from "@/assets/img/jess/40b1d8b8c250769ef13971a417b0e95fe4fbfc1f.png";
+import imgNavigation from "@/assets/img/jess/fd7a81c1c75169f5c53cda037245ef314f926517.png";
+import businessMeetingImage from "@/assets/img/jess/one-on-one-office-discussion-with-laptop.jpg";
+import ciAgileConsultingImage from "@/assets/img/jess/ci-agile-consulting-approach-methodology-overview.png";
+import ciAgileLogoImage from "@/assets/img/jess/ci-agile-logo.png";
+import enterpriseTeamImage from "@/assets/img/jess/enterprise-team-delivery-systems-execution-frameworks.png";
+import ethanSooImage from "@/assets/img/jess/Ethan-picture.jpg";
+import stickyNotesWideImage from "@/assets/img/jess/sticky-notes-on-whiteboard-workshop-wide.jpg";
+import teamCollabImage from "@/assets/img/jess/team-collaboration-problem-solving-workshop.png";
 
 function Container1() {
   return <div className="absolute bg-[#06c] h-[4px] left-0 top-[32px] w-[48px]" data-name="Container" />;

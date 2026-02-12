@@ -1,12 +1,12 @@
 import svgPaths from "./svg-0jlmd5mwk8";
-import agileTeamImage from "@/assets/img/team-working-together-sticky-note-on-wall.jpg";
-import businessPresentationImage from "@/assets/img/business-presentation-meeting-room.jpg";
-import ciAgileLogoSmall from "@/assets/img/eb7ac0eb48b2cd72fb05c7e064977b3e1f292dd7.png";
-import imageWithFallback48 from "@/assets/img/48aa90649a4e56f3a94eb6f4c6e253b63dfc1bc1.png";
-import imageWithFallback6d from "@/assets/img/6d210643b84c08db9772a3b123a072f99723cbe2.png";
-import imageWithFallbackc6 from "@/assets/img/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
-import presenterImage from "@/assets/img/presenter-at-flip-chart-black-and-white.jpg";
-import ciAgileLogo from "@/assets/img/ci-agile-logo.png";
+import agileTeamImage from "@/assets/img/jess/team-working-together-sticky-note-on-wall.jpg";
+import businessPresentationImage from "@/assets/img/jess/business-presentation-meeting-room.jpg";
+import ciAgileLogoSmall from "@/assets/img/jess/eb7ac0eb48b2cd72fb05c7e064977b3e1f292dd7.png";
+import imageWithFallback48 from "@/assets/img/jess/48aa90649a4e56f3a94eb6f4c6e253b63dfc1bc1.png";
+import imageWithFallback6d from "@/assets/img/jess/6d210643b84c08db9772a3b123a072f99723cbe2.png";
+import imageWithFallbackc6 from "@/assets/img/jess/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
+import presenterImage from "@/assets/img/jess/presenter-at-flip-chart-black-and-white.jpg";
+import ciAgileLogo from "@/assets/img/jess/ci-agile-logo.png";
 
 function Paragraph() {
   return (

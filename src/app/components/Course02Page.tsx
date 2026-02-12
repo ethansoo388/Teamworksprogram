@@ -1,11 +1,11 @@
 import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import moduleGraphicImage from "@/assets/img/designer-working-at-desk-with-drawing-tablet.jpg";
-import productDesignImage from "@/assets/img/product-design-customer-experience-creative-work.jpg";
-import professionalWomanImage from "@/assets/img/professional-woman-thinking-with-pen.jpg";
-import teamBuildingImage from "@/assets/img/team-building-collaboration-outdoors.jpg";
-import teamIdeasBrainstormImage from "@/assets/img/team-working-on-ideas-sticky-notes-brainstorming.jpg";
-import teamIdeasGroupImage from "@/assets/img/team-working-on-ideas-group-discussion.jpg";
+import moduleGraphicImage from "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg";
+import productDesignImage from "@/assets/img/teamworks/product-design-customer-experience-creative-work.jpg";
+import professionalWomanImage from "@/assets/img/teamworks/professional-woman-thinking-with-pen.jpg";
+import teamBuildingImage from "@/assets/img/teamworks/team-building-collaboration-outdoors.jpg";
+import teamIdeasBrainstormImage from "@/assets/img/teamworks/team-working-on-ideas-sticky-notes-brainstorming.jpg";
+import teamIdeasGroupImage from "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg";
 
 const testimonials = [
   {

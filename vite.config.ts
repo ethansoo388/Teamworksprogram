@@ -42,7 +42,7 @@ export default defineConfig({
         }
       }
     },
-    // NOTE: We intentionally do NOT support `figma:asset/*` anymore.
+    // NOTE: We intentionally do NOT support Figma Make asset imports anymore.
     // All images should be imported from `@/assets/img/*` so they can be copied to
     // `public/assets/img` during the static export.
   ],

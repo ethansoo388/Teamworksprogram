@@ -1,6 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-import handsClayImage from "@/assets/img/hands-examining-clay-pot.jpg";
+import handsClayImage from "@/assets/img/teamworks/hands-examining-clay-pot.jpg";
 
 const testimonials = [
   {

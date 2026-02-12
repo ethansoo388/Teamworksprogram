@@ -1,4 +1,4 @@
-import groupLeaningImage from '@/assets/img/group-working-together-leaning-on-table.jpg';
+import groupLeaningImage from '@/assets/img/jess/group-working-together-leaning-on-table.jpg';
 
 export function AboutHero() {
   return (

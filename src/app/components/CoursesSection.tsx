@@ -11,7 +11,7 @@ const courses = [
     icon: Users,
     color: "from-blue-600 to-cyan-600",
     bgColor: "bg-blue-50",
-    image: "https://images.unsplash.com/photo-1739298061740-5ed03045b280?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzY4MjEyMTExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg"
   },
   {
     number: "02",
@@ -22,7 +22,7 @@ const courses = [
     icon: Palette,
     color: "from-purple-600 to-pink-600",
     bgColor: "bg-purple-50",
-    image: "https://images.unsplash.com/photo-1565351167686-7a19c5114965?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBicmFpbnN0b3JtaW5nfGVufDF8fHx8MTc2ODI2ODE5NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg"
   },
   {
     number: "03",
@@ -33,7 +33,7 @@ const courses = [
     icon: Zap,
     color: "from-orange-600 to-red-600",
     bgColor: "bg-orange-50",
-    image: "https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzY4MjIzNTI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "@/assets/img/teamworks/one-on-one-office-discussion-with-laptop.jpg"
   },
   {
     number: "04",
@@ -44,7 +44,7 @@ const courses = [
     icon: TrendingUp,
     color: "from-green-600 to-emerald-600",
     bgColor: "bg-green-50",
-    image: "https://images.unsplash.com/photo-1573496130103-a442a3754d0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwYnVzaW5lc3MlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc2ODI4MjY5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "@/assets/img/teamworks/business-presentation-meeting-room.jpg"
   },
   {
     number: "05",
@@ -55,7 +55,7 @@ const courses = [
     icon: Sparkles,
     color: "from-indigo-600 to-blue-600",
     bgColor: "bg-indigo-50",
-    image: "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxlYWRlcnNoaXB8ZW58MXx8fHwxNzY4MjE0MjEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "@/assets/img/teamworks/professional-woman-thinking-with-pen.jpg"
   }
 ];
 

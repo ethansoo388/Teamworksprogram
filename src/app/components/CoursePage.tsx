@@ -1,7 +1,7 @@
 import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import highEnergyTeamImage from "@/assets/img/high-energy-team-standing-together-smiling.jpg";
-import successfulAgileImage from "@/assets/img/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg";
+import highEnergyTeamImage from "@/assets/img/teamworks/high-energy-team-standing-together-smiling.jpg";
+import successfulAgileImage from "@/assets/img/teamworks/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg";
 
 const faqItems = [
   {

@@ -1,11 +1,11 @@
 import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
-import consultantImage from "@/assets/img/consultant-client-conversation-casual-setting.jpg";
-import creatingSuperTeamsImage from "@/assets/img/high-energy-team-standing-together-smiling.jpg";
-import designThinkingImage from "@/assets/img/team-working-on-ideas-sticky-notes-brainstorming.jpg";
-import criticalThinkingImage from "@/assets/img/applying-critical-thinking.webp";
-import leanProblemSolvingImage from "@/assets/img/team-working-on-ideas-group-discussion.jpg";
-import aiSkillsImage from "@/assets/img/designer-working-at-desk-with-drawing-tablet.jpg";
+import consultantImage from "@/assets/img/teamworks/consultant-client-conversation-casual-setting.jpg";
+import creatingSuperTeamsImage from "@/assets/img/teamworks/high-energy-team-standing-together-smiling.jpg";
+import designThinkingImage from "@/assets/img/teamworks/team-working-on-ideas-sticky-notes-brainstorming.jpg";
+import criticalThinkingImage from "@/assets/img/teamworks/applying-critical-thinking.webp";
+import leanProblemSolvingImage from "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg";
+import aiSkillsImage from "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg";
 
 const courses = [
   {
