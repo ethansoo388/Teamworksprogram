@@ -1143,7 +1143,6 @@ function Heading15() {
   return (
     <div className="flex items-center w-full" data-name="Heading 3">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-7 not-italic text-lg text-white">Diagnose the Real Problem</p>
-      <Text10 />
     </div>
   );
 }
@@ -1250,7 +1249,6 @@ function Heading16() {
   return (
     <div className="flex items-center w-full" data-name="Heading 3">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-7 not-italic text-lg text-white">Design the Right System</p>
-      <Text11 />
     </div>
   );
 }
@@ -1320,7 +1318,6 @@ function Heading17() {
   return (
     <div className="flex items-center w-full" data-name="Heading 3">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-7 not-italic text-lg text-white">{`Enable Teams & Execution`}</p>
-      <Text12 />
     </div>
   );
 }
@@ -1390,7 +1387,6 @@ function Heading18() {
   return (
     <div className="flex items-center w-full" data-name="Heading 3">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-7 not-italic text-lg text-white">Deliver Measurable Results</p>
-      <Text13 />
     </div>
   );
 }
@@ -1416,7 +1412,7 @@ function Container104() {
 
 function Container98() {
   return (
-    <div className="bg-[#0d1f2d] col-[4] content-stretch css-vsca90 flex flex-col items-start overflow-clip relative row-[1] self-stretch shadow-[0px_0px_0px_1px_rgba(0,102,204,0.3)] shrink-0" data-name="Container">
+    <div className="bg-[#0d1f2d] col-[4] content-stretch css-vsca90 flex flex-col items-start overflow-clip relative row-[1] self-stretch shrink-0" data-name="Container">
       <Container99 />
       <Container104 />
     </div>
@@ -1665,7 +1661,7 @@ function Container119() {
 function Container123() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
-      <p className="bg-clip-text font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[rgba(0,0,0,0)]" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 136, 255) 100%)", WebkitTextFillColor: "transparent" }}>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff]">
         40%
       </p>
     </div>
@@ -1708,7 +1704,7 @@ function Container121() {
 function Container129() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
-      <p className="bg-clip-text font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[rgba(0,0,0,0)]" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 136, 255) 100%)", WebkitTextFillColor: "transparent" }}>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff]">
         60%
       </p>
     </div>
@@ -1747,7 +1743,7 @@ function Container127() {
 function Container134() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
-      <p className="bg-clip-text font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[rgba(0,0,0,0)] max-w-[255px]" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 136, 255) 100%)", WebkitTextFillColor: "transparent" }}>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff] max-w-[255px]">
         3 Months
       </p>
     </div>
@@ -1786,7 +1782,7 @@ function Container132() {
 function Container138() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
-      <p className="bg-clip-text font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[rgba(0,0,0,0)]" style={{ backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 136, 255) 100%)", WebkitTextFillColor: "transparent" }}>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff]">
         98%
       </p>
     </div>
@@ -1841,7 +1837,7 @@ function Container118() {
         <div className="grid grid-cols-2 gap-8 lg:gap-12 flex-1 max-w-[600px]">
           {/* Stat 1 - 40% */}
           <div className="flex flex-col gap-3">
-            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight text-[#0088ff]">
               40%
             </div>
             <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
@@ -1851,7 +1847,7 @@ function Container118() {
 
           {/* Stat 2 - 60% */}
           <div className="flex flex-col gap-3">
-            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight text-[#0088ff]">
               60%
             </div>
             <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
@@ -1861,7 +1857,7 @@ function Container118() {
 
           {/* Stat 3 - 3 Months */}
           <div className="flex flex-col gap-3">
-            <div className="font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+            <div className="font-['Inter:Light',sans-serif] font-light leading-tight text-[#0088ff]">
               <span className="text-5xl lg:text-6xl">3</span>
               <br />
               <span className="text-[24px] lg:text-[30px]">Months</span>
@@ -1873,7 +1869,7 @@ function Container118() {
 
           {/* Stat 4 - 98% */}
           <div className="flex flex-col gap-3">
-            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight bg-gradient-to-b from-white to-[#0088ff] bg-clip-text text-transparent">
+            <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight text-[#0088ff]">
               98%
             </div>
             <div className="font-['Inter:Light',sans-serif] font-light leading-[20px] text-[#99a1af] text-[14px] tracking-[0.35px] uppercase">
