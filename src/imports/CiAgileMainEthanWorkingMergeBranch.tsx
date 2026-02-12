@@ -2860,7 +2860,7 @@ function Container183() {
 
 function Hero() {
   return (
-    <SectionContainer className="bg-white grid grid-cols-1 lg:grid-cols-2 pt-16 min-h-[864.75px]">
+    <SectionContainer className="bg-white grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12 pt-16 min-h-[864.75px]">
       <Container171 />
       <Container183 />
     </SectionContainer>

@@ -3,10 +3,20 @@
 // Dropdown interactions use data attributes for static HTML compatibility
 // Fully responsive flexbox layout
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ciAgileLogo from '@/assets/img/main/ci-agile-logo.png';
 
-function ProgramsDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean; onMouseEnter: () => void; onMouseLeave: () => void }) {
+function ProgramsDropdown({
+  isOpen,
+  onMouseEnter,
+  onMouseLeave,
+  onEnterpriseClick,
+}: {
+  isOpen: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+  onEnterpriseClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}) {
   return (
     <div 
       data-dropdown="programs"
@@ -22,7 +32,8 @@ function ProgramsDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: bool
         <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
       </a>
       <a 
-        href="#enterprise-section"
+        href="index.html#enterprise-section"
+        onClick={onEnterpriseClick}
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
@@ -59,6 +70,58 @@ function AboutDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean
 export function MainSiteNavigation() {
   const [programsOpen, setProgramsOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+
+  // Ensure "For Enterprises" works from any page (static HTML) and also in dev hash-routing mode.
+  // - Static pages: navigate to index.html#enterprise-section and smooth scroll (CSS scroll-behavior already enabled)
+  // - Dev mode: store intent, route to #/index.html, then smooth scroll once the section exists
+  useEffect(() => {
+    const scrollToEnterprise = () => {
+      const el = document.getElementById('enterprise-section');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return true;
+      }
+      return false;
+    };
+
+    // Handle direct hash load (index.html#enterprise-section)
+    if (window.location.hash === '#enterprise-section') {
+      // Wait a tick for layout
+      setTimeout(() => {
+        scrollToEnterprise();
+      }, 0);
+    }
+
+    // Handle dev-mode deferred scroll
+    const pending = sessionStorage.getItem('pendingScrollTarget');
+    if (pending === 'enterprise-section') {
+      // Try now, and retry briefly in case content hasn't mounted yet
+      let attempts = 0;
+      const maxAttempts = 20;
+      const interval = window.setInterval(() => {
+        attempts += 1;
+        if (scrollToEnterprise() || attempts >= maxAttempts) {
+          sessionStorage.removeItem('pendingScrollTarget');
+          window.clearInterval(interval);
+        }
+      }, 50);
+
+      return () => window.clearInterval(interval);
+    }
+  }, []);
+
+  const handleEnterpriseClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // If we are in dev hash-routing pages (e.g. #/aboutus.html), route back to #/index.html first
+    if (window.location.hash.startsWith('#/') && window.location.hash !== '#/index.html' && window.location.hash !== '#/') {
+      e.preventDefault();
+      e.stopPropagation();
+      sessionStorage.setItem('pendingScrollTarget', 'enterprise-section');
+      window.location.hash = '#/index.html';
+    }
+
+    // Close dropdown on click (no visual changes, just state)
+    setProgramsOpen(false);
+  };
 
   return (
     <nav className="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
@@ -111,6 +174,7 @@ export function MainSiteNavigation() {
               isOpen={programsOpen} 
               onMouseEnter={() => setProgramsOpen(true)}
               onMouseLeave={() => setProgramsOpen(false)}
+              onEnterpriseClick={handleEnterpriseClick}
             />
           </div>
 
