@@ -1,5 +1,5 @@
 // Responsive Contact Form Section - refactored from Figma import
-import stickyNotesImage from '@/assets/img/jess/sticky-notes-on-whiteboard-workshop.jpg';
+import stickyNotesImage from '@/assets/img/main/sticky-notes-on-whiteboard-workshop.jpg';
 
 export function ContactFormSection() {
   return (
