@@ -17,13 +17,23 @@
   <body class="antialiased">
     <div class="w-full">
       <nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
-        <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-16 lg:px-24">
+        <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
           <div class="flex items-center h-[24px]">
             <a href="index.html" class="no-underline flex items-center h-full">
               <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="assets/img/main/ci-agile-logo.png"/>
             </a>
           </div>
-          <div class="flex gap-6 md:gap-8 items-center">
+          <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16">
+              </path>
+              <path d="M4 12h16">
+              </path>
+              <path d="M4 18h16">
+              </path>
+            </svg>
+          </button>
+          <div class="hidden md:flex gap-6 md:gap-8 items-center">
             <div class="relative flex items-center" data-dropdown-container="programs">
               <button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
                 <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span>
@@ -59,6 +69,23 @@
             <a href="contactus.html" class="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0">
               <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
             </a>
+          </div>
+        </div>
+        <div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+          <div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true">
+          </div>
+          <div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
+              <div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
+              <a href="teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a>
+              <a href="index.html#enterprise-section" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a>
+              <div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div>
+              <a href="aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a>
+              <a href="contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a>
+              <a href="contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true">
+                <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -143,12 +170,12 @@
         </div>
         <div class="bg-[#f9fafb] w-full py-16" data-name="ClientLogos">
           <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 content-stretch flex flex-col gap-16 min-h-[272px] items-start">
-            <div class="content-stretch flex flex-col gap-[16px] h-[72px] items-start relative shrink-0 w-full" data-name="Container">
-              <div class="h-[16px] relative shrink-0 w-full" data-name="Paragraph">
-                <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
+            <div class="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Container">
+              <div class="relative shrink-0 w-full" data-name="Paragraph">
+                <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-4 not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Trusted by Industry Leaders</p>
               </div>
-              <div class="h-[40px] relative shrink-0 w-full" data-name="Heading 2">
-                <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[40px] not-italic text-[#101828] text-[36px] text-center tracking-[-0.36px]">Transforming organizations across Asia Pacific</p>
+              <div class="relative shrink-0 w-full" data-name="Heading 2">
+                <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-tight sm:leading-10 lg:leading-[40px] not-italic text-[#101828] text-2xl sm:text-3xl lg:text-[36px] text-center tracking-[-0.36px]">Transforming organizations across Asia Pacific</p>
               </div>
             </div>
             <div class="gap-[40px] gap-[48px] grid grid-cols-[repeat(4,_minmax(0,_1fr))] grid-rows-[repeat(2,_minmax(0,_1fr))] h-[136px] relative shrink-0 w-full" data-name="Container">
@@ -269,8 +296,8 @@
         </div>
         <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 bg-white content-stretch flex flex-col gap-20 min-h-[558px] items-start pt-24">
           <div class="min-h-[128px] w-full flex flex-col" data-name="Container">
-            <div class="h-[48px] w-full" data-name="Heading 2">
-              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Challenges We Solve</p>
+            <div class="w-full" data-name="Heading 2">
+              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Challenges We Solve</p>
             </div>
             <div class="h-auto w-full mt-6" data-name="Paragraph">
               <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px] whitespace-pre-wrap">Organizations face common roadblocks that prevent them from achieving their full potential. We help you overcome these challenges.</p>
@@ -370,7 +397,7 @@
                 </div>
               </div>
             </div>
-            <div class="relative h-[600px] w-full lg:w-1/2 min-w-[400px]" data-name="Container">
+            <div class="relative h-[600px] w-full lg:w-1/2 min-w-0" data-name="Container">
               <div class="absolute bg-gradient-to-b from-[#e5edf0] left-1/4 opacity-50 rounded-[32px] w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 to-[#edf2f4] top-20" data-name="Container">
               </div>
               <div class="absolute bg-gradient-to-b from-[#dce8ed] left-1/6 opacity-60 rounded-3xl w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 to-[#e8eff1] top-32 md:top-48" data-name="Container">
@@ -382,12 +409,12 @@
             </div>
           </div>
         </div>
-        <div id="programs-section" class="bg-[#f9fafb] content-stretch flex flex-col gap-20 min-h-[1313px] w-full py-16" data-name="ProgramsSection">
+        <div id="programs-section" class="bg-[#f9fafb] content-stretch flex flex-col gap-20 w-full py-16" data-name="ProgramsSection">
           <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 content-stretch flex flex-col gap-20 items-center">
             <div class="w-full">
               <div class="min-h-[128px] w-full flex flex-col" data-name="Container">
-                <div class="h-[48px] w-full mb-12" data-name="Heading 2">
-                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Programs</p>
+                <div class="w-full mb-12" data-name="Heading 2">
+                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Programs</p>
                 </div>
                 <div class="h-auto w-full mt-6" data-name="Paragraph">
                   <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px] whitespace-pre-wrap">We work with organizations from SMEs to global enterprises. Programs are designed for specific operating contexts and team sizes.</p>
@@ -537,11 +564,11 @@
         </div>
         <div class="bg-[#1a2837] w-full min-h-[843px] flex flex-col items-center justify-center py-16" data-name="HowWeWorkSection">
           <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 flex flex-col gap-8">
-            <div class="h-[16px] w-full mb-8 mt-16" data-name="Paragraph">
-              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Our Methodology</p>
+            <div class="w-full mb-8 mt-16" data-name="Paragraph">
+              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-4 not-italic text-[#99a1af] text-[12px] text-center tracking-[1.2px] uppercase">Our Methodology</p>
             </div>
-            <div class="h-[60px] w-full mb-12" data-name="Heading 2">
-              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[60px] not-italic text-[48px] text-center text-white tracking-[-0.48px]">How We Deliver Results</p>
+            <div class="w-full mb-12" data-name="Heading 2">
+              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-tight sm:leading-10 lg:leading-[60px] not-italic text-3xl sm:text-4xl lg:text-[48px] text-center text-white tracking-[-0.48px]">How We Deliver Results</p>
             </div>
             <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full" data-name="Container">
               <div class="bg-[#0d1f2d] col-[1] content-stretch css-vsca90 flex flex-col items-start overflow-clip relative row-[1] self-stretch shrink-0" data-name="Container">
@@ -652,8 +679,8 @@
         <div class="bg-white w-full py-20" data-name="IndustriesSection">
           <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 content-stretch flex flex-col gap-12 items-start">
             <div class="min-h-[100px] w-full flex flex-col" data-name="Container">
-              <div class="h-[48px] w-full" data-name="Heading 2">
-                <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[48px] not-italic text-[#101828] text-[48px] tracking-[-0.48px]">Industries We Transform</p>
+              <div class="w-full" data-name="Heading 2">
+                <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Industries We Transform</p>
               </div>
               <div class="h-auto w-full mt-6" data-name="Paragraph">
                 <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px]">Deep expertise across diverse sectors, delivering tangible business results</p>
