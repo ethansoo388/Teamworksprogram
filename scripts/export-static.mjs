@@ -4,12 +4,34 @@ import { fileURLToPath } from 'url';
 import { createServer } from 'vite';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import prettier from 'prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const publicDir = path.join(rootDir, 'public');
 const distDir = path.join(rootDir, 'dist');
+
+// Format generated HTML so "View Page Source" is readable (dev builds only)
+async function formatHtmlFile(filePath) {
+  const html = fs.readFileSync(filePath, 'utf8');
+  const formatted = await prettier.format(html, { parser: 'html' });
+  fs.writeFileSync(filePath, formatted);
+}
+
+async function formatAllHtmlInDir(dir) {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await formatAllHtmlInDir(fullPath);
+    } else if (entry.isFile() && fullPath.endsWith('.html')) {
+      await formatHtmlFile(fullPath);
+    }
+  }
+}
+
 
 // Helper to create HTML shell
 function createHTMLShell(title, bodyHTML, options = {}) {
@@ -971,6 +993,14 @@ async function exportStaticSite() {
     // Step 6: Generate HTML files from React components using Vite SSR
     await generateHTMLFiles();
     console.log('');
+
+    // Step 7: Prettify HTML for development builds
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('🧼 Formatting HTML for readability...');
+      await formatAllHtmlInDir(publicDir);
+      console.log('  ✓ HTML formatted');
+      console.log('');
+    }
     
     console.log('✨ Static export complete!');
     console.log(`📁 Output directory: ${publicDir}`);
