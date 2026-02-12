@@ -15,7 +15,7 @@ type SectionContainerProps = {
 };
 
 function SectionContainer({ children, className = "" }: SectionContainerProps) {
-  const base = "w-full max-w-7xl mx-auto px-8 lg:px-16";
+  const base = "w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 min-w-0";
   return <div className={`${base} ${className}`.trim()}>{children}</div>;
 }
 
@@ -313,23 +313,28 @@ function ClientLogos() {
 
 function Heading2() {
   return (
+    // Use a block-level heading element (no absolute positioning / fixed heights)
+    // so the following paragraph always flows beneath it on small screens.
     <div className="w-full" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">Challenges We Solve</p>
+      <h2 className="font-['Inter:Light',sans-serif] font-light leading-tight sm:leading-10 lg:leading-[48px] not-italic text-[#101828] text-3xl sm:text-4xl lg:text-[48px] tracking-[-0.48px]">
+        Challenges We Solve
+      </h2>
     </div>
   );
 }
 
 function Paragraph1() {
   return (
-    <div className="h-auto w-full mt-6" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px] whitespace-pre-wrap">Organizations face common roadblocks that prevent them from achieving their full potential. We help you overcome these challenges.</p>
+    <div className="h-auto w-full" data-name="Paragraph">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-full sm:w-[768px] whitespace-pre-wrap">Organizations face common roadblocks that prevent them from achieving their full potential. We help you overcome these challenges.</p>
     </div>
   );
 }
 
 function Container26() {
   return (
-    <div className="min-h-[128px] w-full flex flex-col" data-name="Container">
+    // Explicit vertical spacing (gap) ensures no overlap when the heading wraps on mobile.
+    <div className="w-full flex flex-col gap-6" data-name="Container">
       <Heading2 />
       <Paragraph1 />
     </div>
@@ -355,7 +360,7 @@ function Heading3() {
 function Paragraph2() {
   return (
     <div className="min-h-[52px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[356px] whitespace-pre-wrap">Critical business opportunities slipping through inefficient processes and lack of agility.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[356px] whitespace-pre-wrap">Critical business opportunities slipping through inefficient processes and lack of agility.</p>
     </div>
   );
 }
@@ -389,7 +394,7 @@ function Heading4() {
 function Paragraph3() {
   return (
     <div className="min-h-[52px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[343px] whitespace-pre-wrap">Teams struggling with unclear priorities, poor collaboration, and outdated methodologies.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[343px] whitespace-pre-wrap">Teams struggling with unclear priorities, poor collaboration, and outdated methodologies.</p>
     </div>
   );
 }
@@ -423,7 +428,7 @@ function Heading5() {
 function Paragraph4() {
   return (
     <div className="min-h-[52px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[354px] whitespace-pre-wrap">Failed transformation initiatives leading to burnout, skepticism, and resistance to change.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[354px] whitespace-pre-wrap">Failed transformation initiatives leading to burnout, skepticism, and resistance to change.</p>
     </div>
   );
 }
@@ -460,7 +465,7 @@ function ProblemSection() {
 function Heading6() {
   return (
     <div className="min-h-[120px] w-full" data-name="Heading 2">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[60px] not-italic text-[#101828] text-[48px] tracking-[-0.48px] max-w-[271px] whitespace-pre-wrap">The CI Agile Difference</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[60px] not-italic text-[#101828] text-[48px] tracking-[-0.48px] max-w-full sm:w-[271px] whitespace-pre-wrap">The CI Agile Difference</p>
     </div>
   );
 }
@@ -468,7 +473,7 @@ function Heading6() {
 function Paragraph5() {
   return (
     <div className="min-h-[52px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[465px] whitespace-pre-wrap">We help organizations execute delivery systems that produce measurable business outcomes.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[465px] whitespace-pre-wrap">We help organizations execute delivery systems that produce measurable business outcomes.</p>
     </div>
   );
 }
@@ -503,7 +508,7 @@ function Container37() {
 
 function Button() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-full sm:w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container37 />
       <Heading7 />
       <Paragraph6 />
@@ -537,7 +542,7 @@ function Container38() {
 
 function Button1() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-full sm:w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container38 />
       <Heading8 />
       <Paragraph7 />
@@ -571,7 +576,7 @@ function Container39() {
 
 function Button2() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[102.75px] w-full max-w-full sm:w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container39 />
       <Heading9 />
       <Paragraph8 />
@@ -590,7 +595,7 @@ function Heading10() {
 function Paragraph9() {
   return (
     <div className="min-h-[45.5px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] not-italic text-[#6a7282] group-hover:text-[#4a5565] text-[14px] max-w-[386px] whitespace-pre-wrap transition-colors">500+ engagements across regulated industries and global operations</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] not-italic text-[#6a7282] group-hover:text-[#4a5565] text-[14px] max-w-full sm:w-[386px] whitespace-pre-wrap transition-colors">500+ engagements across regulated industries and global operations</p>
     </div>
   );
 }
@@ -605,7 +610,7 @@ function Container40() {
 
 function Button3() {
   return (
-    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[125.5px] w-full max-w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
+    <div className="border-[rgba(0,0,0,0)] hover:border-[#101828] hover:bg-white border-l-2 border-solid min-h-[125.5px] w-full max-w-full sm:w-[512px] group transition-colors p-6 flex flex-col gap-2" data-name="Button">
       <Container40 />
       <Heading10 />
       <Paragraph9 />
@@ -684,7 +689,7 @@ function Heading11() {
 function Paragraph10() {
   return (
     <div className="h-auto w-full mt-6" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px] whitespace-pre-wrap">We work with organizations from SMEs to global enterprises. Programs are designed for specific operating contexts and team sizes.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-full sm:w-[768px] whitespace-pre-wrap">We work with organizations from SMEs to global enterprises. Programs are designed for specific operating contexts and team sizes.</p>
     </div>
   );
 }
@@ -725,7 +730,7 @@ function Paragraph11() {
 function Paragraph12() {
   return (
     <div className="min-h-[104px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[470px] whitespace-pre-wrap">Teams fail when work is unclear and priorities shift constantly. TeamWorks cuts through the chaos—helping your team focus on what matters, collaborate seamlessly, and deliver without burnout.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[470px] whitespace-pre-wrap">Teams fail when work is unclear and priorities shift constantly. TeamWorks cuts through the chaos—helping your team focus on what matters, collaborate seamlessly, and deliver without burnout.</p>
     </div>
   );
 }
@@ -891,7 +896,7 @@ function Text5() {
 function Container61() {
   return (
     <div className="min-h-[40px] w-full mt-2" data-name="Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#6a7282] text-[14px] max-w-[467px] whitespace-pre-wrap">{`Powered by the Nova Program and Jeff Sutherland's Enterprise Scrum System (JESS)`}</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#6a7282] text-[14px] max-w-full sm:w-[467px] whitespace-pre-wrap">{`Powered by the Nova Program and Jeff Sutherland's Enterprise Scrum System (JESS)`}</p>
     </div>
   );
 }
@@ -899,7 +904,7 @@ function Container61() {
 function Heading13() {
   return (
     <div className="min-h-[120px] w-full flex flex-col" data-name="Heading 3">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[36px] not-italic text-[#101828] text-[30px] max-w-[321px] whitespace-pre-wrap">{`Enterprise Execution & Transformation`}</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[36px] not-italic text-[#101828] text-[30px] max-w-full sm:w-[321px] whitespace-pre-wrap">{`Enterprise Execution & Transformation`}</p>
       <Container61 />
     </div>
   );
@@ -916,7 +921,7 @@ function Paragraph13() {
 function Paragraph14() {
   return (
     <div className="min-h-[78px] w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-[465px] whitespace-pre-wrap">{`Big ideas don't fail. Execution does. This program aligns leadership and teams, fixes slow delivery, and leverages AI to accelerate decision-making and outcomes at scale.`}</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[26px] not-italic text-[#4a5565] text-[16px] max-w-full sm:w-[465px] whitespace-pre-wrap">{`Big ideas don't fail. Execution does. This program aligns leadership and teams, fixes slow delivery, and leverages AI to accelerate decision-making and outcomes at scale.`}</p>
     </div>
   );
 }
@@ -1213,7 +1218,7 @@ function Container89() {
 
 function Container80() {
   return (
-    <div className="grid grid-cols-3 gap-2 w-full max-w-[240px]" data-name="Container">
+    <div className="grid grid-cols-3 gap-2 w-full max-w-full sm:w-[240px]" data-name="Container">
       <Container81 />
       <Container82 />
       <Container83 />
@@ -1263,7 +1268,7 @@ function Paragraph17() {
 
 function Container90() {
   return (
-    <div className="h-[201.75px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <div className="content-stretch flex flex-col gap-[12px] items-start pt-[24px] px-[24px] relative size-full">
         <Heading16 />
         <Paragraph17 />
@@ -1453,7 +1458,7 @@ function Heading19() {
 function Paragraph20() {
   return (
     <div className="h-auto w-full mt-6" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-[768px]">Deep expertise across diverse sectors, delivering tangible business results</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#4a5565] text-[18px] max-w-full sm:w-[768px]">Deep expertise across diverse sectors, delivering tangible business results</p>
     </div>
   );
 }
@@ -1644,7 +1649,7 @@ function Heading24() {
 function Paragraph25() {
   return (
     <div className="relative shrink-0 w-full" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[32.5px] not-italic text-[#d1d5dc] text-[20px] max-w-[477px]">Real outcomes from real organizations. Our clients consistently achieve measurable improvements.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[32.5px] not-italic text-[#d1d5dc] text-[20px] max-w-full sm:w-[477px]">Real outcomes from real organizations. Our clients consistently achieve measurable improvements.</p>
     </div>
   );
 }
@@ -1690,7 +1695,7 @@ function Container125() {
 }
 
 function Container126() {
-  return <div className="absolute bg-gradient-to-r from-[rgba(0,0,0,0)] h-px left-0 to-[rgba(0,0,0,0)] top-[135px] via-1/2 via-[rgba(0,136,255,0.5)] w-[271.25px]" data-name="Container" />;
+  return <div className="absolute bg-gradient-to-r from-[rgba(0,0,0,0)] h-px left-0 to-[rgba(0,0,0,0)] top-[135px] via-1/2 via-[rgba(0,136,255,0.5)] w-full sm:w-[271.25px]" data-name="Container" />;
 }
 
 function Container121() {
@@ -1729,7 +1734,7 @@ function Container128() {
 }
 
 function Container131() {
-  return <div className="absolute bg-gradient-to-r from-[rgba(0,0,0,0)] h-px left-0 to-[rgba(0,0,0,0)] top-[135px] via-1/2 via-[rgba(0,136,255,0.5)] w-[271.25px]" data-name="Container" />;
+  return <div className="absolute bg-gradient-to-r from-[rgba(0,0,0,0)] h-px left-0 to-[rgba(0,0,0,0)] top-[135px] via-1/2 via-[rgba(0,136,255,0.5)] w-full sm:w-[271.25px]" data-name="Container" />;
 }
 
 function Container127() {
@@ -1743,7 +1748,7 @@ function Container127() {
 function Container134() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff] max-w-[255px]">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[48px] not-italic text-5xl text-[#0088ff] max-w-full sm:w-[255px]">
         3 Months
       </p>
     </div>
@@ -1824,7 +1829,7 @@ function Container118() {
     <SectionContainer className="py-20 lg:py-32">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
         {/* Left side - Heading and description */}
-        <div className="flex flex-col gap-6 flex-1 max-w-[500px]">
+        <div className="flex flex-col gap-6 flex-1 max-w-full sm:w-[500px]">
           <h2 className="font-['Inter:Light',sans-serif] font-light leading-[75px] not-italic text-[60px] text-white tracking-[-0.6px]">
             Proven Results
           </h2>
@@ -1834,7 +1839,7 @@ function Container118() {
         </div>
 
         {/* Right side - Stats grid */}
-        <div className="grid grid-cols-2 gap-8 lg:gap-12 flex-1 max-w-[600px]">
+        <div className="grid grid-cols-2 gap-8 lg:gap-12 flex-1 max-w-full sm:w-[600px]">
           {/* Stat 1 - 40% */}
           <div className="flex flex-col gap-3">
             <div className="text-5xl lg:text-6xl font-['Inter:Light',sans-serif] font-light leading-tight text-[#0088ff]">
@@ -1900,8 +1905,8 @@ function Heading25() {
 
 function Paragraph26() {
   return (
-    <div className="h-[78px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] left-0 text-[#364153] text-[16px] top-[-1px] w-[501px] whitespace-pre-wrap">{`"Agile isn't just a framework — it's a mindset shift. This program changed how we think about work, delivery, and results. Practical, empowering, and immediately applicable to real teams."`}</p>
+    <div className="relative shrink-0 w-full" data-name="Paragraph">
+      <p className="font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] left-0 text-[#364153] text-[16px] top-[-1px] w-full sm:w-[501px] whitespace-pre-wrap">{`"Agile isn't just a framework — it's a mindset shift. This program changed how we think about work, delivery, and results. Practical, empowering, and immediately applicable to real teams."`}</p>
     </div>
   );
 }
@@ -1946,8 +1951,8 @@ function Container142() {
 
 function Paragraph27() {
   return (
-    <div className="h-[104px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] left-0 text-[#364153] text-[16px] top-[-1px] w-[549px] whitespace-pre-wrap">{`"This program reframed change and uncertainty as a competitive advantage. The training delivered practical insights, hands-on exercises, and clear ways to help organizations navigate complexity and perform better."`}</p>
+    <div className="relative shrink-0 w-full" data-name="Paragraph">
+      <p className="font-['Inter:Light_Italic',sans-serif] font-light italic leading-[26px] left-0 text-[#364153] text-[16px] top-[-1px] w-full sm:w-[549px] whitespace-pre-wrap">{`"This program reframed change and uncertainty as a competitive advantage. The training delivered practical insights, hands-on exercises, and clear ways to help organizations navigate complexity and perform better."`}</p>
     </div>
   );
 }
@@ -2070,7 +2075,7 @@ function Heading26() {
 
 function Paragraph28() {
   return (
-    <div className="h-auto w-full max-w-[672px] mx-auto mb-8" data-name="Paragraph">
+    <div className="h-auto w-full max-w-full sm:w-[672px] mx-auto mb-8" data-name="Paragraph">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic text-[#d1d5dc] text-[18px] text-center whitespace-pre-wrap">Join 500+ organizations that have transformed their delivery and business outcomes with our proven methodology.</p>
     </div>
   );
@@ -2088,7 +2093,7 @@ function Container150() {
 
 function Container154() {
   return (
-    <div className="h-[48px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[16px] text-center text-white whitespace-pre-wrap">Free Strategy Consultation</p>
     </div>
   );
@@ -2096,7 +2101,7 @@ function Container154() {
 
 function Container155() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#99a1af] text-[14px] text-center whitespace-pre-wrap">30-minute session with our experts</p>
     </div>
   );
@@ -2113,7 +2118,7 @@ function Container153() {
 
 function Container157() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[16px] text-center text-white">Customized Roadmap</p>
     </div>
   );
@@ -2121,7 +2126,7 @@ function Container157() {
 
 function Container158() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#99a1af] text-[14px] text-center whitespace-pre-wrap">Tailored to your unique context</p>
     </div>
   );
@@ -2138,7 +2143,7 @@ function Container156() {
 
 function Container160() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[16px] text-center text-white">No Commitment</p>
     </div>
   );
@@ -2146,7 +2151,7 @@ function Container160() {
 
 function Container161() {
   return (
-    <div className="h-[20px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic text-[#99a1af] text-[14px] text-center">Explore with zero obligation</p>
     </div>
   );
@@ -2163,7 +2168,7 @@ function Container159() {
 
 function Container152() {
   return (
-    <div className="flex w-full max-w-[768px] mx-auto mb-12" data-name="Container">
+    <div className="flex w-full max-w-full sm:w-[768px] mx-auto mb-12" data-name="Container">
       <Container153 />
       <Container156 />
       <Container159 />
@@ -2186,7 +2191,7 @@ function Icon2() {
 
 function Link2() {
   return (
-    <a href="contactus.html" className="bg-[#06c] h-[48px] relative shrink-0 w-auto min-w-[268.359px] block no-underline" data-name="Link">
+    <a href="contactus.html" className="bg-[#06c] h-[48px] relative shrink-0 w-auto min-w-full sm:w-[268.359px] block no-underline" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full flex items-center justify-center gap-2 px-6 hover:opacity-80 transition-opacity">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[16px] text-center text-white whitespace-nowrap">Schedule Consultation</p>
         <Icon2 />
@@ -2197,7 +2202,7 @@ function Link2() {
 
 function Button4() {
   return (
-    <div className="bg-white h-[48px] relative shrink-0 w-[224.922px]" data-name="Button">
+    <div className="bg-white h-[48px] relative shrink-0 w-full sm:w-[224.922px]" data-name="Button">
       <div aria-hidden="true" className="absolute border-2 border-solid border-white inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[34px] py-[2px] relative size-full">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#101828] text-[16px] text-center">Download Our Guide</p>
@@ -2229,7 +2234,7 @@ function FinalCtaSection() {
 
 function ImageCiAgile() {
   return (
-    <div className="h-[48px] w-[210px]" data-name="Image (CI Agile)">
+    <div className="w-full sm:w-[210px]" data-name="Image (CI Agile)">
       <img alt="CI Agile Logo" className="h-full w-full object-contain object-left" src={ciAgileLogoWhite} />
     </div>
   );
@@ -2237,8 +2242,8 @@ function ImageCiAgile() {
 
 function Paragraph29() {
   return (
-    <div className="w-full max-w-[352px]" data-name="Paragraph">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] text-[#99a1af] text-[14px] max-w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+    <div className="w-full max-w-full sm:w-[352px]" data-name="Paragraph">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[22.75px] text-[#99a1af] text-[14px] max-w-full sm:w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
     </div>
   );
 }
@@ -2327,7 +2332,7 @@ function Container165() {
 
 function Container164() {
   return (
-    <div className="w-[352px]" data-name="Container">
+    <div className="w-full sm:w-[352px]" data-name="Container">
       <div className="flex flex-col gap-4">
         <ImageCiAgile />
         <Paragraph29 />
@@ -2339,15 +2344,15 @@ function Container164() {
 
 function Heading27() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Heading 3">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Programs</p>
+    <div className="relative shrink-0 w-full" data-name="Heading 3">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Programs</p>
     </div>
   );
 }
 
 function Link6() {
   return (
-    <a href="teamworks/index.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[62.75px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+    <a href="teamworks/index.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[62.75px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">For SMEs</p>
     </a>
   );
@@ -2355,7 +2360,7 @@ function Link6() {
 
 function ListItem() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link6 />
     </div>
   );
@@ -2363,7 +2368,7 @@ function ListItem() {
 
 function Link7() {
   return (
-    <a href="index.html#enterprise-section" data-scroll-to="enterprise-section" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
+    <a href="index.html#enterprise-section" data-scroll-to="enterprise-section" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">For Enterprises</p>
     </a>
   );
@@ -2371,7 +2376,7 @@ function Link7() {
 
 function ListItem1() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link7 />
     </div>
   );
@@ -2388,7 +2393,7 @@ function List() {
 
 function Container166() {
   return (
-    <div className="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
+    <div className="flex flex-col gap-[20px] items-start w-full sm:w-[152px]" data-name="Container">
       <Heading27 />
       <List />
     </div>
@@ -2397,15 +2402,15 @@ function Container166() {
 
 function Heading28() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Heading 3">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">About</p>
+    <div className="relative shrink-0 w-full" data-name="Heading 3">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">About</p>
     </div>
   );
 }
 
 function Link8() {
   return (
-    <a href="aboutus.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[61.234px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+    <a href="aboutus.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[61.234px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">About Us</p>
     </a>
   );
@@ -2413,7 +2418,7 @@ function Link8() {
 
 function ListItem2() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link8 />
     </div>
   );
@@ -2421,7 +2426,7 @@ function ListItem2() {
 
 function Link9() {
   return (
-    <a href="contactus.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[73.727px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+    <a href="contactus.html" className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[73.727px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Contact Us</p>
     </a>
   );
@@ -2429,7 +2434,7 @@ function Link9() {
 
 function ListItem3() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link9 />
     </div>
   );
@@ -2446,7 +2451,7 @@ function List1() {
 
 function Container167() {
   return (
-    <div className="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
+    <div className="flex flex-col gap-[20px] items-start w-full sm:w-[152px]" data-name="Container">
       <Heading28 />
       <List1 />
     </div>
@@ -2463,15 +2468,15 @@ function Heading29() {
 
 function Link10() {
   return (
-    <a href="mailto:romanoff@ciagile.com?subject=Service%20Inquiry" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
-      <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">romanoff@ciagile.com</p>
+    <a href="mailto:romanoff@ciagile.com?subject=Service%20Inquiry" className="absolute h-[20px] left-0 top-0 w-full sm:w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">romanoff@ciagile.com</p>
     </a>
   );
 }
 
 function ListItem4() {
   return (
-    <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link10 />
     </div>
   );
@@ -2479,15 +2484,15 @@ function ListItem4() {
 
 function Link11() {
   return (
-    <a href="https://wa.me/60192981055?text=Service%20Inquiry" target="_blank" rel="noopener noreferrer" className="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
-      <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">+60 19 298 1055</p>
+    <a href="https://wa.me/60192981055?text=Service%20Inquiry" target="_blank" rel="noopener noreferrer" className="absolute h-[20px] left-0 top-0 w-full sm:w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">+60 19 298 1055</p>
     </a>
   );
 }
 
 function ListItem5() {
   return (
-    <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Link11 />
     </div>
   );
@@ -2512,7 +2517,7 @@ function Heading30() {
 
 function Text14() {
   return (
-    <div className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[58.07px]" data-name="Text">
+    <div className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[58.07px]" data-name="Text">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Malaysia</p>
     </div>
   );
@@ -2520,7 +2525,7 @@ function Text14() {
 
 function ListItem6() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Text14 />
     </div>
   );
@@ -2528,7 +2533,7 @@ function ListItem6() {
 
 function Text15() {
   return (
-    <div className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[67.266px]" data-name="Text">
+    <div className="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[67.266px]" data-name="Text">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Singapore</p>
     </div>
   );
@@ -2536,7 +2541,7 @@ function Text15() {
 
 function ListItem7() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="List Item">
+    <div className="relative shrink-0 w-full" data-name="List Item">
       <Text15 />
     </div>
   );
@@ -2553,7 +2558,7 @@ function List3() {
 
 function Container168() {
   return (
-    <div className="w-[352px]" data-name="Container">
+    <div className="w-full sm:w-[352px]" data-name="Container">
       <div className="flex flex-col gap-[20px]">
         <Heading29 />
         <List2 />
@@ -2582,9 +2587,9 @@ function Container163() {
 
 function Paragraph30() {
   return (
-    <div className="h-[16px] relative shrink-0 w-[204.328px]" data-name="Paragraph">
+    <div className="relative shrink-0 w-full sm:w-[204.328px]" data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">© 2025 CI Agile. All rights reserved.</p>
+        <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">© 2025 CI Agile. All rights reserved.</p>
       </div>
     </div>
   );
@@ -2592,9 +2597,9 @@ function Paragraph30() {
 
 function Link12() {
   return (
-    <div className="h-[16px] relative shrink-0 w-[79.344px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[79.344px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Privacy Policy</p>
+        <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Privacy Policy</p>
       </div>
     </div>
   );
@@ -2604,7 +2609,7 @@ function Link13() {
   return (
     <div className="flex-[1_0_0] h-[16px] min-h-px min-w-px relative" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Terms of Service</p>
+        <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Terms of Service</p>
       </div>
     </div>
   );
@@ -2612,9 +2617,9 @@ function Link13() {
 
 function Link14() {
   return (
-    <div className="h-[16px] relative shrink-0 w-[76.992px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[76.992px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Cookie Policy</p>
+        <p className="font-['Inter:Light',sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Cookie Policy</p>
       </div>
     </div>
   );
@@ -2622,7 +2627,7 @@ function Link14() {
 
 function Container170() {
   return (
-    <div className="h-[16px] relative shrink-0 w-[316.984px]" data-name="Container">
+    <div className="relative shrink-0 w-full sm:w-[316.984px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[32px] items-start relative size-full">
         <Link12 />
         <Link13 />
@@ -2654,7 +2659,7 @@ function Footer() {
 
 function Text16() {
   return (
-    <div className="h-[138px] w-full" data-name="Text">
+    <div className="w-full" data-name="Text">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[69px] not-italic text-[#101828] text-[60px] tracking-[-1.2px] whitespace-pre-wrap">Faster, Clearer, At Scale</p>
     </div>
   );
@@ -2703,7 +2708,7 @@ function Button5() {
 
 function Link15() {
   return (
-    <div className="h-[48px] relative shrink-0 w-[190.391px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[190.391px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <Button5 />
       </div>
@@ -2724,7 +2729,7 @@ function Button6() {
 
 function Link16Programs() {
   return (
-    <div className="h-[48px] relative shrink-0 w-[214.617px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[214.617px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <Button6 />
       </div>
@@ -2743,7 +2748,7 @@ function Container172() {
 
 function Container175() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[40px] not-italic text-[#101828] text-[36px]">500+</p>
     </div>
   );
@@ -2751,7 +2756,7 @@ function Container175() {
 
 function Container176() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#6a7282] text-[12px] tracking-[0.6px] uppercase">Organizations</p>
     </div>
   );
@@ -2768,7 +2773,7 @@ function Container174() {
 
 function Container178() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[40px] not-italic text-[#101828] text-[36px]">15+</p>
     </div>
   );
@@ -2776,7 +2781,7 @@ function Container178() {
 
 function Container179() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#6a7282] text-[12px] tracking-[0.6px] uppercase">Years</p>
     </div>
   );
@@ -2793,7 +2798,7 @@ function Container177() {
 
 function Container181() {
   return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[40px] not-italic text-[#101828] text-[36px]">98%</p>
     </div>
   );
@@ -2801,7 +2806,7 @@ function Container181() {
 
 function Container182() {
   return (
-    <div className="h-[16px] relative shrink-0 w-full" data-name="Container">
+    <div className="relative shrink-0 w-full" data-name="Container">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#6a7282] text-[12px] tracking-[0.6px] uppercase">Satisfaction</p>
     </div>
   );
@@ -2894,7 +2899,7 @@ function Navigation1() {
 
 function Link16() {
   return (
-    <div className="h-[24px] relative shrink-0 w-[82.523px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[82.523px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
         <a href="index.html" className="no-underline flex items-center h-full">
           <img alt="CI Agile Logo" className="h-full w-auto object-contain" src={ciAgileLogo} />
@@ -2918,7 +2923,7 @@ function Icon7() {
 
 function Button8({ onClick, isOpen }: { onClick: () => void; isOpen: boolean }) {
   return (
-    <div className="h-[36px] relative shrink-0 w-[81.75px]" data-name="Button">
+    <div className="relative shrink-0 w-full sm:w-[81.75px]" data-name="Button">
       <button 
         onClick={onClick}
         className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full cursor-pointer bg-transparent hover:opacity-80 transition-opacity"
@@ -2932,7 +2937,7 @@ function Button8({ onClick, isOpen }: { onClick: () => void; isOpen: boolean }) 
 
 function Link17() {
   return (
-    <div className="h-[17px] relative shrink-0 w-[86.938px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[86.938px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
         <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#364153] text-[14px]">Case Studies</p>
       </div>
@@ -2942,7 +2947,7 @@ function Link17() {
 
 function Link18() {
   return (
-    <div className="h-[17px] relative shrink-0 w-[36.922px]" data-name="Link">
+    <div className="relative shrink-0 w-full sm:w-[36.922px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
         <p className="font-['Inter:Light',sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#364153] text-[14px]">Blogs</p>
       </div>
@@ -2964,7 +2969,7 @@ function Icon8() {
 
 function Button9({ onClick, isOpen }: { onClick: () => void; isOpen: boolean }) {
   return (
-    <div className="h-[36px] relative shrink-0 w-[57.484px]" data-name="Button">
+    <div className="relative shrink-0 w-full sm:w-[57.484px]" data-name="Button">
       <button 
         onClick={onClick}
         className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full cursor-pointer bg-transparent hover:opacity-80 transition-opacity"
@@ -3011,7 +3016,7 @@ function ProgramsDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
   };
   
   return (
-    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 min-w-[420px] z-50 border border-[#e5e7eb]">
+    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 min-w-full sm:w-[420px] z-50 border border-[#e5e7eb]">
       <a href="teamworks/index.html" onClick={onClose} className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-gray-50 transition-colors">
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
         <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
@@ -3028,7 +3033,7 @@ function AboutDropdown({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
   if (!isOpen) return null;
   
   return (
-    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 min-w-[180px] z-50 border border-[#e5e7eb]">
+    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 min-w-full sm:w-[180px] z-50 border border-[#e5e7eb]">
       <a href="aboutus.html" onClick={onClose} className="block px-4 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-gray-50 transition-colors">
         About Us
       </a>
@@ -3054,7 +3059,7 @@ function Container187({
   const closeAbout = () => toggleAbout();
   
   return (
-    <div className="h-[40px] relative shrink-0 w-[549.688px]" data-name="Container">
+    <div className="relative shrink-0 w-full sm:w-[549.688px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[32px] items-center relative size-full">
         <div className="relative">
           <Button8 onClick={togglePrograms} isOpen={programsOpen} />
