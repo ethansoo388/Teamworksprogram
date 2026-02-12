@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "node scripts/export-static.mjs",
     "build:vite": "vite build",
-    "verify:build": "node -e \"const fs=require('fs'); console.log('dist exists:', fs.existsSync('dist')); console.log('public exists:', fs.existsSync('public'));\"",
-    "build:prod": "cross-env NODE_ENV=production node scripts/export-static.mjs"
+    "verify:build": "node -e \"const fs=require('fs'); console.log('dist exists:', fs.existsSync('dist')); console.log('public exists:', fs.existsSync('public'));\""
   },
   "dependencies": {
     "react": "18.3.1",
@@ -71,9 +70,7 @@
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
     "tailwindcss": "4.1.12",
-    "vite": "6.3.5",
-    "prettier": "^3.2.5",
-    "cross-env": "^7.0.3"
+    "vite": "6.3.5"
   },
   "peerDependencies": {
     "react": "18.3.1",
