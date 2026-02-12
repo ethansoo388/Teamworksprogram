@@ -343,21 +343,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-  const mobileMenuCloseIcon = document.getElementById('mobile-menu-close-icon');
   
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('active');
       mobileMenu.classList.toggle('hidden');
-
-      // Optional icon swap (if present)
-      if (mobileMenuIcon && mobileMenuCloseIcon) {
-        mobileMenuIcon.classList.toggle('hidden');
-        mobileMenuIcon.classList.toggle('block');
-        mobileMenuCloseIcon.classList.toggle('hidden');
-        mobileMenuCloseIcon.classList.toggle('block');
-      }
     });
   }
 

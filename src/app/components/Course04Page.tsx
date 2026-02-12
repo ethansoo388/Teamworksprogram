@@ -45,36 +45,27 @@ export function Course04Page() {
 
             {/* Mobile Menu Button */}
             <button
-              id="mobile-menu-btn"
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
             >
-              <span className={mobileMenuOpen ? "hidden" : "block"} id="mobile-menu-icon" aria-hidden="true">
-                <Menu className="w-6 h-6" />
-              </span>
-              <span className={mobileMenuOpen ? "block" : "hidden"} id="mobile-menu-close-icon" aria-hidden="true">
-                <X className="w-6 h-6" />
-              </span>
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
           {/* Mobile Menu */}
-          <div
-            id="mobile-menu"
-            className={`md:hidden py-6 border-t border-gray-200 ${mobileMenuOpen ? "" : "hidden"}`}
-          >
-            <div className="flex flex-col gap-4">
-              <a href="#modules" className="text-sm py-2">Modules</a>
-              <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-              <a href="#testimonials" className="text-sm py-2">Testimonials</a>
-              <a href="#faq" className="text-sm py-2">FAQ</a>
-              <a href="bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#16A34A" }}>
-                Book This Course
-              </a>
+          {mobileMenuOpen && (
+            <div className="md:hidden py-6 border-t border-gray-200">
+              <div className="flex flex-col gap-4">
+                <a href="#modules" className="text-sm py-2">Modules</a>
+                <a href="#outcomes" className="text-sm py-2">Outcomes</a>
+                <a href="#testimonials" className="text-sm py-2">Testimonials</a>
+                <a href="#faq" className="text-sm py-2">FAQ</a>
+                <a href="bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#16A34A" }}>
+                  Book This Course
+                </a>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </nav>
 

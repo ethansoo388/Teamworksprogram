@@ -36,44 +36,35 @@ export function NavigationV2() {
 
           {/* Mobile Menu Button */}
           <button 
-            id="mobile-menu-btn"
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
           >
-            <span className={isOpen ? "hidden" : "block"} id="mobile-menu-icon" aria-hidden="true">
-              <Menu className="w-6 h-6" />
-            </span>
-            <span className={isOpen ? "block" : "hidden"} id="mobile-menu-close-icon" aria-hidden="true">
-              <X className="w-6 h-6" />
-            </span>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div
-          id="mobile-menu"
-          className={`md:hidden py-6 border-t border-gray-200 ${isOpen ? "" : "hidden"}`}
-        >
-          <div className="flex flex-col gap-4">
-            <a href="#courses" className="text-sm py-2">
-              Courses
-            </a>
-            <a href="#impact" className="text-sm py-2">
-              Results
-            </a>
-            <a href="#pricing" className="text-sm py-2">
-              Pricing
-            </a>
-            <a href="#testimonials" className="text-sm py-2">
-              Testimonials
-            </a>
-            <a href="bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
-              Book Consultation
-            </a>
+        {isOpen && (
+          <div className="md:hidden py-6 border-t border-gray-200">
+            <div className="flex flex-col gap-4">
+              <a href="#courses" className="text-sm py-2">
+                Courses
+              </a>
+              <a href="#impact" className="text-sm py-2">
+                Results
+              </a>
+              <a href="#pricing" className="text-sm py-2">
+                Pricing
+              </a>
+              <a href="#testimonials" className="text-sm py-2">
+                Testimonials
+              </a>
+              <a href="bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                Book Consultation
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
