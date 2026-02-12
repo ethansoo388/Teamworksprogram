@@ -2048,10 +2048,8 @@ function Container140() {
 
 function ProvenResultsSection() {
   return (
-    <div className="bg-[#f9fafb] w-full" data-name="ProvenResultsSection">
-      <SectionContainer className="content-stretch flex flex-col items-start">
-        <Container111 />
-      </SectionContainer>
+    <div className="w-full" data-name="ProvenResultsSection">
+      <Container111 />
       <Container140 />
     </div>
   );
