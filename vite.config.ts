@@ -42,38 +42,9 @@ export default defineConfig({
         }
       }
     },
-    // Custom plugin to resolve figma:asset imports
-    {
-      name: 'resolve-figma-assets',
-      resolveId(id) {
-        if (id.startsWith('figma:asset/')) {
-          // Extract filename from figma:asset/filename
-          const filename = id.replace('figma:asset/', '');
-          const assetPath = path.resolve(__dirname, 'src/assets/img', filename);
-          
-          // Check if file exists
-          if (!fs.existsSync(assetPath)) {
-            throw new Error(
-              `[figma:asset] File not found: ${filename}\n` +
-              `Expected location: ${assetPath}\n` +
-              `Please ensure the file exists in src/assets/img/`
-            );
-          }
-          
-          // Return a virtual module ID
-          return '\0figma:asset:' + filename;
-        }
-      },
-      load(id) {
-        if (id.startsWith('\0figma:asset:')) {
-          // Extract filename from virtual module ID
-          const filename = id.replace('\0figma:asset:', '');
-          
-          // Return absolute path (will be fixed by post-processing in export script)
-          return `export default "/src/assets/img/${filename}";`;
-        }
-      }
-    }
+    // NOTE: We intentionally do NOT support `figma:asset/*` anymore.
+    // All images should be imported from `@/assets/img/*` so they can be copied to
+    // `public/assets/img` during the static export.
   ],
   resolve: {
     alias: {
