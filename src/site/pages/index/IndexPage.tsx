@@ -6,7 +6,9 @@ import { HomePage } from "@/site/components/main/imported/CiAgileMainEthanWorkin
 
 export function IndexPage() {
   return (
-    <div className="w-full">
+    // Main site homepage only: clamp horizontal overflow on small screens.
+    // This prevents sideways panning into blank space caused by any over-wide child elements.
+    <div className="w-full overflow-x-hidden">
       <MainSiteNavigation />
       <HomePage />
       <MainSiteFooter />
