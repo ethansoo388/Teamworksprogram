@@ -1,16 +1,16 @@
 import svgPaths from "./svg-qtx8o74vey";
-import imgImageWithFallback from "@/assets/img/main/f44f1eee345558c40d51a3aa3e2b9fceb7432cdb.png";
-import imgImageWithFallback1 from "@/assets/img/main/e663da3af181c9fc2508e76fec0498f833ff10f0.png";
-import imgImageEthanSoo from "@/assets/img/main/b8d869daa88d48a6817babfc3c89c4ce9638444a.png";
-import imgImageWithFallback2 from "@/assets/img/main/40b1d8b8c250769ef13971a417b0e95fe4fbfc1f.png";
-import imgNavigation from "@/assets/img/main/fd7a81c1c75169f5c53cda037245ef314f926517.png";
-import businessMeetingImage from "@/assets/img/main/one-on-one-office-discussion-with-laptop.jpg";
-import ciAgileConsultingImage from "@/assets/img/main/ci-agile-consulting-approach-methodology-overview.png";
-import ciAgileLogoImage from "@/assets/img/main/ci-agile-logo.png";
-import enterpriseTeamImage from "@/assets/img/main/enterprise-team-delivery-systems-execution-frameworks.png";
-import ethanSooImage from "@/assets/img/main/Ethan-picture.jpg";
-import stickyNotesWideImage from "@/assets/img/main/sticky-notes-on-whiteboard-workshop-wide.jpg";
-import teamCollabImage from "@/assets/img/main/team-collaboration-problem-solving-workshop.png";
+import imgImageWithFallback from "@/assets/img/main/ciagile-about-hero-workshop-table-legacy.webp";
+import imgImageWithFallback1 from "@/assets/img/main/ciagile-about-different-banner-team-meeting.webp";
+import imgImageEthanSoo from "@/assets/img/main/ciagile-about-founder-portrait-alt.webp";
+import imgImageWithFallback2 from "@/assets/img/main/ciagile-about-recommendation-panel-image.webp";
+import imgNavigation from "@/assets/img/main/ciagile-main-logo-legacy-nav.webp";
+import businessMeetingImage from "@/assets/img/main/ciagile-about-different-section-team-meeting.webp";
+import ciAgileConsultingImage from "@/assets/img/main/ciagile-main-consulting-methodology-overview.webp";
+import ciAgileLogoImage from "@/assets/img/main/ciagile-main-logo.webp";
+import enterpriseTeamImage from "@/assets/img/main/ciagile-main-enterprise-delivery-frameworks.webp";
+import ethanSooImage from "@/assets/img/main/ciagile-about-founder-portrait.webp";
+import stickyNotesWideImage from "@/assets/img/main/ciagile-about-recommendation-hero-sticky-notes-wide.webp";
+import teamCollabImage from "@/assets/img/main/ciagile-about-recommendation-sticky-notes-duplicate.webp";
 
 function Container1() {
   return <div className="absolute bg-[#06c] h-[4px] left-0 top-[32px] w-[48px]" data-name="Container" />;

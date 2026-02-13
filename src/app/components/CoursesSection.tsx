@@ -11,7 +11,7 @@ const courses = [
     icon: Users,
     color: "from-blue-600 to-cyan-600",
     bgColor: "bg-blue-50",
-    image: "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg"
+    image: "@/assets/img/teamworks/ciagile-teamworks-course04-lean-problem-solving-group-discussion.webp"
   },
   {
     number: "02",
@@ -22,7 +22,7 @@ const courses = [
     icon: Palette,
     color: "from-purple-600 to-pink-600",
     bgColor: "bg-purple-50",
-    image: "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg"
+    image: "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp"
   },
   {
     number: "03",
@@ -33,7 +33,7 @@ const courses = [
     icon: Zap,
     color: "from-orange-600 to-red-600",
     bgColor: "bg-orange-50",
-    image: "@/assets/img/teamworks/one-on-one-office-discussion-with-laptop.jpg"
+    image: "@/assets/img/teamworks/ciagile-teamworks-consultation-one-on-one-office.webp"
   },
   {
     number: "04",
@@ -44,7 +44,7 @@ const courses = [
     icon: TrendingUp,
     color: "from-green-600 to-emerald-600",
     bgColor: "bg-green-50",
-    image: "@/assets/img/teamworks/business-presentation-meeting-room.jpg"
+    image: "@/assets/img/teamworks/ciagile-teamworks-enterprise-presentation-meeting-room.webp"
   },
   {
     number: "05",
@@ -55,7 +55,7 @@ const courses = [
     icon: Sparkles,
     color: "from-indigo-600 to-blue-600",
     bgColor: "bg-indigo-50",
-    image: "@/assets/img/teamworks/professional-woman-thinking-with-pen.jpg"
+    image: "@/assets/img/teamworks/ciagile-teamworks-course04-root-cause-thinking.webp"
   }
 ];
 

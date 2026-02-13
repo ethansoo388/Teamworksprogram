@@ -1,11 +1,11 @@
 import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
-import consultantImage from "@/assets/img/teamworks/consultant-client-conversation-casual-setting.jpg";
-import creatingSuperTeamsImage from "@/assets/img/teamworks/high-energy-team-standing-together-smiling.jpg";
-import designThinkingImage from "@/assets/img/teamworks/team-working-on-ideas-sticky-notes-brainstorming.jpg";
-import criticalThinkingImage from "@/assets/img/teamworks/applying-critical-thinking.webp";
-import leanProblemSolvingImage from "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg";
-import aiSkillsImage from "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg";
+import consultantImage from "@/assets/img/teamworks/ciagile-teamworks-consultation-cta-consultant-client.webp";
+import creatingSuperTeamsImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
+import designThinkingImage from "@/assets/img/teamworks/ciagile-teamworks-course02-design-thinking-brainstorming.webp";
+import criticalThinkingImage from "@/assets/img/teamworks/ciagile-teamworks-course03-critical-thinking-hero.webp";
+import leanProblemSolvingImage from "@/assets/img/teamworks/ciagile-teamworks-course04-lean-problem-solving-group-discussion.webp";
+import aiSkillsImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
 
 const courses = [
   {

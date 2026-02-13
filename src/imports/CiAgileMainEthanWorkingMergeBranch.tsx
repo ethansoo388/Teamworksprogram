@@ -1,13 +1,13 @@
 import svgPaths from "./svg-0jlmd5mwk8";
 import { useState, type ReactNode } from "react";
-import agileTeamImage from "@/assets/img/main/team-working-together-sticky-note-on-wall.jpg";
-import businessPresentationImage from "@/assets/img/main/business-presentation-meeting-room.jpg";
+import agileTeamImage from "@/assets/img/main/ciagile-home-programs-sticky-wall-collaboration.webp";
+import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-enterprise-presentation.webp";
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
-import imageWithFallback48 from "@/assets/img/main/48aa90649a4e56f3a94eb6f4c6e253b63dfc1bc1.png";
-import imageWithFallback6d from "@/assets/img/main/6d210643b84c08db9772a3b123a072f99723cbe2.png";
-import imageWithFallbackc6 from "@/assets/img/main/c6d2c7633e2d949942ac8c8f2f4005858cf4f3da.png";
-import presenterImage from "@/assets/img/main/presenter-at-flip-chart-black-and-white.jpg";
-import ciAgileLogo from "@/assets/img/main/ci-agile-logo.png";
+import imageWithFallback48 from "@/assets/img/main/ciagile-home-hero-presenter-flipchart-alt.webp";
+import imageWithFallback6d from "@/assets/img/main/ciagile-home-programs-sticky-wall-collaboration-alt.webp";
+import imageWithFallbackc6 from "@/assets/img/main/ciagile-home-programs-enterprise-presentation-alt.webp";
+import presenterImage from "@/assets/img/main/ciagile-home-hero-presenter-flipchart.webp";
+import ciAgileLogo from "@/assets/img/main/ciagile-main-logo.webp";
 
 type SectionContainerProps = {
   children: ReactNode;

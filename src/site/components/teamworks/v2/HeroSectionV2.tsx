@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
-import twoLadiesImage from "@/assets/img/teamworks/young-asian-ladies-discussing-talking-with-phones.jpg";
-import hrdCorpLogo from "@/assets/img/teamworks/hrd-corp-claimable-training-logo.webp";
+import twoLadiesImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-collaboration-discussion.webp";
+import hrdCorpLogo from "@/assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp";
 
 export function HeroSectionV2() {
   return (

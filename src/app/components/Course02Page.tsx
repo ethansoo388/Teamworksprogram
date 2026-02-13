@@ -1,11 +1,11 @@
 import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck, Menu } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import moduleGraphicImage from "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg";
-import productDesignImage from "@/assets/img/teamworks/product-design-customer-experience-creative-work.jpg";
-import professionalWomanImage from "@/assets/img/teamworks/professional-woman-thinking-with-pen.jpg";
-import teamBuildingImage from "@/assets/img/teamworks/team-building-collaboration-outdoors.jpg";
-import teamIdeasBrainstormImage from "@/assets/img/teamworks/team-working-on-ideas-sticky-notes-brainstorming.jpg";
-import teamIdeasGroupImage from "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg";
+import moduleGraphicImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
+import productDesignImage from "@/assets/img/teamworks/ciagile-teamworks-course02-product-design-customer-experience.webp";
+import professionalWomanImage from "@/assets/img/teamworks/ciagile-teamworks-course04-root-cause-thinking.webp";
+import teamBuildingImage from "@/assets/img/teamworks/ciagile-teamworks-team-building-outdoor-collaboration.webp";
+import teamIdeasBrainstormImage from "@/assets/img/teamworks/ciagile-teamworks-course02-design-thinking-brainstorming.webp";
+import teamIdeasGroupImage from "@/assets/img/teamworks/ciagile-teamworks-course04-lean-problem-solving-group-discussion.webp";
 
 const testimonials = [
   {
