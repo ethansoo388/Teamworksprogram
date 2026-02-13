@@ -684,7 +684,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
       const message = formData.get('message') || '';
-      const message = formData.get('message') || '';
       
       // Handle multiple interests checkboxes - collect all checked values
       const interests = formData.getAll('interests').join(', ') || '';
@@ -789,6 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Build data object
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
+      const message = formData.get('message') || '';
       
       // Handle multiple interests checkboxes - collect all checked values
       const interests = formData.getAll('interests').join(', ') || '';
