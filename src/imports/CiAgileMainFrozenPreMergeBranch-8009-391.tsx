@@ -90,8 +90,10 @@ function WhatWeStandAgainst() {
     <div className="flex flex-col gap-8 bg-[#f9fafb] border-r border-[#e5e7eb] p-10">
       <div className="flex items-center gap-3">
         <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24">
-          <path d="M18 6L6 18" stroke="#99A1AF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          <path d="M6 6L18 18" stroke="#99A1AF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          {/* Circle + X icon (red), matching the visual treatment of the blue check icon */}
+          <path d={svgPaths.pace200} stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          <path d="M18 6L6 18" stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          <path d="M6 6L18 18" stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
         </svg>
         <h3 className="text-sm font-normal text-[#6a7282] tracking-[0.7px] uppercase">What We Stand Against</h3>
       </div>
