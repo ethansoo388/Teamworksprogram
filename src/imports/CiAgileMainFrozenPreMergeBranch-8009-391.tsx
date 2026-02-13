@@ -1444,7 +1444,7 @@ function Option7() {
 function Option8() {
   return (
     <div className="absolute left-[-920px] size-0 top-[-4722.09px]" data-name="Option">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-0 not-italic text-[#101828] text-[14px] top-0 w-0 whitespace-pre-wrap">Other (please specify)</p>
+      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-0 not-italic text-[#101828] text-[14px] top-0 w-0 whitespace-pre-wrap">Other (Please specify)</p>
     </div>
   );
 }
@@ -1670,8 +1670,23 @@ function Section6() {
                     <option value="leadership-execution-gap">Leadership decisions don't translate into execution</option>
                     <option value="processes-heavy">Processes are heavy, rigid, or don't fit how we work</option>
                     <option value="ai-value">We want to use AI, but don't know where it creates real value</option>
-                    <option value="other">Other (please specify)</option>
+                    <option value="other">Other (Please specify)</option>
                   </select>
+                </div>
+
+                
+
+                {/* Additional Context */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="message" className="text-sm font-normal text-[#364153]">
+                    Anything else you'd like us to know?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent resize-none"
+                  />
                 </div>
 
                 {/* Submit Button */}
