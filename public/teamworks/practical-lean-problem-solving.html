@@ -856,101 +856,85 @@
         <p class="text-base text-gray-600">Everything you need to know about this course</p>
       </div>
       <div class="space-y-4">
-        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+        <div class="bg-white border-2 rounded-xl p-6 transition-colors border-[#22C55E]">
+          <button class="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left">
             <span class="flex-1">Can this be customised to our industry?</span>
-            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4 rotate-180">
+              <path d="m6 9 6 6 6-6">
               </path>
             </svg>
-          </summary>
+          </button>
           <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Exercises are tailored to your real operational challenges.</p>
-        </details>
-        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-            <span class="flex-1">Is this suitable for teams with no Lean background?</span>
-            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-              </path>
-            </svg>
-          </summary>
-          <p class="mt-4 text-gray-700 text-base leading-relaxed">Absolutely. Tools are simple and practical.</p>
-        </details>
-        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-            <span class="flex-1">Can we use our real workplace problems?</span>
-            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-              </path>
-            </svg>
-          </summary>
-          <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Teams are encouraged to bring actual cases.</p>
-        </details>
-        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
-          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
-            <span class="flex-1">Is this suitable for service industries?</span>
-            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-              </path>
-            </svg>
-          </summary>
-          <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes — retail, logistics, banking, healthcare, F&amp;B, and more.</p>
-        </details>
-      </div>
-      <script>(() => {
-        const container = document.getElementById('faq');
-        if (!container) return;
-        const items = Array.from(container.querySelectorAll('details'));
-        items.forEach((item) => {
-        item.addEventListener('toggle', () => {
-        if (!item.open) return;
-        items.forEach((other) => {
-        if (other !== item) other.removeAttribute('open');
-        });
-        });
-        });
-        })();</script>
-      </div>
-    </section>
-    <section class="py-20 lg:py-24 bg-gradient-to-b from-white to-[#EAF6EF]">
-      <div class="max-w-[900px] mx-auto px-6 lg:px-12 text-center">
-        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
-          <div class="flex items-center gap-2 text-gray-600 text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
-              <path d="M20 6 9 17l-5-5">
-              </path>
-            </svg>
-            <span>Delivered in-house at your location</span>
-          </div>
-          <div class="flex items-center gap-2 text-gray-600 text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
-              <path d="M20 6 9 17l-5-5">
-              </path>
-            </svg>
-            <span>Practical, hands-on format</span>
-          </div>
-          <div class="flex items-center gap-2 text-gray-600 text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
-              <path d="M20 6 9 17l-5-5">
-              </path>
-            </svg>
-            <span>Immediate workplace application</span>
-          </div>
         </div>
-        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Build a Team That Solves Problems — <span class="text-[#16A34A]">Not Escalates Them.</span>
-        </h2>
-        <p class="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">Stop daily firefighting and start systematic operational improvement.</p>
-        <p class="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">Let&#x27;s design a private workshop tailored to your team.</p>
-        <a href="bookConsultation.html" class="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group">Request Private Training Proposal<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform">
-          <path d="M5 12h14">
-          </path>
-          <path d="m12 5 7 7-7 7">
-          </path>
-        </svg>
-      </a>
-      <p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs. No commitment required.</p>
+        <div class="bg-white border-2 rounded-xl p-6 transition-colors border-gray-200 hover:border-[#22C55E]">
+          <button class="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left">
+            <span class="flex-1">Is this suitable for teams with no Lean background?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4">
+              <path d="m6 9 6 6 6-6">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-6 transition-colors border-gray-200 hover:border-[#22C55E]">
+          <button class="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left">
+            <span class="flex-1">Can we use our real workplace problems?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4">
+              <path d="m6 9 6 6 6-6">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-6 transition-colors border-gray-200 hover:border-[#22C55E]">
+          <button class="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left">
+            <span class="flex-1">Is this suitable for service industries?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4">
+              <path d="m6 9 6 6 6-6">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
+  <section class="py-20 lg:py-24 bg-gradient-to-b from-white to-[#EAF6EF]">
+    <div class="max-w-[900px] mx-auto px-6 lg:px-12 text-center">
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
+        <div class="flex items-center gap-2 text-gray-600 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+            <path d="M20 6 9 17l-5-5">
+            </path>
+          </svg>
+          <span>Delivered in-house at your location</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-600 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+            <path d="M20 6 9 17l-5-5">
+            </path>
+          </svg>
+          <span>Practical, hands-on format</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-600 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+            <path d="M20 6 9 17l-5-5">
+            </path>
+          </svg>
+          <span>Immediate workplace application</span>
+        </div>
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Build a Team That Solves Problems — <span class="text-[#16A34A]">Not Escalates Them.</span>
+      </h2>
+      <p class="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">Stop daily firefighting and start systematic operational improvement.</p>
+      <p class="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">Let&#x27;s design a private workshop tailored to your team.</p>
+      <a href="bookConsultation.html" class="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group">Request Private Training Proposal<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform">
+        <path d="M5 12h14">
+        </path>
+        <path d="m12 5 7 7-7 7">
+        </path>
+      </svg>
+    </a>
+    <p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs. No commitment required.</p>
+  </div>
+</section>
 </main>
 <footer class="bg-white border-t border-gray-200">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
@@ -975,7 +959,7 @@
             <a href="practical-lean-problem-solving.html" class="hover:text-gray-600 transition-colors">Practical Lean Problem Solving</a>
           </div>
           <div>
-            <a href="bookConsultation.html" class="hover:text-gray-600 transition-colors">AI Skills for YOUR Team</a>
+            <a href="ai-skills-for-your-team.html" class="hover:text-gray-600 transition-colors">AI Skills for YOUR Team</a>
           </div>
         </div>
       </div>

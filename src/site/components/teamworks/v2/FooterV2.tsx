@@ -20,7 +20,7 @@ export function FooterV2() {
               <div><a href="design-thinking.html" className="hover:text-gray-600 transition-colors">Win Customers Through Design</a></div>
               <div><a href="critical-thinking-kanban.html" className="hover:text-gray-600 transition-colors">Critical Thinking for Better Work</a></div>
               <div><a href="practical-lean-problem-solving.html" className="hover:text-gray-600 transition-colors">Practical Lean Problem Solving</a></div>
-              <div><a href="bookConsultation.html" className="hover:text-gray-600 transition-colors">AI Skills for YOUR Team</a></div>
+              <div><a href="ai-skills-for-your-team.html" className="hover:text-gray-600 transition-colors">AI Skills for YOUR Team</a></div>
             </div>
           </div>
 

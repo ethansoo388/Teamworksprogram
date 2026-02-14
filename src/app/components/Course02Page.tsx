@@ -1,11 +1,11 @@
-import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck, Menu } from "lucide-react";
+import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import moduleGraphicImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
-import productDesignImage from "@/assets/img/teamworks/ciagile-teamworks-course02-product-design-customer-experience.webp";
-import professionalWomanImage from "@/assets/img/teamworks/ciagile-teamworks-course04-root-cause-thinking.webp";
-import teamBuildingImage from "@/assets/img/teamworks/ciagile-teamworks-team-building-outdoor-collaboration.webp";
-import teamIdeasBrainstormImage from "@/assets/img/teamworks/ciagile-teamworks-course02-design-thinking-brainstorming.webp";
-import teamIdeasGroupImage from "@/assets/img/teamworks/ciagile-teamworks-course04-lean-problem-solving-group-discussion.webp";
+import moduleGraphicImage from "@/assets/img/teamworks/designer-working-at-desk-with-drawing-tablet.jpg";
+import productDesignImage from "@/assets/img/teamworks/product-design-customer-experience-creative-work.jpg";
+import professionalWomanImage from "@/assets/img/teamworks/professional-woman-thinking-with-pen.jpg";
+import teamBuildingImage from "@/assets/img/teamworks/team-building-collaboration-outdoors.jpg";
+import teamIdeasBrainstormImage from "@/assets/img/teamworks/team-working-on-ideas-sticky-notes-brainstorming.jpg";
+import teamIdeasGroupImage from "@/assets/img/teamworks/team-working-on-ideas-group-discussion.jpg";
 
 const testimonials = [
   {
@@ -83,29 +83,6 @@ export function Course02Page() {
             <div className="hidden md:block">
               <a href="bookConsultation.html" className="text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all" style={{ backgroundColor: '#E91E8C' }}>
                 Book This Course for Your Team
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              id="mobile-menu-btn"
-              className="md:hidden"
-              aria-label="Open menu"
-              type="button"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          <div id="mobile-menu" className="md:hidden py-6 border-t border-gray-200 hidden">
-            <div className="flex flex-col gap-4">
-              <a href="#modules" className="text-sm py-2">Modules</a>
-              <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-              <a href="#testimonials" className="text-sm py-2">Testimonials</a>
-              <a href="#faq" className="text-sm py-2">FAQ</a>
-              <a href="bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: '#E91E8C' }}>
-                Book This Course
               </a>
             </div>
           </div>

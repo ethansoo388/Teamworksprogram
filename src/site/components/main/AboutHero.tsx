@@ -1,4 +1,4 @@
-import groupLeaningImage from '@/assets/img/main/ciagile-about-hero-workshop-table.webp';
+import groupLeaningImage from '@/assets/img/main/group-working-together-leaning-on-table.jpg';
 
 export function AboutHero() {
   return (

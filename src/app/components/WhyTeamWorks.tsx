@@ -1,6 +1,6 @@
 import { CheckCircle2, Award, Users, TrendingUp, Target, Rocket, Gamepad2, Lightbulb } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-import celebrationImage from "@/assets/img/teamworks/ciagile-teamworks-course04-team-celebration.webp";
+import celebrationImage from "@/assets/img/teamworks/team-celebration-high-five-with-laptop.jpg";
 
 const benefits = [
   {

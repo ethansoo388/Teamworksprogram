@@ -1,10 +1,10 @@
 import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp, Clock, Users, UserCheck } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 import { useState } from "react";
-import heroImage from "@/assets/img/teamworks/ciagile-teamworks-course03-critical-thinking-hero.webp";
-import moduleImage1 from "@/assets/img/teamworks/ciagile-teamworks-course03-module01-kanban.webp";
-import moduleImage2 from "@/assets/img/teamworks/ciagile-teamworks-course03-module02-better-communication.webp";
-import moduleImage3 from "@/assets/img/teamworks/ciagile-teamworks-course03-module03-make-work-visible.webp";
+import heroImage from "@/assets/img/teamworks/applying-critical-thinking.webp";
+import moduleImage1 from "@/assets/img/teamworks/c3m1-kanban.webp";
+import moduleImage2 from "@/assets/img/teamworks/c3m2-betterCommunication.webp";
+import moduleImage3 from "@/assets/img/teamworks/c3m3-workVisible.webp";
 
 export function Course03Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

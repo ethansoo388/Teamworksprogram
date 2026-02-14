@@ -975,47 +975,25 @@ export function Course04Page() {
                   answer: "Yes — retail, logistics, banking, healthcare, F&B, and more."
                 }
               ].map((faq, index) => (
-                <details
+                <div
                   key={index}
-                  className="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]"
+                  className={`bg-white border-2 rounded-xl p-6 transition-colors ${openFaqIndex === index ? "border-[#22C55E]" : "border-gray-200 hover:border-[#22C55E]"}`}
                 >
-                  <summary className="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+                  <button
+                    className="w-full font-medium text-base cursor-pointer flex items-center justify-between text-gray-900 text-left"
+                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  >
                     <span className="flex-1">{faq.question}</span>
-                    <svg
-                      className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <p className="mt-4 text-gray-700 text-base leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </details>
+                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4 ${openFaqIndex === index ? "rotate-180" : ""}`} />
+                  </button>
+                  {openFaqIndex === index && (
+                    <p className="mt-4 text-gray-700 text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
               ))}
             </div>
-
-            {/* Ensure only one FAQ item can be open at a time (static HTML pages) */}
-            <script
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{
-                __html: `(() => {
-  const container = document.getElementById('faq');
-  if (!container) return;
-  const items = Array.from(container.querySelectorAll('details'));
-  items.forEach((item) => {
-    item.addEventListener('toggle', () => {
-      if (!item.open) return;
-      items.forEach((other) => {
-        if (other !== item) other.removeAttribute('open');
-      });
-    });
-  });
-})();`
-              }}
-            />
           </div>
         </section>
 

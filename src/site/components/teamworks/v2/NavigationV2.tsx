@@ -1,6 +1,9 @@
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export function NavigationV2() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -26,60 +29,42 @@ export function NavigationV2() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a
-              href="bookConsultation.html"
-              className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors"
-            >
+            <a href="bookConsultation.html" className="bg-black text-white px-6 py-2.5 rounded-full text-sm hover:bg-gray-800 transition-colors">
               Book Consultation
             </a>
           </div>
 
-          {/* Mobile Menu Button (static-export friendly) */}
-          <button
-            type="button"
+          {/* Mobile Menu Button */}
+          <button 
             className="md:hidden"
-            aria-label="Open menu"
-            aria-controls="teamworks-mobile-menu"
-            data-mobile-toggle
+            onClick={() => setIsOpen(!isOpen)}
           >
-            <span data-icon="open">
-              <Menu className="w-6 h-6" />
-            </span>
-            <span data-icon="close" className="hidden">
-              <X className="w-6 h-6" />
-            </span>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu (always rendered, toggled via main.js for static export) */}
-        <div
-          id="teamworks-mobile-menu"
-          data-mobile-menu
-          className="md:hidden py-6 border-t border-gray-200 hidden"
-          aria-hidden="true"
-        >
-          <div className="flex flex-col gap-4">
-            <a href="#courses" className="text-sm py-2" data-mobile-close>
-              Courses
-            </a>
-            <a href="#impact" className="text-sm py-2" data-mobile-close>
-              Results
-            </a>
-            <a href="#pricing" className="text-sm py-2" data-mobile-close>
-              Pricing
-            </a>
-            <a href="#testimonials" className="text-sm py-2" data-mobile-close>
-              Testimonials
-            </a>
-            <a
-              href="bookConsultation.html"
-              className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center"
-              data-mobile-close
-            >
-              Book Consultation
-            </a>
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden py-6 border-t border-gray-200">
+            <div className="flex flex-col gap-4">
+              <a href="#courses" className="text-sm py-2">
+                Courses
+              </a>
+              <a href="#impact" className="text-sm py-2">
+                Results
+              </a>
+              <a href="#pricing" className="text-sm py-2">
+                Pricing
+              </a>
+              <a href="#testimonials" className="text-sm py-2">
+                Testimonials
+              </a>
+              <a href="bookConsultation.html" className="bg-black text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                Book Consultation
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );

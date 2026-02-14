@@ -1,16 +1,16 @@
 import svgPaths from "./svg-qtx8o74vey";
-import imgImageWithFallback from "@/assets/img/main/ciagile-about-hero-workshop-table-legacy.webp";
-import imgImageWithFallback1 from "@/assets/img/main/ciagile-about-different-banner-team-meeting.webp";
-import imgImageEthanSoo from "@/assets/img/main/ciagile-about-founder-portrait-alt.webp";
-import imgImageWithFallback2 from "@/assets/img/main/ciagile-about-recommendation-panel-image.webp";
-import imgNavigation from "@/assets/img/main/ciagile-main-logo-legacy-nav.webp";
-import businessMeetingImage from "@/assets/img/main/ciagile-about-different-section-team-meeting.webp";
-import ciAgileConsultingImage from "@/assets/img/main/ciagile-main-consulting-methodology-overview.webp";
-import ciAgileLogoImage from "@/assets/img/main/ciagile-main-logo.webp";
-import enterpriseTeamImage from "@/assets/img/main/ciagile-main-enterprise-delivery-frameworks.webp";
-import ethanSooImage from "@/assets/img/main/ciagile-about-founder-portrait.webp";
-import stickyNotesWideImage from "@/assets/img/main/ciagile-about-recommendation-hero-sticky-notes-wide.webp";
-import teamCollabImage from "@/assets/img/main/ciagile-about-recommendation-sticky-notes-duplicate.webp";
+import imgImageWithFallback from "@/assets/img/main/f44f1eee345558c40d51a3aa3e2b9fceb7432cdb.png";
+import imgImageWithFallback1 from "@/assets/img/main/e663da3af181c9fc2508e76fec0498f833ff10f0.png";
+import imgImageEthanSoo from "@/assets/img/main/b8d869daa88d48a6817babfc3c89c4ce9638444a.png";
+import imgImageWithFallback2 from "@/assets/img/main/40b1d8b8c250769ef13971a417b0e95fe4fbfc1f.png";
+import imgNavigation from "@/assets/img/main/fd7a81c1c75169f5c53cda037245ef314f926517.png";
+import businessMeetingImage from "@/assets/img/main/one-on-one-office-discussion-with-laptop.jpg";
+import ciAgileConsultingImage from "@/assets/img/main/ci-agile-consulting-approach-methodology-overview.png";
+import ciAgileLogoImage from "@/assets/img/main/ci-agile-logo.png";
+import enterpriseTeamImage from "@/assets/img/main/enterprise-team-delivery-systems-execution-frameworks.png";
+import ethanSooImage from "@/assets/img/main/Ethan-picture.jpg";
+import stickyNotesWideImage from "@/assets/img/main/sticky-notes-on-whiteboard-workshop-wide.jpg";
+import teamCollabImage from "@/assets/img/main/team-collaboration-problem-solving-workshop.png";
 
 function Container1() {
   return <div className="absolute bg-[#06c] h-[4px] left-0 top-[32px] w-[48px]" data-name="Container" />;
@@ -90,10 +90,8 @@ function WhatWeStandAgainst() {
     <div className="flex flex-col gap-8 bg-[#f9fafb] border-r border-[#e5e7eb] p-10">
       <div className="flex items-center gap-3">
         <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24">
-          {/* Circle + X icon (red), matching the visual treatment of the blue check icon */}
-          <path d={svgPaths.pace200} stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          <path d="M18 6L6 18" stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-          <path d="M6 6L18 18" stroke="#CC0000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          <path d="M18 6L6 18" stroke="#99A1AF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          <path d="M6 6L18 18" stroke="#99A1AF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
         </svg>
         <h3 className="text-sm font-normal text-[#6a7282] tracking-[0.7px] uppercase">What We Stand Against</h3>
       </div>
@@ -636,17 +634,17 @@ function Section3() {
               {/* Social Icons */}
               <div className="flex gap-3 mt-3">
                 {/* LinkedIn Icon */}
-                <a href="https://www.linkedin.com/in/ethansoo/" className="w-5 h-5" target="_blank" rel="noopener noreferrer">
+                <a href="#" className="w-5 h-5">
                   <svg className="w-5 h-5 text-[#99A1AF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
                     <circle cx="4" cy="4" r="2" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} />
                   </svg>
                 </a>
                 
-                {/* WhatsApp Icon */}
-                <a href="https://wa.me/60197889169" className="w-5 h-5" target="_blank" rel="noopener noreferrer">
-                  <svg className="w-5 h-5 text-[#99A1AF]" role="img" viewBox="0 0 24 24" fill="currentColor" aria-label="WhatsApp">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.198.297-.769.967-.942 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.67-1.612-.916-2.207-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.075-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.214 3.074.148.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 5.232h-.001a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64.001 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.896 6.994c-.001 5.45-4.436 9.884-9.891 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.87 11.87 0 0 0 5.735 1.465h.005c6.554 0 11.89-5.335 11.893-11.892a11.82 11.82 0 0 0-3.474-8.402"/>
+                {/* Link Icon */}
+                <a href="#" className="w-5 h-5">
+                  <svg className="w-5 h-5 text-[#99A1AF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                   </svg>
                 </a>
               </div>
@@ -1446,7 +1444,7 @@ function Option7() {
 function Option8() {
   return (
     <div className="absolute left-[-920px] size-0 top-[-4722.09px]" data-name="Option">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-0 not-italic text-[#101828] text-[14px] top-0 w-0 whitespace-pre-wrap">Other (Please specify)</p>
+      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-0 not-italic text-[#101828] text-[14px] top-0 w-0 whitespace-pre-wrap">Other (please specify)</p>
     </div>
   );
 }
@@ -1672,23 +1670,8 @@ function Section6() {
                     <option value="leadership-execution-gap">Leadership decisions don't translate into execution</option>
                     <option value="processes-heavy">Processes are heavy, rigid, or don't fit how we work</option>
                     <option value="ai-value">We want to use AI, but don't know where it creates real value</option>
-                    <option value="other">Other (Please specify)</option>
+                    <option value="other">Other (please specify)</option>
                   </select>
-                </div>
-
-                
-
-                {/* Additional Context */}
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="message" className="text-sm font-normal text-[#364153]">
-                    Anything else you'd like us to know?
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="border border-[#d1d5dc] rounded-none px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0066CC] focus:border-transparent resize-none"
-                  />
                 </div>
 
                 {/* Submit Button */}
