@@ -491,7 +491,7 @@ export function Course05Page() {
                     <ChevronLeft className="w-5 h-5" />
                   </button>
 
-                  <div className="flex gap-2">
+                  <div className="relative flex gap-2">
                     {stories.map((_, index) => (
                       <button
                         key={index}
@@ -506,6 +506,16 @@ export function Course05Page() {
                         aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
+
+                    {/* Progress bar (Stripe-style) */}
+                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div
+                        data-tw05-progress
+                        className="h-full bg-[#0EA7E9] rounded-full origin-left"
+                        style={{ transform: "scaleX(0)" }}
+                        aria-hidden="true"
+                      />
+                    </div>
                   </div>
 
                   <button
@@ -525,6 +535,13 @@ export function Course05Page() {
               Scoped to [data-tw05-carousel] and written without modern JS syntax
               to avoid breaking on older browsers.
             */}
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
+@keyframes tw05ProgressFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+`,
+              }}
+            />
             <script
               dangerouslySetInnerHTML={{
                 __html: `
@@ -542,7 +559,12 @@ export function Course05Page() {
     if (!slides.length) return;
 
     var current = 0;
-    var timer = null;
+    var timeoutId = null;
+    var lastStart = null;
+    var remaining = 3500;
+    var isPaused = false;
+    var DURATION = 3500;
+    var progress = root.querySelector('[data-tw05-progress]');
 
     function show(i){
       var len = slides.length;
@@ -587,16 +609,57 @@ export function Course05Page() {
       }
     }
 
-    function startAuto(){
-      if (timer) window.clearInterval(timer);
-      timer = window.setInterval(function(){
+    function restartProgress(){
+      if (!progress) return;
+      progress.style.animation = 'none';
+      // force reflow
+      progress.offsetHeight;
+      progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards';
+      progress.style.animationPlayState = isPaused ? 'paused' : 'running';
+    }
+
+    function scheduleNext(){
+      if (timeoutId) window.clearTimeout(timeoutId);
+      lastStart = new Date().getTime();
+      timeoutId = window.setTimeout(function(){
         show(current + 1);
-      }, 2500);
+        resetAuto();
+      }, remaining);
+    }
+
+    function resetAuto(){
+      remaining = DURATION;
+      isPaused = false;
+      restartProgress();
+      scheduleNext();
+    }
+
+    function pauseAuto(){
+      if (isPaused) return;
+      isPaused = true;
+      if (timeoutId) window.clearTimeout(timeoutId);
+      if (lastStart !== null){
+        var elapsed = new Date().getTime() - lastStart;
+        remaining = remaining - elapsed;
+        if (remaining < 0) remaining = 0;
+      }
+      if (progress){
+        progress.style.animationPlayState = 'paused';
+      }
+    }
+
+    function resumeAuto(){
+      if (!isPaused) return;
+      isPaused = false;
+      if (progress){
+        progress.style.animationPlayState = 'running';
+      }
+      scheduleNext();
     }
 
     // Initial state + auto
     show(0);
-    startAuto();
+    resetAuto();
 
     for (var i = 0; i < dots.length; i++){
       (function(dot){
@@ -605,7 +668,7 @@ export function Course05Page() {
           var idx = parseInt(idxAttr || '0', 10);
           if (isNaN(idx)) idx = 0;
           show(idx);
-          startAuto();
+          resetAuto();
         });
       })(dots[i]);
     }
@@ -613,13 +676,30 @@ export function Course05Page() {
     if (prevBtn){
       prevBtn.addEventListener('click', function(){
         show(current - 1);
-        startAuto();
+        resetAuto();
       });
     }
     if (nextBtn){
       nextBtn.addEventListener('click', function(){
         show(current + 1);
-        startAuto();
+        resetAuto();
+      });
+    }
+
+    // Pause on hover (desktop only)
+    var canHover = false;
+    try {
+      if (window.matchMedia) {
+        canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      }
+    } catch(e) {}
+
+    if (canHover){
+      root.addEventListener('mouseenter', function(){
+        pauseAuto();
+      });
+      root.addEventListener('mouseleave', function(){
+        resumeAuto();
       });
     }
   }
