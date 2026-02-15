@@ -250,4 +250,97 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  // TeamWorks Course 05 - Your Advantage carousel (static export)
+  const tw05Carousel = document.querySelector('[data-tw05-carousel]');
+  if (tw05Carousel) {
+    const slides = Array.from(tw05Carousel.querySelectorAll('[data-tw05-slide]'));
+    const dots = Array.from(tw05Carousel.querySelectorAll('[data-tw05-dot]'));
+    const prevBtn = tw05Carousel.querySelector('[data-tw05-prev]');
+    const nextBtn = tw05Carousel.querySelector('[data-tw05-next]');
+
+    let current = 0;
+
+    const show = (i) => {
+      if (!slides.length) return;
+      const nextIndex = ((i % slides.length) + slides.length) % slides.length;
+      current = nextIndex;
+
+      slides.forEach((slide, idx) => {
+        if (!(slide instanceof HTMLElement)) return;
+        if (idx === current) {
+          slide.classList.remove('hidden');
+          slide.classList.add('block');
+          slide.classList.remove('opacity-0');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.add('hidden');
+          slide.classList.remove('block');
+          slide.classList.add('opacity-0');
+          slide.classList.remove('opacity-100');
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        if (!(dot instanceof HTMLElement)) return;
+        if (idx === current) {
+          dot.classList.add('w-8', 'h-2', 'bg-[#0EA7E9]');
+          dot.classList.remove('w-2', 'h-2', 'bg-gray-300');
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.classList.remove('w-8', 'h-2', 'bg-[#0EA7E9]');
+          dot.classList.add('w-2', 'h-2', 'bg-gray-300');
+          dot.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    // Initial state
+    show(0);
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const i = Number(dot.getAttribute('data-index') ?? '0');
+        show(i);
+      });
+    });
+
+    if (prevBtn) prevBtn.addEventListener('click', () => show(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => show(current + 1));
+  }
+
+  // TeamWorks Course 05 - FAQ accordion (only one open at a time, static export)
+  const tw05Faq = document.querySelector('[data-tw05-faq]');
+  if (tw05Faq) {
+    const items = Array.from(tw05Faq.querySelectorAll('[data-tw05-faq-item]'));
+
+    const setOpen = (openIndex) => {
+      items.forEach((item) => {
+        if (!(item instanceof HTMLElement)) return;
+        const idx = Number(item.getAttribute('data-index') ?? '-1');
+        const isOpen = idx === openIndex;
+
+        item.classList.toggle('border-[#0EA7E9]', isOpen);
+        item.classList.toggle('border-gray-200', !isOpen);
+
+        const answer = item.querySelector('[data-tw05-faq-answer]');
+        if (answer instanceof HTMLElement) answer.classList.toggle('hidden', !isOpen);
+
+        const icon = item.querySelector('[data-tw05-faq-icon]');
+        if (icon instanceof HTMLElement) icon.classList.toggle('rotate-180', isOpen);
+      });
+    };
+
+    setOpen(0);
+
+    items.forEach((item) => {
+      const btn = item.querySelector('[data-tw05-faq-button]');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const idx = Number(item.getAttribute('data-index') ?? '0');
+        setOpen(idx);
+      });
+    });
+  }
 });
