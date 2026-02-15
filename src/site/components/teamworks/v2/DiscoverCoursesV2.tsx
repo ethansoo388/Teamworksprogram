@@ -75,7 +75,7 @@ const courses = [
       light: "#E0F2FE",
       dark: "#0284C7"
     },
-    buttonText: "Book this course",
+    buttonText: "Learn more",
     buttonLink: "ai-skills-for-your-team.html"
   }
 ];
