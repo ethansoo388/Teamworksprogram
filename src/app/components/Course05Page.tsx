@@ -520,6 +520,120 @@ export function Course05Page() {
               </div>
             </div>
 
+            {/*
+              Static-export friendly carousel behavior (Course 05 only).
+              Scoped to [data-tw05-carousel] and written without modern JS syntax
+              to avoid breaking on older browsers.
+            */}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+(function(){
+  function initTw05Carousel(){
+    var root = document.querySelector('[data-tw05-carousel]');
+    if (!root) return;
+    if (root.getAttribute('data-tw05-initialized') === 'true') return;
+    root.setAttribute('data-tw05-initialized', 'true');
+
+    var slides = Array.prototype.slice.call(root.querySelectorAll('[data-tw05-slide]'));
+    var dots = Array.prototype.slice.call(root.querySelectorAll('[data-tw05-dot]'));
+    var prevBtn = root.querySelector('[data-tw05-prev]');
+    var nextBtn = root.querySelector('[data-tw05-next]');
+    if (!slides.length) return;
+
+    var current = 0;
+    var timer = null;
+
+    function show(i){
+      var len = slides.length;
+      var nextIndex = ((i % len) + len) % len;
+      current = nextIndex;
+
+      for (var s = 0; s < slides.length; s++){
+        var slide = slides[s];
+        if (!slide || !slide.classList) continue;
+        if (s === current){
+          slide.classList.remove('hidden');
+          slide.classList.add('block');
+          slide.classList.remove('opacity-0');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.add('hidden');
+          slide.classList.remove('block');
+          slide.classList.add('opacity-0');
+          slide.classList.remove('opacity-100');
+        }
+      }
+
+      for (var d = 0; d < dots.length; d++){
+        var dot = dots[d];
+        if (!dot || !dot.classList) continue;
+        if (d === current){
+          dot.classList.add('w-8');
+          dot.classList.add('h-2');
+          dot.classList.add('bg-[#0EA7E9]');
+          dot.classList.remove('w-2');
+          dot.classList.remove('bg-gray-300');
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.classList.remove('w-8');
+          dot.classList.remove('h-2');
+          dot.classList.remove('bg-[#0EA7E9]');
+          dot.classList.add('w-2');
+          dot.classList.add('h-2');
+          dot.classList.add('bg-gray-300');
+          dot.removeAttribute('aria-current');
+        }
+      }
+    }
+
+    function startAuto(){
+      if (timer) window.clearInterval(timer);
+      timer = window.setInterval(function(){
+        show(current + 1);
+      }, 2500);
+    }
+
+    // Initial state + auto
+    show(0);
+    startAuto();
+
+    for (var i = 0; i < dots.length; i++){
+      (function(dot){
+        dot.addEventListener('click', function(){
+          var idxAttr = dot.getAttribute('data-index');
+          var idx = parseInt(idxAttr || '0', 10);
+          if (isNaN(idx)) idx = 0;
+          show(idx);
+          startAuto();
+        });
+      })(dots[i]);
+    }
+
+    if (prevBtn){
+      prevBtn.addEventListener('click', function(){
+        show(current - 1);
+        startAuto();
+      });
+    }
+    if (nextBtn){
+      nextBtn.addEventListener('click', function(){
+        show(current + 1);
+        startAuto();
+      });
+    }
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initTw05Carousel);
+  } else {
+    initTw05Carousel();
+  }
+})();
+                `,
+              }}
+            />
+
             {/* Bottom Message */}
             <div className="text-center mt-16 max-w-3xl mx-auto">
               <p className="text-xl text-gray-700 leading-relaxed">
