@@ -18,13 +18,23 @@
     <div class="site-main">
       <div class="bg-white w-full">
         <nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
-          <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-16 lg:px-24">
+          <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
             <div class="flex items-center h-[24px]">
               <a href="index.html" class="no-underline flex items-center h-full">
-                <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="assets/img/main/ci-agile-logo.png"/>
+                <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="assets/img/main/ciagile-main-logo.webp"/>
               </a>
             </div>
-            <div class="flex gap-6 md:gap-8 items-center">
+            <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16">
+                </path>
+                <path d="M4 12h16">
+                </path>
+                <path d="M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div class="hidden md:flex gap-6 md:gap-8 items-center">
               <div class="relative flex items-center" data-dropdown-container="programs">
                 <button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
                   <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span>
@@ -38,7 +48,7 @@
                     <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
                     <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Improve team execution, speed, and clarity</div>
                   </a>
-                  <a href="#enterprise-section" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
+                  <a href="index.html#enterprise-section" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
                     <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
                     <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div>
                   </a>
@@ -62,13 +72,30 @@
               </a>
             </div>
           </div>
+          <div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+            <div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true">
+            </div>
+            <div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
+                <div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
+                <a href="teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a>
+                <a href="index.html#enterprise-section" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a>
+                <div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div>
+                <a href="aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a>
+                <a href="contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a>
+                <a href="contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true">
+                  <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </nav>
         <div class="bg-gradient-to-b from-white to-[#fafbfc] w-full py-16 md:py-24 lg:py-32">
           <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
               <div class="flex flex-col gap-6 lg:gap-10">
                 <div class="w-full rounded-[10px] overflow-hidden">
-                  <img alt="Team collaborating in workshop" class="w-full h-[280px] object-cover" src="assets/img/main/sticky-notes-on-whiteboard-workshop.jpg"/>
+                  <img alt="Team collaborating in workshop" class="w-full h-[280px] object-cover" src="assets/img/main/ciagile-contact-hero-sticky-notes-closeup.webp"/>
                 </div>
                 <div class="flex flex-col gap-6">
                   <div class="flex flex-col gap-4">
@@ -163,6 +190,7 @@
                   <option value="decisions-not-translating">Leadership decisions don&#x27;t translate into execution</option>
                   <option value="heavy-processes">Processes are heavy or don&#x27;t fit how we work</option>
                   <option value="ai-uncertainty">We want to use AI but don&#x27;t know where it creates value</option>
+                  <option value="other">Other (Please specify)</option>
                 </select>
               </div>
               <div class="flex flex-col gap-1.5">
@@ -249,18 +277,18 @@
     <div class="bg-white w-full h-16 md:h-20 lg:h-28">
     </div>
     <div class="bg-[#0f1419] content-stretch flex flex-col min-h-[425px] items-start w-full py-16" data-name="Footer">
-      <div class="w-full max-w-7xl mx-auto px-8 lg:px-16 flex flex-col gap-8">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 min-w-0 flex flex-col gap-8">
         <div class="relative shrink-0 w-full py-16" data-name="Container">
           <div aria-hidden="true" class="absolute border-[#1e2939] border-b border-solid inset-0 pointer-events-none">
           </div>
           <div class="flex items-start gap-8 w-full">
-            <div class="w-[352px]" data-name="Container">
+            <div class="w-full sm:w-[352px]" data-name="Container">
               <div class="flex flex-col gap-4">
-                <div class="h-[48px] w-[210px]" data-name="Image (CI Agile)">
+                <div class="w-full sm:w-[210px]" data-name="Image (CI Agile)">
                   <img alt="CI Agile Logo" class="h-full w-full object-contain object-left" src="assets/img/main/ci-agile-logo-white.png"/>
                 </div>
-                <div class="w-full max-w-[352px]" data-name="Paragraph">
-                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[22.75px] text-[#99a1af] text-[14px] max-w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+                <div class="w-full max-w-full sm:w-[352px]" data-name="Paragraph">
+                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[22.75px] text-[#99a1af] text-[14px] max-w-full sm:w-[314px] whitespace-pre-wrap">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
                 </div>
                 <div class="flex gap-[16px] items-start" data-name="Container">
                   <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="relative shrink-0 size-[40px] hover:opacity-80 transition-opacity" data-name="Link">
@@ -315,54 +343,54 @@
               </div>
             </div>
             <div class="flex gap-[48px] items-start ml-auto">
-              <div class="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
-                <div class="h-[16px] relative shrink-0 w-full" data-name="Heading 3">
-                  <p class="absolute font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Programs</p>
+              <div class="flex flex-col gap-[20px] items-start w-full sm:w-[152px]" data-name="Container">
+                <div class="relative shrink-0 w-full" data-name="Heading 3">
+                  <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">Programs</p>
                 </div>
                 <div class="content-stretch flex flex-col gap-[12px] h-[60px] items-start relative shrink-0 w-full" data-name="List">
-                  <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                    <a href="teamworks/index.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[62.75px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+                  <div class="relative shrink-0 w-full" data-name="List Item">
+                    <a href="teamworks/index.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[62.75px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
                       <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">For SMEs</p>
                     </a>
                   </div>
-                  <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                    <a href="index.html#enterprise-section" data-scroll-to="enterprise-section" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
+                  <div class="relative shrink-0 w-full" data-name="List Item">
+                    <a href="index.html#enterprise-section" data-scroll-to="enterprise-section" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[100.406px] no-underline hover:opacity-80 transition-opacity cursor-pointer" data-name="Link">
                       <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">For Enterprises</p>
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col gap-[20px] items-start w-[152px]" data-name="Container">
-                <div class="h-[16px] relative shrink-0 w-full" data-name="Heading 3">
-                  <p class="absolute font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">About</p>
+              <div class="flex flex-col gap-[20px] items-start w-full sm:w-[152px]" data-name="Container">
+                <div class="relative shrink-0 w-full" data-name="Heading 3">
+                  <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px] tracking-[1.2px] uppercase">About</p>
                 </div>
                 <div class="content-stretch flex flex-col gap-[12px] h-[60px] items-start relative shrink-0 w-full" data-name="List">
-                  <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                    <a href="aboutus.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[61.234px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+                  <div class="relative shrink-0 w-full" data-name="List Item">
+                    <a href="aboutus.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[61.234px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
                       <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">About Us</p>
                     </a>
                   </div>
-                  <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                    <a href="contactus.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[73.727px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+                  <div class="relative shrink-0 w-full" data-name="List Item">
+                    <a href="contactus.html" class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[73.727px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
                       <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Contact Us</p>
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="w-[352px]" data-name="Container">
+              <div class="w-full sm:w-[352px]" data-name="Container">
                 <div class="flex flex-col gap-[20px]">
                   <div class="w-full" data-name="Heading 3">
                     <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] text-[#6a7282] text-[12px] tracking-[1.2px] uppercase">Contact</p>
                   </div>
                   <div class="flex flex-col gap-[12px] items-start w-full" data-name="List">
-                    <div class="h-[20px] relative shrink-0 w-full" data-name="List Item">
-                      <a href="mailto:romanoff@ciagile.com?subject=Service%20Inquiry" class="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
-                        <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">romanoff@ciagile.com</p>
+                    <div class="relative shrink-0 w-full" data-name="List Item">
+                      <a href="mailto:romanoff@ciagile.com?subject=Service%20Inquiry" class="absolute h-[20px] left-0 top-0 w-full sm:w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+                        <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">romanoff@ciagile.com</p>
                       </a>
                     </div>
-                    <div class="h-[20px] relative shrink-0 w-full" data-name="List Item">
-                      <a href="https://wa.me/60192981055?text=Service%20Inquiry" target="_blank" rel="noopener noreferrer" class="absolute h-[20px] left-0 top-0 w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
-                        <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">+60 19 298 1055</p>
+                    <div class="relative shrink-0 w-full" data-name="List Item">
+                      <a href="https://wa.me/60192981055?text=Service%20Inquiry" target="_blank" rel="noopener noreferrer" class="absolute h-[20px] left-0 top-0 w-full sm:w-[352px] no-underline hover:opacity-80 transition-opacity" data-name="Link">
+                        <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] left-0 not-italic text-[#99a1af] text-[14px] top-[0.5px]">+60 19 298 1055</p>
                       </a>
                     </div>
                   </div>
@@ -370,13 +398,13 @@
                     <p class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[16px] text-[#6a7282] text-[12px] tracking-[1.2px] uppercase">Our Location</p>
                   </div>
                   <div class="flex flex-col gap-[12px] items-start w-full" data-name="List">
-                    <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                      <div class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[58.07px]" data-name="Text">
+                    <div class="relative shrink-0 w-full" data-name="List Item">
+                      <div class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[58.07px]" data-name="Text">
                         <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Malaysia</p>
                       </div>
                     </div>
-                    <div class="h-[24px] relative shrink-0 w-full" data-name="List Item">
-                      <div class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-[67.266px]" data-name="Text">
+                    <div class="relative shrink-0 w-full" data-name="List Item">
+                      <div class="absolute content-stretch flex h-[17px] items-start left-0 top-[4px] w-full sm:w-[67.266px]" data-name="Text">
                         <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[20px] not-italic relative shrink-0 text-[#99a1af] text-[14px]">Singapore</p>
                       </div>
                     </div>
@@ -387,26 +415,26 @@
           </div>
         </div>
         <div class="content-stretch flex h-[80px] items-center justify-between relative shrink-0 w-full" data-name="Container">
-          <div class="h-[16px] relative shrink-0 w-[204.328px]" data-name="Paragraph">
+          <div class="relative shrink-0 w-full sm:w-[204.328px]" data-name="Paragraph">
             <div class="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-              <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">© 2025 CI Agile. All rights reserved.</p>
+              <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">© 2025 CI Agile. All rights reserved.</p>
             </div>
           </div>
-          <div class="h-[16px] relative shrink-0 w-[316.984px]" data-name="Container">
+          <div class="relative shrink-0 w-full sm:w-[316.984px]" data-name="Container">
             <div class="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[32px] items-start relative size-full">
-              <div class="h-[16px] relative shrink-0 w-[79.344px]" data-name="Link">
+              <div class="relative shrink-0 w-full sm:w-[79.344px]" data-name="Link">
                 <div class="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Privacy Policy</p>
+                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Privacy Policy</p>
                 </div>
               </div>
               <div class="flex-[1_0_0] h-[16px] min-h-px min-w-px relative" data-name="Link">
                 <div class="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Terms of Service</p>
+                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Terms of Service</p>
                 </div>
               </div>
-              <div class="h-[16px] relative shrink-0 w-[76.992px]" data-name="Link">
+              <div class="relative shrink-0 w-full sm:w-[76.992px]" data-name="Link">
                 <div class="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p class="absolute font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Cookie Policy</p>
+                  <p class="font-[&#x27;Inter:Light&#x27;,sans-serif] font-light leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-[0.5px]">Cookie Policy</p>
                 </div>
               </div>
             </div>

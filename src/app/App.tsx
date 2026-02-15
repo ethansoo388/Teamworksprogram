@@ -10,6 +10,7 @@ import { LandingPage } from "@/site/pages/teamworks/LandingPage";
 import { CreatingSuperTeamsPage } from "@/site/pages/teamworks/CreatingSuperTeamsPage";
 import { DesignLikeApplePage } from "@/site/pages/teamworks/DesignLikeApplePage";
 import { OperationalExcellencePage } from "@/site/pages/teamworks/OperationalExcellencePage";
+import { AISkillsPage } from "@/site/pages/teamworks/AISkillsPage";
 import { BookConsultationPage } from "@/site/pages/teamworks/BookConsultationPage";
 
 export default function App() {
@@ -72,6 +73,7 @@ export default function App() {
     '#/teamworks/creating-super-teams.html': CreatingSuperTeamsPage,
     '#/teamworks/design-thinking.html': DesignLikeApplePage,
     '#/teamworks/critical-thinking-kanban.html': OperationalExcellencePage,
+    '#/teamworks/ai-skills-for-your-team.html': AISkillsPage,
     '#/teamworks/bookConsultation.html': BookConsultationPage,
   };
 

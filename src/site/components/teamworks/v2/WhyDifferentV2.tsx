@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
 import { Gamepad2, GraduationCap, Zap, Users } from "lucide-react";
-import workshopImage from "@/assets/img/teamworks/highly-interactivity.webp";
+import workshopImage from "@/assets/img/teamworks/ciagile-teamworks-course-high-interactivity.webp";
 
 const features = [
   {

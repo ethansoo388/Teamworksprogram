@@ -1,7 +1,7 @@
-import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star } from "lucide-react";
+import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, Menu } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import highEnergyTeamImage from "@/assets/img/teamworks/high-energy-team-standing-together-smiling.jpg";
-import successfulAgileImage from "@/assets/img/teamworks/Successful-asia-agile-team-doing-work-and-having-fun-in-workshop-activities-classroom-environment.jpg";
+import highEnergyTeamImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
+import successfulAgileImage from "@/assets/img/teamworks/ciagile-teamworks-course01-workshop-classroom-activity.webp";
 
 const faqItems = [
   {
@@ -56,6 +56,29 @@ export function CoursePage() {
             <div className="hidden md:block">
               <a href="bookConsultation.html" className="bg-purple-600 text-white px-6 py-2.5 rounded-full text-sm hover:opacity-90 transition-all">
                 Book This Course for Your Team
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              id="mobile-menu-btn"
+              className="md:hidden"
+              aria-label="Open menu"
+              type="button"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div id="mobile-menu" className="md:hidden py-6 border-t border-gray-200 hidden">
+            <div className="flex flex-col gap-4">
+              <a href="#modules" className="text-sm py-2">Modules</a>
+              <a href="#outcomes" className="text-sm py-2">Outcomes</a>
+              <a href="#testimonials" className="text-sm py-2">Testimonials</a>
+              <a href="#faq" className="text-sm py-2">FAQ</a>
+              <a href="bookConsultation.html" className="bg-purple-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                Book This Course
               </a>
             </div>
           </div>

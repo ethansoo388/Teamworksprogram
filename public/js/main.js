@@ -7,7 +7,90 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // Dropdown navigation functionality (main site) - HOVER BASED
+  // Mobile hamburger menus (all pages) - STATIC EXPORT FRIENDLY
+  // Supports multiple independent menus per page via:
+  // - [data-mobile-toggle] on the toggle button
+  // - aria-controls="<menu-id>" pointing to the menu container
+  // - the menu container having id="<menu-id>" and [data-mobile-menu]
+  // Optional:
+  // - [data-mobile-backdrop] inside the menu for click-to-close
+  // - [data-mobile-close] on links/buttons that should close the menu on click
+  const toggles = Array.from(document.querySelectorAll('[data-mobile-toggle]'));
+  const menusById = new Map();
+  Array.from(document.querySelectorAll('[data-mobile-menu]')).forEach((el) => {
+    if (el instanceof HTMLElement && el.id) menusById.set(el.id, el);
+  });
+
+  const setBodyScrollLocked = (locked) => {
+    // If any menu is open, lock; if none open, unlock
+    const anyOpen = Array.from(menusById.values()).some((m) => !m.classList.contains('hidden'));
+    document.body.style.overflow = (locked ?? anyOpen) ? 'hidden' : '';
+  };
+
+  const closeMenu = (menu) => {
+    if (!menu) return;
+    menu.classList.add('hidden');
+    menu.setAttribute('aria-hidden', 'true');
+    // Toggle optional icons (open/close) within the related toggle button
+    const btn = toggles.find((t) => t.getAttribute('aria-controls') === menu.id);
+    if (btn) {
+      const openIcon = btn.querySelector('[data-icon="open"]');
+      const closeIcon = btn.querySelector('[data-icon="close"]');
+      if (openIcon) openIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+    }
+    setBodyScrollLocked(false);
+  };
+
+  const openMenu = (menu) => {
+    if (!menu) return;
+    menu.classList.remove('hidden');
+    menu.setAttribute('aria-hidden', 'false');
+    const btn = toggles.find((t) => t.getAttribute('aria-controls') === menu.id);
+    if (btn) {
+      const openIcon = btn.querySelector('[data-icon="open"]');
+      const closeIcon = btn.querySelector('[data-icon="close"]');
+      if (openIcon) openIcon.classList.add('hidden');
+      if (closeIcon) closeIcon.classList.remove('hidden');
+    }
+    setBodyScrollLocked(true);
+  };
+
+  const toggleMenu = (menu) => {
+    if (!menu) return;
+    if (menu.classList.contains('hidden')) openMenu(menu);
+    else closeMenu(menu);
+  };
+
+  toggles.forEach((btn) => {
+    if (!(btn instanceof HTMLElement)) return;
+    const id = btn.getAttribute('aria-controls');
+    if (!id) return;
+    const menu = document.getElementById(id);
+    if (!(menu instanceof HTMLElement)) return;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMenu(menu);
+    });
+
+    // Backdrop close (if exists)
+    const backdrop = menu.querySelector('[data-mobile-backdrop]');
+    if (backdrop) {
+      backdrop.addEventListener('click', () => closeMenu(menu));
+    }
+
+    // Close when clicking any item marked with data-mobile-close (or any anchor by default)
+    menu.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest('[data-mobile-close]') || target.closest('a')) {
+        closeMenu(menu);
+      }
+    });
+  });
+
+  // Dropdown navigation functionality (main site) - HOVER BASED - HOVER BASED
   const dropdownContainers = document.querySelectorAll('[data-dropdown-container]');
   
   dropdownContainers.forEach(container => {

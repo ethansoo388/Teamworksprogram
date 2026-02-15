@@ -1,6 +1,6 @@
 import { ArrowRight, Play, Sparkles, Users, Calendar } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-import heroImage from "@/assets/img/teamworks/group-gathered-around-table-outdoor-activity.jpg";
+import heroImage from "@/assets/img/teamworks/ciagile-teamworks-team-activity-outdoor-table.webp";
 
 export function HeroSection() {
   return (

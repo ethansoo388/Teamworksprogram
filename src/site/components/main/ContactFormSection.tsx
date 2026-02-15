@@ -1,5 +1,5 @@
 // Responsive Contact Form Section - refactored from Figma import
-import stickyNotesImage from '@/assets/img/main/sticky-notes-on-whiteboard-workshop.jpg';
+import stickyNotesImage from '@/assets/img/main/ciagile-contact-hero-sticky-notes-closeup.webp';
 
 export function ContactFormSection() {
   return (
@@ -201,6 +201,7 @@ export function ContactFormSection() {
                   <option value="decisions-not-translating">Leadership decisions don't translate into execution</option>
                   <option value="heavy-processes">Processes are heavy or don't fit how we work</option>
                   <option value="ai-uncertainty">We want to use AI but don't know where it creates value</option>
+                  <option value="other">Other (Please specify)</option>
                 </select>
               </div>
 
