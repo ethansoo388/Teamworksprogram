@@ -485,7 +485,7 @@
                       </path>
                     </svg>
                   </button>
-                  <div class="flex gap-2">
+                  <div class="relative flex gap-2">
                     <button type="button" data-tw05-dot="true" data-index="0" class="transition-all duration-300 rounded-full w-8 h-2 bg-[#0EA7E9]" aria-label="Go to slide 1">
                     </button>
                     <button type="button" data-tw05-dot="true" data-index="1" class="transition-all duration-300 rounded-full w-2 h-2 bg-gray-300 hover:bg-gray-400" aria-label="Go to slide 2">
@@ -500,6 +500,10 @@
                     </button>
                     <button type="button" data-tw05-dot="true" data-index="6" class="transition-all duration-300 rounded-full w-2 h-2 bg-gray-300 hover:bg-gray-400" aria-label="Go to slide 7">
                     </button>
+                    <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div data-tw05-progress="true" class="h-full bg-[#0EA7E9] rounded-full origin-left" style="transform:scaleX(0)" aria-hidden="true">
+                      </div>
+                    </div>
                   </div>
                   <button type="button" data-tw05-next="true" class="w-12 h-12 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg" aria-label="Next slide">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5">
@@ -510,6 +514,9 @@
                 </div>
               </div>
             </div>
+            <style>
+              @keyframes tw05ProgressFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+            </style>
             <script>
               (function(){
               function initTw05Carousel(){
@@ -525,7 +532,12 @@
               if (!slides.length) return;
               
               var current = 0;
-              var timer = null;
+              var timeoutId = null;
+              var lastStart = null;
+              var remaining = 3500;
+              var isPaused = false;
+              var DURATION = 3500;
+              var progress = root.querySelector('[data-tw05-progress]');
               
               function show(i){
               var len = slides.length;
@@ -570,16 +582,57 @@
               }
               }
               
-              function startAuto(){
-              if (timer) window.clearInterval(timer);
-              timer = window.setInterval(function(){
+              function restartProgress(){
+              if (!progress) return;
+              progress.style.animation = 'none';
+              // force reflow
+              progress.offsetHeight;
+              progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards';
+              progress.style.animationPlayState = isPaused ? 'paused' : 'running';
+              }
+              
+              function scheduleNext(){
+              if (timeoutId) window.clearTimeout(timeoutId);
+              lastStart = new Date().getTime();
+              timeoutId = window.setTimeout(function(){
               show(current + 1);
-              }, 2500);
+              resetAuto();
+              }, remaining);
+              }
+              
+              function resetAuto(){
+              remaining = DURATION;
+              isPaused = false;
+              restartProgress();
+              scheduleNext();
+              }
+              
+              function pauseAuto(){
+              if (isPaused) return;
+              isPaused = true;
+              if (timeoutId) window.clearTimeout(timeoutId);
+              if (lastStart !== null){
+              var elapsed = new Date().getTime() - lastStart;
+              remaining = remaining - elapsed;
+              if (remaining < 0) remaining = 0;
+              }
+              if (progress){
+              progress.style.animationPlayState = 'paused';
+              }
+              }
+              
+              function resumeAuto(){
+              if (!isPaused) return;
+              isPaused = false;
+              if (progress){
+              progress.style.animationPlayState = 'running';
+              }
+              scheduleNext();
               }
               
               // Initial state + auto
               show(0);
-              startAuto();
+              resetAuto();
               
               for (var i = 0; i < dots.length; i++){
               (function(dot){
@@ -588,7 +641,7 @@
               var idx = parseInt(idxAttr || '0', 10);
               if (isNaN(idx)) idx = 0;
               show(idx);
-              startAuto();
+              resetAuto();
               });
               })(dots[i]);
               }
@@ -596,13 +649,30 @@
               if (prevBtn){
               prevBtn.addEventListener('click', function(){
               show(current - 1);
-              startAuto();
+              resetAuto();
               });
               }
               if (nextBtn){
               nextBtn.addEventListener('click', function(){
               show(current + 1);
-              startAuto();
+              resetAuto();
+              });
+              }
+              
+              // Pause on hover (desktop only)
+              var canHover = false;
+              try {
+              if (window.matchMedia) {
+              canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+              }
+              } catch(e) {}
+              
+              if (canHover){
+              root.addEventListener('mouseenter', function(){
+              pauseAuto();
+              });
+              root.addEventListener('mouseleave', function(){
+              resumeAuto();
               });
               }
               }
