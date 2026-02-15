@@ -261,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = tw05Carousel.querySelector('[data-tw05-next]');
 
     let current = 0;
+    let autoTimer = null;
 
     const show = (i) => {
       if (!slides.length) return;
@@ -299,15 +300,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial state
     show(0);
 
+    const startAuto = () => {
+      if (autoTimer) clearInterval(autoTimer);
+      autoTimer = setInterval(() => {
+        show(current + 1);
+      }, 2500);
+    };
+
+    // Auto-advance every 2.5 seconds
+    startAuto();
+
     dots.forEach((dot) => {
       dot.addEventListener('click', () => {
         const i = Number(dot.getAttribute('data-index') ?? '0');
         show(i);
+        startAuto();
       });
     });
 
-    if (prevBtn) prevBtn.addEventListener('click', () => show(current - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => show(current + 1));
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      show(current - 1);
+      startAuto();
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      show(current + 1);
+      startAuto();
+    });
+
+    // Cleanup
+    window.addEventListener('beforeunload', () => {
+      if (autoTimer) clearInterval(autoTimer);
+    });
   }
 
   // TeamWorks Course 05 - FAQ accordion (only one open at a time, static export)
