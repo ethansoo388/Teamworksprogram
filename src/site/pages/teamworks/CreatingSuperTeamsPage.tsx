@@ -1,2 +1,1 @@
-// Re-export from the canonical location in src/site
-export { CoursePage as CreatingSuperTeamsPage } from "@/site/components/teamworks/CoursePage";
+export { CoursePage as CreatingSuperTeamsPage } from "@/app/components/CoursePage";

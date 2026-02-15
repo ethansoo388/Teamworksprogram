@@ -1084,127 +1084,45 @@ function fixImagePaths(html, isTeamworksPage) {
 // Generate HTML files from React components using Vite SSR
 async function generateHTMLFiles() {
   console.log('📄 Generating HTML files from React components...');
-  
+
   // Create Vite server for SSR (to load TSX files only)
   const vite = await createServer({
     server: { middlewareMode: true },
     appType: 'custom',
     logLevel: 'error',
   });
-  
+
   try {
-    const pages = [
-      // Main site pages
-      {
-        path: '/src/site/pages/index/IndexPage.tsx',
-        componentName: 'IndexPage',
-        filename: 'index.html',
-        title: 'CI Agile - Transform Your Organization',
-        description: 'Proven delivery systems that help organizations execute and achieve measurable business outcomes across Asia Pacific.',
-        siteType: 'main',
-      },
-      {
-        path: '/src/site/pages/about/AboutUsPage.tsx',
-        componentName: 'AboutUsPage',
-        filename: 'aboutus.html',
-        title: 'About Us - CI Agile',
-        description: 'Learn about CI Agile and our mission to transform organizations through proven delivery systems.',
-        siteType: 'main',
-        includeFormJS: true,
-      },
-      {
-        path: '/src/site/pages/contact/ContactUsPage.tsx',
-        componentName: 'ContactUsPage',
-        filename: 'contactus.html',
-        title: 'Contact Us - CI Agile',
-        description: 'Get in touch with CI Agile to discuss how we can help transform your organization.',
-        siteType: 'main',
-        includeFormJS: true,
-      },
-      {
-        path: '/src/site/pages/thankyou/ThankYouPage.tsx',
-        componentName: 'ThankYouPage',
-        filename: 'thankyou.html',
-        title: 'Thank You - CI Agile',
-        description: 'Thank you for contacting CI Agile. We will get back to you within 24 hours.',
-        siteType: 'main',
-      },
-      // TeamWorks pages
-      {
-        path: '/src/site/pages/teamworks/LandingPage.tsx',
-        componentName: 'LandingPage',
-        filename: 'teamworks/index.html',
-        title: 'TeamWorks - Transform Your Team in Just 2 Days',
-        description: 'Fun, hands-on training workshops for SME teams across Southeast Asia. Build super teams, design like Apple, achieve operational excellence.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/CreatingSuperTeamsPage.tsx',
-        componentName: 'CreatingSuperTeamsPage',
-        filename: 'teamworks/creating-super-teams.html',
-        title: 'Creating Super Teams - TeamWorks Course 01',
-        description: 'Learn practical Agile and Scrum frameworks to build high-performing teams that deliver results in just 2 weeks.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/DesignLikeApplePage.tsx',
-        componentName: 'DesignLikeApplePage',
-        filename: 'teamworks/design-thinking.html',
-        title: 'Win Customers Through Design - TeamWorks Course 02',
-        description: 'Create customer-focused products and services using design thinking.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/OperationalExcellencePage.tsx',
-        componentName: 'OperationalExcellencePage',
-        filename: 'teamworks/critical-thinking-kanban.html',
-        title: 'Critical Thinking for Better Work - TeamWorks Course 03',
-        description: 'Apply critical thinking and Kanban to make better decisions and deliver faster.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/PracticalLeanPage.tsx',
-        componentName: 'PracticalLeanPage',
-        filename: 'teamworks/practical-lean-problem-solving.html',
-        title: 'Practical Lean Problem Solving - TeamWorks Course 04',
-        description: 'Empower your frontline to solve problems using practical Lean thinking. Reduce recurring issues, improve customer satisfaction, and build a problem-solving culture.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/AISkillsPage.tsx',
-        componentName: 'AISkillsPage',
-        filename: 'teamworks/ai-skills-for-your-team.html',
-        title: 'AI Skills for YOUR Team - TeamWorks Course 05',
-        description: 'Equip your team with practical AI skills they can apply immediately — without coding or technical background. Cut drafting time, improve decisions, and use AI responsibly.',
-        siteType: 'teamworks',
-      },
-      {
-        path: '/src/site/pages/teamworks/BookConsultationPage.tsx',
-        componentName: 'BookConsultationPage',
-        filename: 'teamworks/bookConsultation.html',
-        title: 'Book Free Consultation - TeamWorks',
-        description: 'Schedule a free consultation to discuss which TeamWorks course is perfect for your team.',
-        includeFormJS: true,
-        siteType: 'teamworks',
-      },
-    ];
-    
+    // Load the centralized route config (TypeScript) through Vite SSR
+    const routesModule = await vite.ssrLoadModule('/src/config/routes.ts');
+    const pages = routesModule.routes;
+
+    // Ensure any new siteType subdirectories exist under public/
+    const subDirs = new Set(
+      pages
+        .map((p) => path.dirname(p.filename))
+        .filter((d) => d !== '.')
+    );
+    for (const dir of subDirs) {
+      fs.mkdirSync(path.join(publicDir, dir), { recursive: true });
+    }
+
     for (const page of pages) {
       try {
         console.log(`  ✓ Rendering ${page.filename}...`);
-        
+
         // Use Vite to load TSX component, React to render it
-        const bodyHTML = await renderPageWithVite(vite, page.path, page.componentName);
-        
+        const bodyHTML = await renderPageWithVite(vite, page.modulePath, page.componentName);
+
         // Fix image paths based on page location
-        const fixedBodyHTML = fixImagePaths(bodyHTML, page.siteType === 'teamworks');
-        
+        const fixedBodyHTML = fixImagePaths(bodyHTML, page.siteType !== 'main');
+
         const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
           siteType: page.siteType,
         });
-        
+
         fs.writeFileSync(path.join(publicDir, page.filename), html);
         console.log(`  ✓ ${page.filename} generated`);
       } catch (error) {
@@ -1212,7 +1130,7 @@ async function generateHTMLFiles() {
         throw error;
       }
     }
-    
+
     console.log('✅ All HTML files generated');
   } finally {
     await vite.close();
@@ -1258,18 +1176,7 @@ async function exportStaticSite() {
     
     console.log('✨ Static export complete!');
     console.log(`📁 Output directory: ${publicDir}`);
-    console.log('\n📋 Generated files:');
-    console.log('  Main Site:');
-    console.log('    - index.html');
-    console.log('    - aboutus.html');
-    console.log('    - contactus.html');
-    console.log('    - thankyou.html');
-    console.log('  TeamWorks:');
-    console.log('    - teamworks/index.html');
-    console.log('    - teamworks/creating-super-teams.html');
-    console.log('    - teamworks/design-thinking.html');
-    console.log('    - teamworks/critical-thinking-kanban.html');
-    console.log('    - teamworks/bookConsultation.html');
+    console.log('\n📋 Generated files listed in src/config/routes.ts');
     console.log('  Assets:');
     console.log('    - css/style.css');
     console.log('    - js/main.js');

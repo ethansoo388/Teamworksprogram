@@ -1,1 +1,1 @@
-export { Course05Page as AISkillsPage } from "@/site/components/teamworks/Course05Page";
+export { Course05Page as AISkillsPage } from "@/app/components/Course05Page";
