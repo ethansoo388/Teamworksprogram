@@ -433,11 +433,13 @@ export function Course05Page() {
 
             {/* Carousel */}
             <div className="max-w-5xl mx-auto">
-              <div className="relative">
+              <div className="relative" data-tw05-carousel>
                 {stories.map((story, index) => (
                   <div
                     key={index}
-                    className={`transition-opacity duration-600 ${currentSlide === index ? "block opacity-100" : "hidden opacity-0"}`}
+                    data-tw05-slide
+                    data-index={index}
+                    className={`transition-opacity duration-600 ${index === 0 ? "block opacity-100" : "hidden opacity-0"}`}
                   >
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center px-4">
                       {/* Image */}
@@ -481,7 +483,8 @@ export function Course05Page() {
                 {/* Navigation */}
                 <div className="flex items-center justify-center gap-4 mt-12">
                   <button
-                    onClick={prevSlide}
+                    type="button"
+                    data-tw05-prev
                     className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
                     aria-label="Previous slide"
                   >
@@ -492,9 +495,11 @@ export function Course05Page() {
                     {stories.map((_, index) => (
                       <button
                         key={index}
-                        onClick={() => goToSlide(index)}
+                        type="button"
+                        data-tw05-dot
+                        data-index={index}
                         className={`transition-all duration-300 rounded-full ${
-                          currentSlide === index
+                          index === 0
                             ? "w-8 h-2 bg-[#0EA7E9]"
                             : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
                         }`}
@@ -504,7 +509,8 @@ export function Course05Page() {
                   </div>
 
                   <button
-                    onClick={nextSlide}
+                    type="button"
+                    data-tw05-next
                     className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
                     aria-label="Next slide"
                   >
@@ -1027,24 +1033,30 @@ export function Course05Page() {
               </p>
             </div>
 
-            <div className="space-y-4 mb-8 pb-2">
+            <div className="space-y-4 mb-8 pb-2" data-tw05-faq data-open-index="0">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`border-2 rounded-lg px-6 transition-colors ${openFaqIndex === index ? "border-[#0EA7E9]" : "border-gray-200"}`}
+                  data-tw05-faq-item
+                  data-index={index}
+                  className={`border-2 rounded-lg px-6 transition-colors ${index === 0 ? "border-[#0EA7E9]" : "border-gray-200"}`}
                 >
                   <button
+                    type="button"
+                    data-tw05-faq-button
+                    data-index={index}
                     className="w-full text-left hover:no-underline py-6 cursor-pointer flex items-center justify-between"
-                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
                   >
                     <span className="font-semibold text-gray-900 text-base lg:text-lg">{faq.question}</span>
-                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4 ${openFaqIndex === index ? "rotate-180" : ""}`} />
+                    <ChevronDown data-tw05-faq-icon className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-4 ${index === 0 ? "rotate-180" : ""}`} />
                   </button>
-                  {openFaqIndex === index && (
-                    <div className="text-gray-600 pb-6 text-base leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  )}
+                  <div
+                    data-tw05-faq-answer
+                    data-index={index}
+                    className={`text-gray-600 pb-6 text-base leading-relaxed ${index === 0 ? "" : "hidden"}`}
+                  >
+                    {faq.answer}
+                  </div>
                 </div>
               ))}
             </div>
