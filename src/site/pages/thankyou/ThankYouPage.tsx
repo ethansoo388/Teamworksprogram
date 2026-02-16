@@ -1,5 +1,12 @@
-// Thank You Page - Main site
-// Displayed after successful Contact Us or TeamWorks form submission
+import type { PageMeta } from "@/types";
+
+export const pageMeta: PageMeta = {
+  path: "/thankyou",
+  filename: "thankyou.html",
+  title: "Thank You - CI Agile",
+  description: "Thank you for contacting CI Agile. We will get back to you within 24 hours.",
+  siteType: "main",
+};
 
 export function ThankYouPage() {
   return (

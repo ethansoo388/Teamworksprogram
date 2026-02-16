@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { createServer } from 'vite';
+import { glob } from 'glob';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
@@ -10,6 +11,44 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const publicDir = path.join(rootDir, 'public');
 const distDir = path.join(rootDir, 'dist');
+
+// ---------------------------------------------------------------------------
+// fix-relative-urls — converted from scripts/fix-relative-urls.sh
+// Fixes absolute hrefs in source TSX to relative paths for static export.
+// ---------------------------------------------------------------------------
+function fixRelativeUrls() {
+  console.log('🔗 Fixing relative URLs in source files...');
+  const patterns = [
+    [/href="\/bookConsultation\.html"/g, 'href="bookConsultation.html"'],
+    [/href="\/creating-super-teams\.html"/g, 'href="creating-super-teams.html"'],
+    [/href="\/design-like-apple\.html"/g, 'href="design-like-apple.html"'],
+    [/href="\/operational-excellence\.html"/g, 'href="operational-excellence.html"'],
+    [/href="\/index\.html#/g, 'href="index.html#'],
+    [/href="\/index\.html"/g, 'href="index.html"'],
+  ];
+
+  const srcDir = path.join(rootDir, 'src', 'app', 'components');
+  const files = glob.sync('**/*.tsx', { cwd: srcDir, absolute: true });
+  let totalReplacements = 0;
+
+  for (const file of files) {
+    let content = fs.readFileSync(file, 'utf8');
+    let changed = false;
+    for (const [regex, replacement] of patterns) {
+      const newContent = content.replace(regex, replacement);
+      if (newContent !== content) {
+        content = newContent;
+        changed = true;
+        totalReplacements++;
+      }
+    }
+    if (changed) {
+      fs.writeFileSync(file, content);
+    }
+  }
+
+  console.log(`✅ Fixed relative URLs (${totalReplacements} replacements in ${files.length} files)`);
+}
 
 // Pretty-print HTML with indentation ONLY (no text reflow).
 // This avoids breaking layouts that rely on whitespace-pre/whitespace-pre-wrap.
@@ -1161,7 +1200,11 @@ async function exportStaticSite() {
     // Step 5: Copy assets
     copyAssets();
     console.log('');
-    
+
+    // Step 5b: Fix relative URLs in source files (replaces fix-relative-urls.sh)
+    fixRelativeUrls();
+    console.log('');
+
     // Step 6: Generate HTML files from React components using Vite SSR
     await generateHTMLFiles();
     console.log('');

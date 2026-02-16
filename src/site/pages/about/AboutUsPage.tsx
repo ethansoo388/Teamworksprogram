@@ -2,10 +2,16 @@ import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { Section1, Section2, Section3, Section4, Section5, Section6 } from "@/site/components/main/imported/CiAgileMainFrozenPreMergeBranch";
 import { AboutHero } from "@/site/components/main/AboutHero";
+import type { PageMeta } from "@/types";
 
-// Original About Us Page - Restored from Figma Import
-// Uses the shared navigation and footer components
-// The original design is preserved exactly as imported, including all content, images, and layout
+export const pageMeta: PageMeta = {
+  path: "/aboutus",
+  filename: "aboutus.html",
+  title: "About Us - CI Agile",
+  description: "Learn about CI Agile and our mission to transform organizations through proven delivery systems.",
+  siteType: "main",
+  includeFormJS: true,
+};
 
 export function AboutUsPage() {
   return (

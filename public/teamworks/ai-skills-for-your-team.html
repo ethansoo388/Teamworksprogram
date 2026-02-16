@@ -44,16 +44,35 @@
             <div class="hidden md:block">
               <a href="bookConsultation.html" class="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style="background-color:#0EA7E9">Book This Course for Your Team</a>
             </div>
-            <button class="md:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
-                <line x1="4" x2="20" y1="12" y2="12">
-                </line>
-                <line x1="4" x2="20" y1="6" y2="6">
-                </line>
-                <line x1="4" x2="20" y1="18" y2="18">
-                </line>
-              </svg>
+            <button type="button" class="md:hidden" aria-label="Open menu" aria-controls="tw05-mobile-menu" data-mobile-toggle="true">
+              <span data-icon="open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                  <line x1="4" x2="20" y1="12" y2="12">
+                  </line>
+                  <line x1="4" x2="20" y1="6" y2="6">
+                  </line>
+                  <line x1="4" x2="20" y1="18" y2="18">
+                  </line>
+                </svg>
+              </span>
+              <span data-icon="close" class="hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6">
+                  <path d="M18 6 6 18">
+                  </path>
+                  <path d="m6 6 12 12">
+                  </path>
+                </svg>
+              </span>
             </button>
+          </div>
+          <div id="tw05-mobile-menu" data-mobile-menu="true" class="md:hidden py-6 border-t border-gray-200 hidden" aria-hidden="true">
+            <div class="flex flex-col gap-4">
+              <a href="#modules" class="text-sm py-2" data-mobile-close="true">Modules</a>
+              <a href="#outcomes" class="text-sm py-2" data-mobile-close="true">Outcomes</a>
+              <a href="#opportunity" class="text-sm py-2" data-mobile-close="true">Opportunity</a>
+              <a href="#faq" class="text-sm py-2" data-mobile-close="true">FAQ</a>
+              <a href="bookConsultation.html" class="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style="background-color:#0EA7E9" data-mobile-close="true">Book This Course</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -514,9 +533,7 @@
                 </div>
               </div>
             </div>
-            <style>
-              @keyframes tw05ProgressFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-            </style>
+            <style>@keyframes tw05ProgressFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }</style>
             <script>
               (function(){
               function initTw05Carousel(){
@@ -524,13 +541,11 @@
               if (!root) return;
               if (root.getAttribute('data-tw05-initialized') === 'true') return;
               root.setAttribute('data-tw05-initialized', 'true');
-              
               var slides = Array.prototype.slice.call(root.querySelectorAll('[data-tw05-slide]'));
               var dots = Array.prototype.slice.call(root.querySelectorAll('[data-tw05-dot]'));
               var prevBtn = root.querySelector('[data-tw05-prev]');
               var nextBtn = root.querySelector('[data-tw05-next]');
               if (!slides.length) return;
-              
               var current = 0;
               var timeoutId = null;
               var lastStart = null;
@@ -538,150 +553,36 @@
               var isPaused = false;
               var DURATION = 3500;
               var progress = root.querySelector('[data-tw05-progress]');
-              
               function show(i){
               var len = slides.length;
               var nextIndex = ((i % len) + len) % len;
               current = nextIndex;
-              
               for (var s = 0; s < slides.length; s++){
               var slide = slides[s];
               if (!slide || !slide.classList) continue;
-              if (s === current){
-              slide.classList.remove('hidden');
-              slide.classList.add('block');
-              slide.classList.remove('opacity-0');
-              slide.classList.add('opacity-100');
-              } else {
-              slide.classList.add('hidden');
-              slide.classList.remove('block');
-              slide.classList.add('opacity-0');
-              slide.classList.remove('opacity-100');
+              if (s === current){ slide.classList.remove('hidden'); slide.classList.add('block'); slide.classList.remove('opacity-0'); slide.classList.add('opacity-100'); }
+              else { slide.classList.add('hidden'); slide.classList.remove('block'); slide.classList.add('opacity-0'); slide.classList.remove('opacity-100'); }
               }
-              }
-              
               for (var d = 0; d < dots.length; d++){
               var dot = dots[d];
               if (!dot || !dot.classList) continue;
-              if (d === current){
-              dot.classList.add('w-8');
-              dot.classList.add('h-2');
-              dot.classList.add('bg-[#0EA7E9]');
-              dot.classList.remove('w-2');
-              dot.classList.remove('bg-gray-300');
-              dot.setAttribute('aria-current', 'true');
-              } else {
-              dot.classList.remove('w-8');
-              dot.classList.remove('h-2');
-              dot.classList.remove('bg-[#0EA7E9]');
-              dot.classList.add('w-2');
-              dot.classList.add('h-2');
-              dot.classList.add('bg-gray-300');
-              dot.removeAttribute('aria-current');
+              if (d === current){ dot.classList.add('w-8'); dot.classList.add('h-2'); dot.classList.add('bg-[#0EA7E9]'); dot.classList.remove('w-2'); dot.classList.remove('bg-gray-300'); dot.setAttribute('aria-current', 'true'); }
+              else { dot.classList.remove('w-8'); dot.classList.remove('h-2'); dot.classList.remove('bg-[#0EA7E9]'); dot.classList.add('w-2'); dot.classList.add('h-2'); dot.classList.add('bg-gray-300'); dot.removeAttribute('aria-current'); }
               }
               }
+              function restartProgress(){ if (!progress) return; progress.style.animation = 'none'; progress.offsetHeight; progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards'; progress.style.animationPlayState = isPaused ? 'paused' : 'running'; }
+              function scheduleNext(){ if (timeoutId) window.clearTimeout(timeoutId); lastStart = new Date().getTime(); timeoutId = window.setTimeout(function(){ show(current + 1); resetAuto(); }, remaining); }
+              function resetAuto(){ remaining = DURATION; isPaused = false; restartProgress(); scheduleNext(); }
+              function pauseAuto(){ if (isPaused) return; isPaused = true; if (timeoutId) window.clearTimeout(timeoutId); if (lastStart !== null){ var elapsed = new Date().getTime() - lastStart; remaining = remaining - elapsed; if (remaining < 0) remaining = 0; } if (progress){ progress.style.animationPlayState = 'paused'; } }
+              function resumeAuto(){ if (!isPaused) return; isPaused = false; if (progress){ progress.style.animationPlayState = 'running'; } scheduleNext(); }
+              show(0); resetAuto();
+              for (var i = 0; i < dots.length; i++){ (function(dot){ dot.addEventListener('click', function(){ var idx = parseInt(dot.getAttribute('data-index') || '0', 10); if (isNaN(idx)) idx = 0; show(idx); resetAuto(); }); })(dots[i]); }
+              if (prevBtn){ prevBtn.addEventListener('click', function(){ show(current - 1); resetAuto(); }); }
+              if (nextBtn){ nextBtn.addEventListener('click', function(){ show(current + 1); resetAuto(); }); }
+              var canHover = false; try { if (window.matchMedia) { canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } } catch(e) {}
+              if (canHover){ root.addEventListener('mouseenter', function(){ pauseAuto(); }); root.addEventListener('mouseleave', function(){ resumeAuto(); }); }
               }
-              
-              function restartProgress(){
-              if (!progress) return;
-              progress.style.animation = 'none';
-              // force reflow
-              progress.offsetHeight;
-              progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards';
-              progress.style.animationPlayState = isPaused ? 'paused' : 'running';
-              }
-              
-              function scheduleNext(){
-              if (timeoutId) window.clearTimeout(timeoutId);
-              lastStart = new Date().getTime();
-              timeoutId = window.setTimeout(function(){
-              show(current + 1);
-              resetAuto();
-              }, remaining);
-              }
-              
-              function resetAuto(){
-              remaining = DURATION;
-              isPaused = false;
-              restartProgress();
-              scheduleNext();
-              }
-              
-              function pauseAuto(){
-              if (isPaused) return;
-              isPaused = true;
-              if (timeoutId) window.clearTimeout(timeoutId);
-              if (lastStart !== null){
-              var elapsed = new Date().getTime() - lastStart;
-              remaining = remaining - elapsed;
-              if (remaining < 0) remaining = 0;
-              }
-              if (progress){
-              progress.style.animationPlayState = 'paused';
-              }
-              }
-              
-              function resumeAuto(){
-              if (!isPaused) return;
-              isPaused = false;
-              if (progress){
-              progress.style.animationPlayState = 'running';
-              }
-              scheduleNext();
-              }
-              
-              // Initial state + auto
-              show(0);
-              resetAuto();
-              
-              for (var i = 0; i < dots.length; i++){
-              (function(dot){
-              dot.addEventListener('click', function(){
-              var idxAttr = dot.getAttribute('data-index');
-              var idx = parseInt(idxAttr || '0', 10);
-              if (isNaN(idx)) idx = 0;
-              show(idx);
-              resetAuto();
-              });
-              })(dots[i]);
-              }
-              
-              if (prevBtn){
-              prevBtn.addEventListener('click', function(){
-              show(current - 1);
-              resetAuto();
-              });
-              }
-              if (nextBtn){
-              nextBtn.addEventListener('click', function(){
-              show(current + 1);
-              resetAuto();
-              });
-              }
-              
-              // Pause on hover (desktop only)
-              var canHover = false;
-              try {
-              if (window.matchMedia) {
-              canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-              }
-              } catch(e) {}
-              
-              if (canHover){
-              root.addEventListener('mouseenter', function(){
-              pauseAuto();
-              });
-              root.addEventListener('mouseleave', function(){
-              resumeAuto();
-              });
-              }
-              }
-              
-              if (document.readyState === 'loading'){
-              document.addEventListener('DOMContentLoaded', initTw05Carousel);
-              } else {
-              initTw05Carousel();
-              }
+              if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initTw05Carousel); } else { initTw05Carousel(); }
               })();
             </script>
             <div class="text-center mt-16 max-w-3xl mx-auto">

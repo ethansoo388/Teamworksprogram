@@ -1,30 +1,22 @@
 import type { ComponentType } from "react";
 import { lazy } from "react";
+import type { SiteType } from "@/types";
 
 // ---------------------------------------------------------------------------
 // Route types
+// Each page also exports a `pageMeta` const (see src/types/index.ts → PageMeta)
+// that the export script can read at build time for auto-discovery.
 // ---------------------------------------------------------------------------
 
-export type SiteType = "main" | "teamworks";
-
 export interface RouteEntry {
-  /** URL path for react-router (dev). E.g. "/" or "/teamworks/creating-super-teams" */
   path: string;
-  /** Lazy-loaded React component for dev routing */
   component: () => Promise<{ default: ComponentType }>;
-  /** Absolute module path used by Vite SSR in the export script */
   modulePath: string;
-  /** Named export inside the module (must match the function name) */
   componentName: string;
-  /** Output filename relative to public/ (e.g. "index.html", "teamworks/index.html") */
   filename: string;
-  /** HTML <title> */
   title: string;
-  /** Meta description */
   description: string;
-  /** Site section — controls CSS/JS path prefixes and image path fixups */
   siteType: SiteType;
-  /** Whether to include form.js in the static HTML shell */
   includeFormJS?: boolean;
 }
 

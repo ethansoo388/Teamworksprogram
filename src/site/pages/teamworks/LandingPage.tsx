@@ -6,6 +6,15 @@ import { WhyDifferentV2 } from "@/site/components/teamworks/v2/WhyDifferentV2";
 import { TestimonialsV2 } from "@/site/components/teamworks/v2/TestimonialsV2";
 import { PricingCTAV2 } from "@/site/components/teamworks/v2/PricingCTAV2";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import type { PageMeta } from "@/types";
+
+export const pageMeta: PageMeta = {
+  path: "/teamworks",
+  filename: "teamworks/index.html",
+  title: "TeamWorks - Transform Your Team in Just 2 Days",
+  description: "Fun, hands-on training workshops for SME teams across Southeast Asia.",
+  siteType: "teamworks",
+};
 
 export function LandingPage() {
   return (

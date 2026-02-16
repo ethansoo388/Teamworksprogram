@@ -1,1 +1,1 @@
-export { Course05Page as AISkillsPage } from "@/app/components/Course05Page";
+export { Course05Page as AISkillsPage, pageMeta } from "@/app/components/Course05Page";

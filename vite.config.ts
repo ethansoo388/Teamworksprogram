@@ -6,8 +6,6 @@ import fs from 'fs'
 
 export default defineConfig(({ mode }) => ({
   plugins: [
-    // The React and Tailwind plugins are both required for Make, even if
-    // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
     // Custom plugin to resolve @/assets/img imports to proper paths
@@ -42,13 +40,9 @@ export default defineConfig(({ mode }) => ({
         }
       }
     },
-    // NOTE: We intentionally do NOT support Figma Make asset imports anymore.
-    // All images should be imported from `@/assets/img/*` so they can be copied to
-    // `public/assets/img` during the static export.
   ],
   resolve: {
     alias: {
-      // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
     },
   },
