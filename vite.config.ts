@@ -50,4 +50,9 @@ export default defineConfig(({ mode }) => ({
     // Minify only for production builds (npm run build:prod)
     minify: mode === 'production',
   },
+  test: {
+    // Vitest configuration
+    environment: 'node',
+    include: ['src/**/*.test.{ts,tsx}'],
+  },
 }))

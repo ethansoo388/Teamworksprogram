@@ -8,7 +8,10 @@
     "build": "cross-env NODE_ENV=development node scripts/export-static.mjs",
     "build:vite": "vite build",
     "verify:build": "node -e \"const fs=require('fs'); console.log('dist exists:', fs.existsSync('dist')); console.log('public exists:', fs.existsSync('public'));\"",
-    "build:prod": "cross-env NODE_ENV=production node scripts/export-static.mjs"
+    "build:prod": "cross-env NODE_ENV=production node scripts/export-static.mjs",
+    "lint": "eslint src --ext ts,tsx",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -69,12 +72,19 @@
     "vaul": "1.1.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@tailwindcss/vite": "4.1.12",
+    "@typescript-eslint/parser": "^8.56.0",
     "@vitejs/plugin-react": "4.7.0",
     "cross-env": "^7.0.3",
+    "eslint": "^9.39.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "glob": "^11.0.0",
     "tailwindcss": "4.1.12",
-    "vite": "6.3.5"
+    "vite": "6.3.5",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "react": "18.3.1",

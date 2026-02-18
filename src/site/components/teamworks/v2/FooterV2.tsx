@@ -1,14 +1,32 @@
-export function FooterV2() {
+import type { SiteType } from "@/types";
+
+interface FooterV2Props {
+  /** Which program's branding to use. Defaults to "teamworks". */
+  program?: SiteType;
+}
+
+const brandConfig: Record<SiteType, { name: string; tagline: string }> = {
+  teamworks: {
+    name: "TeamWorks",
+    tagline: "Fun, hands-on training workshops for SME teams across Southeast Asia. Transform your team in just 2 days.",
+  },
+  main: {
+    name: "CI Agile",
+    tagline: "Proven delivery systems that help organizations execute and achieve measurable business outcomes across Asia Pacific.",
+  },
+};
+
+export function FooterV2({ program = "teamworks" }: FooterV2Props) {
+  const brand = brandConfig[program];
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="text-3xl mb-4 tracking-tight font-semibold">TeamWorks</div>
+            <div className="text-3xl mb-4 tracking-tight font-semibold">{brand.name}</div>
             <p className="text-gray-600 max-w-md leading-relaxed">
-              Fun, hands-on training workshops for SME teams across Southeast Asia. 
-              Transform your team in just 2 days.
+              {brand.tagline}
             </p>
           </div>
 
@@ -37,7 +55,7 @@ export function FooterV2() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-500">
-            © 2026 TeamWorks. All rights reserved.
+            &copy; 2026 {brand.name}. All rights reserved.
           </div>
           <div className="flex gap-8 text-sm text-gray-500">
             <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
