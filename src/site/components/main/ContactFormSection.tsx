@@ -187,12 +187,9 @@ export function ContactFormSection() {
               {/* Message / context */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-800 mb-1.5">
-                  Optional: Brief context
+                  Anything else you'd like us to know?
                 </label>
-                <textarea id="message" name="message" rows={3}
-                  defaultValue=""
-                  placeholder="Describe your situation in a few lines..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all resize-none" />
+                <textarea id="message" name="message" rows={3} placeholder="Describe your situation in a few lines..." className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all resize-none"></textarea>
               </div>
 
               {/* Submit */}
