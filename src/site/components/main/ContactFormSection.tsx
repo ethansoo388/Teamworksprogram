@@ -128,13 +128,6 @@ export function ContactFormSection() {
                       WhatsApp <span className="text-xs text-gray-500">(faster response)</span>
                     </span>
                   </label>
-                  <label className="flex items-start gap-3 cursor-pointer group">
-                    <input type="radio" name="contactMethod" value="phone"
-                      className="mt-0.5 w-4 h-4 border-gray-300 text-[#0066CC] focus:ring-[#0066CC]" />
-                    <span className="text-sm text-gray-700 font-light group-hover:text-gray-900">
-                      Phone <span className="text-xs text-gray-500">(call)</span>
-                    </span>
-                  </label>
                 </div>
                 <p className="text-xs text-gray-500 font-light mt-2.5 italic">
                   We respect your preference and won't contact you through other channels without consent.
@@ -187,6 +180,7 @@ export function ContactFormSection() {
                   <option value="decisions-not-translating">Leadership decisions don't translate into execution</option>
                   <option value="heavy-processes">Processes are heavy or don't fit how we work</option>
                   <option value="ai-uncertainty">We want to use AI but don't know where it creates value</option>
+                  <option value="other">Other (please specify)</option>
                 </select>
               </div>
 
@@ -196,6 +190,7 @@ export function ContactFormSection() {
                   Optional: Brief context
                 </label>
                 <textarea id="message" name="message" rows={3}
+                  defaultValue=""
                   placeholder="Describe your situation in a few lines..."
                   className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all resize-none" />
               </div>

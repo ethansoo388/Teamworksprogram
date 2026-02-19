@@ -562,9 +562,10 @@ export function ExperienceScalesSection() {
               {/* message / optional context — always visible (static-safe) */}
               <div>
                 <label htmlFor="about-message" className="block text-xs font-light text-gray-500 italic mb-1.5">
-                  Additional context (optional)
+                  Anything else you'd like us to know?
                 </label>
                 <textarea id="about-message" name="message" rows={2}
+                  defaultValue=""
                   placeholder="Describe your situation..."
                   className="w-full px-3.5 py-2.5 border border-gray-300 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#0066CC] focus:ring-1 focus:ring-[#0066CC] transition-colors resize-none" />
               </div>
