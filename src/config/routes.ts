@@ -1,16 +1,11 @@
-import type { ComponentType } from "react";
-import { lazy } from "react";
 import type { SiteType } from "@/types";
 
 // ---------------------------------------------------------------------------
-// Route types
-// Each page also exports a `pageMeta` const (see src/types/index.ts → PageMeta)
-// that the export script can read at build time for auto-discovery.
+// Route definitions — single source of truth for static export.
+// Used by scripts/export-static.mjs to generate /public HTML files.
 // ---------------------------------------------------------------------------
 
 export interface RouteEntry {
-  path: string;
-  component: () => Promise<{ default: ComponentType }>;
   modulePath: string;
   componentName: string;
   filename: string;
@@ -20,29 +15,9 @@ export interface RouteEntry {
   includeFormJS?: boolean;
 }
 
-// ---------------------------------------------------------------------------
-// Helper – wraps a dynamic import so the default export is the named export.
-// This lets React.lazy work with named exports.
-// ---------------------------------------------------------------------------
-
-function lazyNamed<T extends Record<string, ComponentType>>(
-  factory: () => Promise<T>,
-  name: keyof T,
-) {
-  return lazy(() =>
-    factory().then((mod) => ({ default: mod[name] })),
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Route definitions — single source of truth for dev router + static export
-// ---------------------------------------------------------------------------
-
 export const routes: RouteEntry[] = [
   // ── Main site ──────────────────────────────────────────────────────────
   {
-    path: "/",
-    component: () => import("@/site/pages/index/IndexPage"),
     modulePath: "/src/site/pages/index/IndexPage.tsx",
     componentName: "IndexPage",
     filename: "index.html",
@@ -52,8 +27,6 @@ export const routes: RouteEntry[] = [
     siteType: "main",
   },
   {
-    path: "/aboutus",
-    component: () => import("@/site/pages/about/AboutUsPage"),
     modulePath: "/src/site/pages/about/AboutUsPage.tsx",
     componentName: "AboutUsPage",
     filename: "aboutus.html",
@@ -64,8 +37,6 @@ export const routes: RouteEntry[] = [
     includeFormJS: true,
   },
   {
-    path: "/contactus",
-    component: () => import("@/site/pages/contact/ContactUsPage"),
     modulePath: "/src/site/pages/contact/ContactUsPage.tsx",
     componentName: "ContactUsPage",
     filename: "contactus.html",
@@ -76,8 +47,6 @@ export const routes: RouteEntry[] = [
     includeFormJS: true,
   },
   {
-    path: "/thankyou",
-    component: () => import("@/site/pages/thankyou/ThankYouPage"),
     modulePath: "/src/site/pages/thankyou/ThankYouPage.tsx",
     componentName: "ThankYouPage",
     filename: "thankyou.html",
@@ -89,8 +58,6 @@ export const routes: RouteEntry[] = [
 
   // ── TeamWorks ──────────────────────────────────────────────────────────
   {
-    path: "/teamworks",
-    component: () => import("@/site/pages/teamworks/LandingPage"),
     modulePath: "/src/site/pages/teamworks/LandingPage.tsx",
     componentName: "LandingPage",
     filename: "teamworks/index.html",
@@ -100,8 +67,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/creating-super-teams",
-    component: () => import("@/site/pages/teamworks/CreatingSuperTeamsPage"),
     modulePath: "/src/site/pages/teamworks/CreatingSuperTeamsPage.tsx",
     componentName: "CreatingSuperTeamsPage",
     filename: "teamworks/creating-super-teams.html",
@@ -111,8 +76,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/design-thinking",
-    component: () => import("@/site/pages/teamworks/DesignLikeApplePage"),
     modulePath: "/src/site/pages/teamworks/DesignLikeApplePage.tsx",
     componentName: "DesignLikeApplePage",
     filename: "teamworks/design-thinking.html",
@@ -122,9 +85,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/critical-thinking-kanban",
-    component: () =>
-      import("@/site/pages/teamworks/OperationalExcellencePage"),
     modulePath: "/src/site/pages/teamworks/OperationalExcellencePage.tsx",
     componentName: "OperationalExcellencePage",
     filename: "teamworks/critical-thinking-kanban.html",
@@ -134,8 +94,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/practical-lean-problem-solving",
-    component: () => import("@/site/pages/teamworks/PracticalLeanPage"),
     modulePath: "/src/site/pages/teamworks/PracticalLeanPage.tsx",
     componentName: "PracticalLeanPage",
     filename: "teamworks/practical-lean-problem-solving.html",
@@ -145,8 +103,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/ai-skills-for-your-team",
-    component: () => import("@/site/pages/teamworks/AISkillsPage"),
     modulePath: "/src/site/pages/teamworks/AISkillsPage.tsx",
     componentName: "AISkillsPage",
     filename: "teamworks/ai-skills-for-your-team.html",
@@ -156,8 +112,6 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
-    path: "/teamworks/bookConsultation",
-    component: () => import("@/site/pages/teamworks/BookConsultationPage"),
     modulePath: "/src/site/pages/teamworks/BookConsultationPage.tsx",
     componentName: "BookConsultationPage",
     filename: "teamworks/bookConsultation.html",
@@ -168,24 +122,3 @@ export const routes: RouteEntry[] = [
     includeFormJS: true,
   },
 ];
-
-// ---------------------------------------------------------------------------
-// Lazy component map — for use with React.lazy() in the dev router
-// ---------------------------------------------------------------------------
-
-export const lazyComponents: Record<string, ReturnType<typeof lazy>> = {};
-for (const route of routes) {
-  lazyComponents[route.path] = lazyNamed(
-    route.component as () => Promise<Record<string, ComponentType>>,
-    route.componentName,
-  );
-}
-
-// Dev-only diagnostic page (not part of static export)
-export const diagnosticRoute = {
-  path: "/diagnostic",
-  component: lazyNamed(
-    () => import("@/site/pages/diagnostic/DiagnosticPage") as Promise<Record<string, ComponentType>>,
-    "DiagnosticPage",
-  ),
-};
