@@ -7,28 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // TEAMWORKS CONSULTATION FORM HANDLER
   // ========================================
   const consultationForm = document.getElementById('consultation-form');
-  
+
   if (consultationForm) {
     consultationForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Validate required radio buttons
       const deliveryFormat = consultationForm.querySelector('input[name="deliveryFormat"]:checked');
       const contactMethod = consultationForm.querySelector('input[name="contactMethod"]:checked');
-      
+
       if (!deliveryFormat) {
         alert('Please select a preferred delivery format');
         return;
       }
-      
+
       if (!contactMethod) {
         alert('Please select a contact method');
         return;
       }
-      
+
       // Get form data - properly handle multiple checkboxes
       const formData = new FormData(consultationForm);
-      
+
       // Build data object to match exact field names
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
@@ -36,32 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const teamSize = formData.get('teamSize') || '';
       const deliveryFormatValue = formData.get('deliveryFormat') || '';
       const contactMethodValue = formData.get('contactMethod') || '';
-      
+
       // Handle multiple outcomes checkboxes - collect all checked values
       const outcomes = formData.getAll('outcomes').join(', ') || '';
-      
+
       // Add tracking fields
       const pageUrl = window.location.href;
       const referrer = document.referrer || 'Direct';
       const timestamp = new Date().toISOString();
-      
+
       // Get elements
       const submitButton = consultationForm.querySelector('button[type="submit"]');
       const successMessage = document.getElementById('success-message');
       const errorMessage = document.getElementById('error-message');
-      
+
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
-      
+
       try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
-        
+
         // Hide any previous messages
         if (successMessage) successMessage.classList.add('hidden');
         if (errorMessage) errorMessage.classList.add('hidden');
-        
+
         // CRITICAL: Use URLSearchParams for form-encoded POST (NOT JSON)
         const data = new URLSearchParams({
           sheetName: 'TW_BookConsultationForm',
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
           referrer,
           timestamp,
         });
-        
+
         // Send to Google Web App using form-encoded data
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         // Show error message (do NOT hide the form)
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
@@ -120,22 +120,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // CONTACT US FORM HANDLER
   // ========================================
   const contactForm = document.getElementById('contact-us-form');
-  
+
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Validate required radio buttons
       const contactMethod = contactForm.querySelector('input[name="contactMethod"]:checked');
-      
+
       if (!contactMethod) {
         alert('Please select a preferred contact method');
         return;
       }
-      
+
       // Get form data
       const formData = new FormData(contactForm);
-      
+
       // Build data object
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
@@ -143,32 +143,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
       const message = formData.get('message') || '';
-      
+
       // Handle multiple interests checkboxes - collect all checked values
       const interests = formData.getAll('interests').join(', ') || '';
-      
+
       // Add tracking fields
       const pageUrl = window.location.href;
       const referrer = document.referrer || 'Direct';
       const timestamp = new Date().toISOString();
-      
+
       // Get elements
       const submitButton = contactForm.querySelector('button[type="submit"]');
       const successMessage = document.getElementById('contact-success-message');
       const errorMessage = document.getElementById('contact-error-message');
-      
+
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
-      
+
       try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
-        
+
         // Hide any previous messages
         if (successMessage) successMessage.classList.add('hidden');
         if (errorMessage) errorMessage.classList.add('hidden');
-        
+
         // CRITICAL: Use URLSearchParams for form-encoded POST (NOT JSON)
         const data = new URLSearchParams({
           sheetName: 'ContactUsForm',
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
           referrer,
           timestamp,
         });
-        
+
         // Send to Google Web App using form-encoded data
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         // Show error message (do NOT hide the form)
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
@@ -227,51 +227,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // ABOUT US FORM HANDLER
   // ========================================
   const aboutUsForm = document.getElementById('about-us-form');
-  
+
   if (aboutUsForm) {
     aboutUsForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Get form data
       const formData = new FormData(aboutUsForm);
-      
+
       // Validate required fields
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
-      
+
       if (!fullName.trim() || !workEmail.trim()) {
         alert('Please fill in all required fields (Name and Work Email)');
         return;
       }
-      
+
       // Build data object
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
       const message = formData.get('message') || '';
-      
+
       // Handle multiple interests checkboxes - collect all checked values
       const interests = formData.getAll('interests').join(', ') || '';
-      
+
       // Add tracking fields
       const pageUrl = window.location.href;
       const referrer = document.referrer || 'Direct';
       const timestamp = new Date().toISOString();
-      
+
       // Get elements
       const submitButton = aboutUsForm.querySelector('button[type="submit"]');
       const errorMessage = document.getElementById('aboutus-error-message');
-      
+
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
-      
+
       try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
-        
+
         // Hide any previous messages
         if (errorMessage) errorMessage.classList.add('hidden');
-        
+
         // CRITICAL: Use URLSearchParams for form-encoded POST (NOT JSON)
         const data = new URLSearchParams({
           sheetName: 'AboutUsForm',
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
           referrer,
           timestamp,
         });
-        
+
         // Send to Google Web App using form-encoded data
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         // Show error message (do NOT hide the form)
         if (errorMessage) {
           errorMessage.classList.remove('hidden');
