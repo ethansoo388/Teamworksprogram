@@ -1,5 +1,5 @@
 import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 
 const courses = [
   {

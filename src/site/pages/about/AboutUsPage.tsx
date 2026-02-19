@@ -1,6 +1,6 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { Section1, Section2, Section3, Section4, Section5, Section6 } from "@/site/components/main/imported/CiAgileMainFrozenPreMergeBranch";
+import { OurBeliefSection, WhatMakesDifferentSection, FounderProfileSection, AboutCIAgileSection, ExperienceScalesSection, ExecutionPatternsSection } from "@/site/components/main/AboutPageSections";
 import { AboutHero } from "@/site/components/main/AboutHero";
 import type { PageMeta } from "@/types";
 
@@ -24,12 +24,12 @@ export function AboutUsPage() {
       
       {/* Original Figma About Us page content (excluding the old hero/Section) */}
       <div className="relative">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
+        <OurBeliefSection />
+        <WhatMakesDifferentSection />
+        <FounderProfileSection />
+        <AboutCIAgileSection />
+        <ExperienceScalesSection />
+        <ExecutionPatternsSection />
       </div>
       
       <MainSiteFooter />

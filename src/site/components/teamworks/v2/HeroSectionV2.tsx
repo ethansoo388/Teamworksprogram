@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import twoLadiesImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-collaboration-discussion.webp";
 import hrdCorpLogo from "@/assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp";
 

@@ -1,5 +1,5 @@
 import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import consultantImage from "@/assets/img/teamworks/ciagile-teamworks-consultation-cta-consultant-client.webp";
 import creatingSuperTeamsImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
 import designThinkingImage from "@/assets/img/teamworks/ciagile-teamworks-course02-design-thinking-brainstorming.webp";

@@ -1,5 +1,5 @@
 import { Sparkles, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import type { StorySlide } from "@/types";
 
 interface StoryCarouselProps {

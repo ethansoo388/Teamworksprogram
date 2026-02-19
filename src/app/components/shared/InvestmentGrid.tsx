@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import type { InvestmentCard } from "@/types";
 
 interface InvestmentGridProps {

@@ -1,6 +1,6 @@
 import { ArrowRight, Menu, X, AlertCircle, Clock, UserX, TrendingDown, CheckCircle2, Headphones, TrendingUp, Settings, Users, UserCheck, Quote, Star, Check, ChevronDown, Zap, MapPin } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import { useState } from "react";
 
 export function Course04Page() {

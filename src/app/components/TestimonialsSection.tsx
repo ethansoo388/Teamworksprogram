@@ -1,5 +1,5 @@
 import { Star, Quote } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import handsClayImage from "@/assets/img/teamworks/ciagile-teamworks-course02-prototyping-hands-on.webp";
 
 const testimonials = [

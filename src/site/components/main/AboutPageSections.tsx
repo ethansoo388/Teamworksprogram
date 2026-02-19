@@ -1852,9 +1852,18 @@ function Navigation() {
   );
 }
 
-export { AboutPage, Section1, Section2, Section3, Section4, Section5, Section6 };
+// Semantic aliases for About page sections
+export {
+  AboutPage,
+  Section1 as OurBeliefSection,
+  Section2 as WhatMakesDifferentSection,
+  Section3 as FounderProfileSection,
+  Section4 as AboutCIAgileSection,
+  Section5 as ExperienceScalesSection,
+  Section6 as ExecutionPatternsSection,
+};
 
-export default function CiAgileMainFrozenPreMergeBranch() {
+export default function AboutPageSections() {
   return (
     <div className="bg-white relative size-full" data-name="CI Agile Main (Frozen) Pre-Merge Branch">
       <AboutPage />

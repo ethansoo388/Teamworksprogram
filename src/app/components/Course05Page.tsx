@@ -1,6 +1,6 @@
 import { ArrowRight, Menu, X, Clock, Users, FileX, Earth, Rocket, CheckCircle2, Check, Lightbulb } from "lucide-react";
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
-import { ImageWithFallback } from "@/site/components/teamworks/ImageWithFallback";
+import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import { StoryCarousel, FAQAccordion, InvestmentGrid, SkillsRadial, CourseModulesGrid, PersonaCards } from "@/app/components/shared";
 import { stories, investments, skills, courseModules, learningOutcomes, personas, masterTopics, faqs, courseDetails } from "@/app/components/course05/data";
 import type { PageMeta } from "@/types";

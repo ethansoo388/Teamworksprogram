@@ -3130,7 +3130,7 @@ function Navigation() {
 
 export { Navigation as MainSiteNavigation, Footer as MainSiteFooter, HomePage };
 
-export default function CiAgileMainEthanWorkingMergeBranch() {
+export default function HomePageSections() {
   return (
     <div className="bg-white relative size-full" data-name="CI Agile Main (Ethan Working Merge) Branch">
       <HomePage />

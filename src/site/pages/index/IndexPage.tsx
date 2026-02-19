@@ -1,6 +1,6 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { HomePage } from "@/site/components/main/imported/CiAgileMainEthanWorkingMergeBranch";
+import { HomePage } from "@/site/components/main/HomePageSections";
 import type { PageMeta } from "@/types";
 
 export const pageMeta: PageMeta = {
