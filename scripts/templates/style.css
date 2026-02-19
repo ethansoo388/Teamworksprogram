@@ -124,6 +124,12 @@ input:valid:not(:placeholder-shown) {
   border: 1px solid #f87171;
 }
 
+/* Client logo strip infinite-scroll animation */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Print styles */
 @media print {
   nav, footer, .no-print {
