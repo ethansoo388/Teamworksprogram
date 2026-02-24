@@ -93,6 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dropdown navigation functionality (main site) - HOVER BASED - HOVER BASED
   const dropdownContainers = document.querySelectorAll('[data-dropdown-container]');
 
+  // Close any open dropdowns when clicking outside (desktop + touch)
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest('[data-dropdown-container]')) return;
+
+    document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.add('hidden'));
+    document.querySelectorAll('[data-dropdown-text]').forEach(t => {
+      t.style.color = '#364153';
+    });
+    document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
+      i.style.color = '#364153';
+    });
+  });
+
   dropdownContainers.forEach(container => {
     const dropdownName = container.getAttribute('data-dropdown-container');
     const dropdown = container.querySelector(`[data-dropdown="${dropdownName}"]`);
@@ -133,6 +148,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Change trigger text and icon to blue (#0066CC)
       if (text) text.style.color = '#0066CC';
       if (icon) icon.style.color = '#0066CC';
+    });
+
+    // Also support click-to-toggle (needed for touch devices and click-first users)
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const wasHidden = dropdown.classList.contains('hidden');
+
+      // Close all dropdowns first
+      document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.add('hidden'));
+      document.querySelectorAll('[data-dropdown-text]').forEach(t => {
+        t.style.color = '#364153';
+      });
+      document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
+        i.style.color = '#364153';
+      });
+
+      // If it was hidden, open it; if it was open, keep it closed
+      if (wasHidden) {
+        dropdown.classList.remove('hidden');
+        if (text) text.style.color = '#0066CC';
+        if (icon) icon.style.color = '#0066CC';
+      }
     });
 
     // Hide dropdown when mouse leaves the entire container (trigger + dropdown)
