@@ -39,7 +39,9 @@ export function StateOfAgileSection() {
                 </div>
                 <div className="h-2 bg-slate-800 rounded-full overflow-hidden max-w-md mx-auto">
                   <div
-                    className="h-full bg-gradient-to-r from-green-500 to-emerald-500"
+                    className="h-full bg-gradient-to-r from-green-500 to-emerald-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                    data-bar-target={60}
+                    style={{ width: "0%" }}
                   ></div>
                 </div>
               </div>
@@ -55,7 +57,9 @@ export function StateOfAgileSection() {
                 </div>
                 <div className="h-2 bg-slate-800 rounded-full overflow-hidden max-w-md mx-auto">
                   <div
-                    className="h-full bg-gradient-to-r from-red-500 to-orange-500"
+                    className="h-full bg-gradient-to-r from-red-500 to-orange-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                    data-bar-target={63}
+                    style={{ width: "0%" }}
                   ></div>
                 </div>
               </div>
@@ -96,7 +100,9 @@ export function StateOfAgileSection() {
               </div>
               <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
+                  className="h-full bg-gradient-to-r from-purple-500 to-blue-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                  data-bar-target={84}
+                  style={{ width: "0%" }}
                 ></div>
               </div>
             </div>
@@ -110,7 +116,9 @@ export function StateOfAgileSection() {
               </div>
               <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-red-500 to-orange-500"
+                  className="h-full bg-gradient-to-r from-red-500 to-orange-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                  data-bar-target={10}
+                  style={{ width: "0%" }}
                 ></div>
               </div>
             </div>
@@ -153,7 +161,9 @@ export function StateOfAgileSection() {
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                  data-bar-target={29}
+                  style={{ width: "0%" }}
                 ></div>
               </div>
               <p className="text-slate-300 font-semibold">Outcome Ownership & Adaptability</p>
@@ -165,7 +175,9 @@ export function StateOfAgileSection() {
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                  data-bar-target={27}
+                  style={{ width: "0%" }}
                 ></div>
               </div>
               <p className="text-slate-300 font-semibold">Leadership Support & Alignment</p>
@@ -177,7 +189,9 @@ export function StateOfAgileSection() {
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 jess-bar-fill transition-[width] duration-1000 ease-out"
+                  data-bar-target={17}
+                  style={{ width: "0%" }}
                 ></div>
               </div>
               <p className="text-slate-300 font-semibold">Clear Line of Sight from Strategy to Execution</p>

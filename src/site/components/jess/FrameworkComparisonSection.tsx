@@ -94,10 +94,12 @@ export function FrameworkComparisonSection() {
 
                   <div className="relative h-3 bg-slate-800/50 rounded-full overflow-hidden border border-slate-700/50">
                     <div
-                      className={`h-full bg-gradient-to-r ${framework.color} ${
+                      className={`h-full bg-gradient-to-r ${framework.color} jess-bar-fill transition-[width] duration-1000 ease-out ${
                         index === 0 ? 'shadow-lg shadow-blue-500/50' : ''
                       }`}
-                    />
+                      data-bar-target={framework.percentage}
+                      style={{ width: '0%' }}
+                    ></div>
                   </div>
                 </div>
               ))}
