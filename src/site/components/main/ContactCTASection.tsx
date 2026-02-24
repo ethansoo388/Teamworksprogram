@@ -33,7 +33,7 @@ export function ContactCTASection() {
             </ul>
 
             <div className="space-y-3">
-              <a href="contactus.html"
+              <a href="/contactus.html"
                 className="block w-full bg-white hover:bg-gray-50 text-[#0066CC] font-medium text-base h-12 px-8 rounded-md transition-all shadow-md text-center leading-[3rem]">
                 Schedule a Call
               </a>

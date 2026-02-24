@@ -38,7 +38,7 @@ export function Course04Page() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a href="bookConsultation.html" className="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style={{ backgroundColor: "#16A34A" }}>
+              <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style={{ backgroundColor: "#16A34A" }}>
                 Book This Course for Your Team
               </a>
             </div>
@@ -60,7 +60,7 @@ export function Course04Page() {
                 <a href="#outcomes" className="text-sm py-2">Outcomes</a>
                 <a href="#testimonials" className="text-sm py-2">Testimonials</a>
                 <a href="#faq" className="text-sm py-2">FAQ</a>
-                <a href="bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#16A34A" }}>
+                <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#16A34A" }}>
                   Book This Course
                 </a>
               </div>
@@ -75,7 +75,7 @@ export function Course04Page() {
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <a href="../index.html" className="hover:text-[#16A34A] transition-colors">Home</a>
             <span>/</span>
-            <a href="index.html" className="hover:text-[#16A34A] transition-colors">Programs</a>
+            <a href="/teamworks/index.html" className="hover:text-[#16A34A] transition-colors">Programs</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">Practical Lean Problem Solving</span>
           </div>
@@ -139,7 +139,7 @@ export function Course04Page() {
                 </div>
 
                 {/* CTA Button */}
-                <a href="bookConsultation.html" className="inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all group" style={{ backgroundColor: "#22C55E" }}>
+                <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all group" style={{ backgroundColor: "#22C55E" }}>
                   <span className="font-medium">Talk to Us About Your Team</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -889,7 +889,7 @@ export function Course04Page() {
 
                 {/* CTA Button */}
                 <div className="text-center">
-                  <a href="bookConsultation.html" className="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">
+                  <a href="/teamworks/bookConsultation.html" className="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">
                     Plan This Course for Your Team
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1054,7 +1054,7 @@ export function Course04Page() {
 
             {/* CTA Button */}
             <a
-              href="bookConsultation.html"
+              href="/teamworks/bookConsultation.html"
               className="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               Request Private Training Proposal

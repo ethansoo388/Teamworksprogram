@@ -8,7 +8,7 @@ export function BookConsultationPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="index.html" className="text-2xl tracking-tight font-semibold hover:text-gray-700 transition-colors">
+            <a href="/teamworks/index.html" className="text-2xl tracking-tight font-semibold hover:text-gray-700 transition-colors">
               TeamWorks
             </a>
 

@@ -38,7 +38,7 @@ export function Course03Page() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a href="bookConsultation.html" className="bg-orange-600 text-white px-6 py-2.5 rounded-lg text-sm hover:bg-orange-700 transition-all font-medium">
+              <a href="/teamworks/bookConsultation.html" className="bg-orange-600 text-white px-6 py-2.5 rounded-lg text-sm hover:bg-orange-700 transition-all font-medium">
                 Book This Course for Your Team
               </a>
             </div>
@@ -60,7 +60,7 @@ export function Course03Page() {
                 <a href="#outcomes" className="text-sm py-2">Outcomes</a>
                 <a href="#reviews" className="text-sm py-2">Reviews</a>
                 <a href="#faq" className="text-sm py-2">FAQ</a>
-                <a href="bookConsultation.html" className="bg-orange-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+                <a href="/teamworks/bookConsultation.html" className="bg-orange-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
                   Book This Course
                 </a>
               </div>
@@ -75,7 +75,7 @@ export function Course03Page() {
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <a href="../index.html" className="hover:text-orange-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="index.html" className="hover:text-orange-600 transition-colors">Programs</a>
+            <a href="/teamworks/index.html" className="hover:text-orange-600 transition-colors">Programs</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">Critical Thinking for Better Work</span>
           </div>
@@ -139,7 +139,7 @@ export function Course03Page() {
                 </div>
 
                 {/* CTA Button */}
-                <a href="bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all group">
+                <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all group">
                   <span className="font-medium">Talk to Us About Your Team</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -222,7 +222,7 @@ export function Course03Page() {
 
             {/* CTA */}
             <div className="text-center mt-16">
-              <a href="bookConsultation.html" className="inline-flex flex-col items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
+              <a href="/teamworks/bookConsultation.html" className="inline-flex flex-col items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
                 See If This Course Fits Your Team
               </a>
               <p className="text-sm text-gray-500 mt-4">
@@ -902,7 +902,7 @@ export function Course03Page() {
               {/* CTA Button */}
               <div className="mt-10">
                 <a 
-                  href="bookConsultation.html" 
+                  href="/teamworks/bookConsultation.html" 
                   className="block w-full bg-white border-2 border-orange-600 text-orange-600 text-center px-8 py-4 rounded-xl hover:bg-orange-50 transition-all font-semibold text-lg flex items-center justify-center gap-2 group"
                 >
                   Book This Course for Your Team

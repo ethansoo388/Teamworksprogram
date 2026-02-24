@@ -73,7 +73,7 @@ export function LeadershipTrainingPage() {
             <div className="max-w-2xl">
               {/* Back Link */}
               <a
-                href="index.html"
+                href="/jess/index.html"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors mb-12 group"
               >
                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -120,14 +120,14 @@ export function LeadershipTrainingPage() {
       <div className="sticky top-0 z-40 bg-[#2C3E50] border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex gap-8 sm:gap-12">
-            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
+            <span className="relative py-4 text-sm sm:text-base font-medium text-white">
               Overview
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
             </span>
 
             <a
               href="course-modules.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
             >
               Course Modules
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -135,7 +135,7 @@ export function LeadershipTrainingPage() {
 
             <a
               href="instructor.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
             >
               Instructor
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -143,7 +143,7 @@ export function LeadershipTrainingPage() {
 
             <a
               href="class-schedule.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
             >
               Class Schedule
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -151,7 +151,7 @@ export function LeadershipTrainingPage() {
 
             <a
               href="individual-enrollment.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
             >
               Enrollment
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>

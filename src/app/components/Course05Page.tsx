@@ -42,7 +42,7 @@ export function Course05Page() {
             </div>
 
             <div className="hidden md:block">
-              <a href="bookConsultation.html" className="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style={{ backgroundColor: "#0EA7E9" }}>
+              <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style={{ backgroundColor: "#0EA7E9" }}>
                 Book This Course for Your Team
               </a>
             </div>
@@ -72,7 +72,7 @@ export function Course05Page() {
               <a href="#outcomes" className="text-sm py-2" data-mobile-close>Outcomes</a>
               <a href="#opportunity" className="text-sm py-2" data-mobile-close>Opportunity</a>
               <a href="#faq" className="text-sm py-2" data-mobile-close>FAQ</a>
-              <a href="bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#0EA7E9" }} data-mobile-close>
+              <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#0EA7E9" }} data-mobile-close>
                 Book This Course
               </a>
             </div>
@@ -86,7 +86,7 @@ export function Course05Page() {
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <a href="../index.html" className="hover:text-[#0EA7E9] transition-colors">Home</a>
             <span>/</span>
-            <a href="index.html" className="hover:text-[#0EA7E9] transition-colors">Programs</a>
+            <a href="/teamworks/index.html" className="hover:text-[#0EA7E9] transition-colors">Programs</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">AI Skills for YOUR Team</span>
           </div>
@@ -146,7 +146,7 @@ export function Course05Page() {
                   </div>
                 </div>
                 <div className="space-y-4 pt-2">
-                  <a href="bookConsultation.html" className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-lg text-base sm:text-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl group" style={{ backgroundColor: "#0EA7E9" }}>
+                  <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-lg text-base sm:text-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl group" style={{ backgroundColor: "#0EA7E9" }}>
                     <span className="font-medium">Talk to Us About Your Team</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -482,7 +482,7 @@ export function Course05Page() {
                       ))}
                     </div>
                   </div>
-                  <a href="bookConsultation.html" className="w-full text-lg text-white py-4 px-8 rounded-lg inline-flex items-center justify-center gap-2 hover:opacity-90 transition-all group" style={{ backgroundColor: "#0EA7E9" }}>
+                  <a href="/teamworks/bookConsultation.html" className="w-full text-lg text-white py-4 px-8 rounded-lg inline-flex items-center justify-center gap-2 hover:opacity-90 transition-all group" style={{ backgroundColor: "#0EA7E9" }}>
                     Plan This Course for Your Team
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -545,7 +545,7 @@ export function Course05Page() {
                 AI tools are evolving rapidly — but tools alone don't create advantage. <span className="text-gray-900 font-normal">Trained, confident teams do.</span> Equip your people with practical AI skills they can apply immediately.
               </p>
               <div className="space-y-6 pt-6">
-                <a href="bookConsultation.html" className="inline-flex items-center gap-2 text-lg px-10 py-4 text-white rounded-lg shadow-lg hover:shadow-xl hover:opacity-90 transition-all" style={{ backgroundColor: "#0EA7E9" }}>
+                <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 text-lg px-10 py-4 text-white rounded-lg shadow-lg hover:shadow-xl hover:opacity-90 transition-all" style={{ backgroundColor: "#0EA7E9" }}>
                   Empower Your Team Today
                 </a>
               </div>

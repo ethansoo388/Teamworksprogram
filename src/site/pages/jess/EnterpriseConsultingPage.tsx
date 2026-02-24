@@ -87,7 +87,7 @@ export function EnterpriseConsultingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div>
             <a
-              href="index.html"
+              href="/jess/index.html"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-400 transition-colors mb-8 group"
             >
               <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />

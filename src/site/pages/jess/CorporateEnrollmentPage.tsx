@@ -59,7 +59,7 @@ export function CorporateEnrollmentPage() {
                       Back to Class Schedule
                     </a>
                     <a
-                      href="index.html"
+                      href="/jess/index.html"
                       className="inline-block bg-transparent border-2 border-slate-400 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-slate-700 hover:border-slate-300 transition-colors duration-300"
                     >
                       Return Home

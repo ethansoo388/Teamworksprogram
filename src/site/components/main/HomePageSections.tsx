@@ -39,7 +39,7 @@ function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="contactus.html"
+              href="/contactus.html"
               className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-normal text-base h-12 px-8 transition-colors"
             >
               Talk to an Expert
@@ -599,14 +599,14 @@ function FinalCTASection() {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="contactus.html"
+            href="/contactus.html"
             className="inline-flex items-center justify-center gap-2 h-12 px-8 bg-[#0066CC] hover:bg-[#0052A3] text-white font-normal text-base transition-all"
           >
             Schedule Consultation
             <i data-lucide="arrow-right" className="w-[18px] h-[18px]"></i>
           </a>
           <a
-            href="contactus.html"
+            href="/contactus.html"
             className="inline-flex items-center justify-center gap-2 h-12 px-8 border-2 border-white text-gray-900 bg-white hover:bg-gray-800 hover:text-white hover:border-gray-800 font-normal text-base transition-all"
           >
             Contact Us
@@ -673,8 +673,8 @@ export function MainSiteFooter() {
           <div className="lg:col-span-2">
             <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Programs</h3>
             <ul className="space-y-3">
-              <li><a href="teamworks/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For SMEs</a></li>
-              <li><a href="jess/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For Enterprises</a></li>
+              <li><a href="/teamworks/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For SMEs</a></li>
+              <li><a href="/jess/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For Enterprises</a></li>
             </ul>
           </div>
 
@@ -691,8 +691,8 @@ export function MainSiteFooter() {
           <div className="lg:col-span-2">
             <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">About</h3>
             <ul className="space-y-3">
-              <li><a href="aboutus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">About Us</a></li>
-              <li><a href="contactus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">Contact Us</a></li>
+              <li><a href="/aboutus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">About Us</a></li>
+              <li><a href="/contactus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">Contact Us</a></li>
             </ul>
           </div>
 

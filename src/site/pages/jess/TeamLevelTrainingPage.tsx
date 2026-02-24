@@ -77,7 +77,7 @@ export function TeamLevelTrainingPage() {
         <div className="max-w-7xl mx-auto">
           {/* Back Button */}
           <a
-            href="index.html"
+            href="/jess/index.html"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors mb-16 group"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
