@@ -8,8 +8,8 @@ export function Hero() {
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl jess-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl jess-float-slow"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -17,12 +17,15 @@ export function Hero() {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6"
+              data-reveal
             >
               <Sparkles size={16} />
               <span className="text-sm">AI-Driven Business Transformation</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
+              data-reveal
+              data-delay="80"
             >
               <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
                 Enterprise Agility,{" "}
@@ -33,6 +36,8 @@ export function Hero() {
             </h1>
 
             <p className="text-slate-300 mb-8 leading-relaxed"
+              data-reveal
+              data-delay="140"
             >
               <span className="block text-2xl mb-3">Align strategy, leadership, and teams — powered by Dr. Jeff Sutherland's knowledge and advanced AI.</span>
               <span className="block text-lg">
@@ -41,6 +46,8 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
+              data-reveal
+              data-delay="200"
             >
               <Button
                 size="lg"
@@ -65,6 +72,8 @@ export function Hero() {
 
           {/* Right side - Hero image */}
           <div className="relative"
+            data-reveal
+            data-delay="260"
           >
             {/* Background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
@@ -81,8 +90,8 @@ export function Hero() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-500/30 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-cyan-500/30 rounded-full blur-3xl"></div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-500/30 rounded-full blur-3xl jess-float-slow"></div>
+            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-cyan-500/30 rounded-full blur-3xl jess-float"></div>
           </div>
         </div>
       </div>

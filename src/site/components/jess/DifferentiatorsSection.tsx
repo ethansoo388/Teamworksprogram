@@ -42,8 +42,7 @@ export function DifferentiatorsSection() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Why Executives Choose <span className="text-blue-400">JESS</span>
             </h2>
@@ -54,7 +53,7 @@ export function DifferentiatorsSection() {
         </div>
 
         {/* Mobile Slider */}
-        <div className="block lg:hidden" data-carousel="jess-diff" data-carousel-initial="0">
+        <div className="block lg:hidden" data-carousel="jess-diff" data-carousel-initial="0" data-reveal data-delay="120">
           <div data-carousel-track>
             {differentiators.map((item, index) => (
               <div key={index} className="px-2" data-carousel-slide>
@@ -97,13 +96,14 @@ export function DifferentiatorsSection() {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8" data-reveal-group data-stagger="90">
           {differentiators.map((item, index) => (
             <div
               key={index}
               className={`group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 ${
                 index === differentiators.length - 1 ? 'lg:col-span-2' : ''
               }`}
+              data-reveal-item
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
               <div className="relative z-10">
@@ -123,9 +123,7 @@ export function DifferentiatorsSection() {
         </div>
 
         {/* Closing statement */}
-        <div
-          className="mt-12 text-center"
-        >
+        <div className="mt-12 text-center" data-reveal data-delay="220">
           <p className="text-lg text-slate-300 max-w-4xl mx-auto">
             JESS works because it treats agility as a leadership and operating model decision — not a team-level practice change.
           </p>

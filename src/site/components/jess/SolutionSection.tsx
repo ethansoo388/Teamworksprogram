@@ -4,13 +4,12 @@ export function SolutionSection() {
     <section id="solution" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl jess-float-slow"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               What is Jeff Sutherland's Enterprise Scrum System (JESS)?
             </h2>
@@ -20,9 +19,8 @@ export function SolutionSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div
-          >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16" data-reveal-group data-stagger="100">
+          <div data-reveal-item>
             <h3 className="text-3xl font-bold text-white mb-6">
               The Problems We Solve
             </h3>
@@ -74,31 +72,29 @@ export function SolutionSection() {
             </div>
           </div>
 
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
-          >
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6" data-reveal-item>
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
               <Shield className="text-blue-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Enterprise Risk Management</h4>
               <p className="text-sm text-slate-400">
                 Early visibility into delivery, dependency, and execution risks — before they become escalations.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
               <Zap className="text-cyan-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Faster Time to Measurable Outcomes</h4>
               <p className="text-sm text-slate-400">
                 Shift from transformation roadmaps to real execution gains in weeks, not years.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
               <Network className="text-blue-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Designed to Scale by Design</h4>
               <p className="text-sm text-slate-400">
                 One execution system that works consistently from pilot teams to enterprise-wide adoption.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
               <CheckCircle2 className="text-cyan-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Proven in Complex Enterprises</h4>
               <p className="text-sm text-slate-400">

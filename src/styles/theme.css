@@ -180,3 +180,75 @@
     line-height: 1.5;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   JESS: Static-export friendly micro-animations
+   - Scoped to .site-jess so Main + TeamWorks are untouched
+   - Progressive enhancement: only activates when HTML has .js
+   - Works with main.js IntersectionObserver (data-reveal + data-reveal-group)
+   ───────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Reveal on scroll (group + items) */
+  html.js .site-jess [data-reveal],
+  html.js .site-jess [data-reveal-item] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms ease, transform 700ms ease;
+    will-change: transform;
+  }
+
+  html.js .site-jess [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  html.js .site-jess [data-reveal-group].is-visible [data-reveal-item] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.js .site-jess [data-reveal],
+    html.js .site-jess [data-reveal-item] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Subtle floating glow blobs (add class jess-float / jess-float-slow) */
+  @keyframes jess-float {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -14px, 0); }
+  }
+  @keyframes jess-float-slow {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -8px, 0); }
+  }
+
+  .site-jess .jess-float {
+    animation: jess-float 10s ease-in-out infinite;
+  }
+  .site-jess .jess-float-slow {
+    animation: jess-float-slow 14s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-jess .jess-float,
+    .site-jess .jess-float-slow {
+      animation: none;
+    }
+  }
+
+  /* JESS modal open/close animation (enabled by main.js only inside .site-jess) */
+  .site-jess .jess-modal {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+  .site-jess .jess-modal.is-open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

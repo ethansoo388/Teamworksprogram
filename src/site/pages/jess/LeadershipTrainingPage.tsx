@@ -185,7 +185,7 @@ export function LeadershipTrainingPage() {
               </div>
 
               {/* Right Column - Structured Bullet List */}
-              <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-2xl hover:border-slate-600 transition-all duration-300 backdrop-blur-sm">
+              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-2xl hover:border-slate-600 transition-all duration-300 backdrop-blur-sm" data-delay="0">
                 <h3 className="text-xl sm:text-2xl font-semibold text-white mb-8 pb-4 border-b-2 border-amber-500">
                   Common failure patterns:
                 </h3>
@@ -216,7 +216,7 @@ export function LeadershipTrainingPage() {
             </div>
 
             {/* Closing Emphasis Line - Full Width */}
-            <div className="max-w-4xl bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 sm:p-10 border-l-4 border-white shadow-2xl">
+            <div className="jess-reveal max-w-4xl bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 sm:p-10 border-l-4 border-white shadow-2xl" data-delay="120">
               <p className="text-xl sm:text-2xl text-slate-900 font-medium leading-relaxed">
                 Agile transformation requires leadership alignment and execution capability — working as one system.
               </p>
@@ -253,7 +253,7 @@ export function LeadershipTrainingPage() {
             {/* Decorative Divider */}
             <div className="max-w-xl mx-auto mb-12 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent blur-xl"></div>
-              <p className="text-lg sm:text-xl text-slate-300 font-light leading-relaxed relative z-10 px-6 py-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 backdrop-blur-sm shadow-2xl">
+              <p className="jess-reveal text-lg sm:text-xl text-slate-300 font-light leading-relaxed relative z-10 px-6 py-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 backdrop-blur-sm shadow-2xl" data-delay="240">
                 Most leaders are adjacent to Agile—not actively shaping it. This program equips you to run the execution system, not watch from the sidelines.
               </p>
             </div>
@@ -319,7 +319,7 @@ export function LeadershipTrainingPage() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full">
+                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="0">
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
                     <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -338,7 +338,7 @@ export function LeadershipTrainingPage() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full">
+                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="120">
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
                     <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -356,7 +356,7 @@ export function LeadershipTrainingPage() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full">
+                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="240">
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
                     <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
@@ -681,7 +681,7 @@ export function LeadershipTrainingPage() {
             {/* Comparison Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {/* Course 1 Alone */}
-              <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm" data-delay="0">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
                     <span className="text-amber-500 font-semibold">1</span>
@@ -694,7 +694,7 @@ export function LeadershipTrainingPage() {
               </div>
 
               {/* Course 2 Alone */}
-              <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm" data-delay="120">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
                     <span className="text-amber-500 font-semibold">2</span>

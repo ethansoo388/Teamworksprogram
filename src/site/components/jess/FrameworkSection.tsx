@@ -11,8 +11,7 @@ export function FrameworkSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               The Framework
             </h2>
@@ -21,7 +20,7 @@ export function FrameworkSection() {
             </p>
 
             {/* 2-Column Image Layout */}
-            <div className="mt-12 max-w-5xl mx-auto">
+            <div className="mt-12 max-w-5xl mx-auto" data-reveal data-delay="120">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-slate-700/50">
                 {/* Left Column - White Background */}
                 <div className="relative w-full bg-white" style={{ aspectRatio: '16/9' }}>
@@ -47,10 +46,11 @@ export function FrameworkSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16" data-reveal-group data-stagger="100">
           {/* Scrum Master Cycle */}
           <div
             className="relative"
+            data-reveal-item
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
               <div className="flex items-start gap-4 mb-6">
@@ -118,6 +118,7 @@ export function FrameworkSection() {
           {/* Product Owner Cycle */}
           <div
             className="relative"
+            data-reveal-item
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
               <div className="flex items-start gap-4 mb-6">
@@ -186,22 +187,24 @@ export function FrameworkSection() {
         {/* Key Benefits */}
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          data-reveal-group
+          data-stagger="90"
         >
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center">
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
             <Users className="text-blue-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Aligned Empowerment</h4>
             <p className="text-sm text-slate-400">
               Empower regional teams to act decisively — within a clear strategic framework that maintains visibility and leadership control.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center">
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
             <TrendingUp className="text-cyan-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Scalable Enterprise Execution</h4>
             <p className="text-sm text-slate-400">
               Scale from a few teams to enterprise-wide coordination without increasing hierarchy, bureaucracy, or loss of oversight.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center">
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
             <Target className="text-blue-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Measurable Business Outcomes</h4>
             <p className="text-sm text-slate-400">
@@ -213,6 +216,8 @@ export function FrameworkSection() {
         {/* Why it works statement */}
         <div
           className="mt-12 text-center"
+          data-reveal
+          data-delay="160"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             For Global Enterprises Operating in Southeast Asia

@@ -2,6 +2,8 @@
 
 // Initialize Lucide icons
 document.addEventListener('DOMContentLoaded', () => {
+  // JS is available. Used for progressive-enhancement styling (scoped in CSS).
+  document.documentElement.classList.add('js');
   // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
@@ -271,6 +273,120 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
+  // ─────────────────────────────────────────────────────────────
+  // JESS: Card-level reveal on scroll (static-export friendly)
+  // - Elements opt-in via class "jess-reveal" (no visual change by default)
+  // - We add the initial hidden/transition classes at runtime to avoid breaking
+  //   non-JS rendering in case main.js fails to load.
+  // - Scoped strictly under .site-jess to protect Main + TeamWorks.
+  // Optional stagger: set data-delay="150" (ms)
+  const initJessReveal = () => {
+    const jessRoot = document.querySelector('.site-jess');
+    if (!jessRoot) return;
+
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const revealEls = Array.from(jessRoot.querySelectorAll('.jess-reveal')).filter(
+      (el) => el instanceof HTMLElement
+    );
+
+    if (revealEls.length === 0) return;
+
+    // If reduced motion: just show instantly (no transitions).
+    if (prefersReduced) {
+      revealEls.forEach((el) => {
+        el.classList.add('opacity-100', 'translate-y-0');
+      });
+      return;
+    }
+
+    // Apply initial state + transition at runtime (failsafe if JS isn't present).
+    revealEls.forEach((el) => {
+      el.classList.add(
+        'opacity-0',
+        'translate-y-6',
+        'transition-all',
+        'duration-700',
+        'ease-out',
+        'will-change-transform'
+      );
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const delay = Number(el.dataset.delay || '0');
+
+          // Stagger using timeout; then reveal.
+          window.setTimeout(() => {
+            el.classList.remove('opacity-0', 'translate-y-6');
+            el.classList.add('opacity-100', 'translate-y-0');
+          }, Number.isFinite(delay) ? delay : 0);
+
+          obs.unobserve(el);
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+  };
+
+  // JESS: Bar fill animation (ProblemSection) — width grows to data-bar-target
+  const initJessBars = () => {
+    const jessRoot = document.querySelector('.site-jess');
+    if (!jessRoot) return;
+
+    const bars = Array.from(jessRoot.querySelectorAll('[data-bar-target]')).filter(
+      (el) => el instanceof HTMLElement
+    );
+    if (bars.length === 0) return;
+
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Ensure deterministic start width
+    bars.forEach((bar) => {
+      if (!bar.style.width) bar.style.width = '0%';
+    });
+
+    if (prefersReduced) {
+      bars.forEach((bar) => {
+        const target = Number(bar.dataset.barTarget || '0');
+        bar.style.width = `${Number.isFinite(target) ? target : 0}%`;
+      });
+      return;
+    }
+
+    const barObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = Number(el.dataset.barTarget || '0');
+          // Let the browser register the 0% state before we set the target.
+          requestAnimationFrame(() => {
+            el.style.width = `${Number.isFinite(target) ? target : 0}%`;
+          });
+          obs.unobserve(el);
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    bars.forEach((bar) => barObserver.observe(bar));
+  };
+
+  initJessReveal();
+  initJessBars();
+
   // FAQ toggle functionality
   const faqButtons = document.querySelectorAll('[data-faq-button]');
   faqButtons.forEach(button => {
@@ -484,15 +600,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const openModal = (id) => {
     const modal = modalsById.get(id);
     if (!modal) return;
-    modal.classList.remove('hidden');
-    modal.setAttribute('aria-hidden', 'false');
+
+    // JESS-only: animate modal open (keep other sites unchanged)
+    const isJess = !!modal.closest('.site-jess');
+    if (isJess) {
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      modal.classList.add('jess-modal');
+      // Start state (CSS reads .jess-modal:not(.is-open))
+      modal.classList.remove('is-open');
+      requestAnimationFrame(() => {
+        modal.classList.add('is-open');
+      });
+    } else {
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = (modal) => {
     if (!(modal instanceof HTMLElement)) return;
-    modal.classList.add('hidden');
-    modal.setAttribute('aria-hidden', 'true');
+
+    const isJess = !!modal.closest('.site-jess');
+    if (isJess) {
+      // Animate out, then hide.
+      modal.classList.remove('is-open');
+      window.setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+      }, 200);
+    } else {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
     // Restore scroll only if no other modals are open
     const anyOpen = Array.from(modalsById.values()).some((m) => !m.classList.contains('hidden'));
     if (!anyOpen) document.body.style.overflow = '';

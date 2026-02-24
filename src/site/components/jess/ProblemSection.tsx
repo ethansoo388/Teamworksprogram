@@ -60,8 +60,7 @@ export function ProblemSection() {
     <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Why Most Enterprise Transformations Fail?
             </h2>
@@ -74,16 +73,19 @@ export function ProblemSection() {
         {/* Bar chart visualization */}
         <div
           className="max-w-5xl mx-auto p-8 md:p-12 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-slate-700/50 backdrop-blur-sm"
+          data-reveal
+          data-delay="120"
         >
           <p className="text-sm text-slate-400 mb-8">
             The four most common enterprise transformation failure patterns, based on the 18th State of Agile Report:
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-6" data-reveal-group data-stagger="90">
             {statsData.map((stat, index) => (
               <div
                 key={index}
                 className="group"
+                data-reveal-item
               >
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   {/* Label */}
@@ -98,8 +100,10 @@ export function ProblemSection() {
                     {/* Bar */}
                     <div className="flex-1 relative h-10 sm:h-12 bg-slate-800/50 rounded-lg border border-slate-700/50 overflow-hidden">
                       <div
-                        className="h-full rounded-lg relative"
+                        className="h-full rounded-lg relative jess-bar-fill transition-[width] duration-1000 ease-out"
+                        data-bar-target={stat.percentage}
                         style={{
+                          width: "0%",
                           background: index === 0 || index === 3
                             ? `linear-gradient(90deg, ${stat.color} 0%, #f97316 100%)`
                             : stat.color,

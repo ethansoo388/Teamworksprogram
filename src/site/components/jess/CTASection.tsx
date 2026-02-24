@@ -7,6 +7,7 @@ export function CTASection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div
           className="text-center"
+          data-reveal
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
             Ready to Make Enterprise Agility a Confident Leadership Decision?
@@ -32,24 +33,24 @@ export function CTASection() {
             No obligation. No framework rollout. Just clarity for senior decision-makers.
           </p>
 
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700" data-reveal data-delay="120">
             <h3 className="text-xl font-bold text-white mb-4">What Happens Next</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left" data-reveal-group data-stagger="90">
+              <div data-reveal-item>
                 <div className="text-3xl font-bold text-blue-400 mb-2">1</div>
                 <h4 className="font-semibold text-white mb-2">Executive Discovery Session</h4>
                 <p className="text-sm text-slate-400">
                   A focused discussion on your current operating model, constraints, and transformation risks.
                 </p>
               </div>
-              <div>
+              <div data-reveal-item>
                 <div className="text-3xl font-bold text-blue-400 mb-2">2</div>
                 <h4 className="font-semibold text-white mb-2">Executive Recommendation</h4>
                 <p className="text-sm text-slate-400">
                   A clear, tailored recommendation aligned to your structure, priorities, and risk profile.
                 </p>
               </div>
-              <div>
+              <div data-reveal-item>
                 <div className="text-3xl font-bold text-blue-400 mb-2">3</div>
                 <h4 className="font-semibold text-white mb-2">Structured Engagement Kickoff</h4>
                 <p className="text-sm text-slate-400">
