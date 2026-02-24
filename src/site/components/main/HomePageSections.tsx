@@ -283,7 +283,7 @@ function ProgramsSection() {
       image: businessPresentationImage,
       features: ["Executive alignment", "Operating model design", "AI enablement", "Scale transformation"],
       // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
-      link: "/contactus.html",
+      link: "/jess/index.html?source=main-home&cta=enterprise-learn-more",
     },
   ];
 
@@ -533,8 +533,21 @@ function ProvenResultsSection() {
                     <div className="absolute bottom-0 left-0 w-full h-px bg-[#0088FF]/30"></div>
                   )}
                   <div className="pr-4 pb-4 md:pr-6 md:pb-6 lg:pr-8 lg:pb-8">
-                    <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-nowrap">
-                      {r.metric}
+                    <div
+                      className={
+                        r.metric === "3 Months"
+                          ? "font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-normal leading-none text-[clamp(2rem,6vw,4.5rem)]"
+                          : "text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-nowrap"
+                      }
+                    >
+                      {r.metric === "3 Months" ? (
+                        <>
+                          <span className="block sm:inline">3</span>
+                          <span className="block sm:inline sm:ml-3">Months</span>
+                        </>
+                      ) : (
+                        r.metric
+                      )}
                     </div>
                     <div className="text-xs md:text-sm text-gray-400 font-light uppercase tracking-wide">
                       {r.label}

@@ -12,13 +12,13 @@ export function IndividualEnrollmentPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 text-base mb-8">
             <a
-              href="class-schedule.html"
+              href="leadership-training.html"
               className="text-slate-300 hover:text-white transition-colors relative pb-1 border-b border-transparent hover:border-slate-300"
             >
-              Class Schedule
+              Leadership Training
             </a>
             <span className="text-slate-400">›</span>
-            <span className="text-white font-medium relative pb-1 border-b-2 border-amber-500">Individual Registration</span>
+            <span className="text-white font-medium relative pb-1 border-b-2 border-amber-500">Registration</span>
           </div>
 
           <div className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-6">
@@ -32,6 +32,50 @@ export function IndividualEnrollmentPage() {
           </p>
         </div>
       </section>
+
+      {/* Sticky Navigation Tabs */}
+      <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex gap-8 sm:gap-12">
+            <a
+              href="leadership-training.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Overview
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="course-modules.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Course Modules
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="instructor.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Instructor
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="class-schedule.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Class Schedule
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
+              Enrollment
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+            </span>
+          </nav>
+        </div>
+      </div>
 
       {/* Course Options Section */}
       <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
