@@ -48,9 +48,9 @@ export function LeadershipAccordion() {
 
   return (
     <div className="bg-slate-50 rounded-3xl p-4 sm:p-8 lg:p-12 xl:p-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16" data-reveal-group data-stagger="160">
         {/* Left Column - Accordion */}
-        <div className="space-y-2 sm:space-y-3 lg:space-y-4 -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16">
+        <div className="space-y-2 sm:space-y-3 lg:space-y-4 -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16" data-reveal-item>
           {items.map((item, idx) => (
             <details
               key={item.id}
@@ -87,7 +87,7 @@ export function LeadershipAccordion() {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative lg:sticky lg:top-8 h-fit">
+        <div className="relative lg:sticky lg:top-8 h-fit" data-reveal-item>
           <div className="w-full aspect-[4/3] bg-slate-200 rounded-sm overflow-hidden">
             <img
               src={staticImage}

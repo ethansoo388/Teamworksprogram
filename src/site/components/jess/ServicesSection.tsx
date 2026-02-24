@@ -86,8 +86,7 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-center">Enterprise Transformation Roadmap</h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto text-center">
               How enterprises move from strategic intent to repeatable, high-performance execution — without relying on hero teams or isolated Agile pockets.
@@ -247,6 +246,7 @@ export function ServicesSection() {
           <div
             data-scroll-container
             className="hidden sm:grid sm:grid-cols-3 gap-6 pb-4 relative"
+            data-reveal-group data-stagger="140"
           >
             {/* Arrow between Card 1 and 2 */}
             <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none hidden lg:block">
@@ -261,6 +261,7 @@ export function ServicesSection() {
             {/* Card 1 - Free Resources */}
             <div
               className="relative"
+              data-reveal-item
             >
               <a
                 href="free-resources.html"
@@ -304,6 +305,7 @@ export function ServicesSection() {
             {/* Card 2 - JESS Program */}
             <div
               className="relative"
+              data-reveal-item
             >
               <a
                 href="leadership-training.html"
@@ -347,6 +349,7 @@ export function ServicesSection() {
             {/* Card 3 - Nova Series */}
             <div
               className="relative"
+              data-reveal-item
             >
               <a
                 href="team-level-training.html"

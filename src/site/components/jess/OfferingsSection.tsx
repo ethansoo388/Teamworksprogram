@@ -1,4 +1,4 @@
-import { useState } from "react";
+import type React from "react";
 import {
   Users,
   Target,
@@ -31,7 +31,6 @@ interface Offering {
 }
 
 export function OfferingsSection() {
-  const [activeCard, setActiveCard] = useState<string | null>(null);
 
   const offerings: Offering[] = [
     {
@@ -119,8 +118,7 @@ export function OfferingsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               What Executives Get With JESS
             </h2>
@@ -131,7 +129,7 @@ export function OfferingsSection() {
         </div>
 
         {/* Grid of offerings */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 auto-rows-fr" data-reveal-group data-stagger="90">
           {offerings.map((offering, index) => {
             // Create Astro-style layout:
             // Row 1: square, wide, (wide continues)
@@ -144,12 +142,7 @@ export function OfferingsSection() {
             return (
               <OfferingCard
                 key={offering.id}
-                offering={offering}
-                isActive={activeCard === offering.id}
-                onHover={() => setActiveCard(offering.id)}
-                onLeave={() => setActiveCard(null)}
-                delay={index * 0.05}
-                spanTwoColumns={spanTwoColumns}
+                offering={offering}                spanTwoColumns={spanTwoColumns}
                 spanTwoRows={spanTwoRows}
               />
             );
@@ -157,9 +150,7 @@ export function OfferingsSection() {
         </div>
 
         {/* Closing statement */}
-        <div
-          className="mt-16 text-center"
-        >
+        <div className="mt-16 text-center" data-reveal>
           <p className="text-lg text-slate-300 max-w-4xl mx-auto">
             JESS delivers results because it changes how decisions are made, how work flows, and how accountability is enforced — not just how teams work.
           </p>
@@ -171,28 +162,20 @@ export function OfferingsSection() {
 
 interface OfferingCardProps {
   offering: Offering;
-  isActive: boolean;
-  onHover: () => void;
-  onLeave: () => void;
-  delay: number;
   spanTwoColumns: boolean;
   spanTwoRows: boolean;
 }
 
-function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColumns, spanTwoRows }: OfferingCardProps) {
+function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardProps) {
   const Icon = offering.icon;
 
   return (
     <div
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
+      data-reveal-item
       className={`
-        relative p-4 md:p-6 rounded-2xl border transition-all duration-300 cursor-pointer
-        ${
-          isActive
-            ? "bg-gradient-to-br from-slate-900 to-slate-800 border-blue-500/50 shadow-lg shadow-blue-500/20"
-            : "bg-slate-900/40 border-slate-700/50 hover:border-slate-600"
-        }
+        group relative p-4 md:p-6 rounded-2xl border transition-all duration-300 cursor-pointer
+        bg-slate-900/40 border-slate-700/50 hover:border-slate-600
+        hover:bg-gradient-to-br hover:from-slate-900 hover:to-slate-800 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20
         ${spanTwoColumns ? 'md:col-span-2' : ''}
         ${spanTwoRows ? 'md:row-span-2' : ''}
       `}
@@ -206,10 +189,12 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                 {[0, 1, 2].map((i) => (
                   <div
                     key={i}
+                    className="jess-float"
+                    style={{ animationDelay: `${i * 0.35}s` }}
                   >
                     <Lightbulb
                       size={i === 1 ? 96 : 72}
-                      className="transition-all duration-300 text-amber-400"
+                      className="text-amber-400 transition-transform duration-300 group-hover:scale-105"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -219,8 +204,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
               <>
                 {Icon === Brain ? (
                   <div className="flex items-center justify-center gap-4">
-                    <div
-                    >
+                    <div className="jess-float transition-transform duration-300 group-hover:scale-110">
                       <Brain
                         size={72}
                         className="text-pink-500"
@@ -343,13 +327,9 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
               <div className="flex items-end justify-center gap-3 px-8 h-full py-6">
                 {[45, 70, 85, 95, 75].map((height, i) => (
                   <div
-                    key={i}className={`
+                    key={i} className={`
                       flex-1 rounded-t-md transition-all duration-300
-                      ${
-                        isActive
-                          ? "bg-gradient-to-t from-blue-600 via-blue-500 to-cyan-400"
-                          : "bg-slate-700/50"
-                      }
+                      "bg-slate-700/50 group-hover:bg-gradient-to-t group-hover:from-blue-600 group-hover:via-blue-500 group-hover:to-cyan-400"
                     `}
                   />
                 ))}
@@ -384,7 +364,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
 
               return badgeConfig.icons.map((BadgeIcon, i) => (
                 <div
-                  key={i}className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30"
+                  key={i} className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30"
                 >
                   <BadgeIcon
                     size={32}
@@ -420,9 +400,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
       {/* Content */}
       <div>
         <h3
-          className={`text-lg font-bold mb-2 transition-colors duration-300 ${
-            isActive ? "text-white" : "text-slate-200"
-          }`}
+          className="text-lg font-bold mb-2 transition-colors duration-300 text-slate-200 group-hover:text-white"
         >
           {offering.title}
         </h3>
@@ -490,11 +468,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
       </div>
 
       {/* Active indicator */}
-      {isActive && (
-        <div
-          className="absolute top-4 right-4 w-2 h-2 rounded-full bg-blue-400 shadow-lg shadow-blue-400/50"
-        />
-      )}
+      <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-blue-400 shadow-lg shadow-blue-400/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
   );
 }

@@ -12,8 +12,7 @@ export function StateOfAgileSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 mb-6">
               <AlertCircle size={16} />
               <span className="text-sm">18th State of Agile Report</span>
@@ -25,17 +24,15 @@ export function StateOfAgileSection() {
         </div>
 
         {/* The Gap: Tools vs Results */}
-        <div
-          className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-red-500/30"
-        >
+        <div className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-red-500/30" data-reveal>
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-3">The Visibility Paradox</h3>
             <p className="text-slate-400">Enterprises have more visibility than ever — yet leadership still struggles to turn it into reliable outcomes.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8" data-reveal-group data-stagger="140">
             {/* Good Visibility */}
-            <div className="text-center">
+            <div className="text-center" data-reveal-item>
               <div className="mb-4">
                 <div className="text-6xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
                   60%
@@ -51,7 +48,7 @@ export function StateOfAgileSection() {
             </div>
 
             {/* Poor Delivery */}
-            <div className="text-center">
+            <div className="text-center" data-reveal-item>
               <div className="mb-4">
                 <div className="text-6xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent mb-2">
                   63%
@@ -78,9 +75,7 @@ export function StateOfAgileSection() {
         </div>
 
         {/* The Fourth Wave: AI Era */}
-        <div
-          className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30"
-        >
+        <div className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30" data-reveal>
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 flex items-center justify-center">
               <Brain className="text-purple-400" size={32} />
@@ -91,8 +86,8 @@ export function StateOfAgileSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6" data-reveal-group data-stagger="140">
+            <div data-reveal-item>
               <div className="flex items-baseline gap-3 mb-3">
                 <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   84%
@@ -106,7 +101,7 @@ export function StateOfAgileSection() {
               </div>
             </div>
 
-            <div>
+            <div data-reveal-item>
               <div className="flex items-baseline gap-3 mb-3">
                 <div className="text-5xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                   10%
@@ -143,9 +138,7 @@ export function StateOfAgileSection() {
         </div>
 
         {/* What Organizations Really Need */}
-        <div
-          className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-blue-500/30"
-        >
+        <div className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-blue-500/30" data-reveal>
           <h3 className="text-3xl font-bold text-white mb-4 text-center">
             What Organizations Really Need
           </h3>
@@ -153,8 +146,8 @@ export function StateOfAgileSection() {
             When asked what would most help them adapt, leaders didn't ask for more tools or frameworks — they asked for clarity and alignment.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-reveal-group data-stagger="110">
+            <div className="text-center" data-reveal-item>
               <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
                 29%
               </div>
@@ -166,7 +159,7 @@ export function StateOfAgileSection() {
               <p className="text-slate-300 font-semibold">Outcome Ownership & Adaptability</p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" data-reveal-item>
               <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
                 27%
               </div>
@@ -178,7 +171,7 @@ export function StateOfAgileSection() {
               <p className="text-slate-300 font-semibold">Leadership Support & Alignment</p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" data-reveal-item>
               <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
                 17%
               </div>
@@ -193,9 +186,7 @@ export function StateOfAgileSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div
-          className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20"
-        >
+        <div className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20" data-reveal>
           <h3 className="text-2xl font-bold text-white mb-4">
             JESS Is Built for This Enterprise Reality
           </h3>

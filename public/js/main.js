@@ -533,8 +533,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // If this is a reveal group, apply stagger delays to items
       if (el instanceof HTMLElement && el.hasAttribute('data-reveal-group')) {
         const stagger = Number(el.getAttribute('data-stagger') ?? '80');
-        const items = Array.from(el.querySelectorAll('[data-reveal-item]'));
-        items.forEach((child, idx) => {
+
+        // Prefer explicit items; fallback to direct children (Jess pages) if missing.
+        const explicit = Array.from(el.querySelectorAll('[data-reveal-item]'));
+        const targets = explicit.length
+          ? explicit
+          : Array.from(el.children);
+
+        targets.forEach((child, idx) => {
           if (!(child instanceof HTMLElement)) return;
           child.style.transitionDelay = `${Math.max(0, idx) * stagger}ms`;
         });

@@ -18,10 +18,9 @@ export function FrameworkComparisonSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-reveal-group data-stagger="140">
           {/* Left side - Content */}
-          <div
-          >
+          <div data-reveal-item>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
               <Award size={16} />
               <span className="text-sm">Industry Leader</span>
@@ -75,15 +74,14 @@ export function FrameworkComparisonSection() {
           </div>
 
           {/* Right side - Chart */}
-          <div
-            className="p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700 backdrop-blur-sm"
-          >
+          <div className="p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700 backdrop-blur-sm" data-reveal-item>
             <h3 className="text-lg text-slate-400 mb-8">Enterprise Agile Execution Adoption</h3>
 
-            <div className="space-y-6">
+            <div className="space-y-6" data-reveal-group data-stagger="90">
               {frameworks.map((framework, index) => (
                 <div
                   key={framework.name}
+                  data-reveal-item
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className={`font-semibold ${index === 0 ? 'text-white text-lg' : 'text-slate-300'}`}>
@@ -115,9 +113,7 @@ export function FrameworkComparisonSection() {
         </div>
 
         {/* Bottom insight */}
-        <div
-          className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center"
-        >
+        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center" data-reveal>
           <p className="text-slate-300 text-lg">
             <span className="text-white font-semibold">Why leaders continue to trust it:</span> Scrum provides disciplined execution without unnecessary complexity. Scrum@Scale extends this foundation into an enterprise operating model, refined by Jeff Sutherland to handle real-world scale and governance.
           </p>

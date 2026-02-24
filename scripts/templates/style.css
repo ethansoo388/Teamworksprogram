@@ -254,6 +254,18 @@ input:valid:not(:placeholder-shown) {
   transform: none;
 }
 
+/* Fallback: if a reveal group has no [data-reveal-item], stagger direct children (Jess only) */
+.site-jess [data-reveal-group] > * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+.site-jess [data-reveal-group].is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],
   [data-reveal-group] [data-reveal-item] {
@@ -275,4 +287,24 @@ input:valid:not(:placeholder-shown) {
 
 .jess-accordion-icon {
   transition: transform 200ms ease;
+}
+
+
+/* ── Jess micro-animations (static-safe, CSS only) ───────────────────── */
+/* Keep scoped to Jess so Main/TeamWorks are untouched. */
+.site-jess .jess-float {
+  animation: jess-float 2.4s ease-in-out infinite;
+}
+.site-jess .jess-float-slow {
+  animation: jess-float 3.2s ease-in-out infinite;
+}
+.site-jess .jess-spin-slow {
+  animation: jess-spin 10s linear infinite;
+}
+@keyframes jess-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes jess-spin {
+  to { transform: rotate(360deg); }
 }

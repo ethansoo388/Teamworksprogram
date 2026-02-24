@@ -31,8 +31,7 @@ export function TargetAudienceSection() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <p className="text-slate-400 text-sm font-semibold tracking-wider uppercase mb-3">
               WHO THIS IS DESIGNED FOR
             </p>
@@ -42,11 +41,12 @@ export function TargetAudienceSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-6xl mx-auto" data-reveal-group data-stagger="110">
           {audiences.map((audience, index) => (
             <div
               key={index}
               className="text-center"
+              data-reveal-item
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg border border-slate-700 bg-slate-900/40 mb-6">
                 <audience.icon className="text-slate-300" size={28} strokeWidth={1.5} />
@@ -57,9 +57,7 @@ export function TargetAudienceSection() {
           ))}
         </div>
 
-        <p
-          className="text-center mt-12 text-slate-500 text-sm italic"
-        >
+        <p className="text-center mt-12 text-slate-500 text-sm italic" data-reveal>
           JESS is designed for leaders who are accountable for outcomes — not just teams executing tasks.
         </p>
       </div>
