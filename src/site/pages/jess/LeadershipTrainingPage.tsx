@@ -105,7 +105,7 @@ export function LeadershipTrainingPage() {
                 </a>
                 
                 <a 
-                  href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
+                  href="mailto:romanoff@ciagile.com"
                   className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/60 transition-all text-base backdrop-blur-sm"
                 >
                   Talk to a Program Advisor
@@ -404,7 +404,7 @@ export function LeadershipTrainingPage() {
                   {/* Right - CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
+                      href="mailto:romanoff@ciagile.com"
                       className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-105 relative overflow-hidden"
                     >
                       <span className="relative z-10">Talk to a Program Advisor</span>
@@ -915,7 +915,7 @@ export function LeadershipTrainingPage() {
                 This is not introductory training. It's designed for those ready to lead outcomes, not just facilitate processes.
               </p>
               <a
-                href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
+                href="mailto:romanoff@ciagile.com"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] group"
               >
                 <span className="font-medium">Talk to a Program Advisor</span>
@@ -1116,7 +1116,7 @@ export function LeadershipTrainingPage() {
               className="mt-16 text-center"
             >
               <p className="text-base text-slate-400 font-light">
-                Not sure which option is right for you? <a href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form" className="text-blue-400 hover:text-blue-300 font-medium underline">Contact us</a> for a consultation.
+                Not sure which option is right for you? <a href="mailto:romanoff@ciagile.com" className="text-blue-400 hover:text-blue-300 font-medium underline">Contact us</a> for a consultation.
               </p>
             </div>
           </div>
@@ -1318,7 +1318,7 @@ export function LeadershipTrainingPage() {
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <a 
-                    href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
+                    href="mailto:romanoff@ciagile.com"
                     className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl"
                   >
                     Talk to a Program Advisor

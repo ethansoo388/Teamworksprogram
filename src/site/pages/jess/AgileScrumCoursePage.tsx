@@ -168,7 +168,7 @@ export function AgileScrumCoursePage() {
               </p>
               
               <div className="flex flex-col items-center lg:items-start">
-                <a href="/contactus.html?source=nova-scrum201&cta=talk-private-run#contact-form"
+                <a href="mailto:romanoff@ciagile.com"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
                 >
                   <span>Talk to Us About a Private Run</span>
@@ -696,7 +696,7 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
                 
-                <a href="/contactus.html?source=nova-scrum201&cta=discuss-standard-delivery#contact-form"
+                <a href="mailto:romanoff@ciagile.com"
                   className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
                 >
                   Discuss Standard Delivery
@@ -791,7 +791,7 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
                 
-                <a href="/contactus.html?source=nova-scrum201&cta=discuss-ai-driven-delivery#contact-form"
+                <a href="mailto:romanoff@ciagile.com"
                   className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
                 >
                   Discuss AI-Driven Delivery
@@ -867,7 +867,7 @@ export function AgileScrumCoursePage() {
             <p className="text-sm text-slate-600 mb-4">
               Contact us to discuss the right delivery approach for your organization
             </p>
-            <a href="/contactus.html?source=nova-scrum201&cta=discuss-delivery-options#contact-form"
+            <a href="mailto:romanoff@ciagile.com"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
             >
               <span>Discuss Delivery Options</span>
@@ -893,7 +893,7 @@ export function AgileScrumCoursePage() {
               This is a no-obligation conversation to assess fit and approach.
             </p>
             
-            <a href="/contactus.html?source=nova-scrum201&cta=schedule-corporate-discussion#contact-form"
+            <a href="mailto:romanoff@ciagile.com"
               className="px-10 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-lg"
             >
               Schedule a Corporate Discussion

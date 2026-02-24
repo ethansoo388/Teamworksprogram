@@ -761,7 +761,7 @@ export function DesignThinkingCoursePage() {
               </ul>
             </div>
 
-            <a href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
+            <a href="mailto:romanoff@ciagile.com"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 mb-3"
             >
               <span>Discuss a Private Corporate Run</span>
