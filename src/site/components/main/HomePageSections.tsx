@@ -500,7 +500,7 @@ function ProvenResultsSection() {
   return (
     <section className="bg-gray-50">
       {/* Metrics */}
-      <div className="relative py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-[#0A1929] overflow-hidden">
+      <div className="relative py-16 md:py-24 lg:py-32 px-8 lg:px-16 bg-[#0A1929] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-96 h-96 rounded-full border border-[#0066CC]"></div>
           <div className="absolute bottom-40 left-40 w-64 h-64 bg-[#0066CC]/30 blur-3xl"></div>
@@ -515,7 +515,7 @@ function ProvenResultsSection() {
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center">
-            <div className="lg:pl-8 xl:pl-16">
+            <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white mb-4 md:mb-6 leading-tight">
                 Proven Results
               </h2>
@@ -536,18 +536,11 @@ function ProvenResultsSection() {
                     <div
                       className={
                         r.metric === "3 Months"
-                          ? "font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-normal leading-none text-[clamp(2rem,6vw,4.5rem)]"
+                          ? "font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-nowrap leading-none text-[clamp(1.75rem,5.2vw,4.5rem)]"
                           : "text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-nowrap"
                       }
                     >
-                      {r.metric === "3 Months" ? (
-                        <>
-                          <span className="block sm:inline">3</span>
-                          <span className="block sm:inline sm:ml-3">Months</span>
-                        </>
-                      ) : (
-                        r.metric
-                      )}
+                      {r.metric}
                     </div>
                     <div className="text-xs md:text-sm text-gray-400 font-light uppercase tracking-wide">
                       {r.label}
