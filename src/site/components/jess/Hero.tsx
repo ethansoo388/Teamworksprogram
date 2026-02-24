@@ -54,7 +54,10 @@ export function Hero() {
                 asChild
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
               >
-                <a href="#contact" className="inline-flex items-center">
+                <a
+                  href="/contactus.html?source=jess-home&cta=talk-enterprise-execution#contact-form"
+                  className="inline-flex items-center"
+                >
                   Talk About Enterprise Execution
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>

@@ -21,7 +21,9 @@ export function ContactUsPage() {
         <MainSiteNavigation />
         
         {/* Main contact form section */}
-        <ContactFormSection />
+        <div id="contact-form">
+          <ContactFormSection />
+        </div>
         
         {/* Call-to-action cards (Want to talk directly? / Prefer WhatsApp?) */}
         <ContactCTASection />

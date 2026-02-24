@@ -248,7 +248,16 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       const section = document.getElementById(hash);
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Browser default anchor jump is instant; reset to top then smooth-scroll.
+        // This is safe for static export and provides a consistent experience.
+        try {
+          window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        } catch (_) {
+          window.scrollTo(0, 0);
+        }
+        requestAnimationFrame(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       }
     }, 100);
   }

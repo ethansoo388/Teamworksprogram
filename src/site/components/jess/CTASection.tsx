@@ -17,16 +17,20 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 mb-3">
-            <a href="mailto:romanoff@ciagile.com?subject=Schedule%20an%20Executive%20Briefing">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
+            <Button
+              size="lg"
+              asChild
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
+            >
+              <a
+                href="/contactus.html?source=jess-home&cta=schedule-executive-briefing#contact-form"
+                className="inline-flex items-center"
               >
                 <Calendar className="mr-2" size={20} />
                 Schedule an Executive Briefing
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
 
           <p className="text-slate-500 text-sm italic mb-12">

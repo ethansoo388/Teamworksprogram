@@ -130,6 +130,25 @@ input:valid:not(:placeholder-shown) {
   100% { transform: translateX(-50%); }
 }
 
+/* Jess-only: infinite logo marquee (used by SocialProofSection) */
+.site-jess .jess-logo-marquee {
+  width: max-content;
+  will-change: transform;
+  animation: scroll 20s linear infinite;
+}
+
+.site-jess .jess-logo-marquee:hover,
+.site-jess .jess-logo-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-jess .jess-logo-marquee {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
 /* ── Jess (JESS program) theme variables ─────────────────────────────── */
 /* Scoped to `.site-jess` so it won't affect Main / TeamWorks.            */
 .site-jess {

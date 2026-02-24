@@ -22,8 +22,7 @@ export function SocialProofSection() {
     <section id="social-proof" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div
-          >
+          <div data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Trusted by Global Enterprises
             </h2>
@@ -34,12 +33,10 @@ export function SocialProofSection() {
         </div>
 
         {/* Client Logos Placeholder */}
-        <div
-          className="p-8"
-        >
+        <div className="p-8" data-reveal>
           <div className="overflow-hidden">
             <div
-              className="flex items-center gap-8"
+              className="flex items-center gap-8 jess-logo-marquee"
             >
               {[...clientLogos, ...clientLogos].map((logo, index) => (
                 <div
