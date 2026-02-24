@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal(modal);
       }
     });
-    });
+  });
 
   // ESC to close any open modal
   document.addEventListener('keydown', (e) => {
@@ -523,7 +523,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalsById.forEach((modal) => {
       if (!modal.classList.contains('hidden')) closeModal(modal);
     });
-  });
   });
 
   // Generic static carousel (show one slide at a time)
