@@ -540,7 +540,14 @@ function ProvenResultsSection() {
                           : "text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-2 md:mb-3 text-[#2B9BF4] whitespace-nowrap"
                       }
                     >
-                      {r.metric}
+                      {r.metric === "3 Months" ? (
+                        <>
+                          <span>3</span>{" "}
+                          <span className="text-[0.5em] leading-none">Months</span>
+                        </>
+                      ) : (
+                        r.metric
+                      )}
                     </div>
                     <div className="text-xs md:text-sm text-gray-400 font-light uppercase tracking-wide">
                       {r.label}
