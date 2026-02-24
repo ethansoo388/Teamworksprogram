@@ -31,9 +31,8 @@ function ProgramsDropdown({
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
         <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
       </a>
-      <a 
-        href="index.html#enterprise-section"
-        onClick={onEnterpriseClick}
+      <a
+        href="jess/index.html"
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
@@ -271,10 +270,9 @@ export function MainSiteNavigation() {
               For SMEs
             </a>
             <a
-              href="index.html#enterprise-section"
+              href="jess/index.html"
               className="px-2 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] no-underline hover:text-[#0066CC]"
               data-mobile-close
-              onClick={handleEnterpriseClick}
             >
               For Enterprises
             </a>

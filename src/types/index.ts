@@ -4,7 +4,7 @@ import type { ComponentType, LucideIcon } from "lucide-react";
 // Page metadata — used by routes.ts and auto-discovery in export-static.mjs
 // ---------------------------------------------------------------------------
 
-export type SiteType = "main" | "teamworks";
+export type SiteType = "main" | "teamworks" | "jess";
 
 export interface PageMeta {
   /** URL path for react-router (dev). E.g. "/" or "/teamworks/creating-super-teams" */

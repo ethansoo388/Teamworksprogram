@@ -121,4 +121,123 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
     includeFormJS: true,
   },
+
+  // ── JESS (Jeff's Enterprise Scrum System) ──────────────────────────────
+  {
+    modulePath: "/src/site/pages/jess/HomePage.tsx",
+    componentName: "HomePage",
+    filename: "jess/index.html",
+    title: "JESS - Enterprise Agility Built for Execution at Scale",
+    description:
+      "Jeff's Enterprise Scrum System — proven execution system for enterprise agility, built on Scrum@Scale and AI-driven methodology.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/FreeResourcesPage.tsx",
+    componentName: "FreeResourcesPage",
+    filename: "jess/free-resources.html",
+    title: "Free Resources - JESS",
+    description:
+      "Free learning resources for agile leaders — guides, workshops, and community forums.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/LeadershipTrainingPage.tsx",
+    componentName: "LeadershipTrainingPage",
+    filename: "jess/leadership-training.html",
+    title: "Leadership Training - JESS",
+    description:
+      "Two-day intensive leadership training for enterprise agile transformation. Build execution clarity and scalable leadership.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/CourseModulesPage.tsx",
+    componentName: "CourseModulesPage",
+    filename: "jess/course-modules.html",
+    title: "Course Modules - JESS",
+    description:
+      "Detailed course modules for the JESS leadership training program.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/InstructorPage.tsx",
+    componentName: "InstructorPage",
+    filename: "jess/instructor.html",
+    title: "Instructor - JESS",
+    description:
+      "Meet the instructor behind the JESS program — credentials, experience, and client testimonials.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/ClassSchedulePage.tsx",
+    componentName: "ClassSchedulePage",
+    filename: "jess/class-schedule.html",
+    title: "Class Schedule - JESS",
+    description:
+      "Upcoming class schedule for JESS leadership training courses across Southeast Asia.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/CorporateEnrollmentPage.tsx",
+    componentName: "CorporateEnrollmentPage",
+    filename: "jess/corporate-enrollment.html",
+    title: "Corporate Enrollment - JESS",
+    description:
+      "Request corporate enrollment for your team in the JESS leadership training program.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/IndividualEnrollmentPage.tsx",
+    componentName: "IndividualEnrollmentPage",
+    filename: "jess/individual-enrollment.html",
+    title: "Individual Enrollment - JESS",
+    description:
+      "Individual enrollment options for the JESS leadership training courses.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/IndividualEnrollmentFormPage.tsx",
+    componentName: "IndividualEnrollmentFormPage",
+    filename: "jess/individual-enrollment-form.html",
+    title: "Enrollment Form - JESS",
+    description:
+      "Complete your individual enrollment for the JESS leadership training program.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/TeamLevelTrainingPage.tsx",
+    componentName: "TeamLevelTrainingPage",
+    filename: "jess/team-level-training.html",
+    title: "Team Level Training - JESS NOVA Series",
+    description:
+      "NOVA Series team-level training — Agile & Scrum and Design Thinking courses for delivery teams.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/EnterpriseConsultingPage.tsx",
+    componentName: "EnterpriseConsultingPage",
+    filename: "jess/enterprise-consulting.html",
+    title: "Enterprise Consulting - JESS",
+    description:
+      "Enterprise consulting services for agile transformation at scale.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/AgileScrumCoursePage.tsx",
+    componentName: "AgileScrumCoursePage",
+    filename: "jess/nova/agile-scrum.html",
+    title: "Agile & Scrum 201 - NOVA Series",
+    description:
+      "Agile & Scrum 201 course for delivery teams — build hyper-productive teams with proven frameworks.",
+    siteType: "jess",
+  },
+  {
+    modulePath: "/src/site/pages/jess/DesignThinkingCoursePage.tsx",
+    componentName: "DesignThinkingCoursePage",
+    filename: "jess/nova/design-thinking.html",
+    title: "Design Thinking 201 - NOVA Series",
+    description:
+      "Design Thinking 201 course — solve real-world problems with user-centered design methodology.",
+    siteType: "jess",
+  },
 ];

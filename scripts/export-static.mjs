@@ -20,10 +20,18 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     description = 'CI Agile & TeamWorks - Transform your organization with proven delivery systems and team training.',
     includeFormJS = false,
     pageClass = '',
-    siteType = 'teamworks', // 'main' or 'teamworks'
+    siteType = 'teamworks', // 'main', 'teamworks', or 'jess'
+    filename = '',
   } = options;
 
-  const prefix = siteType === 'main' ? '' : '../';
+  // Compute prefix based on output filename depth:
+  // "index.html" → depth 0 → ""
+  // "teamworks/index.html" → depth 1 → "../"
+  // "jess/nova/agile-scrum.html" → depth 2 → "../../"
+  const dir = path.dirname(filename);
+  const depth = dir === '.' ? 0 : dir.split('/').length;
+  const prefix = '../'.repeat(depth);
+
   const formJsTag = includeFormJS
     ? `\n    <script src="${prefix}js/form.js"></script>`
     : '';
@@ -197,23 +205,20 @@ async function renderPageWithVite(vite, pagePath, componentName) {
   }
 }
 
-// Fix image paths in rendered HTML based on page location
-function fixImagePaths(html, isTeamworksPage) {
+// Fix image paths in rendered HTML based on page location depth
+function fixImagePaths(html, filename) {
+  const dir = path.dirname(filename);
+  const depth = dir === '.' ? 0 : dir.split('/').length;
+  const prefix = '../'.repeat(depth);
+
   const srcAssetsPattern = /src="\/src\/assets\/img\//g;
   const assetsPattern = /src="assets\/img\//g;
   const absAssetsPattern = /src="\/assets\/img\//g;
 
-  if (isTeamworksPage) {
-    return html
-      .replace(srcAssetsPattern, 'src="../assets/img/')
-      .replace(absAssetsPattern, 'src="../assets/img/')
-      .replace(assetsPattern, 'src="../assets/img/');
-  } else {
-    return html
-      .replace(srcAssetsPattern, 'src="assets/img/')
-      .replace(absAssetsPattern, 'src="assets/img/')
-      .replace(assetsPattern, 'src="assets/img/');
-  }
+  return html
+    .replace(srcAssetsPattern, `src="${prefix}assets/img/`)
+    .replace(absAssetsPattern, `src="${prefix}assets/img/`)
+    .replace(assetsPattern, `src="${prefix}assets/img/`);
 }
 
 // ---------------------------------------------------------------------------
@@ -226,6 +231,23 @@ async function generateHTMLFiles() {
     server: { middlewareMode: true },
     appType: 'custom',
     logLevel: 'error',
+    plugins: [
+      // SSR CSS no-op — CSS imports are irrelevant for static HTML export
+      {
+        name: 'ssr-css-noop',
+        enforce: 'pre',
+        resolveId(id) {
+          if (/\.css(\?.*)?$/.test(id)) {
+            return '\0ssr-css-noop:' + id;
+          }
+        },
+        load(id) {
+          if (id.startsWith('\0ssr-css-noop:')) {
+            return 'export default ""';
+          }
+        },
+      },
+    ],
   });
 
   try {
@@ -245,12 +267,13 @@ async function generateHTMLFiles() {
         console.log(`  ✓ Rendering ${page.filename}...`);
 
         const bodyHTML = await renderPageWithVite(vite, page.modulePath, page.componentName);
-        const fixedBodyHTML = fixImagePaths(bodyHTML, page.siteType !== 'main');
+        const fixedBodyHTML = fixImagePaths(bodyHTML, page.filename);
 
         const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
           siteType: page.siteType,
+          filename: page.filename,
         });
 
         fs.writeFileSync(path.join(publicDir, page.filename), html);
