@@ -269,11 +269,27 @@ async function generateHTMLFiles() {
         const bodyHTML = await renderPageWithVite(vite, page.modulePath, page.componentName);
         const fixedBodyHTML = fixImagePaths(bodyHTML, page.filename);
 
+        // -----------------------------------------------------------------
+        // Site-scoped body classes
+        // - Main/TeamWorks: keep existing look
+        // - Jess: activate the intended dark theme tokens by default
+        // -----------------------------------------------------------------
+        const siteType = page.siteType;
+        const pageClass =
+          siteType === 'main'
+            ? 'site-main'
+            : siteType === 'teamworks'
+              ? 'site-teamworks'
+              : siteType === 'jess'
+                ? 'site-jess dark'
+                : '';
+
         const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
-          siteType: page.siteType,
+          siteType,
           filename: page.filename,
+          pageClass,
         });
 
         fs.writeFileSync(path.join(publicDir, page.filename), html);
