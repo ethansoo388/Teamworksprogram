@@ -271,7 +271,8 @@ function ProgramsSection() {
         "Teams fail when work is unclear and priorities shift constantly. TeamWorks cuts through the chaos—helping your team focus on what matters, collaborate seamlessly, and deliver without burnout.",
       image: agileTeamImage,
       features: ["Agile fundamentals", "Team collaboration", "Delivery optimization", "Continuous improvement"],
-      link: "teamworks/index.html",
+      // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
+      link: "/teamworks/index.html",
     },
     {
       title: "Enterprise Execution & Transformation",
@@ -281,7 +282,8 @@ function ProgramsSection() {
         "Big ideas don't fail. Execution does. This program aligns leadership and teams, fixes slow delivery, and leverages AI to accelerate decision-making and outcomes at scale.",
       image: businessPresentationImage,
       features: ["Executive alignment", "Operating model design", "AI enablement", "Scale transformation"],
-      link: "contactus.html",
+      // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
+      link: "/contactus.html",
     },
   ];
 
