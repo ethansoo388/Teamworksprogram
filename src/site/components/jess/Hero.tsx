@@ -1,15 +1,8 @@
 import { Button } from "@/site/components/jess/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { motion } from "motion/react";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 
 export function Hero() {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -23,21 +16,13 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6"
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6"
             >
               <Sparkles size={16} />
               <span className="text-sm">AI-Driven Business Transformation</span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
                 Enterprise Agility,{" "}
@@ -45,54 +30,41 @@ export function Hero() {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Built for Execution at Scale
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-300 mb-8 leading-relaxed"
+            <p className="text-slate-300 mb-8 leading-relaxed"
             >
               <span className="block text-2xl mb-3">Align strategy, leadership, and teams — powered by Dr. Jeff Sutherland's knowledge and advanced AI.</span>
               <span className="block text-lg">
                 Trusted by global enterprises to move from transformation intent to measurable results.
               </span>
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
             >
               <Button
                 size="lg"
-                onClick={scrollToContact}
+                asChild
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
               >
-                Talk About Enterprise Execution
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <a href="#contact" className="inline-flex items-center">
+                  Talk About Enterprise Execution
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => {
-                  const element = document.getElementById("solution");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
-                }}
+                asChild
                 className="border-cyan-500 text-cyan-400 hover:bg-slate-800 hover:text-cyan-300 px-6 py-6 text-lg"
               >
-                Explore the JESS System
+                <a href="#solution">Explore the JESS System</a>
               </Button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right side - Hero image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+          <div className="relative"
           >
             {/* Background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
@@ -111,7 +83,7 @@ export function Hero() {
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-500/30 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-cyan-500/30 rounded-full blur-3xl"></div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
@@ -129,11 +128,7 @@ export function DesignThinkingCoursePage() {
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center lg:justify-end">
           <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-32 sm:pt-56 lg:pt-36 pb-10 lg:pb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-2xl w-full"
+            <div className="max-w-2xl w-full"
             >
               {/* Back to NOVA Series - Mobile Only (in hero) */}
               <div className="lg:hidden mb-5">
@@ -203,7 +198,7 @@ export function DesignThinkingCoursePage() {
                   Private corporate delivery · Customised for your organisation
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -211,11 +206,7 @@ export function DesignThinkingCoursePage() {
       {/* Course Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-slate-900 leading-tight">
@@ -232,7 +223,7 @@ export function DesignThinkingCoursePage() {
               Through engaging business case studies, participants will learn how to optimize processes, foster continuous improvement, and apply these strategies in real-world scenarios.
             </p>
             <div className="w-32 h-0.5 bg-slate-300 mx-auto mt-8"></div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -251,11 +242,7 @@ export function DesignThinkingCoursePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-12">
             {/* Column 1 - This Course Is Tailored For */}
             <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              <div
                 className="mb-8"
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
@@ -264,32 +251,24 @@ export function DesignThinkingCoursePage() {
                 <p className="text-base text-slate-600 mb-6">
                   Typically commissioned by HR, L&D, Transformation Offices, and Business Unit Leaders.
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {audienceList.map((audience, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-center gap-3 bg-white border border-slate-200 rounded-lg p-4 hover:border-slate-300 hover:shadow-sm transition-all duration-300"
                   >
                     <div className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center flex-shrink-0">
                       <audience.icon className="text-slate-900" size={20} strokeWidth={1.5} />
                     </div>
                     <span className="text-base text-slate-900">{audience.title}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
               
               {/* Mobile Image - Shows below content on mobile */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              <div
                 className="lg:hidden mt-12"
               >
                 <img 
@@ -297,7 +276,7 @@ export function DesignThinkingCoursePage() {
                   alt="Design thinking learning environment"
                   className="w-full h-auto rounded-lg"
                 />
-              </motion.div>
+              </div>
             </div>
 
             {/* Column 2 - Empty space for background image on desktop */}
@@ -306,31 +285,23 @@ export function DesignThinkingCoursePage() {
 
           {/* New Row - This Course Is For You If... - Full Width */}
           <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
               className="mb-8"
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
                 This Course Is For You If...
               </h2>
-            </motion.div>
+            </div>
 
             <ul className="space-y-4">
               {courseForYouIf.map((item, index) => (
-                <motion.li
+                <li
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
                   className="flex items-start gap-3"
                 >
                   <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
                   <span className="text-base text-slate-900 leading-relaxed">{item}</span>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
@@ -340,11 +311,7 @@ export function DesignThinkingCoursePage() {
       {/* Learning Outcomes */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
@@ -353,16 +320,12 @@ export function DesignThinkingCoursePage() {
             <p className="text-base text-slate-600 max-w-2xl mx-auto">
               At the end of this course, you will be able to...
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {learningOutcomes.map((outcome, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-sm p-8 border border-slate-200/60 hover:border-slate-300 transition-colors"
               >
                 <div className="mb-6">
@@ -376,21 +339,17 @@ export function DesignThinkingCoursePage() {
                 <p className="text-sm text-slate-600 leading-relaxed">
                   {outcome.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Work Problems Section */}
           <div className="pt-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="text-center mb-3"
             >
               <div className="w-16 h-0.5 bg-slate-300 mx-auto"></div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -398,11 +357,7 @@ export function DesignThinkingCoursePage() {
       {/* How We Deliver Results - Dark Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900" id="how-we-turn-ideas">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
@@ -411,15 +366,11 @@ export function DesignThinkingCoursePage() {
             <p className="text-base text-slate-300 max-w-2xl mx-auto">
               A repeatable decision-making system teams can apply immediately after the programme.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 - Deep User Understanding */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -432,14 +383,10 @@ export function DesignThinkingCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Understand users at a deep emotional level through proven research and empathy techniques.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 2 - Problem Discovery */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -452,14 +399,10 @@ export function DesignThinkingCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Build skills to identify the real problems worth solving, not just symptoms.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 3 - Rapid Validation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -472,14 +415,10 @@ export function DesignThinkingCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Create and test solutions rapidly before committing significant resources to development.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 4 - Innovation Culture */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -492,7 +431,7 @@ export function DesignThinkingCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Foster a culture of creative collaboration and continuous experimentation across teams.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -500,11 +439,7 @@ export function DesignThinkingCoursePage() {
       {/* Course Modules */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
@@ -513,15 +448,11 @@ export function DesignThinkingCoursePage() {
             <p className="text-lg text-slate-600">
               Each module builds toward a single practical decision framework applied to real business challenges.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-16">
             {/* Module 01 - Image Left, Content Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -548,14 +479,10 @@ export function DesignThinkingCoursePage() {
                   Learn how to uncover real user needs. You'll practice practical research and empathy techniques to reveal hidden pain points and unmet expectations that actually matter to the business.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 02 - Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="order-2 lg:order-1">
@@ -582,14 +509,10 @@ export function DesignThinkingCoursePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 03 - Image Left, Content Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -616,14 +539,10 @@ export function DesignThinkingCoursePage() {
                   You'll learn how to move beyond the "first obvious solution" and explore options that balance creativity, feasibility, and business value.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 04 - Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="order-2 lg:order-1">
@@ -650,14 +569,10 @@ export function DesignThinkingCoursePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 05 - Image Left, Content Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -684,14 +599,10 @@ export function DesignThinkingCoursePage() {
                   Make sense of findings, extract learnings, and determine clear next steps with confidence.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 06 - Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="order-2 lg:order-1">
@@ -718,7 +629,7 @@ export function DesignThinkingCoursePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -726,11 +637,7 @@ export function DesignThinkingCoursePage() {
       {/* How Organisations Typically Use This Programme */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-100">
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
@@ -740,14 +647,10 @@ export function DesignThinkingCoursePage() {
             <p className="text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Organisations engage this programme when decision quality, alignment, and risk reduction matter most — particularly before high-stakes initiatives, during transformation efforts, or when teams need a shared decision-making framework that withstands pressure.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <div
               className="bg-white border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-4">
@@ -759,13 +662,9 @@ export function DesignThinkingCoursePage() {
                   <p className="text-sm text-slate-600 leading-relaxed">Aligning leadership teams before major product, service, or transformation decisions</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
               className="bg-white border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-4">
@@ -777,13 +676,9 @@ export function DesignThinkingCoursePage() {
                   <p className="text-sm text-slate-600 leading-relaxed">De-risking innovation initiatives before committing significant budget or resources</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
               className="bg-white border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-4">
@@ -795,13 +690,9 @@ export function DesignThinkingCoursePage() {
                   <p className="text-sm text-slate-600 leading-relaxed">Equipping cross-functional teams with a shared decision-making language and framework</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
               className="bg-white border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-4">
@@ -813,14 +704,10 @@ export function DesignThinkingCoursePage() {
                   <p className="text-sm text-slate-600 leading-relaxed">Breaking decision deadlocks caused by competing assumptions or siloed perspectives</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="bg-slate-900 rounded-lg p-8 text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-3">
@@ -830,18 +717,14 @@ export function DesignThinkingCoursePage() {
               </p>
               <div className="w-1 h-12 bg-blue-400"></div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Explore a Private Corporate Run - Final Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
@@ -857,49 +740,36 @@ export function DesignThinkingCoursePage() {
                 The discussion will cover:
               </p>
               <ul className="space-y-4 text-left">
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                <li
                   className="flex items-start gap-3"
                 >
                   <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
                   <span className="text-base text-slate-900 leading-relaxed">Understanding organisational challenges and decision context</span>
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                </li>
+                <li
                   className="flex items-start gap-3"
                 >
                   <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
                   <span className="text-base text-slate-900 leading-relaxed">Assess fit and scope for your organisation</span>
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                </li>
+                <li
                   className="flex items-start gap-3"
                 >
                   <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
                   <span className="text-base text-slate-900 leading-relaxed">Exploring delivery options and expected outcomes</span>
-                </motion.li>
+                </li>
               </ul>
             </div>
 
-            <button 
-              onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+            <a href="mailto:romanoff@ciagile.com"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 mb-3"
             >
               <span>Discuss a Private Corporate Run</span>
-            </button>
+            </a>
             <p className="text-sm text-slate-600">
               We'll help you assess fit, scope, and outcomes — no obligation.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

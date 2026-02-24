@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 
 const clientLogos = [
@@ -23,11 +22,7 @@ export function SocialProofSection() {
     <section id="social-proof" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Trusted by Global Enterprises
@@ -35,31 +30,16 @@ export function SocialProofSection() {
             <p className="text-slate-400 text-lg">
               Proven to scale execution across complex, large-scale organizations
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Client Logos Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="p-8"
         >
           <div className="overflow-hidden">
-            <motion.div
+            <div
               className="flex items-center gap-8"
-              animate={{
-                x: [0, -1000],
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 20,
-                  ease: "linear",
-                },
-              }}
             >
               {[...clientLogos, ...clientLogos].map((logo, index) => (
                 <div
@@ -77,9 +57,9 @@ export function SocialProofSection() {
                   )}
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

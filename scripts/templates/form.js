@@ -329,4 +329,142 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ========================================
+  // JESS - CORPORATE ENROLLMENT (mailto)
+  // ========================================
+  const jessCorporateForm = document.getElementById('jess-corporate-enrollment-form');
+  if (jessCorporateForm) {
+    jessCorporateForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(jessCorporateForm);
+
+      const requiredFields = ['company','numberOfParticipants','contactPerson','role','email','contactNumber','interestedCourse','preferredDelivery'];
+      let ok = true;
+
+      const setErr = (name, msg) => {
+        const el = jessCorporateForm.querySelector(`[data-error-for="${name}"]`);
+        if (el) {
+          el.textContent = msg;
+          el.classList.toggle('hidden', !msg);
+        }
+      };
+
+      // clear
+      requiredFields.forEach((f) => setErr(f, ''));
+
+      requiredFields.forEach((f) => {
+        const v = String(fd.get(f) || '').trim();
+        if (!v) {
+          ok = false;
+          setErr(f, 'This field is required');
+        }
+      });
+
+      const email = String(fd.get('email') || '').trim();
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        ok = false;
+        setErr('email', 'Please enter a valid email address');
+      }
+
+      if (!ok) return;
+
+      const body = [
+        'Corporate Enrollment Request',
+        '',
+        `Company Name: ${fd.get('company') || ''}`,
+        `Number of Participants: ${fd.get('numberOfParticipants') || ''}`,
+        '',
+        'Contact Person',
+        `Full Name: ${fd.get('contactPerson') || ''}`,
+        `Role / Position: ${fd.get('role') || ''}`,
+        `Email: ${fd.get('email') || ''}`,
+        `Contact Number: ${fd.get('contactNumber') || ''}`,
+        '',
+        'Program Details',
+        `Interested Course: ${fd.get('interestedCourse') || ''}`,
+        `Preferred Delivery Mode: ${fd.get('preferredDelivery') || ''}`,
+        '',
+        `Additional Notes: ${fd.get('additionalNotes') || ''}`,
+      ].join('
+');
+
+      const subject = `JESS Corporate Enrollment Request - ${fd.get('company') || 'Company'}`;
+      const mailto = `mailto:romanoff@ciagile.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      const success = document.getElementById('jess-corporate-success');
+      if (success) success.classList.remove('hidden');
+      jessCorporateForm.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ========================================
+  // JESS - INDIVIDUAL ENROLLMENT (mailto)
+  // ========================================
+  const jessIndForm = document.getElementById('jess-individual-enrollment-form');
+  if (jessIndForm) {
+    jessIndForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(jessIndForm);
+
+      const requiredFields = ['fullName','email','contactNumber','organization','jobTitle','paymentMethod'];
+      let ok = true;
+
+      const setErr = (name, msg) => {
+        const el = jessIndForm.querySelector(`[data-error-for="${name}"]`);
+        if (el) {
+          el.textContent = msg;
+          el.classList.toggle('hidden', !msg);
+        }
+      };
+
+      requiredFields.forEach((f) => setErr(f, ''));
+
+      requiredFields.forEach((f) => {
+        const v = String(fd.get(f) || '').trim();
+        if (!v) {
+          ok = false;
+          setErr(f, 'This field is required');
+        }
+      });
+
+      const email = String(fd.get('email') || '').trim();
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        ok = false;
+        setErr('email', 'Please enter a valid email address');
+      }
+
+      if (!ok) return;
+
+      const invoiceNeeded = String(fd.get('invoiceNeeded') || 'no');
+
+      const body = [
+        'Individual Enrollment Request',
+        '',
+        `Full Name: ${fd.get('fullName') || ''}`,
+        `Email: ${fd.get('email') || ''}`,
+        `Contact Number: ${fd.get('contactNumber') || ''}`,
+        `Organization: ${fd.get('organization') || ''}`,
+        `Job Title: ${fd.get('jobTitle') || ''}`,
+        '',
+        `Course Selected: ${fd.get('courseSelected') || ''}`,
+        `Preferred Class Date: ${fd.get('classDate') || ''}`,
+        `Payment Method: ${fd.get('paymentMethod') || ''}`,
+        `Invoice Needed: ${invoiceNeeded === 'yes' ? 'Yes' : 'No'}`,
+      ].join('
+');
+
+      const subject = `JESS Individual Enrollment Request - ${fd.get('fullName') || ''}`;
+      const mailto = `mailto:romanoff@ciagile.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      const success = document.getElementById('jess-individual-success');
+      if (success) success.classList.remove('hidden');
+      jessIndForm.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 });

@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Book, FileText, Award, Video } from "lucide-react";
 import { Button } from "@/site/components/jess/ui/button";
 
@@ -20,11 +19,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
     <section className={`py-32 px-4 sm:px-6 lg:px-8 relative border-t ${isDark ? '' : 'border-slate-200 bg-white'}`}>
       <div className="max-w-7xl mx-auto">
         <div className={`${isDark ? 'text-center' : ''} mb-16`}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className={`text-4xl sm:text-5xl mb-4 tracking-tight ${isDark ? 'font-bold text-white text-center' : 'font-light text-slate-900'}`}>
               Resources & Learning Materials
@@ -32,16 +27,12 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
             <p className={`text-lg leading-relaxed max-w-3xl ${isDark ? 'text-slate-400 mx-auto text-center' : 'text-slate-600 font-light'}`}>
               Comprehensive resources to support your transformation journey
             </p>
-          </motion.div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div data-reveal-group data-stagger="90" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Books */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div data-reveal-item
             className={`p-8 ${isDark ? 'rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700' : 'rounded-sm bg-slate-50 border border-slate-200'}`}
           >
             <div className="flex items-center gap-4 mb-6">
@@ -90,14 +81,10 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Certifications & Training */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <div data-reveal-item
             className={`p-8 ${isDark ? 'rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700' : 'rounded-sm bg-slate-50 border border-slate-200'}`}
           >
             <div className="flex items-center gap-4 mb-6">
@@ -137,7 +124,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Award, TrendingUp } from "lucide-react";
 
 export function FrameworkComparisonSection() {
@@ -21,11 +20,7 @@ export function FrameworkComparisonSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
               <Award size={16} />
@@ -77,26 +72,18 @@ export function FrameworkComparisonSection() {
                 <span className="text-blue-400 font-semibold">Source:</span> 18th Annual State of Agile Report
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Chart */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700 backdrop-blur-sm"
           >
             <h3 className="text-lg text-slate-400 mb-8">Enterprise Agile Execution Adoption</h3>
 
             <div className="space-y-6">
               {frameworks.map((framework, index) => (
-                <motion.div
+                <div
                   key={framework.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: framework.delay }}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className={`font-semibold ${index === 0 ? 'text-white text-lg' : 'text-slate-300'}`}>
@@ -108,17 +95,13 @@ export function FrameworkComparisonSection() {
                   </div>
 
                   <div className="relative h-3 bg-slate-800/50 rounded-full overflow-hidden border border-slate-700/50">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${framework.percentage}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: framework.delay + 0.2, ease: "easeOut" }}
+                    <div
                       className={`h-full bg-gradient-to-r ${framework.color} ${
                         index === 0 ? 'shadow-lg shadow-blue-500/50' : ''
                       }`}
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -128,21 +111,17 @@ export function FrameworkComparisonSection() {
                 Organizations often use multiple frameworks in combination.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom insight */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center"
         >
           <p className="text-slate-300 text-lg">
             <span className="text-white font-semibold">Why leaders continue to trust it:</span> Scrum provides disciplined execution without unnecessary complexity. Scrum@Scale extends this foundation into an enterprise operating model, refined by Jeff Sutherland to handle real-world scale and governance.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

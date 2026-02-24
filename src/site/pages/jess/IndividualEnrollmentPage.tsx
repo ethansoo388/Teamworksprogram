@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { Calendar, MapPin, Clock, Award, DollarSign } from "lucide-react";
@@ -39,11 +38,7 @@ export function IndividualEnrollmentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Option A - Course 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <div
               className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
@@ -103,14 +98,10 @@ export function IndividualEnrollmentPage() {
               >
                 Enroll in Course 1
               </a>
-            </motion.div>
+            </div>
 
             {/* Option B - Course 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
               className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
@@ -171,15 +162,11 @@ export function IndividualEnrollmentPage() {
               >
                 Enroll in Course 2
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Option C - Bundle (Full Width) */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="bg-gradient-to-br from-amber-50 to-white border-2 border-amber-400 rounded-2xl p-8 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 bg-amber-500 text-slate-900 px-6 py-2 text-sm font-medium">
@@ -245,7 +232,7 @@ export function IndividualEnrollmentPage() {
                 Enroll in Full JESS Pathway
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

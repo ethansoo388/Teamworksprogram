@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { useState } from "react";
 import {
   Users,
@@ -120,11 +119,7 @@ export function OfferingsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               What Executives Get With JESS
@@ -132,7 +127,7 @@ export function OfferingsSection() {
             <p className="text-xl text-slate-400">
               A complete Agile + AI operating model designed to reduce transformation risk, improve execution reliability, and deliver measurable business outcomes.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Grid of offerings */}
@@ -162,17 +157,13 @@ export function OfferingsSection() {
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+        <div
           className="mt-16 text-center"
         >
           <p className="text-lg text-slate-300 max-w-4xl mx-auto">
             JESS delivers results because it changes how decisions are made, how work flows, and how accountability is enforced — not just how teams work.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -192,11 +183,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
   const Icon = offering.icon;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
+    <div
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       className={`
@@ -217,106 +204,57 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
             {Icon === Lightbulb ? (
               <div className="flex items-center justify-center gap-6">
                 {[0, 1, 2].map((i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    animate={{
-                      scale: [1, 1.15, 1],
-                      y: [0, -8, 0],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: i * 0.4,
-                      ease: "easeInOut",
-                    }}
                   >
                     <Lightbulb
                       size={i === 1 ? 96 : 72}
                       className="transition-all duration-300 text-amber-400"
                       strokeWidth={1.5}
                     />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (
               <>
                 {Icon === Brain ? (
                   <div className="flex items-center justify-center gap-4">
-                    <motion.div
-                      animate={{
-                        scale: isActive ? 1.1 : 1,
-                        y: [0, -8, 0],
-                        rotate: [0, 5, -5, 0],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                    <div
                     >
                       <Brain
                         size={72}
                         className="text-pink-500"
                         strokeWidth={1.5}
                       />
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                      animate={{
-                        scale: isActive ? [1, 1.2, 1] : 1,
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                    <div
                     >
                       <Plus
                         size={40}
                         className="text-slate-500"
                         strokeWidth={2}
                       />
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                      animate={{
-                        scale: isActive ? 1.1 : 1,
-                        rotate: [0, 5, -5, 0],
-                      }}
-                      transition={{
-                        duration: 2.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                    <div
                     >
                       <Bot
                         size={72}
                         className="text-purple-400"
                         strokeWidth={1.5}
                       />
-                    </motion.div>
+                    </div>
                   </div>
                 ) : (
-                  <motion.div
-                    animate={{
-                      scale: isActive ? 1.1 : 1,
-                      y: Icon === Rocket ? [0, -12, 0] : 0,
-                      x: Icon === Rocket ? [0, 8, 0] : 0,
-                      rotate: Icon === Rocket ? [-15, -10, -15] : 0,
-                    }}
-                    transition={{
-                      duration: Icon === Rocket ? 2 : 0.6,
-                      repeat: Icon === Rocket ? Infinity : 0,
-                      ease: "easeInOut",
-                    }}
+                  <div
                   >
                     <Icon
                       size={96}
                       className="text-blue-400"
                       strokeWidth={1.5}
                     />
-                  </motion.div>
+                  </div>
                 )}
               </>
             )}
@@ -324,12 +262,8 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
         )}
 
         {offering.visual === "grid" && (
-          <motion.div
+          <div
             className="w-full h-full relative"
-            animate={{
-              scale: isActive ? 1.05 : 1,
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <ImageWithFallback
               src="https://i.postimg.cc/R03PDFP7/books-sas-twicehalf-harvard.webp"
@@ -337,22 +271,14 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
               className="w-full h-full object-cover transition-all duration-500"
             />
             {/* Overlay gradient */}
-            <motion.div
+            <div
               className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"
-              animate={{
-                opacity: isActive ? 0.3 : 0.6,
-              }}
-              transition={{ duration: 0.4 }}
             />
             {/* Blue accent overlay on hover */}
-            <motion.div
+            <div
               className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-transparent"
-              animate={{
-                opacity: isActive ? 1 : 0,
-              }}
-              transition={{ duration: 0.4 }}
             />
-          </motion.div>
+          </div>
         )}
 
         {offering.visual === "chart" && (
@@ -363,100 +289,41 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                 <div className="flex items-end justify-center gap-4 w-full h-full">
                   {/* Column 1 - Investment */}
                   <div className="flex flex-col items-center gap-2 flex-1">
-                    <motion.div
-                      animate={{
-                        y: isActive ? [0, -8, 0] : 0,
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: isActive ? Infinity : 0,
-                        ease: "easeInOut",
-                      }}
+                    <div
                       className="mb-auto"
                     >
                       <DollarSign size={32} className="text-emerald-400" strokeWidth={2} />
-                    </motion.div>
-                    <motion.div
-                      initial={{ height: "30%" }}
-                      animate={{
-                        height: isActive ? "50%" : "30%",
-                      }}
-                      transition={{
-                        duration: 0.8,
-                        ease: "easeOut",
-                      }}
-                      className="w-full rounded-t-lg bg-gradient-to-t from-emerald-600 to-emerald-400"
+                    </div>
+                    <div className="w-full rounded-t-lg bg-gradient-to-t from-emerald-600 to-emerald-400"
                     />
                   </div>
 
                   {/* Column 2 - Growth Arrow */}
                   <div className="flex flex-col items-center gap-2 flex-1">
-                    <motion.div
-                      animate={{
-                        y: isActive ? [0, -8, 0] : 0,
-                        rotate: isActive ? [0, 5, -5, 0] : 0,
-                      }}
-                      transition={{
-                        duration: 2.5,
-                        repeat: isActive ? Infinity : 0,
-                        ease: "easeInOut",
-                      }}
+                    <div
                       className="mb-auto"
                     >
                       <ArrowUpRight size={36} className="text-cyan-400" strokeWidth={2.5} />
-                    </motion.div>
-                    <motion.div
-                      initial={{ height: "40%" }}
-                      animate={{
-                        height: isActive ? "70%" : "40%",
-                      }}
-                      transition={{
-                        duration: 0.8,
-                        delay: 0.1,
-                        ease: "easeOut",
-                      }}
-                      className="w-full rounded-t-lg bg-gradient-to-t from-cyan-600 to-cyan-400"
+                    </div>
+                    <div className="w-full rounded-t-lg bg-gradient-to-t from-cyan-600 to-cyan-400"
                     />
                   </div>
 
                   {/* Column 3 - ROI/Returns */}
                   <div className="flex flex-col items-center gap-2 flex-1">
-                    <motion.div
-                      animate={{
-                        scale: isActive ? [1, 1.2, 1] : 1,
-                        y: isActive ? [0, -8, 0] : 0,
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: isActive ? Infinity : 0,
-                        ease: "easeInOut",
-                      }}
+                    <div
                       className="mb-auto"
                     >
                       <TrendingUp size={36} className="text-blue-400" strokeWidth={2.5} />
-                    </motion.div>
-                    <motion.div
-                      initial={{ height: "50%" }}
-                      animate={{
-                        height: isActive ? "95%" : "50%",
-                      }}
-                      transition={{
-                        duration: 0.8,
-                        delay: 0.2,
-                        ease: "easeOut",
-                      }}
-                      className="w-full rounded-t-lg bg-gradient-to-t from-blue-600 to-blue-400"
+                    </div>
+                    <div className="w-full rounded-t-lg bg-gradient-to-t from-blue-600 to-blue-400"
                     />
                   </div>
                 </div>
               </div>
             ) : offering.id === "metrics" ? (
-              <motion.div
+              <div
                 className="w-full h-full absolute inset-0"
-                animate={{
-                  scale: isActive ? 1.05 : 1,
-                }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <ImageWithFallback
                   src="https://i.postimg.cc/9X9p9KSw/Pictures-to-describe-flow-and-metrics-of-hyper-performance-team-graphs-numbers.jpg"
@@ -464,37 +331,19 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                   className="w-full h-full object-cover transition-all duration-500"
                 />
                 {/* Overlay gradient */}
-                <motion.div
+                <div
                   className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"
-                  animate={{
-                    opacity: isActive ? 0.3 : 0.6,
-                  }}
-                  transition={{ duration: 0.4 }}
                 />
                 {/* Blue accent overlay on hover */}
-                <motion.div
+                <div
                   className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-transparent"
-                  animate={{
-                    opacity: isActive ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.4 }}
                 />
-              </motion.div>
+              </div>
             ) : (
               <div className="flex items-end justify-center gap-3 px-8 h-full py-6">
                 {[45, 70, 85, 95, 75].map((height, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ height: "30%" }}
-                    animate={{
-                      height: isActive ? `${height}%` : "30%",
-                    }}
-                    transition={{
-                      duration: 0.8,
-                      delay: i * 0.1,
-                      ease: "easeOut",
-                    }}
-                    className={`
+                  <div
+                    key={i}className={`
                       flex-1 rounded-t-md transition-all duration-300
                       ${
                         isActive
@@ -534,37 +383,22 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                   };
 
               return badgeConfig.icons.map((BadgeIcon, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ scale: 0.9, opacity: 1 }}
-                  animate={{
-                    scale: isActive ? [0.9, 1.05, 0.9] : 0.9,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    duration: 2,
-                    delay: i * 0.2,
-                    repeat: isActive ? Infinity : 0,
-                  }}
-                  className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30"
+                <div
+                  key={i}className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30"
                 >
                   <BadgeIcon
                     size={32}
                     className={`${badgeConfig.colors[i]} opacity-100`}
                   />
-                </motion.div>
+                </div>
               ));
             })()}
           </div>
         )}
 
         {offering.visual === "image" && (
-          <motion.div
+          <div
             className="w-full h-full relative"
-            animate={{
-              scale: isActive ? 1.05 : 1,
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <ImageWithFallback
               src="https://i.postimg.cc/FHwbfZLb/Busines-Value.webp"
@@ -572,22 +406,14 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
               className="w-full h-full object-cover transition-all duration-500"
             />
             {/* Overlay gradient */}
-            <motion.div
+            <div
               className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"
-              animate={{
-                opacity: isActive ? 0.3 : 0.6,
-              }}
-              transition={{ duration: 0.4 }}
             />
             {/* Blue accent overlay on hover */}
-            <motion.div
+            <div
               className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-transparent"
-              animate={{
-                opacity: isActive ? 1 : 0,
-              }}
-              transition={{ duration: 0.4 }}
             />
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -604,11 +430,7 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
 
         {/* Additional content for tall cards about certifications */}
         {spanTwoRows && offering.id === "certification" && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: isActive ? 1 : 0.8, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 pt-6 border-t border-slate-700/50 space-y-4"
+          <div className="mt-6 pt-6 border-t border-slate-700/50 space-y-4"
           >
             <p className="text-sm text-slate-300 leading-relaxed">
               Our leadership course offers <span className="font-semibold text-white">THREE internationally-acclaimed Scrum+AI credentials</span>. Improve the work process of the Scrum Master, Product Owner, Team, and Multi-Team (Scaling) with AI.
@@ -643,15 +465,11 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                 <span className="text-xs font-medium text-blue-400">Industry-Recognized Certifications</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {spanTwoRows && offering.id !== "certification" && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: isActive ? 1 : 0.8, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 pt-6 border-t border-slate-700/50"
+          <div className="mt-6 pt-6 border-t border-slate-700/50"
           >
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-slate-300">
@@ -667,18 +485,16 @@ function OfferingCard({ offering, isActive, onHover, onLeave, delay, spanTwoColu
                 <span className="text-xs">Demonstrated business impact</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Active indicator */}
       {isActive && (
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+        <div
           className="absolute top-4 right-4 w-2 h-2 rounded-full bg-blue-400 shadow-lg shadow-blue-400/50"
         />
       )}
-    </motion.div>
+    </div>
   );
 }

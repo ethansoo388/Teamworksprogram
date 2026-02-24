@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Target, Users, TrendingUp, Repeat } from "lucide-react";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 
@@ -12,11 +11,7 @@ export function FrameworkSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               The Framework
@@ -49,16 +44,12 @@ export function FrameworkSection() {
             </div>
 
             {/* Image section removed */}
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Scrum Master Cycle */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative"
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
@@ -122,14 +113,10 @@ export function FrameworkSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Product Owner Cycle */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative"
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
@@ -193,15 +180,11 @@ export function FrameworkSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Key Benefits */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center">
@@ -225,14 +208,10 @@ export function FrameworkSection() {
               Deliver continuous, verifiable value through disciplined prioritization, transparent metrics, and rapid feedback loops.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Why it works statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="mt-12 text-center"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
@@ -241,7 +220,7 @@ export function FrameworkSection() {
           <p className="text-lg text-slate-300 max-w-4xl mx-auto">
             Regional leaders must deliver local speed while maintaining global alignment and oversight. Scrum@Scale and Hyper-Productive Scrum provide a disciplined operating system that strengthens execution, increases transparency, and builds confidence with headquarters.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

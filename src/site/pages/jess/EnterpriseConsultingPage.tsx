@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { CTASection } from "@/site/components/jess/CTASection";
@@ -86,11 +85,7 @@ export function EnterpriseConsultingPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <a
               href="index.html"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-400 transition-colors mb-8 group"
@@ -112,18 +107,14 @@ export function EnterpriseConsultingPage() {
               Our consultants embed with your organization to design, implement, and optimize your transformation journey. 
               We don't just advise—we roll up our sleeves and work alongside you to deliver results.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
@@ -132,16 +123,12 @@ export function EnterpriseConsultingPage() {
             <p className="text-slate-400 max-w-2xl mx-auto">
               Partner with experts who have successfully guided hundreds of enterprise transformations.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="p-6 rounded-xl bg-slate-900/40 border border-slate-700/50"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4">
@@ -149,7 +136,7 @@ export function EnterpriseConsultingPage() {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
                 <p className="text-sm text-slate-400">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -158,11 +145,7 @@ export function EnterpriseConsultingPage() {
       {/* Engagement Phases */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
@@ -171,16 +154,12 @@ export function EnterpriseConsultingPage() {
             <p className="text-slate-400">
               A structured, proven methodology that adapts to your organization's unique needs and pace.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {phases.map((phase, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="p-8 rounded-2xl bg-slate-900/40 border border-slate-700/50 hover:border-slate-600 transition-all"
               >
                 <div className="flex items-start gap-6">
@@ -213,7 +192,7 @@ export function EnterpriseConsultingPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -222,11 +201,7 @@ export function EnterpriseConsultingPage() {
       {/* What's Included */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white text-center">
               What's Included
@@ -275,18 +250,14 @@ export function EnterpriseConsultingPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Ideal For */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
               Ideal For Organizations That
@@ -328,7 +299,7 @@ export function EnterpriseConsultingPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

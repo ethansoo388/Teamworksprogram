@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { CTASection } from "@/site/components/jess/CTASection";
@@ -88,11 +87,7 @@ export function TeamLevelTrainingPage() {
           {/* Two Column Layout - Text Left, Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[600px] lg:min-h-[700px] mb-32">
             {/* Left Column - Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col justify-center"
+            <div className="flex flex-col justify-center"
             >            
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-slate-900 leading-tight">
                 High Performance.<br />Real Value.
@@ -121,14 +116,10 @@ export function TeamLevelTrainingPage() {
                   <span>Talk to an Expert</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-full min-h-[500px] lg:min-h-[700px]"
+            <div className="relative h-full min-h-[500px] lg:min-h-[700px]"
             >
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-slate-100 shadow-2xl">
                 <ImageWithFallback 
@@ -137,16 +128,12 @@ export function TeamLevelTrainingPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Stats Row */}
           <p className="text-center text-lg text-slate-600 mb-6">What teams experience across the NOVA Series</p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center"
           >
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">2 Days</div>
@@ -160,14 +147,10 @@ export function TeamLevelTrainingPage() {
               <div className="text-4xl font-bold text-slate-900 mb-2">3X</div>
               <p className="text-sm text-slate-600">Average productivity improvement</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* What is NOVA Series Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-white rounded-2xl border border-slate-200 p-12 mb-16"
+          <div className="bg-white rounded-2xl border border-slate-200 p-12 mb-16"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-6">What is the NOVA Series?</h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-4">
@@ -176,15 +159,11 @@ export function TeamLevelTrainingPage() {
             <p className="text-lg text-slate-600 leading-relaxed">
               Instead of one-size-fits-all training, the NOVA Series offers <span className="font-semibold text-slate-900">two focused courses</span>, allowing organisations to start where they need the most impact — execution or problem-solving.
             </p>
-          </motion.div>
+          </div>
 
           {/* Training Approach & Business Outcomes */}
           <p className="text-center text-lg text-slate-600 mb-8">Every course in the NOVA Series follows the same proven approach — focused, practical, and outcome-driven.</p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {/* Training Approach */}
             <div className="bg-slate-50 rounded-xl p-10">
@@ -231,7 +210,7 @@ export function TeamLevelTrainingPage() {
                 </li>
               </ul>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -250,12 +229,8 @@ export function TeamLevelTrainingPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {courses.map((course, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <a
                   href={course.path}
@@ -282,7 +257,7 @@ export function TeamLevelTrainingPage() {
                     <ArrowRight size={16} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -291,11 +266,7 @@ export function TeamLevelTrainingPage() {
       {/* Private Team Training Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
@@ -307,18 +278,14 @@ export function TeamLevelTrainingPage() {
             <p className="text-lg text-slate-600 leading-relaxed">
               Each course is tailored to your team's context, challenges, and business goals. Delivery format, schedule, and investment are aligned based on your needs and scope.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12">
               Start with the NOVA course that fits your team
@@ -339,7 +306,7 @@ export function TeamLevelTrainingPage() {
                 <span>Talk to an Expert</span>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

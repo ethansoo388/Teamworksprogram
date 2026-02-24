@@ -1,9 +1,4 @@
 import { Gauge, Rocket, Lock, LineChart, Brain, Shield, Layers, Zap, Target, ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "motion/react";
-import { useRef } from "react";
-// react-slick Slider is not SSR-compatible; use a plain div wrapper for static export.
-const Slider = ({ children, ...props }: any) => <div {...props}>{children}</div>;
-
 const differentiators = [
   {
     icon: Shield,
@@ -43,39 +38,11 @@ const differentiators = [
 ];
 
 export function DifferentiatorsSection() {
-  const sliderRef = useRef<Slider>(null);
-
-  const handlePrevious = () => {
-    sliderRef.current?.slickPrev();
-  };
-
-  const handleNext = () => {
-    sliderRef.current?.slickNext();
-  };
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    rtl: true, // Right to left movement
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    centerMode: true,
-    centerPadding: '20px',
-  };
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Why Executives Choose <span className="text-blue-400">JESS</span>
@@ -83,14 +50,14 @@ export function DifferentiatorsSection() {
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               What makes JESS a controllable, scalable enterprise operating model — not another Agile rollout.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Mobile Slider */}
-        <div className="block lg:hidden">
-          <Slider {...settings} ref={sliderRef}>
+        <div className="block lg:hidden" data-carousel="jess-diff" data-carousel-initial="0">
+          <div data-carousel-track>
             {differentiators.map((item, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2" data-carousel-slide>
                 <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   <div className="relative z-10">
@@ -108,19 +75,19 @@ export function DifferentiatorsSection() {
                 </div>
               </div>
             ))}
-          </Slider>
+          </div>
 
           {/* Mobile Navigation Buttons */}
           <div className="flex justify-center gap-4 mt-6">
             <button
-              onClick={handlePrevious}
+              data-carousel-prev
               className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
               aria-label="Previous slide"
             >
               <ChevronRight className="text-white" size={24} strokeWidth={2} />
             </button>
             <button
-              onClick={handleNext}
+              data-carousel-next
               className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
               aria-label="Next slide"
             >
@@ -132,12 +99,8 @@ export function DifferentiatorsSection() {
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8">
           {differentiators.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 ${
                 index === differentiators.length - 1 ? 'lg:col-span-2' : ''
               }`}
@@ -155,22 +118,18 @@ export function DifferentiatorsSection() {
                 <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+        <div
           className="mt-12 text-center"
         >
           <p className="text-lg text-slate-300 max-w-4xl mx-auto">
             JESS works because it treats agility as a leadership and operating model decision — not a team-level practice change.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

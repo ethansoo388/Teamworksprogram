@@ -1,5 +1,4 @@
 import { AlertTriangle, TrendingDown, Users, Target } from "lucide-react";
-import { motion } from "motion/react";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
 
 const statsData = [
@@ -61,11 +60,7 @@ export function ProblemSection() {
     <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               Why Most Enterprise Transformations Fail?
@@ -73,15 +68,11 @@ export function ProblemSection() {
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               Data from the 18th State of Agile Report shows why most enterprise transformations fail to deliver measurable outcomes.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bar chart visualization */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div
           className="max-w-5xl mx-auto p-8 md:p-12 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-slate-700/50 backdrop-blur-sm"
         >
           <p className="text-sm text-slate-400 mb-8">
@@ -90,12 +81,8 @@ export function ProblemSection() {
 
           <div className="space-y-6">
             {statsData.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -110,11 +97,7 @@ export function ProblemSection() {
                   <div className="flex items-center gap-2 flex-1">
                     {/* Bar */}
                     <div className="flex-1 relative h-10 sm:h-12 bg-slate-800/50 rounded-lg border border-slate-700/50 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${stat.percentage}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 + index * 0.1, ease: "easeOut" }}
+                      <div
                         className="h-full rounded-lg relative"
                         style={{
                           background: index === 0 || index === 3
@@ -124,20 +107,16 @@ export function ProblemSection() {
                       >
                         {/* Subtle shine effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      </motion.div>
+                      </div>
                     </div>
 
                     {/* Percentage */}
                     <div className="w-12 sm:w-16 flex-shrink-0">
-                      <motion.span
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                      <span
                         className="text-sm sm:text-xl font-bold text-white"
                       >
                         {stat.percentage}%
-                      </motion.span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -150,30 +129,22 @@ export function ProblemSection() {
                   </p>
                   <div className="hidden sm:block sm:w-16"></div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="mt-12 max-w-5xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 text-center"
         >
           <p className="text-lg text-slate-300">
             <span className="font-bold text-white">The result:</span> billions wasted annually on stalled
             transformations, leadership frustration, and declining competitive advantage.
           </p>
-        </motion.div>
+        </div>
 
         {/* Training Programs CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+        <div
           className="mt-16 text-center relative"
         >
           {/* Decorative glow effect */}
@@ -226,7 +197,7 @@ export function ProblemSection() {
               </svg>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

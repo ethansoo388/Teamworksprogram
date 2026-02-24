@@ -1,6 +1,4 @@
-import { motion } from "motion/react";
 import { Button } from "@/site/components/jess/ui/button";
-import { useRef } from "react";
 import { Book, GraduationCap, Users, Briefcase, ArrowRight, ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
 // react-slick Slider is not SSR-compatible; use a plain div wrapper for static export.
 // The mobile carousel becomes a simple horizontal scroll strip.
@@ -83,84 +81,27 @@ const services = [
 ];
 
 export function ServicesSection() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const sliderRef = useRef<Slider>(null);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
-    }
-  };
-
-  const handlePrevious = () => {
-    sliderRef.current?.slickPrev();
-  };
-
-  const handleNext = () => {
-    sliderRef.current?.slickNext();
-  };
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    centerMode: true,
-    centerPadding: '20px',
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '20px',
-          infinite: true,
-          dots: false,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          pauseOnHover: true
-        }
-      }
-    ]
-  };
-
   return (
     <section id="roadmap" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-center">Enterprise Transformation Roadmap</h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto text-center">
               How enterprises move from strategic intent to repeatable, high-performance execution — without relying on hero teams or isolated Agile pockets.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Horizontal Scrolling Cards */}
         <div className="relative">
           {/* Mobile Slider */}
-          <div className="block sm:hidden">
-            <Slider {...settings} ref={sliderRef}>
+          <div className="block sm:hidden" data-carousel="jess-services" data-carousel-initial="0">
+            <div data-carousel-track>
               {/* Card 1 - Free Resources */}
-              <div className="px-2">
+              <div className="px-2" data-carousel-slide>
                 <a
                   href="free-resources.html"
                   className="block h-full"
@@ -201,7 +142,7 @@ export function ServicesSection() {
               </div>
 
               {/* Card 2 - JESS Program */}
-              <div className="px-2">
+              <div className="px-2" data-carousel-slide>
                 <a
                   href="leadership-training.html"
                   className="block h-full"
@@ -242,7 +183,7 @@ export function ServicesSection() {
               </div>
 
               {/* Card 3 - Nova Series */}
-              <div className="px-2">
+              <div className="px-2" data-carousel-slide>
                 <a
                   href="team-level-training.html"
                   className="block h-full"
@@ -281,19 +222,19 @@ export function ServicesSection() {
                   </div>
                 </a>
               </div>
-            </Slider>
+            </div>
 
             {/* Mobile Navigation Buttons */}
             <div className="flex justify-center gap-4 mt-6">
               <button
-                onClick={handlePrevious}
+                data-carousel-prev
                 className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="text-white" size={24} strokeWidth={2} />
               </button>
               <button
-                onClick={handleNext}
+                data-carousel-next
                 className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
                 aria-label="Next slide"
               >
@@ -304,7 +245,7 @@ export function ServicesSection() {
 
           {/* Desktop Horizontal Scroll */}
           <div
-            ref={scrollContainerRef}
+            data-scroll-container
             className="hidden sm:grid sm:grid-cols-3 gap-6 pb-4 relative"
           >
             {/* Arrow between Card 1 and 2 */}
@@ -318,11 +259,7 @@ export function ServicesSection() {
             </div>
 
             {/* Card 1 - Free Resources */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="relative"
             >
               <a
@@ -362,14 +299,10 @@ export function ServicesSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
 
             {/* Card 2 - JESS Program */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <div
               className="relative"
             >
               <a
@@ -409,14 +342,10 @@ export function ServicesSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
 
             {/* Card 3 - Nova Series */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
               className="relative"
             >
               <a
@@ -456,15 +385,11 @@ export function ServicesSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Anchoring Sentence */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="mt-12 text-center"
           >
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
@@ -472,7 +397,7 @@ export function ServicesSection() {
               <br />
               <span className="text-white font-semibold">They redesign how leadership, strategy, and execution work together.</span>
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 

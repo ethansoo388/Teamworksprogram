@@ -366,4 +366,172 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+
+  // Static-safe reveal + stagger (works after HTML export)
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('is-visible');
+
+      // If this is a reveal group, apply stagger delays to items
+      if (el instanceof HTMLElement && el.hasAttribute('data-reveal-group')) {
+        const stagger = Number(el.getAttribute('data-stagger') ?? '80');
+        const items = Array.from(el.querySelectorAll('[data-reveal-item]'));
+        items.forEach((child, idx) => {
+          if (!(child instanceof HTMLElement)) return;
+          child.style.transitionDelay = `${Math.max(0, idx) * stagger}ms`;
+        });
+      }
+
+      revealObserver.unobserve(el);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+  document.querySelectorAll('[data-reveal], [data-reveal-group]').forEach((el) => {
+    revealObserver.observe(el);
+  });
+
+  // Jess accordion smooth open/close (details/summary)
+  const accordions = Array.from(document.querySelectorAll('[data-jess-accordion]'));
+  accordions.forEach((details) => {
+    if (!(details instanceof HTMLDetailsElement)) return;
+    const content = details.querySelector('[data-jess-accordion-content]');
+    if (!(content instanceof HTMLElement)) return;
+
+    // Set initial state
+    const setInstantHeight = () => {
+      if (details.open) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+    };
+
+    setInstantHeight();
+
+    details.addEventListener('toggle', () => {
+      // Animate via max-height
+      content.style.transition = 'max-height 300ms ease, opacity 300ms ease';
+      if (details.open) {
+        content.style.opacity = '1';
+        // from current 0 to scrollHeight
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.opacity = '0.98';
+        content.style.maxHeight = '0px';
+      }
+    });
+
+    // Recalculate on resize
+    window.addEventListener('resize', () => {
+      // Avoid expensive work if closed
+      if (details.open) content.style.maxHeight = content.scrollHeight + 'px';
+    });
+  });
+
+  // Generic static modal (works after export)
+  // Usage:
+  // - Trigger: element with [data-modal-open="modal-id"]
+  // - Modal wrapper: <div data-modal id="modal-id" class="hidden"> ... </div>
+  // - Close: any element with [data-modal-close] inside modal (including backdrop)
+  const modalOpeners = Array.from(document.querySelectorAll('[data-modal-open]'));
+  const modalsById = new Map();
+  Array.from(document.querySelectorAll('[data-modal]')).forEach((m) => {
+    if (m instanceof HTMLElement && m.id) modalsById.set(m.id, m);
+  });
+
+  const openModal = (id) => {
+    const modal = modalsById.get(id);
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = (modal) => {
+    if (!(modal instanceof HTMLElement)) return;
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    // Restore scroll only if no other modals are open
+    const anyOpen = Array.from(modalsById.values()).some((m) => !m.classList.contains('hidden'));
+    if (!anyOpen) document.body.style.overflow = '';
+  };
+
+  modalOpeners.forEach((opener) => {
+    opener.addEventListener('click', (e) => {
+      const id = opener.getAttribute('data-modal-open');
+      if (!id) return;
+      e.preventDefault();
+      openModal(id);
+    });
+  });
+
+  modalsById.forEach((modal) => {
+    modal.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest('[data-modal-close]')) {
+        closeModal(modal);
+      }
+    });
+    });
+
+  // ESC to close any open modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    modalsById.forEach((modal) => {
+      if (!modal.classList.contains('hidden')) closeModal(modal);
+    });
+  });
+  });
+
+  // Generic static carousel (show one slide at a time)
+  // Usage:
+  // - Wrapper: [data-carousel]
+  // - Slides: [data-carousel-slide]
+  // - Buttons: [data-carousel-prev], [data-carousel-next]
+  Array.from(document.querySelectorAll('[data-carousel]')).forEach((carousel) => {
+    if (!(carousel instanceof HTMLElement)) return;
+    const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]')).filter((s) => s instanceof HTMLElement);
+    if (!slides.length) return;
+
+    let current = Number(carousel.getAttribute('data-carousel-initial') ?? '0') || 0;
+    const show = (idx) => {
+      current = ((idx % slides.length) + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        if (!(s instanceof HTMLElement)) return;
+        s.classList.toggle('hidden', i !== current);
+      });
+    };
+
+    // Initial: hide all but current
+    show(current);
+
+    const prevBtn = carousel.querySelector('[data-carousel-prev]');
+    const nextBtn = carousel.querySelector('[data-carousel-next]');
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); show(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); show(current + 1); });
+  });
+
+  // Horizontal scroller controls (for desktop card strips)
+  // Usage:
+  // - Scroll container: [data-scroll-container]
+  // - Buttons: [data-scroll-prev], [data-scroll-next] within the same section
+  Array.from(document.querySelectorAll('[data-scroll-prev], [data-scroll-next]')).forEach((btn) => {
+    if (!(btn instanceof HTMLElement)) return;
+    const section = btn.closest('section') || btn.parentElement;
+    if (!section) return;
+    const container = section.querySelector('[data-scroll-container]');
+    if (!(container instanceof HTMLElement)) return;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const delta = btn.hasAttribute('data-scroll-prev') ? -1 : 1;
+      const amount = Math.max(280, Math.min(520, container.clientWidth * 0.8));
+      container.scrollBy({ left: delta * amount, behavior: 'smooth' });
+    });
+  });
+
 });

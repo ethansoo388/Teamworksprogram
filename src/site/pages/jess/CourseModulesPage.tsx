@@ -1,10 +1,7 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { useState } from "react";
 
 export function CourseModulesPage() {
-  const [activeTab, setActiveTab] = useState('modules');
 
   return (
     <div className="min-h-screen bg-white">
@@ -42,66 +39,39 @@ export function CourseModulesPage() {
           <nav className="flex gap-8 sm:gap-12">
             <a
               href="leadership-training.html"
-              onMouseEnter={() => setActiveTab('overview')}
-              onMouseLeave={() => setActiveTab('modules')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'overview' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Overview
-              {activeTab === 'overview' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
-            <a
-              href="course-modules.html"
-              onMouseEnter={() => setActiveTab('modules')}
-              onMouseLeave={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'modules' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
+
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
               Course Modules
-              {activeTab === 'modules' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-            </a>
-            
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+            </span>
+
             <a
               href="instructor.html"
-              onMouseEnter={() => setActiveTab('instructor')}
-              onMouseLeave={() => setActiveTab('modules')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'instructor' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Instructor
-              {activeTab === 'instructor' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
+
             <a
               href="class-schedule.html"
-              onMouseEnter={() => setActiveTab('schedule')}
-              onMouseLeave={() => setActiveTab('modules')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'schedule' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Class Schedule
-              {activeTab === 'schedule' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="individual-enrollment.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Enrollment
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
           </nav>
         </div>
@@ -111,11 +81,7 @@ export function CourseModulesPage() {
       <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Part 1: Foundations */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
             className="mb-12 sm:mb-16 lg:mb-20"
           >
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -207,14 +173,10 @@ export function CourseModulesPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Part 2: Execution */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
           >
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="bg-slate-200 text-slate-900 px-4 sm:px-6 py-1.5 sm:py-2 text-base sm:text-lg font-medium inline-block w-fit">Course 2</div>
@@ -309,7 +271,7 @@ export function CourseModulesPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

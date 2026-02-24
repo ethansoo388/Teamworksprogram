@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { TrendingDown, AlertCircle, Target, Zap, Brain, BarChart3 } from "lucide-react";
 
 export function StateOfAgileSection() {
@@ -13,11 +12,7 @@ export function StateOfAgileSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 mb-6">
               <AlertCircle size={16} />
@@ -26,15 +21,11 @@ export function StateOfAgileSection() {
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
               What Enterprise Data Is Telling Leaders
             </h2>
-          </motion.div>
+          </div>
         </div>
 
         {/* The Gap: Tools vs Results */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-red-500/30"
         >
           <div className="text-center mb-8">
@@ -50,13 +41,9 @@ export function StateOfAgileSection() {
                   60%
                 </div>
                 <div className="h-2 bg-slate-800 rounded-full overflow-hidden max-w-md mx-auto">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "60%" }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.3 }}
+                  <div
                     className="h-full bg-gradient-to-r from-green-500 to-emerald-500"
-                  ></motion.div>
+                  ></div>
                 </div>
               </div>
               <p className="text-slate-300 font-semibold mb-2">Report High Delivery Visibility</p>
@@ -70,13 +57,9 @@ export function StateOfAgileSection() {
                   63%
                 </div>
                 <div className="h-2 bg-slate-800 rounded-full overflow-hidden max-w-md mx-auto">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "63%" }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.3 }}
+                  <div
                     className="h-full bg-gradient-to-r from-red-500 to-orange-500"
-                  ></motion.div>
+                  ></div>
                 </div>
               </div>
               <p className="text-slate-300 font-semibold mb-2">Struggle to Deliver Predictable Outcomes</p>
@@ -92,14 +75,10 @@ export function StateOfAgileSection() {
               Our work begins where tooling stops: designing high-performance operating models that turn visibility into value.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* The Fourth Wave: AI Era */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="mb-16 p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30"
         >
           <div className="flex items-center gap-4 mb-6">
@@ -121,13 +100,9 @@ export function StateOfAgileSection() {
                 <div className="text-slate-300">Using or planning to use AI</div>
               </div>
               <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "84%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 }}
+                <div
                   className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
-                ></motion.div>
+                ></div>
               </div>
             </div>
 
@@ -139,13 +114,9 @@ export function StateOfAgileSection() {
                 <div className="text-slate-300">Have formal AI delivery models</div>
               </div>
               <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "10%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 }}
+                <div
                   className="h-full bg-gradient-to-r from-red-500 to-orange-500"
-                ></motion.div>
+                ></div>
               </div>
             </div>
           </div>
@@ -169,14 +140,10 @@ export function StateOfAgileSection() {
               </li>
             </ul>
           </div>
-        </motion.div>
+        </div>
 
         {/* What Organizations Really Need */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-blue-500/30"
         >
           <h3 className="text-3xl font-bold text-white mb-4 text-center">
@@ -192,13 +159,9 @@ export function StateOfAgileSection() {
                 29%
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "29%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 }}
+                <div
                   className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
-                ></motion.div>
+                ></div>
               </div>
               <p className="text-slate-300 font-semibold">Outcome Ownership & Adaptability</p>
             </div>
@@ -208,13 +171,9 @@ export function StateOfAgileSection() {
                 27%
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "27%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.4 }}
+                <div
                   className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
-                ></motion.div>
+                ></div>
               </div>
               <p className="text-slate-300 font-semibold">Leadership Support & Alignment</p>
             </div>
@@ -224,25 +183,17 @@ export function StateOfAgileSection() {
                 17%
               </div>
               <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-4 max-w-xs mx-auto">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "17%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                <div
                   className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
-                ></motion.div>
+                ></div>
               </div>
               <p className="text-slate-300 font-semibold">Clear Line of Sight from Strategy to Execution</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20"
         >
           <h3 className="text-2xl font-bold text-white mb-4">
@@ -251,7 +202,7 @@ export function StateOfAgileSection() {
           <p className="text-slate-300 max-w-3xl mx-auto">
             An enterprise operating model that connects leadership decisions, funding, priorities, and execution — so leaders get measurable outcomes, not transformation theatre.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

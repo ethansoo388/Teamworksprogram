@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { Plus, X } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-
 interface ModalContent {
   title: string;
   sections: {
@@ -134,25 +131,13 @@ const cardsData: CardData[] = [
 ];
 
 export function AIBenefitsCards() {
-  const [selectedCard, setSelectedCard] = useState<string | null>(null);
-
-  const openModal = (cardId: string) => {
-    setSelectedCard(cardId);
-  };
-
-  const closeModal = () => {
-    setSelectedCard(null);
-  };
-
-  const selectedCardData = cardsData.find(card => card.id === selectedCard);
-
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div data-reveal-group data-stagger="80" className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {cardsData.map((card, index) => (
           <div
             key={card.id}
-            className={`${card.gridClass} bg-slate-50 border border-slate-200 rounded-3xl p-8 relative md:pb-8 pb-6 group hover:bg-slate-100 transition-all flex flex-col`}
+            data-reveal-item className={`${card.gridClass} bg-slate-50 border border-slate-200 rounded-3xl p-8 relative md:pb-8 pb-6 group hover:bg-slate-100 transition-all flex flex-col`}
           >
             {/* Course Label */}
             <div className="mb-4">
@@ -218,7 +203,7 @@ export function AIBenefitsCards() {
 
             {/* Learn More Button */}
             <button
-              onClick={() => openModal(card.id)}
+              data-modal-open={\`ai-modal-${card.id}\`}
               className="w-full md:w-auto md:absolute md:bottom-2 md:right-6 bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-lg flex items-center justify-end md:justify-center gap-2 group/btn mt-auto"
               aria-label="Learn more"
             >
@@ -229,88 +214,74 @@ export function AIBenefitsCards() {
         ))}
       </div>
 
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedCard && selectedCardData && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"
-              onClick={closeModal}
-            />
+      {/* Modals */}
+      {cardsData.map((card) => (
+        <div key={card.id} data-modal id={`ai-modal-${card.id}`} className="hidden">
+          {/* Backdrop */}
+          <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50" data-modal-close />
 
-            {/* Modal Content */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-x-4 top-1/2 -translate-y-1/2 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-3xl z-50 max-h-[90vh] overflow-y-auto"
-            >
-              <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-2xl relative">
-                {/* Close Button */}
-                <button
-                  onClick={closeModal}
-                  className="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all"
-                  aria-label="Close"
-                >
-                  <X size={20} className="text-slate-600" />
-                </button>
+          {/* Modal Content */}
+          <div className="fixed inset-x-4 top-1/2 -translate-y-1/2 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-3xl z-50 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-2xl relative">
+              {/* Close Button */}
+              <button
+                data-modal-close
+                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all"
+                aria-label="Close"
+              >
+                <X size={20} className="text-slate-600" />
+              </button>
 
-                <div className="pr-8">
-                  <h3 className="text-2xl md:text-3xl font-light text-slate-900 mb-8 leading-tight">
-                    {selectedCardData.modalContent.title}
-                  </h3>
+              <div className="pr-8">
+                <h3 className="text-2xl md:text-3xl font-light text-slate-900 mb-8 leading-tight">
+                  {card.modalContent.title}
+                </h3>
 
-                  <div className="space-y-6">
-                    {selectedCardData.modalContent.sections.map((section, index) => (
-                      <div key={index}>
-                        {section.type === 'paragraph' && (
-                          <div className="border-l-4 border-slate-300 pl-6 py-1">
-                            <p className="text-slate-900 text-base md:text-lg leading-relaxed">
-                              {section.content}
+                <div className="space-y-6">
+                  {card.modalContent.sections.map((section, index) => (
+                    <div key={index}>
+                      {section.type === 'paragraph' && (
+                        <div className="border-l-4 border-slate-300 pl-6 py-1">
+                          <p className="text-slate-900 text-base md:text-lg leading-relaxed">
+                            {section.content}
+                          </p>
+                        </div>
+                      )}
+
+                      {section.type === 'list' && (
+                        <div className="border-l-4 border-slate-300 pl-6 py-1">
+                          {section.intro && (
+                            <p className="text-slate-900 text-base md:text-lg leading-relaxed mb-3">
+                              {section.intro}
                             </p>
-                          </div>
-                        )}
+                          )}
+                          <ul className="space-y-2 ml-4">
+                            {section.items?.map((item, itemIndex) => (
+                              <li key={itemIndex} className="text-slate-900 text-base md:text-lg leading-relaxed list-disc">
+                                <span dangerouslySetInnerHTML={{ __html: item }} />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
 
-                        {section.type === 'list' && (
-                          <div className="border-l-4 border-slate-300 pl-6 py-1">
-                            {section.intro && (
-                              <p className="text-slate-900 text-base md:text-lg leading-relaxed mb-3">
-                                {section.intro}
-                              </p>
-                            )}
-                            <ul className="space-y-2 ml-4">
-                              {section.items?.map((item, itemIndex) => (
-                                <li key={itemIndex} className="text-slate-900 text-base md:text-lg leading-relaxed list-disc">
-                                  <span dangerouslySetInnerHTML={{ __html: item }} />
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Register Button */}
-                  <div className="mt-8 pt-6 border-t border-slate-200">
-                    <a
-                      href="mailto:romanoff@ciagile.com?subject=JESS Learning Program Registration"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all"
-                    >
-                      Register me
-                    </a>
-                  </div>
+                {/* Register Button */}
+                <div className="mt-8 pt-6 border-t border-slate-200">
+                  <a
+                    href="mailto:romanoff@ciagile.com?subject=JESS Learning Program Registration"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all"
+                  >
+                    Register me
+                  </a>
                 </div>
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+            </div>
+          </div>
+        </div>
+      ))}
     </>
   );
 }

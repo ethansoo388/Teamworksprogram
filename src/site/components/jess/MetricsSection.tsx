@@ -1,14 +1,8 @@
-import { motion } from "motion/react";
-
 export function MetricsSection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="grid grid-cols-1 sm:grid-cols-3 gap-8"
         >
           <div className="text-center">
@@ -29,7 +23,7 @@ export function MetricsSection() {
             </div>
             <div className="text-slate-400">Leaders reporting improved execution confidence</div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

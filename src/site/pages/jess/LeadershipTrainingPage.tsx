@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { CTASection } from "@/site/components/jess/CTASection";
@@ -6,7 +5,6 @@ import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallbac
 import { LeadershipAccordion } from "@/site/components/jess/LeadershipAccordion";
 import { AIBenefitsCards } from "@/site/components/jess/AIBenefitsCards";
 import { ArrowRight, ArrowLeft, Download, MessageCircle, ChevronDown, ChevronUp, Plus, X } from "lucide-react";
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -51,23 +49,6 @@ const notFor = [
 ];
 
 export function LeadershipTrainingPage() {
-  const [showMore, setShowMore] = useState(false);
-  const [expandedModule, setExpandedModule] = useState<string | null>(null);
-  const [expandedProblem, setExpandedProblem] = useState<string | null>(null);
-  const [showScheduleModal, setShowScheduleModal] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-
-  const toggleModule = (moduleId: string) => {
-    setExpandedModule(expandedModule === moduleId ? null : moduleId);
-  };
-
-  const handleProblemHover = (problemId: string) => {
-    setExpandedProblem(problemId);
-  };
-
-  const handleProblemLeave = () => {
-    setExpandedProblem(null);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -139,76 +120,41 @@ export function LeadershipTrainingPage() {
       <div className="sticky top-0 z-40 bg-[#2C3E50] border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex gap-8 sm:gap-12">
-            <button
-              onClick={() => setActiveTab('overview')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'overview' 
-                  ? 'text-white' 
-                  : 'text-slate-300 hover:text-white'
-              }`}
-            >
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
               Overview
-              {activeTab === 'overview' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-              {activeTab !== 'overview' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 hover:opacity-100 transition-opacity"></div>
-              )}
-            </button>
-            
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+            </span>
+
             <a
               href="course-modules.html"
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'modules'
-                  ? 'text-white'
-                  : 'text-slate-300 hover:text-white'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Course Modules
-              {activeTab === 'modules' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-              {activeTab !== 'modules' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 hover:opacity-100 transition-opacity"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
+
             <a
-              href="#instructor"
-              onMouseEnter={() => setActiveTab('instructor')}
-              onClick={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'instructor' 
-                  ? 'text-white' 
-                  : 'text-slate-300 hover:text-white'
-              }`}
+              href="instructor.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Instructor
-              {activeTab === 'instructor' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-              {activeTab !== 'instructor' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 hover:opacity-100 transition-opacity"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
+
             <a
               href="class-schedule.html"
-              onMouseEnter={() => setActiveTab('schedule')}
-              onClick={() => setActiveTab('schedule')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'schedule' 
-                  ? 'text-white' 
-                  : 'text-slate-300 hover:text-white'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Class Schedule
-              {activeTab === 'schedule' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-              {activeTab !== 'schedule' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 hover:opacity-100 transition-opacity"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="individual-enrollment.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Enrollment
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
           </nav>
         </div>
@@ -217,11 +163,7 @@ export function LeadershipTrainingPage() {
       {/* Why Agile Transformations Stall */}
       <section className="py-16 sm:py-24 border-t border-slate-700 bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Two Column Layout on Desktop, Stacked on Mobile */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 lg:mb-16">
@@ -279,7 +221,7 @@ export function LeadershipTrainingPage() {
                 Agile transformation requires leadership alignment and execution capability — working as one system.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -290,11 +232,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             {/* Accent Line Above */}
@@ -321,11 +259,7 @@ export function LeadershipTrainingPage() {
             </div>
             
             {/* Enhanced CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
             >
               <a 
                 href="#jess-learning-program"
@@ -337,7 +271,7 @@ export function LeadershipTrainingPage() {
                 {/* Animated shimmer effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </a>
-            </motion.div>
+            </div>
 
             {/* Bottom Accent */}
             <div className="flex items-center justify-center gap-4 mt-12">
@@ -345,7 +279,7 @@ export function LeadershipTrainingPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-slate-600"></div>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-600"></div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -360,11 +294,7 @@ export function LeadershipTrainingPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Header */}
             <div className="text-center mb-16 sm:mb-20">
@@ -385,11 +315,7 @@ export function LeadershipTrainingPage() {
             {/* Three Column Value Props */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
               {/* Column 1 - Leadership Alignment */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+              <div
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
@@ -405,14 +331,10 @@ export function LeadershipTrainingPage() {
                   </p>
 
                 </div>
-              </motion.div>
+              </div>
 
               {/* Column 2 - Team Execution */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+              <div
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
@@ -427,14 +349,10 @@ export function LeadershipTrainingPage() {
                     Scale from a few teams to enterprise-wide coordination without increasing hierarchy, bureaucracy, or loss of oversight.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Column 3 - System Integration */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+              <div
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
@@ -449,15 +367,11 @@ export function LeadershipTrainingPage() {
                     Deliver continuous, verifiable value through disciplined prioritization, transparent metrics, and rapid feedback loops.
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom CTA Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-amber-500/10 rounded-3xl blur-2xl"></div>
@@ -508,19 +422,15 @@ export function LeadershipTrainingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Leadership in an AI-Driven Environment */}
       <section id="jess-learning-program" className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <div className="mb-16 text-center">
               <div className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-6">
@@ -540,11 +450,7 @@ export function LeadershipTrainingPage() {
             {/* Two Course Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {/* Course 1: High Performance Agile Leader */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+              <div
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
@@ -640,14 +546,10 @@ export function LeadershipTrainingPage() {
                     <span>2-Day Intensive Program</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Course 2: Leading Hyper-Productive Team */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+              <div
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
@@ -743,21 +645,17 @@ export function LeadershipTrainingPage() {
                     <span>2-Day Intensive Program</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
             
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Take Both Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Section Header */}
             <div className="mb-16">
@@ -891,7 +789,7 @@ export function LeadershipTrainingPage() {
                 <ArrowRight size={20} />
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -902,11 +800,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Header */}
             <div className="text-center mb-20">
@@ -925,11 +819,7 @@ export function LeadershipTrainingPage() {
             {/* Two Column Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Enterprise Teams Card */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
                 className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
@@ -970,14 +860,10 @@ export function LeadershipTrainingPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
               
               {/* Individual Leaders Card */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <div
                 className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
@@ -1018,15 +904,11 @@ export function LeadershipTrainingPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
             
             {/* Bottom CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="text-center mt-16"
             >
               <p className="text-slate-400 font-light mb-6">
@@ -1039,8 +921,8 @@ export function LeadershipTrainingPage() {
                 <span className="font-medium">Talk to a Program Advisor</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1051,11 +933,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Header */}
             <div className="text-center mb-20">
@@ -1074,11 +952,7 @@ export function LeadershipTrainingPage() {
             {/* Two Options Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* For Enterprise Leaders & Sponsors */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
                 className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 sm:p-10 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
@@ -1158,14 +1032,10 @@ export function LeadershipTrainingPage() {
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
 
               {/* For Individual Leaders */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <div
                 className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-8 sm:p-10 hover:border-purple-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
@@ -1238,33 +1108,25 @@ export function LeadershipTrainingPage() {
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom Note */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="mt-16 text-center"
             >
               <p className="text-base text-slate-400 font-light">
                 Not sure which option is right for you? <a href="mailto:romanoff@ciagile.com" className="text-blue-400 hover:text-blue-300 font-medium underline">Contact us</a> for a consultation.
               </p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Expected Outcomes */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
@@ -1282,11 +1144,7 @@ export function LeadershipTrainingPage() {
             {/* Authority Content */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               {/* Left: Framework Foundation */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-2xl"></div>
@@ -1322,14 +1180,10 @@ export function LeadershipTrainingPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Right: Practical Translation */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <div
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-2xl"></div>
@@ -1365,15 +1219,11 @@ export function LeadershipTrainingPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Outcome Statement */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="relative max-w-4xl mx-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-amber-400/20 to-amber-500/20 rounded-3xl blur-3xl"></div>
@@ -1395,19 +1245,15 @@ export function LeadershipTrainingPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-40 border-t border-slate-200 bg-white">
         <div className="w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Clean Two-Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
@@ -1496,18 +1342,14 @@ export function LeadershipTrainingPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-light mb-16 text-slate-900 tracking-tight leading-[1.43]">
               Frequently Asked Questions
@@ -1559,167 +1401,14 @@ export function LeadershipTrainingPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <MainSiteFooter />
 
-      {/* Schedule Modal */}
-      {showScheduleModal && (
-        <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setShowScheduleModal(false)}
-        >
-          <div 
-            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-slate-200 px-6 sm:px-8 py-6 flex items-center justify-between rounded-t-2xl">
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-light text-slate-900">
-                  JESS Learning Program
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 font-light mt-1">
-                  Public Class 2026 Schedule
-                </p>
-              </div>
-              <button
-                onClick={() => setShowScheduleModal(false)}
-                className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <X size={24} className="text-slate-400" />
-              </button>
-            </div>
-
-            {/* Modal Content */}
-            <div className="px-6 sm:px-8 py-8">
-              {/* Schedule Grid */}
-              <div className="space-y-4 sm:space-y-8">
-                {/* April 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    April 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Indonesia:</span> Course 1 - 7th and 8th
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Malaysia:</span> Course 1 - 21st and 22nd
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* May 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    May 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">All countries - online:</span> Course 2 - 20th and 21st
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* July 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    July 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Indonesia:</span> Course 1 - 8th and 9th
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Malaysia:</span> Course 1 - 21st and 22nd
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* August 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    August 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">All countries - online:</span> Course 2 - 19th and 20th
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* October 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    October 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Indonesia:</span> Course 1 - 14th and 15th
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">Malaysia:</span> Course 1 - 20th and 21st
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* November 2026 */}
-                <div className="border border-slate-200 rounded-xl p-4 sm:p-6 bg-slate-50/50">
-                  <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2 sm:mb-4">
-                    November 2026
-                  </h3>
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base text-slate-700">
-                        <span className="font-semibold">All countries - online:</span> Course 2 - 18th and 19th
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="mt-8 pt-6 border-t border-slate-200">
-                <a 
-                  href="mailto:romanoff@ciagile.com?subject=JESS Learning Program Registration Inquiry"
-                  className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all"
-                >
-                  Contact Us for Registration
-                  <ArrowRight size={18} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
+
+      
   );
 }

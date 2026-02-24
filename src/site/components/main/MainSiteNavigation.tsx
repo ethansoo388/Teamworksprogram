@@ -25,14 +25,14 @@ function ProgramsDropdown({
       onMouseLeave={onMouseLeave}
     >
       <a 
-        href="teamworks/index.html"
+        href="/teamworks/index.html"
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
         <div className="text-[14px] text-[#6a7282] font-['Inter:Light',sans-serif]">Improve team execution, speed, and clarity</div>
       </a>
       <a
-        href="jess/index.html"
+        href="/jess/index.html"
         className="block px-6 py-4 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"
       >
         <div className="font-['Inter:Regular',sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
@@ -51,13 +51,13 @@ function AboutDropdown({ isOpen, onMouseEnter, onMouseLeave }: { isOpen: boolean
       onMouseLeave={onMouseLeave}
     >
       <a 
-        href="aboutus.html"
+        href="/aboutus.html"
         className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline"
       >
         About Us
       </a>
       <a 
-        href="contactus.html"
+        href="/contactus.html"
         className="block px-6 py-4 text-[18px] font-['Inter:Regular',sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline"
       >
         Contact Us
@@ -128,7 +128,7 @@ export function MainSiteNavigation() {
       <div className="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
         {/* Logo */}
         <div className="flex items-center h-[24px]">
-          <a href="index.html" className="no-underline flex items-center h-full">
+          <a href="/index.html" className="no-underline flex items-center h-full">
             <img 
               alt="CI Agile Logo" 
               className="h-full w-auto object-contain" 
@@ -238,7 +238,7 @@ export function MainSiteNavigation() {
 
           {/* Contact Button */}
           <a 
-            href="contactus.html"
+            href="/contactus.html"
             className="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0"
           >
             <span className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">
@@ -263,14 +263,14 @@ export function MainSiteNavigation() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
             <div className="py-2 px-2 font-['Inter',sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
             <a
-              href="teamworks/index.html"
+              href="/teamworks/index.html"
               className="px-2 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] no-underline hover:text-[#0066CC]"
               data-mobile-close
             >
               For SMEs
             </a>
             <a
-              href="jess/index.html"
+              href="/jess/index.html"
               className="px-2 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] no-underline hover:text-[#0066CC]"
               data-mobile-close
             >
@@ -279,14 +279,14 @@ export function MainSiteNavigation() {
 
             <div className="mt-2 py-2 px-2 font-['Inter',sans-serif] font-medium text-[14px] text-[#364153]">About</div>
             <a
-              href="aboutus.html"
+              href="/aboutus.html"
               className="px-2 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] no-underline hover:text-[#0066CC]"
               data-mobile-close
             >
               About Us
             </a>
             <a
-              href="contactus.html"
+              href="/contactus.html"
               className="px-2 py-3 text-[14px] font-['Inter:Light',sans-serif] text-[#364153] no-underline hover:text-[#0066CC]"
               data-mobile-close
             >
@@ -294,7 +294,7 @@ export function MainSiteNavigation() {
             </a>
 
             <a
-              href="contactus.html"
+              href="/contactus.html"
               className="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity"
               data-mobile-close
             >

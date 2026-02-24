@@ -1,6 +1,4 @@
 import { CheckCircle2, Shield, Zap, Network } from "lucide-react";
-import { motion } from "motion/react";
-
 export function SolutionSection() {
   return (
     <section id="solution" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -11,11 +9,7 @@ export function SolutionSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               What is Jeff Sutherland's Enterprise Scrum System (JESS)?
@@ -23,15 +17,11 @@ export function SolutionSection() {
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               JESS is a proven execution system that equips leaders and teams with the clarity and structure to deliver results — starting small and scaling with confidence.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h3 className="text-3xl font-bold text-white mb-6">
               The Problems We Solve
@@ -82,13 +72,9 @@ export function SolutionSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
           >
             <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
@@ -119,7 +105,7 @@ export function SolutionSection() {
                 Successfully applied in highly regulated, multi-country, and high-complexity environments.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

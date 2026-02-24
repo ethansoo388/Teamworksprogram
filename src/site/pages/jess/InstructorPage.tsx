@@ -1,10 +1,7 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { useState } from "react";
 
 export function InstructorPage() {
-  const [activeTab, setActiveTab] = useState('instructor');
 
   return (
     <div className="min-h-screen bg-white">
@@ -42,64 +39,39 @@ export function InstructorPage() {
           <nav className="flex gap-8 sm:gap-12">
             <a
               href="leadership-training.html"
-              onMouseEnter={() => setActiveTab('overview')}
-              onMouseLeave={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'overview' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Overview
-              {activeTab === 'overview' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
+
             <a
               href="course-modules.html"
-              onMouseEnter={() => setActiveTab('modules')}
-              onMouseLeave={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'modules' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Course Modules
-              {activeTab === 'modules' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            
-            <button
-              onMouseEnter={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'instructor' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
+
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
               Instructor
-              {activeTab === 'instructor' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-            </button>
-            
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+            </span>
+
             <a
               href="class-schedule.html"
-              onMouseEnter={() => setActiveTab('schedule')}
-              onMouseLeave={() => setActiveTab('instructor')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'schedule' 
-                  ? 'text-slate-900' 
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Class Schedule
-              {activeTab === 'schedule' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+
+            <a
+              href="individual-enrollment.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Enrollment
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
           </nav>
         </div>
@@ -163,11 +135,7 @@ export function InstructorPage() {
           </div>
 
           {/* Previously Led Transformation Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-20 bg-slate-800 p-8 rounded-2xl"
           >
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-8">Previously led Agile transformation at:</h3>
@@ -178,14 +146,10 @@ export function InstructorPage() {
                 className="max-w-full h-auto"
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Client Testimonials */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
             className="mb-20"
           >
             <h3 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8">From our clients and Agile gurus:</h3>
@@ -238,14 +202,10 @@ export function InstructorPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <div
           >
             <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 sm:p-12">
               <h3 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8 text-center">Certifications & Credentials</h3>
@@ -255,7 +215,7 @@ export function InstructorPage() {
                 className="w-full max-w-4xl mx-auto"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

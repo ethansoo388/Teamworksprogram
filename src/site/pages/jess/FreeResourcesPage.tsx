@@ -1,10 +1,8 @@
-import { motion } from "motion/react";
 import { CTASection } from "@/site/components/jess/CTASection";
 import { Book, Download, Video, FileText, Users, ExternalLink, ArrowLeft, GraduationCap, Target, Rocket, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/site/components/jess/ui/button";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { useRef, useState } from "react";
 
 const resources = [
   {
@@ -46,25 +44,6 @@ const resources = [
 ];
 
 export function FreeResourcesPage() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScroll = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    setCanScrollLeft(container.scrollLeft > 0);
-    setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10);
-  };
-
-  const scroll = (direction: 'left' | 'right') => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const scrollAmount = 356;
-    const newScrollLeft = direction === 'left' ? container.scrollLeft - scrollAmount : container.scrollLeft + scrollAmount;
-    container.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <MainSiteNavigation />
@@ -72,7 +51,7 @@ export function FreeResourcesPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-left">
+          <div className="text-left">
             <a href="index.html" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-400 transition-colors mb-4 group">
               <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
               Back to JESS Home Page
@@ -83,14 +62,14 @@ export function FreeResourcesPage() {
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white text-center">FREE Learnings for All</h1>
             <p className="text-xl text-slate-300 leading-relaxed mb-8">Executive-ready insights to help you decide, align, and act — before transformation gets expensive.</p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Getting Started Resources */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100">
         <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <div>
             <div className="mb-12 text-left">
               <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-slate-900 max-w-2xl">Getting Started Resources</h2>
             </div>
@@ -203,7 +182,7 @@ export function FreeResourcesPage() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

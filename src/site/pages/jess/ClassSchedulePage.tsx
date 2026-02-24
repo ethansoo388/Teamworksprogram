@@ -1,11 +1,8 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { useState } from "react";
 import { Calendar, MapPin, Globe } from "lucide-react";
 
 export function ClassSchedulePage() {
-  const [activeTab, setActiveTab] = useState('schedule');
 
   const scheduleData = [
     {
@@ -85,65 +82,40 @@ export function ClassSchedulePage() {
           <nav className="flex gap-8 sm:gap-12">
             <a
               href="leadership-training.html"
-              onMouseEnter={() => setActiveTab('overview')}
-              onMouseLeave={() => setActiveTab('schedule')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'overview'
-                  ? 'text-slate-900'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Overview
-              {activeTab === 'overview' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
 
             <a
               href="course-modules.html"
-              onMouseEnter={() => setActiveTab('modules')}
-              onMouseLeave={() => setActiveTab('schedule')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'modules'
-                  ? 'text-slate-900'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Course Modules
-              {activeTab === 'modules' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
 
             <a
               href="instructor.html"
-              onMouseEnter={() => setActiveTab('instructor')}
-              onMouseLeave={() => setActiveTab('schedule')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'instructor'
-                  ? 'text-slate-900'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
             >
               Instructor
-              {activeTab === 'instructor' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
 
-            <button
-              onMouseEnter={() => setActiveTab('schedule')}
-              className={`relative py-4 text-sm sm:text-base font-medium transition-colors ${
-                activeTab === 'schedule'
-                  ? 'text-slate-900'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
               Class Schedule
-              {activeTab === 'schedule' && (
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              )}
-            </button>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+            </span>
+
+            <a
+              href="individual-enrollment.html"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Enrollment
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
           </nav>
         </div>
       </div>
@@ -155,8 +127,8 @@ export function ClassSchedulePage() {
           <div className="mb-12 overflow-x-auto">
             <div className="flex items-center justify-center gap-4 sm:gap-8 min-w-max mx-auto pb-4">
               {/* Q2 - Blue */}
-              <button
-                onClick={() => document.getElementById('april-2026')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+              <a href="#april-2026"
+                
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
@@ -168,14 +140,14 @@ export function ClassSchedulePage() {
                     Apr - May
                   </div>
                 </div>
-              </button>
+              </a>
 
               {/* Connector */}
               <div className="h-0.5 w-8 sm:w-16 bg-slate-300"></div>
 
               {/* Q3 - Emerald */}
-              <button
-                onClick={() => document.getElementById('july-2026')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+              <a href="#july-2026"
+                
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
@@ -187,14 +159,14 @@ export function ClassSchedulePage() {
                     Jul - Aug
                   </div>
                 </div>
-              </button>
+              </a>
 
               {/* Connector */}
               <div className="h-0.5 w-8 sm:w-16 bg-slate-300"></div>
 
               {/* Q4 - Purple */}
-              <button
-                onClick={() => document.getElementById('october-2026')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+              <a href="#october-2026"
+                
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
@@ -206,7 +178,7 @@ export function ClassSchedulePage() {
                     Oct - Nov
                   </div>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -228,13 +200,9 @@ export function ClassSchedulePage() {
               const quarterInfo = getQuarterInfo(monthData.month);
 
               return (
-              <motion.div
+              <div
                 key={monthData.month}
                 id={monthId}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-50 to-white border-2 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 scroll-mt-32 ${
                   quarterInfo.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500' :
                   quarterInfo.color === 'emerald' ? 'border-emerald-500/30 hover:border-emerald-500' :
@@ -286,17 +254,13 @@ export function ClassSchedulePage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
               );
             })}
           </div>
 
           {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <div
             className="mt-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-12 text-center"
           >
             <h3 className="text-3xl sm:text-4xl font-light text-white mb-4">
@@ -332,7 +296,7 @@ export function ClassSchedulePage() {
                 Chat with us on WhatsApp
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

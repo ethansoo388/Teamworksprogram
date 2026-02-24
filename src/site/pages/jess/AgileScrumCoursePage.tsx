@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
@@ -129,11 +128,7 @@ export function AgileScrumCoursePage() {
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-end">
           <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 sm:pt-56 lg:pt-28 pb-10 lg:pb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-2xl text-center lg:text-left"
+            <div className="max-w-2xl text-center lg:text-left"
             >
               {/* Badge - Mobile centered, Desktop left */}
               <div className="lg:hidden flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/10 border border-white/20 backdrop-blur-sm mb-5 mt-3 w-fit mx-auto">
@@ -173,17 +168,16 @@ export function AgileScrumCoursePage() {
               </p>
               
               <div className="flex flex-col items-center lg:items-start">
-                <button 
-                  onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+                <a href="mailto:romanoff@ciagile.com"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
                 >
                   <span>Talk to Us About a Private Run</span>
-                </button>
+                </a>
                 <p className="text-xs lg:text-sm text-white/60 lg:text-slate-400">
                   No pricing or commitment — just a short discussion to assess fit.
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -191,11 +185,7 @@ export function AgileScrumCoursePage() {
       {/* Course Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-slate-900 leading-tight">
@@ -213,7 +203,7 @@ export function AgileScrumCoursePage() {
             <p className="text-lg text-slate-600 leading-relaxed">
               The focus is not on theory alone, but on applying Agile principles in day-to-day work to achieve real delivery results.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -232,26 +222,18 @@ export function AgileScrumCoursePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Content */}
             <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              <div
                 className="mb-12"
               >
                 <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
                   Who This Program Is Designed For
                 </h2>
-              </motion.div>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
                 {audienceList.map((audience, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex flex-col items-center text-center"
                   >
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-slate-300 flex items-center justify-center mb-3">
@@ -259,16 +241,12 @@ export function AgileScrumCoursePage() {
                     </div>
                     <h3 className="text-xs sm:text-sm font-medium text-slate-900 leading-tight mb-1">{audience.title}</h3>
                     <p className="text-xs text-slate-500 leading-tight">{audience.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
               
               {/* Mobile Image - Shows below content on mobile */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              <div
                 className="lg:hidden mt-12"
               >
                 <img 
@@ -276,7 +254,7 @@ export function AgileScrumCoursePage() {
                   alt="Professional learning agile and scrum"
                   className="w-full h-auto rounded-lg"
                 />
-              </motion.div>
+              </div>
             </div>
 
             {/* Right Side - Empty space for background image on desktop */}
@@ -288,25 +266,17 @@ export function AgileScrumCoursePage() {
       {/* Learning Outcomes */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
               Team & Delivery Outcomes
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Left Column - Solve Real Delivery Challenges */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
             >
               <div className="inline-block px-6 py-3 bg-slate-700 text-white rounded-full mb-8">
                 <span className="font-medium">Solve Real Delivery Challenges</span>
@@ -365,14 +335,10 @@ export function AgileScrumCoursePage() {
                   </li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column - Deliver with Scrum, Supported by AI */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
             >
               <div className="inline-block px-6 py-3 bg-slate-700 text-white rounded-full mb-8">
                 <span className="font-medium">Deliver with Scrum, Supported by AI</span>
@@ -401,7 +367,7 @@ export function AgileScrumCoursePage() {
                   className="w-full max-w-md"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -409,25 +375,17 @@ export function AgileScrumCoursePage() {
       {/* How We Deliver Results - Dark Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
               How We Deliver Results
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 - Accelerate Time-to-Market */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -440,14 +398,10 @@ export function AgileScrumCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Help teams reduce delivery delays and move work from idea to release more smoothly by applying Agile principles in real work scenarios.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 2 - Maximize Value */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -460,14 +414,10 @@ export function AgileScrumCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Enable teams to prioritize the right work, make trade-offs visible, and focus effort on outcomes that matter most to the business.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 3 - Customer-Centric Approach */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -480,14 +430,10 @@ export function AgileScrumCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Build a shared understanding of customer value so teams can align decisions, delivery, and priorities throughout the end-to-end workflow.
               </p>
-            </motion.div>
+            </div>
 
             {/* Card 4 - Vision Alignment */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
               className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-8 hover:bg-slate-800 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
@@ -500,7 +446,7 @@ export function AgileScrumCoursePage() {
               <p className="text-sm text-slate-300 leading-relaxed">
                 Help teams align around clear goals and direction, enabling more consistent execution even when experience levels differ.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -508,11 +454,7 @@ export function AgileScrumCoursePage() {
       {/* Course Modules */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
@@ -521,15 +463,11 @@ export function AgileScrumCoursePage() {
             <p className="text-lg text-slate-600">
               Modules are structured to build strong fundamentals first, then progress into practical application and delivery improvement.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-16">
             {/* Module 01 - Image Left, Content Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -575,14 +513,10 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 02 - Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="order-2 lg:order-1">
@@ -628,14 +562,10 @@ export function AgileScrumCoursePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 03 - Image Left, Content Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -681,14 +611,10 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Module 04 - Content Left, Image Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             >
               <div className="order-2 lg:order-1">
@@ -734,7 +660,7 @@ export function AgileScrumCoursePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -742,25 +668,17 @@ export function AgileScrumCoursePage() {
       {/* Course Options */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
               Delivery Options for Your Organization
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Standard Option */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <div
               className="bg-white rounded-lg border border-slate-200 p-10 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Invisible spacer to match AI-Driven badge height */}
@@ -778,12 +696,11 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
                 
-                <button 
-                  onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+                <a href="mailto:romanoff@ciagile.com"
                   className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
                 >
                   Discuss Standard Delivery
-                </button>
+                </a>
               </div>
 
               <div className="space-y-3">
@@ -847,14 +764,10 @@ export function AgileScrumCoursePage() {
               <p className="text-xs text-slate-500 mt-6 text-center">
                 Final structure, emphasis, and investment depend on team size and delivery context.
               </p>
-            </motion.div>
+            </div>
 
             {/* AI-Driven Option */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
               className="bg-white rounded-lg border-2 border-slate-300 p-10 shadow-lg relative"
             >
               {/* Best Value Badge */}
@@ -878,12 +791,11 @@ export function AgileScrumCoursePage() {
                   </div>
                 </div>
                 
-                <button 
-                  onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+                <a href="mailto:romanoff@ciagile.com"
                   className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
                 >
                   Discuss AI-Driven Delivery
-                </button>
+                </a>
               </div>
 
               <div className="space-y-3">
@@ -945,38 +857,29 @@ export function AgileScrumCoursePage() {
               <p className="text-xs text-slate-500 mt-6 text-center">
                 Final structure, emphasis, and investment depend on team size and delivery context.
               </p>
-            </motion.div>
+            </div>
           </div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="text-center mt-16"
           >
             <p className="text-sm text-slate-600 mb-4">
               Contact us to discuss the right delivery approach for your organization
             </p>
-            <button 
-              onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+            <a href="mailto:romanoff@ciagile.com"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
             >
               <span>Discuss Delivery Options</span>
-            </button>
-          </motion.div>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
               Ready to Explore This for Your Organization?
@@ -990,17 +893,16 @@ export function AgileScrumCoursePage() {
               This is a no-obligation conversation to assess fit and approach.
             </p>
             
-            <button 
-              onClick={() => window.location.href = "mailto:romanoff@ciagile.com"}
+            <a href="mailto:romanoff@ciagile.com"
               className="px-10 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-lg"
             >
               Schedule a Corporate Discussion
-            </button>
+            </a>
             
             <p className="text-xs text-slate-500 mt-6">
               Typically a 30-minute conversation with a senior facilitator.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
