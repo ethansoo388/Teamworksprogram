@@ -156,13 +156,19 @@ export function Course05Page() {
                 <div className="relative w-full max-w-lg">
                   <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#0EA7E9]/10 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-[#0EA7E9]/5 rounded-full blur-3xl"></div>
-                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5">
-                    <ImageWithFallback
-                      src="https://i.postimg.cc/Vsh77KpY/Untitled-design-(33).png"
-                      alt="Diverse team collaborating on AI skills training"
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 bg-gray-900">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/qEVSB4rNANI?autoplay=1&loop=1&playlist=qEVSB4rNANI&mute=1"
+                      title="AI Training Video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
                   </div>
+                  <p className="text-center text-gray-600 mt-4 text-sm">Explore your AI potential with us.</p>
+                  <p className="text-center text-gray-500 mt-2 text-xs max-w-md mx-auto">
+                    Ref: "9 AI Skills You MUST Have to Become Rich in 2026." YouTube, uploaded by Dan Martell 2024.
+                  </p>
                 </div>
               </div>
             </div>
@@ -357,19 +363,13 @@ export function Course05Page() {
             </div>
             <div className="grid lg:grid-cols-2 gap-8 mb-16 items-start">
               <div className="sticky top-8">
-                <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-[4/3] max-w-md mx-auto">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/qEVSB4rNANI?autoplay=1&loop=1&playlist=qEVSB4rNANI&mute=1"
-                    title="AI Training Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-md mx-auto ring-1 ring-gray-900/5">
+                  <ImageWithFallback
+                    src="https://i.postimg.cc/Vsh77KpY/Untitled-design-(33).png"
+                    alt="Diverse team collaborating on AI skills training"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-center text-gray-600 mt-4 text-sm">Explore your AI potential with us.</p>
-                <p className="text-center text-gray-500 mt-2 text-xs max-w-md mx-auto">
-                  Ref: "9 AI Skills You MUST Have to Become Rich in 2026." YouTube, uploaded by Dan Martell 2024.
-                </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {learningOutcomes.map((outcome, index) => {
