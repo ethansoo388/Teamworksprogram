@@ -12,7 +12,7 @@ export function InvestmentGrid({ investments }: InvestmentGridProps) {
 
   return (
     <div className="px-4 sm:px-6 lg:px-16 xl:px-32">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-20 max-w-7xl mx-auto items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-20 max-w-7xl mx-auto items-start" data-tw05-invest-grid>
         {investments.map((investment, index) => {
           const isOpen = openIndex === index;
           return (
@@ -35,6 +35,8 @@ export function InvestmentGrid({ investments }: InvestmentGridProps) {
                 <p className="text-sm text-gray-700 font-medium mb-4">{investment.focus}</p>
 
                 <button
+                  data-tw05-invest-btn
+                  data-index={index}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="flex items-center gap-2 text-sm text-[#0EA7E9] hover:text-[#0c87bb] transition-colors w-full"
                 >
@@ -42,7 +44,7 @@ export function InvestmentGrid({ investments }: InvestmentGridProps) {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                 </button>
 
-                <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-48 mt-4" : "max-h-0"}`}>
+                <div data-tw05-invest-desc data-index={index} className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-48 mt-4" : "max-h-0"}`}>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {investment.description}
                   </p>

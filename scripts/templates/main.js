@@ -497,6 +497,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // TeamWorks Course 05 - Investment grid "Learn more" accordion (static export)
+  const tw05InvestGrid = document.querySelector('[data-tw05-invest-grid]');
+  if (tw05InvestGrid) {
+    const btns = Array.from(tw05InvestGrid.querySelectorAll('[data-tw05-invest-btn]'));
+    const descs = Array.from(tw05InvestGrid.querySelectorAll('[data-tw05-invest-desc]'));
+    let openIndex = -1;
+
+    const setOpen = (idx) => {
+      const closing = idx === openIndex;
+      openIndex = closing ? -1 : idx;
+
+      btns.forEach((btn) => {
+        if (!(btn instanceof HTMLElement)) return;
+        const i = Number(btn.getAttribute('data-index') ?? '-1');
+        const isOpen = i === openIndex;
+        const icon = btn.querySelector('svg');
+        if (icon) icon.classList.toggle('rotate-180', isOpen);
+      });
+
+      descs.forEach((desc) => {
+        if (!(desc instanceof HTMLElement)) return;
+        const i = Number(desc.getAttribute('data-index') ?? '-1');
+        const isOpen = i === openIndex;
+
+        if (isOpen) {
+          desc.classList.remove('max-h-0');
+          desc.classList.add('max-h-48', 'mt-4');
+        } else {
+          desc.classList.add('max-h-0');
+          desc.classList.remove('max-h-48', 'mt-4');
+        }
+
+        // Update card shadow
+        const card = desc.closest('.border-2');
+        if (card) {
+          if (isOpen) {
+            card.classList.remove('shadow-sm', 'hover:shadow-md');
+            card.classList.add('shadow-xl');
+          } else {
+            card.classList.add('shadow-sm', 'hover:shadow-md');
+            card.classList.remove('shadow-xl');
+          }
+        }
+      });
+    };
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.getAttribute('data-index') ?? '0');
+        setOpen(idx);
+      });
+    });
+  }
+
   // TeamWorks Course 05 - FAQ accordion (only one open at a time, static export)
   const tw05Faq = document.querySelector('[data-tw05-faq]');
   if (tw05Faq) {
