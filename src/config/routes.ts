@@ -178,33 +178,6 @@ export const routes: RouteEntry[] = [
     siteType: "jess",
   },
   {
-    modulePath: "/src/site/pages/jess/CorporateEnrollmentPage.tsx",
-    componentName: "CorporateEnrollmentPage",
-    filename: "jess/corporate-enrollment.html",
-    title: "Corporate Enrollment - JESS",
-    description:
-      "Request corporate enrollment for your team in the JESS leadership training program.",
-    siteType: "jess",
-  },
-  {
-    modulePath: "/src/site/pages/jess/IndividualEnrollmentPage.tsx",
-    componentName: "IndividualEnrollmentPage",
-    filename: "jess/individual-enrollment.html",
-    title: "Individual Enrollment - JESS",
-    description:
-      "Individual enrollment options for the JESS leadership training courses.",
-    siteType: "jess",
-  },
-  {
-    modulePath: "/src/site/pages/jess/IndividualEnrollmentFormPage.tsx",
-    componentName: "IndividualEnrollmentFormPage",
-    filename: "jess/individual-enrollment-form.html",
-    title: "Enrollment Form - JESS",
-    description:
-      "Complete your individual enrollment for the JESS leadership training program.",
-    siteType: "jess",
-  },
-  {
     modulePath: "/src/site/pages/jess/TeamLevelTrainingPage.tsx",
     componentName: "TeamLevelTrainingPage",
     filename: "jess/team-level-training.html",

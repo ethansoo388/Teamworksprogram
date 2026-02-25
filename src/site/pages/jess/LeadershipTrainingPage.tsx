@@ -148,14 +148,6 @@ export function LeadershipTrainingPage() {
               Class Schedule
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-
-            <a
-              href="individual-enrollment.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
-            >
-              Enrollment
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
           </nav>
         </div>
       </div>
@@ -1099,14 +1091,6 @@ export function LeadershipTrainingPage() {
                       </li>
                     </ul>
                   </div>
-                  
-                  <a
-                    href="individual-enrollment.html"
-                    className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-[1.02] group"
-                  >
-                    <span>Register as Individual Participant</span>
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
                 </div>
               </div>
             </div>

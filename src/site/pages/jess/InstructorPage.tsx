@@ -65,14 +65,6 @@ export function InstructorPage() {
               Class Schedule
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-
-            <a
-              href="individual-enrollment.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
-            >
-              Enrollment
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
           </nav>
         </div>
       </div>
