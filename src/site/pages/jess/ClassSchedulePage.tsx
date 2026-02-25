@@ -273,17 +273,17 @@ export function ClassSchedulePage() {
             {/* Primary and Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
-                href="/contactus.html?source=jess-class-schedule&cta=request-corporate-proposal#contact-form"
+                href="corporate-enrollment.html"
                 className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-medium text-lg hover:bg-amber-400 transition-colors duration-300 w-full sm:w-auto justify-center"
               >
-                Request Corporate Proposal
+                Request Corporate Enrollment
               </a>
 
               <a
-                href="/jess/individual-enrollment.html?source=jess-class-schedule&cta=view-enrollment-options"
+                href="individual-enrollment.html"
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-slate-400 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-slate-700 hover:border-slate-300 transition-colors duration-300 w-full sm:w-auto justify-center"
               >
-                View Enrollment Options
+                Secure Your Seat
               </a>
             </div>
 
