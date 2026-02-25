@@ -177,20 +177,31 @@ function showFormError_(errorEl, messages) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Validate required radio buttons
-      const contactMethod = contactForm.querySelector('input[name="contactMethod"]:checked');
+      // Get elements FIRST (before any validation that references them)
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const successMessage = document.getElementById('contact-success-message');
+      const errorMessage = document.getElementById('contact-error-message');
+      const originalButtonText = submitButton.innerHTML;
+
       // Get form data
       const formData = new FormData(contactForm);
 
       // Build data object
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
+      const contactNumber = formData.get('contactNumber') || '';
+      const contactMethodValue = formData.get('contactMethod') || '';
+      const organizationRole = formData.get('organizationRole') || '';
+      const challenge = formData.get('challenge') || '';
+      const message = formData.get('message') || '';
+      const interests = formData.getAll('interests').join(', ') || '';
+      const pageUrl = window.location.href;
+      const referrer = document.referrer || 'Direct';
+      const timestamp = new Date().toISOString();
+
       // -------------------------------
       // Required field validation
       // -------------------------------
-      const contactNumber = formData.get('contactNumber') || '';
-      const contactMethodValue = formData.get('contactMethod') || '';
-
       const fullNameEl = contactForm.querySelector('[name="fullName"]');
       const workEmailEl = contactForm.querySelector('[name="workEmail"]');
       const contactNumberEl = contactForm.querySelector('[name="contactNumber"]');
@@ -216,15 +227,13 @@ function showFormError_(errorEl, messages) {
 
       if (errors.length) {
         showFormError_(errorMessage, errors);
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.innerHTML = originalButtonText;
-        }
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
         return;
       }
 
       const statusMessage = ensureStatusEl_(contactForm);
-      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+      statusMessage.textContent = 'Submitting. May take 10 seconds.';
 
       // Clear highlight when editing
       [fullNameEl, workEmailEl, contactNumberEl].forEach((el) => {
@@ -234,27 +243,6 @@ function showFormError_(errorEl, messages) {
       contactMethodEls.forEach((el) => {
         el.addEventListener('change', () => setFieldError_(el, false), { once: true });
       });
-
-      const contactMethodValue = formData.get('contactMethod') || '';
-      const organizationRole = formData.get('organizationRole') || '';
-      const challenge = formData.get('challenge') || '';
-      const message = formData.get('message') || '';
-
-      // Handle multiple interests checkboxes - collect all checked values
-      const interests = formData.getAll('interests').join(', ') || '';
-
-      // Add tracking fields
-      const pageUrl = window.location.href;
-      const referrer = document.referrer || 'Direct';
-      const timestamp = new Date().toISOString();
-
-      // Get elements
-      const submitButton = contactForm.querySelector('button[type="submit"]');
-      const successMessage = document.getElementById('contact-success-message');
-      const errorMessage = document.getElementById('contact-error-message');
-
-      // Store original button text
-      const originalButtonText = submitButton.innerHTML;
 
       try {
         // Disable submit button and show loading state
@@ -297,7 +285,8 @@ function showFormError_(errorEl, messages) {
         if (result && result.status && result.status !== 'success') {
           throw new Error(result.message || 'Form submission failed');
         }
-// Reset form
+
+        // Reset form
         contactForm.reset();
 
         // Redirect to Thank You page immediately
@@ -309,7 +298,7 @@ function showFormError_(errorEl, messages) {
 
         // Show error message (do NOT hide the form)
         errorMessage.classList.remove('hidden');
-        successMessage.classList.add('hidden');
+        if (successMessage) successMessage.classList.add('hidden');
 
         // Restore button
         submitButton.disabled = false;
@@ -327,17 +316,30 @@ function showFormError_(errorEl, messages) {
     aboutUsForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      // Get elements FIRST (before any validation that references them)
+      const submitButton = aboutUsForm.querySelector('button[type="submit"]');
+      const errorMessage = document.getElementById('aboutus-error-message');
+      const originalButtonText = submitButton.innerHTML;
+
       // Get form data
       const formData = new FormData(aboutUsForm);
 
-      // Validate required fields
+      // Build data object
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
+      const organizationRole = formData.get('organizationRole') || '';
+      const challenge = formData.get('challenge') || '';
+      const message = formData.get('message') || '';
+      const interests = formData.getAll('interests').join(', ') || '';
+      const pageUrl = window.location.href;
+      const referrer = document.referrer || 'Direct';
+      const timestamp = new Date().toISOString();
+
       // -------------------------------
       // Required field validation
       // -------------------------------
-      const fullNameEl = aboutForm.querySelector('[name="fullName"]');
-      const workEmailEl = aboutForm.querySelector('[name="workEmail"]');
+      const fullNameEl = aboutUsForm.querySelector('[name="fullName"]');
+      const workEmailEl = aboutUsForm.querySelector('[name="workEmail"]');
 
       setFieldError_(fullNameEl, false);
       setFieldError_(workEmailEl, false);
@@ -352,46 +354,19 @@ function showFormError_(errorEl, messages) {
 
       if (errors.length) {
         showFormError_(errorMessage, errors);
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.innerHTML = originalButtonText;
-        }
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
         return;
       }
 
-      const statusMessage = ensureStatusEl_(aboutForm);
-      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+      const statusMessage = ensureStatusEl_(aboutUsForm);
+      statusMessage.textContent = 'Submitting. May take 10 seconds.';
 
+      // Clear highlight when editing
       [fullNameEl, workEmailEl].forEach((el) => {
         if (!el) return;
         el.addEventListener('input', () => setFieldError_(el, false), { once: true });
       });
-
-
-      if (!fullName.trim() || !workEmail.trim()) {
-        alert('Please fill in all required fields (Name and Work Email)');
-        return;
-      }
-
-      // Build data object
-      const organizationRole = formData.get('organizationRole') || '';
-      const challenge = formData.get('challenge') || '';
-      const message = formData.get('message') || '';
-
-      // Handle multiple interests checkboxes - collect all checked values
-      const interests = formData.getAll('interests').join(', ') || '';
-
-      // Add tracking fields
-      const pageUrl = window.location.href;
-      const referrer = document.referrer || 'Direct';
-      const timestamp = new Date().toISOString();
-
-      // Get elements
-      const submitButton = aboutUsForm.querySelector('button[type="submit"]');
-      const errorMessage = document.getElementById('aboutus-error-message');
-
-      // Store original button text
-      const originalButtonText = submitButton.innerHTML;
 
       try {
         // Disable submit button and show loading state
@@ -432,7 +407,8 @@ function showFormError_(errorEl, messages) {
         if (result && result.status && result.status !== 'success') {
           throw new Error(result.message || 'Form submission failed');
         }
-// Reset form
+
+        // Reset form
         aboutUsForm.reset();
 
         // Redirect to Thank You page immediately
