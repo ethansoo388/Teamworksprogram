@@ -276,14 +276,7 @@ export function ClassSchedulePage() {
                 href="/contactus.html?source=jess-class-schedule&cta=request-corporate-proposal#contact-form"
                 className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-medium text-lg hover:bg-amber-400 transition-colors duration-300 w-full sm:w-auto justify-center"
               >
-                Request Corporate Proposal
-              </a>
-
-              <a
-                href="/jess/individual-enrollment.html?source=jess-class-schedule&cta=view-enrollment-options"
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-slate-400 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-slate-700 hover:border-slate-300 transition-colors duration-300 w-full sm:w-auto justify-center"
-              >
-                View Enrollment Options
+                Talk to a Program Advisor
               </a>
             </div>
 
