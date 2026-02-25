@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA Series team-level training — Agile & Scrum and Design Thinking courses for delivery teams.">
+    <title>Team Level Training - JESS NOVA Series</title>
+    <!-- Tailwind CSS CDN -->
+    <script>
+      // Extend Tailwind CDN config so Jess shadcn-style classes work
+      // (bg-background, text-foreground, border-border, etc.)
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+      theme: {
+      extend: {
+      colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+      },
+      borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'calc(var(--radius) - 2px)',
+      lg: 'var(--radius)',
+      xl: 'calc(var(--radius) + 4px)',
+      },
+      },
+      },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body class="antialiased site-jess dark">
+    <div class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
+      <nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
+        <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
+          <div class="flex items-center h-[24px]">
+            <a href="/index.html" class="no-underline flex items-center h-full">
+              <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="../assets/img/main/ciagile-main-logo.webp"/>
+            </a>
+          </div>
+          <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16">
+              </path>
+              <path d="M4 12h16">
+              </path>
+              <path d="M4 18h16">
+              </path>
+            </svg>
+          </button>
+          <div class="hidden md:flex gap-6 md:gap-8 items-center">
+            <div class="relative flex items-center" data-dropdown-container="programs">
+              <button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
+                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span>
+                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
+                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
+                  </path>
+                </svg>
+              </button>
+              <div data-dropdown="programs" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 hidden">
+                <a href="/teamworks/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
+                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
+                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Improve team execution, speed, and clarity</div>
+                </a>
+                <a href="/jess/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
+                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
+                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div>
+                </a>
+              </div>
+            </div>
+            <div class="relative flex items-center" data-dropdown-container="about">
+              <button data-dropdown-trigger="about" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
+                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">About</span>
+                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
+                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
+                  </path>
+                </svg>
+              </button>
+              <div data-dropdown="about" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 hidden">
+                <a href="/aboutus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">About Us</a>
+                <a href="/contactus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">Contact Us</a>
+              </div>
+            </div>
+            <a href="/contactus.html" class="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0">
+              <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+            </a>
+          </div>
+        </div>
+        <div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+          <div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true">
+          </div>
+          <div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
+              <div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
+              <a href="/teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a>
+              <a href="/jess/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a>
+              <div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div>
+              <a href="/aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a>
+              <a href="/contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a>
+              <a href="/contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true">
+                <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <a href="/jess/index.html" class="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors mb-16 group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left group-hover:-translate-x-1 transition-transform">
+              <path d="m12 19-7-7 7-7">
+              </path>
+              <path d="M19 12H5">
+              </path>
+            </svg>
+            <span class="text-sm font-medium">Back to Main Page</span>
+          </a>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[600px] lg:min-h-[700px] mb-32">
+            <div class="flex flex-col justify-center">
+              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-slate-900 leading-tight">High Performance.<br/>Real Value.</h1>
+              <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">The NOVA Series equips teams with practical skills, delivery rhythm, and the right mindset to perform at a higher level — through two focused, hands-on courses.</p>
+              <p class="text-lg text-slate-500 mb-12 font-medium">Choose the course that fits your team&#x27;s most urgent challenge today.</p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#courses" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer text-lg">
+                  <span>Explore the NOVA Courses</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                    <path d="M5 12h14">
+                    </path>
+                    <path d="m12 5 7 7-7 7">
+                    </path>
+                  </svg>
+                </a>
+                <a href="/contactus.html?source=jess-strengthen-teams&amp;cta=talk-to-expert#contact-form" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-lg">
+                  <span>Talk to an Expert</span>
+                </a>
+              </div>
+            </div>
+            <div class="relative h-full min-h-[500px] lg:min-h-[700px]">
+              <div class="absolute inset-0 rounded-2xl overflow-hidden bg-slate-100 shadow-2xl">
+                <img src="https://i.postimg.cc/Jtwx459D/HERO-IMAGE-NOVA.png" alt="Team collaborating and working together" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-lg text-slate-600 mb-6">What teams experience across the NOVA Series</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center">
+            <div>
+              <div class="text-4xl font-bold text-slate-900 mb-2">2 Days</div>
+              <p class="text-sm text-slate-600">Intensive coaching to transform your team</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-slate-900 mb-2">100% Hands-On</div>
+              <p class="text-sm text-slate-600">Trusted by teams across multiple industries</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-slate-900 mb-2">3X</div>
+              <p class="text-sm text-slate-600">Average productivity improvement</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-12 mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">What is the NOVA Series?</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-4">The NOVA Series is a structured set of hands-on courses designed to help teams collaborate better, solve real problems, and deliver results with confidence.</p>
+            <p class="text-lg text-slate-600 leading-relaxed">Instead of one-size-fits-all training, the NOVA Series offers <span class="font-semibold text-slate-900">two focused courses</span>, allowing organisations to start where they need the most impact — execution or problem-solving.</p>
+          </div>
+          <p class="text-center text-lg text-slate-600 mb-8">Every course in the NOVA Series follows the same proven approach — focused, practical, and outcome-driven.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-slate-50 rounded-xl p-10">
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Our Training Approach</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Expert-led coaching with 10+ years experience</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Hands-on practice with real-world scenarios</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Interactive workshops and team simulations</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Industry-recognized certifications</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-10">
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Business Outcomes</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Improved team collaboration and communication</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Faster time-to-market for products</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Higher quality deliverables and reduced defects</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-slate-900 mt-0.5 flex-shrink-0">
+                    <path d="M20 6 9 17l-5-5">
+                    </path>
+                  </svg>
+                  <span class="text-slate-700">Increased employee engagement and retention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="courses" class="py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Choose Your NOVA Course</h2>
+            <p class="text-lg text-slate-600 max-w-2xl">Each course in the NOVA Series targets a different team challenge. Start with the one that matters most to your team today.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <a href="nova/agile-scrum.html" class="group block bg-white border border-slate-200 rounded-lg p-10 hover:bg-blue-50 hover: transition-all duration-300 h-full flex flex-col">
+                <div class="mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-slate-900">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                    </path>
+                    <circle cx="9" cy="7" r="4">
+                    </circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                    </path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                    </path>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">NOVA: Agile &amp; Scrum for Delivery Teams</h3>
+                <p class="text-base text-slate-600 leading-relaxed mb-8 flex-grow">For teams who need better execution, clearer roles, and more predictable delivery.
+                  
+                  This course focuses on improving how teams plan, collaborate, and deliver work — without adding unnecessary process.</p>
+                  <div class="inline-flex items-center gap-2 text-slate-900 group-hover:text-blue-600 font-medium self-start group-hover:gap-3 transition-all duration-300">
+                    <span>Learn more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right transition-transform duration-300 group-hover:translate-x-1">
+                      <path d="M5 12h14">
+                      </path>
+                      <path d="m12 5 7 7-7 7">
+                      </path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="nova/design-thinking.html" class="group block bg-white border border-slate-200 rounded-lg p-10 hover:bg-blue-50 hover: transition-all duration-300 h-full flex flex-col">
+                  <div class="mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb text-slate-900">
+                      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5">
+                      </path>
+                      <path d="M9 18h6">
+                      </path>
+                      <path d="M10 22h4">
+                      </path>
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-slate-900 mb-3">NOVA: Design Thinking for Real-World Problem Solving</h3>
+                  <p class="text-base text-slate-600 leading-relaxed mb-8 flex-grow">For teams facing messy, people-centric problems and unclear requirements.
+                    
+                    This course builds practical problem-solving skills to help teams understand users, define the right problems, and test better solutions.</p>
+                    <div class="inline-flex items-center gap-2 text-slate-900 group-hover:text-blue-600 font-medium self-start group-hover:gap-3 transition-all duration-300">
+                      <span>Learn more</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right transition-transform duration-300 group-hover:translate-x-1">
+                        <path d="M5 12h14">
+                        </path>
+                        <path d="m12 5 7 7-7 7">
+                        </path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Private Team Training</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-4">The NOVA Series is delivered exclusively as private training for organisations.</p>
+                <p class="text-lg text-slate-600 leading-relaxed">Each course is tailored to your team&#x27;s context, challenges, and business goals. Delivery format, schedule, and investment are aligned based on your needs and scope.</p>
+              </div>
+            </div>
+          </section>
+          <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+              <div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-12">Start with the NOVA course that fits your team</h2>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="#courses" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300">
+                    <span>Explore the NOVA Courses</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                      <path d="M5 12h14">
+                      </path>
+                      <path d="m12 5 7 7-7 7">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="/contactus.html?source=jess-strengthen-teams&amp;cta=talk-to-expert#contact-form" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300">
+                    <span>Talk to an Expert</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="bg-[#0f1419] text-white">
+            <div class="max-w-7xl mx-auto px-8 lg:px-16">
+              <div class="py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-12 border-b border-gray-800">
+                <div class="lg:col-span-4">
+                  <div class="mb-6">
+                    <img src="../assets/img/main/ci-agile-logo-white.png" alt="CI Agile" class="h-7 w-auto brightness-0 invert"/>
+                  </div>
+                  <p class="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+                  <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="LinkedIn">
+                      <i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                      </i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="YouTube">
+                      <i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                      </i>
+                    </a>
+                    <a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="Facebook">
+                      <i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+                <div class="lg:col-span-2">
+                  <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Programs</h3>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="/teamworks/index.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">For SMEs</a>
+                    </li>
+                    <li>
+                      <a href="/jess/index.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">For Enterprises</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lg:col-span-2">
+                  <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Resources</h3>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Case Studies</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Blogs</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lg:col-span-2">
+                  <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">About</h3>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="/aboutus.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">About Us</a>
+                    </li>
+                    <li>
+                      <a href="/contactus.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lg:col-span-2">
+                  <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Contact</h3>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="mailto:romanoff@ciagile.com" class="text-gray-400 hover:text-white transition-colors text-sm font-light block">romanoff@ciagile.com</a>
+                    </li>
+                    <li>
+                      <a href="tel:+60192981055" class="text-gray-400 hover:text-white transition-colors text-sm font-light block">+60 19 298 1055</a>
+                    </li>
+                  </ul>
+                  <h3 class="text-xs text-gray-500 mb-5 mt-8 uppercase tracking-widest font-normal">Our Location</h3>
+                  <ul class="space-y-3">
+                    <li>
+                      <span class="text-gray-400 text-sm font-light">Malaysia</span>
+                    </li>
+                    <li>
+                      <span class="text-gray-400 text-sm font-light">Singapore</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs font-light">© 2025 CI Agile. All rights reserved.</p>
+                <div class="flex gap-8 text-xs">
+                  <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
+                  <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Service</a>
+                  <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <!-- Scripts -->
+        <script src="../js/main.js">
+        </script>
+      </body>
+    </html>
+    

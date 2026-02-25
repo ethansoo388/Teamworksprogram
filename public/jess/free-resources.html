@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free learning resources for agile leaders — guides, workshops, and community forums.">
+    <title>Free Resources - JESS</title>
+    <!-- Tailwind CSS CDN -->
+    <script>
+      // Extend Tailwind CDN config so Jess shadcn-style classes work
+      // (bg-background, text-foreground, border-border, etc.)
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+      theme: {
+      extend: {
+      colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+      },
+      borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'calc(var(--radius) - 2px)',
+      lg: 'var(--radius)',
+      xl: 'calc(var(--radius) + 4px)',
+      },
+      },
+      },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body class="antialiased site-jess dark">
+    <div class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
+        <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
+          <div class="flex items-center h-[24px]">
+            <a href="/index.html" class="no-underline flex items-center h-full">
+              <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="../assets/img/main/ciagile-main-logo.webp"/>
+            </a>
+          </div>
+          <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16">
+              </path>
+              <path d="M4 12h16">
+              </path>
+              <path d="M4 18h16">
+              </path>
+            </svg>
+          </button>
+          <div class="hidden md:flex gap-6 md:gap-8 items-center">
+            <div class="relative flex items-center" data-dropdown-container="programs">
+              <button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
+                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span>
+                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
+                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
+                  </path>
+                </svg>
+              </button>
+              <div data-dropdown="programs" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 hidden">
+                <a href="/teamworks/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
+                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
+                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Improve team execution, speed, and clarity</div>
+                </a>
+                <a href="/jess/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
+                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
+                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div>
+                </a>
+              </div>
+            </div>
+            <div class="relative flex items-center" data-dropdown-container="about">
+              <button data-dropdown-trigger="about" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
+                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">About</span>
+                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
+                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
+                  </path>
+                </svg>
+              </button>
+              <div data-dropdown="about" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 hidden">
+                <a href="/aboutus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">About Us</a>
+                <a href="/contactus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">Contact Us</a>
+              </div>
+            </div>
+            <a href="/contactus.html" class="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0">
+              <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+            </a>
+          </div>
+        </div>
+        <div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+          <div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true">
+          </div>
+          <div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
+              <div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
+              <a href="/teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a>
+              <a href="/jess/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a>
+              <div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div>
+              <a href="/aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a>
+              <a href="/contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a>
+              <a href="/contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true">
+                <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="text-left">
+            <a href="/jess/index.html" class="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-400 transition-colors mb-4 group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left group-hover:-translate-x-1 transition-transform">
+                <path d="m12 19-7-7 7-7">
+                </path>
+                <path d="M19 12H5">
+                </path>
+              </svg>Back to JESS Home Page</a>
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6 w-fit mx-auto text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book text-amber-400">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20">
+                  </path>
+                </svg>
+                <span class="text-sm font-medium text-amber-400">Executive Reference Library</span>
+              </div>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white text-center">FREE Learnings for All</h1>
+              <p class="text-xl text-slate-300 leading-relaxed mb-8">Executive-ready insights to help you decide, align, and act — before transformation gets expensive.</p>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100">
+          <div class="max-w-7xl mx-auto">
+            <div>
+              <div class="mb-12 text-left">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-slate-900 max-w-2xl">Getting Started Resources</h2>
+              </div>
+              <div class="relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <a href="https://education.ciagile.com/course/agilein30m" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap text-white/20">
+                        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                        </path>
+                        <path d="M22 10v6">
+                        </path>
+                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5">
+                        </path>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap text-white">
+                            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                            </path>
+                            <path d="M22 10v6">
+                            </path>
+                            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5">
+                            </path>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Quick Learn</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Learn Agile &amp; AI in 10 minutes</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">A fast, no-fluff overview of what Agile and AI actually change in organizations.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <button class="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://education.ciagile.com/course/going-agile" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target text-white/20">
+                        <circle cx="12" cy="12" r="10">
+                        </circle>
+                        <circle cx="12" cy="12" r="6">
+                        </circle>
+                        <circle cx="12" cy="12" r="2">
+                        </circle>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target text-white">
+                            <circle cx="12" cy="12" r="10">
+                            </circle>
+                            <circle cx="12" cy="12" r="6">
+                            </circle>
+                            <circle cx="12" cy="12" r="2">
+                            </circle>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Decision Guide</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Getting Agile: Yes, No, or Not Yet</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">A decision guide to help leaders avoid premature Agile transformations.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <button class="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://education.ciagile.com/course/startagileteam" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket text-white/20">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                        </path>
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                        </path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0">
+                        </path>
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5">
+                        </path>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket text-white">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                            </path>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                            </path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0">
+                            </path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5">
+                            </path>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Quick Start</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Start Your Agile Team in 150 minutes</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">A practical starting point to align teams early and reduce execution chaos.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <button class="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://scrumguides.org/download.html" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download text-white/20">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
+                        </path>
+                        <polyline points="7 10 12 15 17 10">
+                        </polyline>
+                        <line x1="12" x2="12" y1="15" y2="3">
+                        </line>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download text-white">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
+                            </path>
+                            <polyline points="7 10 12 15 17 10">
+                            </polyline>
+                            <line x1="12" x2="12" y1="15" y2="3">
+                            </line>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Official Guide</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Scrum Guide</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">The official rules of Scrum — so leadership decisions reinforce the system.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <button class="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">Download</button>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="group bg-white rounded-2xl overflow-hidden opacity-60 cursor-not-allowed">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-white/20">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
+                        </path>
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4">
+                        </path>
+                        <path d="M10 9H8">
+                        </path>
+                        <path d="M16 13H8">
+                        </path>
+                        <path d="M16 17H8">
+                        </path>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-white">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
+                            </path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4">
+                            </path>
+                            <path d="M10 9H8">
+                            </path>
+                            <path d="M16 13H8">
+                            </path>
+                            <path d="M16 17H8">
+                            </path>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Reading List</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Essential Reading List</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">Curated books and articles that form the foundation of high-performance agile practices.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <div class="w-full py-3 text-slate-500 font-medium text-sm text-center rounded-lg border border-slate-200 bg-slate-50">Launching soon</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group bg-white rounded-2xl overflow-hidden opacity-60 cursor-not-allowed">
+                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video text-white/20">
+                        <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5">
+                        </path>
+                        <rect x="2" y="6" width="14" height="12" rx="2">
+                        </rect>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video text-white">
+                            <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5">
+                            </path>
+                            <rect x="2" y="6" width="14" height="12" rx="2">
+                            </rect>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Workshops</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Public Workshops</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">Join our free webinars and workshops to learn from experts and connect with the community.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <div class="w-full py-3 text-slate-500 font-medium text-sm text-center rounded-lg border border-slate-200 bg-slate-50">Launching soon</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-white/20">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                        </path>
+                        <circle cx="9" cy="7" r="4">
+                        </circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                        </path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                        </path>
+                      </svg>
+                      <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-white">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                            </path>
+                            <circle cx="9" cy="7" r="4">
+                            </circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                            </path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                            </path>
+                          </svg>
+                        </div>
+                        <span class="text-slate-900 font-medium text-sm">Community</span>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-10">
+                      <h3 class="text-xl font-semibold text-slate-900 mb-3">Community Forums</h3>
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">Join our LinkedIn community to follow real practitioner discussions and insights.</p>
+                      <div class="mt-6 pt-4 border-t border-slate-100">
+                        <button class="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">Join Now</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="relative py-24 sm:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="text-center" data-reveal="true">
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">Ready to Make Enterprise Agility a Confident Leadership Decision?</h2>
+              <p class="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">Engage in a structured, executive-level conversation about your current operating model, risks, and path to measurable outcomes.</p>
+              <div class="flex flex-col items-center justify-center gap-4 mb-3">
+                <a href="/contactus.html?source=jess-home&amp;cta=schedule-executive-briefing#contact-form" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-10 rounded-md has-[&gt;svg]:px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group inline-flex items-center" data-slot="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar mr-2">
+                    <path d="M8 2v4">
+                    </path>
+                    <path d="M16 2v4">
+                    </path>
+                    <rect width="18" height="18" x="3" y="4" rx="2">
+                    </rect>
+                    <path d="M3 10h18">
+                    </path>
+                  </svg>Schedule an Executive Briefing<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 group-hover:translate-x-1 transition-transform">
+                  <path d="M5 12h14">
+                  </path>
+                  <path d="m12 5 7 7-7 7">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <p class="text-slate-500 text-sm italic mb-12">No obligation. No framework rollout. Just clarity for senior decision-makers.</p>
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700" data-reveal="true" data-delay="120">
+              <h3 class="text-xl font-bold text-white mb-4">What Happens Next</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left" data-reveal-group="true" data-stagger="90">
+                <div data-reveal-item="true">
+                  <div class="text-3xl font-bold text-blue-400 mb-2">1</div>
+                  <h4 class="font-semibold text-white mb-2">Executive Discovery Session</h4>
+                  <p class="text-sm text-slate-400">A focused discussion on your current operating model, constraints, and transformation risks.</p>
+                </div>
+                <div data-reveal-item="true">
+                  <div class="text-3xl font-bold text-blue-400 mb-2">2</div>
+                  <h4 class="font-semibold text-white mb-2">Executive Recommendation</h4>
+                  <p class="text-sm text-slate-400">A clear, tailored recommendation aligned to your structure, priorities, and risk profile.</p>
+                </div>
+                <div data-reveal-item="true">
+                  <div class="text-3xl font-bold text-blue-400 mb-2">3</div>
+                  <h4 class="font-semibold text-white mb-2">Structured Engagement Kickoff</h4>
+                  <p class="text-sm text-slate-400">Proceed only if there is a strong, defensible case to move forward.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-[#0f1419] text-white">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16">
+          <div class="py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-12 border-b border-gray-800">
+            <div class="lg:col-span-4">
+              <div class="mb-6">
+                <img src="../assets/img/main/ci-agile-logo-white.png" alt="CI Agile" class="h-7 w-auto brightness-0 invert"/>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+              <div class="flex gap-4">
+                <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="LinkedIn">
+                  <i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                  </i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="YouTube">
+                  <i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                  </i>
+                </a>
+                <a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all" aria-label="Facebook">
+                  <i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+                  </i>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-2">
+              <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Programs</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/teamworks/index.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">For SMEs</a>
+                </li>
+                <li>
+                  <a href="/jess/index.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">For Enterprises</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:col-span-2">
+              <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Resources</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Case Studies</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Blogs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:col-span-2">
+              <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">About</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/aboutus.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">About Us</a>
+                </li>
+                <li>
+                  <a href="/contactus.html" class="text-gray-400 hover:text-white transition-colors text-sm font-light">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:col-span-2">
+              <h3 class="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Contact</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="mailto:romanoff@ciagile.com" class="text-gray-400 hover:text-white transition-colors text-sm font-light block">romanoff@ciagile.com</a>
+                </li>
+                <li>
+                  <a href="tel:+60192981055" class="text-gray-400 hover:text-white transition-colors text-sm font-light block">+60 19 298 1055</a>
+                </li>
+              </ul>
+              <h3 class="text-xs text-gray-500 mb-5 mt-8 uppercase tracking-widest font-normal">Our Location</h3>
+              <ul class="space-y-3">
+                <li>
+                  <span class="text-gray-400 text-sm font-light">Malaysia</span>
+                </li>
+                <li>
+                  <span class="text-gray-400 text-sm font-light">Singapore</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs font-light">© 2025 CI Agile. All rights reserved.</p>
+            <div class="flex gap-8 text-xs">
+              <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
+              <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Service</a>
+              <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="../js/main.js">
+    </script>
+  </body>
+</html>
+
