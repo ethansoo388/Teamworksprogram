@@ -1,3 +1,49 @@
+
+// ===============================
+// Client-side validation helpers
+// ===============================
+function setFieldError_(fieldEl, hasError) {
+  if (!fieldEl) return;
+  const cls = ['border-red-500', 'ring-1', 'ring-red-500'];
+  if (hasError) {
+    cls.forEach(c => fieldEl.classList.add(c));
+  } else {
+    cls.forEach(c => fieldEl.classList.remove(c));
+  }
+}
+
+function validateName_(value) {
+  const v = (value || '').trim();
+  if (!v) return { ok: false, msg: 'Full Name is required.' };
+  // letters + spaces + apostrophe + hyphen only (no numbers / symbols)
+  const re = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
+  if (!re.test(v)) return { ok: false, msg: 'Full Name must contain letters only (no numbers or special characters).' };
+  return { ok: true };
+}
+
+function validateEmail_(value) {
+  const v = (value || '').trim();
+  if (!v) return { ok: false, msg: 'Work Email is required.' };
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!re.test(v)) return { ok: false, msg: 'Please enter a valid email address.' };
+  return { ok: true };
+}
+
+function validateNumber_(value) {
+  const v = (value || '').trim();
+  if (!v) return { ok: false, msg: 'Contact Number is required.' };
+  const re = /^\d+$/;
+  if (!re.test(v)) return { ok: false, msg: 'Contact Number must be numeric.' };
+  return { ok: true };
+}
+
+function showFormError_(errorEl, messages) {
+  if (!errorEl) return;
+  const list = Array.isArray(messages) ? messages : [messages];
+  errorEl.textContent = list.filter(Boolean).join(' ');
+  errorEl.classList.remove('hidden');
+}
+
 // Form handling for TeamWorks consultation and main site Contact Us forms
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -304,6 +350,40 @@ try {
       // Validate required fields
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
+
+      // -------------------------------
+      // Required field validation
+      // -------------------------------
+      const nameCheck = validateName_(fullName);
+      const emailCheck = validateEmail_(workEmail);
+
+      const fullNameEl = aboutForm.querySelector('[name="fullName"]') || aboutForm.querySelector('[name="name"]');
+      const workEmailEl = aboutForm.querySelector('[name="workEmail"]');
+
+      setFieldError_(fullNameEl, false);
+      setFieldError_(workEmailEl, false);
+      if (errorMessage) errorMessage.classList.add('hidden');
+
+      const errors = [];
+      if (!nameCheck.ok) { errors.push(nameCheck.msg.replace('Full Name', 'Name')); setFieldError_(fullNameEl, true); }
+      if (!emailCheck.ok) { errors.push(emailCheck.msg); setFieldError_(workEmailEl, true); }
+
+      if (statusMessage) statusMessage.textContent = '';
+
+      if (errors.length) {
+        showFormError_(errorMessage, errors);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+        return;
+      }
+
+      [fullNameEl, workEmailEl].forEach((el) => {
+        if (!el) return;
+        el.addEventListener('input', () => setFieldError_(el, false), { once: true });
+      });
+
 
       if (!fullName.trim() || !workEmail.trim()) {
         alert('Please fill in all required fields (Name and Work Email)');
