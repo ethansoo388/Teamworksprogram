@@ -5,19 +5,15 @@
 function setFieldError_(fieldEl, hasError) {
   if (!fieldEl) return;
   const cls = ['border-red-500', 'ring-1', 'ring-red-500'];
-  if (hasError) {
-    cls.forEach(c => fieldEl.classList.add(c));
-  } else {
-    cls.forEach(c => fieldEl.classList.remove(c));
-  }
+  if (hasError) cls.forEach(c => fieldEl.classList.add(c));
+  else cls.forEach(c => fieldEl.classList.remove(c));
 }
 
-function validateName_(value) {
+function validateName_(value, label) {
   const v = (value || '').trim();
-  if (!v) return { ok: false, msg: 'Full Name is required.' };
-  // letters + spaces + apostrophe + hyphen only (no numbers / symbols)
+  if (!v) return { ok: false, msg: (label || 'Name') + ' is required.' };
   const re = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
-  if (!re.test(v)) return { ok: false, msg: 'Full Name must contain letters only (no numbers or special characters).' };
+  if (!re.test(v)) return { ok: false, msg: (label || 'Name') + ' must contain letters only (no numbers or special characters).' };
   return { ok: true };
 }
 
@@ -35,6 +31,16 @@ function validateNumber_(value) {
   const re = /^\d+$/;
   if (!re.test(v)) return { ok: false, msg: 'Contact Number must be numeric.' };
   return { ok: true };
+}
+
+function ensureStatusEl_(form) {
+  let el = form.querySelector('.form-status-message');
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'form-status-message mt-4 text-sm text-blue-600';
+    form.appendChild(el);
+  }
+  return el;
 }
 
 function showFormError_(errorEl, messages) {
@@ -66,18 +72,62 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please select a preferred delivery format');
         return;
       }
-
-      if (!contactMethod) {
-        alert('Please select a contact method');
-        return;
-      }
-
       // Get form data - properly handle multiple checkboxes
       const formData = new FormData(consultationForm);
 
       // Build data object to match exact field names
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
+      // -------------------------------
+      // Required field validation
+      // -------------------------------
+      const contactMethodValue = formData.get('contactMethod') || '';
+      const contactNumber = formData.get('contactNumber') || '';
+
+      const fullNameEl = contactForm.querySelector('[name="fullName"]');
+      const workEmailEl = contactForm.querySelector('[name="workEmail"]');
+      const contactNumberEl = contactForm.querySelector('[name="contactNumber"]');
+      const contactMethodEls = contactForm.querySelectorAll('input[name="contactMethod"]');
+
+      // Reset errors
+      [fullNameEl, workEmailEl, contactNumberEl].forEach(el => setFieldError_(el, false));
+      contactMethodEls.forEach(el => setFieldError_(el, false));
+      if (errorMessage) errorMessage.classList.add('hidden');
+
+      const errors = [];
+      const nameCheck = validateName_(fullName, 'Full Name');
+      const emailCheck = validateEmail_(workEmail);
+      const numberCheck = validateNumber_(contactNumber);
+      if (!nameCheck.ok) { errors.push(nameCheck.msg); setFieldError_(fullNameEl, true); }
+      if (!emailCheck.ok) { errors.push(emailCheck.msg); setFieldError_(workEmailEl, true); }
+      if (!numberCheck.ok) { errors.push(numberCheck.msg); setFieldError_(contactNumberEl, true); }
+      if (!contactMethodValue.trim()) {
+        errors.push('Preferred contact method is required.');
+        contactMethodEls.forEach(el => setFieldError_(el, true));
+      }
+
+      if (errors.length) {
+        showFormError_(errorMessage, errors);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+        return;
+      }
+
+      // Status message after validation passes
+      const statusMessage = ensureStatusEl_(contactForm);
+      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+
+      // Clear highlight when editing
+      [fullNameEl, workEmailEl, contactNumberEl].forEach((el) => {
+        if (!el) return;
+        el.addEventListener('input', () => setFieldError_(el, false), { once: true });
+      });
+      contactMethodEls.forEach((el) => {
+        el.addEventListener('change', () => setFieldError_(el, false), { once: true });
+      });
+
       const companyName = formData.get('companyName') || '';
       const teamSize = formData.get('teamSize') || '';
       const deliveryFormatValue = formData.get('deliveryFormat') || '';
@@ -99,20 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
 
-      
-
-      const form = consultationForm;
-
-      // Create or reuse status message container (inline, non-breaking)
-      let statusMessage = form.querySelector('.form-status-message');
-      if (!statusMessage) {
-        statusMessage = document.createElement('div');
-        statusMessage.className = 'form-status-message mt-4 text-sm text-blue-600';
-        form.appendChild(statusMessage);
-      }
-      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
-
-try {
+      try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
@@ -126,8 +163,6 @@ try {
           sheetName: 'TW_BookConsultationForm',
           fullName,
           workEmail,
-                              contactNumberRaw: contactNumberRaw,
-          contactNumber: contactNumber,
           companyName,
           teamSize,
           deliveryFormat: deliveryFormatValue,
@@ -149,14 +184,13 @@ try {
           throw new Error('Server responded with error status');
         }
 
-        const result = await response.json().catch(() => null);
-
-        // Verify the response indicates success
-        if (!result || result.status !== 'success') {
-          throw new Error(result?.message || 'Form submission failed - invalid response from server');
+        let result = null;
+        try { result = await response.json(); } catch (e) { result = null; }
+        // If JSON isn't readable but request succeeded, treat as success.
+        if (result && result.status && result.status !== 'success') {
+          throw new Error(result.message || 'Form submission failed');
         }
-
-        // Reset form
+// Reset form
         consultationForm.reset();
 
         // Redirect to Thank You page immediately
@@ -170,27 +204,7 @@ try {
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
 
-        
-        
-        // Show meaningful error if available
-        if (errorMessage) {
-          const base = 'Submission failed. ';
-          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
-          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
-        }
-        if (typeof statusMessage !== 'undefined' && statusMessage) {
-          statusMessage.textContent = '';
-        }
-// Show meaningful error if available
-        if (errorMessage) {
-          const base = 'Submission failed. ';
-          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
-          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
-        }
-        if (typeof statusMessage !== 'undefined' && statusMessage) {
-          statusMessage.textContent = '';
-        }
-// Restore button
+        // Restore button
         submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
       }
@@ -208,23 +222,63 @@ try {
 
       // Validate required radio buttons
       const contactMethod = contactForm.querySelector('input[name="contactMethod"]:checked');
-
-      if (!contactMethod) {
-        alert('Please select a preferred contact method');
-        return;
-      }
-
       // Get form data
       const formData = new FormData(contactForm);
 
       // Build data object
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
-      
-      const countryCode = formData.get('country_code') || '';
-      const contactNumberRaw = formData.get('contact_number') || '';
-      const contactNumber = (countryCode ? String(countryCode).trim() + ' ' : '') + String(contactNumberRaw).trim();
-const contactMethodValue = formData.get('contactMethod') || '';
+      // -------------------------------
+      // Required field validation
+      // -------------------------------
+      const contactMethodValue = formData.get('contactMethod') || '';
+      const contactNumber = formData.get('contactNumber') || '';
+
+      const fullNameEl = contactForm.querySelector('[name="fullName"]');
+      const workEmailEl = contactForm.querySelector('[name="workEmail"]');
+      const contactNumberEl = contactForm.querySelector('[name="contactNumber"]');
+      const contactMethodEls = contactForm.querySelectorAll('input[name="contactMethod"]');
+
+      // Reset errors
+      [fullNameEl, workEmailEl, contactNumberEl].forEach(el => setFieldError_(el, false));
+      contactMethodEls.forEach(el => setFieldError_(el, false));
+      if (errorMessage) errorMessage.classList.add('hidden');
+
+      const errors = [];
+      const nameCheck = validateName_(fullName, 'Full Name');
+      const emailCheck = validateEmail_(workEmail);
+      const numberCheck = validateNumber_(contactNumber);
+      if (!nameCheck.ok) { errors.push(nameCheck.msg); setFieldError_(fullNameEl, true); }
+      if (!emailCheck.ok) { errors.push(emailCheck.msg); setFieldError_(workEmailEl, true); }
+      if (!numberCheck.ok) { errors.push(numberCheck.msg); setFieldError_(contactNumberEl, true); }
+      if (!contactMethodValue.trim()) {
+        errors.push('Preferred contact method is required.');
+        contactMethodEls.forEach(el => setFieldError_(el, true));
+      }
+
+      if (errors.length) {
+        showFormError_(errorMessage, errors);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+        return;
+      }
+
+      // Status message after validation passes
+      const statusMessage = ensureStatusEl_(contactForm);
+      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+
+      // Clear highlight when editing
+      [fullNameEl, workEmailEl, contactNumberEl].forEach((el) => {
+        if (!el) return;
+        el.addEventListener('input', () => setFieldError_(el, false), { once: true });
+      });
+      contactMethodEls.forEach((el) => {
+        el.addEventListener('change', () => setFieldError_(el, false), { once: true });
+      });
+
+      const contactMethodValue = formData.get('contactMethod') || '';
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
       const message = formData.get('message') || '';
@@ -245,20 +299,7 @@ const contactMethodValue = formData.get('contactMethod') || '';
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
 
-      
-
-      const form = contactForm;
-
-      // Create or reuse status message container (inline, non-breaking)
-      let statusMessage = form.querySelector('.form-status-message');
-      if (!statusMessage) {
-        statusMessage = document.createElement('div');
-        statusMessage.className = 'form-status-message mt-4 text-sm text-blue-600';
-        form.appendChild(statusMessage);
-      }
-      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
-
-try {
+      try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
@@ -293,14 +334,13 @@ try {
           throw new Error('Server responded with error status');
         }
 
-        const result = await response.json().catch(() => null);
-
-        // Verify the response indicates success
-        if (!result || result.status !== 'success') {
-          throw new Error(result?.message || 'Form submission failed - invalid response from server');
+        let result = null;
+        try { result = await response.json(); } catch (e) { result = null; }
+        // If JSON isn't readable but request succeeded, treat as success.
+        if (result && result.status && result.status !== 'success') {
+          throw new Error(result.message || 'Form submission failed');
         }
-
-        // Reset form
+// Reset form
         contactForm.reset();
 
         // Redirect to Thank You page immediately
@@ -314,27 +354,7 @@ try {
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
 
-        
-        
-        // Show meaningful error if available
-        if (errorMessage) {
-          const base = 'Submission failed. ';
-          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
-          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
-        }
-        if (typeof statusMessage !== 'undefined' && statusMessage) {
-          statusMessage.textContent = '';
-        }
-// Show meaningful error if available
-        if (errorMessage) {
-          const base = 'Submission failed. ';
-          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
-          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
-        }
-        if (typeof statusMessage !== 'undefined' && statusMessage) {
-          statusMessage.textContent = '';
-        }
-// Restore button
+        // Restore button
         submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
       }
@@ -356,25 +376,33 @@ try {
       // Validate required fields
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
-
       // -------------------------------
       // Required field validation
       // -------------------------------
-      const nameCheck = validateName_(fullName);
-      const emailCheck = validateEmail_(workEmail);
+      const contactMethodValue = formData.get('contactMethod') || '';
+      const contactNumber = formData.get('contactNumber') || '';
 
-      const fullNameEl = aboutForm.querySelector('[name="fullName"]') || aboutForm.querySelector('[name="name"]');
-      const workEmailEl = aboutForm.querySelector('[name="workEmail"]');
+      const fullNameEl = contactForm.querySelector('[name="fullName"]');
+      const workEmailEl = contactForm.querySelector('[name="workEmail"]');
+      const contactNumberEl = contactForm.querySelector('[name="contactNumber"]');
+      const contactMethodEls = contactForm.querySelectorAll('input[name="contactMethod"]');
 
-      setFieldError_(fullNameEl, false);
-      setFieldError_(workEmailEl, false);
+      // Reset errors
+      [fullNameEl, workEmailEl, contactNumberEl].forEach(el => setFieldError_(el, false));
+      contactMethodEls.forEach(el => setFieldError_(el, false));
       if (errorMessage) errorMessage.classList.add('hidden');
 
       const errors = [];
-      if (!nameCheck.ok) { errors.push(nameCheck.msg.replace('Full Name', 'Name')); setFieldError_(fullNameEl, true); }
+      const nameCheck = validateName_(fullName, 'Full Name');
+      const emailCheck = validateEmail_(workEmail);
+      const numberCheck = validateNumber_(contactNumber);
+      if (!nameCheck.ok) { errors.push(nameCheck.msg); setFieldError_(fullNameEl, true); }
       if (!emailCheck.ok) { errors.push(emailCheck.msg); setFieldError_(workEmailEl, true); }
-
-      if (statusMessage) statusMessage.textContent = '';
+      if (!numberCheck.ok) { errors.push(numberCheck.msg); setFieldError_(contactNumberEl, true); }
+      if (!contactMethodValue.trim()) {
+        errors.push('Preferred contact method is required.');
+        contactMethodEls.forEach(el => setFieldError_(el, true));
+      }
 
       if (errors.length) {
         showFormError_(errorMessage, errors);
@@ -385,9 +413,17 @@ try {
         return;
       }
 
-      [fullNameEl, workEmailEl].forEach((el) => {
+      // Status message after validation passes
+      const statusMessage = ensureStatusEl_(contactForm);
+      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+
+      // Clear highlight when editing
+      [fullNameEl, workEmailEl, contactNumberEl].forEach((el) => {
         if (!el) return;
         el.addEventListener('input', () => setFieldError_(el, false), { once: true });
+      });
+      contactMethodEls.forEach((el) => {
+        el.addEventListener('change', () => setFieldError_(el, false), { once: true });
       });
 
 
@@ -449,14 +485,13 @@ try {
           throw new Error('Server responded with error status');
         }
 
-        const result = await response.json().catch(() => null);
-
-        // Verify the response indicates success
-        if (!result || result.status !== 'success') {
-          throw new Error(result?.message || 'Form submission failed - invalid response from server');
+        let result = null;
+        try { result = await response.json(); } catch (e) { result = null; }
+        // If JSON isn't readable but request succeeded, treat as success.
+        if (result && result.status && result.status !== 'success') {
+          throw new Error(result.message || 'Form submission failed');
         }
-
-        // Reset form
+// Reset form
         aboutUsForm.reset();
 
         // Redirect to Thank You page immediately
@@ -481,142 +516,4 @@ try {
       }
     });
   }
-
-  // ========================================
-  // JESS - CORPORATE ENROLLMENT (mailto)
-  // ========================================
-  const jessCorporateForm = document.getElementById('jess-corporate-enrollment-form');
-  if (jessCorporateForm) {
-    jessCorporateForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(jessCorporateForm);
-
-      const requiredFields = ['company','numberOfParticipants','contactPerson','role','email','contactNumber','interestedCourse','preferredDelivery'];
-      let ok = true;
-
-      const setErr = (name, msg) => {
-        const el = jessCorporateForm.querySelector(`[data-error-for="${name}"]`);
-        if (el) {
-          el.textContent = msg;
-          el.classList.toggle('hidden', !msg);
-        }
-      };
-
-      // clear
-      requiredFields.forEach((f) => setErr(f, ''));
-
-      requiredFields.forEach((f) => {
-        const v = String(fd.get(f) || '').trim();
-        if (!v) {
-          ok = false;
-          setErr(f, 'This field is required');
-        }
-      });
-
-      const email = String(fd.get('email') || '').trim();
-      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        ok = false;
-        setErr('email', 'Please enter a valid email address');
-      }
-
-      if (!ok) return;
-
-      const body = [
-        'Corporate Enrollment Request',
-        '',
-        `Company Name: ${fd.get('company') || ''}`,
-        `Number of Participants: ${fd.get('numberOfParticipants') || ''}`,
-        '',
-        'Contact Person',
-        `Full Name: ${fd.get('contactPerson') || ''}`,
-        `Role / Position: ${fd.get('role') || ''}`,
-        `Email: ${fd.get('email') || ''}`,
-        `Contact Number: ${fd.get('contactNumber') || ''}`,
-        '',
-        'Program Details',
-        `Interested Course: ${fd.get('interestedCourse') || ''}`,
-        `Preferred Delivery Mode: ${fd.get('preferredDelivery') || ''}`,
-        '',
-        `Additional Notes: ${fd.get('additionalNotes') || ''}`,
-      ].join('
-');
-
-      const subject = `JESS Corporate Enrollment Request - ${fd.get('company') || 'Company'}`;
-      const mailto = `mailto:romanoff@ciagile.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-
-      const success = document.getElementById('jess-corporate-success');
-      if (success) success.classList.remove('hidden');
-      jessCorporateForm.classList.add('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // ========================================
-  // JESS - INDIVIDUAL ENROLLMENT (mailto)
-  // ========================================
-  const jessIndForm = document.getElementById('jess-individual-enrollment-form');
-  if (jessIndForm) {
-    jessIndForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(jessIndForm);
-
-      const requiredFields = ['fullName','email','contactNumber','organization','jobTitle','paymentMethod'];
-      let ok = true;
-
-      const setErr = (name, msg) => {
-        const el = jessIndForm.querySelector(`[data-error-for="${name}"]`);
-        if (el) {
-          el.textContent = msg;
-          el.classList.toggle('hidden', !msg);
-        }
-      };
-
-      requiredFields.forEach((f) => setErr(f, ''));
-
-      requiredFields.forEach((f) => {
-        const v = String(fd.get(f) || '').trim();
-        if (!v) {
-          ok = false;
-          setErr(f, 'This field is required');
-        }
-      });
-
-      const email = String(fd.get('email') || '').trim();
-      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        ok = false;
-        setErr('email', 'Please enter a valid email address');
-      }
-
-      if (!ok) return;
-
-      const invoiceNeeded = String(fd.get('invoiceNeeded') || 'no');
-
-      const body = [
-        'Individual Enrollment Request',
-        '',
-        `Full Name: ${fd.get('fullName') || ''}`,
-        `Email: ${fd.get('email') || ''}`,
-        `Contact Number: ${fd.get('contactNumber') || ''}`,
-        `Organization: ${fd.get('organization') || ''}`,
-        `Job Title: ${fd.get('jobTitle') || ''}`,
-        '',
-        `Course Selected: ${fd.get('courseSelected') || ''}`,
-        `Preferred Class Date: ${fd.get('classDate') || ''}`,
-        `Payment Method: ${fd.get('paymentMethod') || ''}`,
-        `Invoice Needed: ${invoiceNeeded === 'yes' ? 'Yes' : 'No'}`,
-      ].join('
-');
-
-      const subject = `JESS Individual Enrollment Request - ${fd.get('fullName') || ''}`;
-      const mailto = `mailto:romanoff@ciagile.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-
-      const success = document.getElementById('jess-individual-success');
-      if (success) success.classList.remove('hidden');
-      jessIndForm.classList.add('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
 });
