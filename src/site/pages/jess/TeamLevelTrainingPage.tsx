@@ -102,13 +102,13 @@ export function TeamLevelTrainingPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+                <a
+                  href="#courses"
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer text-lg"
                 >
                   <span>Explore the NOVA Courses</span>
                   <ArrowRight size={22} />
-                </button>
+                </a>
                 <a
                   href="/contactus.html?source=jess-strengthen-teams&cta=talk-to-expert#contact-form"
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-lg"
@@ -292,13 +292,13 @@ export function TeamLevelTrainingPage() {
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+              <a
+                href="#courses"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
               >
                 <span>Explore the NOVA Courses</span>
                 <ArrowRight size={18} />
-              </button>
+              </a>
               <a
                 href="/contactus.html?source=jess-strengthen-teams&cta=talk-to-expert#contact-form"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300"

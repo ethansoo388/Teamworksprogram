@@ -184,15 +184,12 @@ export function DesignThinkingCoursePage() {
               
               {/* CTA - Always centered */}
               <div className="flex flex-col items-center mb-3">
-                <button 
-                  onClick={() => {
-                    const section = document.getElementById('how-we-turn-ideas');
-                    section?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                <a
+                  href="#course-modules"
                   className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg mb-2 text-sm lg:text-base"
                 >
                   <span>Explore the Course</span>
-                </button>
+                </a>
 
                 <p className="text-xs lg:text-sm text-white/60 lg:text-white/80 text-center">
                   Private corporate delivery · Customised for your organisation
@@ -437,7 +434,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Course Modules */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="course-modules" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
