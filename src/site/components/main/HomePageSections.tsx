@@ -404,7 +404,7 @@ function HowWeWorkSection() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`bg-[#0D1F2D] overflow-hidden hover:bg-[#152838] transition-colors ${index === 3 ? "ring-1 ring-[#0066CC]/30" : ""}`}
+              className="bg-[#0D1F2D] overflow-hidden hover:bg-[#152838] transition-colors"
             >
               <div className="h-48 relative bg-gradient-to-br from-[#1E3A52] to-[#0D2B3C] overflow-hidden">
                 <img
