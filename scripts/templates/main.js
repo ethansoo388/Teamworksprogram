@@ -531,6 +531,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // TeamWorks Course 05 - Investment grid "Learn more" (single-open details accordion)
+  // Static-export safe: uses <details>/<summary> and closes siblings on open.
+  document.querySelectorAll('[data-accordion-scope="investment-grid"]').forEach((scope) => {
+    if (!(scope instanceof HTMLElement)) return;
+    const panels = Array.from(scope.querySelectorAll('details[data-accordion="investment-grid"]'))
+      .filter((el) => el instanceof HTMLDetailsElement);
+
+    panels.forEach((details) => {
+      details.addEventListener('toggle', () => {
+        if (!details.open) return;
+        panels.forEach((other) => {
+          if (other === details) return;
+          other.open = false;
+        });
+      });
+    });
+  });
+
 
   // Static-safe reveal + stagger (works after HTML export)
   const revealObserver = new IntersectionObserver((entries) => {
