@@ -88,7 +88,10 @@ function prettyIndentHtml(html) {
     }
   }
 
-  return out.join('\n') + '\n';
+  // Preserve empty textareas — don't let indentation become default content
+  return out.join('\n')
+    .replace(/<textarea([^>]*)>\s*<\/textarea>/g, '<textarea$1></textarea>')
+    + '\n';
 }
 
 function prettifyHtmlFile(filePath) {
