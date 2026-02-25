@@ -126,6 +126,8 @@ try {
           sheetName: 'TW_BookConsultationForm',
           fullName,
           workEmail,
+                              contactNumberRaw: contactNumberRaw,
+          contactNumber: contactNumber,
           companyName,
           teamSize,
           deliveryFormat: deliveryFormatValue,
@@ -218,7 +220,11 @@ try {
       // Build data object
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
-      const contactMethodValue = formData.get('contactMethod') || '';
+      
+      const countryCode = formData.get('country_code') || '';
+      const contactNumberRaw = formData.get('contact_number') || '';
+      const contactNumber = (countryCode ? String(countryCode).trim() + ' ' : '') + String(contactNumberRaw).trim();
+const contactMethodValue = formData.get('contactMethod') || '';
       const organizationRole = formData.get('organizationRole') || '';
       const challenge = formData.get('challenge') || '';
       const message = formData.get('message') || '';
