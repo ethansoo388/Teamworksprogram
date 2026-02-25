@@ -221,15 +221,13 @@ export function Course05Page() {
     if (!slides.length) return;
     var current = 0;
     var timeoutId = null;
-    var lastStart = null;
-    var remaining = 3500;
     var isPaused = false;
-    var DURATION = 3500;
+    var DURATION = 5000;
     var progress = root.querySelector('[data-tw05-progress]');
+
     function show(i){
       var len = slides.length;
-      var nextIndex = ((i % len) + len) % len;
-      current = nextIndex;
+      current = ((i % len) + len) % len;
       for (var s = 0; s < slides.length; s++){
         var slide = slides[s];
         if (!slide || !slide.classList) continue;
@@ -243,17 +241,58 @@ export function Course05Page() {
         else { dot.classList.remove('w-8'); dot.classList.remove('h-2'); dot.classList.remove('bg-[#0EA7E9]'); dot.classList.add('w-2'); dot.classList.add('h-2'); dot.classList.add('bg-gray-300'); dot.removeAttribute('aria-current'); }
       }
     }
-    function restartProgress(){ if (!progress) return; progress.style.animation = 'none'; progress.offsetHeight; progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards'; progress.style.animationPlayState = isPaused ? 'paused' : 'running'; }
-    function scheduleNext(){ if (timeoutId) window.clearTimeout(timeoutId); lastStart = new Date().getTime(); timeoutId = window.setTimeout(function(){ show(current + 1); resetAuto(); }, remaining); }
-    function resetAuto(){ remaining = DURATION; isPaused = false; restartProgress(); scheduleNext(); }
-    function pauseAuto(){ if (isPaused) return; isPaused = true; if (timeoutId) window.clearTimeout(timeoutId); if (lastStart !== null){ var elapsed = new Date().getTime() - lastStart; remaining = remaining - elapsed; if (remaining < 0) remaining = 0; } if (progress){ progress.style.animationPlayState = 'paused'; } }
-    function resumeAuto(){ if (!isPaused) return; isPaused = false; if (progress){ progress.style.animationPlayState = 'running'; } scheduleNext(); }
-    show(0); resetAuto();
-    for (var i = 0; i < dots.length; i++){ (function(dot){ dot.addEventListener('click', function(){ var idx = parseInt(dot.getAttribute('data-index') || '0', 10); if (isNaN(idx)) idx = 0; show(idx); resetAuto(); }); })(dots[i]); }
+
+    function restartProgress(){
+      if (!progress) return;
+      progress.style.animation = 'none';
+      progress.offsetHeight;
+      progress.style.animation = 'tw05ProgressFill ' + (DURATION / 1000) + 's linear forwards';
+      progress.style.animationPlayState = isPaused ? 'paused' : 'running';
+    }
+
+    function scheduleNext(){
+      if (timeoutId) window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(function(){ show(current + 1); resetAuto(); }, DURATION);
+    }
+
+    function resetAuto(){
+      isPaused = false;
+      if (timeoutId) window.clearTimeout(timeoutId);
+      restartProgress();
+      scheduleNext();
+    }
+
+    function pauseAuto(){
+      if (isPaused) return;
+      isPaused = true;
+      if (timeoutId) window.clearTimeout(timeoutId);
+      timeoutId = null;
+      if (progress) progress.style.animationPlayState = 'paused';
+    }
+
+    function resumeAuto(){
+      if (!isPaused) return;
+      isPaused = false;
+      if (progress) progress.style.animationPlayState = 'running';
+      resetAuto();
+    }
+
+    show(0);
+    resetAuto();
+
+    for (var i = 0; i < dots.length; i++){
+      (function(dot){ dot.addEventListener('click', function(){
+        var idx = parseInt(dot.getAttribute('data-index') || '0', 10);
+        if (isNaN(idx)) idx = 0;
+        show(idx);
+        resetAuto();
+      }); })(dots[i]);
+    }
     if (prevBtn){ prevBtn.addEventListener('click', function(){ show(current - 1); resetAuto(); }); }
     if (nextBtn){ nextBtn.addEventListener('click', function(){ show(current + 1); resetAuto(); }); }
-    var canHover = false; try { if (window.matchMedia) { canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } } catch(e) {}
-    if (canHover){ root.addEventListener('mouseenter', function(){ pauseAuto(); }); root.addEventListener('mouseleave', function(){ resumeAuto(); }); }
+
+    root.addEventListener('mouseenter', function(){ pauseAuto(); });
+    root.addEventListener('mouseleave', function(){ resumeAuto(); });
   }
   if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initTw05Carousel); } else { initTw05Carousel(); }
 })();

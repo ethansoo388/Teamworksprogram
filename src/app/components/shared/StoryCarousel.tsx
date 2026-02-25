@@ -57,51 +57,54 @@ export function StoryCarousel({ stories }: StoryCarouselProps) {
         ))}
 
         {/* Navigation */}
-        <div className="flex items-center justify-center gap-4 mt-12">
-          <button
-            type="button"
-            data-tw05-prev
-            className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+        <div className="mt-12 space-y-4">
+          {/* Controls row: prev, dots, next */}
+          <div className="flex items-center justify-center gap-4">
+            <button
+              type="button"
+              data-tw05-prev
+              className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
 
-          <div className="relative flex gap-2">
-            {stories.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-tw05-dot
-                data-index={index}
-                className={`transition-all duration-300 rounded-full ${
-                  index === 0
-                    ? "w-8 h-2 bg-[#0EA7E9]"
-                    : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-
-            {/* Progress bar */}
-            <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
-              <div
-                data-tw05-progress
-                className="h-full bg-[#0EA7E9] rounded-full origin-left"
-                style={{ transform: "scaleX(0)" }}
-                aria-hidden="true"
-              />
+            <div className="flex items-center gap-2.5">
+              {stories.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  data-tw05-dot
+                  data-index={index}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === 0
+                      ? "w-8 h-2 bg-[#0EA7E9]"
+                      : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
+
+            <button
+              type="button"
+              data-tw05-next
+              className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
 
-          <button
-            type="button"
-            data-tw05-next
-            className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 hover:border-[#0EA7E9] hover:bg-[#0EA7E9] text-gray-600 hover:text-white transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          {/* Progress bar — separated below controls */}
+          <div className="mx-auto w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+            <div
+              data-tw05-progress
+              className="h-full bg-[#0EA7E9] rounded-full origin-left"
+              style={{ transform: "scaleX(0)" }}
+              aria-hidden="true"
+            />
+          </div>
         </div>
       </div>
     </div>
