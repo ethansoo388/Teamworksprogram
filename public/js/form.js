@@ -1,7 +1,9 @@
 // Form handling for TeamWorks consultation and main site Contact Us forms
 
 document.addEventListener('DOMContentLoaded', () => {
-  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwMB8hyEciDVHNN_lCtwCpRFbouPj7nY1Hk7UPGk-nv2o4_0KTxaVIlEafUblZWceuqwQ/exec';
+  // Google Apps Script Web App endpoint (Lead capture)
+  // NOTE: Must be form-encoded (URLSearchParams). No JSON.
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4qs2PdLhwc0jsym3VisNOl4iGRuYIm8Ot4LVgiJZVYtG5LAyBiy19OwRXiILzLTFwpQ/exec';
 
   
 
@@ -258,6 +260,7 @@ function showFormError_(errorEl, messages) {
           sheetName: 'ContactUsForm',
           fullName,
           workEmail,
+          contactNumber,
           contactMethod: contactMethodValue,
           organizationRole,
           interests,
