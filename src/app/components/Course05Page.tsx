@@ -2,7 +2,7 @@ import { ArrowRight, Menu, X, Clock, Users, FileX, Earth, Rocket, CheckCircle2, 
 import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
 import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import { StoryCarousel, FAQAccordion, InvestmentGrid, SkillsRadial, CourseModulesGrid, PersonaCards } from "@/app/components/shared";
-import { stories, investments, skills, courseModules, learningOutcomes, personas, masterTopics, faqs, courseDetails } from "@/app/components/course05/data";
+import { stories, investments, skills, courseModules, learningOutcomes, personas, masterTopics, faqs } from "@/app/components/course05/data";
 import type { PageMeta } from "@/types";
 
 export const pageMeta: PageMeta = {
@@ -426,32 +426,6 @@ export function Course05Page() {
           </div>
         </section>
 
-        {/* Course Details Section */}
-        <section className="bg-white py-16 lg:py-24">
-          <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">Course Details</h2>
-            <div className="border-2 rounded-xl bg-white overflow-hidden">
-              <div className="p-8">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {courseDetails.map((detail, index) => {
-                    const Icon = detail.icon;
-                    return (
-                      <div key={index} className="flex gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                          <Icon className="h-6 w-6 text-[#0EA7E9]" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500 mb-1">{detail.label}</p>
-                          <p className="font-semibold text-gray-900">{detail.value}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section className="bg-gray-50 py-16 lg:py-24">

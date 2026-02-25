@@ -110,7 +110,7 @@ export function TeamLevelTrainingPage() {
                   <ArrowRight size={22} />
                 </button>
                 <a
-                  href="mailto:romanoff@ciagile.com"
+                  href="/contactus.html?source=jess-strengthen-teams&cta=talk-to-expert#contact-form"
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 text-lg"
                 >
                   <span>Talk to an Expert</span>
@@ -300,7 +300,7 @@ export function TeamLevelTrainingPage() {
                 <ArrowRight size={18} />
               </button>
               <a
-                href="mailto:romanoff@ciagile.com"
+                href="/contactus.html?source=jess-strengthen-teams&cta=talk-to-expert#contact-form"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300"
               >
                 <span>Talk to an Expert</span>
