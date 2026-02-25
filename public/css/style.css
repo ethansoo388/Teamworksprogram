@@ -91,14 +91,6 @@ body {
 }
 
 /* Form validation styles */
-input:invalid:not(:placeholder-shown) {
-  border-color: #ef4444;
-}
-
-input:valid:not(:placeholder-shown) {
-  border-color: #10b981;
-}
-
 /* Loading state */
 .loading {
   opacity: 0.6;

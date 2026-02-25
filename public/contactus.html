@@ -151,15 +151,18 @@
                   <p class="text-sm text-gray-600 font-light mb-8">Share a bit of context. We&#x27;ll respond with a clear recommendation—not a pitch.</p>
                   <form id="contact-us-form" class="space-y-5" novalidate="">
                     <div>
-                      <label for="fullName" class="block text-sm font-medium text-gray-800 mb-1.5">Full Name</label>
+                      <label for="fullName" class="block text-sm font-medium text-gray-800 mb-1.5">Full Name<span class="text-red-500 ml-1">*</span>
+                      </label>
                       <input type="text" id="fullName" name="fullName" required="" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all"/>
                     </div>
                     <div>
-                      <label for="workEmail" class="block text-sm font-medium text-gray-800 mb-1.5">Work Email</label>
+                      <label for="workEmail" class="block text-sm font-medium text-gray-800 mb-1.5">Work Email<span class="text-red-500 ml-1">*</span>
+                      </label>
                       <input type="email" id="workEmail" name="workEmail" required="" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all"/>
                     </div>
                     <div>
-                      <label for="contact_number" class="block text-sm font-medium text-gray-800 mb-1.5">Contact Number</label>
+                      <label for="contact_number" class="block text-sm font-medium text-gray-800 mb-1.5">Contact Number<span class="text-red-500 ml-1">*</span>
+                      </label>
                       <div class="flex gap-2">
                         <select name="country_code" class="w-32 px-3 py-3 border border-gray-300 rounded-md text-sm text-gray-900 bg-white focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all">
                           <option value="+60">+60 (MY)</option>
@@ -181,7 +184,8 @@
                       </div>
                     </div>
                     <div>
-                      <label class="block text-sm font-medium text-gray-800 mb-3">Preferred contact method</label>
+                      <label class="block text-sm font-medium text-gray-800 mb-3">Preferred contact method<span class="text-red-500 ml-1">*</span>
+                      </label>
                       <div class="space-y-3">
                         <label class="flex items-start gap-3 cursor-pointer group">
                           <input type="radio" name="contactMethod" class="mt-0.5 w-4 h-4 border-gray-300 text-[#0066CC] focus:ring-[#0066CC]" checked="" value="email"/>

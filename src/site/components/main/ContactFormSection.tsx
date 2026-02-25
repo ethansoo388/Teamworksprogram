@@ -74,21 +74,21 @@ export function ContactFormSection() {
 
               {/* Full Name */}
               <div>
-                <label htmlFor="fullName" className="block text-sm font-medium text-gray-800 mb-1.5">Full Name</label>
+                <label htmlFor="fullName" className="block text-sm font-medium text-gray-800 mb-1.5">Full Name<span class="text-red-500 ml-1">*</span></label>
                 <input type="text" id="fullName" name="fullName" required
                   className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all" />
               </div>
 
               {/* Work Email */}
               <div>
-                <label htmlFor="workEmail" className="block text-sm font-medium text-gray-800 mb-1.5">Work Email</label>
+                <label htmlFor="workEmail" className="block text-sm font-medium text-gray-800 mb-1.5">Work Email<span class="text-red-500 ml-1">*</span></label>
                 <input type="email" id="workEmail" name="workEmail" required
                   className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all" />
               </div>
 
               {/* Contact Number */}
               <div>
-                <label htmlFor="contact_number" className="block text-sm font-medium text-gray-800 mb-1.5">Contact Number</label>
+                <label htmlFor="contact_number" className="block text-sm font-medium text-gray-800 mb-1.5">Contact Number<span class="text-red-500 ml-1">*</span></label>
                 <div className="flex gap-2">
                   <select name="country_code"
                     className="w-32 px-3 py-3 border border-gray-300 rounded-md text-sm text-gray-900 bg-white focus:outline-none focus:border-[#0066CC] focus:ring-2 focus:ring-[#0066CC]/20 transition-all">
@@ -114,7 +114,7 @@ export function ContactFormSection() {
 
               {/* Preferred contact method — form.js contract: name="contactMethod" */}
               <div>
-                <label className="block text-sm font-medium text-gray-800 mb-3">Preferred contact method</label>
+                <label className="block text-sm font-medium text-gray-800 mb-3">Preferred contact method<span class="text-red-500 ml-1">*</span></label>
                 <div className="space-y-3">
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="radio" name="contactMethod" value="email" defaultChecked

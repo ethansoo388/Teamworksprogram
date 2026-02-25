@@ -492,7 +492,7 @@ export function ExperienceScalesSection() {
 
               {/* fullName */}
               <div>
-                <label htmlFor="about-fullName" className="block text-sm font-normal text-gray-700 mb-1.5">Name</label>
+                <label htmlFor="about-fullName" className="block text-sm font-normal text-gray-700 mb-1.5">Name<span class="text-red-500 ml-1">*</span></label>
                 <input type="text" id="about-fullName" name="fullName"
                   className="w-full px-3.5 py-2.5 border border-gray-300 text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-1 focus:ring-[#0066CC] transition-colors"
                   required />
@@ -500,7 +500,7 @@ export function ExperienceScalesSection() {
 
               {/* workEmail */}
               <div>
-                <label htmlFor="about-workEmail" className="block text-sm font-normal text-gray-700 mb-1.5">Work Email</label>
+                <label htmlFor="about-workEmail" className="block text-sm font-normal text-gray-700 mb-1.5">Work Email<span class="text-red-500 ml-1">*</span></label>
                 <input type="email" id="about-workEmail" name="workEmail"
                   className="w-full px-3.5 py-2.5 border border-gray-300 text-sm text-gray-900 focus:outline-none focus:border-[#0066CC] focus:ring-1 focus:ring-[#0066CC] transition-colors"
                   required />
