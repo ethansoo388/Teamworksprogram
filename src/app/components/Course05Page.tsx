@@ -220,7 +220,6 @@ export function Course05Page() {
     var nextBtn = root.querySelector('[data-tw05-next]');
     if (!slides.length) return;
     var current = 0;
-    var timeoutId = null;
     var isPaused = false;
     var DURATION = 5000;
     var progress = root.querySelector('[data-tw05-progress]');
@@ -250,23 +249,14 @@ export function Course05Page() {
       progress.style.animationPlayState = isPaused ? 'paused' : 'running';
     }
 
-    function scheduleNext(){
-      if (timeoutId) window.clearTimeout(timeoutId);
-      timeoutId = window.setTimeout(function(){ show(current + 1); resetAuto(); }, DURATION);
-    }
-
     function resetAuto(){
       isPaused = false;
-      if (timeoutId) window.clearTimeout(timeoutId);
       restartProgress();
-      scheduleNext();
     }
 
     function pauseAuto(){
       if (isPaused) return;
       isPaused = true;
-      if (timeoutId) window.clearTimeout(timeoutId);
-      timeoutId = null;
       if (progress) progress.style.animationPlayState = 'paused';
     }
 
@@ -274,7 +264,14 @@ export function Course05Page() {
       if (!isPaused) return;
       isPaused = false;
       if (progress) progress.style.animationPlayState = 'running';
-      resetAuto();
+    }
+
+    /* Single source of truth: when the CSS progress animation ends, advance slide */
+    if (progress) {
+      progress.addEventListener('animationend', function(){
+        show(current + 1);
+        resetAuto();
+      });
     }
 
     show(0);
