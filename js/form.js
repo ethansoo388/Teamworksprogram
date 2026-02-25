@@ -53,7 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
 
-      try {
+      
+
+      const form = consultationForm;
+
+      // Create or reuse status message container (inline, non-breaking)
+      let statusMessage = form.querySelector('.form-status-message');
+      if (!statusMessage) {
+        statusMessage = document.createElement('div');
+        statusMessage.className = 'form-status-message mt-4 text-sm text-blue-600';
+        form.appendChild(statusMessage);
+      }
+      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+
+try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
@@ -99,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         consultationForm.reset();
 
         // Redirect to Thank You page immediately
-        window.location.assign('../thankyou.html');
+        window.location.assign('/thankyou.html');
         return;
 
       } catch (error) {
@@ -109,7 +122,27 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
 
-        // Restore button
+        
+        
+        // Show meaningful error if available
+        if (errorMessage) {
+          const base = 'Submission failed. ';
+          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
+          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
+        }
+        if (typeof statusMessage !== 'undefined' && statusMessage) {
+          statusMessage.textContent = '';
+        }
+// Show meaningful error if available
+        if (errorMessage) {
+          const base = 'Submission failed. ';
+          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
+          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
+        }
+        if (typeof statusMessage !== 'undefined' && statusMessage) {
+          statusMessage.textContent = '';
+        }
+// Restore button
         submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
       }
@@ -160,7 +193,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // Store original button text
       const originalButtonText = submitButton.innerHTML;
 
-      try {
+      
+
+      const form = contactForm;
+
+      // Create or reuse status message container (inline, non-breaking)
+      let statusMessage = form.querySelector('.form-status-message');
+      if (!statusMessage) {
+        statusMessage = document.createElement('div');
+        statusMessage.className = 'form-status-message mt-4 text-sm text-blue-600';
+        form.appendChild(statusMessage);
+      }
+      statusMessage.textContent = 'Submitting. May takes 10 seconds.';
+
+try {
         // Disable submit button and show loading state
         submitButton.disabled = true;
         submitButton.innerHTML = 'Sending...';
@@ -206,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.reset();
 
         // Redirect to Thank You page immediately
-        window.location.assign('thankyou.html');
+        window.location.assign('/thankyou.html');
         return;
 
       } catch (error) {
@@ -216,7 +262,27 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
 
-        // Restore button
+        
+        
+        // Show meaningful error if available
+        if (errorMessage) {
+          const base = 'Submission failed. ';
+          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
+          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
+        }
+        if (typeof statusMessage !== 'undefined' && statusMessage) {
+          statusMessage.textContent = '';
+        }
+// Show meaningful error if available
+        if (errorMessage) {
+          const base = 'Submission failed. ';
+          const detail = (error && error.message) ? error.message : 'Please check your input and try again.';
+          errorMessage.textContent = base + detail + ' Please fill up the correct information again.';
+        }
+        if (typeof statusMessage !== 'undefined' && statusMessage) {
+          statusMessage.textContent = '';
+        }
+// Restore button
         submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
       }
@@ -308,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutUsForm.reset();
 
         // Redirect to Thank You page immediately
-        window.location.assign('thankyou.html');
+        window.location.assign('/thankyou.html');
         return;
 
       } catch (error) {
