@@ -54,7 +54,7 @@ export function FrameworkSection() {
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30 flex items-center justify-center flex-shrink-0">
                   <Repeat className="text-blue-400" size={32} />
                 </div>
                 <div>
@@ -65,7 +65,7 @@ export function FrameworkSection() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-blue-400 text-sm font-bold">1</span>
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export function FrameworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-blue-400 text-sm font-bold">2</span>
                   </div>
                   <div>
@@ -89,7 +89,7 @@ export function FrameworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-blue-400 text-sm font-bold">3</span>
                   </div>
                   <div>
@@ -101,7 +101,7 @@ export function FrameworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-blue-400 text-sm font-bold">4</span>
                   </div>
                   <div>
@@ -190,21 +190,21 @@ export function FrameworkSection() {
           data-reveal-group
           data-stagger="90"
         >
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border /20 text-center" data-reveal-item>
             <Users className="text-blue-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Aligned Empowerment</h4>
             <p className="text-sm text-slate-400">
               Empower regional teams to act decisively — within a clear strategic framework that maintains visibility and leadership control.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border /20 text-center" data-reveal-item>
             <TrendingUp className="text-cyan-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Scalable Enterprise Execution</h4>
             <p className="text-sm text-slate-400">
               Scale from a few teams to enterprise-wide coordination without increasing hierarchy, bureaucracy, or loss of oversight.
             </p>
           </div>
-          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 text-center" data-reveal-item>
+          <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border /20 text-center" data-reveal-item>
             <Target className="text-blue-400 mx-auto mb-4" size={32} />
             <h4 className="font-bold text-white mb-2">Measurable Business Outcomes</h4>
             <p className="text-sm text-slate-400">

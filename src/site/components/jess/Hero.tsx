@@ -16,7 +16,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6"
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border /20 text-blue-400 mb-6"
               data-reveal
             >
               <Sparkles size={16} />

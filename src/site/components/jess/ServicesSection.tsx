@@ -203,7 +203,7 @@ export function ServicesSection() {
                     </div>
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <div className="mb-4">
-                        <span className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                        <span className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-sm border /30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
                           For Teams
                         </span>
                       </div>
@@ -371,7 +371,7 @@ export function ServicesSection() {
                   </div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <div className="mb-4">
-                      <span className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                      <span className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-sm border /30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
                         For Teams
                       </span>
                     </div>

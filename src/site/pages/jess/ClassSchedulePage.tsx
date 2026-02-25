@@ -204,7 +204,7 @@ export function ClassSchedulePage() {
                 key={monthData.month}
                 id={monthId}
                 className={`bg-gradient-to-br from-slate-50 to-white border-2 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 scroll-mt-32 ${
-                  quarterInfo.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500' :
+                  quarterInfo.color === 'blue' ? '/30 hover:' :
                   quarterInfo.color === 'emerald' ? 'border-emerald-500/30 hover:border-emerald-500' :
                   quarterInfo.color === 'purple' ? 'border-purple-500/30 hover:border-purple-500' :
                   'border-slate-200'

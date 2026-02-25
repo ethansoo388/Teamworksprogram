@@ -87,7 +87,7 @@ export function FreeResourcesPage() {
                   <div className="p-6 pt-10">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Learn Agile & AI in 10 minutes</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">A fast, no-fluff overview of what Agile and AI actually change in organizations.</p>
-                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors">View Course</button></div>
+                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button></div>
                   </div>
                 </a>
                 {/* Card 2 */}
@@ -102,7 +102,7 @@ export function FreeResourcesPage() {
                   <div className="p-6 pt-10">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Getting Agile: Yes, No, or Not Yet</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">A decision guide to help leaders avoid premature Agile transformations.</p>
-                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors">View Course</button></div>
+                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button></div>
                   </div>
                 </a>
                 {/* Card 3 */}
@@ -117,7 +117,7 @@ export function FreeResourcesPage() {
                   <div className="p-6 pt-10">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Start Your Agile Team in 150 minutes</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">A practical starting point to align teams early and reduce execution chaos.</p>
-                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors">View Course</button></div>
+                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">View Course</button></div>
                   </div>
                 </a>
                 {/* Card 4 - Scrum Guide */}
@@ -132,7 +132,7 @@ export function FreeResourcesPage() {
                   <div className="p-6 pt-10">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Scrum Guide</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">The official rules of Scrum — so leadership decisions reinforce the system.</p>
-                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors">Download</button></div>
+                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">Download</button></div>
                   </div>
                 </a>
                 {/* Card 5 - Essential Reading List */}
@@ -177,7 +177,7 @@ export function FreeResourcesPage() {
                   <div className="p-6 pt-10">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Community Forums</h3>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">Join our LinkedIn community to follow real practitioner discussions and insights.</p>
-                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors">Join Now</button></div>
+                    <div className="mt-6 pt-4 border-t border-slate-100"><button className="w-full py-3 text-blue-600 font-medium text-sm rounded-lg border  hover:bg-blue-50 transition-colors">Join Now</button></div>
                   </div>
                 </a>
               </div>

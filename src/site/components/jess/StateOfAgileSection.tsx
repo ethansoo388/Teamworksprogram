@@ -146,7 +146,7 @@ export function StateOfAgileSection() {
         </div>
 
         {/* What Organizations Really Need */}
-        <div className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-blue-500/30" data-reveal>
+        <div className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border /30" data-reveal>
           <h3 className="text-3xl font-bold text-white mb-4 text-center">
             What Organizations Really Need
           </h3>
@@ -200,7 +200,7 @@ export function StateOfAgileSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20" data-reveal>
+        <div className="mt-12 text-center p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border /20" data-reveal>
           <h3 className="text-2xl font-bold text-white mb-4">
             JESS Is Built for This Enterprise Reality
           </h3>

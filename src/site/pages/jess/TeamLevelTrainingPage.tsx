@@ -13,7 +13,7 @@ const courses = [
     color: "from-blue-500 to-cyan-500",
     accentColor: "bg-blue-600",
     lightBg: "bg-blue-50",
-    borderColor: "border-blue-200",
+    borderColor: "",
     icon: Users,
     path: "nova/agile-scrum.html",
     highlights: [
@@ -234,7 +234,7 @@ export function TeamLevelTrainingPage() {
               >
                 <a
                   href={course.path}
-                  className="group block bg-white border border-slate-200 rounded-lg p-10 hover:bg-blue-50 hover:border-blue-600 transition-all duration-300 h-full flex flex-col"
+                  className="group block bg-white border border-slate-200 rounded-lg p-10 hover:bg-blue-50 hover: transition-all duration-300 h-full flex flex-col"
                 >
                   {/* Icon - No color background */}
                   <div className="mb-6">

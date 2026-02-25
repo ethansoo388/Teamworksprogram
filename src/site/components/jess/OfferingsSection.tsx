@@ -175,7 +175,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
       className={`
         group relative p-4 md:p-6 rounded-2xl border transition-all duration-300 cursor-pointer
         bg-slate-900/40 border-slate-700/50 hover:border-slate-600
-        hover:bg-gradient-to-br hover:from-slate-900 hover:to-slate-800 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20
+        hover:bg-gradient-to-br hover:from-slate-900 hover:to-slate-800 hover:/50 hover:shadow-lg hover:shadow-blue-500/20
         ${spanTwoColumns ? 'md:col-span-2' : ''}
         ${spanTwoRows ? 'md:row-span-2' : ''}
       `}
@@ -364,7 +364,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
 
               return badgeConfig.icons.map((BadgeIcon, i) => (
                 <div
-                  key={i} className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30"
+                  key={i} className="p-4 rounded-xl border flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 /30"
                 >
                   <BadgeIcon
                     size={32}
@@ -438,7 +438,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
             </div>
 
             <div className="pt-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/30">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-500/10 border /30">
                 <Award size={14} className="text-blue-400" />
                 <span className="text-xs font-medium text-blue-400">Industry-Recognized Certifications</span>
               </div>

@@ -804,7 +804,7 @@ export function LeadershipTrainingPage() {
           >
             {/* Header */}
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border /20 rounded-full mb-6">
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                 <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Who This Is For</span>
               </div>
@@ -820,12 +820,12 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Enterprise Teams Card */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-lg mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border /20 rounded-lg mb-6">
                     <span className="text-sm font-medium text-blue-400">Enterprise Teams</span>
                   </div>
                   
@@ -937,7 +937,7 @@ export function LeadershipTrainingPage() {
           >
             {/* Header */}
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border /20 rounded-full mb-6">
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                 <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Choose Your Path</span>
               </div>
@@ -953,7 +953,7 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* For Enterprise Leaders & Sponsors */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 sm:p-10 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 sm:p-10 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 

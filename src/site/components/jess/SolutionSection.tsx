@@ -26,7 +26,7 @@ export function SolutionSection() {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle2 className="text-blue-400" size={16} />
                 </div>
                 <div>
@@ -37,7 +37,7 @@ export function SolutionSection() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle2 className="text-blue-400" size={16} />
                 </div>
                 <div>
@@ -48,7 +48,7 @@ export function SolutionSection() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle2 className="text-blue-400" size={16} />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export function SolutionSection() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 border /20 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle2 className="text-blue-400" size={16} />
                 </div>
                 <div>
@@ -73,28 +73,28 @@ export function SolutionSection() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6" data-reveal-item>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border /20 hover:-translate-y-1 transition-transform duration-300">
               <Shield className="text-blue-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Enterprise Risk Management</h4>
               <p className="text-sm text-slate-400">
                 Early visibility into delivery, dependency, and execution risks — before they become escalations.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border /20 hover:-translate-y-1 transition-transform duration-300">
               <Zap className="text-cyan-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Faster Time to Measurable Outcomes</h4>
               <p className="text-sm text-slate-400">
                 Shift from transformation roadmaps to real execution gains in weeks, not years.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border /20 hover:-translate-y-1 transition-transform duration-300">
               <Network className="text-blue-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Designed to Scale by Design</h4>
               <p className="text-sm text-slate-400">
                 One execution system that works consistently from pilot teams to enterprise-wide adoption.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:-translate-y-1 transition-transform duration-300">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border /20 hover:-translate-y-1 transition-transform duration-300">
               <CheckCircle2 className="text-cyan-400 mb-4" size={32} />
               <h4 className="font-bold text-white mb-2">Proven in Complex Enterprises</h4>
               <p className="text-sm text-slate-400">

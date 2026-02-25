@@ -21,7 +21,7 @@ export function FrameworkComparisonSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-reveal-group data-stagger="140">
           {/* Left side - Content */}
           <div data-reveal-item>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border /20 text-blue-400 mb-6">
               <Award size={16} />
               <span className="text-sm">Industry Leader</span>
             </div>
@@ -66,7 +66,7 @@ export function FrameworkComparisonSection() {
               </div>
             </div>
 
-            <div className="mt-8 p-4 rounded-lg bg-blue-500/5 border border-blue-500/20">
+            <div className="mt-8 p-4 rounded-lg bg-blue-500/5 border /20">
               <p className="text-sm text-slate-400">
                 <span className="text-blue-400 font-semibold">Source:</span> 18th Annual State of Agile Report
               </p>
@@ -115,7 +115,7 @@ export function FrameworkComparisonSection() {
         </div>
 
         {/* Bottom insight */}
-        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center" data-reveal>
+        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border /20 text-center" data-reveal>
           <p className="text-slate-300 text-lg">
             <span className="text-white font-semibold">Why leaders continue to trust it:</span> Scrum provides disciplined execution without unnecessary complexity. Scrum@Scale extends this foundation into an enterprise operating model, refined by Jeff Sutherland to handle real-world scale and governance.
           </p>

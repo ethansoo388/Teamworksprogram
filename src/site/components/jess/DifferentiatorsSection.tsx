@@ -57,11 +57,11 @@ export function DifferentiatorsSection() {
           <div data-carousel-track>
             {differentiators.map((item, index) => (
               <div key={index} className="px-2" data-carousel-slide>
-                <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
+                <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30 flex items-center justify-center">
                         <item.icon className="text-blue-400" size={28} />
                       </div>
                       <span className="text-sm font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
@@ -100,7 +100,7 @@ export function DifferentiatorsSection() {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 ${
+              className={`group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:/50 transition-all duration-300 ${
                 index === differentiators.length - 1 ? 'lg:col-span-2' : ''
               }`}
               data-reveal-item
@@ -108,7 +108,7 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30 flex items-center justify-center">
                     <item.icon className="text-blue-400" size={28} />
                   </div>
                   <span className="text-sm font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">

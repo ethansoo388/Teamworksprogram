@@ -36,7 +36,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
             className={`p-8 ${isDark ? 'rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700' : 'rounded-sm bg-slate-50 border border-slate-200'}`}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30' : 'bg-slate-200 border border-slate-300'}`}>
+              <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30' : 'bg-slate-200 border border-slate-300'}`}>
                 <Book className={isDark ? 'text-blue-400' : 'text-slate-700'} size={24} />
               </div>
               <h3 className={`text-2xl ${isDark ? 'font-bold text-white' : 'font-light text-slate-900'}`}>Essential Reading</h3>
@@ -63,7 +63,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
                     href="https://www.scrumatscale.com/wp-content/uploads/2020/12/official-scrum-at-scale-guide.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-2 py-1 rounded transition-colors ${isDark ? 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20' : 'bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100'}`}
+                    className={`px-2 py-1 rounded transition-colors ${isDark ? 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20' : 'bg-blue-50 text-blue-700 border  hover:bg-blue-100'}`}
                   >
                     Free Download
                   </a>
@@ -88,7 +88,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
             className={`p-8 ${isDark ? 'rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700' : 'rounded-sm bg-slate-50 border border-slate-200'}`}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30' : 'bg-slate-200 border border-slate-300'}`}>
+              <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30' : 'bg-slate-200 border border-slate-300'}`}>
                 <Award className={isDark ? 'text-blue-400' : 'text-slate-700'} size={24} />
               </div>
               <h3 className={`text-2xl ${isDark ? 'font-bold text-white' : 'font-light text-slate-900'}`}>Certifications</h3>
