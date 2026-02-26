@@ -81,11 +81,11 @@ export function Hero() {
             {/* Background glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900">
+            <div className="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 jess-hero-img-wrap">
               <ImageWithFallback
                 src="https://i.postimg.cc/VLF7hxYW/jeff-sutherland.webp"
                 alt="Jeff Sutherland - Inventor of Scrum"
-                className="w-[90%] h-auto relative z-10 mx-auto"
+                className="jess-hero-bg-img"
               />
               {/* Gradient overlay for better blending */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
