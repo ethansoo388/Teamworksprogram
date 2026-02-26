@@ -118,7 +118,7 @@ export function Course02Page() {
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <a href="../index.html" className="hover:text-pink-600 transition-colors">Home</a>
             <span>/</span>
-            <a href="/teamworks/index.html" className="hover:text-pink-600 transition-colors">Programs</a>
+            <a href="/teamworks/index.html" className="hover:text-pink-600 transition-colors">Teamworks</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">Win Customers Through Design</span>
           </div>

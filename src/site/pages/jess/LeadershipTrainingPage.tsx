@@ -1015,15 +1015,7 @@ export function LeadershipTrainingPage() {
                       </li>
                     </ul>
                   </div>
-                  
-                  <a 
-                    href="mailto:romanoff@ciagile.com?subject=Corporate Proposal Request"
-                    className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] group"
-                  >
-                    <span>Request Corporate Proposal</span>
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
+</div>
               </div>
 
               {/* For Individual Leaders */}
@@ -1099,6 +1091,13 @@ export function LeadershipTrainingPage() {
             <div
               className="mt-16 text-center"
             >
+              <a
+                href="/contactus.html?source=jess-develop-agile-leader&cta=request-corporate-proposal#contact-form"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] group mb-6"
+              >
+                <span className="font-medium">Request Corporate Proposal</span>
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
               <p className="text-base text-slate-400 font-light">
                 Not sure which option is right for you? <a href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form" className="text-blue-400 hover:text-blue-300 font-medium underline">Contact us</a> for a consultation.
               </p>
