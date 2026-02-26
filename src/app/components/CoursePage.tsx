@@ -34,7 +34,7 @@ export function CoursePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="../index.html" className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900">
                 <Users2 className="w-5 h-5 text-white" />
               </div>
@@ -42,7 +42,7 @@ export function CoursePage() {
                 <div className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 01</div>
                 <div className="font-bold text-lg -mt-0.5">Creating Super Teams</div>
               </div>
-            </a>
+            </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">

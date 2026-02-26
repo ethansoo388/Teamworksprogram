@@ -16,7 +16,7 @@ export function Course03Page() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="../index.html" className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full flex items-center justify-center bg-orange-600">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -26,7 +26,7 @@ export function Course03Page() {
                 <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES • COURSE 03</div>
                 <div className="font-bold text-base text-gray-900 -mt-0.5">Critical Thinking for Better Work</div>
               </div>
-            </a>
+            </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">

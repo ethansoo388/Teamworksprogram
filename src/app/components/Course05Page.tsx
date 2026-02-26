@@ -20,7 +20,7 @@ export function Course05Page() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            <a href="../index.html" className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "linear-gradient(to bottom right, #0EA7E9, #0c87ba)" }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -32,7 +32,7 @@ export function Course05Page() {
                 <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES · COURSE 05</div>
                 <div className="font-bold text-base text-gray-900 -mt-0.5">AI Skills for YOUR Team</div>
               </div>
-            </a>
+            </div>
 
             <div className="hidden md:flex items-center gap-8">
               <a href="#modules" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a>
