@@ -319,3 +319,17 @@ body {
 @keyframes jess-spin {
   to { transform: rotate(360deg); }
 }
+
+/* JESS Leadership hero image focal point (static-safe; avoids Tailwind CDN arbitrary values) */
+.site-jess .jess-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center; /* mobile */
+}
+
+@media (min-width: 1024px) {
+  .site-jess .jess-hero-bg-img {
+    object-position: 70% center; /* desktop */
+  }
+}
