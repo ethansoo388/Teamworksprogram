@@ -61,10 +61,8 @@ export function LeadershipTrainingPage() {
           <img 
             src="https://i.postimg.cc/t40xXfbZ/jeff-Sutherland3.jpg"
             alt="Jeff Sutherland Leadership Training"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[70%_center]"
           />
-          {/* Dark Left-to-Right Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/30"></div>
         </div>
         
         {/* Content Container */}
