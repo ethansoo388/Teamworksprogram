@@ -90,6 +90,41 @@ body {
   display: block;
 }
 
+/* ------------------------------------------------------------
+   Navbar dropdown parent "active pill" state
+   - Applies only to dropdown parents (Programs/Resources/Company)
+   - Trigger state is driven by aria-expanded="true" toggled in main.js
+   ------------------------------------------------------------ */
+
+/* Base: use outline so layout never shifts */
+[data-dropdown-trigger] {
+  outline: 2px solid transparent;
+  outline-offset: 0;
+  border-radius: 9999px;
+}
+
+/* Open state (Main/TeamWorks light UI) */
+[data-dropdown-trigger][aria-expanded="true"] {
+  outline-color: currentColor;
+  background: rgba(255, 255, 255, 0.95);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Chevron flip for open state */
+[data-dropdown-trigger] [data-dropdown-icon] {
+  transition: transform 150ms ease;
+}
+[data-dropdown-trigger][aria-expanded="true"] [data-dropdown-icon] {
+  transform: rotate(180deg);
+}
+
+/* Inverted pill for JESS dark mode */
+.site-jess [data-dropdown-trigger][aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.95);
+}
+
 /* Form validation styles */
 /* Loading state */
 .loading {
