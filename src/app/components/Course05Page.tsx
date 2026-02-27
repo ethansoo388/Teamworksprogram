@@ -403,7 +403,7 @@ export function Course05Page() {
               <div className="sticky top-8">
                 <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-md mx-auto ring-1 ring-gray-900/5">
                   <ImageWithFallback
-                    src="/assets/img/teamworks/teamworks-course-05-outcomes-what-your-team-will-be-able-to-do.webp).png"
+                    src="/assets/img/teamworks/teamworks-course-05-outcomes-what-your-team-will-be-able-to-do.webp"
                     alt="Diverse team collaborating on AI skills training"
                     className="w-full h-full object-cover"
                   />

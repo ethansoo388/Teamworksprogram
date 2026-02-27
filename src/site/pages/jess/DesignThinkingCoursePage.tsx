@@ -105,7 +105,7 @@ const modules = [
     title: "Bringing It All Together",
     tagline: "Adapt the process to your organisation and context",
     description: "Designing your process. Explore and adapt the process and approach to your project and situation",
-    image: "/assets/img/jess/site-module-bringing-it-all-together.webp).png"
+    image: "/assets/img/jess/site-module-bringing-it-all-together.webp"
   }
 ];
 
@@ -621,7 +621,7 @@ export function DesignThinkingCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="/assets/img/jess/site-module-bringing-it-all-together.webp).png"
+                  src="/assets/img/jess/site-module-bringing-it-all-together.webp"
                   alt="Bringing It All Together Module"
                   className="w-full h-full object-cover"
                 />
