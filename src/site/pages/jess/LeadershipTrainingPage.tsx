@@ -59,7 +59,7 @@ export function LeadershipTrainingPage() {
         {/* Full Width Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.postimg.cc/t40xXfbZ/jeff-Sutherland3.jpg"
+            src="/assets/img/jess/people-jeff-sutherland-leadership-training.webp"
             alt="Jeff Sutherland Leadership Training"
             className="w-full h-full object-cover jess-hero-bg-img"
           />
@@ -1244,7 +1244,7 @@ export function LeadershipTrainingPage() {
               <div className="lg:col-span-2">
                 <div className="relative h-[500px] lg:h-[650px] bg-slate-200 overflow-hidden">
                   <img 
-                    src="https://i.postimg.cc/WzY2YSVZ/AIDA-CTA-Board-Meeting.jpg"
+                    src="/assets/img/jess/people-leadership-excellence.webp"
                     alt="Leadership Excellence"
                     className="w-full h-full object-cover object-left"
                   />

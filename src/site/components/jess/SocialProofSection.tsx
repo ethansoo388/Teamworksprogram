@@ -1,20 +1,20 @@
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 
 const clientLogos = [
-  { name: "Amazon", width: "w-48", imageUrl: "https://i.postimg.cc/bJJF9rQf/amazon-logo.png", scale: "scale-[1.75]" },
-  { name: "Microsoft", width: "w-48", imageUrl: "https://i.postimg.cc/3RxJjXSd/Microsoft-Logo-Transparent.png", scale: "scale-100" },
-  { name: "Toyota", width: "w-48", imageUrl: "https://i.postimg.cc/NF1sBdLz/toyota-logo-png-5.jpg", scale: "scale-90" },
-  { name: "AT&T", width: "w-48", imageUrl: "https://i.postimg.cc/VkH8yxDj/AT-T-logo-2016-svg.png", scale: "scale-75" },
-  { name: "Salesforce", width: "w-48", imageUrl: "https://i.postimg.cc/NFNN9cyN/salesforce-logo.png", scale: "scale-100" },
-  { name: "Maersk", width: "w-48", imageUrl: "https://i.postimg.cc/vmdvmBP7/Maersk-Logo.png", scale: "scale-100" },
-  { name: "SAP", width: "w-48", imageUrl: "https://i.postimg.cc/WbkrJVq9/SAP-logo.png", scale: "scale-75" },
-  { name: "Bosch", width: "w-48", imageUrl: "https://i.postimg.cc/D0bWsQ06/Bosch-logo.png", scale: "scale-100" },
-  { name: "Spotify", width: "w-48", imageUrl: "https://i.postimg.cc/y87mq5W5/Spotify.png", scale: "scale-100" },
-  { name: "OpenView", width: "w-48", imageUrl: "https://i.postimg.cc/K8sR9sTq/openview-logo-png-seeklogo-380181.png", scale: "scale-100" },
-  { name: "Schlumberger", width: "w-48", imageUrl: "https://i.postimg.cc/QxY8sKM1/Schlumberger.png", scale: "scale-100" },
-  { name: "BAC Credomatic", width: "w-48", imageUrl: "https://i.postimg.cc/908hWscH/Bac-credomatic-logo.png", scale: "scale-100" },
-  { name: "Comcast", width: "w-48", imageUrl: "https://i.postimg.cc/Kv1XPqZc/Comcast-svg.png", scale: "scale-100" },
-  { name: "General Electric", width: "w-48", imageUrl: "https://i.postimg.cc/D0mNc03H/General-Electric-Logo-wine.png", scale: "scale-100" },
+  { name: "Amazon", width: "w-48", imageUrl: "/assets/img/jess/logo-amazon.webp", scale: "scale-[1.75]" },
+  { name: "Microsoft", width: "w-48", imageUrl: "/assets/img/jess/logo-microsoft.webp", scale: "scale-100" },
+  { name: "Toyota", width: "w-48", imageUrl: "/assets/img/jess/logo-toyota.webp", scale: "scale-90" },
+  { name: "AT&T", width: "w-48", imageUrl: "/assets/img/jess/logo-att.webp", scale: "scale-75" },
+  { name: "Salesforce", width: "w-48", imageUrl: "/assets/img/jess/logo-salesforce.webp", scale: "scale-100" },
+  { name: "Maersk", width: "w-48", imageUrl: "/assets/img/jess/logo-maersk.webp", scale: "scale-100" },
+  { name: "SAP", width: "w-48", imageUrl: "/assets/img/jess/logo-sap.webp", scale: "scale-75" },
+  { name: "Bosch", width: "w-48", imageUrl: "/assets/img/jess/logo-bosch.webp", scale: "scale-100" },
+  { name: "Spotify", width: "w-48", imageUrl: "/assets/img/jess/logo-spotify.webp", scale: "scale-100" },
+  { name: "OpenView", width: "w-48", imageUrl: "/assets/img/jess/logo-openview.webp", scale: "scale-100" },
+  { name: "Schlumberger", width: "w-48", imageUrl: "/assets/img/jess/logo-schlumberger.webp", scale: "scale-100" },
+  { name: "BAC Credomatic", width: "w-48", imageUrl: "/assets/img/jess/logo-bac-credomatic.webp", scale: "scale-100" },
+  { name: "Comcast", width: "w-48", imageUrl: "/assets/img/jess/logo-comcast.webp", scale: "scale-100" },
+  { name: "General Electric", width: "w-48", imageUrl: "/assets/img/jess/logo-general-electric.webp", scale: "scale-100" },
 ];
 
 export function SocialProofSection() {

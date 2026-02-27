@@ -6,8 +6,8 @@ import {
   Settings, Building2, Check, Mail, Zap, TrendingUp, Heart, Award, ArrowRight, Crown,
   Clock, MessageSquare, UsersRound
 } from "lucide-react";
-const heroImage = "/src/assets/img/jess/13710a2218ff3dbfa7f73a0f93db5eeecab72c44.png";
-const learningOutcomesImage = "/src/assets/img/jess/8ecbe07a136fd90d769d331eb2663bf4d45ffcc4.png";
+const heroImage = "/assets/img/jess/jess-agile-scrum-201-nova-agile-scrum-for-delivery-teams.webp";
+const learningOutcomesImage = "/assets/img/jess/site-delivery-development-teams.webp";
 
 const audienceList = [
   {
@@ -110,7 +110,7 @@ export function AgileScrumCoursePage() {
         {/* Full Cover Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://i.postimg.cc/NFGmGnM3/AS201-Hero-image.webp"
+            src="/assets/img/jess/jess-agile-scrum-201-agile-scrum-201-professional-training.webp"
             alt="Agile & Scrum 201 - Professional Training"
             className="w-full h-full object-cover object-center"
           />
@@ -212,7 +212,7 @@ export function AgileScrumCoursePage() {
         {/* Background Image - Right Side - Desktop Only */}
         <div className="hidden lg:block absolute right-[5%] top-1/2 -translate-y-1/2 w-2/5">
           <img 
-            src="https://i.postimg.cc/LsxXVW5h/zi-yuan-4.webp"
+            src="/assets/img/jess/jess-agile-scrum-201-professional-learning-agile-and-scrum.webp"
             alt="Professional learning agile and scrum"
             className="w-full h-auto"
           />
@@ -250,7 +250,7 @@ export function AgileScrumCoursePage() {
                 className="lg:hidden mt-12"
               >
                 <img 
-                  src="https://i.postimg.cc/LsxXVW5h/zi-yuan-4.webp"
+                  src="/assets/img/jess/jess-agile-scrum-201-professional-learning-agile-and-scrum.webp"
                   alt="Professional learning agile and scrum"
                   className="w-full h-auto rounded-lg"
                 />
@@ -362,7 +362,7 @@ export function AgileScrumCoursePage() {
               {/* Circular Diagram */}
               <div className="flex justify-center">
                 <ImageWithFallback 
-                  src="https://i.postimg.cc/1XHqq0dD/Scrum.webp"
+                  src="/assets/img/jess/jess-agile-scrum-201-agile-iterative-process.webp"
                   alt="Agile iterative process"
                   className="w-full max-w-md"
                 />
@@ -472,7 +472,7 @@ export function AgileScrumCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/xjzJVQTx/Mod-1.jpg"
+                  src="/assets/img/jess/jess-agile-scrum-201-module-agile-scrum.webp"
                   alt="Agile & Scrum Module"
                   className="w-full h-full object-cover"
                 />
@@ -557,7 +557,7 @@ export function AgileScrumCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/fLKzjMc5/Mod-2-2.jpg"
+                  src="/assets/img/jess/people-product-delivery-module.webp"
                   alt="Product Delivery Module"
                   className="w-full h-full object-cover"
                 />
@@ -570,7 +570,7 @@ export function AgileScrumCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/VNS10jvs/mod-3.jpg"
+                  src="/assets/img/jess/people-hyper.webp"
                   alt="Hyper-Productivity Module"
                   className="w-full h-full object-cover"
                 />
@@ -655,7 +655,7 @@ export function AgileScrumCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/ZnVXDgg8/Mod-4.jpg"
+                  src="/assets/img/jess/people-continuous-improvement-module.webp"
                   alt="Continuous Improvement Module"
                   className="w-full h-full object-cover"
                 />

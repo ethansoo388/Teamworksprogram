@@ -78,7 +78,7 @@ export function InstructorPage() {
             <div>
               <div className="mb-8">
                 <img 
-                  src="https://i.postimg.cc/4ypFkVb5/Ethan-picture.png" 
+                  src="/assets/img/jess/people-ethan-soo.webp" 
                   alt="Ethan Soo - Scrum Trainer"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-xl"
                 />
@@ -133,8 +133,8 @@ export function InstructorPage() {
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-8">Previously led Agile transformation at:</h3>
             <div className="p-8 rounded-2xl flex items-center justify-center">
               <img 
-                src="https://i.postimg.cc/htw3PKjf/client-logos.png" 
-                alt="Client Logos" 
+                src="/assets/img/jess/logo-client-logos.webp" 
+                alt="Client logos" 
                 className="max-w-full h-auto"
               />
             </div>
@@ -150,7 +150,7 @@ export function InstructorPage() {
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img 
-                    src="https://i.postimg.cc/856hBrhp/Jeff-photo.jpg" 
+                    src="/assets/img/jess/people-jeff-sutherland.webp" 
                     alt="Jeff Sutherland"
                     className="w-24 h-24 rounded-full mx-auto mb-4"
                   />
@@ -166,7 +166,7 @@ export function InstructorPage() {
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img 
-                    src="https://i.postimg.cc/tTxhtVhR/Grace-Chan-photo.jpg" 
+                    src="/assets/img/jess/people-grace-chan.webp" 
                     alt="Grace Chan"
                     className="w-24 h-24 rounded-full mx-auto mb-4"
                   />
@@ -182,7 +182,7 @@ export function InstructorPage() {
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img 
-                    src="https://i.postimg.cc/tTxhtVhj/Mike-Cohn-photo.jpg" 
+                    src="/assets/img/jess/people-mike-cohn.webp" 
                     alt="Mike Cohn"
                     className="w-24 h-24 rounded-full mx-auto mb-4"
                   />
@@ -202,8 +202,8 @@ export function InstructorPage() {
             <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 sm:p-12">
               <h3 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8 text-center">Certifications & Credentials</h3>
               <img 
-                src="https://i.postimg.cc/9McPckGZ/ethan-trainer-certifications.png" 
-                alt="Ethan's Certifications and Credentials" 
+                src="/assets/img/jess/people-ethan.webp" 
+                alt="Ethan"s Certifications and Credentials" 
                 className="w-full max-w-4xl mx-auto"
               />
             </div>

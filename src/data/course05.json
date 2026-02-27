@@ -1,49 +1,49 @@
 {
   "stories": [
     {
-      "image": "https://i.postimg.cc/3xxh89jd/Untitled-design-(34).png",
+      "image": "/assets/img/teamworks/teamworks-course-05-from-overwhelmed-to-empowered.webp).png",
       "title": "From Overwhelmed to Empowered",
       "emotion": "Relief & Confidence",
       "story": "AI drafts emails, summarizes reports, and organizes data in seconds. Your team focuses on what truly matters.",
       "highlight": "3-5 hours saved weekly per team member"
     },
     {
-      "image": "https://images.unsplash.com/photo-1557562645-4eee56b29bc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNYWxheXNpYW4lMjBkZXZlbG9wZXIlMjBjb2RpbmclMjBwcm9ncmFtbWluZ3xlbnwxfHx8fDE3NzA4Njk3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "image": "/assets/img/teamworks/teamworks-course-05-faster-coding-with-ai-assistance.webp",
       "title": "Faster Coding with AI Assistance",
       "emotion": "Speed & Efficiency",
       "story": "AI helps debug code, suggests optimizations, and generates documentation. Developers ship features faster with fewer errors.",
       "highlight": "50% faster code reviews and debugging"
     },
     {
-      "image": "https://i.postimg.cc/6qx7gFvQ/teamwork.jpg",
+      "image": "/assets/img/teamworks/teamworks-course-05-teams-working-smarter-together.webp",
       "title": "Teams Working Smarter Together",
       "emotion": "Collaboration & Growth",
       "story": "AI generates ideas, creates presentations, and solves problems faster. Everyone contributes more effectively.",
       "highlight": "Shared skills that elevate the entire team"
     },
     {
-      "image": "https://i.postimg.cc/sxkHqYPx/Malaysian-team-have-more-imaginative-solutions-at-work.jpg",
+      "image": "/assets/img/teamworks/teamworks-course-05-more-imaginative-solutions.webp",
       "title": "More Imaginative Solutions",
       "emotion": "Innovation & Creativity",
       "story": "AI generates alternative approaches, explores new angles, and challenges assumptions. Teams break through creative blocks.",
       "highlight": "Unlock 10x more ideas in brainstorming sessions"
     },
     {
-      "image": "https://i.postimg.cc/gjzSVt23/confident.jpg",
+      "image": "/assets/img/teamworks/teamworks-course-05-confidence-in-every-task.webp",
       "title": "Confidence in Every Task",
       "emotion": "Pride & Achievement",
       "story": "AI handles repetitive tasks like formatting and extracting information. Your team works faster with less stress.",
       "highlight": "Skills that boost morale and productivity"
     },
     {
-      "image": "https://i.postimg.cc/BZmKpZSP/Heading.png",
+      "image": "/assets/img/teamworks/teamworks-course-05-data-insights-in-minutes-not-days.webp",
       "title": "Data Insights in Minutes, Not Days",
       "emotion": "Precision & Clarity",
       "story": "AI analyzes spreadsheets, identifies patterns, and creates visualizations instantly. Make data-driven decisions faster.",
       "highlight": "Transform complex data into actionable insights"
     },
     {
-      "image": "https://i.postimg.cc/mDjfWHcr/Malaysian-employees-celebrating-win-together.jpg",
+      "image": "/assets/img/teamworks/teamworks-course-05-celebrating-wins-together.webp",
       "title": "Celebrating Wins Together",
       "emotion": "Joy & Success",
       "story": "AI accelerates projects and improves output quality. Your team delivers better results and meets deadlines easier.",
@@ -56,7 +56,7 @@
       "amount": "$13 billion",
       "year": "2023",
       "focus": "OpenAI & Azure AI",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png",
+      "logo": "/assets/img/teamworks/logo-microsoft.webp",
       "description": "Microsoft invested heavily in OpenAI, integrating AI capabilities across Office 365, Azure cloud services, and enterprise solutions, making AI tools accessible to millions of businesses worldwide."
     },
     {
@@ -64,7 +64,7 @@
       "amount": "$70 billion",
       "year": "2024",
       "focus": "AI Infrastructure",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/512px-Google_2015_logo.svg.png",
+      "logo": "/assets/img/teamworks/logo-google.webp",
       "description": "Google's massive investment in AI infrastructure powers Gemini, Bard, and enterprise AI solutions, transforming how businesses leverage data and automation at scale."
     },
     {
@@ -72,7 +72,7 @@
       "amount": "$4 billion",
       "year": "2024",
       "focus": "Anthropic & AWS AI",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png",
+      "logo": "/assets/img/teamworks/logo-amazon.webp",
       "description": "Amazon's investment in Anthropic and AWS AI services brings advanced language models and machine learning tools to businesses of all sizes through cloud infrastructure."
     },
     {
@@ -80,7 +80,7 @@
       "amount": "$30+ billion",
       "year": "2024",
       "focus": "AI Research & Development",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/512px-Meta_Platforms_Inc._logo.svg.png",
+      "logo": "/assets/img/teamworks/logo-meta.webp",
       "description": "Meta's commitment to open-source AI through LLaMA and extensive R&D investments are democratizing access to powerful AI models for developers and businesses globally."
     }
   ],

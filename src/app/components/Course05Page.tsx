@@ -157,13 +157,15 @@ export function Course05Page() {
                   <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#0EA7E9]/10 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-[#0EA7E9]/5 rounded-full blur-3xl"></div>
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 bg-gray-900">
-                    <iframe
+                    <video
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/qEVSB4rNANI?autoplay=1&loop=1&playlist=qEVSB4rNANI&mute=1"
-                      title="AI Training Video"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
+                      src="/assets/img/teamworks/why-you-need-to-learn-AI.webm"
+                      aria-label="Why you need to learn AI -- TeamWorks Course 05"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
                   </div>
                   <p className="text-center text-gray-600 mt-4 text-sm">Explore your AI potential with us.</p>
                   <p className="text-center text-gray-500 mt-2 text-xs max-w-md mx-auto">
@@ -401,7 +403,7 @@ export function Course05Page() {
               <div className="sticky top-8">
                 <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-md mx-auto ring-1 ring-gray-900/5">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/Vsh77KpY/Untitled-design-(33).png"
+                    src="/assets/img/teamworks/teamworks-course-05-outcomes-what-your-team-will-be-able-to-do.webp).png"
                     alt="Diverse team collaborating on AI skills training"
                     className="w-full h-full object-cover"
                   />

@@ -70,42 +70,42 @@ const modules = [
     title: "Understanding Users' Needs",
     tagline: "Observe, interview, and empathise to uncover meaningful insights",
     description: "Learn how to observe, interview, and empathise with users to uncover insights that truly matter.",
-    image: "https://i.postimg.cc/8CWjS28S/DT-picture-1.webp"
+    image: "/assets/img/jess/people-understanding-users.webp"
   },
   {
     number: "02",
     title: "Problems Worth Solving",
     tagline: "Define and prioritise problems that deliver the most impact",
     description: "Translate insights into clearly articulated problem statements and prioritise what matters most.",
-    image: "https://i.postimg.cc/SRvSXD4r/thinking.jpg"
+    image: "/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
   },
   {
     number: "03",
     title: "Generate Ideas",
     tagline: "Explore creative techniques to generate breakthrough solutions",
     description: "Explore creative, out-of-the-box thinking techniques to generate a wide range of possible solutions.",
-    image: "https://i.postimg.cc/wv4FnmHF/ideas.jpg"
+    image: "/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
   },
   {
     number: "04",
     title: "Prototype & Test",
     tagline: "Build, test, and learn fast through real user feedback",
     description: "Build tangible prototypes, test with real users, and learn fast through real feedback.",
-    image: "https://i.postimg.cc/QCrfxGYf/prototype2.webp"
+    image: "/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
   },
   {
     number: "05",
     title: "Synthesize Insights",
     tagline: "Extract learnings and determine clear next steps",
     description: "Make sense of findings, extract learnings, and determine clear next steps with confidence.",
-    image: "https://i.postimg.cc/P5fFwHfq/Malaysia-team-work-activities-in-office-building-something.jpg"
+    image: "/assets/img/jess/people-synthesize-insights-module.webp"
   },
   {
     number: "06",
     title: "Bringing It All Together",
     tagline: "Adapt the process to your organisation and context",
     description: "Designing your process. Explore and adapt the process and approach to your project and situation",
-    image: "https://i.postimg.cc/qBhyLYtD/Untitled-design-(21).png"
+    image: "/assets/img/jess/site-module-bringing-it-all-together.webp).png"
   }
 ];
 
@@ -119,7 +119,7 @@ export function DesignThinkingCoursePage() {
         {/* Full Cover Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://i.postimg.cc/gJZy1Ssv/DT-Hero-page.webp"
+            src="/assets/img/jess/jess-design-thinking-201-design-thinking-201-professional-training.webp"
             alt="Design Thinking 201 - Professional Training"
             className="w-full h-full object-cover object-right lg:object-center"
           />
@@ -229,7 +229,7 @@ export function DesignThinkingCoursePage() {
         {/* Background Image - Right Side - Desktop Only */}
         <div className="hidden lg:block absolute right-[5%] bottom-0 w-2/5">
           <img 
-            src="https://i.postimg.cc/kGrwnd6x/zi-yuan-34.webp"
+            src="/assets/img/jess/jess-design-thinking-201-design-thinking-learning-environment.webp"
             alt="Design thinking learning environment"
             className="w-full h-auto rounded-lg"
           />
@@ -269,7 +269,7 @@ export function DesignThinkingCoursePage() {
                 className="lg:hidden mt-12"
               >
                 <img 
-                  src="https://i.postimg.cc/kGrwnd6x/zi-yuan-34.webp"
+                  src="/assets/img/jess/jess-design-thinking-201-design-thinking-learning-environment.webp"
                   alt="Design thinking learning environment"
                   className="w-full h-auto rounded-lg"
                 />
@@ -454,7 +454,7 @@ export function DesignThinkingCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/8CWjS28S/DT-picture-1.webp"
+                  src="/assets/img/jess/people-understanding-users.webp"
                   alt="Understanding Users' Needs Module"
                   className="w-full h-full object-cover"
                 />
@@ -501,7 +501,7 @@ export function DesignThinkingCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/SRvSXD4r/thinking.jpg"
+                  src="/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
                   alt="Prototype & Test Module"
                   className="w-full h-full object-cover"
                 />
@@ -514,7 +514,7 @@ export function DesignThinkingCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/wv4FnmHF/ideas.jpg"
+                  src="/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
                   alt="Prototype & Test Module"
                   className="w-full h-full object-cover"
                 />
@@ -561,7 +561,7 @@ export function DesignThinkingCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/QCrfxGYf/prototype2.webp"
+                  src="/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
                   alt="Prototype & Test Module"
                   className="w-full h-full object-cover"
                 />
@@ -574,7 +574,7 @@ export function DesignThinkingCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/P5fFwHfq/Malaysia-team-work-activities-in-office-building-something.jpg"
+                  src="/assets/img/jess/people-synthesize-insights-module.webp"
                   alt="Synthesize Insights Module"
                   className="w-full h-full object-cover"
                 />
@@ -621,7 +621,7 @@ export function DesignThinkingCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="https://i.postimg.cc/qBhyLYtD/Untitled-design-(21).png"
+                  src="/assets/img/jess/site-module-bringing-it-all-together.webp).png"
                   alt="Bringing It All Together Module"
                   className="w-full h-full object-cover"
                 />

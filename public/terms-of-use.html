@@ -1,393 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Read CI Agile's Terms of Use for using our website, programs, and services.">
     <title>Terms of Use - CI Agile</title>
+
     <!-- Tailwind CSS CDN -->
     <script>
       // Extend Tailwind CDN config so Jess shadcn-style classes work
       // (bg-background, text-foreground, border-border, etc.)
       window.tailwind = window.tailwind || {};
       window.tailwind.config = {
-      theme: {
-      extend: {
-      colors: {
-      background: 'var(--background)',
-      foreground: 'var(--foreground)',
-      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
-      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
-      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
-      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
-      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
-      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
-      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
-      border: 'var(--border)',
-      input: 'var(--input)',
-      ring: 'var(--ring)',
-      },
-      borderRadius: {
-      sm: 'calc(var(--radius) - 4px)',
-      md: 'calc(var(--radius) - 2px)',
-      lg: 'var(--radius)',
-      xl: 'calc(var(--radius) + 4px)',
-      },
-      },
-      },
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+              popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+              primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+              secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+              muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+              accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+              destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+              border: 'var(--border)',
+              input: 'var(--input)',
+              ring: 'var(--ring)',
+            },
+            borderRadius: {
+              sm: 'calc(var(--radius) - 4px)',
+              md: 'calc(var(--radius) - 2px)',
+              lg: 'var(--radius)',
+              xl: 'calc(var(--radius) + 4px)',
+            },
+          },
+        },
       };
     </script>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest">
-    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="antialiased site-main">
-    <div class="size-full">
-      <nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]">
-        <div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24">
-          <div class="flex items-center h-[24px]">
-            <a href="/index.html" class="no-underline flex items-center h-full">
-              <img alt="CI Agile Logo" class="h-full w-auto object-contain" src="assets/img/main/ciagile-main-logo.webp"/>
-            </a>
-          </div>
-          <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 6h16">
-              </path>
-              <path d="M4 12h16">
-              </path>
-              <path d="M4 18h16">
-              </path>
-            </svg>
-          </button>
-          <div class="hidden md:flex gap-6 md:gap-8 items-center">
-            <div class="relative flex items-center" data-dropdown-container="programs">
-              <button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
-                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span>
-                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
-                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
-                  </path>
-                </svg>
-              </button>
-              <div data-dropdown="programs" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 hidden">
-                <a href="/teamworks/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
-                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div>
-                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Improve team execution, speed, and clarity</div>
-                </a>
-                <a href="/jess/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline">
-                  <div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div>
-                  <div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div>
-                </a>
-              </div>
-            </div>
-            <div class="relative flex items-center" data-dropdown-container="about">
-              <button data-dropdown-trigger="about" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0">
-                <span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">About</span>
-                <svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153">
-                  <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667">
-                  </path>
-                </svg>
-              </button>
-              <div data-dropdown="about" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 hidden">
-                <a href="/aboutus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">About Us</a>
-                <a href="/contactus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">Contact Us</a>
-              </div>
-            </div>
-            <a href="/contactus.html" class="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0">
-              <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
-            </a>
-          </div>
-        </div>
-        <div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
-          <div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true">
-          </div>
-          <div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2">
-              <div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div>
-              <a href="/teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a>
-              <a href="/jess/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a>
-              <div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div>
-              <a href="/aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a>
-              <a href="/contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a>
-              <a href="/contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true">
-                <span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div class="pt-16">
-        <div class="bg-white">
-          <div class="max-w-[900px] mx-auto px-4 md:px-6 py-12 md:py-16">
-            <div class="mb-12">
-              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Terms of Use</h1>
-              <p class="text-base md:text-lg font-semibold text-gray-900 mb-2">CI Agile</p>
-              <p class="text-base md:text-lg font-semibold text-gray-900 mb-8">Last Updated: 26th February 2026</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Welcome to CI Agile (&quot;CI Agile&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;).</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">These Terms of Use (&quot;Terms&quot;) govern your access to and use of our website located at https://fullsite.ciagile.com/ ↗ (the &quot;Site&quot;), as well as your participation in our training programs, workshops, consulting services, and related offerings (collectively, the &quot;Services&quot;).</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">By accessing our Site or engaging with our Services, you agree to be bound by these Terms. If you do not agree, please discontinue use of the Site and Services.</p>
-            </div>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. Use of the Website</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You agree to use the Site only for lawful purposes and in a manner that does not:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Violate any applicable law or regulation</li>
-                <li>Infringe the rights of others</li>
-                <li>Interfere with or disrupt the Site&#x27;s operation</li>
-                <li>Attempt to gain unauthorized access to systems or data</li>
-                <li>Introduce malicious code, viruses, or harmful material</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to restrict, suspend, or terminate access if these Terms are violated.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Our Services</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">CI Agile provides professional:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Leadership and team training programs</li>
-                <li>Workshops and public courses</li>
-                <li>Private corporate programs</li>
-                <li>Consulting and advisory services</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Descriptions of course content, schedules, formats, pricing, and availability are provided on the Site or through direct communication and may be updated from time to time.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Participation in our programs does not guarantee specific business, financial, or operational outcomes. Results depend on organisational implementation, context, and participant engagement.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Registration and Engagement</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">When you:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Submit an inquiry</li>
-                <li>Book a consultation</li>
-                <li>Register for a course</li>
-                <li>Engage us for consulting</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You agree that:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Information provided is accurate and complete</li>
-                <li>You are authorized to act on behalf of your organisation (if applicable)</li>
-                <li>A booking or engagement is only confirmed once acknowledged in writing by CI Agile</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to decline or reschedule engagements where necessary.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">4. Payment and Cancellation</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Payment terms, cancellation policies, and refund conditions will be specified in your engagement agreement or booking confirmation.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Unless otherwise stated, cancellations must be made in accordance with the terms communicated at the time of booking.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">5. User Conduct</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">When participating in our Services or using our Site, you agree to:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Treat facilitators, staff, and other participants with respect</li>
-                <li>Comply with instructions and guidelines provided during programs</li>
-                <li>Not record, photograph, or share program content without prior written permission</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to remove participants who engage in disruptive or inappropriate behavior.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">6. Intellectual Property</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">All materials provided on the Site or during our Services — including but not limited to:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Training content</li>
-                <li>Slides and presentations</li>
-                <li>Frameworks and methodologies</li>
-                <li>Templates and tools</li>
-                <li>Written and digital resources</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">are the intellectual property of CI Agile unless otherwise stated.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You may:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Use materials internally within your organisation for implementation purposes</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You may not:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Reproduce, distribute, publish, or sell materials externally</li>
-                <li>Use materials to create competing products or services</li>
-                <li>Remove copyright or proprietary notices</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">without prior written consent.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Confidentiality</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">During the course of engagements, both parties may share non-public information.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Each party agrees to treat such information as confidential and not disclose it to third parties without consent, except where required by law.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">This obligation does not apply to information that:</p>
-              <ul class="list-disc pl-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>Is publicly available</li>
-                <li>Was already lawfully known</li>
-                <li>Is independently developed</li>
-              </ul>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Third-Party Services</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">The Site may include links to third-party platforms or tools (e.g., scheduling systems, payment providers, CRM platforms, communication tools).</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">CI Agile is not responsible for the content, availability, security, or policies of third-party services. Use of third-party services is subject to their respective terms and policies.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">9. Disclaimer of Warranties</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">To the fullest extent permitted by law:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>The Site is provided on an &quot;as is&quot; and &quot;as available&quot; basis</li>
-                <li>We do not guarantee uninterrupted or error-free access</li>
-                <li>We make no warranties regarding specific business outcomes from participation in our Services</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Professional judgment and implementation remain the responsibility of the client organisation.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">10. Limitation of Liability</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">To the maximum extent permitted by applicable law:</p>
-              <ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700">
-                <li>CI Agile shall not be liable for indirect, incidental, consequential, or special damages</li>
-                <li>Our total liability arising out of or related to any Service shall not exceed the fees paid for the specific Service giving rise to the claim</li>
-              </ul>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Nothing in these Terms excludes liability that cannot be excluded under applicable law.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">11. Changes to These Terms</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">We may update these Terms periodically. Updated versions will be posted on this page with a revised &quot;Last Updated&quot; date.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Continued use of the Site or Services after updates constitutes acceptance of the revised Terms.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">12. Governing Law</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">These Terms are governed by and construed in accordance with the laws of Malaysia, without regard to conflict of law principles.</p>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">Any disputes shall be subject to the jurisdiction of the courts of Malaysia.</p>
-            </section>
-            <hr class="border-gray-300 mb-12"/>
-            <section class="mb-12">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">13. Contact Information</h2>
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">If you have questions regarding these Terms, please contact:</p>
-              <div class="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <p>
-                  <strong>CI Agile</strong>
-                </p>
-                <p class="mt-4">📧 Email: <a href="mailto:romanoff@ciagile.com" class="text-blue-600 hover:underline">romanoff@ciagile.com</a>
-                </p>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <footer class="bg-[#0f1419] text-white">
-        <div class="max-w-7xl mx-auto px-8 lg:px-16">
-          <div class="pt-16">
-            <div class="mb-6">
-              <a href="/index.html" class="inline-block">
-                <img src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile" class="h-7 w-auto brightness-0 invert"/>
-              </a>
-            </div>
-            <p class="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
-            <div class="flex gap-4">
-              <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="LinkedIn">
-                <i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5">
-                </i>
-              </a>
-              <a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="YouTube">
-                <i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5">
-                </i>
-              </a>
-              <a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="Facebook">
-                <i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5">
-                </i>
-              </a>
-            </div>
-          </div>
-          <div class="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3>
-              <a href="/jess/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors">Jeff Sutherland&#x27;s Enterprise Agility Program</a>
-              <ul class="space-y-3 mt-4">
-                <li>
-                  <a href="/jess/leadership-training.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">International Certification Courses</a>
-                </li>
-                <li>
-                  <a href="/jess/class-schedule.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Public Certification Class Schedule</a>
-                </li>
-              </ul>
-              <a href="/jess/team-level-training.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors mt-10">NOVA Series</a>
-              <ul class="space-y-3 mt-4">
-                <li>
-                  <a href="/jess/nova/agile-scrum.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Agile &amp; Scrum 201</a>
-                </li>
-                <li>
-                  <a href="/jess/nova/design-thinking.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Design Thinking 201</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3>
-              <a href="/teamworks/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors">TeamWorks Program</a>
-              <ul class="space-y-3 mt-4">
-                <li>
-                  <a href="/teamworks/creating-super-teams.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Creating Super Teams</a>
-                </li>
-                <li>
-                  <a href="/teamworks/design-thinking.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Win Customers Through Design</a>
-                </li>
-                <li>
-                  <a href="/teamworks/critical-thinking-kanban.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Critical Thinking for Better Work</a>
-                </li>
-                <li>
-                  <a href="/teamworks/practical-lean-problem-solving.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Practical Lean Problem Solving</a>
-                </li>
-                <li>
-                  <a href="/teamworks/ai-skills-for-your-team.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">AI Skills for YOUR Teams</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Resources</h3>
-              <ul class="space-y-3">
-                <li>
-                  <a href="/jess/free-resources.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Free Resources &amp; Official Guides</a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/company/69641858/admin/dashboard/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Community Forums</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Company</h3>
-              <ul class="space-y-3">
-                <li>
-                  <a href="/aboutus.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">About Us</a>
-                </li>
-                <li>
-                  <a href="/contactus.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="border-t border-gray-800">
-          </div>
-          <div class="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center">
-              <a href="/privacy-policy.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Privacy Policy</a>
-              <a href="/terms-of-use.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Terms of Use</a>
-              <a href="/cookie-policy.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Cookie Policy</a>
-            </div>
-            <p class="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <!-- Scripts -->
-    <script src="js/main.js">
-    </script>
-  </body>
-</html>
+</head>
+<body class="antialiased site-main">
+    <div class="size-full"><nav class="fixed bg-[rgba(255,255,255,0.95)] h-[65px] left-0 top-0 w-full z-50 backdrop-blur-sm border-b border-[#e5e7eb]"><div class="flex h-full items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-24"><div class="flex items-center h-[24px]"><a href="/index.html" class="no-underline flex items-center h-full"><img alt="CI Agile Logo" class="h-full w-auto object-contain" src="assets/img/main/ciagile-main-logo.webp"/></a></div><button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="md:hidden inline-flex items-center justify-center rounded p-2 hover:bg-[#f0f7ff] transition-colors"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg></button><div class="hidden md:flex gap-6 md:gap-8 items-center"><div class="relative flex items-center" data-dropdown-container="programs"><button data-dropdown-trigger="programs" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0"><span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">Programs</span><svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153"><path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667"></path></svg></button><div data-dropdown="programs" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[420px] z-50 hidden"><a href="/teamworks/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"><div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For SMEs</div><div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Improve team execution, speed, and clarity</div></a><a href="/jess/index.html" class="block px-6 py-4 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] hover:bg-[#f0f7ff] hover:text-[#0066CC] transition-colors no-underline"><div class="font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[18px] mb-2 text-[#101828]">For Enterprises</div><div class="text-[14px] text-[#6a7282] font-[&#x27;Inter:Light&#x27;,sans-serif]">Enable delivery at scale, across functions, strategy execution with Agile+AI</div></a></div></div><div class="relative flex items-center" data-dropdown-container="about"><button data-dropdown-trigger="about" class="flex items-center gap-1 bg-transparent border-0 cursor-pointer transition-colors py-2 px-0"><span class="font-[&#x27;Inter&#x27;,sans-serif] font-medium leading-[20px] not-italic text-[14px] transition-colors whitespace-nowrap" data-dropdown-text="true" style="color:#364153">About</span><svg class="w-3.5 h-3.5 transition-colors flex-shrink-0" fill="none" viewBox="0 0 14 14" data-dropdown-icon="true" style="color:#364153"><path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16667"></path></svg></button><div data-dropdown="about" class="absolute top-full left-0 mt-0 bg-white rounded-lg shadow-lg border border-[#e5e7eb] py-2 min-w-[200px] z-50 hidden"><a href="/aboutus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">About Us</a><a href="/contactus.html" class="block px-6 py-4 text-[18px] font-[&#x27;Inter:Regular&#x27;,sans-serif] text-[#101828] hover:bg-[#f0f7ff] transition-colors no-underline">Contact Us</a></div></div><a href="/contactus.html" class="bg-[#101828] h-[40px] px-4 md:px-6 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity flex-shrink-0"><span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span></a></div></div><div id="mainsite-mobile-menu" data-mobile-menu="true" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/20" data-mobile-backdrop="true"></div><div class="absolute left-0 right-0 top-[65px] bg-white border-b border-[#e5e7eb] shadow-lg"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-2"><div class="py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">Programs</div><a href="/teamworks/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For SMEs</a><a href="/jess/index.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">For Enterprises</a><div class="mt-2 py-2 px-2 font-[&#x27;Inter&#x27;,sans-serif] font-medium text-[14px] text-[#364153]">About</div><a href="/aboutus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">About Us</a><a href="/contactus.html" class="px-2 py-3 text-[14px] font-[&#x27;Inter:Light&#x27;,sans-serif] text-[#364153] no-underline hover:text-[#0066CC]" data-mobile-close="true">Contact Us</a><a href="/contactus.html" class="mt-2 bg-[#101828] h-[40px] px-4 py-2 flex items-center justify-center rounded no-underline hover:opacity-80 transition-opacity" data-mobile-close="true"><span class="font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal leading-[20px] not-italic text-[14px] text-center text-white whitespace-nowrap">Talk to an Expert</span></a></div></div></div></nav><div class="pt-16"><div class="bg-white"><div class="max-w-[900px] mx-auto px-4 md:px-6 py-12 md:py-16"><div class="mb-12"><h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Terms of Use</h1><p class="text-base md:text-lg font-semibold text-gray-900 mb-2">CI Agile</p><p class="text-base md:text-lg font-semibold text-gray-900 mb-8">Last Updated: 26th February 2026</p><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Welcome to CI Agile (&quot;CI Agile&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;).</p><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">These Terms of Use (&quot;Terms&quot;) govern your access to and use of our website located at https://fullsite.ciagile.com/ ↗ (the &quot;Site&quot;), as well as your participation in our training programs, workshops, consulting services, and related offerings (collectively, the &quot;Services&quot;).</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">By accessing our Site or engaging with our Services, you agree to be bound by these Terms. If you do not agree, please discontinue use of the Site and Services.</p></div><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. Use of the Website</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You agree to use the Site only for lawful purposes and in a manner that does not:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Violate any applicable law or regulation</li><li>Infringe the rights of others</li><li>Interfere with or disrupt the Site&#x27;s operation</li><li>Attempt to gain unauthorized access to systems or data</li><li>Introduce malicious code, viruses, or harmful material</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to restrict, suspend, or terminate access if these Terms are violated.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Our Services</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">CI Agile provides professional:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Leadership and team training programs</li><li>Workshops and public courses</li><li>Private corporate programs</li><li>Consulting and advisory services</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Descriptions of course content, schedules, formats, pricing, and availability are provided on the Site or through direct communication and may be updated from time to time.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">Participation in our programs does not guarantee specific business, financial, or operational outcomes. Results depend on organisational implementation, context, and participant engagement.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Registration and Engagement</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">When you:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Submit an inquiry</li><li>Book a consultation</li><li>Register for a course</li><li>Engage us for consulting</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You agree that:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Information provided is accurate and complete</li><li>You are authorized to act on behalf of your organisation (if applicable)</li><li>A booking or engagement is only confirmed once acknowledged in writing by CI Agile</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to decline or reschedule engagements where necessary.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">4. Payment and Cancellation</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Payment terms, cancellation policies, and refund conditions will be specified in your engagement agreement or booking confirmation.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">Unless otherwise stated, cancellations must be made in accordance with the terms communicated at the time of booking.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">5. User Conduct</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">When participating in our Services or using our Site, you agree to:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Treat facilitators, staff, and other participants with respect</li><li>Comply with instructions and guidelines provided during programs</li><li>Not record, photograph, or share program content without prior written permission</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">We reserve the right to remove participants who engage in disruptive or inappropriate behavior.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">6. Intellectual Property</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">All materials provided on the Site or during our Services — including but not limited to:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Training content</li><li>Slides and presentations</li><li>Frameworks and methodologies</li><li>Templates and tools</li><li>Written and digital resources</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">are the intellectual property of CI Agile unless otherwise stated.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You may:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Use materials internally within your organisation for implementation purposes</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">You may not:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>Reproduce, distribute, publish, or sell materials externally</li><li>Use materials to create competing products or services</li><li>Remove copyright or proprietary notices</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">without prior written consent.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Confidentiality</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">During the course of engagements, both parties may share non-public information.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Each party agrees to treat such information as confidential and not disclose it to third parties without consent, except where required by law.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">This obligation does not apply to information that:</p><ul class="list-disc pl-6 space-y-2 text-base md:text-lg text-gray-700"><li>Is publicly available</li><li>Was already lawfully known</li><li>Is independently developed</li></ul></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Third-Party Services</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">The Site may include links to third-party platforms or tools (e.g., scheduling systems, payment providers, CRM platforms, communication tools).</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">CI Agile is not responsible for the content, availability, security, or policies of third-party services. Use of third-party services is subject to their respective terms and policies.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">9. Disclaimer of Warranties</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">To the fullest extent permitted by law:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>The Site is provided on an &quot;as is&quot; and &quot;as available&quot; basis</li><li>We do not guarantee uninterrupted or error-free access</li><li>We make no warranties regarding specific business outcomes from participation in our Services</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">Professional judgment and implementation remain the responsibility of the client organisation.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">10. Limitation of Liability</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">To the maximum extent permitted by applicable law:</p><ul class="list-disc pl-6 mb-6 space-y-2 text-base md:text-lg text-gray-700"><li>CI Agile shall not be liable for indirect, incidental, consequential, or special damages</li><li>Our total liability arising out of or related to any Service shall not exceed the fees paid for the specific Service giving rise to the claim</li></ul><p class="text-base md:text-lg text-gray-700 leading-relaxed">Nothing in these Terms excludes liability that cannot be excluded under applicable law.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">11. Changes to These Terms</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">We may update these Terms periodically. Updated versions will be posted on this page with a revised &quot;Last Updated&quot; date.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">Continued use of the Site or Services after updates constitutes acceptance of the revised Terms.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">12. Governing Law</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">These Terms are governed by and construed in accordance with the laws of Malaysia, without regard to conflict of law principles.</p><p class="text-base md:text-lg text-gray-700 leading-relaxed">Any disputes shall be subject to the jurisdiction of the courts of Malaysia.</p></section><hr class="border-gray-300 mb-12"/><section class="mb-12"><h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">13. Contact Information</h2><p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">If you have questions regarding these Terms, please contact:</p><div class="text-base md:text-lg text-gray-700 leading-relaxed space-y-2"><p><strong>CI Agile</strong></p><p class="mt-4">📧 Email: <a href="mailto:romanoff@ciagile.com" class="text-blue-600 hover:underline">romanoff@ciagile.com</a></p></div></section></div></div></div><footer class="bg-[#0f1419] text-white"><div class="max-w-7xl mx-auto px-8 lg:px-16"><div class="pt-16"><div class="mb-6"><a href="/index.html" class="inline-block"><img src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile" class="h-7 w-auto brightness-0 invert"/></a></div><p class="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p><div class="flex gap-4"><a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a><a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="YouTube"><i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a><a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-700 text-gray-300 flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all" aria-label="Facebook"><i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a></div></div><div class="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4"><div><h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3><a href="/jess/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors">Jeff Sutherland&#x27;s Enterprise Agility Program</a><ul class="space-y-3 mt-4"><li><a href="/jess/leadership-training.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">International Certification Courses</a></li><li><a href="/jess/class-schedule.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Public Certification Class Schedule</a></li></ul><a href="/jess/team-level-training.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors mt-10">NOVA Series</a><ul class="space-y-3 mt-4"><li><a href="/jess/nova/agile-scrum.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Agile &amp; Scrum 201</a></li><li><a href="/jess/nova/design-thinking.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Design Thinking 201</a></li></ul></div><div><h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3><a href="/teamworks/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors">TeamWorks Program</a><ul class="space-y-3 mt-4"><li><a href="/teamworks/creating-super-teams.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Creating Super Teams</a></li><li><a href="/teamworks/design-thinking.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Win Customers Through Design</a></li><li><a href="/teamworks/critical-thinking-kanban.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Critical Thinking for Better Work</a></li><li><a href="/teamworks/practical-lean-problem-solving.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Practical Lean Problem Solving</a></li><li><a href="/teamworks/ai-skills-for-your-team.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">AI Skills for YOUR Teams</a></li></ul></div><div><h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Resources</h3><ul class="space-y-3"><li><a href="/jess/free-resources.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Free Resources &amp; Official Guides</a></li><li><a href="https://www.linkedin.com/company/69641858/admin/dashboard/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Community Forums</a></li></ul></div><div><h3 class="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Company</h3><ul class="space-y-3"><li><a href="/aboutus.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">About Us</a></li><li><a href="/contactus.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light">Contact Us</a></li></ul></div></div><div class="border-t border-gray-800"></div><div class="py-8 flex flex-col md:flex-row justify-between items-center gap-6"><div class="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center"><a href="/privacy-policy.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Privacy Policy</a><a href="/terms-of-use.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Terms of Use</a><a href="/cookie-policy.html" class="text-gray-300 hover:text-[#8FB3FF] transition-colors font-light">Cookie Policy</a></div><p class="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p></div></div></footer></div>
 
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

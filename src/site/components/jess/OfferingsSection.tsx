@@ -250,7 +250,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
             className="w-full h-full relative"
           >
             <ImageWithFallback
-              src="https://i.postimg.cc/R03PDFP7/books-sas-twicehalf-harvard.webp"
+              src="/assets/img/jess/people-scrum-scale-framework.webp"
               alt="Scrum@Scale Framework"
               className="w-full h-full object-cover transition-all duration-500"
             />
@@ -310,7 +310,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
                 className="w-full h-full absolute inset-0"
               >
                 <ImageWithFallback
-                  src="https://i.postimg.cc/9X9p9KSw/Pictures-to-describe-flow-and-metrics-of-hyper-performance-team-graphs-numbers.jpg"
+                  src="/assets/img/jess/site-data-analytics-graphs-and-metrics.webp"
                   alt="Data analytics graphs and metrics"
                   className="w-full h-full object-cover transition-all duration-500"
                 />
@@ -381,7 +381,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
             className="w-full h-full relative"
           >
             <ImageWithFallback
-              src="https://i.postimg.cc/FHwbfZLb/Busines-Value.webp"
+              src="/assets/img/jess/site-hyper-productive-teams-collaborating.webp"
               alt="Hyper-productive teams collaborating"
               className="w-full h-full object-cover transition-all duration-500"
             />

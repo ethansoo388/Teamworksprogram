@@ -149,7 +149,7 @@ export function Course04Page() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/rmfMkyBG/hero.jpg"
+                    src="/assets/img/teamworks/teamworks-course-04-frontline-workers-in-action.webp"
                     alt="Frontline workers in action"
                     className="w-full h-full object-cover"
                   />
@@ -317,7 +317,7 @@ export function Course04Page() {
               <div className="group grid lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/CMk8C3V4/Untitled-design-(22).png"
+                    src="/assets/img/teamworks/teamworks-identify-operational-gaps.webp).png"
                     alt="Identify Operational Gaps"
                     className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -348,7 +348,7 @@ export function Course04Page() {
               <div className="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/vBd0XWDn/Untitled-design-(24).png"
+                    src="/assets/img/teamworks/site-eliminate-root-causes.webp).png"
                     alt="Eliminate Root Causes"
                     className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -379,7 +379,7 @@ export function Course04Page() {
               <div className="group grid lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/Fsc7X3K1/Untitled-design-(23).png"
+                    src="/assets/img/teamworks/site-prioritise-high-impact-problems.webp).png"
                     alt="Prioritise High-Impact Problems"
                     className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -410,7 +410,7 @@ export function Course04Page() {
               <div className="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/c1tbZLGr/5S.jpg"
+                    src="/assets/img/teamworks/people-improve-workflow-efficiency.webp"
                     alt="Improve Workflow Efficiency"
                     className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -441,7 +441,7 @@ export function Course04Page() {
               <div className="group grid lg:grid-cols-2 gap-10 items-center">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/6pFKW1b1/Module-5.jpg"
+                    src="/assets/img/teamworks/teamworks-course-04-measure-sustain-improvements.webp"
                     alt="Measure & Sustain Improvements"
                     className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -582,7 +582,7 @@ export function Course04Page() {
               <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
                 <div className="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/XYQv30TK/Untitled-design-(28).png"
+                    src="/assets/img/teamworks/site-customer-service.webp).png"
                     alt="Customer Service"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -606,7 +606,7 @@ export function Course04Page() {
               <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
                 <div className="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/Y2GL3jJ7/Untitled-design-(27).png"
+                    src="/assets/img/teamworks/site-sales.webp).png"
                     alt="Sales"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -630,7 +630,7 @@ export function Course04Page() {
               <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
                 <div className="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/VsWQ2FyG/Untitled-design-(29).png"
+                    src="/assets/img/teamworks/site-operations.webp).png"
                     alt="Operations"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -654,7 +654,7 @@ export function Course04Page() {
               <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
                 <div className="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/6qgSJzXk/Untitled-design-(32).png"
+                    src="/assets/img/teamworks/site-front-desk.webp).png"
                     alt="Front Desk"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -678,7 +678,7 @@ export function Course04Page() {
               <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
                 <div className="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
                   <ImageWithFallback
-                    src="https://i.postimg.cc/V6Nn1RGr/Untitled-design-(30).png"
+                    src="/assets/img/teamworks/site-retail-associates.webp).png"
                     alt="Retail Associates"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />

@@ -25,7 +25,7 @@ export function FrameworkSection() {
                 {/* Left Column - White Background */}
                 <div className="relative w-full bg-white" style={{ aspectRatio: '16/9' }}>
                   <ImageWithFallback
-                    src="https://i.postimg.cc/SQMh1qmJ/1.jpg"
+                    src="/assets/img/jess/people-scrum-scale-framework.webp"
                     alt="Scrum@Scale Framework"
                     className="w-full h-full object-contain"
                   />
@@ -34,7 +34,7 @@ export function FrameworkSection() {
                 {/* Right Column - Black Background */}
                 <div className="relative w-full bg-black" style={{ aspectRatio: '16/9' }}>
                   <ImageWithFallback
-                    src="https://i.postimg.cc/HW5q42t6/scrum.jpg"
+                    src="/assets/img/jess/people-hyper.webp"
                     alt="Hyper-Productive Scrum"
                     className="w-full h-full object-contain"
                   />

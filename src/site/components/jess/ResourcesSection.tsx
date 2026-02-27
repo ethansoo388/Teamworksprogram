@@ -96,7 +96,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
 
             <div className="mb-6">
               <img
-                src="https://i.postimg.cc/fknZJpVR/Asia-teams-received-professional-certification-happy-celebrating.jpg"
+                src="/assets/img/jess/site-teams-celebrating-professional-certification-achievement.webp"
                 alt="Teams celebrating professional certification achievement"
                 className={`w-full h-64 object-cover ${isDark ? 'rounded-lg' : 'rounded-sm'}`}
               />

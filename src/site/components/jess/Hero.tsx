@@ -83,7 +83,7 @@ export function Hero() {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 jess-hero-img-wrap">
               <ImageWithFallback
-                src="https://i.postimg.cc/VLF7hxYW/jeff-sutherland.webp"
+                src="/assets/img/jess/people-jeff-sutherland.webp"
                 alt="Jeff Sutherland - Inventor of Scrum"
                 className="jess-hero-bg-img"
               />

@@ -14,7 +14,7 @@ const items: AccordionItem[] = [
     description:
       "Design an execution system that aligns strategy, teams, and governance — so work flows end-to-end without constant intervention.",
     image:
-      "https://i.postimg.cc/hGqpcy3m/Effective-leadership-Malaysian-leaders-look-like.jpg",
+      "/assets/img/jess/people-effective-system.webp",
   },
   {
     id: "clear-roles",
@@ -22,14 +22,14 @@ const items: AccordionItem[] = [
     description:
       "Make accountability explicit across teams, products, and portfolios — so decisions don't stall, duplicate, or escalate unnecessarily.",
     image:
-      "https://i.postimg.cc/8sQ9pS5d/Asian-team-with-deciding-look-with-a-wall-board.jpg",
+      "/assets/img/jess/people-clear-roles.webp",
   },
   {
     id: "decision-rights",
     title: "Decision Rights",
     description:
       "Clarify who decides what, at which level, and with what constraints — removing decision bottlenecks and reducing escalation overhead.",
-    image: "https://i.postimg.cc/2yKt2j57/making-decisions-2.jpg",
+    image: "/assets/img/jess/people-decision-rights.webp",
   },
   {
     id: "outcome-models",
@@ -37,14 +37,14 @@ const items: AccordionItem[] = [
     description:
       "Connect delivery metrics to business outcomes and customer impact — so leaders can steer by value, not activity.",
     image:
-      "https://i.postimg.cc/FsvQXyLQ/Image-of-airport-operation-SME-for-Malaysia.jpg",
+      "/assets/img/jess/people-outcome.webp",
   },
 ];
 
 export function LeadershipAccordion() {
   // Use a single static image (matches previous behavior)
   const staticImage =
-    "https://i.postimg.cc/8sQ9pS5d/Asian-team-with-deciding-look-with-a-wall-board.jpg";
+    "/assets/img/jess/people-clear-roles.webp";
 
   return (
     <div className="bg-slate-50 rounded-3xl p-4 sm:p-8 lg:p-12 xl:p-16">

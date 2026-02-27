@@ -239,7 +239,7 @@ export function AboutCIAgileSection() {
             {/* Right — Photo */}
             <div className="relative order-first lg:order-last h-full min-h-[300px] md:min-h-[400px] lg:min-h-[600px]">
               <img
-                src="https://i.postimg.cc/zvHfVHpk/photo-drjeff-ethan.webp"
+                src="/assets/img/main/main-about-ci-agile-team-collaboration.webp"
                 alt="CI Agile team collaboration"
                 className="w-full h-full min-h-[300px] md:min-h-[400px] lg:min-h-[600px] object-cover rounded-lg"
               />
@@ -396,11 +396,11 @@ export function FounderProfileSection() {
               <div className="flex items-center gap-3 mb-4">
                 <a href="https://www.linkedin.com/in/ethansoo/" target="_blank" rel="noopener noreferrer"
                    className="hover:opacity-80 transition-opacity" aria-label="LinkedIn">
-                  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="w-5 h-5" />
+                  <img src="/assets/img/main/icon-linkedin.webp" alt="LinkedIn icon" className="w-5 h-5" />
                 </a>
                 <a href="https://www.facebook.com/ethan.soo.98" target="_blank" rel="noopener noreferrer"
                    className="hover:opacity-80 transition-opacity" aria-label="Facebook">
-                  <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" className="w-5 h-5" />
+                  <img src="/assets/img/main/icon-facebook.webp" alt="Facebook icon" className="w-5 h-5" />
                 </a>
               </div>
               <p className="text-sm text-gray-600 font-normal mb-1">Founder</p>
@@ -457,7 +457,7 @@ export function ExperienceScalesSection() {
           <div className="lg:pr-8">
             <div className="mb-6 overflow-hidden rounded-lg">
               <img
-                src="https://images.unsplash.com/photo-1735639013995-086e648eaa38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwd29ya3Nob3AlMjBjb2xsYWJvcmF0aW9uJTIwbWVldGluZ3xlbnwxfHx8fDE3Njk0MTA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/img/main/main-about-team-collaboration-and-problem-solving.webp"
                 alt="Team collaboration and problem-solving"
                 className="w-full h-[320px] object-cover"
               />

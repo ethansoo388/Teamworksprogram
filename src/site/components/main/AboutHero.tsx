@@ -10,7 +10,7 @@ export function AboutHero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 opacity-30">
         <img
-          src="https://i.postimg.cc/85hs1WcJ/CI-AGILE-About-Us.png"
+          src="/assets/img/main/main-about-professional-business-consulting-environment.webp"
           alt="Professional business consulting environment"
           className="w-full h-full object-cover"
         />

@@ -91,19 +91,19 @@ function HeroSection() {
 // ---------------------------------------------------------------------------
 function ClientLogosSection() {
   const clients = [
-    { name: "AIS",                 industry: "Telecommunications", logo: "https://i.postimg.cc/jSJZKm8j/ais-2x.webp" },
-    { name: "Axon Thai",           industry: "Technology",         logo: "https://i.postimg.cc/d0KTzxkG/axon-thai-2x.webp" },
-    { name: "Bank of China",       industry: "Banking",            logo: "https://i.postimg.cc/DwGXpTzH/bank-of-china-standardized-2x.webp" },
-    { name: "Bank Negara Malaysia", industry: "Government",        logo: "https://i.postimg.cc/rFWDT2Bf/bnm-final-standardized-2x.webp" },
-    { name: "CIMB Thai",           industry: "Banking",            logo: "https://i.postimg.cc/HLD3LzKn/cimb-thai-2x.webp" },
-    { name: "Cisco",               industry: "Technology",         logo: "https://i.postimg.cc/wBdsSGyg/cisco-standardized-2x.webp" },
-    { name: "DBS",                 industry: "Banking",            logo: "https://i.postimg.cc/8zrtD9Z2/dbs-2x.webp" },
-    { name: "GovTech Singapore",   industry: "Government",         logo: "https://i.postimg.cc/Qd2K5xpG/govtech-sg-clean-standard-2x.webp" },
-    { name: "HSBC",                industry: "Banking",            logo: "https://i.postimg.cc/zfZpf7MH/hsbc-2x.webp" },
-    { name: "Infineon",            industry: "Technology",         logo: "https://i.postimg.cc/g0P6fTXY/infineon-standardized-2x.webp" },
-    { name: "Shell",               industry: "Energy",             logo: "https://i.postimg.cc/9fZy0qww/shell-standardized-retina-2x.webp" },
-    { name: "Sinar Mas",           industry: "Conglomerate",       logo: "https://i.postimg.cc/4xhBZqWj/sinar-mas-2x.webp" },
-    { name: "ZTE",                 industry: "Telecommunications", logo: "https://i.postimg.cc/fbh06r3G/zte-2x.webp" },
+    { name: "AIS",                 industry: "Telecommunications", logo: "/assets/img/main/logo-ais.webp" },
+    { name: "Axon Thai",           industry: "Technology",         logo: "/assets/img/main/logo-axon.webp" },
+    { name: "Bank of China",       industry: "Banking",            logo: "/assets/img/main/logo-bank-of-china.webp" },
+    { name: "Bank Negara Malaysia", industry: "Government",        logo: "/assets/img/main/logo-bank-negara-malaysia.webp" },
+    { name: "CIMB Thai",           industry: "Banking",            logo: "/assets/img/main/logo-cimb.webp" },
+    { name: "Cisco",               industry: "Technology",         logo: "/assets/img/main/logo-cisco.webp" },
+    { name: "DBS",                 industry: "Banking",            logo: "/assets/img/main/logo-dbs.webp" },
+    { name: "GovTech Singapore",   industry: "Government",         logo: "/assets/img/main/logo-govtech-singapore.webp" },
+    { name: "HSBC",                industry: "Banking",            logo: "/assets/img/main/logo-hsbc.webp" },
+    { name: "Infineon",            industry: "Technology",         logo: "/assets/img/main/logo-infineon.webp" },
+    { name: "Shell",               industry: "Energy",             logo: "/assets/img/main/logo-shell.webp" },
+    { name: "Sinar Mas",           industry: "Conglomerate",       logo: "/assets/img/main/logo-sinar-mas.webp" },
+    { name: "ZTE",                 industry: "Telecommunications", logo: "/assets/img/main/logo-zte.webp" },
   ];
 
   return (
@@ -248,7 +248,7 @@ function DifferenceSection() {
           {/* Right — Image */}
           <div className="relative h-[400px] lg:h-[600px]">
             <img
-              src="https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBjb2xsYWJvcmF0aW9uJTIwbW9kZXJuJTIwb2ZmaWNlfGVufDF8fHx8MTc3MDk4MjczNXww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/assets/img/main/main-home-professional-team-collaboration.webp"
               alt="Professional team collaboration"
               className="w-full h-full object-cover rounded-3xl"
             />
@@ -368,25 +368,25 @@ function HowWeWorkSection() {
       title: "Diagnose the Real Problem",
       description:
         "We start with what truly matters. We align on outcomes, constraints, and real business context — not pre-packaged frameworks.",
-      image: "https://images.unsplash.com/photo-1723987251277-18fc0a1effd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5c2lzJTIwZGF0YSUyMGRpYWdub3Npc3xlbnwxfHx8fDE3NzEwNjk3NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/assets/img/main/main-home-diagnose-the-real-problem.webp",
     },
     {
       title: "Design the Right System",
       description:
         "Built for how your organization actually works. Operating models, governance, ways of working, and AI enablement tailored to your reality.",
-      image: "https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG9yZ2FuaXphdGlvbiUyMGRlc2lnbiUyMGZyYW1ld29yayUyMHBsYW5uaW5nfGVufDF8fHx8MTc3MTA3MDE4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/assets/img/main/main-home-design-the-right-system.webp",
     },
     {
       title: "Enable Teams & Execution",
       description:
         "Change that sticks, not theory. We work with leaders and teams on the ground to embed new ways of working into daily execution.",
-      image: "https://images.unsplash.com/photo-1768796370577-c6e8b708b980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMGV4ZWN1dGlvbiUyMHdvcmtzaG9wfGVufDF8fHx8MTc3MTA2OTc2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/assets/img/main/main-home-enable-teams-execution.webp",
     },
     {
       title: "Deliver Measurable Results",
       description:
         "Results you can see and sustain. Clear metrics, faster flow, better decisions, and outcomes that matter to the business.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGdyb3d0aCUyMG1ldHJpY3MlMjBkYXNoYm9hcmQlMjByZXN1bHRzfGVufDF8fHx8MTc3MTA3MDMwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/assets/img/main/people-deliver-measurable-results.webp",
     },
   ];
 

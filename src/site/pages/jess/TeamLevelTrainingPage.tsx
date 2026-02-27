@@ -3,7 +3,7 @@ import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { CTASection } from "@/site/components/jess/CTASection";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 import { Users, Award, Zap, Target, BookOpen, Lightbulb, ArrowRight, ArrowLeft, Video, MapPin, Check } from "lucide-react";
-const heroImage = "/src/assets/img/jess/13710a2218ff3dbfa7f73a0f93db5eeecab72c44.png";
+const heroImage = "/assets/img/jess/jess-agile-scrum-201-nova-agile-scrum-for-delivery-teams.webp";
 
 const courses = [
   {
@@ -123,7 +123,7 @@ export function TeamLevelTrainingPage() {
             >
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-slate-100 shadow-2xl">
                 <ImageWithFallback 
-                  src="https://i.postimg.cc/Jtwx459D/HERO-IMAGE-NOVA.png"
+                  src="/assets/img/jess/main-about-team-collaboration-and-problem-solving.webp"
                   alt="Team collaborating and working together" 
                   className="w-full h-full object-cover"
                 />
