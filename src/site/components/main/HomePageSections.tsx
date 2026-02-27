@@ -737,9 +737,9 @@ export function MainSiteFooter() {
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs font-light">© 2025 CI Agile. All rights reserved.</p>
           <div className="flex gap-8 text-xs">
-            <a href="#" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
+            <a href="/privacy-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
+            <a href="/terms-of-use.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Use</a>
+            <a href="/cookie-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
           </div>
         </div>
       </div>

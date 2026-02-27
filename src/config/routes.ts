@@ -56,6 +56,35 @@ export const routes: RouteEntry[] = [
     siteType: "main",
   },
 
+  // ── Legal (Main site) ────────────────────────────────────────────────
+  {
+    modulePath: "/src/site/pages/legal/PrivacyPolicyPage.tsx",
+    componentName: "PrivacyPolicyPage",
+    filename: "privacy-policy.html",
+    title: "Privacy Policy - CI Agile",
+    description:
+      "Read CI Agile's Privacy Policy, including how we collect, use, and protect your personal data.",
+    siteType: "main",
+  },
+  {
+    modulePath: "/src/site/pages/legal/TermsOfUsePage.tsx",
+    componentName: "TermsOfUsePage",
+    filename: "terms-of-use.html",
+    title: "Terms of Use - CI Agile",
+    description:
+      "Read CI Agile's Terms of Use for using our website, programs, and services.",
+    siteType: "main",
+  },
+  {
+    modulePath: "/src/site/pages/legal/CookiePolicyPage.tsx",
+    componentName: "CookiePolicyPage",
+    filename: "cookie-policy.html",
+    title: "Cookie Policy - CI Agile",
+    description:
+      "Read CI Agile's Cookie Policy, including how cookies and similar technologies are used on our website.",
+    siteType: "main",
+  },
+
   // ── TeamWorks ──────────────────────────────────────────────────────────
   {
     modulePath: "/src/site/pages/teamworks/LandingPage.tsx",

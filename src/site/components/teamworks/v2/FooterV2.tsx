@@ -58,8 +58,9 @@ export function FooterV2({ program = "teamworks" }: FooterV2Props) {
             &copy; 2026 {brand.name}. All rights reserved.
           </div>
           <div className="flex gap-8 text-sm text-gray-500">
-            <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-900 transition-colors">Terms of Service</a>
+            <a href="/privacy-policy.html" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
+            <a href="/terms-of-use.html" className="hover:text-gray-900 transition-colors">Terms of Use</a>
+            <a href="/cookie-policy.html" className="hover:text-gray-900 transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>
