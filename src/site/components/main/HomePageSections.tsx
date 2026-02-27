@@ -391,7 +391,7 @@ function HowWeWorkSection() {
   ];
 
   return (
-    <section className="py-32 px-8 lg:px-16 bg-[#1A2837]">
+    <section id="methodology" className="py-32 px-8 lg:px-16 bg-[#1A2837]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <p className="text-xs text-gray-400 uppercase tracking-widest font-light">Our Methodology</p>

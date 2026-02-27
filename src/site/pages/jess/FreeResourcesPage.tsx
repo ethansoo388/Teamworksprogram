@@ -166,7 +166,7 @@ export function FreeResourcesPage() {
                   </div>
                 </div>
                 {/* Card 7 - Community Forums */}
-                <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a id="community-forums" href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="relative h-48 bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
                     <Users className="text-white/20" size={120} strokeWidth={1} />
                     <div className="absolute -bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">

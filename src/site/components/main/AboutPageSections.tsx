@@ -248,7 +248,7 @@ export function AboutCIAgileSection() {
         </div>
 
         {/* Services designed for outcomes */}
-        <div className="mb-16 md:mb-24 lg:mb-32">
+        <div id="services" className="mb-16 md:mb-24 lg:mb-32">
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 border-l-4 border-[#FFB800] pl-3">
             Our Services
           </p>
@@ -320,7 +320,7 @@ export function AboutCIAgileSection() {
         </div>
 
         {/* Execution philosophy */}
-        <div className="mb-12 md:mb-20 lg:mb-24">
+        <div id="philosophy" className="mb-12 md:mb-20 lg:mb-24">
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 border-l-4 border-[#FFB800] pl-3">
             Our Philosophy
           </p>
@@ -368,7 +368,7 @@ export function AboutCIAgileSection() {
 // ---------------------------------------------------------------------------
 export function FounderProfileSection() {
   return (
-    <section className="py-20 px-8 lg:px-16 bg-white border-t border-gray-200">
+    <section id="founder" className="py-20 px-8 lg:px-16 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <p className="text-xs font-bold text-[#D4A574] uppercase tracking-wider mb-6">Meet the Founder</p>

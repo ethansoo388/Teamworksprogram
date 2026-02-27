@@ -186,6 +186,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Mobile nav accordion (new navbar sections: Programs, Resources, Company)
+  // Toggles [data-nav-accordion-panel] visibility when [data-nav-accordion] is clicked.
+  const navAccordionBtns = Array.from(document.querySelectorAll('[data-nav-accordion]'));
+  navAccordionBtns.forEach((btn) => {
+    if (!(btn instanceof HTMLElement)) return;
+    const name = btn.getAttribute('data-nav-accordion');
+    const panel = document.querySelector(`[data-nav-accordion-panel="${name}"]`);
+    const icon = btn.querySelector('[data-nav-accordion-icon]');
+    if (!panel) return;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isHidden = panel.classList.contains('hidden');
+
+      // Close all other accordion panels first
+      navAccordionBtns.forEach((otherBtn) => {
+        if (otherBtn === btn) return;
+        const otherName = otherBtn.getAttribute('data-nav-accordion');
+        const otherPanel = document.querySelector(`[data-nav-accordion-panel="${otherName}"]`);
+        const otherIcon = otherBtn.querySelector('[data-nav-accordion-icon]');
+        if (otherPanel) otherPanel.classList.add('hidden');
+        if (otherIcon) otherIcon.style.transform = '';
+      });
+
+      // Toggle current panel
+      if (isHidden) {
+        panel.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        panel.classList.add('hidden');
+        if (icon) icon.style.transform = '';
+      }
+    });
+  });
+
   // Mobile menu toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
