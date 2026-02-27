@@ -27,7 +27,7 @@ export function CTASection() {
                 className="inline-flex items-center"
               >
                 <Calendar className="mr-2" size={20} />
-                Schedule an Executive Briefing
+                Speak with a Transformation Advisor
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </a>
             </Button>

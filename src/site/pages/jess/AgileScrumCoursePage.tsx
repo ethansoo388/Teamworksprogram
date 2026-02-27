@@ -171,7 +171,7 @@ export function AgileScrumCoursePage() {
                 <a href="/contactus.html?source=nova-scrum201&cta=talk-private-run#contact-form"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
                 >
-                  <span>Talk to Us About a Private Run</span>
+                  <span>Talk to Program Advisor</span>
                 </a>
                 <p className="text-xs lg:text-sm text-white/60 lg:text-slate-400">
                   No pricing or commitment — just a short discussion to assess fit.
@@ -695,12 +695,6 @@ export function AgileScrumCoursePage() {
                     <span className="text-lg text-slate-600">(Instructor-Led)</span>
                   </div>
                 </div>
-                
-                <a href="/contactus.html?source=nova-scrum201&cta=discuss-standard-delivery#contact-form"
-                  className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
-                >
-                  Discuss Standard Delivery
-                </a>
               </div>
 
               <div className="space-y-3">
@@ -870,7 +864,7 @@ export function AgileScrumCoursePage() {
             <a href="/contactus.html?source=nova-scrum201&cta=discuss-delivery-options#contact-form"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
             >
-              <span>Discuss Delivery Options</span>
+              <span>Talk to Program Advisor</span>
             </a>
           </div>
         </div>
@@ -896,7 +890,7 @@ export function AgileScrumCoursePage() {
             <a href="/contactus.html?source=nova-scrum201&cta=schedule-corporate-discussion#contact-form"
               className="px-10 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-lg"
             >
-              Schedule a Corporate Discussion
+              Talk to Program Advisor
             </a>
             
             <p className="text-xs text-slate-500 mt-6">

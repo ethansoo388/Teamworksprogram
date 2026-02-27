@@ -761,7 +761,7 @@ export function DesignThinkingCoursePage() {
             <a href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 mb-3"
             >
-              <span>Discuss a Private Corporate Run</span>
+              <span>Talk to Program Advisor</span>
             </a>
             <p className="text-sm text-slate-600">
               We'll help you assess fit, scope, and outcomes — no obligation.

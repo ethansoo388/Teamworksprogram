@@ -58,7 +58,7 @@ export function Hero() {
                   href="/contactus.html?source=jess-home&cta=talk-enterprise-execution#contact-form"
                   className="inline-flex items-center"
                 >
-                  Talk About Enterprise Execution
+                  Start Jeff Sutherland's Enterprise Agility Program
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
               </Button>
@@ -68,7 +68,7 @@ export function Hero() {
                 asChild
                 className="border-cyan-500 text-cyan-400 hover:bg-slate-800 hover:text-cyan-300 px-6 py-6 text-lg"
               >
-                <a href="#solution">Explore the JESS System</a>
+                <a href="/jess/class-schedule.html">View Certification Class Schedule</a>
               </Button>
             </div>
           </div>
