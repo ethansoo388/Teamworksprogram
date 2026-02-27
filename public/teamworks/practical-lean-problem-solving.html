@@ -1,67 +1,1094 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Empower your frontline to solve problems using practical Lean thinking. Reduce recurring issues, improve customer satisfaction, and build a problem-solving culture.">
     <title>Practical Lean Problem Solving - TeamWorks Course 04</title>
-
     <!-- Tailwind CSS CDN -->
     <script>
       // Extend Tailwind CDN config so Jess shadcn-style classes work
       // (bg-background, text-foreground, border-border, etc.)
       window.tailwind = window.tailwind || {};
       window.tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: 'var(--background)',
-              foreground: 'var(--foreground)',
-              card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
-              popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
-              primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
-              secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
-              muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
-              accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
-              destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
-              border: 'var(--border)',
-              input: 'var(--input)',
-              ring: 'var(--ring)',
-            },
-            borderRadius: {
-              sm: 'calc(var(--radius) - 4px)',
-              md: 'calc(var(--radius) - 2px)',
-              lg: 'var(--radius)',
-              xl: 'calc(var(--radius) + 4px)',
-            },
-          },
-        },
+      theme: {
+      extend: {
+      colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+      },
+      borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'calc(var(--radius) - 2px)',
+      lg: 'var(--radius)',
+      xl: 'calc(var(--radius) + 4px)',
+      },
+      },
+      },
       };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.tailwindcss.com">
+    </script>
     <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/style.css">
-</head>
-<body class="antialiased site-teamworks">
-    <div class="min-h-screen bg-white"><nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="flex items-center justify-between h-20"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="flex flex-col"><div class="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES · COURSE 04</div><div class="font-bold text-base text-gray-900 -mt-0.5">Practical Lean Problem Solving</div></div></div><div class="hidden md:flex items-center gap-8"><a href="#modules" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a><a href="#outcomes" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Outcomes</a><a href="#testimonials" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a><a href="#faq" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a></div><div class="hidden md:block"><a href="/teamworks/bookConsultation.html" class="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style="background-color:#16A34A">Book This Course for Your Team</a></div><button class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></div></nav><div class="bg-gray-50 border-b border-gray-200"><div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4"><div class="flex items-center gap-2 text-sm text-gray-600"><a href="../index.html" class="hover:text-[#16A34A] transition-colors">Home</a><span>/</span><a href="/teamworks/index.html" class="hover:text-[#16A34A] transition-colors">Teamworks</a><span>/</span><span class="text-gray-900 font-bold">Practical Lean Problem Solving</span></div></div></div><main><section class="bg-white py-16 lg:py-24"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"><div><div class="inline-flex items-center gap-3 bg-green-50 border-2 border-green-200 rounded-full px-6 py-3 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-4 h-4 md:w-5 md:h-5 text-[#16A34A]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg><span class="text-xs md:text-sm font-semibold text-[#16A34A] tracking-wide">TEAMWORKS · IMPROVEMENT</span></div><h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">Practical Lean<br/><span class="text-[#16A34A]">Problem Solving.</span></h1><p class="text-base lg:text-lg text-gray-700 mb-3 md:mb-4 font-light">Empower Your Frontline to Solve Problems, Not Just Report Them.</p><p class="text-lg text-gray-600 leading-relaxed mb-8 font-light">Stop waiting for management answers. Equip your team with the Lean mindset to fix recurring work issues on the spot, saving time and improving customer satisfaction.</p><div class="bg-gray-50 rounded-2xl p-6 mb-8"><div class="grid grid-cols-3 gap-6"><div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-6 h-6 text-[#16A34A] mx-auto mb-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><div class="text-xs text-gray-600 mb-1">Duration</div><div class="font-semibold text-gray-900">2 days</div></div><div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-[#16A34A] mx-auto mb-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><div class="text-xs text-gray-600 mb-1">Format</div><div class="font-semibold text-gray-900">In-person</div></div><div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check w-6 h-6 text-[#16A34A] mx-auto mb-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg><div class="text-xs text-gray-600 mb-1">Capacity</div><div class="font-semibold text-gray-900">Max 30</div></div></div></div><a href="/teamworks/bookConsultation.html" class="inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all group" style="background-color:#22C55E"><span class="font-medium">Talk to Us About Your Team</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div><div class="relative"><div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl"><img src="../assets/img/teamworks/teamworks-course-04-frontline-workers-in-action.webp" alt="Frontline workers in action" class="w-full h-full object-cover"/></div></div></div></div></section><section class="bg-gray-50 py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">THE CHALLENGE</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Small Operational Issues Are Quietly<br/><span class="text-[#16A34A]">Draining Your Business.</span></h2><p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">Recurring problems cost time, money, and customer trust — especially in growing SMEs where every inefficiency matters.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group"><div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert w-7 h-7 text-white"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></div><h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Workflow Delays &amp; Bottlenecks</h3><p class="text-gray-600 leading-relaxed font-light">Daily slowdowns that reduce productivity and frustrate teams.</p></div><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group"><div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-7 h-7 text-white"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Costly Rework &amp; Repeated Mistakes</h3><p class="text-gray-600 leading-relaxed font-light">Fixing the same issues again and again wastes resources.</p></div><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group"><div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-x w-7 h-7 text-white"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="17" x2="22" y1="8" y2="13"></line><line x1="22" x2="17" y1="8" y2="13"></line></svg></div><h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Over-Reliance on Managers</h3><p class="text-gray-600 leading-relaxed font-light">Problems constantly escalated instead of solved at the source.</p></div><div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group"><div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div><div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-down w-7 h-7 text-white"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline><polyline points="16 17 22 17 22 11"></polyline></svg></div><h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Customer Complaints &amp; Staff Frustration</h3><p class="text-gray-600 leading-relaxed font-light">Unresolved issues damage reputation and morale.</p></div></div></div></section><section class="bg-white py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">What Changes After This Workshop</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">The Transformation You&#x27;ll Experience</h2></div><div class="max-w-4xl mx-auto"><div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12 border border-gray-200 shadow-lg"><div class="space-y-5"><div class="flex items-start gap-4"><div class="flex-shrink-0 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div><p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Diagnose root causes without constant management intervention</p></div><div class="flex items-start gap-4"><div class="flex-shrink-0 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div><p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Reduce recurring operational issues</p></div><div class="flex items-start gap-4"><div class="flex-shrink-0 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div><p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Improve complaint handling and resolution speed</p></div><div class="flex items-start gap-4"><div class="flex-shrink-0 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div><p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Prevent small issues from becoming major losses</p></div><div class="flex items-start gap-4"><div class="flex-shrink-0 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div><p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Apply structured problem-solving consistently</p></div></div><div class="mt-8 pt-8 border-t border-gray-200"><p class="text-center text-base lg:text-lg text-gray-600 font-light italic">No prior Lean knowledge required.</p></div></div></div></div></section><section id="modules" class="bg-gray-50 py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">HOW WE ACHIEVE THIS</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">A Structured, Practical<br/><span class="text-[#16A34A]">Problem-Solving Framework</span></h2><p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">This is not classroom theory. Your team will work on real problems from your organisation during the workshop.</p></div><div class="space-y-12"><div class="group grid lg:grid-cols-2 gap-10 items-center"><div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"><img src="../assets/img/teamworks/teamworks-identify-operational-gaps.webp" alt="Identify Operational Gaps" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><span class="text-white font-semibold text-2xl">1</span></div></div><div><div class="flex items-center gap-3 mb-4"><div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div><span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 1</span></div><h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Identify Operational Gaps</h3><p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Surface hidden inefficiencies using simple visual tools.</p><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#22C55E]"></div><div class="w-2 h-2 rounded-full bg-[#16A34A]"></div><div class="w-2 h-2 rounded-full bg-[#15803D]"></div></div></div></div><div class="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense"><div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2"><img src="../assets/img/teamworks/site-eliminate-root-causes.webp" alt="Eliminate Root Causes" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><span class="text-white font-semibold text-2xl">2</span></div></div><div class="lg:col-start-1 lg:row-start-1"><div class="flex items-center gap-3 mb-4"><div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div><span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 2</span></div><h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Eliminate Root Causes</h3><p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Use 5-Why and Fishbone methods to diagnose the real issue.</p><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#22C55E]"></div><div class="w-2 h-2 rounded-full bg-[#16A34A]"></div><div class="w-2 h-2 rounded-full bg-[#15803D]"></div></div></div></div><div class="group grid lg:grid-cols-2 gap-10 items-center"><div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"><img src="../assets/img/teamworks/site-prioritise-high-impact-problems.webp" alt="Prioritise High-Impact Problems" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><span class="text-white font-semibold text-2xl">3</span></div></div><div><div class="flex items-center gap-3 mb-4"><div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div><span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 3</span></div><h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Prioritise High-Impact Problems</h3><p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Focus on issues affecting profit, customers, and workflow.</p><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#22C55E]"></div><div class="w-2 h-2 rounded-full bg-[#16A34A]"></div><div class="w-2 h-2 rounded-full bg-[#15803D]"></div></div></div></div><div class="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense"><div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2"><img src="../assets/img/teamworks/people-improve-workflow-efficiency.webp" alt="Improve Workflow Efficiency" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><span class="text-white font-semibold text-2xl">4</span></div></div><div class="lg:col-start-1 lg:row-start-1"><div class="flex items-center gap-3 mb-4"><div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div><span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 4</span></div><h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Improve Workflow Efficiency</h3><p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Design smarter, smoother daily operations.</p><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#22C55E]"></div><div class="w-2 h-2 rounded-full bg-[#16A34A]"></div><div class="w-2 h-2 rounded-full bg-[#15803D]"></div></div></div></div><div class="group grid lg:grid-cols-2 gap-10 items-center"><div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"><img src="../assets/img/teamworks/teamworks-course-04-measure-sustain-improvements.webp" alt="Measure &amp; Sustain Improvements" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)"><span class="text-white font-semibold text-2xl">5</span></div></div><div><div class="flex items-center gap-3 mb-4"><div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div><span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 5</span></div><h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Measure &amp; Sustain Improvements</h3><p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Test what works, compare results, and lock in better ways of working with simple checklists.</p><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#22C55E]"></div><div class="w-2 h-2 rounded-full bg-[#16A34A]"></div><div class="w-2 h-2 rounded-full bg-[#15803D]"></div></div></div></div></div></div></section><section id="outcomes" class="bg-white py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="grid lg:grid-cols-2 gap-12 lg:gap-20"><div><h2 class="text-3xl lg:text-4xl font-bold mb-8 tracking-tight">After this 2-day workshop, your team will be able to:</h2><div class="space-y-4"><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Root Cause Analysis Made Simple</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Quick Decision Frameworks</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Team-Based Problem Solving</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Preventive Thinking</p></div></div></div><div><h2 class="text-3xl lg:text-4xl font-bold mb-8 tracking-tight">Outcomes for Success</h2><div class="space-y-4"><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Learn practical 5-Why and Fishbone techniques</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Make confident decisions under pressure</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Facilitate effective problem-solving discussions</p></div><div class="flex items-start gap-3"><div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><p class="text-gray-700">Spot potential issues early and implement countermeasures</p></div></div></div></div></div></section><section class="bg-gray-50 py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">Target Audience</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Is This For You?</h2><p class="text-xl text-gray-600 max-w-2xl mx-auto font-light">Ideal for Growing Teams Where Operational Issues and Customer Complaints Impact Performance</p></div><div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5"><div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2"><div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100"><img src="../assets/img/teamworks/site-customer-service.webp" alt="Customer Service" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute top-3 right-3 lg:top-4 lg:right-4"><div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg></div></div><div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4"><h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Customer Service</h3></div></div><div class="p-4 lg:p-5 bg-white"><p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Support teams handling customer inquiries and concerns</p></div><div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div></div><div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2"><div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100"><img src="../assets/img/teamworks/site-sales.webp" alt="Sales" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute top-3 right-3 lg:top-4 lg:right-4"><div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div></div><div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4"><h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Sales</h3></div></div><div class="p-4 lg:p-5 bg-white"><p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Sales executives and account managers</p></div><div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div></div><div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2"><div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100"><img src="../assets/img/teamworks/site-operations.webp" alt="Operations" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute top-3 right-3 lg:top-4 lg:right-4"><div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></div></div><div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4"><h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Operations</h3></div></div><div class="p-4 lg:p-5 bg-white"><p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Operations teams and coordinators</p></div><div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div></div><div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2"><div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100"><img src="../assets/img/teamworks/site-front-desk.webp" alt="Front Desk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute top-3 right-3 lg:top-4 lg:right-4"><div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div><div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4"><h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Front Desk</h3></div></div><div class="p-4 lg:p-5 bg-white"><p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Receptionists and front-facing staff</p></div><div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div></div><div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2"><div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100"><img src="../assets/img/teamworks/site-retail-associates.webp" alt="Retail Associates" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute top-3 right-3 lg:top-4 lg:right-4"><div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div></div><div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4"><h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Retail Associates</h3></div></div><div class="p-4 lg:p-5 bg-white"><p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Restaurant and retail service personnel</p></div><div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div></div></div></div></section><section id="testimonials" class="bg-white py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">Success Stories</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">What Our Clients Say</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">Real results from teams who&#x27;ve transformed their problem-solving approach</p></div><div class="grid md:grid-cols-3 gap-6 lg:gap-8"><div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative"><div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div><div class="mt-6 mb-6"><p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;This course transformed how our customer service team handles issues. Instead of escalating everything, they now solve problems independently and confidently.&quot;</p></div><div class="flex items-center gap-4 pt-6 border-t border-gray-100"><div><h4 class="text-gray-900 font-medium text-base">Siti Nurhaliza</h4><p class="text-gray-600 text-sm font-light">Head of Customer Experience</p><p class="text-[#16A34A] text-sm font-medium">Technology</p></div></div><div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div></div><div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative"><div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div><div class="mt-6 mb-6"><p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;The practical tools and frameworks gave our operations team a systematic approach to tackle recurring issues. We&#x27;ve seen a 40% reduction in problem resolution time.&quot;</p></div><div class="flex items-center gap-4 pt-6 border-t border-gray-100"><div><h4 class="text-gray-900 font-medium text-base">Michael Chen</h4><p class="text-gray-600 text-sm font-light">Operations Manager</p><p class="text-[#16A34A] text-sm font-medium">Retail</p></div></div><div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div></div><div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative"><div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div><div class="mt-6 mb-6"><p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;Our frontline staff now feel empowered to make decisions and improve processes. This mindset has become part of our culture, not just a training program.&quot;</p></div><div class="flex items-center gap-4 pt-6 border-t border-gray-100"><div><h4 class="text-gray-900 font-medium text-base">Priya Sharma</h4><p class="text-gray-600 text-sm font-light">Learning &amp; Development Manager</p><p class="text-[#16A34A] text-sm font-medium">Hospitality</p></div></div><div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div></div></div></div></section><section id="pricing" class="bg-white py-20 lg:py-32"><div class="max-w-[1400px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">INVESTMENT</span></div><h2 class="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">An Investment in Operational Efficiency</h2><p class="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto font-light">Most teams recover this investment by eliminating just ONE recurring operational mistake.</p></div><div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start"><div><p class="text-gray-500 font-light text-sm mb-4">Per 2-day course</p><div class="mb-6"><div class="flex items-baseline gap-3 mb-3"><span class="text-6xl lg:text-7xl font-light text-gray-900">RM350</span><span class="text-lg lg:text-xl text-gray-500 font-light">per person/day</span></div><p class="text-gray-700 font-light text-sm lg:text-base mb-8">Up to 30 participants per session</p></div><div class="space-y-4 mb-12"><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">2-day intensive workshop</span></div><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">All course materials &amp; templates</span></div><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">Expert instructor (10+ years exp)</span></div><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">Certificate of completion</span></div><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">Post-workshop support &amp; community</span></div><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-gray-900 font-light">Pre-course alignment session for your team</span></div></div><div class="text-center"><a href="/teamworks/bookConsultation.html" class="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">Plan This Course for Your Team<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a><p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs.</p></div></div><div><h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 lg:mb-10 tracking-tight">What You&#x27;ll Master</h2><div class="space-y-8 mb-10"><div><h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">See Problems Clearly</h4><p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Learn to separate symptoms from root causes using simple visual tools that work on the shop floor.</p></div><div><h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Analyze Systematically</h4><p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Apply proven 5-Why and Fishbone techniques in real operational scenarios without complex theory.</p></div><div><h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Design Practical Solutions</h4><p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Develop sustainable countermeasures your team can actually implement and maintain long-term.</p></div><div><h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Make Solutions Stick</h4><p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Build habits and systems to ensure solutions work and problems don&#x27;t come back.</p></div></div><div class="bg-red-50 border border-red-100 p-5 lg:p-6 rounded-lg"><h4 class="font-medium text-gray-900 mb-3 flex items-center gap-2"><span class="text-red-500">💡</span>Real Impact</h4><p class="text-gray-700 leading-relaxed font-light text-sm lg:text-base">Teams report 60% faster problem resolution and significantly fewer recurring issues within 3 months of training.</p></div></div></div></div></section><section id="faq" class="bg-gray-50 py-20 lg:py-32"><div class="max-w-[900px] mx-auto px-6 lg:px-12"><div class="text-center mb-16"><div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100"><span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">FAQ</span></div><h2 class="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Common Questions</h2><p class="text-base text-gray-600">Everything you need to know about this course</p></div><div class="space-y-4"><details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]"><summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900"><span class="flex-1">Can this be customised to our industry?</span><svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Exercises are tailored to your real operational challenges.</p></details><details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]"><summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900"><span class="flex-1">Is this suitable for teams with no Lean background?</span><svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-4 text-gray-700 text-base leading-relaxed">Absolutely. Tools are simple and practical.</p></details><details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]"><summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900"><span class="flex-1">Can we use our real workplace problems?</span><svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Teams are encouraged to bring actual cases.</p></details><details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]"><summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900"><span class="flex-1">Is this suitable for service industries?</span><svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-4 text-gray-700 text-base leading-relaxed">Yes — retail, logistics, banking, healthcare, F&amp;B, and more.</p></details></div><script>(() => {
-  const container = document.getElementById('faq');
-  if (!container) return;
-  const items = Array.from(container.querySelectorAll('details'));
-  items.forEach((item) => {
-    item.addEventListener('toggle', () => {
-      if (!item.open) return;
-      items.forEach((other) => {
+  </head>
+  <body class="antialiased site-teamworks">
+    <div class="min-h-screen bg-white">
+      <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div class="flex items-center justify-between h-20">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <div class="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES · COURSE 04</div>
+                <div class="font-bold text-base text-gray-900 -mt-0.5">Practical Lean Problem Solving</div>
+              </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+              <a href="#modules" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a>
+              <a href="#outcomes" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Outcomes</a>
+              <a href="#testimonials" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
+              <a href="#faq" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+            </div>
+            <div class="hidden md:block">
+              <a href="/teamworks/bookConsultation.html" class="text-white px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all font-medium" style="background-color:#16A34A">Book This Course for Your Team</a>
+            </div>
+            <button class="md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                <line x1="4" x2="20" y1="12" y2="12">
+                </line>
+                <line x1="4" x2="20" y1="6" y2="6">
+                </line>
+                <line x1="4" x2="20" y1="18" y2="18">
+                </line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-gray-50 border-b border-gray-200">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <a href="../index.html" class="hover:text-[#16A34A] transition-colors">Home</a>
+            <span>/</span>
+            <a href="/teamworks/index.html" class="hover:text-[#16A34A] transition-colors">Teamworks</a>
+            <span>/</span>
+            <span class="text-gray-900 font-bold">Practical Lean Problem Solving</span>
+          </div>
+        </div>
+      </div>
+      <main>
+        <section class="bg-white py-16 lg:py-24">
+          <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <div>
+                <div class="inline-flex items-center gap-3 bg-green-50 border-2 border-green-200 rounded-full px-6 py-3 mb-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-4 h-4 md:w-5 md:h-5 text-[#16A34A]">
+                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+                    </path>
+                  </svg>
+                  <span class="text-xs md:text-sm font-semibold text-[#16A34A] tracking-wide">TEAMWORKS · IMPROVEMENT</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">Practical Lean<br/>
+                <span class="text-[#16A34A]">Problem Solving.</span>
+              </h1>
+              <p class="text-base lg:text-lg text-gray-700 mb-3 md:mb-4 font-light">Empower Your Frontline to Solve Problems, Not Just Report Them.</p>
+              <p class="text-lg text-gray-600 leading-relaxed mb-8 font-light">Stop waiting for management answers. Equip your team with the Lean mindset to fix recurring work issues on the spot, saving time and improving customer satisfaction.</p>
+              <div class="bg-gray-50 rounded-2xl p-6 mb-8">
+                <div class="grid grid-cols-3 gap-6">
+                  <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-6 h-6 text-[#16A34A] mx-auto mb-2">
+                      <circle cx="12" cy="12" r="10">
+                      </circle>
+                      <polyline points="12 6 12 12 16 14">
+                      </polyline>
+                    </svg>
+                    <div class="text-xs text-gray-600 mb-1">Duration</div>
+                    <div class="font-semibold text-gray-900">2 days</div>
+                  </div>
+                  <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-[#16A34A] mx-auto mb-2">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                      </path>
+                      <circle cx="9" cy="7" r="4">
+                      </circle>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                      </path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                      </path>
+                    </svg>
+                    <div class="text-xs text-gray-600 mb-1">Format</div>
+                    <div class="font-semibold text-gray-900">In-person</div>
+                  </div>
+                  <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check w-6 h-6 text-[#16A34A] mx-auto mb-2">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                      </path>
+                      <circle cx="9" cy="7" r="4">
+                      </circle>
+                      <polyline points="16 11 18 13 22 9">
+                      </polyline>
+                    </svg>
+                    <div class="text-xs text-gray-600 mb-1">Capacity</div>
+                    <div class="font-semibold text-gray-900">Max 30</div>
+                  </div>
+                </div>
+              </div>
+              <a href="/teamworks/bookConsultation.html" class="inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all group" style="background-color:#22C55E">
+                <span class="font-medium">Talk to Us About Your Team</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform">
+                  <path d="M5 12h14">
+                  </path>
+                  <path d="m12 5 7 7-7 7">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <div class="relative">
+              <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                <img src="../assets/img/teamworks/teamworks-course-04-frontline-workers-in-action.webp" alt="Frontline workers in action" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50 py-20 lg:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+              <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">THE CHALLENGE</span>
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Small Operational Issues Are Quietly<br/>
+            <span class="text-[#16A34A]">Draining Your Business.</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">Recurring problems cost time, money, and customer trust — especially in growing SMEs where every inefficiency matters.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+            </div>
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert w-7 h-7 text-white">
+                <circle cx="12" cy="12" r="10">
+                </circle>
+                <line x1="12" x2="12" y1="8" y2="12">
+                </line>
+                <line x1="12" x2="12.01" y1="16" y2="16">
+                </line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Workflow Delays &amp; Bottlenecks</h3>
+            <p class="text-gray-600 leading-relaxed font-light">Daily slowdowns that reduce productivity and frustrate teams.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+            </div>
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-7 h-7 text-white">
+                <circle cx="12" cy="12" r="10">
+                </circle>
+                <polyline points="12 6 12 12 16 14">
+                </polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Costly Rework &amp; Repeated Mistakes</h3>
+            <p class="text-gray-600 leading-relaxed font-light">Fixing the same issues again and again wastes resources.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+            </div>
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-x w-7 h-7 text-white">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                </path>
+                <circle cx="9" cy="7" r="4">
+                </circle>
+                <line x1="17" x2="22" y1="8" y2="13">
+                </line>
+                <line x1="22" x2="17" y1="8" y2="13">
+                </line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Over-Reliance on Managers</h3>
+            <p class="text-gray-600 leading-relaxed font-light">Problems constantly escalated instead of solved at the source.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-1 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+            </div>
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-down w-7 h-7 text-white">
+                <polyline points="22 17 13.5 8.5 8.5 13.5 2 7">
+                </polyline>
+                <polyline points="16 17 22 17 22 11">
+                </polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Customer Complaints &amp; Staff Frustration</h3>
+            <p class="text-gray-600 leading-relaxed font-light">Unresolved issues damage reputation and morale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-20 lg:py-32">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+            <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">What Changes After This Workshop</span>
+          </div>
+          <h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">The Transformation You&#x27;ll Experience</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12 border border-gray-200 shadow-lg">
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]">
+                    <circle cx="12" cy="12" r="10">
+                    </circle>
+                    <path d="m9 12 2 2 4-4">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Diagnose root causes without constant management intervention</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]">
+                    <circle cx="12" cy="12" r="10">
+                    </circle>
+                    <path d="m9 12 2 2 4-4">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Reduce recurring operational issues</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]">
+                    <circle cx="12" cy="12" r="10">
+                    </circle>
+                    <path d="m9 12 2 2 4-4">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Improve complaint handling and resolution speed</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]">
+                    <circle cx="12" cy="12" r="10">
+                    </circle>
+                    <path d="m9 12 2 2 4-4">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Prevent small issues from becoming major losses</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check w-6 h-6 text-[#22C55E]">
+                    <circle cx="12" cy="12" r="10">
+                    </circle>
+                    <path d="m9 12 2 2 4-4">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 font-light leading-relaxed">Apply structured problem-solving consistently</p>
+              </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200">
+              <p class="text-center text-base lg:text-lg text-gray-600 font-light italic">No prior Lean knowledge required.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="modules" class="bg-gray-50 py-20 lg:py-32">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+            <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">HOW WE ACHIEVE THIS</span>
+          </div>
+          <h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">A Structured, Practical<br/>
+          <span class="text-[#16A34A]">Problem-Solving Framework</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light">This is not classroom theory. Your team will work on real problems from your organisation during the workshop.</p>
+      </div>
+      <div class="space-y-12">
+        <div class="group grid lg:grid-cols-2 gap-10 items-center">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+            <img src="../assets/img/teamworks/teamworks-identify-operational-gaps.webp" alt="Identify Operational Gaps" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <span class="text-white font-semibold text-2xl">1</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full">
+              </div>
+              <span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 1</span>
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Identify Operational Gaps</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Surface hidden inefficiencies using simple visual tools.</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-[#22C55E]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#16A34A]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#15803D]">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2">
+            <img src="../assets/img/teamworks/site-eliminate-root-causes.webp" alt="Eliminate Root Causes" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <span class="text-white font-semibold text-2xl">2</span>
+            </div>
+          </div>
+          <div class="lg:col-start-1 lg:row-start-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full">
+              </div>
+              <span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 2</span>
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Eliminate Root Causes</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Use 5-Why and Fishbone methods to diagnose the real issue.</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-[#22C55E]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#16A34A]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#15803D]">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group grid lg:grid-cols-2 gap-10 items-center">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+            <img src="../assets/img/teamworks/site-prioritise-high-impact-problems.webp" alt="Prioritise High-Impact Problems" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <span class="text-white font-semibold text-2xl">3</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full">
+              </div>
+              <span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 3</span>
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Prioritise High-Impact Problems</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Focus on issues affecting profit, customers, and workflow.</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-[#22C55E]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#16A34A]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#15803D]">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group grid lg:grid-cols-2 gap-10 items-center lg:grid-flow-dense">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 lg:col-start-2">
+            <img src="../assets/img/teamworks/people-improve-workflow-efficiency.webp" alt="Improve Workflow Efficiency" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <span class="text-white font-semibold text-2xl">4</span>
+            </div>
+          </div>
+          <div class="lg:col-start-1 lg:row-start-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full">
+              </div>
+              <span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 4</span>
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Improve Workflow Efficiency</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Design smarter, smoother daily operations.</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-[#22C55E]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#16A34A]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#15803D]">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group grid lg:grid-cols-2 gap-10 items-center">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+            <img src="../assets/img/teamworks/teamworks-course-04-measure-sustain-improvements.webp" alt="Measure &amp; Sustain Improvements" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute top-6 left-6 w-14 h-14 rounded-xl shadow-xl flex items-center justify-center z-20" style="background:linear-gradient(to bottom right, #22C55E, #16A34A)">
+              <span class="text-white font-semibold text-2xl">5</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full">
+              </div>
+              <span class="text-sm font-medium text-[#16A34A] tracking-wider">MODULE 5</span>
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">Measure &amp; Sustain Improvements</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 font-light">Test what works, compare results, and lock in better ways of working with simple checklists.</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-[#22C55E]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#16A34A]">
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#15803D]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="outcomes" class="bg-white py-20 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 tracking-tight">After this 2-day workshop, your team will be able to:</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Root Cause Analysis Made Simple</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Quick Decision Frameworks</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Team-Based Problem Solving</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Preventive Thinking</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 tracking-tight">Outcomes for Success</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Learn practical 5-Why and Fishbone techniques</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Make confident decisions under pressure</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Facilitate effective problem-solving discussions</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-700">Spot potential issues early and implement countermeasures</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-50 py-20 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+          <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">Target Audience</span>
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Is This For You?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-light">Ideal for Growing Teams Where Operational Issues and Customer Complaints Impact Performance</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5">
+        <div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
+          <div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
+            <img src="../assets/img/teamworks/site-customer-service.webp" alt="Customer Service" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            </div>
+            <div class="absolute top-3 right-3 lg:top-4 lg:right-4">
+              <div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300">
+                  <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4">
+              <h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Customer Service</h3>
+            </div>
+          </div>
+          <div class="p-4 lg:p-5 bg-white">
+            <p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Support teams handling customer inquiries and concerns</p>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+        <div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
+          <div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
+            <img src="../assets/img/teamworks/site-sales.webp" alt="Sales" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            </div>
+            <div class="absolute top-3 right-3 lg:top-4 lg:right-4">
+              <div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17">
+                  </polyline>
+                  <polyline points="16 7 22 7 22 13">
+                  </polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4">
+              <h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Sales</h3>
+            </div>
+          </div>
+          <div class="p-4 lg:p-5 bg-white">
+            <p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Sales executives and account managers</p>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+        <div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
+          <div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
+            <img src="../assets/img/teamworks/site-operations.webp" alt="Operations" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            </div>
+            <div class="absolute top-3 right-3 lg:top-4 lg:right-4">
+              <div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300">
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                  </path>
+                  <circle cx="12" cy="12" r="3">
+                  </circle>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4">
+              <h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Operations</h3>
+            </div>
+          </div>
+          <div class="p-4 lg:p-5 bg-white">
+            <p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Operations teams and coordinators</p>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+        <div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
+          <div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
+            <img src="../assets/img/teamworks/site-front-desk.webp" alt="Front Desk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            </div>
+            <div class="absolute top-3 right-3 lg:top-4 lg:right-4">
+              <div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                  </path>
+                  <circle cx="9" cy="7" r="4">
+                  </circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                  </path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4">
+              <h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Front Desk</h3>
+            </div>
+          </div>
+          <div class="p-4 lg:p-5 bg-white">
+            <p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Receptionists and front-facing staff</p>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+        <div class="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#22C55E] hover:-translate-y-2">
+          <div class="relative h-36 lg:h-44 overflow-hidden bg-gray-100">
+            <img src="../assets/img/teamworks/site-retail-associates.webp" alt="Retail Associates" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            </div>
+            <div class="absolute top-3 right-3 lg:top-4 lg:right-4">
+              <div class="w-9 h-9 lg:w-11 lg:h-11 rounded-lg bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/20 group-hover:bg-[#22C55E] group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 lg:w-5 lg:h-5 text-[#16A34A] group-hover:text-white transition-colors duration-300">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                  </path>
+                  <circle cx="9" cy="7" r="4">
+                  </circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                  </path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-3 lg:p-4">
+              <h3 class="text-sm lg:text-base font-medium text-white tracking-tight">Retail Associates</h3>
+            </div>
+          </div>
+          <div class="p-4 lg:p-5 bg-white">
+            <p class="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Restaurant and retail service personnel</p>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="testimonials" class="bg-white py-20 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+          <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">Success Stories</span>
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">What Our Clients Say</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">Real results from teams who&#x27;ve transformed their problem-solving approach</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+          <div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white">
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+            </svg>
+          </div>
+          <div class="mt-6 mb-6">
+            <p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;This course transformed how our customer service team handles issues. Instead of escalating everything, they now solve problems independently and confidently.&quot;</p>
+          </div>
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+            <div>
+              <h4 class="text-gray-900 font-medium text-base">Siti Nurhaliza</h4>
+              <p class="text-gray-600 text-sm font-light">Head of Customer Experience</p>
+              <p class="text-[#16A34A] text-sm font-medium">Technology</p>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl">
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+          <div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white">
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+            </svg>
+          </div>
+          <div class="mt-6 mb-6">
+            <p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;The practical tools and frameworks gave our operations team a systematic approach to tackle recurring issues. We&#x27;ve seen a 40% reduction in problem resolution time.&quot;</p>
+          </div>
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+            <div>
+              <h4 class="text-gray-900 font-medium text-base">Michael Chen</h4>
+              <p class="text-gray-600 text-sm font-light">Operations Manager</p>
+              <p class="text-[#16A34A] text-sm font-medium">Retail</p>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl">
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+          <div class="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white">
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+              </path>
+            </svg>
+          </div>
+          <div class="mt-6 mb-6">
+            <p class="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">&quot;Our frontline staff now feel empowered to make decisions and improve processes. This mindset has become part of our culture, not just a training program.&quot;</p>
+          </div>
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+            <div>
+              <h4 class="text-gray-900 font-medium text-base">Priya Sharma</h4>
+              <p class="text-gray-600 text-sm font-light">Learning &amp; Development Manager</p>
+              <p class="text-[#16A34A] text-sm font-medium">Hospitality</p>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" class="bg-white py-20 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+          <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">INVESTMENT</span>
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">An Investment in Operational Efficiency</h2>
+        <p class="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto font-light">Most teams recover this investment by eliminating just ONE recurring operational mistake.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div>
+          <p class="text-gray-500 font-light text-sm mb-4">Per 2-day course</p>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-3 mb-3">
+              <span class="text-6xl lg:text-7xl font-light text-gray-900">RM350</span>
+              <span class="text-lg lg:text-xl text-gray-500 font-light">per person/day</span>
+            </div>
+            <p class="text-gray-700 font-light text-sm lg:text-base mb-8">Up to 30 participants per session</p>
+          </div>
+          <div class="space-y-4 mb-12">
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">2-day intensive workshop</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">All course materials &amp; templates</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">Expert instructor (10+ years exp)</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">Certificate of completion</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">Post-workshop support &amp; community</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5">
+                <path d="M20 6 9 17l-5-5">
+                </path>
+              </svg>
+              <span class="text-gray-900 font-light">Pre-course alignment session for your team</span>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="/teamworks/bookConsultation.html" class="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">Plan This Course for Your Team<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+              </path>
+            </svg>
+          </a>
+          <p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs.</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 lg:mb-10 tracking-tight">What You&#x27;ll Master</h2>
+        <div class="space-y-8 mb-10">
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">See Problems Clearly</h4>
+            <p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Learn to separate symptoms from root causes using simple visual tools that work on the shop floor.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Analyze Systematically</h4>
+            <p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Apply proven 5-Why and Fishbone techniques in real operational scenarios without complex theory.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Design Practical Solutions</h4>
+            <p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Develop sustainable countermeasures your team can actually implement and maintain long-term.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-gray-900 mb-2 text-base lg:text-lg">Make Solutions Stick</h4>
+            <p class="text-gray-600 leading-relaxed font-light text-sm lg:text-base">Build habits and systems to ensure solutions work and problems don&#x27;t come back.</p>
+          </div>
+        </div>
+        <div class="bg-red-50 border border-red-100 p-5 lg:p-6 rounded-lg">
+          <h4 class="font-medium text-gray-900 mb-3 flex items-center gap-2">
+            <span class="text-red-500">💡</span>Real Impact</h4>
+            <p class="text-gray-700 leading-relaxed font-light text-sm lg:text-base">Teams report 60% faster problem resolution and significantly fewer recurring issues within 3 months of training.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="bg-gray-50 py-20 lg:py-32">
+    <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
+          <span class="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">FAQ</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-4 tracking-tight">Common Questions</h2>
+        <p class="text-base text-gray-600">Everything you need to know about this course</p>
+      </div>
+      <div class="space-y-4">
+        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
+          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+            <span class="flex-1">Can this be customised to our industry?</span>
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+              </path>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Exercises are tailored to your real operational challenges.</p>
+        </details>
+        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
+          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+            <span class="flex-1">Is this suitable for teams with no Lean background?</span>
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+              </path>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700 text-base leading-relaxed">Absolutely. Tools are simple and practical.</p>
+        </details>
+        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
+          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+            <span class="flex-1">Can we use our real workplace problems?</span>
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+              </path>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes. Teams are encouraged to bring actual cases.</p>
+        </details>
+        <details class="bg-white border-2 border-gray-200 rounded-xl p-6 group hover:border-[#22C55E] transition-colors open:border-[#22C55E]">
+          <summary class="font-medium text-base cursor-pointer list-none flex items-center justify-between text-gray-900">
+            <span class="flex-1">Is this suitable for service industries?</span>
+            <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+              </path>
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700 text-base leading-relaxed">Yes — retail, logistics, banking, healthcare, F&amp;B, and more.</p>
+        </details>
+      </div>
+      <script>(() => {
+        const container = document.getElementById('faq');
+        if (!container) return;
+        const items = Array.from(container.querySelectorAll('details'));
+        items.forEach((item) => {
+        item.addEventListener('toggle', () => {
+        if (!item.open) return;
+        items.forEach((other) => {
         if (other !== item) other.removeAttribute('open');
-      });
-    });
-  });
-})();</script></div></section><section class="py-20 lg:py-24 bg-gradient-to-b from-white to-[#EAF6EF]"><div class="max-w-[900px] mx-auto px-6 lg:px-12 text-center"><div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10"><div class="flex items-center gap-2 text-gray-600 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]"><path d="M20 6 9 17l-5-5"></path></svg><span>Delivered in-house at your location</span></div><div class="flex items-center gap-2 text-gray-600 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]"><path d="M20 6 9 17l-5-5"></path></svg><span>Practical, hands-on format</span></div><div class="flex items-center gap-2 text-gray-600 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]"><path d="M20 6 9 17l-5-5"></path></svg><span>Immediate workplace application</span></div></div><h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Build a Team That Solves Problems — <span class="text-[#16A34A]">Not Escalates Them.</span></h2><p class="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">Stop daily firefighting and start systematic operational improvement.</p><p class="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">Let&#x27;s design a private workshop tailored to your team.</p><a href="/teamworks/bookConsultation.html" class="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group">Request Private Training Proposal<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs. No commitment required.</p></div></section></main><footer class="bg-white text-gray-900"><div class="max-w-7xl mx-auto px-8 lg:px-16"><div class="pt-16"><div class="mb-6"><a href="/index.html" class="inline-block"><img src="../assets/img/main/ciagile-main-logo-dark.webp" alt="CI Agile" class="h-7 w-auto"/></a></div><p class="text-gray-600 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p><div class="flex gap-4"><a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a><a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="YouTube"><i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a><a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="Facebook"><i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5"></i></a></div></div><div class="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4"><div><h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3><a href="/jess/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors">Jeff Sutherland&#x27;s Enterprise Agility Program</a><ul class="space-y-3 mt-4"><li><a href="/jess/leadership-training.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">International Certification Courses</a></li><li><a href="/jess/class-schedule.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Public Certification Class Schedule</a></li></ul><a href="/jess/team-level-training.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors mt-10">NOVA Series</a><ul class="space-y-3 mt-4"><li><a href="/jess/nova/agile-scrum.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Agile &amp; Scrum 201</a></li><li><a href="/jess/nova/design-thinking.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Design Thinking 201</a></li></ul></div><div><h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3><a href="/teamworks/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors">TeamWorks Program</a><ul class="space-y-3 mt-4"><li><a href="/teamworks/creating-super-teams.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Creating Super Teams</a></li><li><a href="/teamworks/design-thinking.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Win Customers Through Design</a></li><li><a href="/teamworks/critical-thinking-kanban.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Critical Thinking for Better Work</a></li><li><a href="/teamworks/practical-lean-problem-solving.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Practical Lean Problem Solving</a></li><li><a href="/teamworks/ai-skills-for-your-team.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">AI Skills for YOUR Teams</a></li></ul></div><div><h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Resources</h3><ul class="space-y-3"><li><a href="/jess/free-resources.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Free Resources &amp; Official Guides</a></li><li><a href="https://www.linkedin.com/company/69641858/admin/dashboard/" target="_blank" rel="noopener noreferrer" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Community Forums</a></li></ul></div><div><h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Company</h3><ul class="space-y-3"><li><a href="/aboutus.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">About Us</a></li><li><a href="/contactus.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Contact Us</a></li></ul></div></div><div class="border-t border-gray-200"></div><div class="py-8 flex flex-col md:flex-row justify-between items-center gap-6"><div class="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center"><a href="/privacy-policy.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Privacy Policy</a><a href="/terms-of-use.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Terms of Use</a><a href="/cookie-policy.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Cookie Policy</a></div><p class="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p></div></div></footer></div>
-
-    <!-- Scripts -->
-    <script src="../js/main.js"></script>
+        });
+        });
+        });
+        })();</script>
+      </div>
+    </section>
+    <section class="py-20 lg:py-24 bg-gradient-to-b from-white to-[#EAF6EF]">
+      <div class="max-w-[900px] mx-auto px-6 lg:px-12 text-center">
+        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
+          <div class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+              <path d="M20 6 9 17l-5-5">
+              </path>
+            </svg>
+            <span>Delivered in-house at your location</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+              <path d="M20 6 9 17l-5-5">
+              </path>
+            </svg>
+            <span>Practical, hands-on format</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#16A34A]">
+              <path d="M20 6 9 17l-5-5">
+              </path>
+            </svg>
+            <span>Immediate workplace application</span>
+          </div>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Build a Team That Solves Problems — <span class="text-[#16A34A]">Not Escalates Them.</span>
+        </h2>
+        <p class="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">Stop daily firefighting and start systematic operational improvement.</p>
+        <p class="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">Let&#x27;s design a private workshop tailored to your team.</p>
+        <a href="/teamworks/bookConsultation.html" class="inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl group">Request Private Training Proposal<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform">
+          <path d="M5 12h14">
+          </path>
+          <path d="m12 5 7 7-7 7">
+          </path>
+        </svg>
+      </a>
+      <p class="text-sm text-gray-500 mt-4 font-light">A short discussion to understand your goals and team needs. No commitment required.</p>
+    </div>
+  </section>
+</main>
+<footer class="bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto px-8 lg:px-16">
+    <div class="pt-16">
+      <div class="mb-6">
+        <a href="/index.html" class="inline-block">
+          <img src="../assets/img/main/ciagile-main-logo-dark.webp" alt="CI Agile" class="h-7 w-auto"/>
+        </a>
+      </div>
+      <p class="text-gray-600 leading-relaxed mb-8 font-light text-sm max-w-sm">Transforming organizations with AI-driven agile methodology to deliver better business results.</p>
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/company/ciagile/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+          </i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="YouTube">
+          <i data-lucide="youtube" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+          </i>
+        </a>
+        <a href="https://www.facebook.com/ciagile.education" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-gray-700 flex items-center justify-center hover:text-[#2A64C5] hover:border-[#2A64C5] transition-all" aria-label="Facebook">
+          <i data-lucide="facebook" class="w-[18px] h-[18px]" style="stroke-width:1.5">
+          </i>
+        </a>
+      </div>
+    </div>
+    <div class="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3>
+        <a href="/jess/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors">Jeff Sutherland&#x27;s Enterprise Agility Program</a>
+        <ul class="space-y-3 mt-4">
+          <li>
+            <a href="/jess/leadership-training.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">International Certification Courses</a>
+          </li>
+          <li>
+            <a href="/jess/class-schedule.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Public Certification Class Schedule</a>
+          </li>
+        </ul>
+        <a href="/jess/team-level-training.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors mt-10">NOVA Series</a>
+        <ul class="space-y-3 mt-4">
+          <li>
+            <a href="/jess/nova/agile-scrum.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Agile &amp; Scrum 201</a>
+          </li>
+          <li>
+            <a href="/jess/nova/design-thinking.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Design Thinking 201</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3>
+        <a href="/teamworks/index.html" class="block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors">TeamWorks Program</a>
+        <ul class="space-y-3 mt-4">
+          <li>
+            <a href="/teamworks/creating-super-teams.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Creating Super Teams</a>
+          </li>
+          <li>
+            <a href="/teamworks/design-thinking.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Win Customers Through Design</a>
+          </li>
+          <li>
+            <a href="/teamworks/critical-thinking-kanban.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Critical Thinking for Better Work</a>
+          </li>
+          <li>
+            <a href="/teamworks/practical-lean-problem-solving.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Practical Lean Problem Solving</a>
+          </li>
+          <li>
+            <a href="/teamworks/ai-skills-for-your-team.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">AI Skills for YOUR Teams</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Resources</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/jess/free-resources.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Free Resources &amp; Official Guides</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/69641858/admin/dashboard/" target="_blank" rel="noopener noreferrer" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Community Forums</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold">Company</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/aboutus.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">About Us</a>
+          </li>
+          <li>
+            <a href="/contactus.html" class="text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-200">
+    </div>
+    <div class="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center">
+        <a href="/privacy-policy.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Privacy Policy</a>
+        <a href="/terms-of-use.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Terms of Use</a>
+        <a href="/cookie-policy.html" class="text-gray-600 hover:text-[#2A64C5] transition-colors font-light">Cookie Policy</a>
+      </div>
+      <p class="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- Scripts -->
+<script src="../js/main.js">
+</script>
 </body>
 </html>
+

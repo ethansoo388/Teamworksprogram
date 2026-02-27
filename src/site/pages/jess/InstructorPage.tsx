@@ -203,7 +203,7 @@ export function InstructorPage() {
               <h3 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8 text-center">Certifications & Credentials</h3>
               <img 
                 src="/assets/img/jess/people-ethan.webp" 
-                alt="Ethan"s Certifications and Credentials" 
+	                alt="Ethan's Certifications and Credentials" 
                 className="w-full max-w-4xl mx-auto"
               />
             </div>
