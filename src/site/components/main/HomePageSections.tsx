@@ -639,16 +639,16 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
   const isLight = variant === 'light';
 
   const footerLinkClass = isLight
-    ? "text-gray-900 hover:text-[#8FB3FF] transition-colors text-sm font-light"
+    ? "text-gray-900 hover:text-[#2A64C5] transition-colors text-sm font-light"
     : "text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light";
 
   const footerMetaLinkClass = isLight
-    ? "text-gray-600 hover:text-[#8FB3FF] transition-colors font-light"
+    ? "text-gray-600 hover:text-[#2A64C5] transition-colors font-light"
     : "text-gray-300 hover:text-[#8FB3FF] transition-colors font-light";
 
   // Used for subsection header-style links like "NOVA Series".
   const footerSubsectionLinkClass = isLight
-    ? "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors"
+    ? "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#2A64C5] transition-colors"
     : "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors";
 
   const headingClass = isLight
@@ -659,6 +659,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
   const dividerClass = isLight ? 'border-gray-200' : 'border-gray-800';
   const taglineClass = isLight ? 'text-gray-600' : 'text-gray-400';
   const iconBaseClass = isLight ? 'border-gray-300 text-gray-700' : 'border-gray-700 text-gray-300';
+  const iconHoverClass = isLight ? 'hover:text-[#2A64C5] hover:border-[#2A64C5]' : 'hover:text-[#8FB3FF] hover:border-[#8FB3FF]';
   const copyrightClass = isLight ? 'text-gray-500' : 'text-gray-500';
 
   const logoSrc = isLight ? ciAgileLogoDark : ciAgileLogoWhite;
@@ -672,7 +673,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
           <div className="mb-6">
             <a
               href="/index.html"
-              className="inline-block transition-[filter,opacity] hover:opacity-95 hover:[filter:drop-shadow(0_0_6px_#8FB3FF)]"
+              className="inline-block"
             >
               <img
                 src={logoSrc}
@@ -689,7 +690,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               href="https://www.linkedin.com/company/ciagile/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center ${iconHoverClass} transition-all`}
               aria-label="LinkedIn"
             >
               <i data-lucide="linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -698,7 +699,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw"
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center ${iconHoverClass} transition-all`}
               aria-label="YouTube"
             >
               <i data-lucide="youtube" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -707,7 +708,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               href="https://www.facebook.com/ciagile.education"
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center ${iconHoverClass} transition-all`}
               aria-label="Facebook"
             >
               <i data-lucide="facebook" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
