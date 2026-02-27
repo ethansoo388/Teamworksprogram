@@ -635,17 +635,30 @@ function FinalCTASection() {
 // Footer — updated design, Link replaced with <a>, logo uses local asset
 // ---------------------------------------------------------------------------
 export function MainSiteFooter() {
+  const footerLinkClass =
+    "text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light";
+  const footerMetaLinkClass =
+    "text-gray-300 hover:text-[#8FB3FF] transition-colors font-light";
+  // Used for subsection header-style links like "NOVA Series".
+  const footerSubsectionLinkClass =
+    "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors";
+
   return (
     <footer className="bg-[#0f1419] text-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         {/* Brand block (top tier) */}
         <div className="pt-16">
           <div className="mb-6">
-            <img
-              src={ciAgileLogoWhite}
-              alt="CI Agile"
-              className="h-7 w-auto brightness-0 invert"
-            />
+            <a
+              href="/index.html"
+              className="inline-block transition-[filter,opacity] hover:opacity-95 hover:[filter:drop-shadow(0_0_6px_#8FB3FF)]"
+            >
+              <img
+                src={ciAgileLogoWhite}
+                alt="CI Agile"
+                className="h-7 w-auto brightness-0 invert"
+              />
+            </a>
           </div>
           <p className="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">
             Transforming organizations with AI-driven agile methodology to deliver better business results.
@@ -655,7 +668,7 @@ export function MainSiteFooter() {
               href="https://www.linkedin.com/company/ciagile/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
               aria-label="LinkedIn"
             >
               <i data-lucide="linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -664,7 +677,7 @@ export function MainSiteFooter() {
               href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
               aria-label="YouTube"
             >
               <i data-lucide="youtube" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -673,7 +686,7 @@ export function MainSiteFooter() {
               href="https://www.facebook.com/ciagile.education"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
               aria-label="Facebook"
             >
               <i data-lucide="facebook" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -686,19 +699,17 @@ export function MainSiteFooter() {
           {/* Enterprise Pathways */}
           <div>
             <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3>
-            <ul className="space-y-3">
+            <a href="/jess/index.html" className={footerSubsectionLinkClass}>
+              Jeff Sutherland&apos;s Enterprise Agility Program
+            </a>
+            <ul className="space-y-3 mt-4">
               <li>
-                <a href="/jess/index.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
-                  Jeff Sutherland&apos;s Enterprise Agility Program
-                </a>
-              </li>
-              <li>
-                <a href="/jess/leadership-training.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/leadership-training.html" className={footerLinkClass}>
                   International Certification Courses
                 </a>
               </li>
               <li>
-                <a href="/jess/class-schedule.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/class-schedule.html" className={footerLinkClass}>
                   Public Certification Class Schedule
                 </a>
               </li>
@@ -706,18 +717,18 @@ export function MainSiteFooter() {
 
             <a
               href="/jess/team-level-training.html"
-              className="block mt-10 text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-gray-300 transition-colors"
+              className={`${footerSubsectionLinkClass} mt-10`}
             >
               NOVA Series
             </a>
             <ul className="space-y-3 mt-4">
               <li>
-                <a href="/jess/nova/agile-scrum.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/nova/agile-scrum.html" className={footerLinkClass}>
                   Agile &amp; Scrum 201
                 </a>
               </li>
               <li>
-                <a href="/jess/nova/design-thinking.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/nova/design-thinking.html" className={footerLinkClass}>
                   Design Thinking 201
                 </a>
               </li>
@@ -727,34 +738,32 @@ export function MainSiteFooter() {
           {/* Capability Tracks */}
           <div>
             <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3>
-            <ul className="space-y-3">
+            <a href="/teamworks/index.html" className={footerSubsectionLinkClass}>
+              TeamWorks Program
+            </a>
+            <ul className="space-y-3 mt-4">
               <li>
-                <a href="/teamworks/index.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
-                  TeamWorks Program
-                </a>
-              </li>
-              <li>
-                <a href="/teamworks/creating-super-teams.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/creating-super-teams.html" className={footerLinkClass}>
                   Creating Super Teams
                 </a>
               </li>
               <li>
-                <a href="/teamworks/design-thinking.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/design-thinking.html" className={footerLinkClass}>
                   Win Customers Through Design
                 </a>
               </li>
               <li>
-                <a href="/teamworks/critical-thinking-kanban.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/critical-thinking-kanban.html" className={footerLinkClass}>
                   Critical Thinking for Better Work
                 </a>
               </li>
               <li>
-                <a href="/teamworks/practical-lean-problem-solving.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/practical-lean-problem-solving.html" className={footerLinkClass}>
                   Practical Lean Problem Solving
                 </a>
               </li>
               <li>
-                <a href="/teamworks/ai-skills-for-your-team.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/ai-skills-for-your-team.html" className={footerLinkClass}>
                   AI Skills for YOUR Teams
                 </a>
               </li>
@@ -766,7 +775,7 @@ export function MainSiteFooter() {
             <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/jess/free-resources.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/free-resources.html" className={footerLinkClass}>
                   Free Resources &amp; Official Guides
                 </a>
               </li>
@@ -775,7 +784,7 @@ export function MainSiteFooter() {
                   href="https://www.linkedin.com/company/69641858/admin/dashboard/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors text-sm font-light"
+                  className={footerLinkClass}
                 >
                   Community Forums
                 </a>
@@ -788,12 +797,12 @@ export function MainSiteFooter() {
             <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Company</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/aboutus.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/aboutus.html" className={footerLinkClass}>
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/contactus.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
+                <a href="/contactus.html" className={footerLinkClass}>
                   Contact Us
                 </a>
               </li>
@@ -806,9 +815,9 @@ export function MainSiteFooter() {
         {/* Bottom bar */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center">
-            <a href="/privacy-policy.html" className="text-gray-300 hover:text-white transition-colors font-light">Privacy Policy</a>
-            <a href="/terms-of-use.html" className="text-gray-300 hover:text-white transition-colors font-light">Terms of Use</a>
-            <a href="/cookie-policy.html" className="text-gray-300 hover:text-white transition-colors font-light">Cookie Policy</a>
+            <a href="/privacy-policy.html" className={footerMetaLinkClass}>Privacy Policy</a>
+            <a href="/terms-of-use.html" className={footerMetaLinkClass}>Terms of Use</a>
+            <a href="/cookie-policy.html" className={footerMetaLinkClass}>Cookie Policy</a>
           </div>
           <p className="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
         </div>
