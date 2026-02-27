@@ -1,5 +1,5 @@
 import { ArrowRight, Menu, X, Eye, Zap, Target, TrendingUp, Clock, Users, UserCheck } from "lucide-react";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { useState } from "react";
 import heroImage from "@/assets/img/teamworks/ciagile-teamworks-course03-critical-thinking-hero.webp";
 import moduleImage1 from "@/assets/img/teamworks/ciagile-teamworks-course03-module01-kanban.webp";
@@ -932,7 +932,7 @@ export function Course03Page() {
       </main>
 
       {/* Footer */}
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

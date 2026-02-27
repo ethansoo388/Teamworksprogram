@@ -1,5 +1,5 @@
 import { ArrowRight, Menu, X, Clock, Users, FileX, Earth, Rocket, CheckCircle2, Check, Lightbulb } from "lucide-react";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import { StoryCarousel, FAQAccordion, InvestmentGrid, SkillsRadial, CourseModulesGrid, PersonaCards } from "@/app/components/shared";
 import { stories, investments, skills, courseModules, learningOutcomes, personas, masterTopics, faqs } from "@/app/components/course05/data";
@@ -572,7 +572,7 @@ export function Course05Page() {
         </section>
       </main>
 
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

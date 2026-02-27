@@ -1,4 +1,4 @@
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 
 export function BookConsultationPage() {
   return (
@@ -397,7 +397,7 @@ export function BookConsultationPage() {
       </main>
 
       {/* Footer */}
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

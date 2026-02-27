@@ -639,9 +639,9 @@ export function MainSiteFooter() {
     <footer className="bg-[#0f1419] text-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         {/* Main footer content */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-12 border-b border-gray-800">
-          {/* Company info */}
-          <div className="lg:col-span-4">
+        <div className="py-16 grid gap-12 border-b border-gray-800 md:grid-cols-2 lg:grid-cols-5">
+          {/* Brand block */}
+          <div>
             <div className="mb-6">
               <img
                 src={ciAgileLogoWhite}
@@ -683,64 +683,132 @@ export function MainSiteFooter() {
             </div>
           </div>
 
-          {/* Programs */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Programs</h3>
+          {/* Enterprise Pathways */}
+          <div>
+            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Enterprise Pathways</h3>
             <ul className="space-y-3">
-              <li><a href="/teamworks/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For SMEs</a></li>
-              <li><a href="/jess/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">For Enterprises</a></li>
+              <li>
+                <a href="/jess/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Jeff Sutherland&apos;s Enterprise Agility Program
+                </a>
+              </li>
+              <li>
+                <a href="/jess/leadership-training.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  International Certification Courses
+                </a>
+              </li>
+              <li>
+                <a href="/jess/class-schedule.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Public Certification Class Schedule
+                </a>
+              </li>
+            </ul>
+
+            <a
+              href="/jess/team-level-training.html"
+              className="block mt-10 text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-gray-300 transition-colors"
+            >
+              NOVA Series
+            </a>
+            <ul className="space-y-3 mt-4">
+              <li>
+                <a href="/jess/nova/agile-scrum.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Agile &amp; Scrum 201
+                </a>
+              </li>
+              <li>
+                <a href="/jess/nova/design-thinking.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Design Thinking 201
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Capability Tracks */}
+          <div>
+            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Capability Tracks</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="/teamworks/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  TeamWorks Program
+                </a>
+              </li>
+              <li>
+                <a href="/teamworks/creating-super-teams.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Creating Super Teams
+                </a>
+              </li>
+              <li>
+                <a href="/teamworks/design-thinking.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Win Customers Through Design
+                </a>
+              </li>
+              <li>
+                <a href="/teamworks/critical-thinking-kanban.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Critical Thinking for Better Work
+                </a>
+              </li>
+              <li>
+                <a href="/teamworks/practical-lean-problem-solving.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Practical Lean Problem Solving
+                </a>
+              </li>
+              <li>
+                <a href="/teamworks/ai-skills-for-your-team.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  AI Skills for YOUR Teams
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Resources */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Resources</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-light">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-light">Blogs</a></li>
-            </ul>
-          </div>
-
-          {/* About */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">About</h3>
-            <ul className="space-y-3">
-              <li><a href="/aboutus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">About Us</a></li>
-              <li><a href="/contactus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">Contact Us</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs text-gray-500 mb-5 uppercase tracking-widest font-normal">Contact</h3>
+          <div>
+            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:romanoff@ciagile.com" className="text-gray-400 hover:text-white transition-colors text-sm font-light block">
-                  romanoff@ciagile.com
+                <a href="/jess/free-resources.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Free Resources &amp; Official Guides
                 </a>
               </li>
               <li>
-                <a href="tel:+60192981055" className="text-gray-400 hover:text-white transition-colors text-sm font-light block">
-                  +60 19 298 1055
+                <a
+                  href="https://www.linkedin.com/company/69641858/admin/dashboard/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors text-sm font-light"
+                >
+                  Community Forums
                 </a>
               </li>
             </ul>
-            <h3 className="text-xs text-gray-500 mb-5 mt-8 uppercase tracking-widest font-normal">Our Location</h3>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Company</h3>
             <ul className="space-y-3">
-              <li><span className="text-gray-400 text-sm font-light">Malaysia</span></li>
-              <li><span className="text-gray-400 text-sm font-light">Singapore</span></li>
+              <li>
+                <a href="/aboutus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/contactus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs font-light">© 2025 CI Agile. All rights reserved.</p>
-          <div className="flex gap-8 text-xs">
+        <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center">
             <a href="/privacy-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
             <a href="/terms-of-use.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Use</a>
             <a href="/cookie-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
           </div>
+          <p className="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

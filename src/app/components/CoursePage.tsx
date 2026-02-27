@@ -1,5 +1,5 @@
 import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, Menu } from "lucide-react";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import highEnergyTeamImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
 import successfulAgileImage from "@/assets/img/teamworks/ciagile-teamworks-course01-workshop-classroom-activity.webp";
 
@@ -685,7 +685,7 @@ export function CoursePage() {
         </div>
       </section>
 
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck, Menu } from "lucide-react";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import moduleGraphicImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
 import productDesignImage from "@/assets/img/teamworks/ciagile-teamworks-course02-product-design-customer-experience.webp";
 import professionalWomanImage from "@/assets/img/teamworks/ciagile-teamworks-course04-root-cause-thinking.webp";
@@ -829,7 +829,7 @@ export function Course02Page() {
       </section>
 
       {/* Footer */}
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

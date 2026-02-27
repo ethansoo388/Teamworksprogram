@@ -1,5 +1,5 @@
 import { ArrowRight, Menu, X, AlertCircle, Clock, UserX, TrendingDown, CheckCircle2, Headphones, TrendingUp, Settings, Users, UserCheck, Quote, Star, Check, ChevronDown, Zap, MapPin } from "lucide-react";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import { useState } from "react";
 
@@ -1070,7 +1070,7 @@ export function Course04Page() {
       </main>
 
       {/* Footer */}
-      <FooterV2 />
+      <MainSiteFooter />
     </div>
   );
 }

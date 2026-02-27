@@ -5,7 +5,7 @@ import { DiscoverCoursesV2 } from "@/site/components/teamworks/v2/DiscoverCourse
 import { WhyDifferentV2 } from "@/site/components/teamworks/v2/WhyDifferentV2";
 import { TestimonialsV2 } from "@/site/components/teamworks/v2/TestimonialsV2";
 import { PricingCTAV2 } from "@/site/components/teamworks/v2/PricingCTAV2";
-import { FooterV2 } from "@/site/components/teamworks/v2/FooterV2";
+import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import type { PageMeta } from "@/types";
 
 export const pageMeta: PageMeta = {
@@ -39,7 +39,7 @@ export function LandingPage() {
         <WhyDifferentV2 />
         <TestimonialsV2 />
         <PricingCTAV2 />
-        <FooterV2 />
+        <MainSiteFooter />
       </div>
     </div>
   );
