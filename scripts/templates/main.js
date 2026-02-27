@@ -92,7 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Dropdown navigation functionality (main site) - HOVER BASED - HOVER BASED
+  // Dropdown navigation functionality (main site)
+  // CLICK-ONLY behavior:
+  // - Click a navbar item to open its dropdown
+  // - Click the same item again to close all dropdowns
+  // - Click a different item to switch dropdowns
+  // - Clicking outside closes all dropdowns
+  // - Mouse enter/leave does NOT open/close dropdowns
   const dropdownContainers = document.querySelectorAll('[data-dropdown-container]');
 
   // Close any open dropdowns when clicking outside (desktop + touch)
@@ -123,36 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Show dropdown on hover
-    container.addEventListener('mouseenter', () => {
-      // Close all other dropdowns first
-      document.querySelectorAll('[data-dropdown]').forEach(dd => {
-        if (dd !== dropdown) {
-          dd.classList.add('hidden');
-        }
-      });
-
-      // Reset all other triggers to default color
-      document.querySelectorAll('[data-dropdown-text]').forEach(t => {
-        if (t !== text) {
-          t.style.color = '#364153';
-        }
-      });
-      document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
-        if (i !== icon) {
-          i.style.color = '#364153';
-        }
-      });
-
-      // Show current dropdown
-      dropdown.classList.remove('hidden');
-
-      // Change trigger text and icon to blue (#0066CC)
-      if (text) text.style.color = '#0066CC';
-      if (icon) icon.style.color = '#0066CC';
-    });
-
-    // Also support click-to-toggle (needed for touch devices and click-first users)
+    // Click-to-toggle (desktop + touch)
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -174,15 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (text) text.style.color = '#0066CC';
         if (icon) icon.style.color = '#0066CC';
       }
-    });
-
-    // Hide dropdown when mouse leaves the entire container (trigger + dropdown)
-    container.addEventListener('mouseleave', () => {
-      dropdown.classList.add('hidden');
-
-      // Reset color to default
-      if (text) text.style.color = '#364153';
-      if (icon) icon.style.color = '#364153';
     });
   });
 

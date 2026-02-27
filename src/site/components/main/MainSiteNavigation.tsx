@@ -607,7 +607,7 @@ export function MainSiteNavigation() {
           {/* Right Section - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="https://ciagile.mykajabi.com/login"
+              href="https://education.ciagile.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 text-[#0066FF] text-sm font-medium rounded-full border-2 border-[#0066FF] hover:bg-[#0066FF] hover:text-white transition-colors no-underline"
@@ -857,7 +857,7 @@ export function MainSiteNavigation() {
             {/* Mobile CTA Buttons */}
             <div className="pt-4 space-y-3">
               <a
-                href="https://ciagile.mykajabi.com/login"
+                href="https://education.ciagile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-6 py-3 text-[#0066FF] text-center font-medium rounded-full border-2 border-[#0066FF] hover:bg-[#0066FF] hover:text-white transition-colors no-underline"
