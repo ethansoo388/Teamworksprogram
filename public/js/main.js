@@ -108,11 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (target.closest('[data-dropdown-container]')) return;
 
     document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.add('hidden'));
-    document.querySelectorAll('[data-dropdown-text]').forEach(t => {
-      t.style.color = '#364153';
-    });
-    document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
-      i.style.color = '#364153';
+    document.querySelectorAll('[data-dropdown-trigger]').forEach((btn) => {
+      if (btn instanceof HTMLElement) btn.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -138,18 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Close all dropdowns first
       document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.add('hidden'));
-      document.querySelectorAll('[data-dropdown-text]').forEach(t => {
-        t.style.color = '#364153';
-      });
-      document.querySelectorAll('[data-dropdown-icon]').forEach(i => {
-        i.style.color = '#364153';
+      document.querySelectorAll('[data-dropdown-trigger]').forEach((btn) => {
+        if (btn instanceof HTMLElement) btn.setAttribute('aria-expanded', 'false');
       });
 
       // If it was hidden, open it; if it was open, keep it closed
       if (wasHidden) {
         dropdown.classList.remove('hidden');
-        if (text) text.style.color = '#0066CC';
-        if (icon) icon.style.color = '#0066CC';
+        if (trigger instanceof HTMLElement) trigger.setAttribute('aria-expanded', 'true');
       }
     });
   });

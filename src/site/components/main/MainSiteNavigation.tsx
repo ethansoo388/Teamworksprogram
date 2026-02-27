@@ -22,13 +22,14 @@ export function MainSiteNavigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden xl:flex items-center space-x-2">
             {/* Programs Dropdown */}
             <div
               className="relative"
               data-dropdown-container="programs"
             >
               <button
+                aria-expanded="false"
                 className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
                 data-dropdown-trigger="programs"
               >
@@ -41,10 +42,13 @@ export function MainSiteNavigation() {
               {/* Mega Menu for Programs */}
               <div
                 data-dropdown="programs"
-                className="hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl overflow-hidden z-50"
+                className="hidden fixed left-1/2 -translate-x-1/2 bg-white rounded-2xl overflow-hidden z-50"
                 style={{
+                  top: '80px',
                   width: '1440px',
                   maxWidth: '95vw',
+                  maxHeight: 'calc(100vh - 96px)',
+                  overflowY: 'auto',
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
                 }}
               >
@@ -281,6 +285,7 @@ export function MainSiteNavigation() {
               data-dropdown-container="resources"
             >
               <button
+                aria-expanded="false"
                 className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
                 data-dropdown-trigger="resources"
               >
@@ -293,10 +298,13 @@ export function MainSiteNavigation() {
               {/* Mega Menu for Resources */}
               <div
                 data-dropdown="resources"
-                className="hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl overflow-hidden z-50"
+                className="hidden fixed left-1/2 -translate-x-1/2 bg-white rounded-2xl overflow-hidden z-50"
                 style={{
+                  top: '80px',
                   width: '1440px',
                   maxWidth: '95vw',
+                  maxHeight: 'calc(100vh - 96px)',
+                  overflowY: 'auto',
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
                 }}
               >
@@ -447,6 +455,7 @@ export function MainSiteNavigation() {
               data-dropdown-container="company"
             >
               <button
+                aria-expanded="false"
                 className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
                 data-dropdown-trigger="company"
               >
@@ -459,10 +468,13 @@ export function MainSiteNavigation() {
               {/* Mega Menu for Company */}
               <div
                 data-dropdown="company"
-                className="hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl overflow-hidden z-50"
+                className="hidden fixed left-1/2 -translate-x-1/2 bg-white rounded-2xl overflow-hidden z-50"
                 style={{
+                  top: '80px',
                   width: '1440px',
                   maxWidth: '95vw',
+                  maxHeight: 'calc(100vh - 96px)',
+                  overflowY: 'auto',
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
                 }}
               >
@@ -605,7 +617,7 @@ export function MainSiteNavigation() {
           </div>
 
           {/* Right Section - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             <a
               href="https://education.ciagile.com"
               target="_blank"
@@ -623,7 +635,7 @@ export function MainSiteNavigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               type="button"
               aria-label="Open menu"
@@ -651,7 +663,7 @@ export function MainSiteNavigation() {
       <div
         id="mainsite-mobile-menu"
         data-mobile-menu
-        className="lg:hidden fixed inset-0 z-40 hidden"
+        className="xl:hidden fixed inset-0 z-40 hidden"
         aria-hidden="true"
       >
         {/* Backdrop */}
