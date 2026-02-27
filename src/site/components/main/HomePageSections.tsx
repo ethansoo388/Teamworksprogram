@@ -638,67 +638,67 @@ export function MainSiteFooter() {
   return (
     <footer className="bg-[#0f1419] text-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
-        {/* Main footer content */}
-        <div className="py-16 grid gap-12 border-b border-gray-800 md:grid-cols-2 lg:grid-cols-5">
-          {/* Brand block */}
-          <div>
-            <div className="mb-6">
-              <img
-                src={ciAgileLogoWhite}
-                alt="CI Agile"
-                className="h-7 w-auto brightness-0 invert"
-              />
-            </div>
-            <p className="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">
-              Transforming organizations with AI-driven agile methodology to deliver better business results.
-            </p>
-            <div className="flex gap-4">
-              <a
-                href="https://www.linkedin.com/company/ciagile/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
-                aria-label="LinkedIn"
-              >
-                <i data-lucide="linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
-                aria-label="YouTube"
-              >
-                <i data-lucide="youtube" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
-              </a>
-              <a
-                href="https://www.facebook.com/ciagile.education"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
-                aria-label="Facebook"
-              >
-                <i data-lucide="facebook" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
-              </a>
-            </div>
+        {/* Brand block (top tier) */}
+        <div className="pt-16">
+          <div className="mb-6">
+            <img
+              src={ciAgileLogoWhite}
+              alt="CI Agile"
+              className="h-7 w-auto brightness-0 invert"
+            />
           </div>
+          <p className="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">
+            Transforming organizations with AI-driven agile methodology to deliver better business results.
+          </p>
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/company/ciagile/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              aria-label="YouTube"
+            >
+              <i data-lucide="youtube" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
+            </a>
+            <a
+              href="https://www.facebook.com/ciagile.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-gray-500 hover:bg-gray-800 transition-all"
+              aria-label="Facebook"
+            >
+              <i data-lucide="facebook" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
+            </a>
+          </div>
+        </div>
 
+        {/* Sitemap (second tier) */}
+        <div className="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Enterprise Pathways */}
           <div>
-            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Enterprise Pathways</h3>
+            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/jess/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/index.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Jeff Sutherland&apos;s Enterprise Agility Program
                 </a>
               </li>
               <li>
-                <a href="/jess/leadership-training.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/leadership-training.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   International Certification Courses
                 </a>
               </li>
               <li>
-                <a href="/jess/class-schedule.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/class-schedule.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Public Certification Class Schedule
                 </a>
               </li>
@@ -712,12 +712,12 @@ export function MainSiteFooter() {
             </a>
             <ul className="space-y-3 mt-4">
               <li>
-                <a href="/jess/nova/agile-scrum.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/nova/agile-scrum.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Agile &amp; Scrum 201
                 </a>
               </li>
               <li>
-                <a href="/jess/nova/design-thinking.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/nova/design-thinking.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Design Thinking 201
                 </a>
               </li>
@@ -726,35 +726,35 @@ export function MainSiteFooter() {
 
           {/* Capability Tracks */}
           <div>
-            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Capability Tracks</h3>
+            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/teamworks/index.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/index.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   TeamWorks Program
                 </a>
               </li>
               <li>
-                <a href="/teamworks/creating-super-teams.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/creating-super-teams.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Creating Super Teams
                 </a>
               </li>
               <li>
-                <a href="/teamworks/design-thinking.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/design-thinking.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Win Customers Through Design
                 </a>
               </li>
               <li>
-                <a href="/teamworks/critical-thinking-kanban.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/critical-thinking-kanban.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Critical Thinking for Better Work
                 </a>
               </li>
               <li>
-                <a href="/teamworks/practical-lean-problem-solving.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/practical-lean-problem-solving.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Practical Lean Problem Solving
                 </a>
               </li>
               <li>
-                <a href="/teamworks/ai-skills-for-your-team.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/teamworks/ai-skills-for-your-team.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   AI Skills for YOUR Teams
                 </a>
               </li>
@@ -763,10 +763,10 @@ export function MainSiteFooter() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Resources</h3>
+            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/jess/free-resources.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/jess/free-resources.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Free Resources &amp; Official Guides
                 </a>
               </li>
@@ -775,7 +775,7 @@ export function MainSiteFooter() {
                   href="https://www.linkedin.com/company/69641858/admin/dashboard/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors text-sm font-light"
+                  className="text-gray-300 hover:text-white transition-colors text-sm font-light"
                 >
                   Community Forums
                 </a>
@@ -785,15 +785,15 @@ export function MainSiteFooter() {
 
           {/* Company */}
           <div>
-            <h3 className="text-xs text-gray-500 mb-6 uppercase tracking-widest font-normal">Company</h3>
+            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Company</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/aboutus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/aboutus.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/contactus.html" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <a href="/contactus.html" className="text-gray-300 hover:text-white transition-colors text-sm font-light">
                   Contact Us
                 </a>
               </li>
@@ -801,12 +801,14 @@ export function MainSiteFooter() {
           </div>
         </div>
 
+        <div className="border-t border-gray-800" />
+
         {/* Bottom bar */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8 text-xs order-2 md:order-1 flex-wrap justify-center">
-            <a href="/privacy-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Privacy Policy</a>
-            <a href="/terms-of-use.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Terms of Use</a>
-            <a href="/cookie-policy.html" className="text-gray-500 hover:text-gray-300 transition-colors font-light">Cookie Policy</a>
+            <a href="/privacy-policy.html" className="text-gray-300 hover:text-white transition-colors font-light">Privacy Policy</a>
+            <a href="/terms-of-use.html" className="text-gray-300 hover:text-white transition-colors font-light">Terms of Use</a>
+            <a href="/cookie-policy.html" className="text-gray-300 hover:text-white transition-colors font-light">Cookie Policy</a>
           </div>
           <p className="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
         </div>
