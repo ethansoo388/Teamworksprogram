@@ -39,7 +39,7 @@ export function LandingPage() {
         <WhyDifferentV2 />
         <TestimonialsV2 />
         <PricingCTAV2 />
-        <MainSiteFooter />
+        <MainSiteFooter variant="light" />
       </div>
     </div>
   );

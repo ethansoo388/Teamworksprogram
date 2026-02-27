@@ -16,6 +16,7 @@
  */
 
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
+import ciAgileLogoDark from "@/assets/img/main/ciagile-main-logo-dark.webp";
 import presenterImage from "@/assets/img/main/ciagile-home-hero-presenter-flipchart.webp";
 import agileTeamImage from "@/assets/img/main/ciagile-home-programs-sticky-wall-collaboration.webp";
 import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-enterprise-presentation.webp";
@@ -634,17 +635,37 @@ function FinalCTASection() {
 // ---------------------------------------------------------------------------
 // Footer — updated design, Link replaced with <a>, logo uses local asset
 // ---------------------------------------------------------------------------
-export function MainSiteFooter() {
-  const footerLinkClass =
-    "text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light";
-  const footerMetaLinkClass =
-    "text-gray-300 hover:text-[#8FB3FF] transition-colors font-light";
+export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light' } = {}) {
+  const isLight = variant === 'light';
+
+  const footerLinkClass = isLight
+    ? "text-gray-900 hover:text-[#8FB3FF] transition-colors text-sm font-light"
+    : "text-gray-300 hover:text-[#8FB3FF] transition-colors text-sm font-light";
+
+  const footerMetaLinkClass = isLight
+    ? "text-gray-600 hover:text-[#8FB3FF] transition-colors font-light"
+    : "text-gray-300 hover:text-[#8FB3FF] transition-colors font-light";
+
   // Used for subsection header-style links like "NOVA Series".
-  const footerSubsectionLinkClass =
-    "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors";
+  const footerSubsectionLinkClass = isLight
+    ? "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors"
+    : "block text-xs text-gray-500 uppercase tracking-widest font-normal hover:text-[#8FB3FF] transition-colors";
+
+  const headingClass = isLight
+    ? "text-xs text-gray-600 mb-6 uppercase tracking-widest font-semibold"
+    : "text-xs text-white mb-6 uppercase tracking-widest font-semibold";
+
+  const footerBgClass = isLight ? 'bg-white text-gray-900' : 'bg-[#0f1419] text-white';
+  const dividerClass = isLight ? 'border-gray-200' : 'border-gray-800';
+  const taglineClass = isLight ? 'text-gray-600' : 'text-gray-400';
+  const iconBaseClass = isLight ? 'border-gray-300 text-gray-700' : 'border-gray-700 text-gray-300';
+  const copyrightClass = isLight ? 'text-gray-500' : 'text-gray-500';
+
+  const logoSrc = isLight ? ciAgileLogoDark : ciAgileLogoWhite;
+  const logoImgClass = isLight ? 'h-7 w-auto' : 'h-7 w-auto brightness-0 invert';
 
   return (
-    <footer className="bg-[#0f1419] text-white">
+    <footer className={footerBgClass}>
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         {/* Brand block (top tier) */}
         <div className="pt-16">
@@ -654,13 +675,13 @@ export function MainSiteFooter() {
               className="inline-block transition-[filter,opacity] hover:opacity-95 hover:[filter:drop-shadow(0_0_6px_#8FB3FF)]"
             >
               <img
-                src={ciAgileLogoWhite}
+                src={logoSrc}
                 alt="CI Agile"
-                className="h-7 w-auto brightness-0 invert"
+                className={logoImgClass}
               />
             </a>
           </div>
-          <p className="text-gray-400 leading-relaxed mb-8 font-light text-sm max-w-sm">
+          <p className={`${taglineClass} leading-relaxed mb-8 font-light text-sm max-w-sm`}>
             Transforming organizations with AI-driven agile methodology to deliver better business results.
           </p>
           <div className="flex gap-4">
@@ -668,7 +689,7 @@ export function MainSiteFooter() {
               href="https://www.linkedin.com/company/ciagile/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
               aria-label="LinkedIn"
             >
               <i data-lucide="linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -677,7 +698,7 @@ export function MainSiteFooter() {
               href="https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
               aria-label="YouTube"
             >
               <i data-lucide="youtube" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -686,7 +707,7 @@ export function MainSiteFooter() {
               href="https://www.facebook.com/ciagile.education"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-gray-700 flex items-center justify-center text-gray-300 hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all"
+              className={`w-10 h-10 border ${iconBaseClass} flex items-center justify-center hover:text-[#8FB3FF] hover:border-[#8FB3FF] transition-all`}
               aria-label="Facebook"
             >
               <i data-lucide="facebook" className="w-[18px] h-[18px]" style={{ strokeWidth: "1.5" }}></i>
@@ -698,7 +719,7 @@ export function MainSiteFooter() {
         <div className="pt-16 pb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Enterprise Pathways */}
           <div>
-            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Enterprise Pathways</h3>
+            <h3 className={headingClass}>Enterprise Pathways</h3>
             <a href="/jess/index.html" className={footerSubsectionLinkClass}>
               Jeff Sutherland&apos;s Enterprise Agility Program
             </a>
@@ -737,7 +758,7 @@ export function MainSiteFooter() {
 
           {/* Capability Tracks */}
           <div>
-            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Capability Tracks</h3>
+            <h3 className={headingClass}>Capability Tracks</h3>
             <a href="/teamworks/index.html" className={footerSubsectionLinkClass}>
               TeamWorks Program
             </a>
@@ -772,7 +793,7 @@ export function MainSiteFooter() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Resources</h3>
+            <h3 className={headingClass}>Resources</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/jess/free-resources.html" className={footerLinkClass}>
@@ -794,7 +815,7 @@ export function MainSiteFooter() {
 
           {/* Company */}
           <div>
-            <h3 className="text-xs text-white mb-6 uppercase tracking-widest font-semibold">Company</h3>
+            <h3 className={headingClass}>Company</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/aboutus.html" className={footerLinkClass}>
@@ -810,7 +831,7 @@ export function MainSiteFooter() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800" />
+        <div className={`border-t ${dividerClass}`} />
 
         {/* Bottom bar */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -819,7 +840,7 @@ export function MainSiteFooter() {
             <a href="/terms-of-use.html" className={footerMetaLinkClass}>Terms of Use</a>
             <a href="/cookie-policy.html" className={footerMetaLinkClass}>Cookie Policy</a>
           </div>
-          <p className="text-gray-500 text-xs font-light order-1 md:order-2">© 2026 CI Agile. All Rights Reserved.</p>
+          <p className={`${copyrightClass} text-xs font-light order-1 md:order-2`}>© 2026 CI Agile. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -572,7 +572,7 @@ export function Course05Page() {
         </section>
       </main>
 
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }

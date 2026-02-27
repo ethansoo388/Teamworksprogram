@@ -685,7 +685,7 @@ export function CoursePage() {
         </div>
       </section>
 
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }

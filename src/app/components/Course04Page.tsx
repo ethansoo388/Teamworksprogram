@@ -1070,7 +1070,7 @@ export function Course04Page() {
       </main>
 
       {/* Footer */}
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }

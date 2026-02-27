@@ -397,7 +397,7 @@ export function BookConsultationPage() {
       </main>
 
       {/* Footer */}
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }

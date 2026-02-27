@@ -829,7 +829,7 @@ export function Course02Page() {
       </section>
 
       {/* Footer */}
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }

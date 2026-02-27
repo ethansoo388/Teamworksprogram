@@ -932,7 +932,7 @@ export function Course03Page() {
       </main>
 
       {/* Footer */}
-      <MainSiteFooter />
+      <MainSiteFooter variant="light" />
     </div>
   );
 }
