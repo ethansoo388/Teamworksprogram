@@ -127,7 +127,7 @@ export function AgileScrumCoursePage() {
 
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-end">
-          <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 sm:pt-56 lg:pt-28 pb-10 lg:pb-20">
+          <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 pb-10 lg:pb-20">
             <div className="max-w-2xl text-center lg:text-left"
             >
               {/* Badge - Mobile centered, Desktop left */}

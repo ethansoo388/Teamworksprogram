@@ -127,7 +127,7 @@ export function DesignThinkingCoursePage() {
 
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center lg:justify-end">
-          <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-32 sm:pt-56 lg:pt-36 pb-10 lg:pb-20">
+          <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-32 pb-10 lg:pb-20">
             <div className="max-w-2xl w-full"
             >
               {/* Back to NOVA Series - Mobile Only (in hero) */}
