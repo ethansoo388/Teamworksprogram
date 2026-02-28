@@ -56,7 +56,7 @@
       "amount": "$13 billion",
       "year": "2023",
       "focus": "OpenAI & Azure AI",
-      "logo": "/assets/img/teamworks/logo-microsoft.png",
+      "logo": "/assets/img/teamworks/logo-microsoft-course05.webp",
       "description": "Microsoft invested heavily in OpenAI, integrating AI capabilities across Office 365, Azure cloud services, and enterprise solutions, making AI tools accessible to millions of businesses worldwide."
     },
     {
@@ -72,7 +72,7 @@
       "amount": "$4 billion",
       "year": "2024",
       "focus": "Anthropic & AWS AI",
-      "logo": "/assets/img/teamworks/logo-amazon.png",
+      "logo": "/assets/img/teamworks/logo-amazon-course05.webp",
       "description": "Amazon's investment in Anthropic and AWS AI services brings advanced language models and machine learning tools to businesses of all sizes through cloud infrastructure."
     },
     {
@@ -85,12 +85,30 @@
     }
   ],
   "skills": [
-    { "title": "Prompt better", "details": "Tools, ideas, images, solutions" },
-    { "title": "Write better", "details": "Emails, reports, marketing content" },
-    { "title": "Analyze better", "details": "Reports, documents, trends, patterns" },
-    { "title": "Automate better", "details": "Remove repetition, eliminate mundane tasks" },
-    { "title": "Decide better", "details": "Quick insights, accurate data, confidence" },
-    { "title": "Use AI responsibly", "details": "Ethics, safety, privacy, trust" }
+    {
+      "title": "Prompt better",
+      "details": "Tools, ideas, images, solutions"
+    },
+    {
+      "title": "Write better",
+      "details": "Emails, reports, marketing content"
+    },
+    {
+      "title": "Analyze better",
+      "details": "Reports, documents, trends, patterns"
+    },
+    {
+      "title": "Automate better",
+      "details": "Remove repetition, eliminate mundane tasks"
+    },
+    {
+      "title": "Decide better",
+      "details": "Quick insights, accurate data, confidence"
+    },
+    {
+      "title": "Use AI responsibly",
+      "details": "Ethics, safety, privacy, trust"
+    }
   ],
   "courseModules": [
     {

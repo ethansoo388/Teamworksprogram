@@ -133,7 +133,7 @@ export function InstructorPage() {
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-8">Previously led Agile transformation at:</h3>
             <div className="p-8 rounded-2xl flex items-center justify-center">
               <img 
-                src="/assets/img/jess/logo-client-logos.png" 
+                src="/assets/img/jess/logo-client-logos.webp" 
                 alt="Client logos" 
                 className="max-w-full h-auto"
               />

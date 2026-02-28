@@ -169,17 +169,17 @@ export function ProblemSection() {
             {/* Company Logos */}
             <div className="flex items-center justify-center gap-6 md:gap-8 mb-6 py-4 md:py-6 flex-wrap">
               <img
-                src="/assets/img/jess/logo-tesla.png"
+                src="/assets/img/jess/logo-tesla.webp"
                 alt="Logo Tesla"
                 className="h-16 w-auto"
               />
               <img
-                src="/assets/img/jess/logo-rocket-mortgage.png"
+                src="/assets/img/jess/logo-rocket-mortgage.webp"
                 alt="Logo Rocket Mortgage"
                 className="h-12 w-auto"
               />
               <img
-                src="/assets/img/jess/logo-bank-of-china.png"
+                src="/assets/img/jess/logo-bank-of-china-white.webp"
                 alt="Logo Bank of China"
                 className="h-16 w-auto"
               />

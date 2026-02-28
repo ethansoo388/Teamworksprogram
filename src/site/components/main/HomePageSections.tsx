@@ -93,7 +93,7 @@ function ClientLogosSection() {
   const clients = [
     { name: "AIS",                 industry: "Telecommunications", logo: "/assets/img/main/logo-ais.webp" },
     { name: "Axon Thai",           industry: "Technology",         logo: "/assets/img/main/logo-axon.webp" },
-    { name: "Bank of China",       industry: "Banking",            logo: "/assets/img/main/logo-bank-of-china.png" },
+    { name: "Bank of China",       industry: "Banking",            logo: "/assets/img/main/logo-bank-of-china.webp" },
     { name: "Bank Negara Malaysia", industry: "Government",        logo: "/assets/img/main/logo-bank-negara-malaysia.webp" },
     { name: "CIMB Thai",           industry: "Banking",            logo: "/assets/img/main/logo-cimb.webp" },
     { name: "Cisco",               industry: "Technology",         logo: "/assets/img/main/logo-cisco.webp" },
