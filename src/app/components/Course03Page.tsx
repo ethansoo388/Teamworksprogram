@@ -32,8 +32,7 @@ export function Course03Page() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#modules" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a>
               <a href="#outcomes" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Outcomes</a>
-              <a href="#reviews" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
-              <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+                            <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
             </div>
 
             {/* CTA Button */}
@@ -58,8 +57,7 @@ export function Course03Page() {
               <div className="flex flex-col gap-4">
                 <a href="#modules" className="text-sm py-2">Modules</a>
                 <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-                <a href="#reviews" className="text-sm py-2">Reviews</a>
-                <a href="#faq" className="text-sm py-2">FAQ</a>
+                                <a href="#faq" className="text-sm py-2">FAQ</a>
                 <a href="/teamworks/bookConsultation.html" className="bg-orange-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
                   Book This Course
                 </a>
@@ -604,112 +602,6 @@ export function Course03Page() {
                       </svg>
                     </div>
                     <p className="text-gray-700">Stronger team accountability</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What SME Teams Say Section */}
-        <section id="reviews" className="bg-white py-20 lg:py-32">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
-                What SME Teams Say
-              </h2>
-              <p className="text-lg text-gray-600">
-                Real results from teams who stopped firefighting and started flowing.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Testimonial 1 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-orange-500 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 text-base leading-relaxed">
-                  "Very clear and concise course, applicable for current working scope."
-                </p>
-                
-                {/* Metric Box */}
-                <div className="bg-orange-50 border-l-4 border-orange-500 rounded-lg p-4 mb-6">
-                  <div className="text-2xl font-bold text-orange-600 mb-0.5">60% fewer</div>
-                  <div className="text-sm text-gray-700">status meetings</div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-semibold text-sm">HM</span>
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">Handito Muhammad</div>
-                    <div className="text-sm text-gray-600">Team Leader</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-orange-500 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 text-base leading-relaxed">
-                  "Can achieve adaptive solutions to complex problems by applying the knowledge learned."
-                </p>
-                
-                {/* Metric Box */}
-                <div className="bg-orange-50 border-l-4 border-orange-500 rounded-lg p-4 mb-6">
-                  <div className="text-2xl font-bold text-orange-600 mb-0.5">2x output</div>
-                  <div className="text-sm text-gray-700">in 8 weeks</div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-semibold text-sm">BP</span>
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">Bayu Pradiyansyah</div>
-                    <div className="text-sm text-gray-600">Product Team</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 3 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-orange-500 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 text-base leading-relaxed">
-                  "This course has given me a clearer understanding of the values and understanding how a team should operate."
-                </p>
-                
-                {/* Metric Box */}
-                <div className="bg-orange-50 border-l-4 border-orange-500 rounded-lg p-4 mb-6">
-                  <div className="text-2xl font-bold text-orange-600 mb-0.5">94%</div>
-                  <div className="text-sm text-gray-700">on-time delivery</div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-semibold text-sm">AC</span>
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">Arvind Chandran</div>
-                    <div className="text-sm text-gray-600">Business Analyst</div>
                   </div>
                 </div>
               </div>

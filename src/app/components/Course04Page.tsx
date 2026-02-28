@@ -32,8 +32,7 @@ export function Course04Page() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#modules" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Modules</a>
               <a href="#outcomes" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Outcomes</a>
-              <a href="#testimonials" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
-              <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+                            <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
             </div>
 
             {/* CTA Button */}
@@ -58,8 +57,7 @@ export function Course04Page() {
               <div className="flex flex-col gap-4">
                 <a href="#modules" className="text-sm py-2">Modules</a>
                 <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-                <a href="#testimonials" className="text-sm py-2">Testimonials</a>
-                <a href="#faq" className="text-sm py-2">FAQ</a>
+                                <a href="#faq" className="text-sm py-2">FAQ</a>
                 <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: "#16A34A" }}>
                   Book This Course
                 </a>
@@ -696,128 +694,6 @@ export function Course04Page() {
                   <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Restaurant and retail service personnel</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section id="testimonials" className="bg-white py-20 lg:py-32">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
-                <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
-                  Success Stories
-                </span>
-              </div>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
-                What Our Clients Say
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-                Real results from teams who've transformed their problem-solving approach
-              </p>
-            </div>
-
-            {/* Testimonials Grid */}
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              {/* Testimonial 1 */}
-              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
-                {/* Quote Icon */}
-                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-6 h-6 text-white" />
-                </div>
-
-                {/* Quote Text */}
-                <div className="mt-6 mb-6">
-                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
-                    "This course transformed how our customer service team handles issues. Instead of escalating everything, they now solve problems independently and confidently."
-                  </p>
-                </div>
-
-                {/* Author Info */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div>
-                    <h4 className="text-gray-900 font-medium text-base">
-                      Siti Nurhaliza
-                    </h4>
-                    <p className="text-gray-600 text-sm font-light">
-                      Head of Customer Experience
-                    </p>
-                    <p className="text-[#16A34A] text-sm font-medium">
-                      Technology
-                    </p>
-                  </div>
-                </div>
-
-                {/* Accent Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
-                {/* Quote Icon */}
-                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-6 h-6 text-white" />
-                </div>
-
-                {/* Quote Text */}
-                <div className="mt-6 mb-6">
-                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
-                    "The practical tools and frameworks gave our operations team a systematic approach to tackle recurring issues. We've seen a 40% reduction in problem resolution time."
-                  </p>
-                </div>
-
-                {/* Author Info */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div>
-                    <h4 className="text-gray-900 font-medium text-base">
-                      Michael Chen
-                    </h4>
-                    <p className="text-gray-600 text-sm font-light">
-                      Operations Manager
-                    </p>
-                    <p className="text-[#16A34A] text-sm font-medium">
-                      Retail
-                    </p>
-                  </div>
-                </div>
-
-                {/* Accent Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
-              </div>
-
-              {/* Testimonial 3 */}
-              <div className="group bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-[#22C55E] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
-                {/* Quote Icon */}
-                <div className="absolute -top-3 left-6 w-12 h-12 bg-[#22C55E] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-6 h-6 text-white" />
-                </div>
-
-                {/* Quote Text */}
-                <div className="mt-6 mb-6">
-                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-light italic">
-                    "Our frontline staff now feel empowered to make decisions and improve processes. This mindset has become part of our culture, not just a training program."
-                  </p>
-                </div>
-
-                {/* Author Info */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div>
-                    <h4 className="text-gray-900 font-medium text-base">
-                      Priya Sharma
-                    </h4>
-                    <p className="text-gray-600 text-sm font-light">
-                      Learning & Development Manager
-                    </p>
-                    <p className="text-[#16A34A] text-sm font-medium">
-                      Hospitality
-                    </p>
-                  </div>
-                </div>
-
-                {/* Accent Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl"></div>
               </div>
             </div>
           </div>
