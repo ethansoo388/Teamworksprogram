@@ -56,7 +56,7 @@
       "amount": "$13 billion",
       "year": "2023",
       "focus": "OpenAI & Azure AI",
-      "logo": "/assets/img/teamworks/logo-microsoft.webp",
+      "logo": "/assets/img/teamworks/logo-microsoft.png",
       "description": "Microsoft invested heavily in OpenAI, integrating AI capabilities across Office 365, Azure cloud services, and enterprise solutions, making AI tools accessible to millions of businesses worldwide."
     },
     {
@@ -64,7 +64,7 @@
       "amount": "$70 billion",
       "year": "2024",
       "focus": "AI Infrastructure",
-      "logo": "/assets/img/teamworks/logo-google.webp",
+      "logo": "/assets/img/teamworks/logo-google.png",
       "description": "Google's massive investment in AI infrastructure powers Gemini, Bard, and enterprise AI solutions, transforming how businesses leverage data and automation at scale."
     },
     {
@@ -72,7 +72,7 @@
       "amount": "$4 billion",
       "year": "2024",
       "focus": "Anthropic & AWS AI",
-      "logo": "/assets/img/teamworks/logo-amazon.webp",
+      "logo": "/assets/img/teamworks/logo-amazon.png",
       "description": "Amazon's investment in Anthropic and AWS AI services brings advanced language models and machine learning tools to businesses of all sizes through cloud infrastructure."
     },
     {
@@ -80,7 +80,7 @@
       "amount": "$30+ billion",
       "year": "2024",
       "focus": "AI Research & Development",
-      "logo": "/assets/img/teamworks/logo-meta.webp",
+      "logo": "/assets/img/teamworks/logo-meta.png",
       "description": "Meta's commitment to open-source AI through LLaMA and extensive R&D investments are democratizing access to powerful AI models for developers and businesses globally."
     }
   ],
