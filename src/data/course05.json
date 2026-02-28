@@ -64,7 +64,7 @@
       "amount": "$70 billion",
       "year": "2024",
       "focus": "AI Infrastructure",
-      "logo": "/assets/img/teamworks/logo-google.png",
+      "logo": "/assets/img/teamworks/logo-google.webp",
       "description": "Google's massive investment in AI infrastructure powers Gemini, Bard, and enterprise AI solutions, transforming how businesses leverage data and automation at scale."
     },
     {
@@ -80,7 +80,7 @@
       "amount": "$30+ billion",
       "year": "2024",
       "focus": "AI Research & Development",
-      "logo": "/assets/img/teamworks/logo-meta.png",
+      "logo": "/assets/img/teamworks/logo-meta.webp",
       "description": "Meta's commitment to open-source AI through LLaMA and extensive R&D investments are democratizing access to powerful AI models for developers and businesses globally."
     }
   ],
