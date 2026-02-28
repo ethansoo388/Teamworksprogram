@@ -706,51 +706,44 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Explore a Private Corporate Run - Final Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-4xl mx-auto">
-          <div
-            className="text-center"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Explore a Private Corporate Run
             </h2>
             
-            <p className="text-base text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto">
               This programme is delivered exclusively as a private corporate engagement and tailored to your organisational context and objectives.
             </p>
 
-            <div className="max-w-2xl mx-auto mb-12">
-              <p className="text-base text-slate-600 mb-6 text-left">
+            <div className="max-w-2xl mx-auto mb-12 bg-slate-900/50 border border-slate-700/50 rounded-lg p-8">
+              <p className="text-base text-slate-200 mb-6 text-center font-medium">
                 The discussion will cover:
               </p>
-              <ul className="space-y-4 text-left">
-                <li
-                  className="flex items-start gap-3"
-                >
-                  <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
-                  <span className="text-base text-slate-900 leading-relaxed">Understanding organisational challenges and decision context</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-blue-400 mt-0.5 flex-shrink-0" size={20} strokeWidth={2} />
+                  <span className="text-base text-slate-200 leading-relaxed text-left">Understanding organisational challenges and decision context</span>
                 </li>
-                <li
-                  className="flex items-start gap-3"
-                >
-                  <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
-                  <span className="text-base text-slate-900 leading-relaxed">Assess fit and scope for your organisation</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-blue-400 mt-0.5 flex-shrink-0" size={20} strokeWidth={2} />
+                  <span className="text-base text-slate-200 leading-relaxed text-left">Assess fit and scope for your organisation</span>
                 </li>
-                <li
-                  className="flex items-start gap-3"
-                >
-                  <span className="text-slate-900 mt-1 flex-shrink-0">•</span>
-                  <span className="text-base text-slate-900 leading-relaxed">Exploring delivery options and expected outcomes</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-blue-400 mt-0.5 flex-shrink-0" size={20} strokeWidth={2} />
+                  <span className="text-base text-slate-200 leading-relaxed text-left">Exploring delivery options and expected outcomes</span>
                 </li>
               </ul>
             </div>
 
-            <a href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300 mb-3"
+            <a
+              href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 font-bold text-lg rounded-lg hover:bg-slate-100 transition-all duration-300 mb-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span>Talk to Program Advisor</span>
             </a>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-400">
               We'll help you assess fit, scope, and outcomes — no obligation.
             </p>
           </div>
