@@ -10,7 +10,7 @@ export function AboutHero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 opacity-30">
         <img
-          src="/assets/img/main/main-about-professional-business-consulting-environment.webp"
+          src="/assets/img/main/contactus-image.webp"
           alt="Professional business consulting environment"
           className="w-full h-full object-cover"
         />
