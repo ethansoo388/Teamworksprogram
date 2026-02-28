@@ -127,11 +127,10 @@ export function DesignThinkingCoursePage() {
 
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center lg:justify-end">
-          <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-32 pb-10 lg:pb-20">
-            <div className="max-w-2xl w-full"
-            >
+          <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-24 sm:pt-32 lg:pt-36 pb-8 sm:pb-12 lg:pb-20">
+            <div className="max-w-2xl w-full">
               {/* Back to NOVA Series - Mobile Only (in hero) */}
-              <div className="lg:hidden mb-5">
+              <div className="lg:hidden mb-4">
                 <a
                   href="../team-level-training.html"
                   className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors text-sm"
@@ -141,57 +140,45 @@ export function DesignThinkingCoursePage() {
                 </a>
               </div>
 
-              {/* NOVA Badge - Mobile Only */}
-              <div className="lg:hidden flex justify-center mb-5">
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/10 border border-white/20 backdrop-blur-sm">
-                  <Lightbulb size={14} className="text-white" />
-                  <span className="text-xs font-medium text-white">NOVA by CI Agile</span>
+              {/* NOVA SERIES Badge - All screens */}
+              <div className="mb-6 flex justify-start">
+                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-blue-500">
+                  <span className="text-sm font-bold text-white tracking-wide">NOVA SERIES</span>
                 </div>
               </div>
 
-              {/* Title - Mobile: Combined "Design Thinking 201", Desktop: Separate */}
-              <h1 className="lg:hidden text-5xl font-bold text-white leading-tight mb-5 text-center">
+              {/* Title */}
+              <h1 className="lg:hidden text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 text-left">
                 Design Thinking 201
               </h1>
-              
-              {/* Desktop Title */}
+
               <h1 className="hidden lg:block text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-3 text-left">
-                Design Thinking
+                Design Thinking 201
               </h1>
-              
-              {/* 201 with Badge - Desktop Only */}
-              <div className="hidden lg:flex items-center gap-4 mb-6">
-                <span className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">201</span>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">
-                  <Lightbulb size={16} className="text-white" />
-                  <span className="text-sm font-medium text-white">NOVA by CI Agile</span>
-                </div>
-              </div>
-              
+
               {/* Subtitle */}
-              <h2 className="text-xl lg:text-2xl lg:font-medium mb-5 lg:mb-6 text-white leading-snug text-center lg:text-left font-normal">
-                De-Risk Innovation and Accelerate Decision Velocity
+              <h2 className="text-lg sm:text-xl lg:text-2xl lg:font-medium mb-4 lg:mb-6 text-white leading-snug text-left font-normal">
+                Turning Customer Insights Into Strategic Moves
               </h2>
 
-              {/* Description - Mobile: smaller text, more compact */}
-              <p className="text-sm lg:text-base text-white/90 mb-4 lg:mb-2 leading-relaxed text-center lg:text-left">
-                Slow or misaligned decision-making exposes organisations to delayed launches, budget overruns, and missed market opportunities.
+              <p className="text-base sm:text-lg text-white/90 mb-3 lg:mb-2 leading-relaxed text-left">
+                Most innovation efforts stall between research and execution.
               </p>
 
-              <p className="text-sm lg:text-base lg:text-lg text-white/90 mb-7 lg:mb-6 leading-relaxed text-center lg:text-left">
-                Move beyond theory. Master the high-stakes framework used by global transformation leaders to solve complex business problems, align cross-functional stakeholders, and deliver validated solutions with speed.
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 lg:mb-6 leading-relaxed text-left">
+                This programme helps cross-functional teams translate real user insights into validated solutions that leadership can confidently back.
               </p>
-              
-              {/* CTA - Always centered */}
-              <div className="flex flex-col items-center mb-3">
+
+              {/* CTA */}
+              <div className="flex flex-col items-start mb-3">
                 <a
-                  href="#course-modules"
+                  href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
                   className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg mb-2 text-sm lg:text-base"
                 >
-                  <span>Explore the Course</span>
+                  <span>Talk to Program Advisor</span>
                 </a>
 
-                <p className="text-xs lg:text-sm text-white/60 lg:text-white/80 text-center">
+                <p className="text-xs lg:text-sm text-white/60 lg:text-white/80 text-left mt-3">
                   Private corporate delivery · Customised for your organisation
                 </p>
               </div>

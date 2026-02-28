@@ -127,57 +127,53 @@ export function AgileScrumCoursePage() {
 
         {/* Content Overlay */}
         <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-end">
-          <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 pb-10 lg:pb-20">
-            <div className="max-w-2xl text-center lg:text-left"
-            >
-              {/* Badge - Mobile centered, Desktop left */}
-              <div className="lg:hidden flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/10 border border-white/20 backdrop-blur-sm mb-5 mt-3 w-fit mx-auto">
-                <Users size={14} className="text-white" />
-                <span className="text-xs font-medium text-white">NOVA by CI Agile</span>
-              </div>
-              
-              {/* Title - Mobile: Combined, Desktop: Split */}
-              <h1 className="lg:hidden text-5xl font-bold mb-5 text-white leading-tight">
-                Agile & Scrum 201
-              </h1>
-
-              {/* Desktop Title - Split into two lines */}
-              <h1 className="hidden lg:block text-6xl font-bold text-white leading-tight mb-2">
-                Agile & Scrum
-              </h1>
-              
-              {/* Desktop: 201 with Badge on same line */}
-              <div className="hidden lg:flex items-center gap-4 mb-5">
-                <span className="text-6xl font-bold text-white leading-tight">201</span>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">
-                  <Users size={16} className="text-white" />
-                  <span className="text-sm font-medium text-white">NOVA by CI Agile</span>
-                </div>
-              </div>
-              
-              <h2 className="text-xl sm:text-2xl lg:text-2xl font-medium mb-5 sm:mb-8 lg:mb-5 text-white leading-snug">
-                Turn Agile Theory into Measurable Team Performance
-              </h2>
-              
-              <p className="text-sm sm:text-base lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-3">
-                A private, instructor-led course for organizations building effective Agile teams — whether members are new to Scrum and Agile or already practicing them. The course creates shared understanding and practical skills so teams can plan, execute, and deliver with confidence in real business environments.
-              </p>
-              
-              <p className="text-sm sm:text-base lg:text-sm text-white/90 leading-relaxed mb-7 lg:mb-6">
-                This is a private, organization-run course. Delivery format, customization, and investment are discussed after understanding your team context.
-              </p>
-              
-              <div className="flex flex-col items-center lg:items-start">
-                <a href="/contactus.html?source=nova-scrum201&cta=talk-private-run#contact-form"
-                  className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
-                >
-                  <span>Talk to Program Advisor</span>
-                </a>
-                <p className="text-xs lg:text-sm text-white/60 lg:text-slate-400">
-                  No pricing or commitment — just a short discussion to assess fit.
-                </p>
+          <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 sm:pt-56 lg:pt-28 pb-10 lg:pb-20">
+          <div className="max-w-2xl text-center lg:text-left">
+            {/* Badge - Mobile centered */}
+            <div className="lg:hidden mb-5 mt-3 w-fit mx-auto">
+              <div className="px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-cyan-400">
+                <span className="text-sm font-bold text-white tracking-wide">NOVA SERIES</span>
               </div>
             </div>
+
+            {/* Desktop Badge - Above Title */}
+            <div className="hidden lg:block mb-4 w-fit">
+              <div className="px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-cyan-400">
+                <span className="text-sm font-bold text-white tracking-wide">NOVA SERIES</span>
+              </div>
+            </div>
+
+            {/* Title */}
+            <h1 className="hidden lg:block text-6xl font-bold text-white leading-tight mb-2">
+              Agile &amp; Scrum 201
+            </h1>
+
+            <h2 className="text-xl sm:text-2xl lg:text-2xl font-medium mb-5 sm:mb-8 lg:mb-5 text-white leading-snug">
+              Build Predictable, High-Performing Agile Teams.
+            </h2>
+
+            <p className="text-sm sm:text-base lg:text-base text-white/90 leading-relaxed mb-4 lg:mb-3">
+              A practical, instructor-led program for organizations building effective Agile teams.
+              <br />
+              Align roles, improve sprint execution, and deliver working outcomes consistently.
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-sm text-white/90 leading-relaxed mb-7 lg:mb-6">
+              Trusted by organizations across Southeast Asia to strengthen delivery discipline.
+            </p>
+
+            <div className="flex flex-col items-center lg:items-start">
+              <a 
+                href="/contactus.html?source=nova-scrum201&cta=talk-private-run#contact-form"
+                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
+              >
+                <span>Talk to Program Advisor</span>
+              </a>
+              <p className="text-xs lg:text-sm text-white/60 lg:text-slate-400 mt-4">
+                No pricing or commitment — just a short discussion to assess fit.
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </section>

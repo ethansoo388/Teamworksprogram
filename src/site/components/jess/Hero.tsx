@@ -55,10 +55,10 @@ export function Hero() {
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
               >
                 <a
-                  href="/jess/leadership-training.html"
+                  href="/contactus.html?source=jess-home&cta=talk-enterprise-execution#contact-form"
                   className="inline-flex items-center"
                 >
-                  Start Leadership Program
+                  Start Jeff Sutherland's Enterprise Agility Program
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
               </Button>
