@@ -165,6 +165,9 @@ function copyAssets() {
   const srcAssetsDir = path.join(rootDir, 'src', 'assets');
   const destAssetsDir = path.join(publicDir, 'assets');
 
+  // NOTE: This copies ALL files under src/assets (including newly added images like
+  // src/assets/img/main/contactus-image.webp) into public/assets during build.
+
   if (!fs.existsSync(srcAssetsDir)) {
     console.log('  ⚠️  No src/assets directory found, skipping asset copy');
     return;

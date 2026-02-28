@@ -16,7 +16,7 @@
  * as a always-visible optional field if JS is absent.
  */
 
-import stickyNotesImage from '@/assets/img/main/ciagile-contact-hero-sticky-notes-closeup.webp';
+import contactUsImage from '@/assets/img/main/contactus-image.webp';
 
 export function ContactFormSection() {
   return (
@@ -27,11 +27,11 @@ export function ContactFormSection() {
           {/* ── Left Column ─────────────────────────────────────────────── */}
           <div className="space-y-10">
             {/* Hero Image */}
-            <div className="rounded-lg overflow-hidden">
+            <div>
               <img
-                src={stickyNotesImage}
-                alt="Team collaborating in workshop"
-                className="w-full h-[280px] object-cover"
+                src={contactUsImage}
+                alt="Customer service professional with headset smiling"
+                className="w-full h-[280px] object-cover rounded-lg"
               />
             </div>
 
@@ -58,6 +58,71 @@ export function ContactFormSection() {
                 <p className="text-sm text-gray-600 font-light leading-relaxed">
                   No obligation. No sales pitch. Just clarity on your next step.
                 </p>
+              </div>
+            </div>
+
+            {/* Direct Contact Block */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-sm">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                Prefer to Reach Us Directly?
+              </h4>
+              <p className="text-sm text-gray-600 font-light mb-5">
+                You can also contact our team through:
+              </p>
+
+              <div className="space-y-4">
+                {/* Email */}
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#0066CC]/10 rounded-full flex items-center justify-center">
+                    <i data-lucide="mail" className="w-[18px] h-[18px] text-[#0066CC]"></i>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Email</p>
+                    <a
+                      href="mailto:romanoff@ciagile.com"
+                      className="text-sm font-medium text-gray-900 hover:text-[#0066CC] transition-colors break-all"
+                    >
+                      romanoff@ciagile.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#0066CC]/10 rounded-full flex items-center justify-center">
+                    <i data-lucide="phone" className="w-[18px] h-[18px] text-[#0066CC]"></i>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</p>
+                    <a
+                      href="tel:+60192981055"
+                      className="text-sm font-medium text-gray-900 hover:text-[#0066CC] transition-colors"
+                    >
+                      +60 19 298 1055
+                    </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#25D366]/10 rounded-full flex items-center justify-center">
+                    <i data-lucide="message-circle" className="w-[18px] h-[18px] text-[#25D366]"></i>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
+                      WhatsApp <span className="text-[#25D366] font-semibold">(Fastest)</span>
+                    </p>
+                    <a
+                      href="https://wa.me/60192981055"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-[#25D366] hover:text-[#1da851] transition-colors group"
+                    >
+                      Chat with us on WhatsApp
+                      <i data-lucide="arrow-right" className="w-[14px] h-[14px] group-hover:translate-x-0.5 transition-transform"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
