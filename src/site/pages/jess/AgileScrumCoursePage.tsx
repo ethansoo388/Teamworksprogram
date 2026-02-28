@@ -783,14 +783,7 @@ export function AgileScrumCoursePage() {
                     <span className="text-lg text-slate-600">Days</span>
                     <span className="text-lg text-slate-600">(Instructor-Led)</span>
                   </div>
-                </div>
-                
-                <a href="/contactus.html?source=nova-scrum201&cta=discuss-ai-driven-delivery#contact-form"
-                  className="w-full mt-6 px-6 py-3 bg-white border-2 border-slate-900 text-slate-900 font-semibold rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300"
-                >
-                  Discuss AI-Driven Delivery
-                </a>
-              </div>
+                </div>              </div>
 
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
