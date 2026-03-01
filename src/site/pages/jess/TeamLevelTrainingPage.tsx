@@ -13,7 +13,8 @@ const courses = [
     borderColor: "border-blue-200",
     icon: Users,
     path: "/jess/nova/agile-scrum.html",
-    image: "/assets/img/jess/jess-agile-scrum-201-nova-agile-scrum-for-delivery-teams.webp",
+    // Match the Agile & Scrum 201 class page hero background image for visual consistency
+    image: "/assets/img/jess/jess-agile-scrum-201-agile-scrum-201-professional-training.webp",
     cardBg: "bg-slate-100",
     ctaColor: "bg-slate-600 hover:bg-slate-700",
     highlights: [
