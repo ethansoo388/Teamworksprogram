@@ -285,7 +285,7 @@ export function Course02Page() {
           {/* Modules List */}
           <div className="space-y-6">
             {/* Module 1 */}
-            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
@@ -314,7 +314,7 @@ export function Course02Page() {
             </div>
 
             {/* Module 2 */}
-            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="grid lg:grid-cols-[1fr_300px] gap-0">
                 <div className="p-8 lg:p-10 order-2 lg:order-1">
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
@@ -343,7 +343,7 @@ export function Course02Page() {
             </div>
 
             {/* Module 3 */}
-            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
@@ -372,7 +372,7 @@ export function Course02Page() {
             </div>
 
             {/* Module 4 */}
-            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="grid lg:grid-cols-[1fr_300px] gap-0">
                 <div className="p-8 lg:p-10 order-2 lg:order-1">
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
@@ -401,7 +401,7 @@ export function Course02Page() {
             </div>
 
             {/* Module 5 */}
-            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="bg-white border border-pink-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="grid lg:grid-cols-[300px_1fr] gap-0">
                 <div className="aspect-[4/3] lg:aspect-auto">
                   <img 
@@ -444,28 +444,28 @@ export function Course02Page() {
               </p>
 
               <div className="space-y-6">
-                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
                   <h3 className="font-semibold text-lg mb-2">Product Managers & Designers</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Professionals who want to design solutions customers actually use and value.
                   </p>
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
                   <h3 className="font-semibold text-lg mb-2">SME Founders & Innovators</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Business owners who want to reduce guesswork and invest in ideas that work.
                   </p>
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
                   <h3 className="font-semibold text-lg mb-2">Marketing & Growth Teams</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Teams looking to better understand customers and improve conversion and retention.
                   </p>
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
                   <h3 className="font-semibold text-lg mb-2">UX & Creative Professionals</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Practitioners who want to connect design decisions to real business outcomes.
@@ -541,7 +541,7 @@ export function Course02Page() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 cursor-pointer group">
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 group">
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <AlertCircle className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
@@ -551,7 +551,7 @@ export function Course02Page() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 cursor-pointer group">
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 group">
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <svg className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -563,7 +563,7 @@ export function Course02Page() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 cursor-pointer group">
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 group">
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <Users className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
@@ -573,7 +573,7 @@ export function Course02Page() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 cursor-pointer group">
+            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-200/50 transition-all duration-300 group">
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <Lightbulb className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>

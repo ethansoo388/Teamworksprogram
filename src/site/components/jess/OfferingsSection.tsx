@@ -173,7 +173,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
     <div
       data-reveal-item
       className={`
-        group relative p-4 md:p-6 rounded-2xl border transition-all duration-300 cursor-pointer
+        group relative p-4 md:p-6 rounded-2xl border transition-all duration-300
         bg-slate-900/40 border-slate-700/50 hover:border-slate-600
         hover:bg-gradient-to-br hover:from-slate-900 hover:to-slate-800 hover:/50 hover:shadow-lg hover:shadow-blue-500/20
         ${spanTwoColumns ? 'md:col-span-2' : ''}
