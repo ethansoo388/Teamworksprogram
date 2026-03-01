@@ -76,16 +76,19 @@ export function MainSiteNavigation() {
                       <div className="space-y-4 md:space-y-6">
                         {/* Jeff Sutherland's Enterprise Agility Program */}
                         <div className="space-y-2 md:space-y-3">
-                          <div className="block py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl">
+                          <a
+                            href="/jess/index.html"
+                            className="block group/program py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-colors no-underline"
+                          >
                             <div className="flex items-center space-x-2 mb-1 md:mb-2">
-                              <h4 className="text-sm md:text-base font-semibold text-[#0F172A]">
+                              <h4 className="text-sm md:text-base font-semibold text-[#0F172A] group-hover/program:text-[#0066FF] transition-colors">
                                 Jeff Sutherland's Enterprise Agility Program
                               </h4>
                             </div>
-                            <p className="text-xs md:text-sm text-[#475569] leading-snug">
+                            <p className="text-xs md:text-sm text-[#475569] group-hover/program:text-[#0066FF] transition-colors leading-snug">
                               Align strategy and scale disciplined enterprise execution effectively.
                             </p>
-                          </div>
+                          </a>
                           <div className="space-y-2">
                             <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide px-3 md:px-4">
                               Signature Series
@@ -119,14 +122,17 @@ export function MainSiteNavigation() {
 
                         {/* Nova Series */}
                         <div className="space-y-2 md:space-y-3">
-                          <div className="block py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl">
-                            <h4 className="text-sm md:text-base font-semibold text-[#0F172A] mb-1 md:mb-2">
+                          <a
+                            href="/jess/team-level-training.html"
+                            className="block group/program py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-colors no-underline"
+                          >
+                            <h4 className="text-sm md:text-base font-semibold text-[#0F172A] group-hover/program:text-[#0066FF] transition-colors mb-1 md:mb-2">
                               Nova Series
                             </h4>
-                            <p className="text-xs md:text-sm text-[#475569] leading-snug">
+                            <p className="text-xs md:text-sm text-[#475569] group-hover/program:text-[#0066FF] transition-colors leading-snug">
                               Enterprise team training to align and accelerate delivery.
                             </p>
-                          </div>
+                          </a>
                           <div className="space-y-2">
                             <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide px-3 md:px-4">
                               Courses
@@ -168,14 +174,17 @@ export function MainSiteNavigation() {
                       <div className="space-y-4 md:space-y-6">
                         {/* TeamWorks Program */}
                         <div className="space-y-2 md:space-y-3">
-                          <div className="block py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl">
-                            <h4 className="text-sm md:text-base font-semibold text-[#0F172A] mb-1 md:mb-2">
+                          <a
+                            href="/teamworks/index.html"
+                            className="block group/program py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-colors no-underline"
+                          >
+                            <h4 className="text-sm md:text-base font-semibold text-[#0F172A] group-hover/program:text-[#0066FF] transition-colors mb-1 md:mb-2">
                               TeamWorks Program
                             </h4>
-                            <p className="text-xs md:text-sm text-[#475569] leading-snug">
+                            <p className="text-xs md:text-sm text-[#475569] group-hover/program:text-[#0066FF] transition-colors leading-snug">
                               Practical training to improve team execution performance consistently.
                             </p>
-                          </div>
+                          </a>
                           <div className="space-y-2">
                             <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide px-3 md:px-4">
                               Courses
@@ -690,10 +699,14 @@ export function MainSiteNavigation() {
                   <div className="space-y-4">
                     {/* JESS Program */}
                     <div className="space-y-2">
-                      <div className="block">
-                        <h5 className="text-sm font-semibold text-gray-900">Jeff Sutherland's Enterprise Agility Program</h5>
-                        <p className="text-xs text-gray-600 mt-1">Align strategy and scale disciplined enterprise execution effectively.</p>
-                      </div>
+                      <a
+                        href="/jess/index.html"
+                        className="block group/program rounded-lg px-2 py-2 hover:bg-gray-50 transition-colors no-underline"
+                        data-mobile-close
+                      >
+                        <h5 className="text-sm font-semibold text-gray-900 group-hover/program:text-[#0066FF] transition-colors">Jeff Sutherland's Enterprise Agility Program</h5>
+                        <p className="text-xs text-gray-600 group-hover/program:text-[#0066FF] transition-colors mt-1">Align strategy and scale disciplined enterprise execution effectively.</p>
+                      </a>
                       <div className="ml-3 mt-2 space-y-2">
                         <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide">Signature Series</p>
                         <div className="space-y-2">
@@ -710,10 +723,14 @@ export function MainSiteNavigation() {
                     </div>
                     {/* Nova Series */}
                     <div className="space-y-2">
-                      <div className="block">
-                        <h5 className="text-sm font-semibold text-gray-900">Nova Series</h5>
-                        <p className="text-xs text-gray-600 mt-1">Enterprise team training to align and accelerate delivery.</p>
-                      </div>
+                      <a
+                        href="/jess/team-level-training.html"
+                        className="block group/program rounded-lg px-2 py-2 hover:bg-gray-50 transition-colors no-underline"
+                        data-mobile-close
+                      >
+                        <h5 className="text-sm font-semibold text-gray-900 group-hover/program:text-[#0066FF] transition-colors">Nova Series</h5>
+                        <p className="text-xs text-gray-600 group-hover/program:text-[#0066FF] transition-colors mt-1">Enterprise team training to align and accelerate delivery.</p>
+                      </a>
                       <div className="ml-3 mt-2 space-y-2">
                         <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide">Courses</p>
                         <div className="space-y-2">
@@ -736,10 +753,14 @@ export function MainSiteNavigation() {
                   <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Capability Tracks</h4>
                   <div className="space-y-4">
                     <div className="space-y-2">
-                      <div className="block">
-                        <h5 className="text-sm font-semibold text-gray-900">TeamWorks Program</h5>
-                        <p className="text-xs text-gray-600 mt-1">Practical training to improve team execution performance consistently.</p>
-                      </div>
+                      <a
+                        href="/teamworks/index.html"
+                        className="block group/program rounded-lg px-2 py-2 hover:bg-gray-50 transition-colors no-underline"
+                        data-mobile-close
+                      >
+                        <h5 className="text-sm font-semibold text-gray-900 group-hover/program:text-[#0066FF] transition-colors">TeamWorks Program</h5>
+                        <p className="text-xs text-gray-600 group-hover/program:text-[#0066FF] transition-colors mt-1">Practical training to improve team execution performance consistently.</p>
+                      </a>
                       <div className="ml-3 mt-2 space-y-2">
                         <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide">Courses</p>
                         <div className="space-y-2">
