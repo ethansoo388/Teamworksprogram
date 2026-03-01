@@ -149,33 +149,14 @@ export function WhatMakesDifferentSection() {
 
           {/* Right — Globe SVG */}
           <div className="relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center order-first lg:order-last">
-            <svg viewBox="0 0 600 600" className="w-full h-full" aria-hidden="true">
-              <circle cx="300" cy="300" r="250" fill="none" stroke="#ffffff" strokeWidth="1" opacity="0.5" />
-              <line x1="50" y1="300" x2="550" y2="300" stroke="#ffffff" strokeWidth="0.5" opacity="0.2" />
-              <ellipse cx="300" cy="300" rx="250" ry="120" fill="none" stroke="#ffffff" strokeWidth="0.5" opacity="0.15" />
-              <ellipse cx="300" cy="300" rx="180" ry="250" fill="none" stroke="#ffffff" strokeWidth="0.5" opacity="0.15" />
-              {/* Key country outlines */}
-              <path d="M 240 175 L 395 206 L 400 282 L 376 312" fill="none" stroke="#ffffff" strokeWidth="1.1" opacity="0.7" />
-              <path d="M 225 245 L 266 307 L 250 362 L 218 391" fill="none" stroke="#ffffff" strokeWidth="1.2" opacity="0.8" />
-              <path d="M 279 443 L 284 475 L 273 498" fill="none" stroke="#ffffff" strokeWidth="1" opacity="0.7" />
-              {/* Malaysia highlight */}
-              <path d="M 270 443 L 284 475 L 284 485 L 278 493 L 267 500 L 257 492 L 256 475 L 264 458 Z"
-                    fill="#FF6B35" fillOpacity="0.3" stroke="#ffffff" strokeWidth="1" opacity="0.7" />
-              {/* Singapore */}
-              <circle cx="273" cy="503" r="3" fill="#FF6B35" fillOpacity="0.8" stroke="#ffffff" strokeWidth="0.7" />
-              {/* Hong Kong */}
-              <path d="M 358 269 Q 367 270 370 274 Q 368 279 363 281 Q 358 279 357 274 Z"
-                    fill="#FF6B35" fillOpacity="0.3" stroke="#ffffff" strokeWidth="0.8" opacity="0.7" />
-              {/* Office markers */}
-              <rect x="358" y="269" width="10" height="10" fill="#FF6B35" opacity="0.95" />
-              <rect x="262" y="493" width="10" height="10" fill="#FF6B35" opacity="0.95" />
-              <rect x="268" y="499" width="10" height="10" fill="#FF6B35" opacity="0.95" />
-              {/* Labels */}
-              <text x="465" y="215" fill="#FF6B35" fontSize="12" fontFamily="Arial, sans-serif" fontWeight="700">HONG KONG</text>
-              <text x="435" y="440" fill="#FF6B35" fontSize="12" fontFamily="Arial, sans-serif" fontWeight="700">MALAYSIA</text>
-              <text x="465" y="370" fill="#FF6B35" fontSize="12" fontFamily="Arial, sans-serif" fontWeight="700">SINGAPORE</text>
-            </svg>
-          </div>
+            <img
+              src="/assets/img/main/our-journey-map.webp"
+              alt="Map showing CI Agile presence in Hong Kong, Singapore, and Malaysia"
+              className="w-full h-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            </div>
         </div>
       </div>
     </section>
