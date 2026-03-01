@@ -272,9 +272,4 @@
     transition: transform 180ms ease;
   }
 
-  /* JESS (dark): inverted pill */
-  .site-jess [data-dropdown-trigger][aria-expanded="true"] {
-    color: rgba(255, 255, 255, 0.92);
-    background: rgba(255, 255, 255, 0.06);
-  }
 }
