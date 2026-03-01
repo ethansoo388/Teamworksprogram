@@ -5,12 +5,6 @@ import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallbac
 import { LeadershipAccordion } from "@/site/components/jess/LeadershipAccordion";
 import { AIBenefitsCards } from "@/site/components/jess/AIBenefitsCards";
 import { ArrowRight, ArrowLeft, Download, MessageCircle, ChevronDown, ChevronUp, Plus, X } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/site/components/jess/ui/accordion";
 
 const decisionGapStats = [
   {
@@ -1337,53 +1331,93 @@ export function LeadershipTrainingPage() {
             <h2 className="text-4xl sm:text-5xl font-light mb-16 text-slate-900 tracking-tight leading-[1.43]">
               Frequently Asked Questions
             </h2>
-            
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1" className="border-slate-200">
-                <AccordionTrigger className="text-slate-900 hover:text-slate-700 text-left text-base sm:text-lg font-light">
-                  Is this program mainly a certification or a leadership training?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 font-light leading-relaxed">
-                  This is a leadership training program designed to help senior leaders and leadership teams understand how Agile and AI work together as a system. Certifications are included, but they are by-products of learning, not the primary objective.
-                </AccordionContent>
-              </AccordionItem>
 
-              <AccordionItem value="item-2" className="border-slate-200">
-                <AccordionTrigger className="text-slate-900 hover:text-slate-700 text-left text-base sm:text-lg font-light">
-                  Do participants receive certifications?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 font-light leading-relaxed">
-                  Yes. Participants may earn internationally recognised credentials such as Registered Scrum Master™, Registered Product Owner™, and Registered Scrum@Scale Fundamentals™. These certifications support professional credibility but are not the focus of the program.
-                </AccordionContent>
-              </AccordionItem>
+            <div className="w-full" data-faq-root="true">
+              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
+                <button
+                  type="button"
+                  data-faq-button
+                  aria-expanded="false"
+                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
+                >
+                  <span>Is this program mainly a certification or a leadership training?</span>
+                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+                </button>
+                <div data-faq-answer className="hidden overflow-hidden text-sm">
+                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
+                    This is a leadership training program designed to help senior leaders and leadership teams understand how Agile and AI work together as a system. Certifications are included, but they are by-products of learning, not the primary objective.
+                  </div>
+                </div>
+              </div>
 
-              <AccordionItem value="item-3" className="border-slate-200">
-                <AccordionTrigger className="text-slate-900 hover:text-slate-700 text-left text-base sm:text-lg font-light">
-                  What materials or references are used in the program?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 font-light leading-relaxed">
-                  The program is grounded in proven references such as <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>, <em>The Scrum@Scale Guide</em>, and <em>The Scrum Fieldbook</em>. These are used as long-term leadership references rather than academic reading.
-                </AccordionContent>
-              </AccordionItem>
+              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
+                <button
+                  type="button"
+                  data-faq-button
+                  aria-expanded="false"
+                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
+                >
+                  <span>Do participants receive certifications?</span>
+                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+                </button>
+                <div data-faq-answer className="hidden overflow-hidden text-sm">
+                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
+                    Yes. Participants may earn internationally recognised credentials such as Registered Scrum Master™, Registered Product Owner™, and Registered Scrum@Scale Fundamentals™. These certifications support professional credibility but are not the focus of the program.
+                  </div>
+                </div>
+              </div>
 
-              <AccordionItem value="item-4" className="border-slate-200">
-                <AccordionTrigger className="text-slate-900 hover:text-slate-700 text-left text-base sm:text-lg font-light">
-                  Is this a self-study or theory-heavy course?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 font-light leading-relaxed">
-                  No. This is not a self-study or theory-heavy program. It is designed for leaders accountable for outcomes, with practical discussions and real-world system application.
-                </AccordionContent>
-              </AccordionItem>
+              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
+                <button
+                  type="button"
+                  data-faq-button
+                  aria-expanded="false"
+                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
+                >
+                  <span>What materials or references are used in the program?</span>
+                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+                </button>
+                <div data-faq-answer className="hidden overflow-hidden text-sm">
+                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
+                    The program is grounded in proven references such as <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>, <em>The Scrum@Scale Guide</em>, and <em>The Scrum Fieldbook</em>. These are used as long-term leadership references rather than academic reading.
+                  </div>
+                </div>
+              </div>
 
-              <AccordionItem value="item-5" className="border-slate-200">
-                <AccordionTrigger className="text-slate-900 hover:text-slate-700 text-left text-base sm:text-lg font-light">
-                  What typically happens after the training?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 font-light leading-relaxed">
-                  Most organisations use this program as a shared starting point. After leaders align on the system, they decide how far and how fast they want to implement, independently or with further support. There is no obligation beyond the training.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
+                <button
+                  type="button"
+                  data-faq-button
+                  aria-expanded="false"
+                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
+                >
+                  <span>Is this a self-study or theory-heavy course?</span>
+                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+                </button>
+                <div data-faq-answer className="hidden overflow-hidden text-sm">
+                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
+                    No. This is not a self-study or theory-heavy program. It is designed for leaders accountable for outcomes, with practical discussions and real-world system application.
+                  </div>
+                </div>
+              </div>
+
+              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
+                <button
+                  type="button"
+                  data-faq-button
+                  aria-expanded="false"
+                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
+                >
+                  <span>What typically happens after the training?</span>
+                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+                </button>
+                <div data-faq-answer className="hidden overflow-hidden text-sm">
+                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
+                    Most organisations use this program as a shared starting point. After leaders align on the system, they decide how far and how fast they want to implement, independently or with further support. There is no obligation beyond the training.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
