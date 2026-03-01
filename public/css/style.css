@@ -119,12 +119,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* Inverted pill for JESS dark mode */
-.site-jess [data-dropdown-trigger][aria-expanded="true"] {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.95);
-}
-
 /* Form validation styles */
 /* Loading state */
 .loading {
