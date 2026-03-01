@@ -392,23 +392,100 @@ document.addEventListener('DOMContentLoaded', () => {
   initJessReveal();
   initJessBars();
 
-  // FAQ toggle functionality
-  const faqButtons = document.querySelectorAll('[data-faq-button]');
-  faqButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      const icon = button.querySelector('[data-faq-icon]');
+  // FAQ / Q&A accordion controller (site-wide, static-export friendly)
+  // Expected markup (recommended):
+  // - Wrapper: [data-faq-root] (optional but enables click-outside close per block)
+  // - Item: [data-faq-item]
+  // - Trigger: button[data-faq-button] (with optional [data-faq-icon])
+  // - Answer: [data-faq-answer] (hidden by default)
+  // Behavior:
+  // - Single-open (only one item open at a time within a root; if no root, within document)
+  // - Click same trigger toggles closed
+  // - Click outside any root closes open items
+  const faqRoots = Array.from(document.querySelectorAll('[data-faq-root]')).filter((el) => el instanceof HTMLElement);
 
-      // Toggle answer visibility
-      answer.classList.toggle('hidden');
+  const getFaqItemsInScope = (scopeEl) => {
+    const scope = scopeEl instanceof HTMLElement ? scopeEl : document;
+    return Array.from(scope.querySelectorAll('[data-faq-item]')).filter((el) => el instanceof HTMLElement);
+  };
 
-      // Rotate icon
-      if (icon) {
-        icon.style.transform = answer.classList.contains('hidden')
-          ? 'rotate(0deg)'
-          : 'rotate(180deg)';
-      }
+  const closeFaqItem = (item) => {
+    if (!(item instanceof HTMLElement)) return;
+    const btn = item.querySelector('[data-faq-button]');
+    const answer = item.querySelector('[data-faq-answer]');
+    const icon = item.querySelector('[data-faq-icon]');
+
+    if (btn instanceof HTMLElement) btn.setAttribute('aria-expanded', 'false');
+    if (answer instanceof HTMLElement) answer.classList.add('hidden');
+    if (icon instanceof HTMLElement) icon.style.transform = 'rotate(0deg)';
+  };
+
+  const openFaqItem = (item) => {
+    if (!(item instanceof HTMLElement)) return;
+    const btn = item.querySelector('[data-faq-button]');
+    const answer = item.querySelector('[data-faq-answer]');
+    const icon = item.querySelector('[data-faq-icon]');
+
+    if (btn instanceof HTMLElement) btn.setAttribute('aria-expanded', 'true');
+    if (answer instanceof HTMLElement) answer.classList.remove('hidden');
+    if (icon instanceof HTMLElement) icon.style.transform = 'rotate(180deg)';
+  };
+
+  const closeAllInScope = (scopeEl) => {
+    getFaqItemsInScope(scopeEl).forEach(closeFaqItem);
+  };
+
+  const closeAllFaqs = () => {
+    if (faqRoots.length) faqRoots.forEach(closeAllInScope);
+    else closeAllInScope(document);
+  };
+
+  const handleFaqTriggerClick = (btn) => {
+    const item = btn.closest('[data-faq-item]');
+    if (!(item instanceof HTMLElement)) return;
+
+    const root = item.closest('[data-faq-root]');
+    const scope = root instanceof HTMLElement ? root : document;
+
+    const answer = item.querySelector('[data-faq-answer]');
+    const isOpen = answer instanceof HTMLElement ? !answer.classList.contains('hidden') : false;
+
+    // Single-open: close everything else in scope first
+    getFaqItemsInScope(scope).forEach((it) => {
+      if (it === item) return;
+      closeFaqItem(it);
     });
+
+    // Toggle current
+    if (isOpen) closeFaqItem(item);
+    else openFaqItem(item);
+  };
+
+  // Bind triggers
+  const faqButtons = Array.from(document.querySelectorAll('[data-faq-button]')).filter((el) => el instanceof HTMLElement);
+  faqButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      handleFaqTriggerClick(button);
+    });
+  });
+
+  // Click outside closes (all FAQ roots). If no roots exist, closes when clicking outside any FAQ item.
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+
+    // If click is inside any FAQ root/item, ignore.
+    if (target.closest('[data-faq-root]') || target.closest('[data-faq-item]')) return;
+
+    closeAllFaqs();
+  });
+
+  // Optional: close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    closeAllFaqs();
   });
 
 
