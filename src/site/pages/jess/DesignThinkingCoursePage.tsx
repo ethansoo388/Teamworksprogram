@@ -77,14 +77,14 @@ const modules = [
     title: "Problems Worth Solving",
     tagline: "Define and prioritise problems that deliver the most impact",
     description: "Translate insights into clearly articulated problem statements and prioritise what matters most.",
-    image: "/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
+    image: "/assets/img/jess/prototype-test-module-thinking.webp"
   },
   {
     number: "03",
     title: "Generate Ideas",
     tagline: "Explore creative techniques to generate breakthrough solutions",
     description: "Explore creative, out-of-the-box thinking techniques to generate a wide range of possible solutions.",
-    image: "/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
+    image: "/assets/img/jess/prototype-test-module-ideas.webp"
   },
   {
     number: "04",
@@ -488,7 +488,7 @@ export function DesignThinkingCoursePage() {
               
               <div className="relative h-[400px] rounded-lg overflow-hidden order-1 lg:order-2">
                 <ImageWithFallback
-                  src="/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
+                  src="/assets/img/jess/prototype-test-module-thinking.webp"
                   alt="Prototype & Test Module"
                   className="w-full h-full object-cover"
                 />
@@ -501,7 +501,7 @@ export function DesignThinkingCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="/assets/img/jess/jess-design-thinking-201-module-prototype-test.webp"
+                  src="/assets/img/jess/prototype-test-module-ideas.webp"
                   alt="Prototype & Test Module"
                   className="w-full h-full object-cover"
                 />

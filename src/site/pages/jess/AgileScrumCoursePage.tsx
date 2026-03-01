@@ -566,7 +566,7 @@ export function AgileScrumCoursePage() {
             >
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <ImageWithFallback
-                  src="/assets/img/jess/people-hyper.webp"
+                  src="/assets/img/jess/hyper-productivity-module.webp"
                   alt="Hyper-Productivity Module"
                   className="w-full h-full object-cover"
                 />
