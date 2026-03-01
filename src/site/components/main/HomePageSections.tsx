@@ -78,6 +78,8 @@ function HeroSection() {
             src={presenterImage}
             alt="CI Agile training and consulting"
             className="w-full h-full object-cover"
+            fetchpriority="high"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:from-transparent"></div>
         </div>

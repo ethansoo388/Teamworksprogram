@@ -3,6 +3,15 @@ import type { SiteType } from "@/types";
 // ---------------------------------------------------------------------------
 // Route definitions — single source of truth for static export.
 // Used by scripts/export-static.mjs to generate /public HTML files.
+//
+// SEO strategy:
+//   Primary market   : Malaysia (MY)
+//   Secondary market : Indonesia (ID)
+//   Tertiary market  : Broader Southeast Asia (SG, TH, PH, VN)
+//
+//   Primary products :
+//     1. JESS — Jeff Sutherland's Enterprise Agile Training & Certification
+//     2. TeamWorks — 2-day private team training workshops for SMEs
 // ---------------------------------------------------------------------------
 
 export interface RouteEntry {
@@ -16,23 +25,25 @@ export interface RouteEntry {
 }
 
 export const routes: RouteEntry[] = [
-  // ── Main site ──────────────────────────────────────────────────────────
+  // ── Main site (CI Agile — Enterprise Consulting) ───────────────────────
+  // Tier 1 targets: enterprise agile consulting Malaysia · agile transformation Indonesia
+  //                 business transformation consulting Asia Pacific
   {
     modulePath: "/src/site/pages/index/IndexPage.tsx",
     componentName: "IndexPage",
     filename: "index.html",
-    title: "CI Agile - Transform Your Organization",
+    title: "CI Agile | Enterprise Agile Consulting Malaysia & Indonesia",
     description:
-      "Proven delivery systems that help organizations execute and achieve measurable business outcomes across Asia Pacific.",
+      "Leading enterprise agile consulting firm in Malaysia and Indonesia. We deliver business transformation and proven delivery systems across Asia Pacific.",
     siteType: "main",
   },
   {
     modulePath: "/src/site/pages/about/AboutUsPage.tsx",
     componentName: "AboutUsPage",
     filename: "aboutus.html",
-    title: "About Us - CI Agile",
+    title: "About CI Agile | Business Transformation Consulting Malaysia",
     description:
-      "Learn about CI Agile and our mission to transform organizations through proven delivery systems.",
+      "CI Agile helps organizations across Malaysia, Indonesia, and Southeast Asia transform through enterprise agile consulting and proven delivery systems.",
     siteType: "main",
     includeFormJS: true,
   },
@@ -40,9 +51,9 @@ export const routes: RouteEntry[] = [
     modulePath: "/src/site/pages/contact/ContactUsPage.tsx",
     componentName: "ContactUsPage",
     filename: "contactus.html",
-    title: "Contact Us - CI Agile",
+    title: "Contact CI Agile | Enterprise Agile Consulting Malaysia",
     description:
-      "Get in touch with CI Agile to discuss how we can help transform your organization.",
+      "Get in touch with CI Agile — Malaysia's enterprise agile consulting firm serving clients in Malaysia, Indonesia, and across Southeast Asia.",
     siteType: "main",
     includeFormJS: true,
   },
@@ -56,7 +67,7 @@ export const routes: RouteEntry[] = [
     siteType: "main",
   },
 
-  // ── Legal (Main site) ────────────────────────────────────────────────
+  // ── Legal (Main site) ────────────────────────────────────────────────────
   {
     modulePath: "/src/site/pages/legal/PrivacyPolicyPage.tsx",
     componentName: "PrivacyPolicyPage",
@@ -85,161 +96,171 @@ export const routes: RouteEntry[] = [
     siteType: "main",
   },
 
-  // ── TeamWorks ──────────────────────────────────────────────────────────
+  // ── TeamWorks — SME Team Workshops ────────────────────────────────────────
+  // Tier 1 targets: team training workshop Malaysia · ai training for SMEs Malaysia
+  //                 2-day team productivity workshop
+  // Tier 2 targets: design thinking workshop Malaysia · lean training Malaysia
+  //                 AI skills training for corporate teams
   {
     modulePath: "/src/site/pages/teamworks/LandingPage.tsx",
     componentName: "LandingPage",
     filename: "teamworks/index.html",
-    title: "TeamWorks - Transform Your Team in Just 2 Days",
+    title: "TeamWorks | 2-Day Team Training Workshop Malaysia for SMEs",
     description:
-      "Fun, hands-on training workshops for SME teams across Southeast Asia. Build super teams, design like Apple, achieve operational excellence.",
+      "Hands-on team training workshops for SMEs in Malaysia — Agile, design thinking, lean problem solving, and AI skills. Private corporate 2-day workshops.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/CreatingSuperTeamsPage.tsx",
     componentName: "CreatingSuperTeamsPage",
     filename: "teamworks/creating-super-teams.html",
-    title: "Creating Super Teams - TeamWorks Course 01",
+    title: "Creating Super Teams | Corporate Team Workshop Malaysia",
     description:
-      "Learn practical Agile and Scrum frameworks to build high-performing teams that deliver results in just 2 weeks.",
+      "Build high-performing teams with Agile and Scrum frameworks. Hands-on 2-day corporate team training workshop for Malaysian SMEs that deliver results.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/DesignLikeApplePage.tsx",
     componentName: "DesignLikeApplePage",
     filename: "teamworks/design-thinking.html",
-    title: "Win Customers Through Design - TeamWorks Course 02",
+    title: "Design Thinking Workshop Malaysia | Win Customers Through Design",
     description:
-      "Create customer-focused products and services using design thinking.",
+      "Design thinking workshop Malaysia — create customer-focused products and services using proven design methods. 2-day corporate training for SMEs.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/OperationalExcellencePage.tsx",
     componentName: "OperationalExcellencePage",
     filename: "teamworks/critical-thinking-kanban.html",
-    title: "Critical Thinking for Better Work - TeamWorks Course 03",
+    title: "Critical Thinking & Kanban Workshop | Team Training Malaysia",
     description:
-      "Apply critical thinking and Kanban to make better decisions and deliver faster.",
+      "Apply critical thinking and Kanban to make better decisions and deliver faster. 2-day corporate team training workshop for Malaysian SMEs.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/PracticalLeanPage.tsx",
     componentName: "PracticalLeanPage",
     filename: "teamworks/practical-lean-problem-solving.html",
-    title: "Practical Lean Problem Solving - TeamWorks Course 04",
+    title: "Lean Training Malaysia | Practical Lean Problem Solving Workshop",
     description:
-      "Empower your frontline to solve problems using practical Lean thinking. Reduce recurring issues, improve customer satisfaction, and build a problem-solving culture.",
+      "Lean training Malaysia — empower frontline teams to solve problems using practical Lean thinking. 2-day corporate workshop for SMEs. Reduce recurring issues.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/AISkillsPage.tsx",
     componentName: "AISkillsPage",
     filename: "teamworks/ai-skills-for-your-team.html",
-    title: "AI Skills for YOUR Team - TeamWorks Course 05",
+    title: "AI Training for SMEs Malaysia | AI Skills Workshop for Teams",
     description:
-      "Equip your team with practical AI skills they can apply immediately — without coding or technical background. Cut drafting time, improve decisions, and use AI responsibly.",
+      "AI training for SMEs Malaysia — equip your corporate team with practical AI skills they can apply immediately. No coding required. 2-day hands-on workshop.",
     siteType: "teamworks",
   },
   {
     modulePath: "/src/site/pages/teamworks/BookConsultationPage.tsx",
     componentName: "BookConsultationPage",
     filename: "teamworks/bookConsultation.html",
-    title: "Book Free Consultation - TeamWorks",
+    title: "Book Free Consultation | TeamWorks Corporate Training Malaysia",
     description:
-      "Schedule a free consultation to discuss which TeamWorks course is perfect for your team.",
+      "Book a free consultation to find the right TeamWorks corporate team training workshop for your Malaysian or Southeast Asian team. Private workshops for SMEs.",
     siteType: "teamworks",
     includeFormJS: true,
   },
 
-  // ── JESS (Jeff's Enterprise Scrum System) ──────────────────────────────
+  // ── JESS — Jeff's Enterprise Scrum System ─────────────────────────────────
+  // Tier 1 targets: Jeff Sutherland Scrum training Malaysia
+  //                 Scrum at Scale certification Southeast Asia
+  //                 enterprise scrum certification Malaysia
+  // Tier 2 targets: agile leadership certification Southeast Asia
+  //                 Jeff Sutherland enterprise scrum system
+  //                 enterprise agile certification APAC
   {
     modulePath: "/src/site/pages/jess/HomePage.tsx",
     componentName: "HomePage",
     filename: "jess/index.html",
-    title: "JESS - Enterprise Agility Built for Execution at Scale",
+    title: "JESS | Jeff Sutherland Scrum Training Malaysia & Southeast Asia",
     description:
-      "Jeff's Enterprise Scrum System — proven execution system for enterprise agility, built on Scrum@Scale and AI-driven methodology.",
+      "Jeff Sutherland's Enterprise Scrum System — Scrum at Scale certification and enterprise agile training in Malaysia and Southeast Asia.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/FreeResourcesPage.tsx",
     componentName: "FreeResourcesPage",
     filename: "jess/free-resources.html",
-    title: "Free Resources - JESS",
+    title: "Free Agile Resources | JESS Enterprise Scrum Malaysia",
     description:
-      "Free learning resources for agile leaders — guides, workshops, and community forums.",
+      "Free learning resources for agile leaders in Malaysia and Southeast Asia — guides, workshop materials, and community forums on enterprise scrum.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/LeadershipTrainingPage.tsx",
     componentName: "LeadershipTrainingPage",
     filename: "jess/leadership-training.html",
-    title: "Leadership Training - JESS",
+    title: "Jeff Sutherland Leadership Training | Agile Leadership Certification Malaysia",
     description:
-      "Two-day intensive leadership training for enterprise agile transformation. Build execution clarity and scalable leadership.",
+      "Two-day intensive agile leadership certification for enterprise transformation. Build execution clarity and scalable leadership in Malaysia and Southeast Asia.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/CourseModulesPage.tsx",
     componentName: "CourseModulesPage",
     filename: "jess/course-modules.html",
-    title: "Course Modules - JESS",
+    title: "Course Modules | JESS Scrum at Scale Certification Malaysia",
     description:
-      "Detailed course modules for the JESS leadership training program.",
+      "Detailed curriculum for the JESS enterprise agile leadership program — Scrum at Scale modules designed for enterprise teams in Malaysia and Southeast Asia.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/InstructorPage.tsx",
     componentName: "InstructorPage",
     filename: "jess/instructor.html",
-    title: "Instructor - JESS",
+    title: "JESS Instructor | Jeff Sutherland Certified Enterprise Agile Coach",
     description:
-      "Meet the instructor behind the JESS program — credentials, experience, and client testimonials.",
+      "Meet Ethan Soo — certified enterprise agile coach delivering Jeff Sutherland's Scrum at Scale certification training in Malaysia and Southeast Asia.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/ClassSchedulePage.tsx",
     componentName: "ClassSchedulePage",
     filename: "jess/class-schedule.html",
-    title: "Class Schedule - JESS",
+    title: "Class Schedule | Scrum at Scale Training Malaysia & Southeast Asia",
     description:
-      "Upcoming class schedule for JESS leadership training courses across Southeast Asia.",
+      "Upcoming Jeff Sutherland enterprise scrum certification and Scrum at Scale training schedule in Malaysia and Southeast Asia. Register for the next cohort.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/TeamLevelTrainingPage.tsx",
     componentName: "TeamLevelTrainingPage",
     filename: "jess/team-level-training.html",
-    title: "Team Level Training - JESS NOVA Series",
+    title: "Team Level Training | JESS NOVA Series Malaysia",
     description:
-      "NOVA Series team-level training — Agile & Scrum and Design Thinking courses for delivery teams.",
+      "NOVA Series enterprise team-level agile training in Malaysia and Southeast Asia — Agile & Scrum and Design Thinking courses for delivery teams.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/EnterpriseConsultingPage.tsx",
     componentName: "EnterpriseConsultingPage",
     filename: "jess/enterprise-consulting.html",
-    title: "Enterprise Consulting - JESS",
+    title: "Enterprise Consulting | Agile Transformation Malaysia & Indonesia",
     description:
-      "Enterprise consulting services for agile transformation at scale.",
+      "Enterprise agile consulting and organizational transformation services in Malaysia and Indonesia. Proven frameworks for scaling agile across enterprise teams.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/AgileScrumCoursePage.tsx",
     componentName: "AgileScrumCoursePage",
     filename: "jess/nova/agile-scrum.html",
-    title: "Agile & Scrum 201 - NOVA Series",
+    title: "Agile & Scrum 201 | NOVA Series Enterprise Scrum Training Malaysia",
     description:
-      "Agile & Scrum 201 course for delivery teams — build hyper-productive teams with proven frameworks.",
+      "Agile & Scrum 201 professional course for enterprise delivery teams in Malaysia — build hyper-productive teams with Jeff Sutherland's proven Scrum framework.",
     siteType: "jess",
   },
   {
     modulePath: "/src/site/pages/jess/DesignThinkingCoursePage.tsx",
     componentName: "DesignThinkingCoursePage",
     filename: "jess/nova/design-thinking.html",
-    title: "Design Thinking 201 - NOVA Series",
+    title: "Design Thinking 201 | NOVA Series Enterprise Training Malaysia",
     description:
-      "Design Thinking 201 course — solve real-world problems with user-centered design methodology.",
+      "Design Thinking 201 course for enterprise delivery teams — solve real-world problems with user-centered design methodology in Malaysia and Southeast Asia.",
     siteType: "jess",
   },
 ];

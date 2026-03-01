@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{DESCRIPTION}}">
     <title>{{TITLE}}</title>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{CANONICAL_URL}}">
@@ -15,21 +16,33 @@
     <meta property="og:url" content="{{CANONICAL_URL}}">
     <meta property="og:image" content="{{OG_IMAGE}}">
     <meta property="og:image:alt" content="{{OG_TITLE}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CI Agile">
     <meta property="og:locale" content="en_US">
 
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{OG_TITLE}}">
+    <meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+    <meta name="twitter:image:alt" content="{{OG_TITLE}}">
+    <meta name="twitter:site" content="@ciagile">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{CSS_PATH}}/tailwind.css">
     <link rel="stylesheet" href="{{CSS_PATH}}/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+{{SCHEMA_JSON_LD}}
+    <!-- Lucide Icons (self-hosted) -->
+    <script src="{{JS_PATH}}/lucide.min.js" defer></script>
 </head>
 <body class="antialiased{{BODY_CLASS}}">
     {{BODY_HTML}}
 
     <!-- Scripts -->
-    <script src="{{JS_PATH}}/main.js"></script>{{FORM_JS_TAG}}
+    <script src="{{JS_PATH}}/main.js" defer></script>{{FORM_JS_TAG}}
 </body>
 </html>

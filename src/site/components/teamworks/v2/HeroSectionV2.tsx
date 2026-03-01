@@ -67,6 +67,8 @@ export function HeroSectionV2() {
                 src={twoLadiesImage}
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
+                fetchpriority="high"
+                loading="eager"
               />
             </div>
             {/* Floating Badge */}

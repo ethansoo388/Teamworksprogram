@@ -86,6 +86,8 @@ export function Hero() {
                 src="/assets/img/jess/people-jeff-sutherland.webp"
                 alt="Jeff Sutherland - Inventor of Scrum"
                 className="jess-hero-bg-img"
+                fetchpriority="high"
+                loading="eager"
               />
               {/* Gradient overlay for better blending */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>

@@ -3,25 +3,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proven delivery systems that help organizations execute and achieve measurable business outcomes across Asia Pacific.">
-    <title>CI Agile - Transform Your Organization</title>
+    <meta name="description" content="Leading enterprise agile consulting firm in Malaysia and Indonesia. We deliver business transformation and proven delivery systems across Asia Pacific.">
+    <title>CI Agile | Enterprise Agile Consulting Malaysia & Indonesia</title>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.ciagile.com/">
     <!-- Open Graph -->
-    <meta property="og:title" content="CI Agile - Transform Your Organization">
-    <meta property="og:description" content="Proven delivery systems that help organizations execute and achieve measurable business outcomes across Asia Pacific.">
+    <meta property="og:title" content="CI Agile | Enterprise Agile Consulting Malaysia & Indonesia">
+    <meta property="og:description" content="Leading enterprise agile consulting firm in Malaysia and Indonesia. We deliver business transformation and proven delivery systems across Asia Pacific.">
     <meta property="og:url" content="https://www.ciagile.com/">
     <meta property="og:image" content="https://www.ciagile.com/assets/img/main/ciagile-home-hero-presenter-flipchart.webp">
-    <meta property="og:image:alt" content="{{OG_TITLE}}">
+    <meta property="og:image:alt" content="CI Agile | Enterprise Agile Consulting Malaysia & Indonesia">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CI Agile">
     <meta property="og:locale" content="en_US">
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest">
-    </script>
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CI Agile | Enterprise Agile Consulting Malaysia & Indonesia">
+    <meta name="twitter:description" content="Leading enterprise agile consulting firm in Malaysia and Indonesia. We deliver business transformation and proven delivery systems across Asia Pacific.">
+    <meta name="twitter:image" content="https://www.ciagile.com/assets/img/main/ciagile-home-hero-presenter-flipchart.webp">
+    <meta name="twitter:image:alt" content="CI Agile | Enterprise Agile Consulting Malaysia & Indonesia">
+    <meta name="twitter:site" content="@ciagile">
     <!-- Styles -->
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="{{CSS_PATH}}/style.css">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CI Agile",
+      "url": "https://www.ciagile.com",
+      "logo": "https://www.ciagile.com/assets/img/main/ciagile-main-logo.webp",
+      "description": "Leading enterprise agile consulting firm in Malaysia and Indonesia. We deliver business transformation and proven delivery systems across Asia Pacific.",
+      "areaServed": [
+      "MY",
+      "ID",
+      "SG",
+      "TH",
+      "PH",
+      "VN"
+      ],
+      "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://www.ciagile.com/contactus.html"
+      },
+      "sameAs": [
+      "https://www.linkedin.com/company/ci-agile"
+      ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CI Agile",
+      "url": "https://www.ciagile.com"
+      }
+    </script>
+    <!-- Lucide Icons (self-hosted) -->
+    <script src="js/lucide.min.js" defer>
+    </script>
   </head>
   <body class="antialiased site-main">
     <div class="w-full overflow-x-hidden">
@@ -531,7 +576,7 @@
           </div>
         </div>
         <div class="relative h-full min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] bg-gray-100">
-          <img src="assets/img/main/ciagile-home-hero-presenter-flipchart.webp" alt="CI Agile training and consulting" class="w-full h-full object-cover"/>
+          <img src="assets/img/main/ciagile-home-hero-presenter-flipchart.webp" alt="CI Agile training and consulting" class="w-full h-full object-cover" fetchpriority="high" loading="eager"/>
           <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:from-transparent">
           </div>
         </div>
@@ -1059,7 +1104,7 @@
 </footer>
 </div>
 <!-- Scripts -->
-<script src="js/main.js">
+<script src="{{JS_PATH}}/main.js" defer>
 </script>
 </body>
 </html>
