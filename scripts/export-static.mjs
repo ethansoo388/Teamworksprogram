@@ -456,7 +456,6 @@ function generateCSS() {
   const tempTailwindCss = path.join(cssOutDir, '_tailwind.compiled.css');
   const siteCss = path.join(cssOutDir, 'site.css');
   const extraCss = path.join(templatesDir, 'style.css');
-  const configPath = path.join(rootDir, 'tailwind.config.cjs');
 
   // Prefer local Tailwind CLI binary if available; fallback to npx @tailwindcss/cli.
   // Note: In Tailwind CSS v4, the CLI is provided by @tailwindcss/cli.
@@ -465,8 +464,8 @@ function generateCSS() {
 
   const cmd = hasLocalBin ? localBin : 'npx';
   const args = hasLocalBin
-    ? ['-c', configPath, '-i', inputCss, '-o', tempTailwindCss, '--minify']
-    : ['@tailwindcss/cli', '-c', configPath, '-i', inputCss, '-o', tempTailwindCss, '--minify'];
+    ? ['-i', inputCss, '-o', tempTailwindCss, '--minify']
+    : ['@tailwindcss/cli', '-i', inputCss, '-o', tempTailwindCss, '--minify'];
 
   const res = spawnSync(cmd, args, { stdio: 'inherit', cwd: rootDir, shell: process.platform === 'win32' });
 
@@ -475,6 +474,19 @@ function generateCSS() {
   }
 
   const twCss = fs.readFileSync(tempTailwindCss, 'utf-8');
+
+  // Sentinel check: if core utilities are missing, scanning is broken and the site will look unstyled.
+  // This fails fast instead of silently shipping broken layout.
+  const mustHave = ['.flex{display:flex', '.grid{display:grid', '.container{', '.mx-auto{', '.items-center{'];
+  const missing = mustHave.filter((s) => !twCss.includes(s));
+  if (missing.length) {
+    throw new Error(
+      `Tailwind compiled CSS is missing core utilities (${missing.join(', ')}). ` +
+      `This usually means class scanning did not include your source/output files. ` +
+      `Check src/styles/tailwind.css @source paths and ensure export generated HTML under /public before CSS compilation.`
+    );
+  }
+
   const extra = fs.existsSync(extraCss) ? fs.readFileSync(extraCss, 'utf-8') : '';
 
   // Merge into a single CSS file to avoid multiple blocking requests.
@@ -483,7 +495,7 @@ function generateCSS() {
   // Cleanup
   try { fs.unlinkSync(tempTailwindCss); } catch {}
 
-  console.log('✅ site.css generated (Tailwind config scans src + exported HTML + merged custom CSS)');
+  console.log('✅ site.css generated (Tailwind CSS-first @source + merged custom CSS)');
 }
 
 
