@@ -447,25 +447,47 @@ function setupPublicDir() {
 // Asset generation — copy template files to public/
 // ---------------------------------------------------------------------------
 function generateCSS() {
-  console.log('🎨 Generating CSS (Tailwind compiled locally → site.css)...');
+  console.log('🎨 Generating CSS (Tailwind compiled locally → merged site.css)...');
 
   const cssOutDir = path.join(publicDir, 'css');
   fs.mkdirSync(cssOutDir, { recursive: true });
 
-  const inputCss = path.join(rootDir, 'src', 'styles', 'index.css');
+  // Build-time CSS entry that points Tailwind to the final exported HTML, so class coverage matches production output.
+  const tempDir = path.join(cssOutDir, '__tw_build');
+  fs.mkdirSync(tempDir, { recursive: true });
+
+  const tempTailwindInput = path.join(tempDir, 'tailwind.export.css');
+  const tempIndexInput = path.join(tempDir, 'index.export.css');
+
+  // Tailwind v4 uses @source to define content scanning. We point it at the exported HTML in /public.
+  // tempDir = public/css/__tw_build → public/** is ../../
+  fs.writeFileSync(
+    tempTailwindInput,
+    `@import "tailwindcss" source(none);\n@source "../../**/*.html";\n`,
+    'utf-8'
+  );
+
+  // Keep your existing fonts + theme variables.
+  // tempDir = public/css/__tw_build → root/src/styles is ../../../src/styles
+  fs.writeFileSync(
+    tempIndexInput,
+    `@import "../../../src/styles/fonts.css";\n@import "./tailwind.export.css";\n@import "../../../src/styles/theme.css";\n`,
+    'utf-8'
+  );
+
   const tempTailwindCss = path.join(cssOutDir, '_tailwind.compiled.css');
   const siteCss = path.join(cssOutDir, 'site.css');
   const extraCss = path.join(templatesDir, 'style.css');
 
   // Prefer local Tailwind CLI binary if available; fallback to npx @tailwindcss/cli.
-// Note: In Tailwind CSS v4, the CLI is provided by @tailwindcss/cli.
+  // Note: In Tailwind CSS v4, the CLI is provided by @tailwindcss/cli.
   const localBin = path.join(rootDir, 'node_modules', '.bin', process.platform === 'win32' ? 'tailwindcss.cmd' : 'tailwindcss');
   const hasLocalBin = fs.existsSync(localBin);
 
   const cmd = hasLocalBin ? localBin : 'npx';
   const args = hasLocalBin
-    ? ['-i', inputCss, '-o', tempTailwindCss, '--minify']
-    : ['@tailwindcss/cli', '-i', inputCss, '-o', tempTailwindCss, '--minify'];
+    ? ['-i', tempIndexInput, '-o', tempTailwindCss, '--minify']
+    : ['@tailwindcss/cli', '-i', tempIndexInput, '-o', tempTailwindCss, '--minify'];
 
   const res = spawnSync(cmd, args, { stdio: 'inherit', cwd: rootDir, shell: process.platform === 'win32' });
 
@@ -479,10 +501,11 @@ function generateCSS() {
   // Merge into a single CSS file to avoid multiple blocking requests.
   fs.writeFileSync(siteCss, `${twCss}\n\n/* ---- extra site CSS (templates/style.css) ---- */\n${extra}\n`, 'utf-8');
 
-  // Cleanup temp file
+  // Cleanup
   try { fs.unlinkSync(tempTailwindCss); } catch {}
+  try { fs.rmSync(tempDir, { recursive: true, force: true }); } catch {}
 
-  console.log('✅ site.css generated (compiled Tailwind + merged custom CSS)');
+  console.log('✅ site.css generated (Tailwind scanned exported HTML + merged custom CSS)');
 }
 
 
@@ -757,9 +780,6 @@ async function exportStaticSite() {
     setupPublicDir();
     console.log('');
 
-    generateCSS();
-    console.log('');
-
     generateMainJS();
     console.log('');
 
@@ -776,6 +796,10 @@ async function exportStaticSite() {
     console.log('');
 
     const { pages, seo } = await generateHTMLFiles();
+    console.log('');
+
+    // Generate merged CSS after HTML export so Tailwind scans the final markup
+    generateCSS();
     console.log('');
 
     // -----------------------------------------------------------------
