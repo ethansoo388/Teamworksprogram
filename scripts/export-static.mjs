@@ -477,7 +477,7 @@ function generateCSS() {
 
   // Sentinel check: if core utilities are missing, scanning is broken and the site will look unstyled.
   // This fails fast instead of silently shipping broken layout.
-  const mustHave = ['.flex{display:flex', '.grid{display:grid', '.container{', '.mx-auto{', '.items-center{'];
+  const mustHave = ['.flex{display:flex', '.grid{display:grid', '.container{', '.mx-auto{', '.items-center{', '.justify-between{', '.gap-'];
   const missing = mustHave.filter((s) => !twCss.includes(s));
   if (missing.length) {
     throw new Error(
