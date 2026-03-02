@@ -546,6 +546,257 @@ function fixImagePaths(html, filename) {
     .replace(assetsPattern, `src="${prefix}assets/img/`);
 }
 
+
+// ---------------------------------------------------------------------------
+// Build-time image dimension injection (CLS prevention)
+// - Adds width/height to local raster <img> tags in exported HTML
+// - No runtime JS required
+// ---------------------------------------------------------------------------
+
+const __imgSizeCache = new Map();
+
+function isSkippableImgSrc(src) {
+  if (!src) return true;
+  const s = String(src).trim();
+  if (!s) return true;
+  if (s.startsWith('data:')) return true;
+  if (/^https?:\/\//i.test(s)) return true;
+  return false;
+}
+
+function normalizeSrcForCache(src) {
+  return String(src).split('#')[0].split('?')[0];
+}
+
+function getPngSize(buf) {
+  // PNG signature + IHDR chunk at fixed offset
+  if (buf.length < 24) return null;
+  // width/height are big-endian at bytes 16..23
+  const w = buf.readUInt32BE(16);
+  const h = buf.readUInt32BE(20);
+  return (w > 0 && h > 0) ? { width: w, height: h } : null;
+}
+
+function getGifSize(buf) {
+  if (buf.length < 10) return null;
+  const w = buf.readUInt16LE(6);
+  const h = buf.readUInt16LE(8);
+  return (w > 0 && h > 0) ? { width: w, height: h } : null;
+}
+
+function getJpegSize(buf) {
+  // Scan JPEG segments for SOF marker
+  if (buf.length < 4 || buf[0] !== 0xFF || buf[1] !== 0xD8) return null;
+  let i = 2;
+  while (i < buf.length - 1) {
+    if (buf[i] !== 0xFF) { i += 1; continue; }
+    // skip fill bytes 0xFF
+    while (i < buf.length && buf[i] === 0xFF) i += 1;
+    if (i >= buf.length) break;
+    const marker = buf[i];
+    i += 1;
+
+    // Standalone markers
+    if (marker === 0xD9 || marker === 0xDA) break; // EOI / SOS
+    if (marker === 0x01 || (marker >= 0xD0 && marker <= 0xD7)) continue;
+
+    if (i + 1 >= buf.length) break;
+    const size = buf.readUInt16BE(i);
+    if (size < 2) break;
+    const segmentStart = i + 2;
+
+    // SOF0/1/2/3 etc
+    const isSOF =
+      (marker >= 0xC0 && marker <= 0xC3) ||
+      (marker >= 0xC5 && marker <= 0xC7) ||
+      (marker >= 0xC9 && marker <= 0xCB) ||
+      (marker >= 0xCD && marker <= 0xCF);
+
+    if (isSOF && segmentStart + 7 <= buf.length) {
+      const h = buf.readUInt16BE(segmentStart + 1);
+      const w = buf.readUInt16BE(segmentStart + 3);
+      return (w > 0 && h > 0) ? { width: w, height: h } : null;
+    }
+
+    i += size;
+  }
+  return null;
+}
+
+function getWebpSize(buf) {
+  // RIFF....WEBP
+  if (buf.length < 30) return null;
+  if (buf.toString('ascii', 0, 4) !== 'RIFF') return null;
+  if (buf.toString('ascii', 8, 12) !== 'WEBP') return null;
+
+  const chunkType = buf.toString('ascii', 12, 16);
+  const chunkSize = buf.readUInt32LE(16);
+  const dataStart = 20;
+
+  if (chunkType === 'VP8X') {
+    // Extended format: width-1 at bytes 24..26, height-1 at 27..29 (3 bytes LE)
+    if (buf.length < 30) return null;
+    const wMinus1 = buf.readUIntLE(24, 3);
+    const hMinus1 = buf.readUIntLE(27, 3);
+    return { width: wMinus1 + 1, height: hMinus1 + 1 };
+  }
+
+  if (chunkType === 'VP8 ') {
+    // Lossy bitstream: look for start code 0x9D 0x01 0x2A after frame tag (3 bytes)
+    const maxSearch = Math.min(buf.length, dataStart + Math.min(chunkSize, 64));
+    for (let j = dataStart; j < maxSearch - 10; j += 1) {
+      if (buf[j] === 0x9D && buf[j + 1] === 0x01 && buf[j + 2] === 0x2A) {
+        const wRaw = buf.readUInt16LE(j + 3);
+        const hRaw = buf.readUInt16LE(j + 5);
+        const w = wRaw & 0x3FFF;
+        const h = hRaw & 0x3FFF;
+        return (w > 0 && h > 0) ? { width: w, height: h } : null;
+      }
+    }
+  }
+
+  if (chunkType === 'VP8L') {
+    // Lossless: signature 0x2F then 4 bytes
+    if (buf.length < dataStart + 5) return null;
+    const sig = buf[dataStart];
+    if (sig !== 0x2F) return null;
+    const bits = buf.readUInt32LE(dataStart + 1);
+    const w = (bits & 0x3FFF) + 1;
+    const h = ((bits >> 14) & 0x3FFF) + 1;
+    return (w > 0 && h > 0) ? { width: w, height: h } : null;
+  }
+
+  return null;
+}
+
+function getImageSizeFromFile(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  // Read just enough bytes for headers
+  const fd = fs.openSync(filePath, 'r');
+  try {
+    const max = 256 * 1024; // plenty for JPEG scanning
+    const buf = Buffer.allocUnsafe(max);
+    const bytes = fs.readSync(fd, buf, 0, max, 0);
+    const slice = buf.subarray(0, bytes);
+
+    if (ext === '.png') return getPngSize(slice);
+    if (ext === '.gif') return getGifSize(slice);
+    if (ext === '.jpg' || ext === '.jpeg') return getJpegSize(slice);
+    if (ext === '.webp') return getWebpSize(slice);
+    return null;
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+
+function resolvePublicImageFilePath(src, pageFilename) {
+  // src is already rewritten to a relative "assets/..." with prefix via fixImagePaths
+  const raw = normalizeSrcForCache(src).trim();
+  const pageDir = path.dirname(pageFilename);
+  const absPath = path.resolve(publicDir, pageDir, raw);
+  return absPath;
+}
+
+function injectImageDimensions(html, pageFilename) {
+  if (!html) return html;
+
+  return String(html).replace(/<img\b[^>]*>/gi, (tag) => {
+    try {
+      // quick checks
+      const hasW = /\bwidth\s*=\s*["']\d+["']/i.test(tag);
+      const hasH = /\bheight\s*=\s*["']\d+["']/i.test(tag);
+      if (hasW && hasH) return tag;
+
+      // extract src
+      const m = tag.match(/\bsrc\s*=\s*["']([^"']+)["']/i);
+      if (!m) return tag;
+      const src = m[1];
+      if (isSkippableImgSrc(src)) return tag;
+
+      const srcKey = normalizeSrcForCache(src);
+      // Only handle local raster files
+      const ext = path.extname(srcKey).toLowerCase();
+      if (!['.png', '.jpg', '.jpeg', '.webp', '.gif'].includes(ext)) return tag;
+
+      let size = __imgSizeCache.get(srcKey);
+      if (!size) {
+        const abs = resolvePublicImageFilePath(srcKey, pageFilename);
+        if (!fs.existsSync(abs)) return tag; // don't break build
+        size = getImageSizeFromFile(abs);
+        if (!size || !size.width || !size.height) return tag;
+        __imgSizeCache.set(srcKey, size);
+      }
+
+      // Inject missing attributes only
+      let out = tag;
+      if (!hasW) out = out.replace(/<img\b/i, `<img width="${size.width}"`);
+      if (!hasH) out = out.replace(/<img\b/i, `<img height="${size.height}"`);
+      return out;
+    } catch {
+      return tag;
+    }
+  });
+}
+
+function validateExportedImages(pages) {
+  const issues = [];
+  for (const page of pages) {
+    const outPath = path.join(publicDir, page.filename);
+    if (!fs.existsSync(outPath)) continue;
+    const html = fs.readFileSync(outPath, 'utf8');
+
+    const imgTags = html.match(/<img\b[^>]*>/gi) || [];
+    for (const tag of imgTags) {
+      const m = tag.match(/\bsrc\s*=\s*["']([^"']+)["']/i);
+      if (!m) continue;
+      const src = m[1];
+      if (isSkippableImgSrc(src)) continue;
+
+      const srcKey = normalizeSrcForCache(src);
+      const ext = path.extname(srcKey).toLowerCase();
+      const isRaster = ['.png', '.jpg', '.jpeg', '.webp', '.gif'].includes(ext);
+      if (!isRaster) continue;
+
+      const hasW = /\bwidth\s*=\s*["']\d+["']/i.test(tag);
+      const hasH = /\bheight\s*=\s*["']\d+["']/i.test(tag);
+      if (!hasW || !hasH) {
+        issues.push({ type: 'missing-dims', page: page.filename, src: srcKey });
+      }
+
+      const abs = resolvePublicImageFilePath(srcKey, page.filename);
+      if (!fs.existsSync(abs)) {
+        issues.push({ type: 'missing-file', page: page.filename, src: srcKey });
+      }
+    }
+  }
+
+  const missingDims = issues.filter((x) => x.type === 'missing-dims');
+  const missingFiles = issues.filter((x) => x.type === 'missing-file');
+
+  console.log('');
+  console.log('🧪 Post-export image sanity check');
+  console.log(`  • Missing width/height (local raster): ${missingDims.length}`);
+  console.log(`  • Missing files referenced by <img>: ${missingFiles.length}`);
+
+  if (missingDims.length) {
+    const sample = missingDims.slice(0, 10);
+    console.log('  Sample missing dimensions:');
+    for (const it of sample) console.log(`   - ${it.page}: ${it.src}`);
+  }
+  if (missingFiles.length) {
+    const sample = missingFiles.slice(0, 10);
+    console.log('  Sample missing files:');
+    for (const it of sample) console.log(`   - ${it.page}: ${it.src}`);
+  }
+
+  if (missingDims.length || missingFiles.length) {
+    throw new Error('Image sanity check failed: missing dimensions and/or missing files.');
+  }
+
+  console.log('  ✓ Image sanity check passed');
+  console.log('');
+}
+
 // ---------------------------------------------------------------------------
 // HTML generation — renders all routes to static HTML files
 // ---------------------------------------------------------------------------
@@ -600,6 +851,7 @@ async function generateHTMLFiles() {
 
         const bodyHTML = await renderPageWithVite(vite, page.modulePath, page.componentName);
         const fixedBodyHTML = fixImagePaths(bodyHTML, page.filename);
+        const bodyWithDims = injectImageDimensions(fixedBodyHTML, page.filename);
 
         // -----------------------------------------------------------------
         // Site-scoped body classes
@@ -644,7 +896,7 @@ async function generateHTMLFiles() {
         const ogDescription = ogOverrides.description || page.description;
         const ogType = ogOverrides.type || ogDefaults.type || 'website';
 
-        const html = createHTMLShell(page.title, fixedBodyHTML, {
+        const html = createHTMLShell(page.title, bodyWithDims, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
           siteType,
@@ -687,7 +939,7 @@ async function generateHTMLFiles() {
               const faqGraph = buildFaqGraph({
                 baseUrl: seo.baseUrl,
                 page,
-                bodyHTML: fixedBodyHTML,
+                bodyHTML: bodyWithDims,
               });
               if (faqGraph) extra.push(faqGraph);
 
@@ -705,6 +957,9 @@ async function generateHTMLFiles() {
     }
 
     console.log('✅ All HTML files generated');
+
+    // Post-export sanity check: ensure local raster <img> tags have width/height and files exist
+    validateExportedImages(pages);
 
     return { pages, seo };
   } finally {
