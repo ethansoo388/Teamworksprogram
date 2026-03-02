@@ -27,196 +27,6 @@ const OG_IMAGES = {
 };
 
 // ---------------------------------------------------------------------------
-// Schema.org JSON-LD generator — one structured-data block per page.
-// Returns a ready-to-inject <script type="application/ld+json"> string.
-// ---------------------------------------------------------------------------
-function generateSchemaJsonLd(page, canonicalUrl) {
-  const { filename, title, description, siteType } = page;
-
-  // ── Shared entity stubs ────────────────────────────────────────────────
-  const ciAgileOrg = {
-    '@type': 'Organization',
-    name: 'CI Agile',
-    url: SITE_URL,
-    logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
-    sameAs: ['https://www.linkedin.com/company/ci-agile'],
-  };
-
-  const teamWorksOrg = {
-    '@type': 'EducationalOrganization',
-    name: 'TeamWorks by CI Agile',
-    url: `${SITE_URL}/teamworks/`,
-    parentOrganization: { '@type': 'Organization', name: 'CI Agile', url: SITE_URL },
-  };
-
-  const jessOrg = {
-    '@type': 'EducationalOrganization',
-    name: "JESS – Jeff's Enterprise Scrum System",
-    url: `${SITE_URL}/jess/`,
-    parentOrganization: { '@type': 'Organization', name: 'CI Agile', url: SITE_URL },
-  };
-
-  const areaServed = ['MY', 'SG', 'TH', 'PH', 'ID', 'VN'];
-
-  let schemas;
-
-  // ── Main homepage ──────────────────────────────────────────────────────
-  if (filename === 'index.html') {
-    schemas = [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'CI Agile',
-        url: SITE_URL,
-        logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
-        description,
-        areaServed,
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'customer service',
-          url: `${SITE_URL}/contactus.html`,
-        },
-        sameAs: ['https://www.linkedin.com/company/ci-agile'],
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'CI Agile',
-        url: SITE_URL,
-      },
-    ];
-  }
-
-  // ── About Us ───────────────────────────────────────────────────────────
-  else if (filename === 'aboutus.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'AboutPage',
-      name: title,
-      description,
-      url: canonicalUrl,
-      isPartOf: { '@type': 'WebSite', url: SITE_URL, name: 'CI Agile' },
-    }];
-  }
-
-  // ── Contact Us ─────────────────────────────────────────────────────────
-  else if (filename === 'contactus.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      name: title,
-      description,
-      url: canonicalUrl,
-      isPartOf: { '@type': 'WebSite', url: SITE_URL, name: 'CI Agile' },
-    }];
-  }
-
-  // ── TeamWorks landing ──────────────────────────────────────────────────
-  else if (filename === 'teamworks/index.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'EducationalOrganization',
-      name: 'TeamWorks by CI Agile',
-      url: `${SITE_URL}/teamworks/`,
-      logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
-      description,
-      parentOrganization: ciAgileOrg,
-      areaServed,
-    }];
-  }
-
-  // ── JESS homepage ──────────────────────────────────────────────────────
-  else if (filename === 'jess/index.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'EducationalOrganization',
-      name: "JESS – Jeff's Enterprise Scrum System",
-      url: `${SITE_URL}/jess/`,
-      logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
-      description,
-      parentOrganization: ciAgileOrg,
-      areaServed,
-    }];
-  }
-
-  // ── JESS Instructor ────────────────────────────────────────────────────
-  else if (filename === 'jess/instructor.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Ethan Soo',
-      jobTitle: 'Enterprise Agile Coach & JESS Instructor',
-      url: canonicalUrl,
-      image: `${SITE_URL}/assets/img/jess/people-ethan-soo.webp`,
-      worksFor: ciAgileOrg,
-    }];
-  }
-
-  // ── Enterprise consulting ──────────────────────────────────────────────
-  else if (filename === 'jess/enterprise-consulting.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: title,
-      description,
-      url: canonicalUrl,
-      provider: ciAgileOrg,
-      areaServed,
-    }];
-  }
-
-  // ── TeamWorks course pages (all except booking) ────────────────────────
-  else if (siteType === 'teamworks' && filename !== 'teamworks/bookConsultation.html') {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'Course',
-      name: title,
-      description,
-      url: canonicalUrl,
-      provider: teamWorksOrg,
-      inLanguage: 'en',
-      educationalLevel: 'Beginner',
-    }];
-  }
-
-  // ── JESS course / training pages ───────────────────────────────────────
-  else if (
-    filename === 'jess/leadership-training.html' ||
-    filename === 'jess/course-modules.html'      ||
-    filename === 'jess/team-level-training.html' ||
-    filename === 'jess/nova/agile-scrum.html'    ||
-    filename === 'jess/nova/design-thinking.html'
-  ) {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'Course',
-      name: title,
-      description,
-      url: canonicalUrl,
-      provider: jessOrg,
-      inLanguage: 'en',
-      educationalLevel: 'Intermediate',
-    }];
-  }
-
-  // ── Default: generic WebPage ───────────────────────────────────────────
-  else {
-    schemas = [{
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: title,
-      description,
-      url: canonicalUrl,
-      isPartOf: { '@type': 'WebSite', url: SITE_URL, name: 'CI Agile' },
-    }];
-  }
-
-  return schemas
-    .map(s => `    <script type="application/ld+json">\n${JSON.stringify(s, null, 4)}\n    </script>`)
-    .join('\n');
-}
-
-// ---------------------------------------------------------------------------
 // HTML shell builder — reads shell.html template and injects page-specific values
 // ---------------------------------------------------------------------------
 function createHTMLShell(title, bodyHTML, options = {}) {
@@ -228,7 +38,6 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     filename = '',
     canonicalUrl = '',
     ogImage = '',
-    schemaJsonLd = '',
   } = options;
 
   // Compute prefix based on output filename depth:
@@ -255,8 +64,7 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     .replace('{{BODY_CLASS}}', pageClass ? ` ${pageClass}` : '')
     .replace('{{BODY_HTML}}', bodyHTML)
     .replace('{{JS_PATH}}', `${prefix}js`)
-    .replace('{{FORM_JS_TAG}}', formJsTag)
-    .replace('{{SCHEMA_JSON_LD}}', schemaJsonLd);
+    .replace('{{FORM_JS_TAG}}', formJsTag);
 }
 
 // ---------------------------------------------------------------------------
@@ -478,39 +286,6 @@ function generateFormJS() {
 }
 
 // ---------------------------------------------------------------------------
-// Lucide Icons JS — self-hosted UMD bundle (replaces CDN).
-// Downloads lucide@<version>/dist/umd/lucide.min.js from unpkg once and caches
-// it in scripts/templates/ so subsequent builds work offline.
-// ---------------------------------------------------------------------------
-async function generateLucideJS() {
-  console.log('🎯 Bundling Lucide icons locally...');
-
-  // Pin to the same version as lucide-react in package.json
-  const LUCIDE_VERSION = '0.487.0';
-  const cachePath = path.join(__dirname, 'templates', 'lucide.min.js');
-  const destPath  = path.join(publicDir, 'js', 'lucide.min.js');
-
-  if (fs.existsSync(cachePath)) {
-    fs.copyFileSync(cachePath, destPath);
-    console.log('✅ Lucide JS copied from local cache → public/js/lucide.min.js');
-    return;
-  }
-
-  console.log(`  ↳ One-time download: lucide@${LUCIDE_VERSION} from unpkg...`);
-  const url = `https://unpkg.com/lucide@${LUCIDE_VERSION}/dist/umd/lucide.min.js`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`Failed to fetch Lucide from unpkg: ${res.status} ${res.statusText}`);
-  }
-  const content = await res.text();
-
-  // Cache in scripts/templates/ for offline-friendly future builds
-  fs.writeFileSync(cachePath, content, 'utf8');
-  fs.writeFileSync(destPath,  content, 'utf8');
-  console.log('✅ Lucide JS downloaded and cached → public/js/lucide.min.js');
-}
-
-// ---------------------------------------------------------------------------
 // Asset copy — src/assets → public/assets
 // ---------------------------------------------------------------------------
 function copyAssets() {
@@ -651,9 +426,6 @@ async function generateHTMLFiles() {
         // OG hero image — one representative image per site section
         const ogImage = OG_IMAGES[siteType] || OG_IMAGES.main;
 
-        // Schema.org JSON-LD — one structured-data block per page
-        const schemaJsonLd = generateSchemaJsonLd(page, canonicalUrl);
-
         const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
@@ -662,7 +434,6 @@ async function generateHTMLFiles() {
           pageClass,
           canonicalUrl,
           ogImage,
-          schemaJsonLd,
         });
 
         fs.writeFileSync(path.join(publicDir, page.filename), html);
@@ -702,9 +473,6 @@ async function exportStaticSite() {
     generateFormJS();
     console.log('');
 
-    await generateLucideJS();
-    console.log('');
-
     copyAssets();
     console.log('');
 
@@ -733,7 +501,6 @@ async function exportStaticSite() {
     console.log('    - css/style.css');
     console.log('    - js/main.js');
     console.log('    - js/form.js');
-    console.log('    - js/lucide.min.js (self-hosted — replaces CDN)');
     console.log('    - assets/* (images and other assets)');
     console.log('    - robots.txt');
     console.log('    - sitemap.xml');
