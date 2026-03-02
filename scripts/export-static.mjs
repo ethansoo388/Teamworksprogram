@@ -57,9 +57,9 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     .replace('{{DESCRIPTION}}', description)
     .replace('{{TITLE}}', title)
     .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)  // appears twice — canonical + og:url
-    .replace(/\{\{OG_TITLE\}\}/g, title)
-    .replace(/\{\{OG_DESCRIPTION\}\}/g, description)
-    .replace(/\{\{OG_IMAGE\}\}/g, ogImage)
+    .replace('{{OG_TITLE}}', title)
+    .replace('{{OG_DESCRIPTION}}', description)
+    .replace('{{OG_IMAGE}}', ogImage)
     .replace('{{CSS_PATH}}', `${prefix}css`)
     .replace('{{BODY_CLASS}}', pageClass ? ` ${pageClass}` : '')
     .replace('{{BODY_HTML}}', bodyHTML)
