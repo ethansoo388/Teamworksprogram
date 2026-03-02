@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    {{ROBOTS_META}}
     <title>{{TITLE}}</title>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="{{OG_TITLE}}">
+    <meta property="og:description" content="{{OG_DESCRIPTION}}">
+    <meta property="og:url" content="{{OG_URL}}">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <meta property="og:type" content="{{OG_TYPE}}">
+    <meta property="og:site_name" content="{{OG_SITE_NAME}}">
+    <meta property="og:locale" content="{{OG_LOCALE}}">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{OG_TITLE}}">
+    <meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+    {{JSON_LD}}
 
     <!-- Tailwind CSS CDN -->
     <script>

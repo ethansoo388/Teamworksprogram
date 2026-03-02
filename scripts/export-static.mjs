@@ -22,6 +22,18 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     pageClass = '',
     siteType = 'teamworks', // 'main', 'teamworks', or 'jess'
     filename = '',
+    jsonLd = '',
+
+    // SEO / Social
+    canonicalUrl = '',
+    robotsMeta = '',
+    ogTitle = '',
+    ogDescription = '',
+    ogUrl = '',
+    ogImage = '',
+    ogType = 'website',
+    ogSiteName = 'CI Agile',
+    ogLocale = 'en_SG',
   } = options;
 
   // Compute prefix based on output filename depth:
@@ -39,12 +51,303 @@ function createHTMLShell(title, bodyHTML, options = {}) {
   const shell = fs.readFileSync(path.join(templatesDir, 'shell.html'), 'utf8');
   return shell
     .replace('{{DESCRIPTION}}', description)
+    .replace('{{CANONICAL_URL}}', canonicalUrl)
+    .replace('{{ROBOTS_META}}', robotsMeta)
     .replace('{{TITLE}}', title)
+
+    .replace('{{OG_TITLE}}', ogTitle || title)
+    .replace('{{OG_DESCRIPTION}}', ogDescription || description)
+    .replace('{{OG_URL}}', ogUrl || canonicalUrl)
+    .replace('{{OG_IMAGE}}', ogImage)
+    .replace('{{OG_TYPE}}', ogType)
+    .replace('{{OG_SITE_NAME}}', ogSiteName)
+    .replace('{{OG_LOCALE}}', ogLocale)
+
+    .replace('{{JSON_LD}}', jsonLd)
     .replace('{{CSS_PATH}}', `${prefix}css`)
     .replace('{{BODY_CLASS}}', pageClass ? ` ${pageClass}` : '')
     .replace('{{BODY_HTML}}', bodyHTML)
     .replace('{{JS_PATH}}', `${prefix}js`)
     .replace('{{FORM_JS_TAG}}', formJsTag);
+}
+
+// ---------------------------------------------------------------------------
+// SEO helpers
+// ---------------------------------------------------------------------------
+
+function normalizeUrlPathFromFilename(filename) {
+  // index.html -> /
+  if (filename === 'index.html') return '/';
+
+  // folder index -> /folder/
+  if (filename.endsWith('/index.html')) {
+    const dir = filename.slice(0, -'/index.html'.length);
+    return `/${dir}/`;
+  }
+
+  // all other html -> /path/file.html
+  return `/${filename}`;
+}
+
+function joinUrl(baseUrl, pathPart) {
+  const base = (baseUrl || '').replace(/\/$/, '');
+  const pathNorm = (pathPart || '').startsWith('/') ? pathPart : `/${pathPart}`;
+  return `${base}${pathNorm}`;
+}
+
+function getSitemapPriority(page) {
+  const f = page.filename;
+  if (f === 'index.html') return 1.0;
+  if (f === 'teamworks/index.html' || f === 'jess/index.html') return 0.9;
+
+  if (f.startsWith('teamworks/')) return 0.8;
+  if (f.startsWith('jess/')) return 0.8;
+
+  if (['privacy-policy.html', 'terms-of-use.html', 'cookie-policy.html'].includes(f)) return 0.3;
+  return 0.6;
+}
+
+function getSitemapChangefreq(page) {
+  const f = page.filename;
+  if (f === 'index.html') return 'weekly';
+  if (f === 'teamworks/index.html' || f === 'jess/index.html') return 'monthly';
+  if (['privacy-policy.html', 'terms-of-use.html', 'cookie-policy.html'].includes(f)) return 'yearly';
+  return 'monthly';
+}
+
+function generateRobotsTxt({ baseUrl, disallowPaths = [], sitemapPath = '/sitemap.xml' }) {
+  const lines = [
+    'User-agent: *',
+    'Allow: /',
+    ...disallowPaths.map((p) => `Disallow: ${p}`),
+    `Sitemap: ${joinUrl(baseUrl, sitemapPath)}`,
+    '',
+  ];
+  return lines.join('\n');
+}
+
+function escapeXml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function generateSitemapXml({ pages, baseUrl, excludedFilenames = [], lastmodISO }) {
+  const included = pages.filter((p) => !excludedFilenames.includes(p.filename));
+
+  const urlset = included
+    .map((p) => {
+      const loc = joinUrl(baseUrl, normalizeUrlPathFromFilename(p.filename));
+      const priority = getSitemapPriority(p).toFixed(1);
+      const changefreq = getSitemapChangefreq(p);
+      return [
+        '  <url>',
+        `    <loc>${escapeXml(loc)}</loc>`,
+        `    <lastmod>${escapeXml(lastmodISO)}</lastmod>`,
+        `    <changefreq>${escapeXml(changefreq)}</changefreq>`,
+        `    <priority>${escapeXml(priority)}</priority>`,
+        '  </url>',
+      ].join('\n');
+    })
+    .join('\n');
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    urlset,
+    '</urlset>',
+    '',
+  ].join('\n');
+}
+
+function buildJsonLd({ baseUrl, organizationName, page, extraGraph = [] }) {
+  const pagePath = normalizeUrlPathFromFilename(page.filename);
+  const pageUrl = joinUrl(baseUrl, pagePath);
+
+  const graph = [
+    {
+      '@type': 'Organization',
+      '@id': joinUrl(baseUrl, '/#organization'),
+      name: organizationName,
+      url: baseUrl,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': joinUrl(baseUrl, '/#website'),
+      url: baseUrl,
+      name: organizationName,
+      publisher: { '@id': joinUrl(baseUrl, '/#organization') },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: page.title,
+      description: page.description,
+      isPartOf: { '@id': joinUrl(baseUrl, '/#website') },
+      about: { '@id': joinUrl(baseUrl, '/#organization') },
+      inLanguage: 'en',
+    },
+  ];
+
+  if (Array.isArray(extraGraph) && extraGraph.length) {
+    graph.push(...extraGraph);
+  }
+
+  const json = {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+
+  // Keep output compact to reduce HTML weight.
+  return `<script type="application/ld+json">${JSON.stringify(json)}</script>`;
+}
+
+// ---------------------------------------------------------------------------
+// Structured data helpers (Breadcrumb / Course / FAQ)
+// ---------------------------------------------------------------------------
+
+function stripHtmlToText(html) {
+  return String(html)
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildBreadcrumbGraph({ baseUrl, page, breadcrumbLabels = {} }) {
+  const pagePath = normalizeUrlPathFromFilename(page.filename);
+  const pageUrl = joinUrl(baseUrl, pagePath);
+
+  const segments = pagePath
+    .split('/')
+    .filter(Boolean)
+    .filter((seg) => seg !== 'index.html');
+
+  // Home always first
+  const items = [
+    {
+      name: 'Home',
+      url: joinUrl(baseUrl, '/'),
+    },
+  ];
+
+  // Build up intermediate paths
+  let accum = '';
+  for (let i = 0; i < segments.length; i++) {
+    const seg = segments[i];
+    const isLast = i === segments.length - 1;
+
+    const segKey = seg.replace(/\.html$/i, '');
+    const label = breadcrumbLabels[segKey] || segKey;
+
+    accum += `/${seg}`;
+    const name = isLast ? page.title : label;
+    const url = isLast ? pageUrl : joinUrl(baseUrl, `${accum}/`);
+
+    if (url !== joinUrl(baseUrl, '/')) {
+      items.push({ name, url });
+    }
+  }
+
+  const itemListElement = items.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.name,
+    item: it.url,
+  }));
+
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': `${pageUrl}#breadcrumb`,
+    itemListElement,
+  };
+}
+
+function buildCourseGraph({ baseUrl, page, courseConfig }) {
+  const pagePath = normalizeUrlPathFromFilename(page.filename);
+  const pageUrl = joinUrl(baseUrl, pagePath);
+
+  return {
+    '@type': 'Course',
+    '@id': `${pageUrl}#course`,
+    name: courseConfig?.name || page.title,
+    description: courseConfig?.description || page.description,
+    provider: { '@id': joinUrl(baseUrl, '/#organization') },
+    inLanguage: courseConfig?.inLanguage || 'en',
+    courseMode: courseConfig?.courseMode || 'In-person or live online',
+    areaServed: courseConfig?.areaServed || 'MY',
+    educationalLevel: courseConfig?.educationalLevel || 'Professional',
+    url: pageUrl,
+  };
+}
+
+function extractFaqPairsFromHtml(bodyHTML) {
+  const html = String(bodyHTML || '');
+
+  const faqHeadingRe = /<h[1-6][^>]*>\s*(?:FAQ|FAQs|Frequently\s+Asked\s+Questions)\s*<\/h[1-6]>/i;
+  const m = faqHeadingRe.exec(html);
+  if (!m) return [];
+
+  const startIdx = m.index;
+
+  // Find the next heading AFTER the FAQ heading to bound the section.
+  const afterFaqIdx = startIdx + m[0].length;
+  const nextHeadingRe = /<h[1-6][^>]*>\s*[^<]+\s*<\/h[1-6]>/ig;
+  nextHeadingRe.lastIndex = afterFaqIdx;
+  const next = nextHeadingRe.exec(html);
+  const endIdx = next ? next.index : Math.min(html.length, startIdx + 120000);
+
+  const section = html.slice(startIdx, endIdx);
+  const detailsRe = /<details[^>]*>([\s\S]*?)<\/details>/gi;
+  const pairs = [];
+  let dm;
+
+  while ((dm = detailsRe.exec(section))) {
+    const block = dm[1] || '';
+    const sm = /<summary[^>]*>([\s\S]*?)<\/summary>/i.exec(block);
+    if (!sm) continue;
+
+    const question = stripHtmlToText(sm[1]);
+    const answerHtml = block.replace(sm[0], '');
+    const answer = stripHtmlToText(answerHtml);
+
+    if (!question || !answer) continue;
+    pairs.push({ question, answer });
+  }
+
+  return pairs;
+}
+
+function buildFaqGraph({ baseUrl, page, bodyHTML }) {
+  const pairs = extractFaqPairsFromHtml(bodyHTML);
+  if (!pairs.length) return null;
+
+  const pagePath = normalizeUrlPathFromFilename(page.filename);
+  const pageUrl = joinUrl(baseUrl, pagePath);
+
+  return {
+    '@type': 'FAQPage',
+    '@id': `${pageUrl}#faq`,
+    mainEntity: pairs.map((p) => ({
+      '@type': 'Question',
+      name: p.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: p.answer,
+      },
+    })),
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -260,6 +563,13 @@ async function generateHTMLFiles() {
     const routesModule = await vite.ssrLoadModule('/src/config/routes.ts');
     const pages = routesModule.routes;
 
+    const seoModule = await vite.ssrLoadModule('/src/config/seo.ts');
+    const seo = seoModule.seo;
+
+    const schemaModule = await vite.ssrLoadModule('/src/config/schema.ts');
+    const courseSchemaByFilename = schemaModule.courseSchemaByFilename || {};
+    const breadcrumbLabels = schemaModule.breadcrumbLabels || {};
+
     // Ensure subdirectories exist
     const subDirs = new Set(
       pages.map((p) => path.dirname(p.filename)).filter((d) => d !== '.')
@@ -290,12 +600,84 @@ async function generateHTMLFiles() {
                 ? 'site-jess dark'
                 : '';
 
+        // -----------------------------------------------------------------
+        // Canonical + Open Graph values (static, build-time only)
+        // -----------------------------------------------------------------
+        const canonicalPath = normalizeUrlPathFromFilename(page.filename);
+        const canonicalUrl = joinUrl(seo.baseUrl, canonicalPath);
+
+        const excluded = Array.isArray(seo?.excludeFromIndex) ? seo.excludeFromIndex : [];
+        const robotsMeta = excluded.includes(page.filename)
+          ? '<meta name="robots" content="noindex, nofollow">'
+          : '';
+
+        const ogDefaults = seo?.og || {};
+        const ogOverrides = ogDefaults?.overridesByFilename?.[page.filename] || {};
+
+        const imagePathFromSiteType =
+          (ogDefaults?.defaultImageBySiteType && ogDefaults.defaultImageBySiteType[siteType])
+            ? ogDefaults.defaultImageBySiteType[siteType]
+            : (ogDefaults?.defaultImageBySiteType && ogDefaults.defaultImageBySiteType.main)
+              ? ogDefaults.defaultImageBySiteType.main
+              : '';
+
+        const ogImagePath = ogOverrides.image || imagePathFromSiteType;
+        const ogImage = ogImagePath ? joinUrl(seo.baseUrl, ogImagePath) : '';
+
+        const ogTitle = ogOverrides.title || page.title;
+        const ogDescription = ogOverrides.description || page.description;
+        const ogType = ogOverrides.type || ogDefaults.type || 'website';
+
         const html = createHTMLShell(page.title, fixedBodyHTML, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
           siteType,
           filename: page.filename,
           pageClass,
+          canonicalUrl,
+          robotsMeta,
+          ogTitle,
+          ogDescription,
+          ogUrl: canonicalUrl,
+          ogImage,
+          ogType,
+          ogSiteName: seo.siteName,
+          ogLocale: seo.locale,
+          jsonLd: buildJsonLd({
+            baseUrl: seo.baseUrl,
+            organizationName: seo.organizationName,
+            page,
+            extraGraph: (() => {
+              const extra = [];
+
+              // Breadcrumbs: on every page
+              extra.push(buildBreadcrumbGraph({
+                baseUrl: seo.baseUrl,
+                page,
+                breadcrumbLabels,
+              }));
+
+              // Course schema: only on configured course pages
+              const courseConfig = courseSchemaByFilename[page.filename];
+              if (courseConfig) {
+                extra.push(buildCourseGraph({
+                  baseUrl: seo.baseUrl,
+                  page,
+                  courseConfig,
+                }));
+              }
+
+              // FAQ schema: only if a visible FAQ section exists
+              const faqGraph = buildFaqGraph({
+                baseUrl: seo.baseUrl,
+                page,
+                bodyHTML: fixedBodyHTML,
+              });
+              if (faqGraph) extra.push(faqGraph);
+
+              return extra;
+            })(),
+          }),
         });
 
         fs.writeFileSync(path.join(publicDir, page.filename), html);
@@ -307,6 +689,8 @@ async function generateHTMLFiles() {
     }
 
     console.log('✅ All HTML files generated');
+
+    return { pages, seo };
   } finally {
     await vite.close();
   }
@@ -334,7 +718,37 @@ async function exportStaticSite() {
     copyAssets();
     console.log('');
 
-    await generateHTMLFiles();
+    const { pages, seo } = await generateHTMLFiles();
+    console.log('');
+
+    // -----------------------------------------------------------------
+    // SEO output files
+    // - robots.txt
+    // - sitemap.xml
+    // -----------------------------------------------------------------
+    console.log('🔎 Generating SEO files (robots.txt + sitemap.xml)...');
+
+    const excluded = Array.isArray(seo?.excludeFromIndex) ? seo.excludeFromIndex : [];
+    const disallowPaths = excluded.map((f) => normalizeUrlPathFromFilename(f));
+    const lastmodISO = new Date().toISOString();
+
+    const robotsTxt = generateRobotsTxt({
+      baseUrl: seo.baseUrl,
+      disallowPaths,
+      sitemapPath: '/sitemap.xml',
+    });
+    fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
+
+    const sitemapXml = generateSitemapXml({
+      pages,
+      baseUrl: seo.baseUrl,
+      excludedFilenames: excluded,
+      lastmodISO,
+    });
+    fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml);
+
+    console.log('  ✓ robots.txt generated');
+    console.log('  ✓ sitemap.xml generated');
     console.log('');
 
     // Format HTML for readability (dev builds only)
