@@ -286,7 +286,7 @@ function ProgramsSection() {
       image: businessPresentationImage,
       features: ["Executive alignment", "Operating model design", "AI enablement", "Scale transformation"],
       // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
-      link: "/jess/index.html?source=main-home&cta=enterprise-learn-more",
+      link: "/jess/index.html",
     },
   ];
 
@@ -805,7 +805,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/69641858/admin/dashboard/"
+                  href="https://www.linkedin.com/company/ciagile/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={footerLinkClass}
