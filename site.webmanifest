@@ -1,0 +1,23 @@
+{
+  "name": "CI Agile — Enterprise Agile Consulting",
+  "short_name": "CI Agile",
+  "description": "Jeff Sutherland Scrum training, team workshops, and agile transformation for Malaysia & Southeast Asia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066CC",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
