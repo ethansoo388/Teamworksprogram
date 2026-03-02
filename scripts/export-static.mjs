@@ -45,7 +45,7 @@ function createHTMLShell(title, bodyHTML, options = {}) {
   const prefix = '../'.repeat(depth);
 
   const formJsTag = includeFormJS
-    ? `\n    <script src="${prefix}js/form.js"></script>`
+    ? `\n    <script defer src="${prefix}js/form.js"></script>`
     : '';
 
   const shell = fs.readFileSync(path.join(templatesDir, 'shell.html'), 'utf8');
@@ -62,6 +62,10 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     .replace('{{OG_TYPE}}', ogType)
     .replace('{{OG_SITE_NAME}}', ogSiteName)
     .replace('{{OG_LOCALE}}', ogLocale)
+
+    .replace('{{TWITTER_TITLE}}', ogTitle || title)
+    .replace('{{TWITTER_DESCRIPTION}}', ogDescription || description)
+    .replace('{{TWITTER_IMAGE}}', ogImage)
 
     .replace('{{JSON_LD}}', jsonLd)
     .replace('{{CSS_PATH}}', `${prefix}css`)
@@ -459,6 +463,18 @@ function generateFormJS() {
   console.log('✅ form.js generated');
 }
 
+function generateFavicon() {
+  console.log('🔖 Generating favicon...');
+  fs.copyFileSync(path.join(templatesDir, 'favicon.svg'), path.join(publicDir, 'favicon.svg'));
+  console.log('✅ favicon generated');
+}
+
+function generate404Page() {
+  console.log('🚫 Generating 404 page...');
+  fs.copyFileSync(path.join(templatesDir, '404.html'), path.join(publicDir, '404.html'));
+  console.log('✅ 404 page generated');
+}
+
 // ---------------------------------------------------------------------------
 // Asset copy — src/assets → public/assets
 // ---------------------------------------------------------------------------
@@ -713,6 +729,12 @@ async function exportStaticSite() {
     console.log('');
 
     generateFormJS();
+    console.log('');
+
+    generateFavicon();
+    console.log('');
+
+    generate404Page();
     console.log('');
 
     copyAssets();
