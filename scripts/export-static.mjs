@@ -27,82 +27,6 @@ const OG_IMAGES = {
 };
 
 // ---------------------------------------------------------------------------
-// BreadcrumbList JSON-LD generator — hierarchical breadcrumb for sub-pages.
-// Returns a schema object (not yet serialised) ready to push into schemas[].
-// ---------------------------------------------------------------------------
-function generateBreadcrumb(filename, title, canonicalUrl) {
-  const shortName = title.split(' | ')[0].trim();
-
-  const items = [{ name: 'Home', url: `${SITE_URL}/` }];
-
-  if (filename.startsWith('jess/nova/')) {
-    items.push({ name: 'JESS', url: `${SITE_URL}/jess/` });
-    items.push({ name: 'NOVA Series', url: `${SITE_URL}/jess/team-level-training.html` });
-  } else if (filename.startsWith('jess/') && filename !== 'jess/index.html') {
-    items.push({ name: 'JESS', url: `${SITE_URL}/jess/` });
-  } else if (filename.startsWith('teamworks/') && filename !== 'teamworks/index.html') {
-    items.push({ name: 'TeamWorks', url: `${SITE_URL}/teamworks/` });
-  }
-
-  items.push({ name: shortName, url: canonicalUrl });
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
-}
-
-// ---------------------------------------------------------------------------
-// FAQPage JSON-LD generator — structured FAQ schema for the AI Skills course.
-// Only used for teamworks/ai-skills-for-your-team.html (Course05).
-// Q&A sourced from src/data/course05.json.
-// ---------------------------------------------------------------------------
-function generateFaqPageSchema(canonicalUrl) {
-  const faqs = [
-    {
-      question: 'Do I need any technical background or coding experience?',
-      answer: 'Not at all! This course is specifically designed for non-technical professionals. We start from the basics and focus on practical applications you can use immediately in your daily work, regardless of your technical expertise.',
-    },
-    {
-      question: 'How is this different from free online AI courses?',
-      answer: "Unlike generic online courses, this training is hands-on, interactive, and tailored for Malaysian workplace contexts. You'll work on real scenarios relevant to your industry, get immediate feedback from expert instructors, and network with peers facing similar challenges.",
-    },
-    {
-      question: "Will AI replace my job or my team's jobs?",
-      answer: 'AI is a tool that augments human capabilities, not replaces them. This course teaches you how to use AI to eliminate repetitive tasks so you can focus on creative, strategic, and relationship-driven work that only humans can do well.',
-    },
-    {
-      question: 'Is this course suitable for small businesses and SMEs?',
-      answer: 'Absolutely! The course is specifically designed with SMEs and small teams in mind. All examples and use cases are practical and immediately applicable without requiring large budgets or IT departments.',
-    },
-    {
-      question: 'How quickly can my team see results after the training?',
-      answer: "Most teams start seeing productivity gains within the first week. You'll leave the course with ready-to-use prompts, templates, and workflows that you can implement immediately in your daily operations.",
-    },
-  ];
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    url: canonicalUrl,
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-}
-
-// ---------------------------------------------------------------------------
 // Schema.org JSON-LD generator — one structured-data block per page.
 // Returns a ready-to-inject <script type="application/ld+json"> string.
 // ---------------------------------------------------------------------------
@@ -115,11 +39,7 @@ function generateSchemaJsonLd(page, canonicalUrl) {
     name: 'CI Agile',
     url: SITE_URL,
     logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
-    sameAs: [
-      'https://www.linkedin.com/company/ciagile/',
-      'https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw',
-      'https://www.facebook.com/ciagile.education',
-    ],
+    sameAs: ['https://www.linkedin.com/company/ci-agile'],
   };
 
   const teamWorksOrg = {
@@ -136,8 +56,7 @@ function generateSchemaJsonLd(page, canonicalUrl) {
     parentOrganization: { '@type': 'Organization', name: 'CI Agile', url: SITE_URL },
   };
 
-  // MY first (primary), ID second, then broader SEA
-  const areaServed = ['MY', 'ID', 'SG', 'TH', 'PH', 'VN'];
+  const areaServed = ['MY', 'SG', 'TH', 'PH', 'ID', 'VN'];
 
   let schemas;
 
@@ -152,36 +71,18 @@ function generateSchemaJsonLd(page, canonicalUrl) {
         logo: `${SITE_URL}/assets/img/main/ciagile-main-logo.webp`,
         description,
         areaServed,
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Kuala Lumpur',
-          addressCountry: 'MY',
-        },
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'customer service',
           url: `${SITE_URL}/contactus.html`,
-          availableLanguage: ['English', 'Malay'],
         },
-        sameAs: [
-          'https://www.linkedin.com/company/ciagile/',
-          'https://www.youtube.com/channel/UC3J5gbjuIOwPep5c3b7x2Tw',
-          'https://www.facebook.com/ciagile.education',
-        ],
+        sameAs: ['https://www.linkedin.com/company/ci-agile'],
       },
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'CI Agile',
         url: SITE_URL,
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-          },
-          'query-input': 'required name=search_term_string',
-        },
       },
     ];
   }
@@ -245,21 +146,9 @@ function generateSchemaJsonLd(page, canonicalUrl) {
       '@type': 'Person',
       name: 'Ethan Soo',
       jobTitle: 'Enterprise Agile Coach & JESS Instructor',
-      description: 'Ethan Soo is a certified enterprise agile coach and the primary instructor for Jeff Sutherland\'s Enterprise Scrum System (JESS) in Malaysia and Southeast Asia.',
       url: canonicalUrl,
       image: `${SITE_URL}/assets/img/jess/people-ethan-soo.webp`,
       worksFor: ciAgileOrg,
-      sameAs: ['https://www.linkedin.com/in/ethansoo/'],
-      knowsAbout: [
-        'Scrum',
-        'Scrum at Scale',
-        'Enterprise Agile',
-        "Jeff Sutherland's Enterprise Scrum System",
-        'Agile Coaching',
-        'Business Agility',
-        'Design Thinking',
-        'Lean Problem Solving',
-      ],
     }];
   }
 
@@ -277,35 +166,20 @@ function generateSchemaJsonLd(page, canonicalUrl) {
   }
 
   // ── TeamWorks course pages (all except booking) ────────────────────────
-  // name: use only the short course name before the ' | ' brand suffix
-  // hasCourseInstance: required by Google for Course rich result eligibility
   else if (siteType === 'teamworks' && filename !== 'teamworks/bookConsultation.html') {
     schemas = [{
       '@context': 'https://schema.org',
       '@type': 'Course',
-      name: title.split(' | ')[0].trim(),
+      name: title,
       description,
       url: canonicalUrl,
       provider: teamWorksOrg,
       inLanguage: 'en',
       educationalLevel: 'Beginner',
-      hasCourseInstance: [{
-        '@type': 'CourseInstance',
-        courseMode: 'onsite',
-        courseWorkload: 'P2D',   // ISO 8601: 2-day workshop
-        inLanguage: 'en',
-        location: {
-          '@type': 'Place',
-          name: 'Client site or training venue, Malaysia',
-          address: { '@type': 'PostalAddress', addressCountry: 'MY' },
-        },
-      }],
     }];
   }
 
   // ── JESS course / training pages ───────────────────────────────────────
-  // name: use only the short course name before the ' | ' brand suffix
-  // hasCourseInstance: required by Google for Course rich result eligibility
   else if (
     filename === 'jess/leadership-training.html' ||
     filename === 'jess/course-modules.html'      ||
@@ -313,30 +187,15 @@ function generateSchemaJsonLd(page, canonicalUrl) {
     filename === 'jess/nova/agile-scrum.html'    ||
     filename === 'jess/nova/design-thinking.html'
   ) {
-    const isNovaOneDayCourse =
-      filename === 'jess/nova/agile-scrum.html' ||
-      filename === 'jess/nova/design-thinking.html';
-
     schemas = [{
       '@context': 'https://schema.org',
       '@type': 'Course',
-      name: title.split(' | ')[0].trim(),
+      name: title,
       description,
       url: canonicalUrl,
       provider: jessOrg,
       inLanguage: 'en',
       educationalLevel: 'Intermediate',
-      hasCourseInstance: [{
-        '@type': 'CourseInstance',
-        courseMode: 'onsite',
-        courseWorkload: isNovaOneDayCourse ? 'P2D' : 'P3D',  // NOVA = 2 days, JESS = 3 days
-        inLanguage: 'en',
-        location: {
-          '@type': 'Place',
-          name: 'Training venue, Malaysia & Southeast Asia',
-          address: { '@type': 'PostalAddress', addressCountry: 'MY' },
-        },
-      }],
     }];
   }
 
@@ -352,16 +211,6 @@ function generateSchemaJsonLd(page, canonicalUrl) {
     }];
   }
 
-  // ── BreadcrumbList — all pages except the root homepage ────────────────
-  if (filename !== 'index.html') {
-    schemas.push(generateBreadcrumb(filename, title, canonicalUrl));
-  }
-
-  // ── FAQPage — only for the AI Skills course (Course05) ─────────────────
-  if (filename === 'teamworks/ai-skills-for-your-team.html') {
-    schemas.push(generateFaqPageSchema(canonicalUrl));
-  }
-
   return schemas
     .map(s => `    <script type="application/ld+json">\n${JSON.stringify(s, null, 4)}\n    </script>`)
     .join('\n');
@@ -372,7 +221,7 @@ function generateSchemaJsonLd(page, canonicalUrl) {
 // ---------------------------------------------------------------------------
 function createHTMLShell(title, bodyHTML, options = {}) {
   const {
-    description = 'Enterprise agile consulting in Malaysia and Indonesia — CI Agile delivers Jeff Sutherland Scrum training, team workshops, and business transformation across Southeast Asia.',
+    description = 'CI Agile & TeamWorks - Transform your organization with proven delivery systems and team training.',
     includeFormJS = false,
     pageClass = '',
     siteType = 'teamworks', // 'main', 'teamworks', or 'jess'
@@ -391,28 +240,23 @@ function createHTMLShell(title, bodyHTML, options = {}) {
   const prefix = '../'.repeat(depth);
 
   const formJsTag = includeFormJS
-    ? `\n    <script src="${prefix}js/form.js" defer></script>`
+    ? `\n    <script src="${prefix}js/form.js"></script>`
     : '';
 
-  // IMPORTANT: All replacements use global regex /g to handle multiple occurrences.
-  // JS String.replace(string, …) only replaces the FIRST match — causing silent bugs
-  // when a placeholder appears more than once (e.g. {{CSS_PATH}} and {{JS_PATH}} each
-  // appear twice in shell.html for tailwind+style and lucide+main respectively).
   const shell = fs.readFileSync(path.join(templatesDir, 'shell.html'), 'utf8');
   return shell
-    .replace(/\{\{DESCRIPTION\}\}/g,  description)
-    .replace(/\{\{TITLE\}\}/g,        title)
-    .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)   // appears twice: canonical + og:url
-    .replace(/\{\{OG_TITLE\}\}/g,     title)
+    .replace('{{DESCRIPTION}}', description)
+    .replace('{{TITLE}}', title)
+    .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)  // appears twice — canonical + og:url
+    .replace(/\{\{OG_TITLE\}\}/g, title)
     .replace(/\{\{OG_DESCRIPTION\}\}/g, description)
-    .replace(/\{\{OG_IMAGE\}\}/g,     ogImage)
-    .replace(/\{\{CSS_PATH\}\}/g,     `${prefix}css`)  // appears twice: tailwind + style
-    .replace(/\{\{BODY_CLASS\}\}/g,   pageClass ? ` ${pageClass}` : '')
-    .replace(/\{\{BODY_HTML\}\}/g,    bodyHTML)
-    .replace(/\{\{JS_PATH\}\}/g,      `${prefix}js`)   // appears twice: lucide + main
-    .replace(/\{\{FORM_JS_TAG\}\}/g,  formJsTag)
-    .replace(/\{\{SCHEMA_JSON_LD\}\}/g, schemaJsonLd)
-    .replace(/\{\{ROOT_PATH\}\}/g,      prefix);       // site-root relative path ('' or '../' etc.)
+    .replace(/\{\{OG_IMAGE\}\}/g, ogImage)
+    .replace('{{CSS_PATH}}', `${prefix}css`)
+    .replace('{{BODY_CLASS}}', pageClass ? ` ${pageClass}` : '')
+    .replace('{{BODY_HTML}}', bodyHTML)
+    .replace('{{JS_PATH}}', `${prefix}js`)
+    .replace('{{FORM_JS_TAG}}', formJsTag)
+    .replace('{{SCHEMA_JSON_LD}}', schemaJsonLd);
 }
 
 // ---------------------------------------------------------------------------
@@ -514,7 +358,6 @@ async function generateTailwindCSS() {
     configFile: false,
     root: rootDir,
     logLevel: 'warn',
-    publicDir: false,   // outDir (public/css) is inside the default publicDir — disable to suppress Vite warning
     plugins: [tailwindcss()],
     build: {
       outDir: path.join(publicDir, 'css'),
@@ -536,88 +379,6 @@ async function generateTailwindCSS() {
   if (fs.existsSync(unusedJs)) fs.unlinkSync(unusedJs);
 
   console.log('✅ Tailwind CSS compiled → public/css/tailwind.css');
-}
-
-// ---------------------------------------------------------------------------
-// Web App Manifest — enables "Add to Home Screen" + Google tab favicon display.
-// Place favicon image files (favicon.svg, favicon-32x32.png, apple-touch-icon.png)
-// in public/ root before deploying. The manifest itself is auto-generated here.
-// ---------------------------------------------------------------------------
-function generateWebManifest() {
-  console.log('📱 Generating site.webmanifest...');
-
-  const manifest = {
-    name: 'CI Agile — Enterprise Agile Consulting',
-    short_name: 'CI Agile',
-    description: 'Jeff Sutherland Scrum training, team workshops, and agile transformation for Malaysia & Southeast Asia.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#0066CC',
-    icons: [
-      {
-        src: '/apple-touch-icon.png',
-        sizes: '180x180',
-        type: 'image/png',
-        purpose: 'any',
-      },
-      {
-        src: '/favicon-32x32.png',
-        sizes: '32x32',
-        type: 'image/png',
-        purpose: 'any',
-      },
-    ],
-  };
-
-  fs.writeFileSync(
-    path.join(publicDir, 'site.webmanifest'),
-    JSON.stringify(manifest, null, 2),
-  );
-  console.log('✅ site.webmanifest generated');
-}
-
-// ---------------------------------------------------------------------------
-// llms.txt — AI agent / LLM discoverability (llmstxt.org standard).
-// Helps ChatGPT, Perplexity, Claude, Gemini surface authoritative content
-// when users ask about agile training and workshops in Malaysia & SEA.
-// ---------------------------------------------------------------------------
-function generateLlmsTxt() {
-  console.log('🤖 Generating llms.txt...');
-
-  const content = [
-    '# CI Agile — Enterprise Agile Consulting Malaysia & Southeast Asia',
-    '',
-    '> CI Agile delivers Jeff Sutherland Scrum training, SME team workshops, and enterprise agile transformation across Malaysia, Indonesia, and Southeast Asia.',
-    '',
-    '## Primary Programs',
-    '',
-    `- [JESS — Jeff Sutherland's Enterprise Scrum System](${SITE_URL}/jess/)`,
-    `- [TeamWorks — 2-Day Team Training Workshops for SMEs](${SITE_URL}/teamworks/)`,
-    '',
-    '## Key Pages',
-    '',
-    `- [JESS Leadership Certification Training](${SITE_URL}/jess/leadership-training.html)`,
-    `- [JESS Class Schedule — Malaysia & SEA](${SITE_URL}/jess/class-schedule.html)`,
-    `- [Creating Super Teams Workshop](${SITE_URL}/teamworks/creating-super-teams.html)`,
-    `- [AI Skills for Your Team — Malaysia SME Workshop](${SITE_URL}/teamworks/ai-skills-for-your-team.html)`,
-    `- [Design Thinking Workshop Malaysia](${SITE_URL}/teamworks/design-thinking.html)`,
-    `- [Lean Problem Solving Workshop](${SITE_URL}/teamworks/practical-lean-problem-solving.html)`,
-    `- [NOVA Series — Agile & Scrum 201](${SITE_URL}/jess/nova/agile-scrum.html)`,
-    `- [NOVA Series — Design Thinking 201](${SITE_URL}/jess/nova/design-thinking.html)`,
-    `- [Enterprise Agile Consulting](${SITE_URL}/jess/enterprise-consulting.html)`,
-    `- [Free Resources & Official Guides](${SITE_URL}/jess/free-resources.html)`,
-    `- [About CI Agile](${SITE_URL}/aboutus.html)`,
-    `- [Contact Us](${SITE_URL}/contactus.html)`,
-    '',
-    '## Sitemap',
-    '',
-    `${SITE_URL}/sitemap.xml`,
-    '',
-  ].join('\n');
-
-  fs.writeFileSync(path.join(publicDir, 'llms.txt'), content);
-  console.log('✅ llms.txt generated');
 }
 
 // ---------------------------------------------------------------------------
@@ -956,12 +717,6 @@ async function exportStaticSite() {
     generateSitemap(pages);
     console.log('');
 
-    generateWebManifest();
-    console.log('');
-
-    generateLlmsTxt();
-    console.log('');
-
     // Format HTML for readability (dev builds only)
     if (process.env.NODE_ENV !== 'production') {
       console.log('🧼 Formatting HTML (indentation only)...');
@@ -982,9 +737,6 @@ async function exportStaticSite() {
     console.log('    - assets/* (images and other assets)');
     console.log('    - robots.txt');
     console.log('    - sitemap.xml');
-    console.log('    - site.webmanifest');
-    console.log('    - llms.txt');
-    console.log('\n⚠️  Favicon files needed: copy favicon.svg, favicon-32x32.png, apple-touch-icon.png to public/');
     console.log('\n🚀 Ready to deploy to Hostinger!');
 
   } catch (error) {

@@ -78,8 +78,6 @@ function HeroSection() {
             src={presenterImage}
             alt="CI Agile training and consulting"
             className="w-full h-full object-cover"
-            fetchpriority="high"
-            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:from-transparent"></div>
         </div>
@@ -286,7 +284,7 @@ function ProgramsSection() {
       image: businessPresentationImage,
       features: ["Executive alignment", "Operating model design", "AI enablement", "Scale transformation"],
       // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
-      link: "/jess/index.html",
+      link: "/jess/index.html?source=main-home&cta=enterprise-learn-more",
     },
   ];
 
@@ -805,7 +803,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/ciagile/"
+                  href="https://www.linkedin.com/company/69641858/admin/dashboard/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={footerLinkClass}

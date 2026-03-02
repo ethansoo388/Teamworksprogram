@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-MY">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{DESCRIPTION}}">
     <title>{{TITLE}}</title>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="theme-color" content="#0066CC">
-
-    <!-- Favicon & Web App Manifest -->
-    <link rel="icon" type="image/svg+xml" href="{{ROOT_PATH}}favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ROOT_PATH}}favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ROOT_PATH}}apple-touch-icon.png">
-    <link rel="manifest" href="{{ROOT_PATH}}site.webmanifest">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{CANONICAL_URL}}">
@@ -23,12 +16,9 @@
     <meta property="og:url" content="{{CANONICAL_URL}}">
     <meta property="og:image" content="{{OG_IMAGE}}">
     <meta property="og:image:alt" content="{{OG_TITLE}}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CI Agile">
-    <meta property="og:locale" content="en_MY">
-    <meta property="og:locale:alternate" content="en_ID">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -45,12 +35,12 @@
     <!-- Structured Data (JSON-LD) -->
 {{SCHEMA_JSON_LD}}
     <!-- Lucide Icons (self-hosted) -->
-    <script src="{{JS_PATH}}/lucide.min.js" defer></script>
+    <script src="{{JS_PATH}}/lucide.min.js"></script>
 </head>
 <body class="antialiased{{BODY_CLASS}}">
     {{BODY_HTML}}
 
     <!-- Scripts -->
-    <script src="{{JS_PATH}}/main.js" defer></script>{{FORM_JS_TAG}}
+    <script src="{{JS_PATH}}/main.js"></script>{{FORM_JS_TAG}}
 </body>
 </html>
