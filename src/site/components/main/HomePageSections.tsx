@@ -46,9 +46,14 @@ function HeroSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full px-8 lg:px-16">
+      {/*
+        Content sits above the video, and the hero background runs under the fixed navbar.
+        Add top padding so the panel never hides behind the navbar.
+      */}
+      <div className="relative z-10 w-full px-8 lg:px-16 pt-24 lg:pt-28">
         <div className="max-w-7xl mx-auto">
-          <div className="relative max-w-2xl">
+          {/* Panel placement: left third + slightly lower on larger screens */}
+          <div className="relative max-w-2xl lg:max-w-[520px] xl:max-w-[560px] lg:-ml-6 md:translate-y-6 lg:translate-y-10">
             {/* Local readability wash (keeps video colors intact) */}
             <div className="absolute -inset-4 sm:-inset-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-lg"></div>
 

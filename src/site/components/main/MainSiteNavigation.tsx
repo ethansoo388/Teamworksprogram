@@ -5,9 +5,21 @@
 
 import ciAgileLogo from '@/assets/img/main/ciagile-main-logo.webp';
 
-export function MainSiteNavigation() {
+type MainSiteNavigationProps = {
+  /**
+   * When true, the navbar overlays the homepage hero with a glassy transparent look.
+   * Keeps other pages unchanged.
+   */
+  isHomeOverlay?: boolean;
+};
+
+export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigationProps) {
+  const navClassName = isHomeOverlay
+    ? "fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-md border-b border-white/20 z-50"
+    : "fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50";
+
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+    <nav className={navClassName}>
       <div className="mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
