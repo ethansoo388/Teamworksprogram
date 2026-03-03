@@ -5,7 +5,7 @@ export function MetricsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8" data-reveal-group data-stagger="90">
           <div className="text-center" data-reveal-item>
             <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-              500+
+              40+
             </div>
             <div className="text-slate-400">Enterprises & leadership teams transformed</div>
           </div>

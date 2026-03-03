@@ -86,7 +86,7 @@ function HeroSection() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">500+</div>
+                  <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">40+</div>
                   <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Organizations</div>
                 </div>
                 <div>
