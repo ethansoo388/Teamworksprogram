@@ -15,7 +15,7 @@ type MainSiteNavigationProps = {
 
 export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigationProps) {
   const navClassName = isHomeOverlay
-    ? "fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-md border-b border-white/20 z-50"
+    ? "fixed top-0 left-0 right-0 bg-white/20 backdrop-blur-md border-b border-white/20 z-50"
     : "fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50";
 
   return (
