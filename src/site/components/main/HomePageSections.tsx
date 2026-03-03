@@ -17,7 +17,6 @@
 
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
 import ciAgileLogoDark from "@/assets/img/main/ciagile-main-logo-dark.webp";
-import presenterImage from "@/assets/img/main/ciagile-home-hero-presenter-flipchart.webp";
 import agileTeamImage from "@/assets/img/main/ciagile-home-programs-sticky-wall-collaboration.webp";
 import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-enterprise-presentation.webp";
 
@@ -27,13 +26,23 @@ import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-e
 function HeroSection() {
   return (
     <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white">
-      {/* Full Width Background Image (reuse existing hero image) */}
+      {/* Full Width Background Video (background visual) */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={presenterImage}
-          alt="CI Agile training and consulting"
+        <video
           className="w-full h-full object-cover"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/assets/img/main/hero-video-poster.webp"
+          aria-hidden="true"
+        >
+          <source
+            src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm"
+            type="video/webm"
+          />
+        </video>
         {/* Readability Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-white/20"></div>
       </div>
