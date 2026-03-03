@@ -43,52 +43,55 @@ function HeroSection() {
             type="video/webm"
           />
         </video>
-        {/* Readability Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-white/20"></div>
       </div>
 
       {/* Content Container */}
       <div className="relative z-10 w-full px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] text-gray-900 mb-6">
-              Deliver Better Results
-              <span className="block font-normal text-gray-900 mt-2">Faster, Clearer, At Scale</span>
-            </h1>
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-10 font-light max-w-xl">
-              Turn your business challenges into real results. We help you fix missed opportunities,
-              energize frustrated teams, and overcome transformation fatigue.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/contactus.html"
-                className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-normal text-base h-12 px-8 transition-colors"
-              >
-                Talk to an Expert
-                {/* Lucide arrow-right via CDN */}
-                <i data-lucide="arrow-right" className="w-[18px] h-[18px]"></i>
-              </a>
-              <a
-                href="#programs"
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-50 font-normal text-base h-12 px-8 transition-colors"
-              >
-                View Our Programs
-              </a>
-            </div>
+          <div className="relative max-w-2xl">
+            {/* Local readability wash (keeps video colors intact) */}
+            <div className="absolute -inset-4 sm:-inset-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-lg"></div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">500+</div>
-                <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Organizations</div>
+            <div className="relative">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] text-gray-900 mb-6">
+                Deliver Better Results
+                <span className="block font-normal text-gray-900 mt-2">Faster, Clearer, At Scale</span>
+              </h1>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-10 font-light max-w-xl">
+                Turn your business challenges into real results. We help you fix missed opportunities,
+                energize frustrated teams, and overcome transformation fatigue.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/contactus.html"
+                  className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-normal text-base h-12 px-8 transition-colors"
+                >
+                  Talk to an Expert
+                  {/* Lucide arrow-right via CDN */}
+                  <i data-lucide="arrow-right" className="w-[18px] h-[18px]"></i>
+                </a>
+                <a
+                  href="#programs"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-50 font-normal text-base h-12 px-8 transition-colors"
+                >
+                  View Our Programs
+                </a>
               </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">15+</div>
-                <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Years</div>
-              </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">98%</div>
-                <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Satisfaction</div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
+                <div>
+                  <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">500+</div>
+                  <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Organizations</div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">15+</div>
+                  <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Years</div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-1">98%</div>
+                  <div className="text-xs text-gray-500 font-normal uppercase tracking-wider">Satisfaction</div>
+                </div>
               </div>
             </div>
           </div>
