@@ -25,7 +25,7 @@ import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-e
 // ---------------------------------------------------------------------------
 function HeroSection() {
   return (
-    <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white">
+    <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white" data-home-hero>
       {/* Full Width Background Video (background visual) */}
       <div className="absolute inset-0 z-0">
         <video

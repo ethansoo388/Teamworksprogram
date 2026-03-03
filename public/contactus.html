@@ -72,12 +72,15 @@
               <div class="flex items-center justify-between h-[72px]">
                 <div class="flex items-center">
                   <a href="/index.html" class="flex items-center space-x-2 no-underline">
-                    <img height="48" width="165" alt="CI Agile Logo" class="h-[24px] w-auto object-contain" src="assets/img/main/ciagile-main-logo.webp"/>
+                    <span class="relative flex items-center">
+                      <img height="48" width="165" alt="CI Agile Logo" class="h-[24px] w-auto object-contain main-nav-logo main-nav-logo--default" src="assets/img/main/ciagile-main-logo.webp"/>
+                      <img height="48" width="165" alt="CI Agile Logo" class="h-[24px] w-auto object-contain absolute inset-0 main-nav-logo main-nav-logo--white" src="assets/img/main/ciagile-main-logo-white.webp"/>
+                    </span>
                   </a>
                 </div>
                 <div class="hidden xl:flex items-center space-x-2">
                   <div class="relative" data-dropdown-container="programs">
-                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium" data-dropdown-trigger="programs">
+                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link" data-dropdown-trigger="programs">
                       <span data-dropdown-text="true">Programs</span>
                       <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 16 16" data-dropdown-icon="true">
                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -200,7 +203,7 @@
                     </div>
                   </div>
                   <div class="relative" data-dropdown-container="resources">
-                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium" data-dropdown-trigger="resources">
+                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link" data-dropdown-trigger="resources">
                       <span data-dropdown-text="true">Resources</span>
                       <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 16 16" data-dropdown-icon="true">
                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -277,7 +280,7 @@
                     </div>
                   </div>
                   <div class="relative" data-dropdown-container="company">
-                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium" data-dropdown-trigger="company">
+                    <button aria-expanded="false" class="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link" data-dropdown-trigger="company">
                       <span data-dropdown-text="true">Company</span>
                       <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 16 16" data-dropdown-icon="true">
                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -358,7 +361,7 @@
                   <a href="/contactus.html" class="px-6 py-2.5 bg-[#0066FF] text-white text-sm font-medium rounded-full hover:bg-[#0052CC] transition-colors no-underline">Talk to an Expert</a>
                 </div>
                 <div class="xl:hidden">
-                  <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                  <button type="button" aria-label="Open menu" aria-controls="mainsite-mobile-menu" data-mobile-toggle="true" class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors main-nav-mobile-toggle">
                     <svg data-icon="open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M4 6h16">
                       </path>

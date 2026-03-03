@@ -4,6 +4,7 @@
 // NO React state for dropdown/mobile behavior — static export only
 
 import ciAgileLogo from '@/assets/img/main/ciagile-main-logo.webp';
+import ciAgileLogoWhite from '@/assets/img/main/ciagile-main-logo-white.webp';
 
 type MainSiteNavigationProps = {
   /**
@@ -15,21 +16,28 @@ type MainSiteNavigationProps = {
 
 export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigationProps) {
   const navClassName = isHomeOverlay
-    ? "fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-md border-b border-white/20 z-50"
+    ? "fixed top-0 left-0 right-0 z-50 site-main-home-nav"
     : "fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50";
 
   return (
-    <nav className={navClassName}>
+    <nav className={navClassName} data-home-nav={isHomeOverlay ? 'true' : undefined}>
       <div className="mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
           <div className="flex items-center">
             <a href="/index.html" className="flex items-center space-x-2 no-underline">
-              <img
-                alt="CI Agile Logo"
-                className="h-[24px] w-auto object-contain"
-                src={ciAgileLogo}
-              />
+              <span className="relative flex items-center">
+                <img
+                  alt="CI Agile Logo"
+                  className="h-[24px] w-auto object-contain main-nav-logo main-nav-logo--default"
+                  src={ciAgileLogo}
+                />
+                <img
+                  alt="CI Agile Logo"
+                  className="h-[24px] w-auto object-contain absolute inset-0 main-nav-logo main-nav-logo--white"
+                  src={ciAgileLogoWhite}
+                />
+              </span>
             </a>
           </div>
 
@@ -42,7 +50,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link"
                 data-dropdown-trigger="programs"
               >
                 <span data-dropdown-text>Programs</span>
@@ -307,7 +315,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link"
                 data-dropdown-trigger="resources"
               >
                 <span data-dropdown-text>Resources</span>
@@ -477,7 +485,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium main-nav-link"
                 data-dropdown-trigger="company"
               >
                 <span data-dropdown-text>Company</span>
@@ -662,7 +670,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               aria-label="Open menu"
               aria-controls="mainsite-mobile-menu"
               data-mobile-toggle
-              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors main-nav-mobile-toggle"
             >
               {/* Hamburger icon */}
               <svg data-icon="open" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
