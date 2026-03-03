@@ -53,7 +53,7 @@ export function LeadershipTrainingPage() {
         {/* Full Width Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/img/jess/people-jeff-sutherland-leadership-training.webp"
+            src="/assets/img/jess/agile-leader-training-hero.webp"
             alt="Jeff Sutherland Leadership Training"
             className="w-full h-full object-cover jess-hero-bg-img"
           />
