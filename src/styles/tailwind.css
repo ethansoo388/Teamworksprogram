@@ -1,7 +1,1 @@
-@import "tailwindcss" source(none);
-
-/* Explicit sources (relative to this file: src/styles/tailwind.css) */
-@source "../**/*.{html,js,ts,jsx,tsx}";
-@source "../../scripts/templates/**/*.html";
-/* Exported HTML is generated into ./public (usually gitignored), so we register it explicitly */
-@source "../../public/**/*.html";
+@import "tailwindcss";
