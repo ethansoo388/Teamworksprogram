@@ -17,7 +17,7 @@
 
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
 import ciAgileLogoDark from "@/assets/img/main/ciagile-main-logo-dark.webp";
-import agileTeamImage from "@/assets/img/main/ciagile-home-programs-sticky-wall-collaboration.webp";
+import agileTeamImage from "@/assets/img/main/team-breakthrough.webp";
 import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-enterprise-presentation.webp";
 
 // ---------------------------------------------------------------------------
@@ -25,7 +25,7 @@ import businessPresentationImage from "@/assets/img/main/ciagile-home-programs-e
 // ---------------------------------------------------------------------------
 function HeroSection() {
   return (
-    <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white" data-home-hero>
+    <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white">
       {/* Full Width Background Video (background visual) */}
       <div className="absolute inset-0 z-0">
         <video

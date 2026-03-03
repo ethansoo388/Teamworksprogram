@@ -857,40 +857,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Homepage navbar scroll transition (main site landing page only)
-  // - When on the homepage with an overlay navbar, keep nav text + logo white over the hero video.
-  // - After scrolling past the hero, switch navbar to solid white with default logo + dark text.
-  (function initHomeNavbarScrollTransition() {
-    const nav = document.querySelector('[data-home-nav="true"]');
-    if (!(nav instanceof HTMLElement)) return;
-
-    const hero = document.querySelector('[data-home-hero]');
-    const getThreshold = () => {
-      if (hero instanceof HTMLElement) {
-        // Switch slightly before the hero ends so it feels smooth.
-        return Math.max(80, hero.offsetHeight - nav.offsetHeight - 40);
-      }
-      return 320;
-    };
-
-    let threshold = getThreshold();
-
-    const apply = () => {
-      const y = window.scrollY || window.pageYOffset || 0;
-      nav.classList.toggle('is-scrolled', y > threshold);
-    };
-
-    const onResize = () => {
-      threshold = getThreshold();
-      apply();
-    };
-
-    window.addEventListener('scroll', apply, { passive: true });
-    window.addEventListener('resize', onResize);
-    apply();
-  })();
-
-
 });
 
 
