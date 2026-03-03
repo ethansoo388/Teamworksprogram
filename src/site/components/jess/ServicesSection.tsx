@@ -154,7 +154,7 @@ export function ServicesSection() {
                     </div>
                     <div className="absolute inset-0">
                       <ImageWithFallback
-                        src="/assets/img/jess/people-jess-leadership-program.webp"
+                        src="/assets/img/jess/develop_agile_leaders.webp"
                         alt="JESS Leadership Program"
                         className="w-full h-full object-cover"
                       />
@@ -195,7 +195,7 @@ export function ServicesSection() {
                     </div>
                     <div className="absolute inset-0">
                       <ImageWithFallback
-                        src="/assets/img/jess/people-nova-series-team-training.webp"
+                        src="/assets/img/jess/strengthen_teams.webp"
                         alt="Nova Series Team Training"
                         className="w-full h-full object-cover"
                       />
@@ -319,7 +319,7 @@ export function ServicesSection() {
                   </div>
                   <div className="absolute inset-0">
                     <ImageWithFallback
-                      src="/assets/img/jess/people-jess-leadership-program.webp"
+                      src="/assets/img/jess/develop_agile_leaders.webp"
                       alt="JESS Leadership Program"
                       className="w-full h-full object-cover"
                     />
@@ -363,7 +363,7 @@ export function ServicesSection() {
                   </div>
                   <div className="absolute inset-0">
                     <ImageWithFallback
-                      src="/assets/img/jess/people-nova-series-team-training.webp"
+                      src="/assets/img/jess/strengthen_teams.webp"
                       alt="Nova Series Team Training"
                       className="w-full h-full object-cover"
                     />
