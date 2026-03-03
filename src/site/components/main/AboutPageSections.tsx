@@ -439,7 +439,7 @@ export function ExperienceScalesSection() {
           <div className="lg:pr-8">
             <div className="mb-6 overflow-hidden rounded-lg">
               <img
-                src="/assets/img/main/main-about-team-collaboration-and-problem-solving.webp"
+                src="/assets/img/main/contactus-image.webp"
                 alt="Team collaboration and problem-solving"
                 className="w-full h-[320px] object-cover"
               />
