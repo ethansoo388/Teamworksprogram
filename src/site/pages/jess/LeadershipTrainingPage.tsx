@@ -57,8 +57,8 @@ export function LeadershipTrainingPage() {
             alt="Jeff Sutherland Leadership Training"
             className="w-full h-full object-cover jess-hero-bg-img"
           />
-          {/* Dark Left-to-Right Gradient Overlay */}
-          
+          {/* Gradient Overlay — darker top for readability, lighter bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/35" />
         </div>
         
         {/* Content Container */}
