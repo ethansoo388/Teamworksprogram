@@ -18,7 +18,7 @@
 import ciAgileLogoWhite from "@/assets/img/main/ci-agile-logo-white.png";
 import ciAgileLogoDark from "@/assets/img/main/ciagile-main-logo-dark.webp";
 import agileTeamImage from "@/assets/img/main/team-breakthrough.webp";
-import businessPresentationImage from "@/assets/img/main/jeff_sutherland_agile_transformation.webp";
+import businessPresentationImage from "@/assets/img/main/people-jeff-sutherland-enterprise-agility-program.webp";
 
 // ---------------------------------------------------------------------------
 // Hero Section
