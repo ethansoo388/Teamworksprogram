@@ -392,23 +392,60 @@ body {
 }
 
 .site-jess .nova-course-card-highlight {
+  position: relative;
+  isolation: isolate;
   animation: nova-card-blink-highlight 1s ease-in-out 5;
+}
+
+.site-jess .nova-course-card-highlight::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: inherit;
+  padding: 5px;
+  background: linear-gradient(90deg, #ff7a1a 0%, #ef4d96 45%, #b563d9 72%, #33b8df 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.25;
+  transform: scale(0.995);
+  filter: drop-shadow(0 0 12px rgba(239, 77, 150, 0.28)) drop-shadow(0 0 22px rgba(51, 184, 223, 0.24));
+  animation: nova-card-gradient-pulse 1s ease-in-out 5;
 }
 
 @keyframes nova-card-blink-highlight {
   0%, 100% {
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
     transform: translateY(0);
   }
   50% {
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.28), 0 22px 45px rgba(59, 130, 246, 0.24);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 6px rgba(255, 122, 26, 0.18), 0 0 0 12px rgba(239, 77, 150, 0.14), 0 26px 52px rgba(51, 184, 223, 0.24);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes nova-card-gradient-pulse {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(0.995);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.01);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .site-jess .nova-course-card-highlight {
     animation: none;
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.22), 0 18px 35px rgba(59, 130, 246, 0.16);
+    box-shadow: 0 0 0 6px rgba(255, 122, 26, 0.16), 0 0 0 12px rgba(239, 77, 150, 0.12), 0 24px 48px rgba(51, 184, 223, 0.22);
+  }
+
+  .site-jess .nova-course-card-highlight::after {
+    animation: none;
+    opacity: 0.92;
+    transform: none;
   }
 }
