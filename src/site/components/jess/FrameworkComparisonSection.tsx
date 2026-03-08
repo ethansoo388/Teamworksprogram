@@ -26,7 +26,7 @@ export function FrameworkComparisonSection() {
               <span className="text-sm">Industry Leader</span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white">
               Why <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Scrum</span> and <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Scrum@Scale</span> Remain the Enterprise Standard for Execution
             </h2>
 

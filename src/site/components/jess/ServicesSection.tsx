@@ -87,7 +87,7 @@ export function ServicesSection() {
         {/* Header */}
         <div className="mb-12">
           <div data-reveal>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-center">Enterprise Transformation Roadmap</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white text-center">Enterprise Transformation Roadmap</h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto text-center">
               How enterprises move from strategic intent to repeatable, high-performance execution — without relying on hero teams or isolated Agile pockets.
             </p>
@@ -125,7 +125,7 @@ export function ServicesSection() {
                           Learn
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                         Assessment & Ground Work
                       </h3>
                       <p className="text-slate-300 text-sm leading-relaxed mb-6">
@@ -166,7 +166,7 @@ export function ServicesSection() {
                           For Leaders
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                         JESS Program
                       </h3>
                       <p className="text-slate-300 text-sm leading-relaxed mb-6">
@@ -207,7 +207,7 @@ export function ServicesSection() {
                           For Teams
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                         Nova Series
                       </h3>
                       <p className="text-slate-300 text-sm leading-relaxed mb-6">

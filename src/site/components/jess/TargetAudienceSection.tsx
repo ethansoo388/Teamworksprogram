@@ -35,7 +35,7 @@ export function TargetAudienceSection() {
             <p className="text-slate-400 text-sm font-semibold tracking-wider uppercase mb-3">
               WHO THIS IS DESIGNED FOR
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white">
               Your Blueprint for Sustainable High Performance
             </h2>
           </div>

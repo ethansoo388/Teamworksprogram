@@ -15,7 +15,7 @@ export function HeroSectionV2() {
               <div className="inline-block text-xs tracking-[0.2em] uppercase text-gray-500 mb-6">
                 TeamWorks Training Program
               </div>
-              <h1 className="text-5xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-4xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
                 Transform how your team works — in just two days
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-10">

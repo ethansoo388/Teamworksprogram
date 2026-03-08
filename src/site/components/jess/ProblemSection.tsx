@@ -61,7 +61,7 @@ export function ProblemSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div data-reveal>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white">
               Why Most Enterprise Transformations Fail?
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">

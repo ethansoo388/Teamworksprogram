@@ -78,7 +78,7 @@ export function LeadershipTrainingPage() {
               <p className="text-sm font-medium text-white/70 uppercase tracking-wider mb-4">Jeff Sutherland's Enterprise Agility Program</p>
               
               {/* Headline */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
                 Enterprise Agility.<br />
                 Led as a System.
               </h1>
@@ -228,11 +228,11 @@ export function LeadershipTrainingPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-500"></div>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-white tracking-tight leading-[1.15] drop-shadow-lg">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-white tracking-tight leading-[1.15] drop-shadow-lg">
               The real bottleneck isn't speed.
             </h2>
             
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 tracking-tight leading-[1.15] drop-shadow-[0_0_30px_rgba(251,191,36,0.3)]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 tracking-tight leading-[1.15] drop-shadow-[0_0_30px_rgba(251,191,36,0.3)]">
               It's decision clarity.
             </h2>
             
@@ -289,7 +289,7 @@ export function LeadershipTrainingPage() {
                 <span className="text-sm font-medium text-amber-400 uppercase tracking-wider">PROGRAM OVERVIEW</span>
               </div>
               
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight leading-[1.15]">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight leading-[1.15]">
                 Jeff Sutherland's Enterprise Agility Program
               </h2>
               
@@ -422,7 +422,7 @@ export function LeadershipTrainingPage() {
               <div className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-6">
                 HOW TO GET STARTED
               </div>
-              <h2 className="text-4xl sm:text-5xl font-light mb-2 text-slate-900 tracking-tight leading-[1.43]">
+              <h2 className="text-3xl sm:text-5xl font-light mb-2 text-slate-900 tracking-tight leading-[1.43]">
                 The Two-Course Leadership Pathway
               </h2>
               <p className="text-xl text-slate-600 font-light max-w-4xl mx-auto mt-6">
@@ -652,7 +652,7 @@ export function LeadershipTrainingPage() {
                 </div>
               </div>
               
-              <h3 className="text-4xl sm:text-5xl font-light text-white mb-6 leading-tight">
+              <h3 className="text-3xl sm:text-5xl font-light text-white mb-6 leading-tight">
                 Why Leaders Should Take Both Courses
               </h3>
               
@@ -794,7 +794,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                 <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Who This Is For</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
                 Built for Leaders and Teams<br />Driving Real Outcomes
               </h2>
               <p className="text-lg text-slate-400 max-w-2xl mx-auto font-light">
@@ -927,7 +927,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                 <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Choose Your Path</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
                 Private or Public Training
               </h2>
               <p className="text-lg text-slate-400 max-w-3xl mx-auto font-light">
@@ -1110,7 +1110,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
                 <span className="text-xs font-medium text-amber-400 uppercase tracking-widest">Proven Framework</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-6 text-white tracking-tight leading-[1.2]">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light mb-6 text-white tracking-tight leading-[1.2]">
                 Built on Proven Global Patterns
               </h2>
               <p className="text-lg sm:text-xl text-slate-300 font-light max-w-4xl mx-auto leading-relaxed">
@@ -1328,7 +1328,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto">
           <div
           >
-            <h2 className="text-4xl sm:text-5xl font-light mb-16 text-slate-900 tracking-tight leading-[1.43]">
+            <h2 className="text-3xl sm:text-5xl font-light mb-16 text-slate-900 tracking-tight leading-[1.43]">
               Frequently Asked Questions
             </h2>
 

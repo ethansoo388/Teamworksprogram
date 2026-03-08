@@ -68,7 +68,7 @@ export function WhyDifferentV2() {
             <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
               What Makes Us Different
             </div>
-            <h2 className="text-4xl lg:text-5xl leading-[1.1] tracking-tight mb-6">
+            <h2 className="text-3xl lg:text-5xl leading-[1.1] tracking-tight mb-6">
               Not your typical training program
             </h2>
             <p className="text-lg text-gray-600 mb-12 leading-relaxed">
@@ -118,7 +118,7 @@ export function WhyDifferentV2() {
           <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
             Our Famous Activities
           </div>
-          <h2 className="text-4xl lg:text-5xl leading-[1.1] tracking-tight mb-6">
+          <h2 className="text-3xl lg:text-5xl leading-[1.1] tracking-tight mb-6">
             Learning through play
           </h2>
           <p className="text-lg text-gray-600">

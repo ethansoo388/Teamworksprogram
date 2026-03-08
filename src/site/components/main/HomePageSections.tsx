@@ -192,7 +192,7 @@ function ProblemSection() {
     <section className="py-24 px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
-          <h2 className="text-4xl lg:text-5xl font-light mb-6 text-gray-900">Challenges We Solve</h2>
+          <h2 className="text-3xl lg:text-5xl font-light mb-6 text-gray-900">Challenges We Solve</h2>
           <p className="text-lg text-gray-600 max-w-3xl font-light">
             Organizations face common roadblocks that prevent them from achieving their full potential.
             We help you overcome these challenges.
@@ -246,7 +246,7 @@ function DifferenceSection() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left — Content */}
           <div className="max-w-lg">
-            <h2 className="text-5xl font-light text-gray-900 mb-6 leading-tight">The CI Agile Difference</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 mb-6 leading-tight">The CI Agile Difference</h2>
             <p className="text-base text-gray-600 font-light leading-relaxed mb-12">
               We help organizations execute delivery systems that produce measurable business outcomes.
             </p>
@@ -417,7 +417,7 @@ function HowWeWorkSection() {
           <p className="text-xs text-gray-400 uppercase tracking-widest font-light">Our Methodology</p>
         </div>
         <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-light text-white leading-tight max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-5xl font-light text-white leading-tight max-w-4xl mx-auto">
             How We Deliver Results
           </h2>
         </div>
@@ -474,7 +474,7 @@ function IndustriesSection() {
     <section id="industries" className="py-24 px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
-          <h2 className="text-4xl lg:text-5xl font-light mb-6 text-gray-900">Industries We Transform</h2>
+          <h2 className="text-3xl lg:text-5xl font-light mb-6 text-gray-900">Industries We Transform</h2>
           <p className="text-lg text-gray-600 max-w-3xl font-light">
             Deep expertise across diverse sectors, delivering tangible business results
           </p>
@@ -612,7 +612,7 @@ function FinalCTASection() {
           <div className="inline-block px-4 py-1 bg-gray-800 text-gray-300 text-xs uppercase tracking-widest mb-8">
             Get Started Today
           </div>
-          <h2 className="text-4xl lg:text-5xl font-light mb-6">Ready to Transform Your Organization?</h2>
+          <h2 className="text-3xl lg:text-5xl font-light mb-6">Ready to Transform Your Organization?</h2>
           <p className="text-lg text-gray-300 font-light mb-12 max-w-2xl mx-auto">
             Join 500+ organizations that have transformed their delivery and business outcomes with our proven
             methodology.

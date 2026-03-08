@@ -27,12 +27,12 @@ export function HeroSection() {
             </div>
             
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-7xl text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-7xl text-white mb-6 leading-tight">
               Transform Your Team in Just <span className="text-yellow-400">2 Days</span>
             </h1>
             
             {/* Subheadline */}
-            <p className="text-2xl md:text-3xl text-gray-100 mb-8 leading-relaxed">
+            <p className="text-xl md:text-3xl text-gray-100 mb-8 leading-relaxed">
               Fun, practical workshops that deliver real results. 
               <span className="text-yellow-400"> See changes in 2 weeks.</span>
             </p>

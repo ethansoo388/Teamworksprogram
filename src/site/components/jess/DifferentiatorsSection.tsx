@@ -43,7 +43,7 @@ export function DifferentiatorsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div data-reveal>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white">
               Why Executives Choose <span className="text-blue-400">JESS</span>
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ export function DifferentiatorsSection() {
                         {item.stats}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-slate-400 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export function DifferentiatorsSection() {
                     {item.stats}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.description}</p>
               </div>
             </div>

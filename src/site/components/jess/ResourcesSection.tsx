@@ -21,7 +21,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
         <div className={`${isDark ? 'text-center' : ''} mb-16`}>
           <div
           >
-            <h2 className={`text-4xl sm:text-5xl mb-4 tracking-tight ${isDark ? 'font-bold text-white text-center' : 'font-light text-slate-900'}`}>
+            <h2 className={`text-3xl sm:text-5xl mb-4 tracking-tight ${isDark ? 'font-bold text-white text-center' : 'font-light text-slate-900'}`}>
               Resources & Learning Materials
             </h2>
             <p className={`text-lg leading-relaxed max-w-3xl ${isDark ? 'text-slate-400 mx-auto text-center' : 'text-slate-600 font-light'}`}>

@@ -17,7 +17,7 @@ export function StateOfAgileSection() {
               <AlertCircle size={16} />
               <span className="text-sm">18th State of Agile Report</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-white">
               What Enterprise Data Is Telling Leaders
             </h2>
           </div>

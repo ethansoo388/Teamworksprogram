@@ -89,7 +89,7 @@ export function DiscoverCoursesV2() {
           <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
             Discover TeamWorks
           </div>
-          <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
+          <h2 className="text-3xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
             Choose what your team needs
           </h2>
           <p className="text-lg text-gray-600">
@@ -203,7 +203,7 @@ export function DiscoverCoursesV2() {
               {/* Left: Content */}
               <div className="px-6 lg:px-12 py-20 lg:py-32">
                 <div className="max-w-xl">
-                  <h3 className="text-4xl lg:text-5xl mb-6 tracking-tight leading-[1.1]">
+                  <h3 className="text-3xl lg:text-5xl mb-6 tracking-tight leading-[1.1]">
                     Not sure which course to choose?
                   </h3>
                   <p className="text-xl text-gray-300 mb-10 leading-relaxed">

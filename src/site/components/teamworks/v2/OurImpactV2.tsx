@@ -26,7 +26,7 @@ export function OurImpactV2() {
           <div className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-4">
             OUR RESULTS
           </div>
-          <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
+          <h2 className="text-3xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
             Proven results across the region
           </h2>
           <p className="text-lg text-gray-600">

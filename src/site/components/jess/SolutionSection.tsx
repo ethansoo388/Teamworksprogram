@@ -10,7 +10,7 @@ export function SolutionSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div data-reveal>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               What is Jeff Sutherland's Enterprise Scrum System (JESS)?
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">

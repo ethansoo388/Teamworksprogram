@@ -29,7 +29,7 @@ export function Hero() {
                 <span className="text-sm">AI-Driven Business Transformation</span>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
                 data-reveal
                 data-delay="80"
               >
@@ -45,7 +45,7 @@ export function Hero() {
                 data-reveal
                 data-delay="140"
               >
-                <span className="block text-2xl mb-3">Align strategy, leadership, and teams — powered by Dr. Jeff Sutherland's knowledge and advanced AI.</span>
+                <span className="block text-xl mb-3">Align strategy, leadership, and teams — powered by Dr. Jeff Sutherland's knowledge and advanced AI.</span>
                 <span className="block text-lg">
                   Trusted by global enterprises to move from transformation intent to measurable results.
                 </span>
