@@ -257,6 +257,77 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 100);
   }
+  // NOVA course selection guide: smooth scroll + temporary blinking highlight
+  const novaHighlightTimers = new WeakMap();
+
+  const clearNovaHighlight = (card) => {
+    if (!(card instanceof HTMLElement)) return;
+    const existingTimer = novaHighlightTimers.get(card);
+    if (existingTimer) {
+      window.clearTimeout(existingTimer);
+      novaHighlightTimers.delete(card);
+    }
+    card.classList.remove('nova-course-card-highlight');
+  };
+
+  const triggerNovaHighlight = (card) => {
+    if (!(card instanceof HTMLElement)) return;
+    clearNovaHighlight(card);
+    // Reflow so re-adding the class restarts the CSS animation.
+    void card.offsetWidth;
+    card.classList.add('nova-course-card-highlight');
+
+    const timer = window.setTimeout(() => {
+      card.classList.remove('nova-course-card-highlight');
+      novaHighlightTimers.delete(card);
+    }, 5000);
+
+    novaHighlightTimers.set(card, timer);
+  };
+
+  const scrollToNovaCards = (selectorType) => {
+    const targets = [];
+    const agileCard = document.querySelector('[data-course-card="agile"]');
+    const designCard = document.querySelector('[data-course-card="design"]');
+
+    if (selectorType === 'agile' && agileCard instanceof HTMLElement) targets.push(agileCard);
+    if (selectorType === 'design' && designCard instanceof HTMLElement) targets.push(designCard);
+    if (selectorType === 'both') {
+      if (agileCard instanceof HTMLElement) targets.push(agileCard);
+      if (designCard instanceof HTMLElement) targets.push(designCard);
+    }
+
+    if (!targets.length) return;
+
+    const firstTarget = targets[0];
+    const fixedOffset = 96;
+    const targetTop = Math.max(0, window.scrollY + firstTarget.getBoundingClientRect().top - fixedOffset);
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: 'smooth'
+    });
+
+    targets.forEach(triggerNovaHighlight);
+  };
+
+  const novaSelectionCards = Array.from(document.querySelectorAll('[data-course-selector]')).filter((el) => el instanceof HTMLElement);
+  novaSelectionCards.forEach((card) => {
+    const handleActivate = (e) => {
+      e.preventDefault();
+      const selectorType = card.getAttribute('data-course-selector');
+      if (!selectorType) return;
+      scrollToNovaCards(selectorType);
+    };
+
+    card.addEventListener('click', handleActivate);
+    card.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      handleActivate(e);
+    });
+  });
+
+
 
   // Add animation on scroll
   const observerOptions = {

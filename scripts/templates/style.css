@@ -385,3 +385,30 @@ body {
     object-position: center 15%;  /* desktop – a bit more headroom */
   }
 }
+
+/* ── NOVA course-card click highlight (static export friendly) ───────── */
+.site-jess [data-course-card] {
+  scroll-margin-top: 110px;
+}
+
+.site-jess .nova-course-card-highlight {
+  animation: nova-card-blink-highlight 1s ease-in-out 5;
+}
+
+@keyframes nova-card-blink-highlight {
+  0%, 100% {
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.28), 0 22px 45px rgba(59, 130, 246, 0.24);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-jess .nova-course-card-highlight {
+    animation: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.22), 0 18px 35px rgba(59, 130, 246, 0.16);
+  }
+}

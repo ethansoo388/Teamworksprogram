@@ -472,7 +472,13 @@ export function TeamLevelTrainingPage() {
               {/* Modern Card-Based Selection Guide */}
               <div className="max-w-6xl mx-auto mb-16 space-y-6">
                 {/* Card 1 - Agile & Scrum */}
-                <div className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-blue-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div
+                  className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-blue-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer"
+                  data-course-selector="agile"
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Scroll to Agile & Scrum 201 course card"
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Side - Challenge */}
                     <div className="p-8 bg-gradient-to-br from-blue-50 to-white">
@@ -499,7 +505,13 @@ export function TeamLevelTrainingPage() {
                 </div>
 
                 {/* Card 2 - Design Thinking */}
-                <div className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div
+                  className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer"
+                  data-course-selector="design"
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Scroll to Design Thinking 201 course card"
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Side - Challenge */}
                     <div className="p-8 bg-gradient-to-br from-purple-50 to-white">
@@ -526,7 +538,13 @@ export function TeamLevelTrainingPage() {
                 </div>
 
                 {/* Card 3 - Both */}
-                <div className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-orange-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div
+                  className="group bg-white rounded-2xl border-2 border-slate-200 hover:border-orange-400 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer"
+                  data-course-selector="both"
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Scroll to both NOVA course cards"
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Side - Challenge */}
                     <div className="p-8 bg-gradient-to-br from-orange-50 to-white">
@@ -559,6 +577,8 @@ export function TeamLevelTrainingPage() {
                 return (
                   <div
                     key={course.title}
+                    id={index === 0 ? "nova-course-card-agile" : "nova-course-card-design"}
+                    data-course-card={index === 0 ? "agile" : "design"}
                     className={`${course.cardBg} rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300`}
                   >
                     {/* Course Image */}
