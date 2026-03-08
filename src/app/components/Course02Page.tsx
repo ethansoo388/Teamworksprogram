@@ -1,4 +1,4 @@
-import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck, Menu } from "lucide-react";
+import { ArrowRight, Lightbulb, PiggyBank, Trophy, Rocket, AlertCircle, Users, Target, Zap, Star, Clock, UserCheck, Menu, X } from "lucide-react";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import moduleGraphicImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
 import productDesignImage from "@/assets/img/teamworks/ciagile-teamworks-course02-product-design-customer-experience.webp";
@@ -88,23 +88,25 @@ export function Course02Page() {
 
             {/* Mobile Menu Button */}
             <button
-              id="mobile-menu-btn"
+              type="button"
               className="md:hidden"
               aria-label="Open menu"
-              type="button"
+              aria-controls="tw02-mobile-menu"
+              data-mobile-toggle
             >
-              <Menu className="w-6 h-6" />
+              <span data-icon="open"><Menu className="w-6 h-6" /></span>
+              <span data-icon="close" className="hidden"><X className="w-6 h-6" /></span>
             </button>
           </div>
 
           {/* Mobile Menu */}
-          <div id="mobile-menu" className="md:hidden py-6 border-t border-gray-200 hidden">
+          <div id="tw02-mobile-menu" data-mobile-menu className="md:hidden py-6 border-t border-gray-200 hidden" aria-hidden="true">
             <div className="flex flex-col gap-4">
-              <a href="#modules" className="text-sm py-2">Modules</a>
-              <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-              <a href="#testimonials" className="text-sm py-2">Testimonials</a>
-              <a href="#faq" className="text-sm py-2">FAQ</a>
-              <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: '#E91E8C' }}>
+              <a href="#modules" className="text-sm py-2" data-mobile-close>Modules</a>
+              <a href="#outcomes" className="text-sm py-2" data-mobile-close>Outcomes</a>
+              <a href="#testimonials" className="text-sm py-2" data-mobile-close>Testimonials</a>
+              <a href="#faq" className="text-sm py-2" data-mobile-close>FAQ</a>
+              <a href="/teamworks/bookConsultation.html" className="text-white px-6 py-3 rounded-full text-sm mt-2 text-center" style={{ backgroundColor: '#E91E8C' }} data-mobile-close>
                 Book This Course
               </a>
             </div>

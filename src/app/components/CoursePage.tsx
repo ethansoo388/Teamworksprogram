@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, Menu } from "lucide-react";
+import { ArrowRight, Clock, Users, UserCheck, Zap, Lightbulb, CheckCircle, TrendingUp, Wrench, Check, Briefcase, Users2, Target, Rocket, Star, Menu, X } from "lucide-react";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import highEnergyTeamImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
 import successfulAgileImage from "@/assets/img/teamworks/ciagile-teamworks-course01-workshop-classroom-activity.webp";
@@ -61,23 +61,25 @@ export function CoursePage() {
 
             {/* Mobile Menu Button */}
             <button
-              id="mobile-menu-btn"
+              type="button"
               className="md:hidden"
               aria-label="Open menu"
-              type="button"
+              aria-controls="tw01-mobile-menu"
+              data-mobile-toggle
             >
-              <Menu className="w-6 h-6" />
+              <span data-icon="open"><Menu className="w-6 h-6" /></span>
+              <span data-icon="close" className="hidden"><X className="w-6 h-6" /></span>
             </button>
           </div>
 
           {/* Mobile Menu */}
-          <div id="mobile-menu" className="md:hidden py-6 border-t border-gray-200 hidden">
+          <div id="tw01-mobile-menu" data-mobile-menu className="md:hidden py-6 border-t border-gray-200 hidden" aria-hidden="true">
             <div className="flex flex-col gap-4">
-              <a href="#modules" className="text-sm py-2">Modules</a>
-              <a href="#outcomes" className="text-sm py-2">Outcomes</a>
-              <a href="#testimonials" className="text-sm py-2">Testimonials</a>
-              <a href="#faq" className="text-sm py-2">FAQ</a>
-              <a href="/teamworks/bookConsultation.html" className="bg-purple-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center">
+              <a href="#modules" className="text-sm py-2" data-mobile-close>Modules</a>
+              <a href="#outcomes" className="text-sm py-2" data-mobile-close>Outcomes</a>
+              <a href="#testimonials" className="text-sm py-2" data-mobile-close>Testimonials</a>
+              <a href="#faq" className="text-sm py-2" data-mobile-close>FAQ</a>
+              <a href="/teamworks/bookConsultation.html" className="bg-purple-600 text-white px-6 py-3 rounded-full text-sm mt-2 text-center" data-mobile-close>
                 Book This Course
               </a>
             </div>
