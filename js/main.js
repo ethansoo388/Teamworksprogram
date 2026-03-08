@@ -891,6 +891,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]')).filter((s) => s instanceof HTMLElement);
     if (!slides.length) return;
 
+    const tabs = Array.from(carousel.querySelectorAll('[data-carousel-tab]')).filter((t) => t instanceof HTMLElement);
+    const tabColors = {
+      amber: { bg: '#f59e0b', text: '#0f172a' },
+      purple: { bg: '#a855f7', text: '#0f172a' },
+      blue: { bg: '#3b82f6', text: '#0f172a' },
+    };
+    const setTabState = (tab, active) => {
+      if (!(tab instanceof HTMLElement)) return;
+      tab.setAttribute('aria-pressed', active ? 'true' : 'false');
+      tab.style.backgroundColor = active ? (tabColors[tab.getAttribute('data-carousel-tab-color')]?.bg ?? '#0f172a') : 'rgba(15, 23, 42, 0.8)';
+      tab.style.borderColor = active ? (tabColors[tab.getAttribute('data-carousel-tab-color')]?.bg ?? '#334155') : '#334155';
+      tab.style.color = active ? (tabColors[tab.getAttribute('data-carousel-tab-color')]?.text ?? '#0f172a') : '#e2e8f0';
+    };
+
     let current = Number(carousel.getAttribute('data-carousel-initial') ?? '0') || 0;
     const show = (idx) => {
       current = ((idx % slides.length) + slides.length) % slides.length;
@@ -898,6 +912,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!(s instanceof HTMLElement)) return;
         s.classList.toggle('hidden', i !== current);
       });
+      tabs.forEach((tab, i) => setTabState(tab, i === current));
     };
 
     // Initial: hide all but current
@@ -907,6 +922,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = carousel.querySelector('[data-carousel-next]');
     if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); show(current - 1); });
     if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); show(current + 1); });
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        show(index);
+      });
+    });
+
+    let touchStartX = null;
+    let touchStartY = null;
+    const swipeSurface = carousel.querySelector('[data-carousel-track]') || carousel;
+    swipeSurface.addEventListener('touchstart', (e) => {
+      const touch = e.changedTouches && e.changedTouches[0];
+      if (!touch) return;
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+    swipeSurface.addEventListener('touchend', (e) => {
+      const touch = e.changedTouches && e.changedTouches[0];
+      if (!touch || touchStartX === null || touchStartY === null) return;
+      const deltaX = touch.clientX - touchStartX;
+      const deltaY = touch.clientY - touchStartY;
+      touchStartX = null;
+      touchStartY = null;
+      if (Math.abs(deltaX) < 40 || Math.abs(deltaX) < Math.abs(deltaY)) return;
+      if (deltaX < 0) show(current + 1);
+      else show(current - 1);
+    }, { passive: true });
   });
 
   // Horizontal scroller controls (for desktop card strips)
