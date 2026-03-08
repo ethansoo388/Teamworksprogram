@@ -17,7 +17,7 @@ export function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-16">
+      <div className="relative z-10 w-full px-6 lg:px-8 xl:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl">
             {/* Left side - Text content */}

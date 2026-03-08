@@ -83,7 +83,7 @@ export function EnterpriseConsultingPage() {
       <MainSiteNavigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div>
             <a
@@ -112,7 +112,7 @@ export function EnterpriseConsultingPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-20 px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div
             className="text-center mb-16"
@@ -143,7 +143,7 @@ export function EnterpriseConsultingPage() {
       </section>
 
       {/* Engagement Phases */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div
             className="text-center mb-16"
@@ -199,7 +199,7 @@ export function EnterpriseConsultingPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-20 px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
           <div
           >
@@ -255,7 +255,7 @@ export function EnterpriseConsultingPage() {
       </section>
 
       {/* Ideal For */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div
           >

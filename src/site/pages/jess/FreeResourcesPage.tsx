@@ -49,7 +49,7 @@ export function FreeResourcesPage() {
       <MainSiteNavigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-left">
             <a href="/jess/index.html" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-400 transition-colors mb-4 group">
@@ -67,7 +67,7 @@ export function FreeResourcesPage() {
       </section>
 
       {/* Getting Started Resources */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100">
+      <section className="py-20 px-6 lg:px-8 bg-slate-100">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="mb-12 text-left">

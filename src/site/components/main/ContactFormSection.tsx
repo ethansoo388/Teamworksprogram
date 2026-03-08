@@ -20,7 +20,7 @@ import contactUsImage from '@/assets/img/main/contactus-image.webp';
 
 export function ContactFormSection() {
   return (
-    <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-b from-white to-[#FAFBFC]">
+    <section className="pt-32 pb-20 px-6 lg:px-16 bg-gradient-to-b from-white to-[#FAFBFC]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.15fr] gap-16 items-start">
 

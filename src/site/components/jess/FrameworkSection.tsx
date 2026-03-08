@@ -3,7 +3,7 @@ import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallbac
 
 export function FrameworkSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl"></div>

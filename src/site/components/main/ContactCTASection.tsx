@@ -7,7 +7,7 @@
 
 export function ContactCTASection() {
   return (
-    <section className="py-16 px-8 lg:px-16 bg-white">
+    <section className="py-16 px-6 lg:px-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-6">
 

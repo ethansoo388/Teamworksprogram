@@ -40,7 +40,7 @@ export function AboutHero() {
       </div>
 
       {/* Content */}
-      <div className="w-full px-8 lg:px-16 relative z-10">
+      <div className="w-full px-6 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-light leading-[1.15] text-white mb-8">
             We Help Teams and Organizations{" "}

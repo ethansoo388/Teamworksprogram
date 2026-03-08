@@ -4,7 +4,7 @@ export function CTASection() {
   return (
     <section className="relative py-24 sm:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
         <div
           className="text-center"
           data-reveal

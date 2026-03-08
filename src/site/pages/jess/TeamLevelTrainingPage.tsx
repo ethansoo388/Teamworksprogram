@@ -94,7 +94,7 @@ export function TeamLevelTrainingPage() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-0 overflow-hidden">
         {/* Back Button - Above Hero */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
           <a
             href="/jess/index.html"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors group"
@@ -117,7 +117,7 @@ export function TeamLevelTrainingPage() {
             <div className="absolute inset-0 bg-black/70"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="min-h-[600px] py-20 flex items-center">
               {/* Single Column - Text Content (Left-aligned) */}
               <div className="max-w-6xl">
@@ -151,7 +151,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Measurable Business Impact Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section className="py-24 px-6 lg:px-8 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -289,7 +289,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* What is NOVA Series Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -346,7 +346,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Our Training Approach Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -455,7 +455,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Choose Your NOVA Course Section */}
-      <section id="courses" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50">
+      <section id="courses" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -622,7 +622,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Private Enterprise Delivery Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
@@ -736,7 +736,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>

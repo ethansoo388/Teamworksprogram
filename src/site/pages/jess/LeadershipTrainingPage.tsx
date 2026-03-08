@@ -62,7 +62,7 @@ export function LeadershipTrainingPage() {
         </div>
         
         {/* Content Container */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-16">
+        <div className="relative z-10 w-full px-6 lg:px-8 xl:px-16">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl">
               {/* Back Link */}
@@ -112,7 +112,7 @@ export function LeadershipTrainingPage() {
 
       {/* Navigation Tabs Bar */}
       <div className="sticky top-0 z-40 bg-[#2C3E50] border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <nav className="flex gap-8 sm:gap-12">
             <span className="relative py-4 text-sm sm:text-base font-medium text-white">
               Overview
@@ -148,7 +148,7 @@ export function LeadershipTrainingPage() {
 
       {/* Why Agile Transformations Stall */}
       <section className="py-16 sm:py-24 border-t border-slate-700 bg-[#1e293b]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div
           >
             {/* Two Column Layout on Desktop, Stacked on Mobile */}
@@ -217,7 +217,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <div
             className="text-center"
           >
@@ -279,7 +279,7 @@ export function LeadershipTrainingPage() {
           }}></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div
           >
             {/* Header */}
@@ -414,7 +414,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Leadership in an AI-Driven Environment */}
-      <section id="jess-learning-program" className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
+      <section id="jess-learning-program" className="py-32 px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div
           >
@@ -639,7 +639,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Why Take Both Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
+      <section className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
         <div className="max-w-5xl mx-auto">
           <div
           >
@@ -780,7 +780,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Who This Program Is For */}
-      <section id="who-this-is-for" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section id="who-this-is-for" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
@@ -913,7 +913,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Private vs Public Training Options */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
@@ -1101,7 +1101,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Expected Outcomes */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-32 px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <div
           >
@@ -1324,7 +1324,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200 bg-white">
+      <section className="py-32 px-6 lg:px-8 border-t border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
           >

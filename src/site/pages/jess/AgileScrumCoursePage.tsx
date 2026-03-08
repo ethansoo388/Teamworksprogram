@@ -126,7 +126,7 @@ export function AgileScrumCoursePage() {
         </a>
 
         {/* Content Overlay */}
-        <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-end">
+        <div className="relative h-full px-6 lg:px-8 flex items-center justify-center lg:justify-end">
           <div className="max-w-7xl mx-auto w-full flex justify-center lg:justify-end pt-32 sm:pt-56 lg:pt-28 pb-10 lg:pb-20">
           <div className="max-w-2xl text-center lg:text-left">
             {/* Badge - Mobile centered */}
@@ -179,7 +179,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Course Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div
             className="text-center"
@@ -204,7 +204,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Who This Course Is For */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-visible">
+      <section className="relative py-20 px-6 lg:px-8 bg-white overflow-visible">
         {/* Background Image - Right Side - Desktop Only */}
         <div className="hidden lg:block absolute right-[5%] top-1/2 -translate-y-1/2 w-2/5">
           <img 
@@ -260,7 +260,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
@@ -369,7 +369,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* How We Deliver Results - Dark Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-24 px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div
             className="text-center mb-16"
@@ -448,7 +448,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Course Modules */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
@@ -662,7 +662,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Course Options */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section className="py-24 px-6 lg:px-8 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div
             className="text-center mb-16"
@@ -860,7 +860,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-800">
+      <section className="py-32 px-6 lg:px-8 bg-slate-800">
         <div className="max-w-3xl mx-auto text-center">
           <div
           >

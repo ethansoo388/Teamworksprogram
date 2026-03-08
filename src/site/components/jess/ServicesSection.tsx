@@ -82,7 +82,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="roadmap" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="roadmap" className="py-20 px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">

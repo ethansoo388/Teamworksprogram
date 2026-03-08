@@ -9,7 +9,7 @@ export function CourseModulesPage() {
       
       {/* Hero Section */}
       <section className="relative bg-slate-800 py-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 text-base mb-8">
             <a
               href="leadership-training.html"
@@ -35,7 +35,7 @@ export function CourseModulesPage() {
 
       {/* Sticky Navigation Tabs */}
       <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <nav className="flex gap-8 sm:gap-12">
             <a
               href="leadership-training.html"
@@ -70,7 +70,7 @@ export function CourseModulesPage() {
       </div>
 
       {/* Course Modules Content */}
-      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Part 1: Foundations */}
           <div

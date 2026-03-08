@@ -126,7 +126,7 @@ export function DesignThinkingCoursePage() {
         </div>
 
         {/* Content Overlay */}
-        <div className="relative h-full px-4 sm:px-6 lg:px-8 flex items-center lg:justify-end">
+        <div className="relative h-full px-6 lg:px-8 flex items-center lg:justify-end">
           <div className="max-w-7xl mx-auto w-full flex lg:justify-end pt-24 sm:pt-32 lg:pt-36 pb-8 sm:pb-12 lg:pb-20">
             <div className="max-w-2xl w-full">
               {/* Back to NOVA Series - Mobile Only (in hero) */}
@@ -188,7 +188,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Course Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div
             className="text-center"
@@ -212,7 +212,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Who This Course Is For */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-visible">
+      <section className="relative py-20 px-6 lg:px-8 bg-white overflow-visible">
         {/* Background Image - Right Side - Desktop Only */}
         <div className="hidden lg:block absolute right-[5%] bottom-0 w-2/5">
           <img 
@@ -293,7 +293,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-24 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div
             className="text-center mb-16"
@@ -339,7 +339,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* How We Deliver Results - Dark Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900" id="how-we-turn-ideas">
+      <section className="py-24 px-6 lg:px-8 bg-slate-900" id="how-we-turn-ideas">
         <div className="max-w-7xl mx-auto">
           <div
             className="text-center mb-16"
@@ -421,7 +421,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Course Modules */}
-      <section id="course-modules" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="course-modules" className="py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
@@ -619,7 +619,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* How Organisations Typically Use This Programme */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-100">
+      <section className="py-24 px-6 lg:px-8 bg-slate-100">
         <div className="max-w-5xl mx-auto">
           <div
             className="text-center mb-12"
@@ -706,7 +706,7 @@ export function DesignThinkingCoursePage() {
       </section>
 
       {/* Explore a Private Corporate Run - Final Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800">
+      <section className="py-24 px-6 lg:px-8 bg-slate-800">
         <div className="max-w-4xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">

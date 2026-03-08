@@ -39,7 +39,7 @@ const differentiators = [
 
 export function DifferentiatorsSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-20 px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div data-reveal>

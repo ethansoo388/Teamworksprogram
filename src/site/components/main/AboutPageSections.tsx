@@ -22,7 +22,7 @@ import ourJourneyMapImage from "@/assets/img/main/main-about-our-journey-map.web
 // ---------------------------------------------------------------------------
 export function OurBeliefSection() {
   return (
-    <section className="relative py-32 px-8 lg:px-16 bg-gray-900 overflow-hidden">
+    <section className="relative py-32 px-6 lg:px-16 bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section label */}
         <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-12 border-l-4 border-[#FFB800] pl-3">
@@ -106,7 +106,7 @@ export function OurBeliefSection() {
 // ---------------------------------------------------------------------------
 export function WhatMakesDifferentSection() {
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 md:px-8 lg:px-16 bg-black">
+    <section className="py-12 md:py-20 lg:py-24 px-6 lg:px-16 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left — Content */}
@@ -196,7 +196,7 @@ export function AboutCIAgileSection() {
   ];
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 md:px-8 lg:px-16 bg-[#EFF1F3]">
+    <section className="py-12 md:py-20 lg:py-24 px-6 lg:px-16 bg-[#EFF1F3]">
       <div className="max-w-7xl mx-auto">
         {/* Core focus areas */}
         <div className="mb-16 md:mb-24 lg:mb-32">
@@ -350,7 +350,7 @@ export function AboutCIAgileSection() {
 // ---------------------------------------------------------------------------
 export function FounderProfileSection() {
   return (
-    <section id="founder" className="py-20 px-8 lg:px-16 bg-white border-t border-gray-200">
+    <section id="founder" className="py-20 px-6 lg:px-16 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <p className="text-xs font-bold text-[#D4A574] uppercase tracking-wider mb-6">Meet the Founder</p>
@@ -432,7 +432,7 @@ export function FounderProfileSection() {
 // ---------------------------------------------------------------------------
 export function ExperienceScalesSection() {
   return (
-    <section className="py-20 px-8 lg:px-16 bg-[#F7F9F8] border-t-2 border-gray-300">
+    <section className="py-20 px-6 lg:px-16 bg-[#F7F9F8] border-t-2 border-gray-300">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-start">
           {/* Left — executive message */}

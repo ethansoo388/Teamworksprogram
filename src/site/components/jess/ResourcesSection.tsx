@@ -16,7 +16,7 @@ export function ResourcesSection({ theme = 'dark' }: ResourcesSectionProps) {
   const isDark = theme === 'dark';
 
   return (
-    <section className={`py-32 px-4 sm:px-6 lg:px-8 relative border-t ${isDark ? '' : 'border-slate-200 bg-white'}`}>
+    <section className={`py-32 px-6 lg:px-8 relative border-t ${isDark ? '' : 'border-slate-200 bg-white'}`}>
       <div className="max-w-7xl mx-auto">
         <div className={`${isDark ? 'text-center' : ''} mb-16`}>
           <div
