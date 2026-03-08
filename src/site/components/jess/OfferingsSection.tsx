@@ -129,7 +129,7 @@ export function OfferingsSection() {
         </div>
 
         {/* Grid of offerings */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 auto-rows-fr" data-reveal-group data-stagger="90">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 md:auto-rows-fr" data-reveal-group data-stagger="90">
           {offerings.map((offering, index) => {
             // Create Astro-style layout:
             // Row 1: square, wide, (wide continues)
@@ -181,7 +181,7 @@ function OfferingCard({ offering, spanTwoColumns, spanTwoRows }: OfferingCardPro
       `}
     >
       {/* Visual Element */}
-      <div className="h-48 mb-6 flex items-center justify-center relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/30">
+      <div className="h-40 md:h-48 mb-6 flex items-center justify-center relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/30">
         {offering.visual === "icon" && (
           <>
             {Icon === Lightbulb ? (
