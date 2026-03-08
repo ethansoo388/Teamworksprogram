@@ -939,18 +939,18 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* For Enterprise Leaders & Sponsors */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 sm:p-10 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="absolute -top-14 left-0">
+                  <div className="mb-6">
                     <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 text-blue-400 text-sm font-medium rounded-full">
                       For Organizations
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mt-4 mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
                     For Enterprise Leaders
                   </h3>
                   
@@ -1014,18 +1014,18 @@ export function LeadershipTrainingPage() {
 
               {/* For Individual Leaders */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-8 sm:p-10 hover:border-purple-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-purple-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="absolute -top-14 left-0">
+                  <div className="mb-6">
                     <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-purple-500/50 text-purple-400 text-sm font-medium rounded-full">
                       For Individuals
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mt-4 mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
                     For Individual Leaders
                   </h3>
                   
