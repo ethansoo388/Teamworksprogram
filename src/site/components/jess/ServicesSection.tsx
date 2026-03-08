@@ -1,5 +1,5 @@
 import { Button } from "@/site/components/jess/ui/button";
-import { Book, GraduationCap, Users, Briefcase, ArrowRight, ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
+import { Book, GraduationCap, Users, Briefcase, ArrowRight, MoveRight } from "lucide-react";
 // react-slick Slider is not SSR-compatible; use a plain div wrapper for static export.
 // The mobile carousel becomes a simple horizontal scroll strip.
 const Slider = ({ children, ...props }: any) => <div {...props}>{children}</div>;
@@ -223,21 +223,37 @@ export function ServicesSection() {
               </div>
             </div>
 
-            {/* Mobile Navigation Buttons */}
-            <div className="flex justify-center gap-4 mt-6">
+            {/* Mobile Step Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-6" data-carousel-tabs>
               <button
-                data-carousel-prev
-                className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
-                aria-label="Previous slide"
+                type="button"
+                data-carousel-tab="0"
+                data-carousel-tab-color="amber"
+                className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm font-semibold text-slate-200 transition-all duration-300"
+                aria-label="Show Step 1"
+                aria-pressed="true"
               >
-                <ChevronLeft className="text-white" size={24} strokeWidth={2} />
+                Step 1
               </button>
               <button
-                data-carousel-next
-                className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
-                aria-label="Next slide"
+                type="button"
+                data-carousel-tab="1"
+                data-carousel-tab-color="purple"
+                className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm font-semibold text-slate-200 transition-all duration-300"
+                aria-label="Show Step 2"
+                aria-pressed="false"
               >
-                <ChevronRight className="text-white" size={24} strokeWidth={2} />
+                Step 2
+              </button>
+              <button
+                type="button"
+                data-carousel-tab="2"
+                data-carousel-tab-color="blue"
+                className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm font-semibold text-slate-200 transition-all duration-300"
+                aria-label="Show Step 3"
+                aria-pressed="false"
+              >
+                Step 3
               </button>
             </div>
           </div>
