@@ -8,7 +8,7 @@ export function Hero() {
       <section className="block lg:hidden">
 
         {/* Top: Jeff portrait, cropped to face/upper body */}
-        <div className="relative w-full overflow-hidden" style={{ height: "320px" }}>
+        <div className="relative w-full overflow-hidden" style={{ height: "480px" }}>
           <img
             src="/assets/img/jess/people-jeff-sutherland-leadership-training.webp"
             alt="Dr. Jeff Sutherland – Co-Creator of Scrum"
