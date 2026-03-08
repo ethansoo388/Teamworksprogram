@@ -1,4 +1,4 @@
-import { Gauge, Rocket, Lock, LineChart, Brain, Shield, Layers, Zap, Target, ChevronLeft, ChevronRight } from "lucide-react";
+import { Gauge, Rocket, Lock, LineChart, Brain, Shield, Layers, Zap, Target } from "lucide-react";
 const differentiators = [
   {
     icon: Shield,
@@ -52,16 +52,16 @@ export function DifferentiatorsSection() {
           </div>
         </div>
 
-        {/* Mobile Slider */}
-        <div className="block lg:hidden" data-carousel="jess-diff" data-carousel-initial="0" data-reveal data-delay="120">
-          <div data-carousel-track>
+        {/* Mobile Stack */}
+        <div className="block lg:hidden" data-reveal-group data-stagger="90">
+          <div className="space-y-6">
             {differentiators.map((item, index) => (
-              <div key={index} className="px-2" data-carousel-slide>
+              <div key={index} className="px-2" data-reveal-item>
                 <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 hover:/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   <div className="relative z-10">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30 flex items-center justify-center">
+                    <div className="flex flex-col items-start gap-4 mb-4 sm:flex-row sm:items-start sm:justify-between">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border /30 flex items-center justify-center shrink-0">
                         <item.icon className="text-blue-400" size={28} />
                       </div>
                       <span className="text-sm font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
@@ -74,24 +74,6 @@ export function DifferentiatorsSection() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Mobile Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-6">
-            <button
-              data-carousel-prev
-              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
-              aria-label="Previous slide"
-            >
-              <ChevronRight className="text-white" size={24} strokeWidth={2} />
-            </button>
-            <button
-              data-carousel-next
-              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
-              aria-label="Next slide"
-            >
-              <ChevronLeft className="text-white" size={24} strokeWidth={2} />
-            </button>
           </div>
         </div>
 
