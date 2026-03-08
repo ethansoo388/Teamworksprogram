@@ -67,7 +67,7 @@ export function FreeResourcesPage() {
       </section>
 
       {/* Getting Started Resources */}
-      <section className="py-20 px-6 lg:px-8 bg-slate-100">
+      <section className="py-16 lg:py-20 px-6 lg:px-8 bg-slate-100">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="mb-12 text-left">

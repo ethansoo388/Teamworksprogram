@@ -204,7 +204,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Who This Course Is For */}
-      <section className="relative py-20 px-6 lg:px-8 bg-white overflow-visible">
+      <section className="relative py-16 lg:py-16 lg:py-20 px-6 lg:px-8 bg-white overflow-visible">
         {/* Background Image - Right Side - Desktop Only */}
         <div className="hidden lg:block absolute right-[5%] top-1/2 -translate-y-1/2 w-2/5">
           <img 
@@ -260,7 +260,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
@@ -369,7 +369,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* How We Deliver Results - Dark Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div
             className="text-center mb-16"
@@ -448,7 +448,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Course Modules */}
-      <section className="py-20 px-6 lg:px-8 bg-white">
+      <section className="py-16 lg:py-20 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="mb-16"
@@ -662,7 +662,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Course Options */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-50">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div
             className="text-center mb-16"
@@ -860,7 +860,7 @@ export function AgileScrumCoursePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-32 px-6 lg:px-8 bg-slate-800">
+      <section className="py-16 lg:py-32 px-6 lg:px-8 bg-slate-800">
         <div className="max-w-3xl mx-auto text-center">
           <div
           >

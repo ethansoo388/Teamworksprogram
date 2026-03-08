@@ -18,7 +18,7 @@ const testimonials = [
 
 export function TestimonialsV2() {
   return (
-    <section id="testimonials" className="py-32 bg-gray-50">
+    <section id="testimonials" className="py-16 lg:py-32 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">

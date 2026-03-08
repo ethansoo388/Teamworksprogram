@@ -59,7 +59,7 @@ const activities = [
 
 export function WhyDifferentV2() {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-16 lg:py-32 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Why Different Section */}
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">

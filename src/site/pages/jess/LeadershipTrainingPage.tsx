@@ -212,7 +212,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* The Leadership Decision Gap */}
-      <section className="py-20 sm:py-32 border-t border-slate-700 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-32 border-t border-slate-700 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
@@ -270,7 +270,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* JESS Enterprise Agility Model */}
-      <section className="py-20 sm:py-32 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -414,7 +414,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Leadership in an AI-Driven Environment */}
-      <section id="jess-learning-program" className="py-32 px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
+      <section id="jess-learning-program" className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div
           >
@@ -639,7 +639,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Why Take Both Section */}
-      <section className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
+      <section className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
         <div className="max-w-5xl mx-auto">
           <div
           >
@@ -780,7 +780,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Who This Program Is For */}
-      <section id="who-this-is-for" className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section id="who-this-is-for" className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
@@ -913,7 +913,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Private vs Public Training Options */}
-      <section className="py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
@@ -1101,7 +1101,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* Expected Outcomes */}
-      <section className="py-32 px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <div
           >
@@ -1228,7 +1228,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-40 border-t border-slate-200 bg-white">
+      <section className="py-16 lg:py-40 border-t border-slate-200 bg-white">
         <div className="w-full">
           <div
           >
@@ -1324,7 +1324,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 px-6 lg:px-8 border-t border-slate-200 bg-white">
+      <section className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
           >

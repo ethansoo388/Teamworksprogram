@@ -127,7 +127,7 @@ function ClientLogosSection() {
   ];
 
   return (
-    <section className="py-24 bg-white border-t border-b border-gray-100">
+    <section className="py-16 lg:py-24 bg-white border-t border-b border-gray-100">
       <div className="w-full">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-20 px-6">
@@ -189,7 +189,7 @@ function ProblemSection() {
   ];
 
   return (
-    <section className="py-24 px-6 lg:px-16 bg-white">
+    <section className="py-16 lg:py-24 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <h2 className="text-3xl lg:text-5xl font-light mb-6 text-gray-900">Challenges We Solve</h2>
@@ -241,7 +241,7 @@ function DifferenceSection() {
   ];
 
   return (
-    <section className="py-32 px-6 lg:px-16 bg-[#F7F9F8]">
+    <section className="py-16 lg:py-32 px-6 lg:px-16 bg-[#F7F9F8]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left — Content */}
@@ -411,7 +411,7 @@ function HowWeWorkSection() {
   ];
 
   return (
-    <section id="methodology" className="py-32 px-6 lg:px-16 bg-[#1A2837]">
+    <section id="methodology" className="py-16 lg:py-32 px-6 lg:px-16 bg-[#1A2837]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <p className="text-xs text-gray-400 uppercase tracking-widest font-light">Our Methodology</p>
@@ -471,7 +471,7 @@ function IndustriesSection() {
   ];
 
   return (
-    <section id="industries" className="py-24 px-6 lg:px-16 bg-white">
+    <section id="industries" className="py-16 lg:py-24 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <h2 className="text-3xl lg:text-5xl font-light mb-6 text-gray-900">Industries We Transform</h2>
@@ -581,7 +581,7 @@ function ProvenResultsSection() {
       </div>
 
       {/* Testimonials */}
-      <div className="py-24 px-6 lg:px-16 bg-white">
+      <div className="py-16 lg:py-24 px-6 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-16">What Our Clients Say</h3>
           <div className="grid md:grid-cols-2 gap-12">
@@ -606,7 +606,7 @@ function ProvenResultsSection() {
 // ---------------------------------------------------------------------------
 function FinalCTASection() {
   return (
-    <section className="py-32 px-6 lg:px-16 bg-gray-900 text-white">
+    <section className="py-16 lg:py-32 px-6 lg:px-16 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <div className="inline-block px-4 py-1 bg-gray-800 text-gray-300 text-xs uppercase tracking-widest mb-8">

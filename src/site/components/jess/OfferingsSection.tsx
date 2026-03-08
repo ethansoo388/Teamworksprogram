@@ -108,7 +108,7 @@ export function OfferingsSection() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-16 lg:py-20 px-6 lg:px-8 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-3xl blur-3xl rotate-12"></div>

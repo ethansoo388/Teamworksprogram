@@ -6,7 +6,7 @@
 
 export function AboutHero() {
   return (
-    <section className="relative pt-32 pb-24 bg-gray-900 overflow-hidden">
+    <section className="relative pt-20 lg:pt-32 pb-16 lg:pb-24 bg-gray-900 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 opacity-30">
         <img

@@ -1,7 +1,7 @@
 import { CheckCircle2, Shield, Zap, Network } from "lucide-react";
 export function SolutionSection() {
   return (
-    <section id="solution" className="py-20 px-6 lg:px-8 relative overflow-hidden">
+    <section id="solution" className="py-16 lg:py-20 px-6 lg:px-8 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl jess-float-slow"></div>

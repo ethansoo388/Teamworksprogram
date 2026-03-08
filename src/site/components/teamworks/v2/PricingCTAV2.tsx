@@ -2,7 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 
 export function PricingCTAV2() {
   return (
-    <section id="pricing" className="py-32 bg-white">
+    <section id="pricing" className="py-16 lg:py-32 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Pricing Section */}
         <div className="max-w-5xl mx-auto">

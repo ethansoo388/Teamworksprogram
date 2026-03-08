@@ -151,7 +151,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Measurable Business Impact Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-50">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -289,7 +289,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* What is NOVA Series Section */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -346,7 +346,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Our Training Approach Section */}
-      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -455,7 +455,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Choose Your NOVA Course Section */}
-      <section id="courses" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50">
+      <section id="courses" className="py-16 lg:py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50">
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-center mb-16">
@@ -622,7 +622,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Private Enterprise Delivery Section */}
-      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
@@ -736,7 +736,7 @@ export function TeamLevelTrainingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>

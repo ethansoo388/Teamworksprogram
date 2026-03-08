@@ -2,7 +2,7 @@ import { TrendingDown, AlertCircle, Target, Zap, Brain, BarChart3 } from "lucide
 
 export function StateOfAgileSection() {
   return (
-    <section id="state-of-agile" className="py-20 px-6 lg:px-8 relative overflow-hidden">
+    <section id="state-of-agile" className="py-16 lg:py-20 px-6 lg:px-8 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-3xl"></div>
