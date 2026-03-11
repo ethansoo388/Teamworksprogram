@@ -796,7 +796,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               </li>
               <li>
                 <a href="/teamworks/critical-thinking-kanban.html" className={footerLinkClass}>
-                  Critical Thinking for Better Work
+                  Critical Thinking for Maximum Business Profitability
                 </a>
               </li>
               <li>

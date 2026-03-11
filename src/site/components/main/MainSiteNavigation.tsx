@@ -229,10 +229,10 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
                                 <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
-                                  Critical Thinking for Better Work
+                                  Critical Thinking for Maximum Business Profitability
                                 </h5>
                                 <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
-                                  Improve prioritisation and decisions using clear structured workflows.
+                                  Identify profit leaks and drive measurable ROI with a 2-day critical thinking framework.
                                 </p>
                               </a>
                               <a
@@ -785,8 +785,8 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                             <p className="text-xs text-gray-600 mt-0.5">Design customer-driven solutions teams can execute effectively.</p>
                           </a>
                           <a href="/teamworks/critical-thinking-kanban.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
-                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Critical Thinking for Better Work</h6>
-                            <p className="text-xs text-gray-600 mt-0.5">Improve prioritisation and decisions using clear structured workflows.</p>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Critical Thinking for Maximum Business Profitability</h6>
+                            <p className="text-xs text-gray-600 mt-0.5">Identify profit leaks and drive measurable ROI with a 2-day critical thinking framework.</p>
                           </a>
                           <a href="/teamworks/practical-lean-problem-solving.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
                             <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Practical Lean Problem Solving</h6>

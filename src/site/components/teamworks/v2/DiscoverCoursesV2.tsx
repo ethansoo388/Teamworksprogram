@@ -38,8 +38,8 @@ const courses = [
   },
   {
     id: "03",
-    title: "Critical Thinking for Better Work",
-    description: "Improve prioritisation, decision-making, and delivery using simple visual workflows.",
+    title: "Critical Thinking for Maximum Business Profitability",
+    description: "Identify root causes, eliminate analysis paralysis, and drive measurable ROI through sharper decision-making.",
     image: criticalThinkingImage,
     icon: Zap,
     colors: {

@@ -117,9 +117,9 @@ export const routes: RouteEntry[] = [
     modulePath: "/src/site/pages/teamworks/OperationalExcellencePage.tsx",
     componentName: "OperationalExcellencePage",
     filename: "teamworks/critical-thinking-kanban.html",
-    title: "Critical Thinking for Better Work - TeamWorks Course 03",
+    title: "Critical Thinking for Maximum Business Profitability - TeamWorks Course 03",
     description:
-      "Apply critical thinking and Kanban to make better decisions and deliver faster.",
+      "Train your team to identify root causes, eliminate analysis paralysis, and drive measurable ROI through sharper decision-making.",
     siteType: "teamworks",
   },
   {

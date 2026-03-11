@@ -4,7 +4,7 @@ export { Course03Page as OperationalExcellencePage } from "@/app/components/Cour
 export const pageMeta: PageMeta = {
   path: "/teamworks/critical-thinking-kanban",
   filename: "teamworks/critical-thinking-kanban.html",
-  title: "Critical Thinking for Better Work - TeamWorks Course 03",
-  description: "Master critical thinking, Kanban, and operational efficiency. Practical tools for better decision-making and workflow.",
+  title: "Critical Thinking for Maximum Business Profitability - TeamWorks Course 03",
+  description: "Train your team to identify root causes, eliminate analysis paralysis, and drive measurable ROI through sharper decision-making.",
   siteType: "teamworks",
 };

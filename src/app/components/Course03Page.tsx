@@ -22,7 +22,7 @@ export function Course03Page() {
               </div>
               <div className="flex flex-col">
                 <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES • COURSE 03</div>
-                <div className="font-bold text-base text-gray-900 -mt-0.5">Critical Thinking for Better Work</div>
+                <div className="font-bold text-base text-gray-900 -mt-0.5">Critical Thinking for Maximum Business Profitability</div>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export function Course03Page() {
             <span>/</span>
             <a href="/teamworks/index.html" className="hover:text-orange-600 transition-colors">Teamworks</a>
             <span>/</span>
-            <span className="text-gray-900 font-bold">Critical Thinking for Better Work</span>
+            <span className="text-gray-900 font-bold">Critical Thinking for Maximum Business Profitability</span>
           </div>
         </div>
       </div>

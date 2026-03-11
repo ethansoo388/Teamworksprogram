@@ -38,7 +38,7 @@ export const courseSchemaByFilename: Record<
     educationalLevel: 'Professional',
   },
   'teamworks/critical-thinking-kanban.html': {
-    name: 'Critical Thinking for Better Work (Kanban)',
+    name: 'Critical Thinking for Maximum Business Profitability',
     courseMode: 'In-person (private corporate) or live online',
     areaServed: 'MY',
     educationalLevel: 'Professional',
