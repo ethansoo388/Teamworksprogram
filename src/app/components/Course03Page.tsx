@@ -204,8 +204,9 @@ export function Course03Page() {
             </div>
 
             <div className="text-center mt-12">
-              <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
+              <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl group">
                 Solve These Problems with Your Team
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
@@ -274,8 +275,9 @@ export function Course03Page() {
 
             {/* CTA */}
             <div className="text-center mt-16">
-              <a href="/teamworks/bookConsultation.html" className="inline-flex flex-col items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
+              <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl group">
                 See If This Course Fits Your Team
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <p className="text-sm text-gray-500 mt-4">
                 A short conversation. No obligation.
