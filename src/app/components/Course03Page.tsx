@@ -162,7 +162,7 @@ export function Course03Page() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
-                Is Your SME Being Held Back by These Hidden Costs?
+                Is Your Company Being Held Back by These Hidden Costs?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Don't let inefficiency block your growth. Recognize these daily business drains?
