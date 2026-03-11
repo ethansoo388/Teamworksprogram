@@ -475,6 +475,12 @@ function generate404Page() {
   console.log('✅ 404 page generated');
 }
 
+function generateHtaccess() {
+  console.log('🔀 Generating .htaccess...');
+  fs.copyFileSync(path.join(templatesDir, '.htaccess'), path.join(publicDir, '.htaccess'));
+  console.log('✅ .htaccess generated');
+}
+
 // ---------------------------------------------------------------------------
 // Asset copy — src/assets → public/assets
 // ---------------------------------------------------------------------------
@@ -990,6 +996,9 @@ async function exportStaticSite() {
     console.log('');
 
     generate404Page();
+    console.log('');
+
+    generateHtaccess();
     console.log('');
 
     copyAssets();

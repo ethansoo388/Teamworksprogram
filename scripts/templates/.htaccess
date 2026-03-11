@@ -1,0 +1,125 @@
+Options -Indexes
+RewriteEngine On
+
+# ============================================================
+# SECTION 1: HTTP -> HTTPS (non-www and www)
+# ============================================================
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ============================================================
+# SECTION 2: Non-www -> www canonical redirect
+# ============================================================
+RewriteCond %{HTTP_HOST} ^ciagile\.com$ [NC]
+RewriteRule ^ https://www.ciagile.com%{REQUEST_URI} [R=301,L]
+
+# ============================================================
+# SECTION 3: 410 GONE - Old content with no equivalent
+# (blogs, courses, events, Elementor, country-prefixed pages)
+# ============================================================
+
+# --- Elementor library URLs (WordPress artefacts) ---
+RewriteCond %{QUERY_STRING} elementor_library [NC]
+RewriteRule ^ - [G,L]
+
+# --- Old search placeholder URLs ---
+RewriteCond %{QUERY_STRING} search_term_string [NC]
+RewriteRule ^ - [G,L]
+
+# --- Old blog posts (all patterns) ---
+RewriteRule ^(en-[a-z]{2}/)?blog- - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?blogs(/.*)?$ - [G,L]
+RewriteRule ^blogs(/.*)?$ - [G,L]
+RewriteRule ^blogs\.html$ - [G,L]
+RewriteRule ^blogs-ci-agile(/.*)?$ - [G,L]
+
+# --- Old course pages ---
+RewriteRule ^(en-[a-z]{2}/)?course- - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?course-agile-scrum-101(/.*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?course-agile-scrum-201(/.*)?$ - [G,L]
+
+# --- Old agile training pages ---
+RewriteRule ^(en-[a-z]{2}/)?agile-for-leaders(\.html|-step[0-9].*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?agile-for-hr(\.html|-step[0-9].*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?agile-for-pm(\.html|-step[0-9].*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?agile-personal(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?agile-corporate(\.html)?$ - [G,L]
+RewriteRule ^agile-scrum-glossary(/.*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?agilemanifesto(\.html|/.*)?$ - [G,L]
+
+# --- Old Scrum/Scale pages ---
+RewriteRule ^(en-[a-z]{2}/)?scrumatscale(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?scrum-at-scale(/.*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?scrum-at-scale-guide(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?scrum-at-scale-framework(/.*)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?scrumguide(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?truescrum(\.html)?$ - [G,L]
+RewriteRule ^the-2020-scrum-guide(/.*)?$ - [G,L]
+RewriteRule ^know-scrumscale(\.html)?$ - [G,L]
+
+# --- Old solutions pages ---
+RewriteRule ^solutions- - [G,L]
+RewriteRule ^solution-for- - [G,L]
+
+# --- Old FAQ pages ---
+RewriteRule ^faq- - [G,L]
+RewriteRule ^faqs(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?faqs(\.html)?$ - [G,L]
+RewriteRule ^frequently-asked-questions - [G,L]
+RewriteRule ^glossary(\.html)?$ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?glossary(\.html)?$ - [G,L]
+
+# --- Old events ---
+RewriteRule ^events/ - [G,L]
+RewriteRule ^agile-tour-kl- - [G,L]
+RewriteRule ^agile_tour_kuala_lumpur - [G,L]
+
+# --- Old country-prefix homepages ---
+RewriteRule ^en-[a-z]{2}/?$ - [G,L]
+
+# --- Misc old pages with no equivalent ---
+RewriteRule ^index\.html$ - [G,L]
+RewriteRule ^index/$ - [G,L]
+RewriteRule ^quick-start- - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?step-by-step-guide- - [G,L]
+RewriteRule ^product-tag/ - [G,L]
+RewriteRule ^product/ - [G,L]
+RewriteRule ^files/ - [G,L]
+RewriteRule ^author/ - [G,L]
+RewriteRule ^(en-[a-z]{2}/)?true-scrum- - [G,L]
+RewriteRule ^rsm-vs-psm - [G,L]
+RewriteRule ^what-should-my-team - [G,L]
+RewriteRule ^is-your-organization - [G,L]
+RewriteRule ^dell-technologies - [G,L]
+RewriteRule ^a-financial-woman - [G,L]
+RewriteRule ^the-new-workstyle - [G,L]
+RewriteRule ^ebook-from-bad-scrum - [G,L]
+RewriteRule ^5-must-have-traits - [G,L]
+RewriteRule ^this-call-which - [G,L]
+RewriteRule ^despite-working - [G,L]
+RewriteRule ^results-oriented - [G,L]
+
+# ============================================================
+# SECTION 4: 301 PERMANENT REDIRECTS - Old URLs to new pages
+# ============================================================
+
+# About Us
+RewriteRule ^about-us/?$ /aboutus.html [R=301,L]
+RewriteRule ^about\.html$ /aboutus.html [R=301,L]
+RewriteRule ^aboutus/?$ /aboutus.html [R=301,L]
+RewriteRule ^en-[a-z]{2}/aboutus\.html$ /aboutus.html [R=301,L]
+
+# Contact Us
+RewriteRule ^contact-us(/.*)?$ /contactus.html [R=301,L]
+RewriteRule ^contactus/?$ /contactus.html [R=301,L]
+RewriteRule ^contactus\.html$ /contactus.html [R=301,L]
+RewriteRule ^en-[a-z]{2}/contactus\.html$ /contactus.html [R=301,L]
+
+# Privacy Policy
+RewriteRule ^privacy-policy/?$ /privacy-policy.html [R=301,L]
+RewriteRule ^privacypolicy(\.html|/.*)?$ /privacy-policy.html [R=301,L]
+RewriteRule ^en-[a-z]{2}/privacypolicy\.html$ /privacy-policy.html [R=301,L]
+
+# Course pages with external backlinks - redirect to nearest equivalent
+RewriteRule ^course-leading-hyper-productive-scrum-teams-rsmpo/?$ /jess/ [R=301,L]
+RewriteRule ^scrumatscale/?$ /jess/ [R=301,L]
