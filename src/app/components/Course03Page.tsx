@@ -157,6 +157,60 @@ export function Course03Page() {
           </div>
         </section>
 
+        {/* Stop These Daily Frustrations Section */}
+        <section className="bg-white py-20 lg:py-32">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
+                Is Your SME Being Held Back by These Hidden Costs?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Don't let inefficiency block your growth. Recognize these daily business drains?
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Frustration 1 */}
+              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Management Overload</h3>
+                <p className="text-gray-600">
+                  Teams rely on you for decisions on routine tasks, preventing you from scaling the business.
+                </p>
+              </div>
+
+              {/* Frustration 2 */}
+              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">The "Error-Prone" Loop</h3>
+                <p className="text-gray-600">
+                  Recurring, avoidable mistakes that drain time and erode your profit margins.
+                </p>
+              </div>
+
+              {/* Frustration 3 */}
+              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Analysis Paralysis</h3>
+                <p className="text-gray-600">
+                  Critical discussions become endless circular meetings with zero clear outcomes.
+                </p>
+              </div>
+
+              {/* Frustration 4 */}
+              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Lack of Initiative</h3>
+                <p className="text-gray-600">
+                  Staff wait for instructions instead of taking ownership when facing a problem.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
+                Solve These Problems with Your Team
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Section - "See the work. Remove the friction." */}
         <section id="benefits" className="bg-gray-50 py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -467,62 +521,8 @@ export function Course03Page() {
           </div>
         </section>
 
-        {/* Stop These Daily Frustrations Section */}
-        <section className="bg-white py-20 lg:py-32">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
-                Is Your SME Being Held Back by These Hidden Costs?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Don't let inefficiency block your growth. Recognize these daily business drains?
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Frustration 1 */}
-              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Management Overload</h3>
-                <p className="text-gray-600">
-                  Teams rely on you for decisions on routine tasks, preventing you from scaling the business.
-                </p>
-              </div>
-
-              {/* Frustration 2 */}
-              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">The "Error-Prone" Loop</h3>
-                <p className="text-gray-600">
-                  Recurring, avoidable mistakes that drain time and erode your profit margins.
-                </p>
-              </div>
-
-              {/* Frustration 3 */}
-              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Analysis Paralysis</h3>
-                <p className="text-gray-600">
-                  Critical discussions become endless circular meetings with zero clear outcomes.
-                </p>
-              </div>
-
-              {/* Frustration 4 */}
-              <div className="border-2 border-red-200 rounded-2xl p-8 bg-red-50/50">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Lack of Initiative</h3>
-                <p className="text-gray-600">
-                  Staff wait for instructions instead of taking ownership when facing a problem.
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg hover:shadow-xl">
-                Solve These Problems with Your Team
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* By the end / Outcomes Section */}
-        <section id="outcomes" className="bg-gray-50 py-20 lg:py-32">
+        <section id="outcomes" className="bg-white py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               {/* Left: By the end of this 2-day course */}
