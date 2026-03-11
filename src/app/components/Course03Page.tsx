@@ -96,18 +96,18 @@ export function Course03Page() {
                 {/* Heading */}
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
                   Critical Thinking for<br />
-                  <span className="text-orange-600">Better Work.</span>
+                  <span className="text-orange-600">Maximum Business Profitability</span>
                 </h1>
-                
+
                 {/* Sub-tagline */}
                 <p className="text-base lg:text-lg italic text-gray-600 mb-6">
-                  Use essential critical thinking techniques and Kanban to deliver faster.
+                  Train your team to see problems clearly, question assumptions, and make better decisions at work.
                 </p>
 
                 {/* Description */}
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  <strong>When work is unclear, teams slow down.</strong><br />
-                  Critical Thinking for Better Work helps teams prioritise clearly, make better decisions, and keep work moving — without overload or chaos.
+                  <strong>When teams rush without questioning assumptions or checking facts, work slows down. Bottlenecks appear. Problems repeat. Decisions become guesswork.</strong><br />
+                  This practical <strong>2-day hands-on workshop</strong> helps teams observe work clearly, ask better questions, identify real problems, and decide what to improve next.
                 </p>
 
                 {/* Course Info Cards */}
@@ -138,7 +138,7 @@ export function Course03Page() {
 
                 {/* CTA Button */}
                 <a href="/teamworks/bookConsultation.html" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all group">
-                  <span className="font-medium">Talk to Us About Your Team</span>
+                  <span className="font-medium">Book This Course For Your Team</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
