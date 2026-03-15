@@ -83,7 +83,7 @@ export function Hero() {
       </section>
 
       {/* ── DESKTOP LAYOUT (≥ lg) ─────────────────────────────────────────── */}
-      <section className="hidden lg:flex relative h-[85vh] min-h-[600px] items-center overflow-hidden">
+      <section className="hidden lg:flex relative h-[85vh] min-h-[600px] items-center overflow-hidden pt-[72px]">
 
         {/* Full Width Background Image */}
         <div className="absolute inset-0 z-0">

@@ -49,7 +49,7 @@ export function LeadershipTrainingPage() {
       <MainSiteNavigation />
       
       {/* Hero Section - Full Width Cinematic */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden pt-[72px]">
         {/* Full Width Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
