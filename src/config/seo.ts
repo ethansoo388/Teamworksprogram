@@ -50,7 +50,7 @@ export const seo: SEOConfig = {
   og: {
     type: "website",
     defaultImageBySiteType: {
-      main: "/assets/og/main-og.webp",
+      main: "/assets/og/main-og-v2.webp",
       teamworks: "/assets/og/teamworks-og.webp",
       jess: "/assets/og/jess-og.webp",
     },
@@ -59,7 +59,7 @@ export const seo: SEOConfig = {
         title: "Enterprise & Team Performance Training in Malaysia | CI Agile",
         description:
           "Increase revenue, reduce cost, and gain more customers through world-class agile, AI, and leadership training programs delivered across Malaysia.",
-        image: "/assets/og/main-og.webp",
+        image: "/assets/og/main-og-v2.webp",
       },
       "teamworks/index.html": {
         title: "Private Team Training Workshops in Malaysia | TeamWorks by CI Agile",
