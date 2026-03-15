@@ -94,9 +94,8 @@ export function Course03Page() {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
-                  Critical Thinking for<br />
-                  <span className="text-orange-600">Maximum Business Profitability</span>
+                <h1 className="text-5xl lg:text-5xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                  Critical Thinking for <span className="text-orange-600">Maximum Business Profitability</span>
                 </h1>
 
                 {/* Sub-tagline */}
