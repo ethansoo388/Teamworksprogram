@@ -806,7 +806,7 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Enterprise Teams Card */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
@@ -850,7 +850,7 @@ export function LeadershipTrainingPage() {
               
               {/* Individual Leaders Card */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10"
+                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
@@ -939,7 +939,7 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* For Enterprise Leaders & Sponsors */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-blue-500/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-blue-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
@@ -1014,7 +1014,7 @@ export function LeadershipTrainingPage() {
 
               {/* For Individual Leaders */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-purple-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
@@ -1204,7 +1204,7 @@ export function LeadershipTrainingPage() {
               className="relative max-w-4xl mx-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-amber-400/20 to-amber-500/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/30 rounded-3xl p-12 text-center">
+              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-amber-500/30 rounded-3xl p-12 text-center">
                 <div className="mb-6">
                   <span className="text-amber-400 text-sm font-semibold uppercase tracking-widest">The Outcome</span>
                 </div>
