@@ -52,7 +52,7 @@ const courses = [
   },
   {
     id: "04",
-    title: "Practical Lean Problem Solving",
+    title: "Proactive Problem Solving at Work",
     description: "Solve recurring work problems that cost time and money using practical Lean thinking.",
     image: leanProblemSolvingImage,
     icon: TrendingUp,

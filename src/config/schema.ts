@@ -50,7 +50,7 @@ export const courseSchemaByFilename: Record<
     educationalLevel: 'Professional',
   },
   'teamworks/practical-lean-problem-solving.html': {
-    name: 'Practical Lean Problem Solving',
+    name: 'Proactive Problem Solving at Work',
     courseMode: 'In-person (private corporate) or live online',
     areaServed: 'MY',
     educationalLevel: 'Professional',

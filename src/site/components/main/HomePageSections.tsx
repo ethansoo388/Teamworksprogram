@@ -801,7 +801,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               </li>
               <li>
                 <a href="/teamworks/practical-lean-problem-solving.html" className={footerLinkClass}>
-                  Practical Lean Problem Solving
+                  Proactive Problem Solving at Work
                 </a>
               </li>
               <li>

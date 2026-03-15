@@ -126,7 +126,7 @@ export const routes: RouteEntry[] = [
     modulePath: "/src/site/pages/teamworks/PracticalLeanPage.tsx",
     componentName: "PracticalLeanPage",
     filename: "teamworks/practical-lean-problem-solving.html",
-    title: "Practical Lean Problem Solving - TeamWorks Course 04",
+    title: "Proactive Problem Solving at Work - TeamWorks Course 04",
     description:
       "Empower your frontline to solve problems using practical Lean thinking. Reduce recurring issues, improve customer satisfaction, and build a problem-solving culture.",
     siteType: "teamworks",

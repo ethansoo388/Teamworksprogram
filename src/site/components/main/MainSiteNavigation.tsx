@@ -240,10 +240,10 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
                                 <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
-                                  Practical Lean Problem Solving
+                                  Proactive Problem Solving at Work
                                 </h5>
                                 <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
-                                  Eliminate recurring problems using practical Lean methods.
+                                  Train employees to analyse problems and recommend improvements.
                                 </p>
                               </a>
                               <a
@@ -789,8 +789,8 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                             <p className="text-xs text-gray-600 mt-0.5">Identify profit leaks and drive measurable ROI with a 2-day critical thinking framework.</p>
                           </a>
                           <a href="/teamworks/practical-lean-problem-solving.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
-                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Practical Lean Problem Solving</h6>
-                            <p className="text-xs text-gray-600 mt-0.5">Eliminate recurring problems using practical Lean methods.</p>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Proactive Problem Solving at Work</h6>
+                            <p className="text-xs text-gray-600 mt-0.5">Train employees to analyse problems and recommend improvements.</p>
                           </a>
                           <a href="/teamworks/ai-skills-for-your-team.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
                             <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">AI Skills for YOUR Team</h6>
