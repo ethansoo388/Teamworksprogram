@@ -96,8 +96,7 @@ export function Course04Page() {
 
                 {/* Heading */}
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
-                  Proactive Problem Solving<br />
-                  <span className="text-[#16A34A]">at Work</span>
+                  Proactive Problem Solving <span className="text-[#16A34A]">at Work</span>
                 </h1>
 
                 {/* Sub-tagline */}
@@ -116,13 +115,13 @@ export function Course04Page() {
                   Managers end up solving operational issues themselves, while the same problems keep repeating.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
-                  Most employees escalate problems.
+                  <strong>Most employees escalate problems.</strong>
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
-                  This 2-day practical workshop trains employees to analyse problems, identify root causes, and recommend practical improvements.
+                  This <strong>2-day practical workshop</strong> trains employees to analyse problems, identify root causes, and recommend practical improvements.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
-                  Instead of waiting for instructions, your team learns how to think through problems and contribute solutions.
+                  Instead of waiting for instructions, your team learns how to <strong>think through problems and contribute solutions.</strong>
                 </p>
 
                 {/* Course Info Cards */}
@@ -187,10 +186,10 @@ export function Course04Page() {
                 <span className="text-[#16A34A]">Draining Your Business</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light mb-4">
-                Most operational problems are not big. They are small issues that appear every day: delays, mistakes, repeated questions, inefficient processes. Individually they look minor. But over time they drain productivity, frustrate employees, and consume management time.
+                Most operational problems are not big. They are small issues that appear every day: <strong>delays, mistakes, repeated questions, inefficient processes.</strong> Individually they look minor. But over time they <strong>drain productivity, frustrate employees, and consume management time.</strong>
               </p>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-                These problems persist because employees escalate problems instead of analysing them.
+                These problems persist because <strong>employees escalate problems instead of analysing them.</strong>
               </p>
             </div>
 
@@ -255,12 +254,12 @@ export function Course04Page() {
 
             <div className="max-w-3xl mx-auto mb-12 space-y-4 text-center">
               <p className="text-lg text-gray-600 font-light">Many organisations operate with this pattern:</p>
-              <p className="text-lg text-gray-600 font-light">Employees report problems.</p>
-              <p className="text-lg text-gray-600 font-light">Managers solve them.</p>
+              <p className="text-lg text-gray-600 font-light"><strong>Employees report problems.</strong></p>
+              <p className="text-lg text-gray-600 font-light"><strong>Managers solve them.</strong></p>
               <p className="text-lg text-gray-600 font-light">Over time this creates dependency. Managers become overwhelmed while employees wait for instructions.</p>
               <p className="text-lg text-gray-600 font-light">This workshop helps organisations shift toward a healthier model:</p>
-              <p className="text-lg text-gray-600 font-light">Employees analyse problems.</p>
-              <p className="text-lg text-gray-600 font-light">Employees recommend improvements.</p>
+              <p className="text-lg text-gray-600 font-light"><strong>Employees analyse problems.</strong></p>
+              <p className="text-lg text-gray-600 font-light"><strong>Employees recommend improvements.</strong></p>
             </div>
 
             <div className="max-w-4xl mx-auto">
@@ -398,7 +397,7 @@ export function Course04Page() {
                     Analyse Root Causes
                   </h3>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
-                    Use structured questioning techniques to understand why problems occur instead of fixing symptoms.
+                    Use structured questioning techniques to understand <strong>why problems occur</strong> instead of fixing symptoms.
                   </p>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-[#22C55E]"></div>
@@ -555,7 +554,7 @@ export function Course04Page() {
                     <p className="text-gray-700">Support managers with better decisions</p>
                   </div>
                 </div>
-                <p className="text-gray-600 font-light mt-6 italic">Instead of escalating problems, employees become active contributors to improvement.</p>
+                <p className="text-gray-600 font-light mt-6 italic">Instead of escalating problems, employees become <strong>active contributors to improvement.</strong></p>
               </div>
 
               {/* Right: Outcomes for Success */}
@@ -598,7 +597,7 @@ export function Course04Page() {
                     <p className="text-gray-700">Managers spending less time firefighting</p>
                   </div>
                 </div>
-                <p className="text-gray-600 font-light mt-6 italic">Over time, this creates a culture of continuous improvement.</p>
+                <p className="text-gray-600 font-light mt-6 italic">Over time, this creates a <strong>culture of continuous improvement</strong>.</p>
               </div>
             </div>
           </div>
@@ -829,26 +828,25 @@ export function Course04Page() {
                   What You'll Master
                 </h2>
 
-                <div className="space-y-8 mb-10">
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Structured Problem Identification</h4>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Root Cause Thinking (5 Whys)</h4>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Practical Improvement Design</h4>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Small changes that remove inefficiencies</h4>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Continuous Improvement Mindset</h4>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-2 text-base lg:text-lg">Develop the habit of analysing and improving work</h4>
-                  </div>
-                </div>
+                <ul className="space-y-3 mb-10">
+                  {[
+                    "Structured Problem Identification",
+                    "Root Cause Thinking (5 Whys)",
+                    "Practical Improvement Design",
+                    "Small changes that remove inefficiencies",
+                    "Continuous Improvement Mindset",
+                    "Develop the habit of analysing and improving work",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-[#16A34A]" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-900 font-medium text-sm lg:text-base">{item}</p>
+                    </li>
+                  ))}
+                </ul>
 
                 {/* Real Impact Box */}
                 <div className="bg-red-50 border border-red-100 p-5 lg:p-6 rounded-lg">
@@ -969,7 +967,7 @@ export function Course04Page() {
               Many organisations struggle because employees escalate problems instead of analysing them.
             </p>
             <p className="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">
-              This workshop equips your team with the mindset and tools to identify issues, recommend improvements, and contribute to operational excellence.
+              This workshop equips your team with the <strong>mindset and tools to identify issues, recommend improvements, and contribute to operational excellence.</strong>
             </p>
 
             {/* CTA Button */}
