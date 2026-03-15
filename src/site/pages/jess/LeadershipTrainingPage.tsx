@@ -939,13 +939,13 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* For Enterprise Leaders & Sponsors */}
               <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-blue-500/50 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-blue-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                 
                 <div className="relative z-10">
                   <div className="mb-6">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 text-blue-400 text-sm font-medium rounded-full">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-blue-500/50 text-blue-400 text-sm font-medium rounded-full">
                       For Organizations
                     </span>
                   </div>
