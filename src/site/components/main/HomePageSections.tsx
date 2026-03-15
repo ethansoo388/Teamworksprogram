@@ -25,7 +25,7 @@ import businessPresentationImage from "@/assets/img/main/people-jeff-sutherland-
 // ---------------------------------------------------------------------------
 function HeroSection() {
   return (
-    <section className="flex flex-col md:relative md:h-[85vh] md:min-h-[600px] md:items-center overflow-hidden bg-white">
+    <section className="flex flex-col md:relative md:h-[85vh] md:min-h-[600px] md:items-center overflow-hidden bg-gray-900 md:bg-white">
       {/* Full Width Background Video (background visual) */}
       <div className="relative h-[45vh] md:absolute md:h-auto md:inset-0 md:z-0">
         <video
@@ -43,6 +43,8 @@ function HeroSection() {
             type="video/webm"
           />
         </video>
+        {/* Gradient fade: video dissolves into dark panel on mobile */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-gray-900 md:hidden"></div>
       </div>
 
       {/* Content Container */}
