@@ -287,110 +287,98 @@ export function Course03Page() {
         </section>
 
         {/* Course Modules Section */}
-        <section id="modules" className="bg-white py-20 lg:py-32">
+        <section id="modules" className="bg-white py-16 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-              {/* Left: Modules Content */}
+            {/* Section Header */}
+            <div className="mb-10 lg:mb-14">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">A Practical Roadmap to Sharper Business Decisions</h2>
+              <p className="text-xl text-gray-600">
+                We teach a simple, visual way to improve thinking quality so your team chooses better actions and delivers consistent results.
+              </p>
+            </div>
+
+            {/* Mobile only: 3-col image strip — between header and module list */}
+            <div className="lg:hidden mb-10 grid grid-cols-3 gap-3">
+              <div className="rounded-xl overflow-hidden shadow-sm aspect-square">
+                <img src={moduleImage1} alt="Visual thinking tools" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-sm aspect-square">
+                <img src={moduleImage2} alt="Collaborative decisions" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-sm aspect-square">
+                <img src={moduleImage3} alt="Bottleneck identification" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* 2-col layout: module list left, image stack right */}
+            <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16">
+              {/* Left: Module List */}
               <div>
-                {/* Section Header */}
-                <div className="mb-12">
-                  <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">A Practical Roadmap to Sharper Business Decisions</h2>
-                  <p className="text-xl text-gray-600">
-                    We teach a simple, visual way to improve thinking quality so your team chooses better actions and delivers consistent results.
+                {/* Module 1 */}
+                <div className="py-7 border-b border-gray-100">
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">Module 1</span>
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-gray-900">Clear Sight — Eliminating Rushed Judgment</h3>
+                  <p className="text-gray-600">
+                    Learn to slow down when the stakes are high. Separate facts from assumptions and make the workflow visible so problems can be examined properly before they become costly.
                   </p>
                 </div>
 
-                {/* Modules List */}
-                <div className="space-y-8">
-                  {/* Module 1 */}
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">1</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 1: Clear Sight — Eliminating Rushed Judgment</h3>
-                      <p className="text-gray-600">
-                        Learn to slow down when the stakes are high. Separate facts from assumptions and make the workflow visible so problems can be examined properly before they become costly.
-                      </p>
-                    </div>
-                  </div>
+                {/* Module 2 */}
+                <div className="py-7 border-b border-gray-100">
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">Module 2</span>
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-gray-900">Better Judgment — Filtering Out Bias</h3>
+                  <p className="text-gray-600">
+                    Understand how context and incomplete information lead to bad choices. Train your staff to interpret complex business situations more carefully to avoid "expensive mistakes."
+                  </p>
+                </div>
 
-                  {/* Module 2 */}
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">2</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 2: Better Judgment — Filtering Out Bias</h3>
-                      <p className="text-gray-600">
-                        Understand how context and incomplete information lead to bad choices. Train your staff to interpret complex business situations more carefully to avoid "expensive mistakes."
-                      </p>
-                    </div>
-                  </div>
+                {/* Module 3 */}
+                <div className="py-7 border-b border-gray-100">
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">Module 3</span>
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-gray-900">Flow Mastery — Removing Profit Bottlenecks</h3>
+                  <p className="text-gray-600">
+                    Use structured observation and visual tools to identify delays and recurring workflow problems. Find exactly where your business is losing time and money.
+                  </p>
+                </div>
 
-                  {/* Module 3 */}
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">3</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 3: Flow Mastery — Removing Profit Bottlenecks</h3>
-                      <p className="text-gray-600">
-                        Use structured observation and visual tools to identify delays and recurring workflow problems. Find exactly where your business is losing time and money.
-                      </p>
-                    </div>
-                  </div>
+                {/* Module 4 */}
+                <div className="py-7 border-b border-gray-100">
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">Module 4</span>
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-gray-900">Decisive Action — Proposing Logic-Backed Changes</h3>
+                  <p className="text-gray-600">
+                    Move from "firefighting" to Kaizen thinking. Your staff will learn to identify waste and propose changes backed by logic and data that management can actually approve.
+                  </p>
+                </div>
 
-                  {/* Module 4 */}
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">4</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 4: Decisive Action — Proposing Logic-Backed Changes</h3>
-                      <p className="text-gray-600">
-                        Move from "firefighting" to Kaizen thinking. Your staff will learn to identify waste and propose changes backed by logic and data that management can actually approve.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Module 5 */}
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">5</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900">Module 5: The Loop — Reflect, Refine, and Scale</h3>
-                      <p className="text-gray-600">
-                        Turn clearer thinking into a repeatable habit. Review outcomes and refine decisions over time, building a culture of continuous learning that scales with your business growth.
-                      </p>
-                    </div>
-                  </div>
+                {/* Module 5 */}
+                <div className="py-7">
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">Module 5</span>
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-gray-900">The Loop — Reflect, Refine, and Scale</h3>
+                  <p className="text-gray-600">
+                    Turn clearer thinking into a repeatable habit. Review outcomes and refine decisions over time, building a culture of continuous learning that scales with your business growth.
+                  </p>
                 </div>
               </div>
 
-              {/* Right: Images */}
-              <div className="relative h-full min-h-[700px]">
-                <div className="absolute top-0 left-0 w-3/5 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={moduleImage1}
-                    alt="Course module image 1"
-                    className="w-full h-auto object-cover"
-                  />
+              {/* Right: Image stack — desktop only, evenly distributed to match left column height */}
+              <div className="hidden lg:flex flex-col justify-between">
+                <div className="group">
+                  <div className="rounded-xl overflow-hidden shadow-md ring-1 ring-gray-900/5 aspect-[16/9]">
+                    <img src={moduleImage1} alt="Visual thinking tools" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <p className="mt-2 text-xs text-gray-400 font-medium uppercase tracking-wide pl-1">Modules 1–2 · Visual thinking tools</p>
                 </div>
-                <div className="absolute bottom-0 left-0 w-3/5 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={moduleImage2}
-                    alt="Course module image 2"
-                    className="w-full h-auto object-cover"
-                  />
+                <div className="group">
+                  <div className="rounded-xl overflow-hidden shadow-md ring-1 ring-gray-900/5 aspect-[16/9]">
+                    <img src={moduleImage2} alt="Collaborative decisions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <p className="mt-2 text-xs text-gray-400 font-medium uppercase tracking-wide pl-1">Modules 2–3 · Collaborative decisions</p>
                 </div>
-                <div className="absolute top-1/2 left-1/3 transform -translate-y-1/2 w-3/5 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={moduleImage3}
-                    alt="Course module image 3"
-                    className="w-full h-auto object-cover"
-                  />
+                <div className="group">
+                  <div className="rounded-xl overflow-hidden shadow-md ring-1 ring-gray-900/5 aspect-[16/9]">
+                    <img src={moduleImage3} alt="Bottleneck identification" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <p className="mt-2 text-xs text-gray-400 font-medium uppercase tracking-wide pl-1">Modules 3–4 · Bottleneck identification</p>
                 </div>
               </div>
             </div>
