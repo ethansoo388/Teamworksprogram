@@ -721,10 +721,10 @@ export function Course02Page() {
                     <div className="text-sm text-gray-500 mb-4">Per 2-day course</div>
                     <div className="flex flex-wrap items-baseline gap-4 mb-4">
                       <span className="text-5xl sm:text-7xl tracking-tight font-bold">RM350</span>
-                      <span className="text-2xl text-gray-500">per person/day</span>
+                      <span className="text-2xl text-gray-500">Only</span>
                     </div>
                     <div className="inline-block bg-white px-4 py-2 rounded-full text-sm">
-                      Up to 30 participants per session
+                      / Person / Day. Based on Class of 30.
                     </div>
                   </div>
 

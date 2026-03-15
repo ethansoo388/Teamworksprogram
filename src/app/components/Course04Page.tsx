@@ -729,10 +729,10 @@ export function Course04Page() {
                     <span className="text-6xl lg:text-7xl font-light text-gray-900">
                       RM350
                     </span>
-                    <span className="text-lg lg:text-xl text-gray-500 font-light">per person/day</span>
+                    <span className="text-lg lg:text-xl text-gray-500 font-light">Only</span>
                   </div>
                   <p className="text-gray-700 font-light text-sm lg:text-base mb-8">
-                    Up to 30 participants per session
+                    / Person / Day. Based on Class of 30.
                   </p>
                 </div>
 
