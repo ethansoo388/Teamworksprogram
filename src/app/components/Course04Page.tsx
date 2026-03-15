@@ -100,27 +100,27 @@ export function Course04Page() {
                 </h1>
 
                 {/* Sub-tagline */}
-                <p className="text-base lg:text-lg text-gray-700 mb-3 md:mb-4 font-light">
+                <p className="text-base lg:text-lg italic text-gray-600 mb-3 md:mb-4">
                   Train employees to analyse problems and recommend improvements instead of escalating issues.
                 </p>
 
                 {/* Description */}
-                <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-3">
                   Many business owners face the same frustration:
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-3">
                   Employees report problems — but offer no solutions.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-3">
                   Managers end up solving operational issues themselves, while the same problems keep repeating.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-3">
                   <strong>Most employees escalate problems.</strong>
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-3">
                   This <strong>2-day practical workshop</strong> trains employees to analyse problems, identify root causes, and recommend practical improvements.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   Instead of waiting for instructions, your team learns how to <strong>think through problems and contribute solutions.</strong>
                 </p>
 
@@ -185,10 +185,10 @@ export function Course04Page() {
                 Small Operational Issues Are Quietly<br />
                 <span className="text-[#16A34A]">Draining Your Business</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light mb-4">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
                 Most operational problems are not big. They are small issues that appear every day: <strong>delays, mistakes, repeated questions, inefficient processes.</strong> Individually they look minor. But over time they <strong>drain productivity, frustrate employees, and consume management time.</strong>
               </p>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 These problems persist because <strong>employees escalate problems instead of analysing them.</strong>
               </p>
             </div>
@@ -201,8 +201,8 @@ export function Course04Page() {
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style={{ background: "linear-gradient(to bottom right, #22C55E, #16A34A)" }}>
                   <AlertCircle className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Employees Escalate Problems</h3>
-                <p className="text-gray-600 leading-relaxed font-light">Employees report issues but rarely analyse the causes or suggest solutions. Managers become the default problem solvers.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Employees Escalate Problems</h3>
+                <p className="text-gray-600 leading-relaxed">Employees report issues but rarely analyse the causes or suggest solutions. Managers become the default problem solvers.</p>
               </div>
 
               {/* Pain Point 2 */}
@@ -211,8 +211,8 @@ export function Course04Page() {
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style={{ background: "linear-gradient(to bottom right, #22C55E, #16A34A)" }}>
                   <Clock className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Managers Firefight Daily</h3>
-                <p className="text-gray-600 leading-relaxed font-light">Managers spend large amounts of time resolving operational issues that teams could potentially solve themselves.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Managers Firefight Daily</h3>
+                <p className="text-gray-600 leading-relaxed">Managers spend large amounts of time resolving operational issues that teams could potentially solve themselves.</p>
               </div>
 
               {/* Pain Point 3 */}
@@ -221,8 +221,8 @@ export function Course04Page() {
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style={{ background: "linear-gradient(to bottom right, #22C55E, #16A34A)" }}>
                   <UserX className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Problems Keep Repeating</h3>
-                <p className="text-gray-600 leading-relaxed font-light">The same operational problems return again and again because root causes are never addressed.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Problems Keep Repeating</h3>
+                <p className="text-gray-600 leading-relaxed">The same operational problems return again and again because root causes are never addressed.</p>
               </div>
 
               {/* Pain Point 4 */}
@@ -231,8 +231,8 @@ export function Course04Page() {
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg mb-6" style={{ background: "linear-gradient(to bottom right, #22C55E, #16A34A)" }}>
                   <TrendingDown className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Improvement Rarely Happens</h3>
-                <p className="text-gray-600 leading-relaxed font-light">Teams notice inefficiencies but lack a structured way to analyse and improve them.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#16A34A] transition-colors">Improvement Rarely Happens</h3>
+                <p className="text-gray-600 leading-relaxed">Teams notice inefficiencies but lack a structured way to analyse and improve them.</p>
               </div>
             </div>
           </div>
@@ -253,13 +253,13 @@ export function Course04Page() {
             </div>
 
             <div className="max-w-3xl mx-auto mb-12 space-y-4 text-center">
-              <p className="text-lg text-gray-600 font-light">Many organisations operate with this pattern:</p>
-              <p className="text-lg text-gray-600 font-light"><strong>Employees report problems.</strong></p>
-              <p className="text-lg text-gray-600 font-light"><strong>Managers solve them.</strong></p>
-              <p className="text-lg text-gray-600 font-light">Over time this creates dependency. Managers become overwhelmed while employees wait for instructions.</p>
-              <p className="text-lg text-gray-600 font-light">This workshop helps organisations shift toward a healthier model:</p>
-              <p className="text-lg text-gray-600 font-light"><strong>Employees analyse problems.</strong></p>
-              <p className="text-lg text-gray-600 font-light"><strong>Employees recommend improvements.</strong></p>
+              <p className="text-lg text-gray-600">Many organisations operate with this pattern:</p>
+              <p className="text-lg text-gray-600"><strong>Employees report problems.</strong></p>
+              <p className="text-lg text-gray-600"><strong>Managers solve them.</strong></p>
+              <p className="text-lg text-gray-600">Over time this creates dependency. Managers become overwhelmed while employees wait for instructions.</p>
+              <p className="text-lg text-gray-600">This workshop helps organisations shift toward a healthier model:</p>
+              <p className="text-lg text-gray-600"><strong>Employees analyse problems.</strong></p>
+              <p className="text-lg text-gray-600"><strong>Employees recommend improvements.</strong></p>
             </div>
 
             <div className="max-w-4xl mx-auto">
@@ -270,7 +270,7 @@ export function Course04Page() {
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-6 h-6 text-[#22C55E]" />
                     </div>
-                    <p className="text-base lg:text-lg text-gray-700 font-light leading-relaxed">
+                    <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                       Identify operational problems clearly
                     </p>
                   </div>
@@ -278,7 +278,7 @@ export function Course04Page() {
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-6 h-6 text-[#22C55E]" />
                     </div>
-                    <p className="text-base lg:text-lg text-gray-700 font-light leading-relaxed">
+                    <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                       Analyse root causes instead of symptoms
                     </p>
                   </div>
@@ -286,7 +286,7 @@ export function Course04Page() {
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-6 h-6 text-[#22C55E]" />
                     </div>
-                    <p className="text-base lg:text-lg text-gray-700 font-light leading-relaxed">
+                    <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                       Propose practical improvements
                     </p>
                   </div>
@@ -294,14 +294,14 @@ export function Course04Page() {
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-6 h-6 text-[#22C55E]" />
                     </div>
-                    <p className="text-base lg:text-lg text-gray-700 font-light leading-relaxed">
+                    <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                       Support managers with better decisions
                     </p>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-200">
-                  <p className="text-center text-base lg:text-lg text-gray-600 font-light italic">
+                  <p className="text-center text-base lg:text-lg text-gray-600 italic">
                     The result is a team that contributes to solving problems instead of escalating them.
                   </p>
                 </div>
@@ -335,10 +335,10 @@ export function Course04Page() {
                 A Structured, Practical<br />
                 <span className="text-[#16A34A]">Problem-Solving Framework</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light mb-4">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
                 Participants learn a structured workflow for analysing operational problems and improving daily work processes.
               </p>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 The framework is simple, practical, and designed for real workplace situations.
               </p>
             </div>
@@ -362,10 +362,10 @@ export function Course04Page() {
                     <div className="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div>
                     <span className="text-sm font-medium text-[#16A34A] tracking-wider">STEP 1</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
                     Identify Operational Gaps
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     Recognise recurring operational problems such as delays, bottlenecks, and inefficiencies in daily work.
                   </p>
                   <div className="flex items-center gap-2">
@@ -393,10 +393,10 @@ export function Course04Page() {
                     <div className="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div>
                     <span className="text-sm font-medium text-[#16A34A] tracking-wider">STEP 2</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
                     Analyse Root Causes
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     Use structured questioning techniques to understand <strong>why problems occur</strong> instead of fixing symptoms.
                   </p>
                   <div className="flex items-center gap-2">
@@ -424,10 +424,10 @@ export function Course04Page() {
                     <div className="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div>
                     <span className="text-sm font-medium text-[#16A34A] tracking-wider">STEP 3</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
                     Prioritise High-Impact Problems
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     Evaluate which problems should be solved first based on business impact.
                   </p>
                   <div className="flex items-center gap-2">
@@ -455,10 +455,10 @@ export function Course04Page() {
                     <div className="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div>
                     <span className="text-sm font-medium text-[#16A34A] tracking-wider">STEP 4</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
                     Improve Workflow Efficiency
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     Design practical improvements that reduce delays, eliminate bottlenecks, and improve work flow.
                   </p>
                   <div className="flex items-center gap-2">
@@ -486,10 +486,10 @@ export function Course04Page() {
                     <div className="h-1 w-12 bg-gradient-to-r from-[#22C55E] to-[#16A34A] rounded-full"></div>
                     <span className="text-sm font-medium text-[#16A34A] tracking-wider">STEP 5</span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 group-hover:text-[#16A34A] transition-colors duration-300">
                     Measure & Sustain Improvements
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     Track results and ensure improvements are sustained over time.
                   </p>
                   <div className="flex items-center gap-2">
@@ -554,7 +554,7 @@ export function Course04Page() {
                     <p className="text-gray-700">Support managers with better decisions</p>
                   </div>
                 </div>
-                <p className="text-gray-600 font-light mt-6 italic">Instead of escalating problems, employees become <strong>active contributors to improvement.</strong></p>
+                <p className="text-gray-600 mt-6 italic">Instead of escalating problems, employees become <strong>active contributors to improvement.</strong></p>
               </div>
 
               {/* Right: Outcomes for Success */}
@@ -562,7 +562,7 @@ export function Course04Page() {
                 <h2 className="text-3xl lg:text-4xl font-bold mb-4 tracking-tight">
                   Outcomes for Your Organisation
                 </h2>
-                <p className="text-gray-600 font-light mb-8">Organisations that build strong problem-solving teams often experience:</p>
+                <p className="text-gray-600 mb-8">Organisations that build strong problem-solving teams often experience:</p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full border-2 border-[#16A34A] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -597,7 +597,7 @@ export function Course04Page() {
                     <p className="text-gray-700">Managers spending less time firefighting</p>
                   </div>
                 </div>
-                <p className="text-gray-600 font-light mt-6 italic">Over time, this creates a <strong>culture of continuous improvement</strong>.</p>
+                <p className="text-gray-600 mt-6 italic">Over time, this creates a <strong>culture of continuous improvement</strong>.</p>
               </div>
             </div>
           </div>
@@ -615,7 +615,7 @@ export function Course04Page() {
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
                 Is This For You?
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 This workshop is ideal for organisations that want employees to take greater ownership in solving operational problems.
               </p>
             </div>
@@ -640,7 +640,7 @@ export function Course04Page() {
                   </div>
                 </div>
                 <div className="p-4 lg:p-5 bg-white">
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Support teams handling customer inquiries and concerns</p>
+                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2">Support teams handling customer inquiries and concerns</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -664,7 +664,7 @@ export function Course04Page() {
                   </div>
                 </div>
                 <div className="p-4 lg:p-5 bg-white">
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Sales executives and account managers</p>
+                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2">Sales executives and account managers</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -688,7 +688,7 @@ export function Course04Page() {
                   </div>
                 </div>
                 <div className="p-4 lg:p-5 bg-white">
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Operations teams and coordinators</p>
+                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2">Operations teams and coordinators</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -712,7 +712,7 @@ export function Course04Page() {
                   </div>
                 </div>
                 <div className="p-4 lg:p-5 bg-white">
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Receptionists and front-facing staff</p>
+                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2">Receptionists and front-facing staff</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -736,13 +736,13 @@ export function Course04Page() {
                   </div>
                 </div>
                 <div className="p-4 lg:p-5 bg-white">
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2 font-light">Restaurant and retail service personnel</p>
+                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed line-clamp-2">Restaurant and retail service personnel</p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#22C55E] via-[#16A34A] to-[#15803D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             </div>
 
-            <p className="text-center text-gray-600 font-light mt-10 text-base">
+            <p className="text-center text-gray-600 mt-10 text-base">
               No Lean or Six Sigma background is required.
             </p>
           </div>
@@ -761,7 +761,7 @@ export function Course04Page() {
               <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
                 An Investment in Operational Efficiency
               </h2>
-              <p className="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto font-light">
+              <p className="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto">
                 This workshop focuses on practical workplace problem solving that employees can apply immediately.
               </p>
             </div>
@@ -769,17 +769,17 @@ export function Course04Page() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               {/* Left Column - Pricing & Inclusions */}
               <div>
-                <p className="text-gray-500 font-light text-sm mb-4">Per 2-day course</p>
+                <p className="text-gray-500 text-sm mb-4">Per 2-day course</p>
 
                 {/* Price */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-3 mb-3">
-                    <span className="text-6xl lg:text-7xl font-light text-gray-900">
+                    <span className="text-6xl lg:text-7xl font-bold text-gray-900">
                       RM350
                     </span>
-                    <span className="text-lg lg:text-xl text-gray-500 font-light">Only</span>
+                    <span className="text-lg lg:text-xl text-gray-500">Only</span>
                   </div>
-                  <p className="text-gray-700 font-light text-sm lg:text-base mb-8">
+                  <p className="text-gray-700 text-sm lg:text-base mb-8">
                     / Person / Day. Based on Class of 30.
                   </p>
                 </div>
@@ -788,35 +788,35 @@ export function Course04Page() {
                 <div className="space-y-4 mb-12">
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-gray-900 font-light">2-day intensive workshop</span>
+                    <span className="text-gray-700">2-day intensive workshop</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-gray-900 font-light">Access to course materials</span>
+                    <span className="text-gray-700">Access to course materials</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-gray-900 font-light">Expert facilitator-led sessions</span>
+                    <span className="text-gray-700">Expert facilitator-led sessions</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-gray-900 font-light">Certificate of completion</span>
+                    <span className="text-gray-700">Certificate of completion</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-gray-900 font-light">Post-workshop support & community</span>
+                    <span className="text-gray-700">Post-workshop support & community</span>
                   </div>
                 </div>
 
                 {/* CTA Button */}
                 <div className="text-center">
-                  <a href="/teamworks/bookConsultation.html" className="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-normal transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">
+                  <a href="/teamworks/bookConsultation.html" className="w-full bg-[#22C55E] hover:bg-[#16A34A] text-white py-4 px-8 rounded-full text-base lg:text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center justify-center gap-2 group">
                     Talk to Us About Your Team
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
-                  <p className="text-sm text-gray-500 mt-4 font-light">
+                  <p className="text-sm text-gray-500 mt-4">
                     A short discussion to understand your goals and team needs.
                   </p>
                 </div>
@@ -854,7 +854,7 @@ export function Course04Page() {
                     <span className="text-red-500">&#128161;</span>
                     Real Impact
                   </h4>
-                  <p className="text-gray-700 leading-relaxed font-light text-sm lg:text-base">
+                  <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                     Teams report 60% faster problem resolution and significantly fewer recurring issues within 3 months of training.
                   </p>
                 </div>
@@ -963,10 +963,10 @@ export function Course04Page() {
             </h2>
 
             {/* Subheading Lines */}
-            <p className="text-lg lg:text-xl text-gray-600 mb-3 font-light max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-600 mb-3 max-w-3xl mx-auto">
               Many organisations struggle because employees escalate problems instead of analysing them.
             </p>
-            <p className="text-lg lg:text-xl text-gray-600 mb-10 font-light max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
               This workshop equips your team with the <strong>mindset and tools to identify issues, recommend improvements, and contribute to operational excellence.</strong>
             </p>
 
@@ -980,7 +980,7 @@ export function Course04Page() {
             </a>
 
             {/* Supporting Micro Text */}
-            <p className="text-sm text-gray-500 mt-4 font-light">
+            <p className="text-sm text-gray-500 mt-4">
               A short discussion to understand your goals and team needs. No commitment required.
             </p>
           </div>
