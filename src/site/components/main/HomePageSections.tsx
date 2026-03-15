@@ -25,9 +25,9 @@ import businessPresentationImage from "@/assets/img/main/people-jeff-sutherland-
 // ---------------------------------------------------------------------------
 function HeroSection() {
   return (
-    <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-white">
+    <section className="flex flex-col md:relative md:h-[85vh] md:min-h-[600px] md:items-center overflow-hidden bg-white">
       {/* Full Width Background Video (background visual) */}
-      <div className="absolute inset-0 z-0">
+      <div className="relative h-[45vh] md:absolute md:h-auto md:inset-0 md:z-0">
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -50,12 +50,12 @@ function HeroSection() {
         Content sits above the video, and the hero background runs under the fixed navbar.
         Add top padding so the panel never hides behind the navbar.
       */}
-      <div className="relative z-10 w-full px-6 lg:px-16 pt-24 lg:pt-28">
+      <div className="bg-white md:bg-transparent z-10 w-full px-6 lg:px-16 py-8 md:py-0 md:pt-24 lg:pt-28">
         <div className="max-w-7xl mx-auto">
           {/* Panel placement: left third + slightly lower on larger screens */}
           <div className="relative max-w-2xl lg:max-w-[520px] xl:max-w-[560px] lg:-ml-6 md:translate-y-6 lg:translate-y-10">
             {/* Local readability wash (keeps video colors intact) */}
-            <div className="absolute -inset-4 sm:-inset-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-lg"></div>
+            <div className="hidden md:block absolute -inset-4 lg:-inset-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-lg"></div>
 
             <div className="relative">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.15] text-gray-900 mb-6">
