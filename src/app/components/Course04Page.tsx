@@ -241,27 +241,172 @@ export function Course04Page() {
         {/* Business Impact / Transformation Section */}
         <section className="bg-white py-20 lg:py-32">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
+            {/* Section header */}
+            <div className="text-center mb-14">
               <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-green-50 border border-green-100">
                 <span className="text-xs lg:text-sm font-medium text-[#16A34A] tracking-wide uppercase">
                   The Transformation
                 </span>
               </div>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 tracking-tight">
                 The Transformation You'll Experience
               </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Most organisations are stuck in a repeating cycle. This workshop breaks it.
+              </p>
             </div>
 
-            <div className="max-w-3xl mx-auto mb-12 space-y-4 text-center">
-              <p className="text-lg text-gray-600">Many organisations operate with this pattern:</p>
-              <p className="text-lg text-gray-600"><strong>Employees report problems.</strong></p>
-              <p className="text-lg text-gray-600"><strong>Managers solve them.</strong></p>
-              <p className="text-lg text-gray-600">Over time this creates dependency. Managers become overwhelmed while employees wait for instructions.</p>
-              <p className="text-lg text-gray-600">This workshop helps organisations shift toward a healthier model:</p>
-              <p className="text-lg text-gray-600"><strong>Employees analyse problems.</strong></p>
-              <p className="text-lg text-gray-600"><strong>Employees recommend improvements.</strong></p>
+            {/* TODAY'S PATTERN — red pill */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-50 border-2 border-red-300 shadow-sm">
+                <svg className="w-3.5 h-3.5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span className="text-xs font-bold text-red-500 tracking-widest uppercase">Today's Pattern</span>
+              </div>
             </div>
 
+            {/* BEFORE: 3 circles with red arrows — responsive (scales down on mobile) */}
+            <div className="flex items-center justify-center mb-4">
+
+              {/* Node 1: Problem Occurs */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-gray-100 border-4 border-gray-300 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-400 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-gray-500 text-center leading-tight">PROBLEM<br />OCCURS</span>
+                </div>
+              </div>
+
+              {/* Red arrow 1→2 */}
+              <div className="flex items-center w-8 md:w-14">
+                <div className="flex-1 h-0.5 bg-red-400"></div>
+                <div style={{ width: 0, height: 0, borderTop: '5px solid transparent', borderBottom: '5px solid transparent', borderLeft: '8px solid #f87171', flexShrink: 0 }}></div>
+              </div>
+
+              {/* Node 2: Employee Escalates */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-red-50 border-4 border-red-300 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-red-400 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-red-500 text-center leading-tight">EMPLOYEE<br />ESCALATES</span>
+                </div>
+              </div>
+
+              {/* Red arrow 2→3 */}
+              <div className="flex items-center w-8 md:w-14">
+                <div className="flex-1 h-0.5 bg-red-400"></div>
+                <div style={{ width: 0, height: 0, borderTop: '5px solid transparent', borderBottom: '5px solid transparent', borderLeft: '8px solid #f87171', flexShrink: 0 }}></div>
+              </div>
+
+              {/* Node 3: Manager Firefights */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-red-50 border-4 border-red-300 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-red-400 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-red-500 text-center leading-tight">MANAGER<br />FIREFIGHTS</span>
+                </div>
+              </div>
+
+              {/* Loop back icon */}
+              <div className="flex flex-col items-center ml-2 md:ml-4 text-red-400">
+                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                <span className="text-[8px] md:text-[9px] font-bold text-red-400 mt-0.5">REPEATS</span>
+              </div>
+            </div>
+
+            {/* Before summary */}
+            <p className="text-center text-sm text-red-500 italic max-w-4xl mx-auto">
+              Over time: teams become dependent, managers become overwhelmed.
+            </p>
+
+            {/* Break pill — black, extra breathing room */}
+            <div className="max-w-4xl mx-auto mt-14 mb-14 flex items-center gap-4">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-gray-700"></div>
+              <div
+                className="text-white text-sm font-bold px-7 py-3 rounded-full whitespace-nowrap shadow-xl tracking-wide ring-4 ring-gray-200"
+                style={{ backgroundColor: '#000000' }}
+              >
+                ✦ This workshop breaks the cycle
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-gray-400 to-gray-700"></div>
+            </div>
+
+            {/* AFTER label — green pill */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-50 border-2 border-green-300 shadow-sm">
+                <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-xs font-bold text-green-600 tracking-widest uppercase">After This Workshop</span>
+              </div>
+            </div>
+
+            {/* AFTER: 3 circles with green arrows — responsive */}
+            <div className="flex items-center justify-center mb-4">
+
+              {/* Node 1: Problem Occurs */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-gray-100 border-4 border-gray-300 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-400 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-gray-500 text-center leading-tight">PROBLEM<br />OCCURS</span>
+                </div>
+              </div>
+
+              {/* Green arrow 1→2 */}
+              <div className="flex items-center w-8 md:w-14">
+                <div className="flex-1 h-0.5 bg-green-500"></div>
+                <div style={{ width: 0, height: 0, borderTop: '5px solid transparent', borderBottom: '5px solid transparent', borderLeft: '8px solid #22c55e', flexShrink: 0 }}></div>
+              </div>
+
+              {/* Node 2: Employee Analyses */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-green-50 border-4 border-green-400 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-green-600 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-green-700 text-center leading-tight">EMPLOYEE<br />ANALYSES</span>
+                </div>
+              </div>
+
+              {/* Green arrow 2→3 */}
+              <div className="flex items-center w-8 md:w-14">
+                <div className="flex-1 h-0.5 bg-green-500"></div>
+                <div style={{ width: 0, height: 0, borderTop: '5px solid transparent', borderBottom: '5px solid transparent', borderLeft: '8px solid #22c55e', flexShrink: 0 }}></div>
+              </div>
+
+              {/* Node 3: Solution Resolved */}
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-green-50 border-4 border-green-400 flex flex-col items-center justify-center shadow-md">
+                  <svg className="w-5 h-5 md:w-8 md:h-8 text-green-600 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-[8px] md:text-[10px] font-bold text-green-700 text-center leading-tight">SOLUTION<br />RESOLVED</span>
+                </div>
+              </div>
+
+              {/* Forward icon */}
+              <div className="flex flex-col items-center ml-2 md:ml-4 text-green-500">
+                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+                <span className="text-[8px] md:text-[9px] font-bold text-green-500 mt-0.5">FORWARD</span>
+              </div>
+            </div>
+
+            {/* After summary */}
+            <p className="text-center text-sm text-green-600 italic mb-14 max-w-4xl mx-auto">
+              Teams take ownership. Managers focus on strategy.
+            </p>
+
+            {/* Participants learn card */}
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12 border border-gray-200 shadow-lg">
                 <p className="text-base lg:text-lg text-gray-700 font-medium mb-5">Participants learn how to:</p>
@@ -299,7 +444,6 @@ export function Course04Page() {
                     </p>
                   </div>
                 </div>
-
                 <div className="mt-8 pt-8 border-t border-gray-200">
                   <p className="text-center text-base lg:text-lg text-gray-600 italic">
                     The result is a team that contributes to solving problems instead of escalating them.
