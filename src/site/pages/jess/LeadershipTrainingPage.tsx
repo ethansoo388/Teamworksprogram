@@ -1052,7 +1052,7 @@ export function LeadershipTrainingPage() {
                     <ul className="space-y-2.5 text-sm">
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Scrum@Scale Foundation™</span>
+                        <span className="text-slate-300 font-light">Registered Scrum@Scale Fundamentals™</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
