@@ -348,7 +348,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                     {/* Column 1 - Getting Started */}
                     <div className="flex-1 min-w-0">
                       <h3 className="text-xs font-semibold text-[#6B7280] tracking-[0.02em] uppercase mb-5">
-                        GETTING STARTED
+                        SELF-PACED LEARNING
                       </h3>
                       <div className="space-y-4">
                         <a
@@ -416,18 +416,18 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                     {/* Column 3 - Proof & Community */}
                     <div className="flex-1 min-w-0">
                       <h3 className="text-xs font-semibold text-[#6B7280] tracking-[0.02em] uppercase mb-5">
-                        PROOF &amp; COMMUNITY
+                        FREE RESOURCES
                       </h3>
                       <div className="space-y-4">
                         <a
-                          href="/jess/free-resources.html#community-forums"
+                          href="/jess/free-resources.html"
                           className="block group py-3 px-4 -mx-4 rounded-2xl hover:bg-gray-100 transition-colors no-underline"
                         >
                           <h4 className="text-base font-semibold text-[#0F172A] group-hover:text-[#0066FF] transition-colors mb-2">
-                            Community
+                            View All Free Resources
                           </h4>
                           <p className="text-sm text-[#475569] group-hover:text-[#0066FF] leading-snug transition-colors line-clamp-2">
-                            Join practitioner discussions and leadership insights.
+                            Self-paced learning, official guides, and reference materials — all in one place.
                           </p>
                         </a>
                       </div>
@@ -846,7 +846,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               </button>
               <div data-nav-accordion-panel="resources" className="hidden mt-2 pl-4 space-y-4">
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Getting Started</h4>
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Self-Paced Learning</h4>
                   <a href="/jess/free-resources.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
                     Learn Agile &amp; AI in 10 Minutes
                   </a>
@@ -864,9 +864,9 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                   </a>
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Proof &amp; Community</h4>
-                  <a href="/jess/free-resources.html#community-forums" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
-                    Community
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Free Resources</h4>
+                  <a href="/jess/free-resources.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                    View All Free Resources
                   </a>
                 </div>
               </div>
