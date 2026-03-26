@@ -8,7 +8,7 @@ export function ClassSchedulePage() {
     {
       month: "April 2026",
       courses: [
-        { location: "Indonesia", type: "Course 1", dates: "7th and 8th", icon: <MapPin className="w-5 h-5" /> },
+        { location: "Indonesia", type: "Course 1", dates: "27th and 28th", icon: <MapPin className="w-5 h-5" /> },
         { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
       ]
     },
@@ -21,7 +21,7 @@ export function ClassSchedulePage() {
     {
       month: "July 2026",
       courses: [
-        { location: "Indonesia", type: "Course 1", dates: "8th and 9th", icon: <MapPin className="w-5 h-5" /> },
+        { location: "Indonesia", type: "Course 1", dates: "7th and 8th", icon: <MapPin className="w-5 h-5" /> },
         { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
       ]
     },
@@ -34,7 +34,7 @@ export function ClassSchedulePage() {
     {
       month: "October 2026",
       courses: [
-        { location: "Indonesia", type: "Course 1", dates: "14th and 15th", icon: <MapPin className="w-5 h-5" /> },
+        { location: "Indonesia", type: "Course 1", dates: "13th and 14th", icon: <MapPin className="w-5 h-5" /> },
         { location: "Malaysia", type: "Course 1", dates: "20th and 21st", icon: <MapPin className="w-5 h-5" /> },
       ]
     },
