@@ -4,7 +4,7 @@ import { CTASection } from "@/site/components/jess/CTASection";
 import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
 import { LeadershipAccordion } from "@/site/components/jess/LeadershipAccordion";
 import { AIBenefitsCards } from "@/site/components/jess/AIBenefitsCards";
-import { ArrowRight, ArrowLeft, Download, MessageCircle, ChevronDown, ChevronUp, Plus, X } from "lucide-react";
+import { ArrowRight, Download, MessageCircle, ChevronDown, ChevronUp, Plus, X } from "lucide-react";
 
 const decisionGapStats = [
   {
@@ -65,15 +65,6 @@ export function LeadershipTrainingPage() {
         <div className="relative z-10 w-full px-6 lg:px-8 xl:px-16">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl">
-              {/* Back Link */}
-              <a
-                href="/jess/index.html"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors mb-12 group"
-              >
-                <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                Back to JESS Home Page
-              </a>
-              
               {/* Eyebrow */}
               <p className="text-sm font-medium text-white/70 uppercase tracking-wider mb-4">Jeff Sutherland's Enterprise Agility Program</p>
               
