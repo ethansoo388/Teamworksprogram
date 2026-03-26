@@ -111,7 +111,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
                                 <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
-                                  International Certification Courses
+                                  International Certification Overview
                                 </h5>
                                 <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
                                   Globally recognised certifications for enterprise leaders.
@@ -122,10 +122,10 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
                                 <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
-                                  Public Certification Class
+                                  Public Class Schedule
                                 </h5>
                                 <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
-                                  View Upcoming Class Schedule
+                                  View Upcoming Class Date
                                 </p>
                               </a>
                             </div>
@@ -723,12 +723,12 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
                         <p className="text-xs font-semibold text-[#0066FF] uppercase tracking-wide">Signature Series</p>
                         <div className="space-y-2">
                           <a href="/jess/leadership-training.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
-                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">International Certification Courses</h6>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">International Certification Overview</h6>
                             <p className="text-xs text-gray-600 mt-0.5">Globally recognised certifications for enterprise leaders.</p>
                           </a>
                           <a href="/jess/class-schedule.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
-                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Public Certification Class</h6>
-                            <p className="text-xs text-gray-600 mt-0.5">View Upcoming Class Schedule</p>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Public Class Schedule</h6>
+                            <p className="text-xs text-gray-600 mt-0.5">View Upcoming Class Date</p>
                           </a>
                         </div>
                       </div>
