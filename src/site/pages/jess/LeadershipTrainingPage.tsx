@@ -189,29 +189,63 @@ export function LeadershipTrainingPage() {
 
           {/* 70-year timeline */}
           <div className="mb-16">
-            <p className="text-center text-sm text-slate-500 uppercase tracking-widest mb-8">70 Years of Management Science. Culminated Here.</p>
-            <div className="relative">
-              <div className="absolute top-6 left-0 right-0 h-px hidden lg:block" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
-              <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                70 Years of Management Know-How.{' '}
+                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Culminates into this course.</span>
+              </h3>
+            </div>
+            <div className="relative overflow-x-auto">
+              <div className="flex items-start gap-2 lg:gap-3 min-w-max mx-auto lg:min-w-0 lg:grid lg:grid-cols-6 px-2">
                 {[
-                  { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', highlight: false },
-                  { year: '1990', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', highlight: false },
-                  { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', highlight: false },
-                  { year: '2014', title: 'Scrum Guide', sub: 'Formalised globally', highlight: false },
-                  { year: '2019', title: 'Scrum@Scale', sub: 'Enterprise-wide system', highlight: true },
-                ].map(({ year, title, sub, highlight }) => (
-                  <div key={year} className="text-center relative">
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 relative z-10"
-                      style={highlight
-                        ? { background: 'linear-gradient(to bottom right,#3b82f6,#06b6d4)', border: '2px solid #22d3ee', boxShadow: '0 0 20px rgba(59,130,246,0.3)' }
-                        : { background: '#1e293b', border: '2px solid #475569' }
-                      }
-                    >
-                      <span className={`text-xs font-bold ${highlight ? 'text-white' : 'text-slate-400'}`}>{year}</span>
+                  { year: '1950', era: 'TPS', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', img: '/assets/img/jess/timeline-tps-1950.webp', highlight: false, isNew: false },
+                  { year: '1990s', era: 'Scrum', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', img: '/assets/img/jess/timeline-scrum-guide-1990.webp', highlight: false, isNew: false },
+                  { year: '2001', era: 'Agile', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', img: '/assets/img/jess/timeline-agile-manifesto-2001.webp', highlight: false, isNew: false },
+                  { year: '2014', era: 'Scrum', title: 'Hyper-Productive Scrum', sub: 'Global bestseller · Jeff Sutherland', img: '/assets/img/jess/timeline-scrum-book-2014.webp', highlight: false, isNew: false },
+                  { year: '2019', era: 'Scrum', title: 'Scrum@Scale', sub: 'Enterprise-wide system', img: '/assets/img/jess/timeline-scrumatscale-2019.webp', highlight: true, isNew: false },
+                  { year: '2025', era: 'AI', title: 'ScrumSage AI', sub: 'AI-driven enterprise system', img: '/assets/img/jess/timeline-scrumsage-2025.webp', highlight: false, isNew: true },
+                ].map(({ year, era, title, sub, img, highlight, isNew }, index) => (
+                  <div key={year} className="flex items-start">
+                    {/* Card */}
+                    <div className="flex flex-col items-center text-center w-36 lg:w-auto">
+                      {/* Year + era label */}
+                      <div className="mb-3">
+                        <span className={`text-xs font-bold ${highlight ? 'text-cyan-400' : isNew ? 'text-blue-400' : 'text-slate-400'}`}>{era} </span>
+                        <span className="text-xs text-slate-500">{year}</span>
+                      </div>
+                      {/* Book cover image */}
+                      <div
+                        className="relative mb-4 rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+                        style={
+                          highlight
+                            ? { boxShadow: '0 0 24px rgba(34,211,238,0.35), 0 8px 24px rgba(0,0,0,0.4)', border: '2px solid rgba(34,211,238,0.5)' }
+                            : isNew
+                              ? { boxShadow: '0 0 24px rgba(59,130,246,0.35), 0 8px 24px rgba(0,0,0,0.4)', border: '2px solid rgba(59,130,246,0.5)' }
+                              : { boxShadow: '0 8px 24px rgba(0,0,0,0.4)', border: '1px solid rgba(71,85,105,0.4)' }
+                        }
+                      >
+                        {isNew && (
+                          <div className="absolute top-2 left-0 right-0 flex justify-center z-10">
+                            <span className="px-2 py-0.5 text-white text-xs font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>AI-POWERED</span>
+                          </div>
+                        )}
+                        <img
+                          src={img}
+                          alt={title}
+                          className="w-24 lg:w-28 object-cover"
+                          style={{ aspectRatio: '2/3' }}
+                        />
+                      </div>
+                      {/* Title + sub */}
+                      <p className={`text-xs font-semibold leading-tight mb-1 ${highlight ? 'text-cyan-400' : isNew ? 'text-blue-300' : 'text-slate-300'}`}>{title}</p>
+                      <p className="text-xs text-slate-500 leading-tight">{sub}</p>
                     </div>
-                    <p className={`text-sm font-semibold ${highlight ? 'text-cyan-400' : 'text-slate-300'}`}>{title}</p>
-                    <p className="text-xs text-slate-500 mt-1">{sub}</p>
+                    {/* Arrow connector between cards */}
+                    {index < 5 && (
+                      <div className="flex items-center mt-16 mx-1 lg:mx-0 flex-shrink-0">
+                        <span className="text-slate-600 text-lg">→</span>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
