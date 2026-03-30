@@ -14,7 +14,9 @@ When creating a zip of the codebase, always exclude:
 - `public/` (regenerated on build)
 - `node_modules/`
 
-Zip command pattern:
+Always use absolute paths to avoid picking up unrelated files from the shell's working directory:
+
 ```
-zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip . --exclude "public/*" --exclude "node_modules/*" --exclude ".git/*"
+WORKTREE="/Users/ethansoo/Code/teamworks/Teamworksprogram/.claude/worktrees/sad-keller"
+zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip "$WORKTREE" --exclude "$WORKTREE/public/*" --exclude "$WORKTREE/node_modules/*" --exclude "$WORKTREE/.git/*"
 ```

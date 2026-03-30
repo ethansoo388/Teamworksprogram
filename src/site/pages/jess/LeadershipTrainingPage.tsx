@@ -301,8 +301,8 @@ export function LeadershipTrainingPage() {
           <div className="mb-16">
             <p className="text-center text-sm text-slate-500 uppercase tracking-widest mb-8">What You Will Master — The Full System View</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/people-jess-leadership-program.webp" alt="Leadership Program" className="w-full h-full object-cover" /></div>
-              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/site-hyper-productive-teams-collaborating.webp" alt="Teams Collaborating" className="w-full h-full object-cover" /></div>
+              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-product-owner.webp" alt="Product Owner Knowledge" className="w-full h-full object-cover" /></div>
+              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-scrum-master.webp" alt="Scrum Master Knowledge" className="w-full h-full object-cover" /></div>
               <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/nova/nova_class.webp" alt="Class in Session" className="w-full h-full object-cover" /></div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
