@@ -316,7 +316,6 @@ export function LeadershipTrainingPage() {
 
           {/* 3 credentials */}
           <div className="rounded-2xl p-8" style={{ background: 'linear-gradient(to right,rgba(59,130,246,0.1),rgba(6,182,212,0.05),rgba(59,130,246,0.1))', border: '1px solid rgba(59,130,246,0.2)' }}>
-            <img src="/assets/img/jess/scrum-master-product-owner-scale-certifications.webp" alt="Scrum Master, Product Owner, Scrum@Scale certifications" className="w-full h-auto aspect-[2/1] object-contain mb-6 rounded-xl" />
             <p className="text-center text-sm text-slate-400 mb-6 uppercase tracking-widest">3 Internationally Recognised Credentials Included</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
               {[
@@ -676,7 +675,7 @@ export function LeadershipTrainingPage() {
             <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
           </div>
           <div className="mb-8 rounded-2xl overflow-hidden h-48">
-            <img src="/assets/img/jess/people-leadership-excellence.webp" alt="Leadership Excellence" className="w-full h-full object-cover object-top" />
+            <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-full object-cover object-top" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
