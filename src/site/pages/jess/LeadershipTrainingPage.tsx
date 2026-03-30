@@ -93,8 +93,11 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center,rgba(59,130,246,0.06),transparent 60%)' }} />
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           <div className="mb-10">
-            <p className="text-slate-400 text-sm uppercase tracking-widest mb-3">MIT Sloan Management Review, 2020</p>
-            <div className="text-6xl lg:text-8xl font-black leading-none mb-4" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>17%</div>
+            <div className="flex flex-col items-center gap-1 mb-6">
+              <img src="/assets/img/jess/logo-smr-white.svg" alt="MIT Sloan Management Review" className="h-8 w-auto opacity-70" />
+              <span className="text-slate-500 text-xs uppercase tracking-widest">2020</span>
+            </div>
+            <div className="text-6xl lg:text-8xl font-black leading-none mb-4" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ONLY 17%</div>
             <p className="text-2xl lg:text-3xl font-light text-white max-w-2xl mx-auto leading-relaxed">
               of today's leading companies will still be industry leaders in five years.
             </p>
