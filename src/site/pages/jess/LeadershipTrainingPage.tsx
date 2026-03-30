@@ -1,1216 +1,607 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { CTASection } from "@/site/components/jess/CTASection";
-import { ImageWithFallback } from "@/site/components/jess/figma/ImageWithFallback";
-import { LeadershipAccordion } from "@/site/components/jess/LeadershipAccordion";
-import { AIBenefitsCards } from "@/site/components/jess/AIBenefitsCards";
-import { ArrowRight, Download, MessageCircle, ChevronDown, ChevronUp, Plus, X } from "lucide-react";
-
-const decisionGapStats = [
-  {
-    stat: "53%",
-    label: "Struggle to prioritise the right work",
-  },
-  {
-    stat: "52%",
-    label: "Struggle to track business impact",
-  },
-  {
-    stat: "35%",
-    label: "Struggle to measure performance fairly",
-  },
-];
-
-const learningOutcomes = [
-  "How to prioritise work that directly moves business outcomes",
-  "How to connect execution metrics to real value",
-  "How to lead Product Owners and Scrum Masters with clarity",
-  "How to integrate AI into Scrum without increasing risk or noise",
-  "How to operate an enterprise delivery system with confidence",
-];
-
-const targetAudience = [
-  "Leaders accountable for business and enterprise-level outcomes",
-  "Transformation, PMO, and product leaders shaping execution systems",
-  "Senior Scrum Masters and Product Owners influencing beyond a single team",
-  "Leaders scaling agility across multiple teams, products, or portfolios",
-];
-
-const notFor = [
-  "Entry-level or introductory Scrum training",
-  "Tool-only Agile courses focused on mechanics",
-  "Theory-heavy certification programs without real-world application",
-];
 
 export function LeadershipTrainingPage() {
-
   return (
-    <div className="min-h-screen bg-white">
-      <MainSiteNavigation />
-      
-      {/* Hero Section - Full Width Cinematic */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden pt-[72px]">
-        {/* Full Width Background Image */}
+    <div className="min-h-screen bg-[#0F1724]">
+      <MainSiteNavigation isDarkTheme />
+
+      {/* ═══ SECTION 1: HERO ═══ */}
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-[72px]">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/assets/img/jess/agile-leader-training-hero.webp"
-            alt="Jeff Sutherland Leadership Training"
-            className="w-full h-full object-cover jess-hero-bg-img"
-          />
-          {/* Gradient Overlay — darker top for readability, lighter bottom */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/35" />
+          <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Agile Leader Training" className="w-full h-full object-cover" />
         </div>
-        
-        {/* Content Container */}
-        <div className="relative z-10 w-full px-6 lg:px-8 xl:px-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30 z-10" />
+        <div className="relative z-20 w-full px-6 lg:px-16 pb-16">
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-2xl">
-              {/* Eyebrow */}
-              <p className="text-sm font-medium text-white/70 uppercase tracking-wider mb-4">Jeff Sutherland's Enterprise Agility Program</p>
-              
-              {/* Headline */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
+                <div className="w-2 h-2 rounded-full bg-cyan-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
+                <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">Dr. Jeff Sutherland's Enterprise Agility Program</span>
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
                 Enterprise Agility.<br />
-                Led as a System.
+                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Led as a System.</span>
               </h1>
-              
-              {/* Description */}
-              <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
-                A two-course leadership pathway for senior leaders aligning strategy, activating high-performance teams, and scaling execution across complex enterprises.
+              <p className="text-xl text-white/85 leading-relaxed mb-4 max-w-2xl">
+                The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
               </p>
-              
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <a 
-                  href="#jess-learning-program"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-white/90 transition-all shadow-lg text-base"
-                >
-                  Explore the Courses
-                  <ArrowRight size={18} />
+              <p className="text-lg text-white/65 mb-10 max-w-xl">
+                Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+                  Explore the Program →
                 </a>
-                
-                <a 
-                  href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
-                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/60 transition-all text-base backdrop-blur-sm"
-                >
+                <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
                   Talk to a Program Advisor
                 </a>
+              </div>
+              <div className="flex flex-wrap gap-6 text-sm text-white/60">
+                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">3</span> International Credentials</div>
+                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">300+</span> Classes Delivered</div>
+                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">10+</span> Countries</div>
+                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">20 yrs</span> Trainer Experience</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Navigation Tabs Bar */}
-      <div className="sticky top-0 z-40 bg-[#2C3E50] border-b border-slate-700">
+      {/* STICKY SECTION NAV */}
+      <div className="sticky top-[72px] z-40 bg-[#0F1724] border-b border-slate-700/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12">
-            <span className="relative py-4 text-sm sm:text-base font-medium text-white">
+          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
+            <span className="relative py-4 text-sm sm:text-base font-medium text-white whitespace-nowrap flex-shrink-0">
               Overview
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
             </span>
-
-            <a
-              href="course-modules.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
-            >
-              Course Modules
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-
-            <a
-              href="instructor.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
-            >
-              Instructor
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-
-            <a
-              href="class-schedule.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-300 hover:text-white"
-            >
-              Class Schedule
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
+            <a href="/jess/course-modules.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Course Modules</a>
+            <a href="/jess/instructor.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Instructor</a>
+            <a href="/jess/class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Class Schedule</a>
           </nav>
         </div>
       </div>
 
-      {/* Why Agile Transformations Stall */}
-      <section className="py-16 sm:py-24 border-t border-slate-700 bg-[#1e293b]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div
-          >
-            {/* Two Column Layout on Desktop, Stacked on Mobile */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 lg:mb-16">
-              {/* Left Column - Headline + Intro */}
-              <div className="relative">
-                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 via-amber-500 to-transparent"></div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 lg:mb-10 text-white leading-[1.2]">
-                  Why Agile Transformations Stall
-                </h2>
-                
-                <div className="space-y-6 text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
-                  <p className="text-white font-normal">Most organizations invest in agile training.</p>
-                  <p className="text-white font-normal">Few redesign the system around it.</p>
-                  <div className="pt-8 mt-8 border-t-2 border-slate-700 space-y-6">
-                    <p className="text-white font-medium text-xl sm:text-2xl">Agile does not fail because of teams.</p>
-                    <p className="text-white font-medium text-xl sm:text-2xl">It fails because of system design.</p>
-                  </div>
-                </div>
+      {/* ═══ SECTION 2: TRUST BAR ═══ */}
+      <section className="py-10 bg-slate-900 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-xs text-slate-500 uppercase tracking-widest mb-8">The same framework trusted by</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
+            {[
+              { src: '/assets/img/jess/logo-amazon.webp', alt: 'Amazon' },
+              { src: '/assets/img/jess/logo-microsoft.webp', alt: 'Microsoft' },
+              { src: '/assets/img/jess/logo-toyota.webp', alt: 'Toyota' },
+              { src: '/assets/img/jess/logo-spotify.webp', alt: 'Spotify' },
+              { src: '/assets/img/jess/logo-tesla.webp', alt: 'Tesla' },
+              { src: '/assets/img/jess/logo-salesforce.webp', alt: 'Salesforce' },
+              { src: '/assets/img/jess/logo-bosch.webp', alt: 'Bosch' },
+              { src: '/assets/img/jess/logo-rocket-mortgage.webp', alt: 'Rocket Mortgage' },
+              { src: '/assets/img/jess/logo-maersk.webp', alt: 'Maersk' },
+            ].map(({ src, alt }) => (
+              <div key={alt} className="w-24 lg:w-28 h-12 lg:h-14 bg-white rounded-lg p-2 flex items-center justify-center">
+                <img src={src} alt={alt} className="max-w-full max-h-full object-contain" />
               </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-slate-600 mt-6">Concepts proven by Agile coaches at Fortune 100 companies worldwide</p>
+        </div>
+      </section>
 
-              {/* Right Column - Structured Bullet List */}
-              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-2xl hover:border-slate-600 transition-all duration-300 backdrop-blur-sm" data-delay="0">
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-8 pb-4 border-b-2 border-amber-500">
-                  Common failure patterns:
-                </h3>
-                
-                <ul className="space-y-5 text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-                  <li className="flex items-start gap-4 group">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></span>
-                    <span className="group-hover:text-white transition-colors duration-200">Teams improve, but leadership remains misaligned</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></span>
-                    <span className="group-hover:text-white transition-colors duration-200">Governance contradicts agility</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></span>
-                    <span className="group-hover:text-white transition-colors duration-200">Decision rights are unclear</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></span>
-                    <span className="group-hover:text-white transition-colors duration-200">Productivity gains stay local and temporary</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></span>
-                    <span className="group-hover:text-white transition-colors duration-200">Consultants are engaged before leaders are ready</span>
-                  </li>
-                </ul>
-              </div>
+      {/* ═══ SECTION 3: URGENCY HOOK ═══ */}
+      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center,rgba(59,130,246,0.06),transparent 60%)' }} />
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+          <div className="mb-10">
+            <p className="text-slate-400 text-sm uppercase tracking-widest mb-3">MIT Sloan Management Review, 2020</p>
+            <div className="text-6xl lg:text-8xl font-black leading-none mb-4" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>17%</div>
+            <p className="text-2xl lg:text-3xl font-light text-white max-w-2xl mx-auto leading-relaxed">
+              of today's leading companies will still be industry leaders in five years.
+            </p>
+            <p className="text-xl text-slate-400 mt-4 max-w-xl mx-auto font-light">
+              The ones who survive redesign how they lead, prioritise, and execute.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12">
+            <div className="text-center">
+              <div className="text-4xl font-black text-white mb-1">300+</div>
+              <div className="text-sm text-slate-400">Scrum Classes Delivered</div>
             </div>
+            <div className="text-center border-x border-slate-700">
+              <div className="text-4xl font-black text-white mb-1">3</div>
+              <div className="text-sm text-slate-400">International Credentials</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-black text-white mb-1">10x</div>
+              <div className="text-sm text-slate-400">Results in 1/10 the Time</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Closing Emphasis Line - Full Width */}
-            <div className="jess-reveal max-w-4xl bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 sm:p-10 border-l-4 border-white shadow-2xl" data-delay="120">
-              <p className="text-xl sm:text-2xl text-slate-900 font-medium leading-relaxed">
+      {/* ═══ SECTION 4: WHY TRANSFORMATIONS STALL ═══ */}
+      <section className="py-20 bg-slate-900 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">The Leadership Problem</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Why Agile Transformations Stall</h2>
+            <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">
+              Most organisations invest in Agile training. Few redesign the system around it.
+            </p>
+          </div>
+          {/* Video */}
+          <div className="relative rounded-2xl overflow-hidden mb-8 bg-slate-950" style={{ aspectRatio: '16/7' }}>
+            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-80" id="jeffVideo">
+              <source src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm" type="video/webm" />
+            </video>
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(15,23,42,0.7),transparent)' }} />
+            <button
+              data-video-mute="jeffVideo"
+              className="absolute bottom-4 left-4 flex items-center gap-2 text-sm text-white cursor-pointer rounded-full px-4 py-2 border border-white/20"
+              style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6v12m-3.536-9.536a5 5 0 000 7.072" />
+              </svg>
+              ▶ Watch with sound
+            </button>
+          </div>
+          {/* Failure patterns */}
+          <div className="flex flex-wrap gap-3 justify-center mb-12">
+            {[
+              'Teams improve, but leadership stays misaligned',
+              'Governance contradicts agility',
+              'Decision rights are unclear',
+              'Productivity gains stay local and temporary',
+              'Consultants engaged before leaders are ready',
+            ].map((text) => (
+              <span key={text} className="px-5 py-2.5 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-medium">{text}</span>
+            ))}
+          </div>
+          {/* Pull quote */}
+          <div className="max-w-3xl mx-auto relative">
+            <div className="text-8xl text-blue-500/15 font-black leading-none absolute -top-4 -left-2 select-none">"</div>
+            <blockquote className="pl-8 border-l-2 border-cyan-500">
+              <p className="text-2xl lg:text-3xl text-cyan-300 font-light leading-relaxed italic">
                 Agile transformation requires leadership alignment and execution capability — working as one system.
               </p>
-            </div>
+            </blockquote>
           </div>
         </div>
       </section>
 
-      {/* The Leadership Decision Gap */}
-      <section className="py-16 lg:py-32 border-t border-slate-700 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
-        
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
-          <div
-            className="text-center"
-          >
-            {/* Accent Line Above */}
-            <div className="flex items-center justify-center gap-4 mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-500"></div>
-              <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-500"></div>
+      {/* ═══ SECTION 5: PROGRAM OVERVIEW ═══ */}
+      <section id="program" className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
+              <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Program Overview</span>
             </div>
-
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-white tracking-tight leading-[1.15] drop-shadow-lg">
-              The real bottleneck isn't speed.
+            <h2 className="text-4xl lg:text-6xl font-bold mb-4" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              Dr. Jeff Sutherland's<br />Enterprise Agility Program
             </h2>
-            
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 tracking-tight leading-[1.15] drop-shadow-[0_0_30px_rgba(251,191,36,0.3)]">
-              It's decision clarity.
-            </h2>
-            
-            {/* Decorative Divider */}
-            <div className="max-w-xl mx-auto mb-12 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent blur-xl"></div>
-              <p className="jess-reveal text-lg sm:text-xl text-slate-300 font-light leading-relaxed relative z-10 px-6 py-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 backdrop-blur-sm shadow-2xl" data-delay="240">
-                Most leaders are adjacent to Agile—not actively shaping it. This program equips you to run the execution system, not watch from the sidelines.
-              </p>
-            </div>
-            
-            {/* Enhanced CTA Button */}
-            <div
-            >
-              <a 
-                href="#jess-learning-program"
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-[0_0_30px_rgba(251,191,36,0.3)] hover:shadow-[0_0_40px_rgba(251,191,36,0.5)] hover:scale-105 relative overflow-hidden"
-              >
-                <span className="relative z-10">Get Started on Solving</span>
-                <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
-                
-                {/* Animated shimmer effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-              </a>
-            </div>
-
-            {/* Bottom Accent */}
-            <div className="flex items-center justify-center gap-4 mt-12">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-600"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-600"></div>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-600"></div>
-            </div>
+            <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto">A Complete Leadership + Execution System</p>
           </div>
-        </div>
-      </section>
 
-      {/* JESS Enterprise Agility Model */}
-      <section className="py-16 lg:py-32 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(148 163 184) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div
-          >
-            {/* Header */}
-            <div className="text-center mb-16 sm:mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
-                <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                <span className="text-sm font-medium text-amber-400 uppercase tracking-wider">PROGRAM OVERVIEW</span>
-              </div>
-              
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight leading-[1.15]">
-                Jeff Sutherland's Enterprise Agility Program
-              </h2>
-              
-              <p className="text-xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed">
-                A Complete Leadership + Execution System
-              </p>
-            </div>
-
-            {/* Three Column Value Props */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
-              {/* Column 1 - Leadership Alignment */}
-              <div
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="0">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
-                    <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Aligned Empowerment</h3>
-                  <p className="text-slate-300 leading-relaxed mb-6">
-                    Empower regional teams to act decisively — within a clear strategic framework that maintains visibility and leadership control.
-                  </p>
-
-                </div>
-              </div>
-
-              {/* Column 2 - Team Execution */}
-              <div
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="120">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
-                    <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Scalable Enterprise Execution</h3>
-                  <p className="text-slate-300 leading-relaxed mb-6">
-                    Scale from a few teams to enterprise-wide coordination without increasing hierarchy, bureaucracy, or loss of oversight.
-                  </p>
-                </div>
-              </div>
-
-              {/* Column 3 - System Integration */}
-              <div
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="jess-reveal relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 h-full" data-delay="240">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
-                    <svg className="w-7 h-7 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Measurable Business Outcomes</h3>
-                  <p className="text-slate-300 leading-relaxed mb-6">
-                    Deliver continuous, verifiable value through disciplined prioritization, transparent metrics, and rapid feedback loops.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom CTA Section */}
-            <div
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-amber-500/10 rounded-3xl blur-2xl"></div>
-              <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 sm:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  {/* Left - Text Content */}
-                  <div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
-                      Ready to transform your enterprise?
-                    </h3>
-                    <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                      Whether you're leading a transformation or building team capability, JESS provides the framework and training to succeed at scale.
-                    </p>
-                    <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                      <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-                        <span>Enterprise-ready</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-                        <span>Individual certifications</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-                        <span>Consulting support</span>
-                      </div>
+          {/* 70-year timeline */}
+          <div className="mb-16">
+            <p className="text-center text-sm text-slate-500 uppercase tracking-widest mb-8">70 Years of Management Science. Culminated Here.</p>
+            <div className="relative">
+              <div className="absolute top-6 left-0 right-0 h-px hidden lg:block" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                {[
+                  { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', highlight: false },
+                  { year: '1990', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', highlight: false },
+                  { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', highlight: false },
+                  { year: '2014', title: 'Scrum Guide', sub: 'Formalised globally', highlight: false },
+                  { year: '2019', title: 'Scrum@Scale', sub: 'Enterprise-wide system', highlight: true },
+                ].map(({ year, title, sub, highlight }) => (
+                  <div key={year} className="text-center relative">
+                    <div
+                      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 relative z-10"
+                      style={highlight
+                        ? { background: 'linear-gradient(to bottom right,#3b82f6,#06b6d4)', border: '2px solid #22d3ee', boxShadow: '0 0 20px rgba(59,130,246,0.3)' }
+                        : { background: '#1e293b', border: '2px solid #475569' }
+                      }
+                    >
+                      <span className={`text-xs font-bold ${highlight ? 'text-white' : 'text-slate-400'}`}>{year}</span>
                     </div>
+                    <p className={`text-sm font-semibold ${highlight ? 'text-cyan-400' : 'text-slate-300'}`}>{title}</p>
+                    <p className="text-xs text-slate-500 mt-1">{sub}</p>
                   </div>
-
-                  {/* Right - CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                      href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
-                      className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-105 relative overflow-hidden"
-                    >
-                      <span className="relative z-10">Talk to a Program Advisor</span>
-                      <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                    </a>
-                    
-                    <a
-                      href="#jess-learning-program"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-700/50 border border-slate-600 text-white font-medium rounded-lg hover:bg-slate-700 hover:border-amber-500/50 transition-all duration-300"
-                    >
-                      <span>View Program Details</span>
-                      <ArrowRight size={18} />
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Leadership in an AI-Driven Environment */}
-      <section id="jess-learning-program" className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-200 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <div
-          >
-            <div className="mb-16 text-center">
-              <div className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-6">
-                HOW TO GET STARTED
-              </div>
-              <h2 className="text-3xl sm:text-5xl font-light mb-2 text-slate-900 tracking-tight leading-[1.43]">
-                The Two-Course Leadership Pathway
-              </h2>
-              <p className="text-xl text-slate-600 font-light max-w-4xl mx-auto mt-6">
-                This program is intentionally designed as a sequential system.
-              </p>
-              <p className="text-xl text-slate-600 font-light max-w-4xl mx-auto mt-4">
-                Each course can be taken individually — but together, they create a complete leadership-to-execution operating model.
-              </p>
+          {/* Holistic model */}
+          <div className="mb-16">
+            <p className="text-center text-sm text-slate-500 uppercase tracking-widest mb-8">What You Will Master — The Full System View</p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/people-jess-leadership-program.webp" alt="Leadership Program" className="w-full h-full object-cover" /></div>
+              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/site-hyper-productive-teams-collaborating.webp" alt="Teams Collaborating" className="w-full h-full object-cover" /></div>
+              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/nova/nova_class.webp" alt="Class in Session" className="w-full h-full object-cover" /></div>
             </div>
-            
-            {/* Two Course Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-              {/* Course 1: High Performance Agile Leader */}
-              <div
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-white border-2 border-slate-200 rounded-3xl p-8 sm:p-10 hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col shadow-lg">
-                  {/* Course Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6 self-start">
-                    <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                    <span className="text-sm font-medium text-amber-600 uppercase tracking-wider">Course 1</span>
-                  </div>
-                  
-                  {/* Course Title */}
-                  <h3 className="text-3xl sm:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
-                    High Performance Agile Leader
-                  </h3>
-                  
-                  {/* Subtitle */}
-                  <p className="text-lg text-slate-600 font-light mb-8 leading-relaxed">
-                    <span className="font-semibold">Master Jeff Sutherland's system. Lead with clarity.</span>
-                    <br />
-                    For leaders and managers who drive performance.
-                  </p>
-                  
-                  {/* Key Benefits */}
-                  <div className="mb-8 flex-grow">
-                    <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">You will learn to:</h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Align strategy to execution across business units</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Establish governance that enables speed without chaos</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Prioritize portfolios based on measurable value</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Create transparency that builds trust with headquarters</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Design an enterprise operating model for scale</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  {/* Outcome Statement */}
-                  <div className="bg-gradient-to-br from-slate-50 to-amber-50/30 border border-slate-200 rounded-2xl p-6 mb-8">
-                    <p className="text-sm font-medium text-slate-900 mb-2">Course Outcome:</p>
-                    <p className="text-slate-700 leading-relaxed italic">
-                      You leave equipped to architect the system — not just manage within it.
-                    </p>
-                  </div>
-                  
-                  {/* CTA */}
-                  <a
-                    href="class-schedule.html"
-                    className="group/btn inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105 relative overflow-hidden"
-                  >
-                    <span className="relative z-10">View Class Schedule</span>
-                    <ArrowRight size={20} className="relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700"></div>
-                  </a>
-                  
-                  {/* Duration Badge */}
-                  <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>2-Day Intensive Program</span>
-                  </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
+                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Product Owner Knowledge</h3>
+                <ul className="space-y-2 text-sm text-slate-400">
+                  <li>• Align business goals</li><li>• Evaluate and prioritise value</li><li>• Communicate effectively</li><li>• Increase revenue</li>
+                </ul>
               </div>
-
-              {/* Course 2: Leading Hyper-Productive Team */}
-              <div
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-white border-2 border-slate-200 rounded-3xl p-8 sm:p-10 hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col shadow-lg">
-                  {/* Course Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6 self-start">
-                    <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                    <span className="text-sm font-medium text-amber-600 uppercase tracking-wider">Course 2</span>
-                  </div>
-                  
-                  {/* Course Title */}
-                  <h3 className="text-3xl sm:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
-                    Leading Hyper-Productive Team
-                  </h3>
-                  
-                  {/* Subtitle */}
-                  <p className="text-lg text-slate-600 font-light mb-8 leading-relaxed">
-                    <span className="font-semibold">Execute with momentum. Create sustainable performance.</span>
-                    <br />
-                    For leaders building and guiding high-performance delivery teams.
-                  </p>
-                  
-                  {/* Key Benefits */}
-                  <div className="mb-8 flex-grow">
-                    <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">You will learn to:</h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Implement proven Scrum execution mechanics</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Eliminate bottlenecks and decision delays</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Build stable, cross-functional teams</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Use metrics that predict delivery outcomes</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-slate-700 leading-relaxed">Create rapid improvement loops</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  {/* Outcome Statement */}
-                  <div className="bg-gradient-to-br from-slate-50 to-amber-50/30 border border-slate-200 rounded-2xl p-6 mb-8">
-                    <p className="text-sm font-medium text-slate-900 mb-2">Course Outcome:</p>
-                    <p className="text-slate-700 leading-relaxed italic">
-                      You build teams that deliver consistently — sprint after sprint.
-                    </p>
-                  </div>
-                  
-                  {/* CTA */}
-                  <a
-                    href="class-schedule.html"
-                    className="group/btn inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105 relative overflow-hidden"
-                  >
-                    <span className="relative z-10">View Class Schedule</span>
-                    <ArrowRight size={20} className="relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700"></div>
-                  </a>
-                  
-                  {/* Duration Badge */}
-                  <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>2-Day Intensive Program</span>
-                  </div>
+              <div className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.4)' }}>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-white text-xs font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>HOLISTIC VIEW</div>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
+                  <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Scrum Master Knowledge</h3>
+                <ul className="space-y-2 text-sm text-slate-400">
+                  <li>• Identify and eliminate waste</li><li>• Drive process change</li><li>• Motivate and improve team happiness</li><li>• Scale agility</li>
+                </ul>
               </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
-      {/* Why Take Both Section */}
-      <section className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700">
-        <div className="max-w-5xl mx-auto">
-          <div
-          >
-            {/* Section Header */}
-            <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
-                  <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                  <span className="text-xs font-medium text-amber-400 uppercase tracking-widest">Why Take Both?</span>
+              <div className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
+                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
-              </div>
-              
-              <h3 className="text-3xl sm:text-5xl font-light text-white mb-6 leading-tight">
-                Why Leaders Should Take Both Courses
-              </h3>
-              
-              <p className="text-xl text-slate-300 font-light">
-                Course 1 establishes strategic clarity and governance.<br />
-                Course 2 activates disciplined execution at the team level.<br />
-                <br />
-                Together, they form a complete enterprise agility system.
-              </p>
-            </div>
-
-            {/* Comparison Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Course 1 Alone */}
-              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm" data-delay="0">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                    <span className="text-amber-500 font-semibold">1</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white">Course 1 alone:</h4>
-                </div>
-                <p className="text-slate-300 leading-relaxed">
-                  Leaders understand structure, but teams may lack execution rhythm.
-                </p>
-              </div>
-
-              {/* Course 2 Alone */}
-              <div className="jess-reveal bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm" data-delay="120">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                    <span className="text-amber-500 font-semibold">2</span>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white">Course 2 alone:</h4>
-                </div>
-                <p className="text-slate-300 leading-relaxed">
-                  Teams improve, but leadership structures may limit scale.
-                </p>
-              </div>
-            </div>
-
-            {/* Taking Both Ensures */}
-            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-2 border-amber-500/20 rounded-3xl p-10 mb-12 shadow-2xl shadow-amber-500/10">
-              <h4 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
-                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                Taking both ensures:
-              </h4>
-              
-              <ul className="space-y-4 mb-10">
-                <li className="flex items-start gap-4 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-amber-500/30">
-                    <svg className="w-3.5 h-3.5 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg leading-relaxed">Leadership alignment</span>
-                </li>
-                <li className="flex items-start gap-4 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-amber-500/30">
-                    <svg className="w-3.5 h-3.5 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg leading-relaxed">Team-level execution capability</span>
-                </li>
-                <li className="flex items-start gap-4 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-amber-500/30">
-                    <svg className="w-3.5 h-3.5 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg leading-relaxed">Shared enterprise language</span>
-                </li>
-                <li className="flex items-start gap-4 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-amber-500/30">
-                    <svg className="w-3.5 h-3.5 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg leading-relaxed">Minimal bureaucracy</span>
-                </li>
-                <li className="flex items-start gap-4 text-slate-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-amber-500/30">
-                    <svg className="w-3.5 h-3.5 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg leading-relaxed">Predictable performance at scale</span>
-                </li>
-              </ul>
-
-              <div className="border-t border-slate-700 pt-8">
-                <h5 className="text-lg font-medium text-white mb-6">This combination prepares organizations to:</h5>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-slate-300">
-                    <span className="text-amber-500 mt-1">•</span>
-                    <span>Launch transformation confidently</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-slate-300">
-                    <span className="text-amber-500 mt-1">•</span>
-                    <span>Reduce consulting risk</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-slate-300">
-                    <span className="text-amber-500 mt-1">•</span>
-                    <span>Scale agility intentionally</span>
-                  </li>
+                <h3 className="text-lg font-semibold text-white mb-3">Team Execution Knowledge</h3>
+                <ul className="space-y-2 text-sm text-slate-400">
+                  <li>• Swarm to win on priorities</li><li>• Stability is essential</li><li>• Lean working principles</li><li>• Consistent quality delivery</li>
                 </ul>
               </div>
             </div>
+            <p className="text-center text-sm text-cyan-400 mt-6 font-medium">The only program that gives leaders the complete system view — from strategy to team delivery.</p>
+          </div>
 
-            {/* Closing Statement */}
-            <div className="text-center">
-              <p className="text-xl text-slate-300 font-light italic mb-8">
-                This is the foundation before enterprise-wide transformation consulting.
-              </p>
-              <a
-                href="#jess-learning-program"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-105"
-              >
-                <span>Explore Full Program</span>
-                <ArrowRight size={20} />
-              </a>
+          {/* 3 credentials */}
+          <div className="rounded-2xl p-8" style={{ background: 'linear-gradient(to right,rgba(59,130,246,0.1),rgba(6,182,212,0.05),rgba(59,130,246,0.1))', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <p className="text-center text-sm text-slate-400 mb-6 uppercase tracking-widest">3 Internationally Recognised Credentials Included</p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
+              {[
+                { num: '1', color: 'blue', title: 'Registered Scrum Master™', sub: 'RSM · Scrum Inc.' },
+                { num: '2', color: 'cyan', title: 'Registered Product Owner™', sub: 'RPO · Scrum Inc.' },
+                { num: '3', color: 'blue', title: 'Registered Scrum@Scale Fundamentals™', sub: 'RS@SF · Scrum Inc.' },
+              ].map(({ num, color, title, sub }) => (
+                <div key={num} className="flex flex-col items-center gap-2">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ background: `rgba(${color === 'cyan' ? '6,182,212' : '59,130,246'},0.2)`, border: `1px solid rgba(${color === 'cyan' ? '6,182,212' : '59,130,246'},0.3)` }}>
+                    <span className={`text-2xl font-black ${color === 'cyan' ? 'text-cyan-400' : 'text-blue-400'}`}>{num}</span>
+                  </div>
+                  <p className="font-semibold text-white">{title}</p>
+                  <p className="text-xs text-slate-500">{sub}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who This Program Is For */}
-      <section id="who-this-is-for" className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div
-          >
-            {/* Header */}
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border /20 rounded-full mb-6">
-                <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-                <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Who This Is For</span>
-              </div>
-              <h2 className="text-3xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
-                Built for Leaders and Teams<br />Driving Real Outcomes
-              </h2>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto font-light">
-                Whether you're scaling agility across an enterprise or advancing your leadership impact
-              </p>
-            </div>
-            
-            {/* Two Column Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Enterprise Teams Card */}
-              <div
-                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
-                
-                <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border /20 rounded-lg mb-6">
-                    <span className="text-sm font-medium text-blue-400">Enterprise Teams</span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-blue-300 transition-colors">
-                    Scale Agility Across Your Organization
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Transformation & PMO Leaders</span> shaping execution systems
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Department Heads</span> accountable for business outcomes
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Product Leaders</span> coordinating multiple teams and portfolios
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 pt-6 border-t border-slate-700/50">
-                    <p className="text-sm text-slate-400 font-light">
-                      Transform how your organization delivers value at scale
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Individual Leaders Card */}
-              <div
-                className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
-                
-                <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-lg mb-6">
-                    <span className="text-sm font-medium text-purple-400">Individual Leaders</span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-semibold text-white mb-6 group-hover:text-purple-300 transition-colors">
-                    Elevate Your Leadership Impact
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Senior Scrum Masters</span> ready to influence beyond one team
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Product Owners</span> stepping into strategic leadership roles
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-300 font-light">
-                        <span className="text-white font-medium">Agile Coaches</span> expanding enterprise-level expertise
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 pt-6 border-t border-slate-700/50">
-                    <p className="text-sm text-slate-400 font-light">
-                      Advance from execution to strategic leadership
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Bottom CTA */}
-            <div
-              className="text-center mt-16"
-            >
-              <p className="text-slate-400 font-light mb-6">
-                This is not introductory training. It's designed for those ready to lead outcomes, not just facilitate processes.
-              </p>
-              <a
-                href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] group"
-              >
-                <span className="font-medium">Talk to a Program Advisor</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Private vs Public Training Options */}
-      <section className="py-16 lg:py-32 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)]"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div
-          >
-            {/* Header */}
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border /20 rounded-full mb-6">
-                <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-                <span className="text-xs font-medium text-blue-400 uppercase tracking-widest">Choose Your Path</span>
-              </div>
-              <h2 className="text-3xl sm:text-5xl font-light mb-6 text-white tracking-tight leading-tight">
-                Private or Public Training
-              </h2>
-              <p className="text-lg text-slate-400 max-w-3xl mx-auto font-light">
-                Select the format that aligns with your goals—enterprise transformation or individual advancement.
-              </p>
-            </div>
-
-            {/* Two Options Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* For Enterprise Leaders & Sponsors */}
-              <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
-                
-                <div className="relative z-10">
-                  <div className="mb-6">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-blue-500/50 text-blue-400 text-sm font-medium rounded-full">
-                      For Organizations
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                    For Enterprise Leaders
-                  </h3>
-                  
-                  <p className="text-base text-slate-300 font-light mb-8 leading-relaxed">
-                    If your goal is to prepare your organization for agile transformation:
-                  </p>
-                
-                  <div className="mb-8">
-                    <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Recommended Path:</h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-slate-300 font-light">Send leadership cohort to Course 1</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-slate-300 font-light">Send delivery leaders to Course 2</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-slate-300 font-light">Align both levels before scaling</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-5 mb-6">
-                    <p className="text-sm text-slate-300 font-light leading-relaxed">
-                      This creates internal transformation readiness.
-                    </p>
-                  </div>
-                  
-                  <div className="mb-6 pt-6 border-t border-slate-700/50">
-                    <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">What's Included</h4>
-                    <ul className="space-y-2.5 text-sm">
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Customized to your organization's context</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Aligned leadership team learning</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Strategic transformation guidance</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">International certifications included</span>
-                      </li>
-                    </ul>
-                  </div>
-</div>
-              </div>
-
-              {/* For Individual Leaders */}
-              <div
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 pt-10 sm:p-10 sm:pt-12 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
-                
-                <div className="relative z-10">
-                  <div className="mb-6">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-purple-500/50 text-purple-400 text-sm font-medium rounded-full">
-                      For Individuals
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                    For Individual Leaders
-                  </h3>
-                  
-                  <p className="text-base text-slate-300 font-light mb-6 leading-relaxed">
-                    If your goal is to:
-                  </p>
-                
-                  <div className="mb-8">
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Upgrade your enterprise agility capability</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Gain globally recognized credentials</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Lead hyper-productive teams</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-5 mb-6">
-                    <p className="text-sm text-slate-300 font-light leading-relaxed">
-                      You may enroll in either course separately — or complete both for full-system mastery.
-                    </p>
-                  </div>
-                  
-                  <div className="mb-6 pt-6 border-t border-slate-700/50">
-                    <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">Certifications Included</h4>
-                    <ul className="space-y-2.5 text-sm">
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Registered Scrum@Scale Fundamentals™</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Registered Scrum Master™</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Registered Product Owner™</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                        <span className="text-slate-300 font-light">Network with industry professionals</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Note */}
-            <div
-              className="mt-16 text-center"
-            >
-              <a
-                href="/contactus.html?source=jess-develop-agile-leader&cta=request-corporate-proposal#contact-form"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] group mb-6"
-              >
-                <span className="font-medium">Request Corporate Proposal</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <p className="text-base text-slate-400 font-light">
-                Not sure which option is right for you? <a href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form" className="text-blue-400 hover:text-blue-300 font-medium underline">Contact us</a> for a consultation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Expected Outcomes */}
-      <section className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-800 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* ═══ SECTION 6: TWO COURSES ═══ */}
+      <section className="py-20 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <div
-          >
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
-                <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                <span className="text-xs font-medium text-amber-400 uppercase tracking-widest">Proven Framework</span>
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">How to Get Started</p>
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-4">A Sequential Two-Course Program</h2>
+            <p className="text-xl text-slate-500 font-light max-w-2xl mx-auto">Each course stands alone. Together, they form a complete leadership-to-execution operating model.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            {/* Course 1 */}
+            <div className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-blue-300 transition-all flex flex-col">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6 self-start">
+                <div className="w-2 h-2 rounded-full bg-blue-500" />
+                <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">Course 1</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light mb-6 text-white tracking-tight leading-[1.2]">
-                Built on Proven Global Patterns
-              </h2>
-              <p className="text-lg sm:text-xl text-slate-300 font-light max-w-4xl mx-auto leading-relaxed">
-                JESS integrates principles from <span className="text-amber-400 font-medium">Scrum@Scale</span>, co-created by <span className="text-white font-medium">Dr. Jeff Sutherland</span>.
-              </p>
+              <h3 className="text-3xl font-semibold text-slate-900 mb-3">High Performance Agile Leader</h3>
+              <p className="text-slate-500 font-light mb-2 text-sm italic">Registered Scrum@Scale Fundamentals™ (RS@SF)</p>
+              <p className="text-slate-500 font-light mb-6">Master Jeff Sutherland's system. Lead with clarity. For leaders and managers who drive performance.</p>
+              <div className="space-y-3 mb-8 flex-grow">
+                {[
+                  'Align strategy to execution across business units',
+                  'Establish governance that enables speed without chaos',
+                  'Design an enterprise operating model for scale',
+                  'Earn: Registered Scrum@Scale Fundamentals™',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    </div>
+                    <span className="text-slate-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+                <p className="text-xs text-blue-800 font-medium">Outcome: You leave equipped to architect the system — not just manage within it.</p>
+              </div>
+              <div className="flex items-center justify-between">
+                <a href="/jess/class-schedule.html" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>View Class Schedule →</a>
+                <span className="text-xs text-slate-400">2-Day Intensive</span>
+              </div>
             </div>
+            {/* Course 2 */}
+            <div className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-cyan-300 transition-all flex flex-col">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full mb-6 self-start">
+                <div className="w-2 h-2 rounded-full bg-cyan-500" />
+                <span className="text-sm font-medium text-cyan-600 uppercase tracking-wider">Course 2</span>
+              </div>
+              <h3 className="text-3xl font-semibold text-slate-900 mb-3">Leading Hyper-Productive Teams</h3>
+              <p className="text-slate-500 font-light mb-2 text-sm italic">Registered Scrum Master — Product Owner™ (RSMPO)</p>
+              <p className="text-slate-500 font-light mb-6">Execute with momentum. Create sustainable performance. For leaders building high-performance delivery teams.</p>
+              <div className="space-y-3 mb-8 flex-grow">
+                {[
+                  'Implement proven Scrum execution mechanics',
+                  'Eliminate bottlenecks and decision delays',
+                  'Use metrics that predict delivery outcomes',
+                  'Earn: Registered Scrum Master™ + Registered Product Owner™',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-cyan-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-cyan-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    </div>
+                    <span className="text-slate-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-4 mb-6">
+                <p className="text-xs text-cyan-800 font-medium">Outcome: You build teams that deliver consistently — sprint after sprint.</p>
+              </div>
+              <div className="flex items-center justify-between">
+                <a href="/jess/class-schedule.html" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>View Class Schedule →</a>
+                <span className="text-xs text-slate-400">2-Day Intensive</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-900 rounded-2xl p-8 text-center border border-blue-500/20">
+            <p className="text-white font-semibold text-lg mb-2">Take both courses for full-system mastery</p>
+            <p className="text-slate-400 font-light text-sm max-w-xl mx-auto">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
+          </div>
+        </div>
+      </section>
 
-            {/* Authority Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              {/* Left: Framework Foundation */}
-              <div
-                className="relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-2xl"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10">
-                  <div className="flex items-start gap-4 mb-8">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/30">
-                      <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
+      {/* ═══ SECTION 7: REAL-WORLD RESULTS ═══ */}
+      <section className="py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Proven Results</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Results That Speak for Themselves</h2>
+            <p className="text-xl text-slate-400 font-light">Real organisations. Specific numbers. Measured outcomes.</p>
+          </div>
+          {/* Bank Islam case study */}
+          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+            <div className="absolute top-4 right-4 px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Featured Case Study</div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Bank Islam Malaysia Berhad</p>
+                <h3 className="text-3xl font-bold text-white mb-2">The Mobile Banking "Go-Beyond" Breakthrough</h3>
+                <p className="text-slate-400 font-light mb-8">From failed Agile initiatives to enterprise-wide transformation — delivered in 7 months.</p>
+                <div className="grid grid-cols-3 gap-6 mb-8">
+                  {[
+                    { val: '50%', label: 'Increase in\nRetail Deposits' },
+                    { val: '3X', label: 'Jump in\nApp Store Ratings' },
+                    { val: '4.5X', label: 'Faster\nTime-to-Market' },
+                  ].map(({ val, label }, i) => (
+                    <div key={val} className={`text-center${i === 1 ? ' border-x border-slate-700' : ''}`}>
+                      <div className="text-4xl font-black text-cyan-400 mb-1">{val}</div>
+                      <div className="text-xs text-slate-400 whitespace-pre-line">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <blockquote className="border-l-2 border-cyan-500 pl-4 italic text-slate-300 text-sm leading-relaxed">
+                  "Agile can move beyond theory and frameworks to become a strategic lever for transformation and value creation."
+                </blockquote>
+              </div>
+              <div className="flex flex-col items-center lg:items-start gap-6">
+                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                  <img src="/assets/img/jess/people-iran-moriff.jpg" alt="Mr. Iran Moriff" className="w-full h-full object-cover object-top" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-lg">Mr. Iran Moriff</p>
+                  <p className="text-slate-400 text-sm">Group Chief Operating Officer &amp;</p>
+                  <p className="text-slate-400 text-sm">Group Chief Sustainability Officer</p>
+                  <p className="text-cyan-400 text-sm font-medium mt-1">Bank Islam Malaysia Berhad</p>
+                  <p className="text-slate-500 text-xs mt-2 italic">Opening Keynote Speaker, AIDA Forum 2025</p>
+                </div>
+                <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
+                  <span className="text-blue-400 font-medium">Presented live</span> at the AIDA Forum 2025 — Malaysia's premier Agile leadership summit
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* 3 global case studies */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {[
+              { org: 'Rocket Mortgage · USA', stat: '86 → 42 days', desc: 'Cycle time for feature development halved', note: 'Largest mortgage provider in the US' },
+              { org: '3M Hospital Systems · USA', stat: '60% reduction', desc: 'In staff attrition — people love their job', note: 'Award-winning culture change' },
+              { org: 'SAAB Aeronautics · Sweden', stat: '2,500 people', desc: 'Synchronised in just 1.25 hours', note: 'Gripen E jet fighter programme' },
+            ].map(({ org, stat, desc, note }) => (
+              <div key={org} className="rounded-2xl p-6" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-3">{org}</p>
+                <p className="text-2xl font-black text-white mb-1">{stat}</p>
+                <p className="text-sm text-slate-400">{desc}</p>
+                <p className="text-xs text-slate-600 mt-3 italic">{note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 8: TESTIMONIALS ═══ */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What Leaders Say</p>
+            <h2 className="text-4xl font-bold text-white">Trusted Across Asia Pacific's<br />Top Organisations</h2>
+          </div>
+          {/* Participant testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              { img: '/assets/img/jess/people-inda-mulyani.webp', name: 'Inda Mulyani', role: 'Head of PMO · Bank Danamon Indonesia', quote: 'If you want to implement Scrum the right way, join this training.' },
+              { img: '/assets/img/jess/people-fadly-rasyad.webp', name: 'Fadly Rasyad', role: 'Enterprise Agile Coach · Bank of Singapore', quote: 'Very practical, makes sense, and right on the money.' },
+              { img: '/assets/img/jess/people-shuting-fu.webp', name: 'Shuting Fu', role: 'R&D Project Manager · W4 Marketing', quote: 'Very cool class with rich and well-structured knowledge.' },
+              { img: '/assets/img/jess/people-peichin-liew.webp', name: 'Pei Chin Liew', role: 'Assistant Vice President · Takaful Ikhlas Family Berhad', quote: 'Very useful for me. I like how this course was easy to follow.' },
+              { img: '/assets/img/jess/people-aquib-nihal.webp', name: 'Aquib Nihal', role: 'Product Manager · MBUZZ', quote: 'Something worth investing your time in. A lot to learn and implement.' },
+            ].map(({ img, name, role, quote }) => (
+              <div key={name} className="rounded-2xl p-6" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <div className="flex mb-3 text-yellow-400">★★★★★</div>
+                <p className="text-white text-sm leading-relaxed italic mb-4">"{quote}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src={img} alt={name} className="w-full h-full object-cover" />
+                  </div>
+                  <div><p className="text-white text-sm font-semibold">{name}</p><p className="text-slate-400 text-xs">{role}</p></div>
+                </div>
+              </div>
+            ))}
+            <div className="rounded-2xl p-6 flex items-center justify-center" style={{ background: 'rgba(30,41,59,0.3)', border: '1px dashed #334155' }}>
+              <div className="text-center">
+                <div className="text-3xl mb-2">🌏</div>
+                <p className="text-slate-500 text-sm">300+ classes delivered<br />across Asia Pacific</p>
+              </div>
+            </div>
+          </div>
+          {/* Expert endorsements */}
+          <div className="border-t border-slate-800 pt-12">
+            <p className="text-center text-xs text-slate-500 uppercase tracking-widest mb-8">Endorsed by the World's Leading Agile Authorities</p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  img: '/assets/img/jess/people-jeff-sutherland.webp',
+                  name: 'Dr. Jeff Sutherland',
+                  role: 'Founder & Chairman, Scrum Inc.',
+                  sub: 'Inventor of Scrum · Co-signatory, Agile Manifesto',
+                  quote: 'Ethan recently spent two days in Tokyo with me planning his Scrum@Scale classes. Having reviewed the plan carefully, I strongly recommend training with Ethan. These will be excellent courses.',
+                  featured: true,
+                },
+                {
+                  img: '/assets/img/jess/people-grace-chan.webp',
+                  name: 'Grace Chan',
+                  role: 'GM, Personal Banking',
+                  sub: 'Standard Chartered Bank, Singapore',
+                  quote: 'I recommended him to a few business partners and all have gotten raving reviews and he has helped them drive impactful financial benefit and result.',
+                  featured: false,
+                },
+                {
+                  img: '/assets/img/jess/people-mike-cohn.webp',
+                  name: 'Mike Cohn',
+                  role: 'Co-founder, Scrum Alliance',
+                  sub: '',
+                  quote: 'Ethan has been a strong proponent of doing Scrum well and has been of great assistance to companies looking to improve their use of Scrum and agile approaches.',
+                  featured: false,
+                },
+              ].map(({ img, name, role, sub, quote, featured }) => (
+                <div key={name} className="rounded-2xl p-8" style={featured ? { background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.3)' } : { background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0" style={{ border: featured ? '2px solid rgba(59,130,246,0.3)' : '2px solid #334155' }}>
+                      <img src={img} alt={name} className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-semibold text-white mb-2">Enterprise-Proven Principles</h3>
-                      <p className="text-amber-400 text-sm font-medium">Tested at Scale, Globally</p>
+                      <p className="text-cyan-400 font-semibold text-sm">{name}</p>
+                      <p className="text-slate-400 text-xs">{role}</p>
+                      {sub && <p className="text-slate-500 text-xs">{sub}</p>}
                     </div>
                   </div>
-                  
-                  <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                    Concepts such as <span className="text-white font-medium">Minimum Viable Bureaucracy</span> enable organizations to scale without friction, waste, or excessive control layers.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Eliminates organizational drag and bureaucratic overhead</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Enables rapid decision-making at every organizational level</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Scales agility without adding complexity</p>
-                    </div>
-                  </div>
+                  <p className="text-white text-sm leading-relaxed italic">"{quote}"</p>
                 </div>
-              </div>
-
-              {/* Right: Practical Translation */}
-              <div
-                className="relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl blur-2xl"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10">
-                  <div className="flex items-start gap-4 mb-8">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/30">
-                      <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white mb-2">Practical Application</h3>
-                      <p className="text-amber-400 text-sm font-medium">Theory to Execution</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                    This program translates those principles into <span className="text-white font-medium">practical leadership and execution capability</span>.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Actionable frameworks for immediate organizational implementation</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Real-world leadership patterns used by Fortune 500 companies</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0"></div>
-                      <p className="text-slate-400 leading-relaxed">Executable strategies that deliver results from day one</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Outcome Statement */}
-            <div
-              className="relative max-w-4xl mx-auto"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-amber-400/20 to-amber-500/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-amber-500/30 rounded-3xl p-12 text-center">
-                <div className="mb-6">
-                  <span className="text-amber-400 text-sm font-semibold uppercase tracking-widest">The Outcome</span>
+      {/* ═══ SECTION 9: 5-STAR EXPERIENCE ═══ */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">What You Get</p>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">A 5-Star Learning Experience</h2>
+            <p className="text-xl text-slate-500 font-light">From preparation to post-class support — every step is designed for real-world application.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4"><span className="text-2xl">📋</span></div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">Before Class</h3>
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Pre-class consultation with trainer</li>
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>4 chapters of pre-reading + quizzes</li>
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Readiness assessment for your team</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4"><span className="text-2xl">🎓</span></div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">During Class</h3>
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Full expert trainer-led delivery</li>
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Dr. Sutherland's original curriculum</li>
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Real-world case study workshops</li>
+                <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Interactive games and exercises</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl p-8 shadow-lg relative text-white" style={{ background: 'linear-gradient(135deg,#3b82f6,#06b6d4)' }}>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-slate-900 text-cyan-400 text-xs font-bold rounded-full">HIGH VALUE</div>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.2)' }}><span className="text-2xl">⭐</span></div>
+              <h3 className="text-lg font-semibold mb-4">After Class</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2"><span className="font-bold mt-0.5">✓</span>1-year unlimited class revisions</li>
+                <li className="flex items-start gap-2 rounded-lg p-2" style={{ background: 'rgba(255,255,255,0.2)' }}>
+                  <span className="font-bold mt-0.5">✓</span>
+                  <span><strong>2 exclusive 1:1 consulting hours</strong> with Ethan — apply what you learned to your real situation</span>
+                </li>
+                <li className="flex items-start gap-2"><span className="font-bold mt-0.5">✓</span>Lifelong CI Agile alumni community access</li>
+                <li className="flex items-start gap-2"><span className="font-bold mt-0.5">✓</span>Social networking events</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 10: TRAINER AUTHORITY ═══ */}
+      <section className="py-20" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0" style={{ border: '2px solid rgba(59,130,246,0.3)' }}>
+                  <img src="/assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo" className="w-full h-full object-cover" />
                 </div>
-                <div className="space-y-4">
-                  <p className="text-3xl sm:text-4xl font-light text-white leading-tight">
-                    Immediate Clarity.
-                  </p>
-                  <p className="text-3xl sm:text-4xl font-light text-white leading-tight">
-                    Sustainable Performance.
-                  </p>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">Ethan Soo</h3>
+                  <p className="text-cyan-400 text-sm font-medium mb-3">Asia Pacific Regional Partner, Scrum Inc.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 rounded text-xs text-blue-400" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>Scrum Fellow</span>
+                    <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">1 of 3 Asia Pacific Partners</span>
+                  </div>
                 </div>
-                <div className="mt-8 pt-8 border-t border-slate-700">
-                  <p className="text-slate-400 text-lg leading-relaxed">
-                    Stop guessing. Start executing with a system trusted by enterprise leaders worldwide.
-                  </p>
+              </div>
+              <ul className="space-y-3 text-sm text-slate-300 mb-8">
+                {[
+                  'Personally endorsed by Dr. Jeff Sutherland',
+                  '300+ Scrum classes delivered across Asia Pacific',
+                  '20 years leading Agile transformations',
+                  'Responsible for certifying Scrum Trainers in the region',
+                  '30+ enterprise transformation engagements',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-cyan-400 font-bold flex-shrink-0">→</span>{item}
+                  </li>
+                ))}
+              </ul>
+              <a href="/jess/instructor.html" className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 border-b border-cyan-500/30 pb-0.5">View Full Instructor Profile →</a>
+            </div>
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Personal Endorsement from Dr. Jeff Sutherland</p>
+              <div className="text-5xl font-black leading-none mb-2" style={{ color: 'rgba(59,130,246,0.2)' }}>"</div>
+              <blockquote className="text-white text-lg leading-relaxed italic mb-6">
+                Ethan recently spent two days in Tokyo with me planning his Scrum@Scale classes. Having reviewed the plan carefully, I strongly recommend training with Ethan. These will be excellent courses.
+              </blockquote>
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0" style={{ border: '2px solid rgba(59,130,246,0.3)' }}>
+                  <img src="/assets/img/jess/people-jeff-sutherland.webp" alt="Dr. Jeff Sutherland" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="text-cyan-400 font-semibold text-sm">Dr. Jeff Sutherland</p>
+                  <p className="text-slate-400 text-xs">Founder &amp; Chairman, Scrum Inc.</p>
+                  <p className="text-slate-500 text-xs">Inventor of Scrum · Co-signatory, Agile Manifesto</p>
                 </div>
               </div>
             </div>
@@ -1218,205 +609,138 @@ export function LeadershipTrainingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-40 border-t border-slate-200 bg-white">
-        <div className="w-full">
-          <div
-          >
-            {/* Clean Two-Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-              {/* Left Column - Image */}
-              <div className="lg:col-span-2">
-                <div className="relative h-[500px] lg:h-[650px] bg-slate-200 overflow-hidden">
-                  <img 
-                    src="/assets/img/jess/people-leadership-excellence.webp"
-                    alt="Leadership Excellence"
-                    className="w-full h-full object-cover object-left"
-                  />
-                </div>
-              </div>
-              
-              {/* Right Column - Content */}
-              <div className="lg:col-span-3 flex flex-col justify-center px-4 sm:px-6 lg:px-12 xl:px-20 py-12 lg:py-0">
-                {/* Eyebrow */}
-                <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-8">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  Ready to Transform Your Leadership?
-                </div>
-                
-                {/* Headline */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 text-slate-900 leading-[1.15] tracking-tight">
-                  Start with a Conversation.<br />
-                  Scale with Confidence.
-                </h2>
-                
-                {/* Subheadline */}
-                <p className="text-lg sm:text-xl text-slate-700 mb-8 font-light leading-relaxed">
-                  Join the leaders who moved from Agile aspiration to enterprise execution. Schedule a 30-minute briefing to see if JESS is right for your organization.
-                </p>
-                
-                {/* Key Points */}
-                <div className="mb-10 space-y-4">
-                  <div className="flex items-start gap-4">
-                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-base text-slate-700 font-normal">
-                      <span className="font-semibold">No-pressure conversation</span> to explore fit, scope, and readiness
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-base text-slate-700 font-normal">
-                      <span className="font-semibold">Internationally recognized certifications</span> included with every program
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-base text-slate-700 font-normal">
-                      <span className="font-semibold">Limited cohort sizes</span> ensure senior-level discussion and outcomes
-                    </p>
-                  </div>
-                </div>
-                
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a 
-                    href="/contactus.html?source=jess-develop-agile-leader&cta=talk-to-program-advisor#contact-form"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl"
-                  >
-                    Talk to a Program Advisor
-                    <ArrowRight size={18} strokeWidth={2} />
-                  </a>
-                  
-                  <a 
-                    href="#jess-learning-program"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-slate-900 font-medium border-2 border-slate-300 rounded-lg hover:border-slate-900 transition-all cursor-pointer"
-                  >
-                    Review Program Details
-                    <ArrowRight size={18} strokeWidth={1.5} />
-                  </a>
-                </div>
-                
-                {/* Trust Signal */}
-                <div className="bg-slate-100 border border-slate-200 rounded-lg p-4">
-                  <p className="text-sm text-slate-600 font-light">
-                    <span className="font-semibold text-slate-900">Trusted by enterprise teams worldwide.</span> Learn how JESS has helped organizations achieve 30x faster execution cycles and 2x more value delivered.
-                  </p>
-                </div>
-              </div>
+      {/* ═══ SECTION 11: WHO THIS IS FOR ═══ */}
+      <section className="py-20 bg-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
+          </div>
+          <div className="mb-8 rounded-2xl overflow-hidden h-48">
+            <img src="/assets/img/jess/people-leadership-excellence.webp" alt="Leadership Excellence" className="w-full h-full object-cover object-top" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
+              <p className="text-green-400 text-sm font-semibold uppercase tracking-wider mb-4">✓ This is for you if you are…</p>
+              <ul className="space-y-3 text-sm text-slate-300">
+                <li>C-Suite or senior leader accountable for business outcomes</li>
+                <li>Transformation, PMO, or product leader shaping execution systems</li>
+                <li>Senior Scrum Master or Product Owner ready to influence at scale</li>
+                <li>Leader scaling agility across multiple teams or portfolios</li>
+                <li>Department head preparing your organisation for transformation</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
+              <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">✗ This is NOT for you if you need…</p>
+              <ul className="space-y-3 text-sm text-slate-400">
+                <li>Entry-level or introductory Scrum training</li>
+                <li>Tool-only Agile courses focused on mechanics</li>
+                <li>Theory-heavy certification without real-world application</li>
+              </ul>
+              <p className="text-slate-500 text-xs mt-6 italic">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 lg:py-32 px-6 lg:px-8 border-t border-slate-200 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div
-          >
-            <h2 className="text-3xl sm:text-5xl font-light mb-16 text-slate-900 tracking-tight leading-[1.43]">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="w-full" data-faq-root="true">
-              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
-                <button
-                  type="button"
-                  data-faq-button
-                  aria-expanded="false"
-                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
-                >
-                  <span>Is this program mainly a certification or a leadership training?</span>
-                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-                </button>
-                <div data-faq-answer className="hidden overflow-hidden text-sm">
-                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
-                    This is a leadership training program designed to help senior leaders and leadership teams understand how Agile and AI work together as a system. Certifications are included, but they are by-products of learning, not the primary objective.
-                  </div>
+      {/* ═══ SECTION 12: UPCOMING CLASSES ═══ */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Enrol Now</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Upcoming Public Classes</h2>
+            <p className="text-slate-400 font-light">Public classes run in small cohorts. Limited seats per session.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            {[
+              { label: 'Next Session', date: '27–28 April 2026', featured: true },
+              { label: 'Upcoming', date: '7–8 July 2026', featured: false },
+              { label: 'Upcoming', date: '13–14 October 2026', featured: false },
+            ].map(({ label, date, featured }) => (
+              <div key={date} className="bg-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-blue-500/30 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${featured ? 'text-blue-400' : 'text-slate-400 bg-slate-700 border border-slate-600'}`} style={featured ? { background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' } : {}}>
+                    {label}
+                  </span>
+                  <span className="text-xs text-slate-500">Jakarta</span>
                 </div>
+                <p className="text-2xl font-bold text-white mb-1">{date}</p>
+                <p className="text-slate-400 text-sm mb-1">High Performance Agile Leader</p>
+                <p className="text-slate-500 text-xs mb-6">Course 1 · 2-Day Intensive</p>
+                {featured
+                  ? <a href="/jess/class-schedule.html" className="block text-center py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Book a Seat →</a>
+                  : <a href="/jess/class-schedule.html" className="block text-center py-3 border border-slate-600 text-white font-medium rounded-lg text-sm hover:bg-slate-700 transition-all">View Details →</a>
+                }
               </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-slate-500">More cities and dates available. <a href="/jess/class-schedule.html" className="text-cyan-400 hover:text-cyan-300">View full class schedule →</a></p>
+        </div>
+      </section>
 
-              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
-                <button
-                  type="button"
-                  data-faq-button
-                  aria-expanded="false"
-                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
-                >
-                  <span>Do participants receive certifications?</span>
-                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-                </button>
-                <div data-faq-answer className="hidden overflow-hidden text-sm">
-                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
-                    Yes. Participants may earn internationally recognised credentials such as Registered Scrum Master™, Registered Product Owner™, and Registered Scrum@Scale Fundamentals™. These certifications support professional credibility but are not the focus of the program.
-                  </div>
+      {/* ═══ SECTION 13: AI SECTION ═══ */}
+      <section className="py-20 border-t-2 border-dashed border-slate-700 relative" style={{ background: 'linear-gradient(to bottom,#020617,#0f172a)' }}>
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs text-slate-400 uppercase tracking-widest">Optional Enhancement</div>
+        <div className="max-w-5xl mx-auto px-6 pt-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
+              <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Bonus: AI-Powered Agile Coaching</span>
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
+            <p className="text-slate-400 font-light max-w-xl mx-auto">Our program now integrates Scrum Sage, a GPT built specifically on True Scrum knowledge — developed by JJ Sutherland, CEO of Scrum Inc.</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+            <div>
+              <p className="text-slate-400 text-xs uppercase tracking-widest mb-3">JJ Sutherland · CEO, Scrum Inc. USA</p>
+              <div className="text-5xl font-black leading-none" style={{ color: 'rgba(59,130,246,0.2)' }}>"</div>
+              <blockquote className="text-xl text-white font-light leading-relaxed italic mb-6">
+                Agile, in its traditional form, is dead. Since 2024, my father and I have reimagined Agile with AI — transforming Scrum into AI-Driven Scrum. The results are extraordinary.
+              </blockquote>
+              <p className="text-blue-400 text-sm font-semibold">— JJ Sutherland</p>
+              <p className="text-slate-500 text-xs">CEO, Scrum Inc. · World Famous Author &amp; Thought Leader</p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { val: '90%', label: 'Less Overhead with Scrum' },
+                { val: '30x', label: 'Faster Working Time' },
+                { val: '2x', label: 'More Work Done' },
+                { val: '50%', label: 'Less Time Needed' },
+              ].map(({ val, label }) => (
+                <div key={val} className="rounded-xl p-5 text-center" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                  <div className="text-3xl font-black text-blue-400 mb-1">{val}</div>
+                  <div className="text-xs text-slate-400">{label}</div>
                 </div>
-              </div>
-
-              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
-                <button
-                  type="button"
-                  data-faq-button
-                  aria-expanded="false"
-                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
-                >
-                  <span>What materials or references are used in the program?</span>
-                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-                </button>
-                <div data-faq-answer className="hidden overflow-hidden text-sm">
-                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
-                    The program is grounded in proven references such as <em>Scrum: The Art of Doing Twice the Work in Half the Time</em>, <em>The Scrum@Scale Guide</em>, and <em>The Scrum Fieldbook</em>. These are used as long-term leadership references rather than academic reading.
-                  </div>
-                </div>
-              </div>
-
-              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
-                <button
-                  type="button"
-                  data-faq-button
-                  aria-expanded="false"
-                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
-                >
-                  <span>Is this a self-study or theory-heavy course?</span>
-                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-                </button>
-                <div data-faq-answer className="hidden overflow-hidden text-sm">
-                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
-                    No. This is not a self-study or theory-heavy program. It is designed for leaders accountable for outcomes, with practical discussions and real-world system application.
-                  </div>
-                </div>
-              </div>
-
-              <div data-faq-item="true" className="border-b last:border-b-0 border-slate-200">
-                <button
-                  type="button"
-                  data-faq-button
-                  aria-expanded="false"
-                  className="focus-visible:border-ring focus-visible:ring-ring/50 flex w-full items-start justify-between gap-4 rounded-md py-4 text-left text-base sm:text-lg font-light transition-all outline-none hover:underline disabled:pointer-events-none disabled:opacity-50 text-slate-900 hover:text-slate-700"
-                >
-                  <span>What typically happens after the training?</span>
-                  <ChevronDown data-faq-icon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-                </button>
-                <div data-faq-answer className="hidden overflow-hidden text-sm">
-                  <div className="pt-0 pb-4 text-slate-600 font-light leading-relaxed">
-                    Most organisations use this program as a shared starting point. After leaders align on the system, they decide how far and how fast they want to implement, independently or with further support. There is no obligation beyond the training.
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 14: FINAL CTA ═══ */}
+      <section className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#0f172a,#1e293b,#0f172a)' }}>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top,rgba(59,130,246,0.12),transparent 60%)' }} />
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
+        <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            Ready to Lead the<br />Enterprise Agility Transformation?
+          </h2>
+          <p className="text-slate-300 text-xl font-light mb-10 max-w-xl mx-auto">
+            Join the leaders across Asia Pacific who are redesigning how their organisations deliver results.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-10 py-5 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 20px 40px rgba(59,130,246,0.25)' }}>
+              Talk to a Program Advisor →
+            </a>
+            <a href="/jess/class-schedule.html" className="inline-flex items-center gap-3 px-10 py-5 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ border: '2px solid rgba(34,211,238,0.5)' }}>
+              View Class Schedule
+            </a>
+          </div>
+          <p className="text-slate-500 text-sm mt-8">Not sure if this is the right program? We'll tell you honestly. <a href="/contactus.html" className="text-cyan-400 hover:text-cyan-300 underline">Contact us first.</a></p>
         </div>
       </section>
 
       <MainSiteFooter />
-
     </div>
-
-      
   );
 }

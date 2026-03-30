@@ -4,6 +4,7 @@
 // NO React state for dropdown/mobile behavior — static export only
 
 import ciAgileLogo from '@/assets/img/main/ciagile-main-logo.webp';
+import ciAgileLogoWhite from '@/assets/img/main/ci-agile-logo-white.png';
 
 type MainSiteNavigationProps = {
   /**
@@ -11,12 +12,31 @@ type MainSiteNavigationProps = {
    * Keeps other pages unchanged.
    */
   isHomeOverlay?: boolean;
+  /** When true, uses dark #0F1724 background with white text — for dark-themed pages. */
+  isDarkTheme?: boolean;
 };
 
-export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigationProps) {
+export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false }: MainSiteNavigationProps) {
   const navClassName = isHomeOverlay
     ? "fixed top-0 left-0 right-0 bg-white/20 backdrop-blur-md border-b border-white/20 z-50"
-    : "fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50";
+    : isDarkTheme
+      ? "navbar-dark fixed top-0 left-0 right-0 bg-[#0F1724] border-b border-slate-700/60 z-50"
+      : "fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50";
+
+  // Theme-conditional class helpers
+  const desktopTriggerClass = isDarkTheme
+    ? "px-4 py-2 flex items-center space-x-1 text-slate-200 hover:bg-slate-800 transition-colors text-sm font-medium"
+    : "px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium";
+  const mobilePanelClass = isDarkTheme
+    ? "absolute left-0 right-0 top-[72px] bg-[#0F1724] border-b border-slate-700/60 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto"
+    : "absolute left-0 right-0 top-[72px] bg-white border-b border-gray-200 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto";
+  const mobileSectionClass = isDarkTheme ? "border-b border-slate-700 pb-4" : "border-b border-gray-100 pb-4";
+  const mobileAccBtnClass = isDarkTheme
+    ? "w-full flex items-center justify-between px-4 py-3 text-slate-200 font-medium hover:bg-slate-800 rounded-lg transition-colors"
+    : "w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors";
+  const mobileAccHdrClass = isDarkTheme ? "text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3" : "text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3";
+  const mobileLinkClass = isDarkTheme ? "block py-2 text-sm text-slate-300 hover:text-cyan-400 no-underline" : "block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline";
+  const mobileMenuBtnClass = isDarkTheme ? "p-2 text-slate-200 hover:bg-slate-800 rounded-lg transition-colors" : "p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
 
   return (
     <nav className={navClassName}>
@@ -27,8 +47,8 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             <a href="/index.html" className="flex items-center space-x-2 no-underline">
               <img
                 alt="CI Agile Logo"
-                className="h-[24px] w-auto object-contain"
-                src={ciAgileLogo}
+                className={isDarkTheme ? "h-[34px] w-auto object-contain" : "h-[24px] w-auto object-contain"}
+                src={isDarkTheme ? ciAgileLogoWhite : ciAgileLogo}
               />
             </a>
           </div>
@@ -42,7 +62,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className={desktopTriggerClass}
                 data-dropdown-trigger="programs"
               >
                 <span data-dropdown-text>Programs</span>
@@ -307,7 +327,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className={desktopTriggerClass}
                 data-dropdown-trigger="resources"
               >
                 <span data-dropdown-text>Resources</span>
@@ -477,7 +497,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             >
               <button
                 aria-expanded="false"
-                className="px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                className={desktopTriggerClass}
                 data-dropdown-trigger="company"
               >
                 <span data-dropdown-text>Company</span>
@@ -662,7 +682,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               aria-label="Open menu"
               aria-controls="mainsite-mobile-menu"
               data-mobile-toggle
-              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className={mobileMenuBtnClass}
             >
               {/* Hamburger icon */}
               <svg data-icon="open" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -691,13 +711,13 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
         <div className="absolute inset-0 bg-black/20" data-mobile-backdrop />
 
         {/* Panel */}
-        <div className="absolute left-0 right-0 top-[72px] bg-white border-b border-gray-200 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto">
+        <div className={mobilePanelClass}>
           <div className="px-4 py-4 space-y-2">
             {/* Programs Section */}
-            <div className="border-b border-gray-100 pb-4">
+            <div className={mobileSectionClass}>
               <button
                 data-nav-accordion="programs"
-                className="w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                className={mobileAccBtnClass}
               >
                 <span>Programs</span>
                 <svg className="w-5 h-5 transition-transform" data-nav-accordion-icon fill="none" viewBox="0 0 20 20">
@@ -707,7 +727,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               <div data-nav-accordion-panel="programs" className="hidden mt-2 pl-4 space-y-6">
                 {/* Enterprise Pathways */}
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Enterprise Pathways</h4>
+                  <h4 className={mobileAccHdrClass}>Enterprise Pathways</h4>
                   <div className="space-y-4">
                     {/* JESS Program */}
                     <div className="space-y-2">
@@ -762,7 +782,7 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
 
                 {/* Capability Tracks */}
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Capability Tracks</h4>
+                  <h4 className={mobileAccHdrClass}>Capability Tracks</h4>
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <a
@@ -834,10 +854,10 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             </div>
 
             {/* Resources Section */}
-            <div className="border-b border-gray-100 pb-4">
+            <div className={mobileSectionClass}>
               <button
                 data-nav-accordion="resources"
-                className="w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                className={mobileAccBtnClass}
               >
                 <span>Resources</span>
                 <svg className="w-5 h-5 transition-transform" data-nav-accordion-icon fill="none" viewBox="0 0 20 20">
@@ -846,26 +866,26 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               </button>
               <div data-nav-accordion-panel="resources" className="hidden mt-2 pl-4 space-y-4">
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Self-Paced Learning</h4>
-                  <a href="/jess/free-resources.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Self-Paced Learning</h4>
+                  <a href="/jess/free-resources.html" className={mobileLinkClass} data-mobile-close>
                     Learn Agile &amp; AI in 10 Minutes
                   </a>
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Official Guides</h4>
-                  <a href="https://scrumguides.org/" target="_blank" rel="noopener noreferrer" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Official Guides</h4>
+                  <a href="https://scrumguides.org/" target="_blank" rel="noopener noreferrer" className={mobileLinkClass} data-mobile-close>
                     Scrum Guide
                   </a>
-                  <a href="https://www.scrumatscale.com/scrum-at-scale-guide/" target="_blank" rel="noopener noreferrer" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                  <a href="https://www.scrumatscale.com/scrum-at-scale-guide/" target="_blank" rel="noopener noreferrer" className={mobileLinkClass} data-mobile-close>
                     Scrum@Scale Guide
                   </a>
-                  <a href="https://agilemanifesto.org/" target="_blank" rel="noopener noreferrer" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                  <a href="https://agilemanifesto.org/" target="_blank" rel="noopener noreferrer" className={mobileLinkClass} data-mobile-close>
                     Agile Manifesto
                   </a>
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Free Resources</h4>
-                  <a href="/jess/free-resources.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>
+                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Free Resources</h4>
+                  <a href="/jess/free-resources.html" className={mobileLinkClass} data-mobile-close>
                     View All Free Resources
                   </a>
                 </div>
@@ -873,10 +893,10 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
             </div>
 
             {/* Company Section */}
-            <div className="border-b border-gray-100 pb-4">
+            <div className={mobileSectionClass}>
               <button
                 data-nav-accordion="company"
-                className="w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors"
+                className={mobileAccBtnClass}
               >
                 <span>Company</span>
                 <svg className="w-5 h-5 transition-transform" data-nav-accordion-icon fill="none" viewBox="0 0 20 20">
@@ -885,16 +905,16 @@ export function MainSiteNavigation({ isHomeOverlay = false }: MainSiteNavigation
               </button>
               <div data-nav-accordion-panel="company" className="hidden mt-2 pl-4 space-y-4">
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">About</h4>
-                  <a href="/aboutus.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>About Us</a>
-                  <a href="/index.html#methodology" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>Our Methodology</a>
-                  <a href="/contactus.html" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>Contact Us</a>
+                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>About</h4>
+                  <a href="/aboutus.html" className={mobileLinkClass} data-mobile-close>About Us</a>
+                  <a href="/index.html#methodology" className={mobileLinkClass} data-mobile-close>Our Methodology</a>
+                  <a href="/contactus.html" className={mobileLinkClass} data-mobile-close>Contact Us</a>
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">Leadership Philosophy</h4>
-                  <a href="/aboutus.html#founder" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>Our Founder</a>
-                  <a href="/aboutus.html#services" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>Our Services</a>
-                  <a href="/aboutus.html#philosophy" className="block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline" data-mobile-close>Our Philosophy</a>
+                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Leadership Philosophy</h4>
+                  <a href="/aboutus.html#founder" className={mobileLinkClass} data-mobile-close>Our Founder</a>
+                  <a href="/aboutus.html#services" className={mobileLinkClass} data-mobile-close>Our Services</a>
+                  <a href="/aboutus.html#philosophy" className={mobileLinkClass} data-mobile-close>Our Philosophy</a>
                 </div>
               </div>
             </div>
