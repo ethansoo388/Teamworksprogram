@@ -674,8 +674,8 @@ export function LeadershipTrainingPage() {
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
             <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
           </div>
-          <div className="mb-8 rounded-2xl overflow-hidden h-48">
-            <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-full object-cover object-top" />
+          <div className="mb-8 rounded-2xl overflow-hidden">
+            <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
