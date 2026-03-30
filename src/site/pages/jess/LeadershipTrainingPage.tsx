@@ -299,7 +299,12 @@ export function LeadershipTrainingPage() {
 
           {/* Holistic model */}
           <div className="mb-16">
-            <p className="text-center text-sm text-slate-500 uppercase tracking-widest mb-8">What You Will Master — The Full System View</p>
+            <div className="text-center mb-10">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                Command the Full Picture.{' '}
+                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Own Every Layer of Your Team.</span>
+              </h3>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
               <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-product-owner.webp" alt="Product Owner Knowledge" className="w-full h-full object-cover" /></div>
               <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-scrum-master.webp" alt="Scrum Master Knowledge" className="w-full h-full object-cover" /></div>
@@ -310,17 +315,17 @@ export function LeadershipTrainingPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Product Owner Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Chief<br />Product Owner Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Align business goals</li><li>• Evaluate and prioritise value</li><li>• Communicate effectively</li><li>• Increase revenue</li>
                 </ul>
               </div>
               <div className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.4)' }}>
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-white text-xs font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>HOLISTIC VIEW</div>
+
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Scrum Master Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Large Project<br />Scrum Master Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Identify and eliminate waste</li><li>• Drive process change</li><li>• Motivate and improve team happiness</li><li>• Scale agility</li>
                 </ul>

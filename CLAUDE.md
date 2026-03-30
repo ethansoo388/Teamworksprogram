@@ -14,9 +14,13 @@ When creating a zip of the codebase, always exclude:
 - `public/` (regenerated on build)
 - `node_modules/`
 
-Always use absolute paths to avoid picking up unrelated files from the shell's working directory:
+The Bash tool's working directory persists between commands. Always verify `pwd` is the worktree root before zipping, then use `.` as the source:
 
 ```
-WORKTREE="/Users/ethansoo/Code/teamworks/Teamworksprogram/.claude/worktrees/sad-keller"
-zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip "$WORKTREE" --exclude "$WORKTREE/public/*" --exclude "$WORKTREE/node_modules/*" --exclude "$WORKTREE/.git/*"
+# 1. Verify cwd is the worktree root
+pwd
+# Should be: /Users/ethansoo/Code/teamworks/Teamworksprogram/.claude/worktrees/sad-keller
+
+# 2. Zip using relative paths
+zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip . --exclude "public/*" --exclude "node_modules/*" --exclude ".git/*"
 ```
