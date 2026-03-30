@@ -191,107 +191,78 @@ export function LeadershipTrainingPage() {
           <div className="mb-16">
             <div className="text-center mb-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
-                70 Years of Management Know-How.{' '}
+                70 Years of Management Know-How.<br className="hidden lg:block" />
                 <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Culminates into this course.</span>
               </h3>
             </div>
 
-            {/* Group 1: Lean, Agile & Scrum */}
-            <div className="mb-10">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-px flex-1 bg-slate-700" />
-                <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest px-3 py-1 rounded-full border border-slate-700 bg-slate-800/60">Lean, Agile &amp; Scrum</span>
-                <div className="h-px flex-1 bg-slate-700" />
-              </div>
-              <div className="relative">
-                <div className="absolute left-0 right-0 h-px bg-slate-700 hidden lg:block" style={{ top: '152px', zIndex: 0 }} />
-                <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-                  {[
-                    { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', img: '/assets/img/jess/timeline-tps-1950.webp' },
-                    { year: '1990s', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', img: '/assets/img/jess/timeline-scrum-guide-1990.webp' },
-                    { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', img: '/assets/img/jess/timeline-agile-manifesto-2001.webp' },
-                  ].map(({ year, title, sub, img }) => (
-                    <div key={year} className="flex flex-col items-center text-center relative z-10">
-                      <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg border border-slate-700">
-                        <img src={img} alt={title} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3 bg-slate-800 border-2 border-slate-600">
-                        <span className="text-xs font-bold text-slate-400">{year}</span>
-                      </div>
-                      <p className="text-sm font-semibold text-slate-300">{title}</p>
-                      <p className="text-xs text-slate-500 mt-1">{sub}</p>
+            {/* Combined timeline: all 7 stops */}
+            <div className="relative">
+              <div className="absolute left-0 right-0 h-px hidden lg:block" style={{ top: '152px', zIndex: 0, background: 'linear-gradient(to right,#334155 0%,#334155 40%,rgba(59,130,246,0.4) 55%,rgba(6,182,212,0.4) 100%)' }} />
+              <div className="grid grid-cols-3 lg:grid-cols-7 gap-6">
+                {/* First 3 stops — slate style */}
+                {[
+                  { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', img: '/assets/img/jess/timeline-tps-1950.webp' },
+                  { year: '1990s', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', img: '/assets/img/jess/timeline-scrum-guide-1990.webp' },
+                  { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', img: '/assets/img/jess/timeline-agile-manifesto-2001.webp' },
+                ].map(({ year, title, sub, img }) => (
+                  <div key={year} className="flex flex-col items-center text-center relative z-10">
+                    <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg border border-slate-700">
+                      <img src={img} alt={title} className="w-full h-full object-cover" />
                     </div>
-                  ))}
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3 bg-slate-800 border-2 border-slate-600">
+                      <span className="text-xs font-bold text-slate-400">{year}</span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-300">{title}</p>
+                    <p className="text-xs text-slate-500 mt-1">{sub}</p>
+                  </div>
+                ))}
+                {/* 2014 */}
+                <div className="flex flex-col items-center text-center relative z-10">
+                  <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
+                    <img src="/assets/img/jess/timeline-scrum-book-2014.webp" alt="Hyper-Productive Scrum" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
+                    <span className="text-xs font-bold text-white">2014</span>
+                  </div>
+                  <p className="text-sm font-semibold text-blue-300">Hyper-Productive Scrum</p>
+                  <p className="text-xs text-slate-400 mt-1">Global bestseller · Jeff Sutherland</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Transition arrow */}
-            <div className="flex flex-col items-center mb-8">
-              <div className="w-px h-6" style={{ background: 'linear-gradient(to bottom,#475569,#3b82f6)' }} />
-              <div className="flex items-center justify-center w-10 h-10 rounded-full" style={{ background: 'linear-gradient(to bottom right,#1e3a8a,#0e7490)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 20px rgba(59,130,246,0.3)' }}>
-                <svg className="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
-              </div>
-              <div className="w-px h-6" style={{ background: 'linear-gradient(to bottom,#3b82f6,transparent)' }} />
-            </div>
-
-            {/* Group 2: Hyper-Productive System */}
-            <div>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-px flex-1" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4))' }} />
-                <span className="text-xs font-semibold text-blue-300 uppercase tracking-widest px-3 py-1 rounded-full" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.3)' }}>Hyper-Productive System</span>
-                <div className="h-px flex-1" style={{ background: 'linear-gradient(to left,transparent,rgba(59,130,246,0.4))' }} />
-              </div>
-              <div className="relative">
-                <div className="absolute left-0 right-0 h-px hidden lg:block" style={{ top: '152px', zIndex: 0, background: 'linear-gradient(to right,rgba(59,130,246,0.3),rgba(6,182,212,0.3))' }} />
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                  {/* 2014 */}
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
-                      <img src="/assets/img/jess/timeline-scrum-book-2014.webp" alt="Hyper-Productive Scrum" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
-                      <span className="text-xs font-bold text-white">2014</span>
-                    </div>
-                    <p className="text-sm font-semibold text-blue-300">Hyper-Productive Scrum</p>
-                    <p className="text-xs text-slate-400 mt-1">Global bestseller · Jeff Sutherland</p>
+                {/* 2019 */}
+                <div className="flex flex-col items-center text-center relative z-10">
+                  <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
+                    <img src="/assets/img/jess/timeline-scrumatscale-2019.webp" alt="Scrum@Scale" className="w-full h-full object-cover" />
                   </div>
-                  {/* 2019 */}
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
-                      <img src="/assets/img/jess/timeline-scrumatscale-2019.webp" alt="Scrum@Scale" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
-                      <span className="text-xs font-bold text-white">2019</span>
-                    </div>
-                    <p className="text-sm font-semibold text-blue-300">Scrum@Scale</p>
-                    <p className="text-xs text-slate-400 mt-1">Enterprise-wide system</p>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
+                    <span className="text-xs font-bold text-white">2019</span>
                   </div>
-                  {/* 2023 */}
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
-                      <img src="/assets/img/jess/timeline-first-principle-2023.webp" alt="Enterprise Productivity & Innovation" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
-                      <span className="text-xs font-bold text-white">2023</span>
-                    </div>
-                    <p className="text-sm font-semibold text-blue-300">Enterprise Productivity &amp; Innovation</p>
-                    <p className="text-xs text-slate-400 mt-1">Traditional management, upgraded</p>
+                  <p className="text-sm font-semibold text-blue-300">Scrum@Scale</p>
+                  <p className="text-xs text-slate-400 mt-1">Enterprise-wide system</p>
+                </div>
+                {/* 2023 */}
+                <div className="flex flex-col items-center text-center relative z-10">
+                  <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
+                    <img src="/assets/img/jess/timeline-first-principle-2023.webp" alt="Enterprise Productivity & Innovation" className="w-full h-full object-cover" />
                   </div>
-                  {/* 2025 — AI standout */}
-                  <div className="flex flex-col items-center text-center relative z-10">
-                    <div className="relative w-24 h-36 mb-3 rounded-md overflow-hidden" style={{ border: '2px solid rgba(34,211,238,0.6)', boxShadow: '0 0 24px rgba(34,211,238,0.35),0 4px 20px rgba(0,0,0,0.4)' }}>
-                      <div className="absolute top-1.5 left-0 right-0 flex justify-center z-10">
-                        <span className="px-2 py-0.5 text-white font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', fontSize: '9px', lineHeight: '1.4' }}>AI-POWERED</span>
-                      </div>
-                      <img src="/assets/img/jess/timeline-scrumsage-2025.webp" alt="ScrumSage AI" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#3b82f6,#06b6d4)', border: '2px solid #22d3ee', boxShadow: '0 0 24px rgba(34,211,238,0.4)' }}>
-                      <span className="text-xs font-bold text-white">2025</span>
-                    </div>
-                    <p className="text-sm font-semibold text-cyan-400">ScrumSage AI</p>
-                    <p className="text-xs text-slate-400 mt-1">AI-driven enterprise system</p>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#1e40af,#0891b2)', border: '2px solid rgba(59,130,246,0.5)', boxShadow: '0 0 16px rgba(59,130,246,0.2)' }}>
+                    <span className="text-xs font-bold text-white">2023</span>
                   </div>
+                  <p className="text-sm font-semibold text-blue-300">Enterprise Productivity &amp; Innovation</p>
+                  <p className="text-xs text-slate-400 mt-1">Traditional management, upgraded</p>
+                </div>
+                {/* 2025 — AI standout */}
+                <div className="flex flex-col items-center text-center relative z-10">
+                  <div className="relative w-24 h-36 mb-3 rounded-md overflow-hidden" style={{ border: '2px solid rgba(34,211,238,0.6)', boxShadow: '0 0 24px rgba(34,211,238,0.35),0 4px 20px rgba(0,0,0,0.4)' }}>
+                    <div className="absolute top-1.5 left-0 right-0 flex justify-center z-10">
+                      <span className="px-2 py-0.5 text-white font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', fontSize: '9px', lineHeight: '1.4' }}>AI-POWERED</span>
+                    </div>
+                    <img src="/assets/img/jess/timeline-scrumsage-2025.webp" alt="ScrumSage AI" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'linear-gradient(to bottom right,#3b82f6,#06b6d4)', border: '2px solid #22d3ee', boxShadow: '0 0 24px rgba(34,211,238,0.4)' }}>
+                    <span className="text-xs font-bold text-white">2025</span>
+                  </div>
+                  <p className="text-sm font-semibold text-cyan-400">ScrumSage AI</p>
+                  <p className="text-xs text-slate-400 mt-1">AI-driven enterprise system</p>
                 </div>
               </div>
             </div>
@@ -301,7 +272,7 @@ export function LeadershipTrainingPage() {
           <div className="mb-16">
             <div className="text-center mb-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
-                Command the Full Picture.{' '}
+                Command the Full Picture.<br className="hidden lg:block" />
                 <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Own Every Layer of Your Team.</span>
               </h3>
             </div>
