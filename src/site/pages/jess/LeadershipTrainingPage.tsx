@@ -286,7 +286,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Chief<br />Product Owner Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3"><strong>Chief</strong><br />Product Owner Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Align business goals</li><li>• Evaluate and prioritise value</li><li>• Communicate effectively</li><li>• Increase revenue</li>
                 </ul>
@@ -296,7 +296,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Large Project<br />Scrum Master Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3"><strong>Large Project</strong><br />Scrum Master Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Identify and eliminate waste</li><li>• Drive process change</li><li>• Motivate and improve team happiness</li><li>• Scale agility</li>
                 </ul>
@@ -305,7 +305,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Team Execution Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3"><strong>Hyper-Productive</strong><br className="hidden lg:block" />Team Execution Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Swarm to win on priorities</li><li>• Stability is essential</li><li>• Lean working principles</li><li>• Consistent quality delivery</li>
                 </ul>
@@ -316,6 +316,7 @@ export function LeadershipTrainingPage() {
 
           {/* 3 credentials */}
           <div className="rounded-2xl p-8" style={{ background: 'linear-gradient(to right,rgba(59,130,246,0.1),rgba(6,182,212,0.05),rgba(59,130,246,0.1))', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <img src="/assets/img/jess/scrum-master-product-owner-scale-certifications.webp" alt="Scrum Master, Product Owner, Scrum@Scale certifications" className="w-full mb-6 rounded-xl" />
             <p className="text-center text-sm text-slate-400 mb-6 uppercase tracking-widest">3 Internationally Recognised Credentials Included</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
               {[
