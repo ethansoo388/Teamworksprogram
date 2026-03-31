@@ -27,15 +27,11 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
   const desktopTriggerClass = isDarkTheme
     ? "px-4 py-2 flex items-center space-x-1 text-slate-200 hover:bg-slate-800 transition-colors text-sm font-medium"
     : "px-4 py-2 flex items-center space-x-1 text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium";
-  const mobilePanelClass = isDarkTheme
-    ? "absolute left-0 right-0 top-[72px] bg-[#0F1724] border-b border-slate-700/60 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto"
-    : "absolute left-0 right-0 top-[72px] bg-white border-b border-gray-200 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto";
-  const mobileSectionClass = isDarkTheme ? "border-b border-slate-700 pb-4" : "border-b border-gray-100 pb-4";
-  const mobileAccBtnClass = isDarkTheme
-    ? "w-full flex items-center justify-between px-4 py-3 text-slate-200 font-medium hover:bg-slate-800 rounded-lg transition-colors"
-    : "w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors";
-  const mobileAccHdrClass = isDarkTheme ? "text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3" : "text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3";
-  const mobileLinkClass = isDarkTheme ? "block py-2 text-sm text-slate-300 hover:text-cyan-400 no-underline" : "block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline";
+  const mobilePanelClass = "absolute left-0 right-0 top-[72px] bg-white border-b border-gray-200 shadow-lg max-h-[calc(100vh-72px)] overflow-y-auto";
+  const mobileSectionClass = "border-b border-gray-100 pb-4";
+  const mobileAccBtnClass = "w-full flex items-center justify-between px-4 py-3 text-gray-900 font-medium hover:bg-gray-50 rounded-lg transition-colors";
+  const mobileAccHdrClass = "text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3";
+  const mobileLinkClass = "block py-2 text-sm text-gray-700 hover:text-[#0066FF] no-underline";
   const mobileMenuBtnClass = isDarkTheme ? "p-2 text-slate-200 hover:bg-slate-800 rounded-lg transition-colors" : "p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
 
   return (
@@ -866,13 +862,13 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
               </button>
               <div data-nav-accordion-panel="resources" className="hidden mt-2 pl-4 space-y-4">
                 <div>
-                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Self-Paced Learning</h4>
+                  <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>Self-Paced Learning</h4>
                   <a href="/jess/free-resources.html" className={mobileLinkClass} data-mobile-close>
                     Learn Agile &amp; AI in 10 Minutes
                   </a>
                 </div>
                 <div>
-                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Official Guides</h4>
+                  <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>Official Guides</h4>
                   <a href="https://scrumguides.org/" target="_blank" rel="noopener noreferrer" className={mobileLinkClass} data-mobile-close>
                     Scrum Guide
                   </a>
@@ -884,7 +880,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                   </a>
                 </div>
                 <div>
-                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Free Resources</h4>
+                  <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>Free Resources</h4>
                   <a href="/jess/free-resources.html" className={mobileLinkClass} data-mobile-close>
                     View All Free Resources
                   </a>
@@ -905,13 +901,13 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
               </button>
               <div data-nav-accordion-panel="company" className="hidden mt-2 pl-4 space-y-4">
                 <div>
-                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>About</h4>
+                  <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>About</h4>
                   <a href="/aboutus.html" className={mobileLinkClass} data-mobile-close>About Us</a>
                   <a href="/index.html#methodology" className={mobileLinkClass} data-mobile-close>Our Methodology</a>
                   <a href="/contactus.html" className={mobileLinkClass} data-mobile-close>Contact Us</a>
                 </div>
                 <div>
-                  <h4 className={`text-xs font-semibold uppercase mb-2 ${isDarkTheme ? "text-slate-400" : "text-gray-500"}`}>Leadership Philosophy</h4>
+                  <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>Leadership Philosophy</h4>
                   <a href="/aboutus.html#founder" className={mobileLinkClass} data-mobile-close>Our Founder</a>
                   <a href="/aboutus.html#services" className={mobileLinkClass} data-mobile-close>Our Services</a>
                   <a href="/aboutus.html#philosophy" className={mobileLinkClass} data-mobile-close>Our Philosophy</a>
