@@ -415,14 +415,59 @@ export function LeadershipTrainingPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Results That Speak for Themselves</h2>
             <p className="text-xl text-slate-400 font-light">Real organisations. Specific numbers. Measured outcomes.</p>
           </div>
-          {/* Bank Islam case study */}
+          {/* MAHB case study — Featured */}
           <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
             {/* Mobile pill: in-flow, right-aligned */}
             <div className="flex justify-end mb-3 lg:hidden">
               <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Featured Case Study</div>
             </div>
-            {/* Desktop pill: absolute positioned (unchanged) */}
+            {/* Desktop pill: absolute positioned */}
             <div className="hidden lg:block absolute top-4 right-4 px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Featured Case Study</div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Malaysia Airports Holdings Berhad</p>
+                <h3 className="text-3xl font-bold text-white mb-2">From Slow Multi-Year Projects to Rapid Airport Transformation</h3>
+                <p className="text-slate-400 font-light mb-8">From fragmented airport initiatives to MVP-driven, outcome-first execution — across 200+ employees starting 2023.</p>
+                <div className="grid grid-cols-3 gap-6 mb-8">
+                  {[
+                    { val: '+47%', label: 'Peak Throughput\nIncrease' },
+                    { val: '400%+', label: 'Baggage Transfer\nImprovement' },
+                    { val: '3 wks', label: 'To Achieve\nBreakthrough Result' },
+                  ].map(({ val, label }, i) => (
+                    <div key={val} className={`text-center${i === 1 ? ' border-x border-slate-700' : ''}`}>
+                      <div className="text-4xl font-black text-cyan-400 mb-1">{val}</div>
+                      <div className="text-xs text-slate-400 whitespace-pre-line">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <blockquote className="border-l-2 border-cyan-500 pl-4 italic text-slate-300 text-sm leading-relaxed">
+                  "Better Flow + Better Experience = Better ROI — directly reflected in dwell time, passenger spend, and airport reputation."
+                </blockquote>
+              </div>
+              <div className="flex flex-col items-center lg:items-start gap-6">
+                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                  <img src="/assets/img/jess/azmel_rasheed.webp" alt="Azmel Rasheed" className="w-full h-full object-cover object-top" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-lg">Azmel Rasheed</p>
+                  <p className="text-slate-400 text-sm">General Manager, Operational Excellence</p>
+                  <p className="text-slate-400 text-sm">and Guest Experience</p>
+                  <p className="text-cyan-400 text-sm font-medium mt-1">Malaysia Airports Holdings Berhad</p>
+                </div>
+                <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
+                  <span className="text-blue-400 font-medium">400%+ improvement</span> in baggage transfer flow achieved in just 3 weeks — through rapid MVP iteration instead of traditional long-cycle projects
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Bank Islam case study */}
+          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+            {/* Mobile pill: in-flow, right-aligned */}
+            <div className="flex justify-end mb-3 lg:hidden">
+              <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
+            </div>
+            {/* Desktop pill: absolute positioned */}
+            <div className="hidden lg:block absolute top-4 right-4 px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Bank Islam Malaysia Berhad</p>
@@ -457,6 +502,53 @@ export function LeadershipTrainingPage() {
                 </div>
                 <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
                   <span className="text-blue-400 font-medium">Presented live</span> at the AIDA Forum 2025 — Malaysia's premier Agile leadership summit
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Bank of China case study */}
+          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+            {/* Mobile pill: in-flow, right-aligned */}
+            <div className="flex justify-end mb-3 lg:hidden">
+              <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
+            </div>
+            {/* Desktop pill: absolute positioned */}
+            <div className="hidden lg:block absolute top-4 right-4 px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Bank of China</p>
+                <h3 className="text-3xl font-bold text-white mb-2">Transforming a Legacy Bank into a High-Performing Agile Organisation</h3>
+                <p className="text-slate-400 font-light mb-8">From fragmented, siloed teams to an enterprise-wide Agile system — measurable delivery outcomes across the organisation.</p>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-6 mb-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-black text-cyan-400 mb-1">84.6%</div>
+                    <div className="text-xs text-slate-400">Faster Delivery<br /><span className="text-slate-500">(169 → 26 days)</span></div>
+                  </div>
+                  <div className="text-center border-l border-slate-700">
+                    <div className="text-4xl font-black text-cyan-400 mb-1">81.6%</div>
+                    <div className="text-xs text-slate-400">Reduction<br />in Defects</div>
+                  </div>
+                  <div className="text-center col-span-2 pt-4 border-t border-slate-700">
+                    <div className="text-3xl font-black text-cyan-400 mb-1">169 → 26 <span className="text-lg font-semibold">days</span></div>
+                    <div className="text-xs text-slate-400">Delivery Lead Time Reduced — what used to take 169 days now takes 26</div>
+                  </div>
+                </div>
+                <blockquote className="border-l-2 border-cyan-500 pl-4 italic text-slate-300 text-sm leading-relaxed">
+                  "We were tremendously successful… due to the clear guidance and implementation leadership."
+                </blockquote>
+              </div>
+              <div className="flex flex-col items-center lg:items-start gap-6">
+                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                  <img src="/assets/img/jess/hk_yu.webp" alt="HK Yu" className="w-full h-full object-cover object-top" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-lg">HK Yu</p>
+                  <p className="text-slate-400 text-sm">Head Agile Coach, Transformation Lead</p>
+                  <p className="text-cyan-400 text-sm font-medium mt-1">Bank of China</p>
+                </div>
+                <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
+                  <img src="/assets/img/jess/logo-bank-of-china-white.webp" alt="Bank of China" className="h-8 w-auto object-contain mb-3" />
+                  <span className="text-blue-400 font-medium">Enterprise transformation</span> — Scrum@Scale aligned teams into a coordinated system of work, with sustainable Agile integrated into BAU.
                 </div>
               </div>
             </div>
