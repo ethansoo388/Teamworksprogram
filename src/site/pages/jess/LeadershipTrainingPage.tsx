@@ -563,13 +563,11 @@ export function LeadershipTrainingPage() {
               { org: 'SAAB Aeronautics · Sweden', stat: '2,500 people', desc: 'Synchronised in just 1.25 hours', note: 'Gripen E jet fighter programme', logo: '/assets/img/jess/logo-saab.webp', logoAlt: 'SAAB Aeronautics' },
             ].map(({ org, stat, desc, note, logo, logoAlt }) => (
               <div key={org} className="rounded-2xl p-6 flex flex-col" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <img src={logo} alt={logoAlt} className={`w-auto object-contain opacity-70 mb-4 ${logoAlt === 'SAAB Aeronautics' ? 'h-10' : 'h-8'}`} />
                 <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-3">{org}</p>
                 <p className="text-2xl font-black text-white mb-1">{stat}</p>
                 <p className="text-sm text-slate-400">{desc}</p>
                 <p className="text-xs text-slate-600 mt-3 italic">{note}</p>
-                <div className="mt-4 pt-4 border-t border-slate-700">
-                  <img src={logo} alt={logoAlt} className="h-7 w-auto object-contain opacity-70" />
-                </div>
               </div>
             ))}
           </div>
