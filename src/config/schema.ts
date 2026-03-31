@@ -60,10 +60,10 @@ export const courseSchemaByFilename: Record<
   // JESS (course page)
   // --------------------------
   'jess/leadership-training.html': {
-    name: 'High Performance Agile Leader — Scrum@Scale Leadership Training',
+    name: 'Enterprise Agile Leadership Training — Scrum@Scale Certification',
     description: "Asia Pacific's only official Scrum@Scale leadership training — endorsed by Dr. Jeff Sutherland. Drive Agile transformation at scale. Earn Registered Scrum Master™, Registered Product Owner™, and Registered Scrum@Scale Fundamentals™ credentials.",
     courseMode: 'In-person or live online',
-    areaServed: 'MY',
+    areaServed: ['MY', 'ID'],
     educationalLevel: 'Advanced / Leadership',
   },
 

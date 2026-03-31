@@ -74,7 +74,7 @@ export const seo: SEOConfig = {
         image: "/assets/og/jess-og.webp",
       },
       "jess/leadership-training.html": {
-        title: "High Performance Agile Leadership Training in Malaysia | Scrum@Scale Certification",
+        title: "Enterprise Agile Leadership Training in Malaysia | Scrum@Scale Certification",
         description:
           "Asia Pacific's only official Scrum@Scale leadership training — endorsed by Dr. Jeff Sutherland. Drive Agile transformation at scale. Earn 3 internationally recognised credentials. Classes in Malaysia, Indonesia and online.",
         image: "/assets/og/jess-og.webp",
