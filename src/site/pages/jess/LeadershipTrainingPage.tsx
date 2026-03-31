@@ -132,25 +132,8 @@ export function LeadershipTrainingPage() {
               Most organisations invest in Agile training. Few redesign the system around it.
             </p>
           </div>
-          {/* Video */}
-          <div className="relative rounded-2xl overflow-hidden mb-8 bg-slate-950" style={{ aspectRatio: '16/7' }}>
-            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-80" id="jeffVideo">
-              <source src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm" type="video/webm" />
-            </video>
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(15,23,42,0.7),transparent)' }} />
-            <button
-              data-video-mute="jeffVideo"
-              className="absolute bottom-4 left-4 flex items-center gap-2 text-sm text-white cursor-pointer rounded-full px-4 py-2 border border-white/20"
-              style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6v12m-3.536-9.536a5 5 0 000 7.072" />
-              </svg>
-              ▶ Watch with sound
-            </button>
-          </div>
           {/* Failure patterns */}
-          <div className="flex flex-wrap gap-3 justify-center mb-12">
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
             {[
               'Teams improve, but leadership stays misaligned',
               'Governance contradicts agility',
@@ -160,6 +143,13 @@ export function LeadershipTrainingPage() {
             ].map((text) => (
               <span key={text} className="px-5 py-2.5 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-medium">{text}</span>
             ))}
+          </div>
+          {/* Video */}
+          <div className="relative rounded-2xl overflow-hidden mb-8 bg-slate-950" style={{ aspectRatio: '16/7' }}>
+            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-80" id="jeffVideo">
+              <source src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm" type="video/webm" />
+            </video>
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(15,23,42,0.7),transparent)' }} />
           </div>
           {/* Pull quote */}
           <div className="max-w-3xl mx-auto relative">
@@ -291,7 +281,7 @@ export function LeadershipTrainingPage() {
                   <li>• Align business goals</li><li>• Evaluate and prioritise value</li><li>• Communicate effectively</li><li>• Increase revenue</li>
                 </ul>
               </div>
-              <div className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.4)' }}>
+              <div className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
 
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
@@ -532,19 +522,19 @@ export function LeadershipTrainingPage() {
                   featured: true,
                 },
                 {
-                  img: '/assets/img/jess/people-grace-chan.webp',
-                  name: 'Grace Chan',
-                  role: 'GM, Personal Banking',
-                  sub: 'Standard Chartered Bank, Singapore',
-                  quote: 'I recommended him to a few business partners and all have gotten raving reviews and he has helped them drive impactful financial benefit and result.',
-                  featured: false,
-                },
-                {
                   img: '/assets/img/jess/people-mike-cohn.webp',
                   name: 'Mike Cohn',
                   role: 'Co-founder, Scrum Alliance',
                   sub: '',
                   quote: 'Ethan has been a strong proponent of doing Scrum well and has been of great assistance to companies looking to improve their use of Scrum and agile approaches.',
+                  featured: false,
+                },
+                {
+                  img: '/assets/img/jess/people-grace-chan.webp',
+                  name: 'Grace Chan',
+                  role: 'GM, Personal Banking',
+                  sub: 'Standard Chartered Bank, Singapore',
+                  quote: 'I recommended him to a few business partners and all have gotten raving reviews and he has helped them drive impactful financial benefit and result.',
                   featured: false,
                 },
               ].map(({ img, name, role, sub, quote, featured }) => (
@@ -680,7 +670,7 @@ export function LeadershipTrainingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
               <p className="text-green-400 text-sm font-semibold uppercase tracking-wider mb-4">✓ This is for you if you are…</p>
-              <ul className="space-y-3 text-sm text-slate-300">
+              <ul className="list-disc list-inside space-y-3 text-sm text-slate-300">
                 <li>C-Suite or senior leader accountable for business outcomes</li>
                 <li>Transformation, PMO, or product leader shaping execution systems</li>
                 <li>Senior Scrum Master or Product Owner ready to influence at scale</li>
@@ -690,7 +680,7 @@ export function LeadershipTrainingPage() {
             </div>
             <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
               <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">✗ This is NOT for you if you need…</p>
-              <ul className="space-y-3 text-sm text-slate-400">
+              <ul className="list-disc list-inside space-y-3 text-sm text-slate-400">
                 <li>Entry-level or introductory Scrum training</li>
                 <li>Tool-only Agile courses focused on mechanics</li>
                 <li>Theory-heavy certification without real-world application</li>
