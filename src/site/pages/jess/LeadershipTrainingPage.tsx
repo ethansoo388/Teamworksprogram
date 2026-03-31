@@ -29,14 +29,18 @@ export function LeadershipTrainingPage() {
               <p className="text-lg text-white/65 mb-10 max-w-xl">
                 Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
               </p>
-              <div className="flex flex-wrap gap-4 mb-12">
-                <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
-                  Explore the Program →
-                </a>
-                <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+              <div className="flex flex-wrap gap-4 mb-4">
+                <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
                   Talk to a Program Advisor
                 </a>
+                <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+                  Explore the Program →
+                </a>
               </div>
+              <a href="https://wa.me/60192981055" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white/90 transition-colors mb-12">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                💬 Or chat with us on WhatsApp
+              </a>
               <div className="flex flex-wrap gap-6 text-sm text-white/60">
                 <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">3</span> International Credentials</div>
                 <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">300+</span> Classes Delivered</div>
@@ -410,7 +414,41 @@ export function LeadershipTrainingPage() {
         </div>
       </section>
 
-      {/* ═══ SECTION 7: REAL-WORLD RESULTS ═══ */}
+      {/* ═══ SECTION 7: WHO THIS IS FOR ═══ */}
+      <section className="py-16 lg:py-20 bg-slate-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
+          </div>
+          <div className="mb-8 rounded-2xl overflow-hidden">
+            <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
+              <p className="text-green-400 text-sm font-semibold uppercase tracking-wider mb-4">✓ This is for you if you are…</p>
+              <ul className="list-disc list-inside space-y-3 text-sm text-slate-300">
+                <li>C-Suite or senior leader accountable for business outcomes</li>
+                <li>Transformation, PMO, or product leader shaping execution systems</li>
+                <li>Senior Scrum Master or Product Owner ready to influence at scale</li>
+                <li>Leader scaling agility across multiple teams or portfolios</li>
+                <li>Department head preparing your organisation for transformation</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
+              <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">✗ This is NOT for you if you need…</p>
+              <ul className="list-disc list-inside space-y-3 text-sm text-slate-400">
+                <li>Entry-level or introductory Scrum training</li>
+                <li>Tool-only Agile courses focused on mechanics</li>
+                <li>Theory-heavy certification without real-world application</li>
+              </ul>
+              <p className="text-slate-500 text-xs mt-6 italic">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 8: REAL-WORLD RESULTS ═══ */}
       <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -765,40 +803,6 @@ export function LeadershipTrainingPage() {
         </div>
       </section>
 
-      {/* ═══ SECTION 11: WHO THIS IS FOR ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
-            <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
-          </div>
-          <div className="mb-8 rounded-2xl overflow-hidden">
-            <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
-              <p className="text-green-400 text-sm font-semibold uppercase tracking-wider mb-4">✓ This is for you if you are…</p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-slate-300">
-                <li>C-Suite or senior leader accountable for business outcomes</li>
-                <li>Transformation, PMO, or product leader shaping execution systems</li>
-                <li>Senior Scrum Master or Product Owner ready to influence at scale</li>
-                <li>Leader scaling agility across multiple teams or portfolios</li>
-                <li>Department head preparing your organisation for transformation</li>
-              </ul>
-            </div>
-            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
-              <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">✗ This is NOT for you if you need…</p>
-              <ul className="list-disc list-inside space-y-3 text-sm text-slate-400">
-                <li>Entry-level or introductory Scrum training</li>
-                <li>Tool-only Agile courses focused on mechanics</li>
-                <li>Theory-heavy certification without real-world application</li>
-              </ul>
-              <p className="text-slate-500 text-xs mt-6 italic">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ═══ SECTION 12: UPCOMING CLASSES ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
@@ -831,6 +835,12 @@ export function LeadershipTrainingPage() {
             })}
           </div>
           <p className="text-center text-sm text-slate-500">More cities and dates available. <a href="/jess/class-schedule.html" className="text-cyan-400 hover:text-cyan-300">View full class schedule →</a></p>
+          <div className="mt-4 text-center">
+            <a href="https://wa.me/60192981055" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              Chat with us on WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
