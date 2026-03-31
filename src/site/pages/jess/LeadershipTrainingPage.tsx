@@ -814,7 +814,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-2xl font-bold text-white mb-1">{date}</p>
                   <p className="text-slate-400 text-sm mb-1">{courseName}</p>
                   <p className="text-slate-500 text-xs mb-6">{location}</p>
-                  <a href="/jess/class-schedule.html" className="block text-center py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: isC1 ? 'linear-gradient(to right,#3b82f6,#06b6d4)' : 'linear-gradient(to right,#06b6d4,#10b981)' }}>Book a Seat →</a>
+                  <a href="/contactus.html?source=jess-leadership-training&cta=upcoming-public-classes#contact-form" className="block text-center py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: isC1 ? 'linear-gradient(to right,#3b82f6,#06b6d4)' : 'linear-gradient(to right,#06b6d4,#10b981)' }}>Book a Seat →</a>
                 </div>
               );
             })}

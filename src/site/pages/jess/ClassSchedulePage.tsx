@@ -256,10 +256,10 @@ export function ClassSchedulePage() {
             className="mt-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-12 text-center"
           >
             <h3 className="text-3xl sm:text-4xl font-light text-white mb-4">
-              Ready to Transform Your Organization?
+              Ready to Enrol?
             </h3>
             <p className="text-lg text-slate-300 font-light mb-8 max-w-2xl mx-auto">
-              Secure your spot in one of our upcoming sessions and start your journey with the Jeff Enterprise Scrum System.
+              Classes run in small cohorts — seats are limited. Talk to a Program Advisor to confirm your preferred date and reserve your place.
             </p>
 
             {/* Primary and Secondary CTAs */}
