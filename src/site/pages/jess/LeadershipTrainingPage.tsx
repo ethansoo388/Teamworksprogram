@@ -798,26 +798,26 @@ export function LeadershipTrainingPage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {[
-              { label: 'Next Session', date: '27–28 April 2026', featured: true },
-              { label: 'Upcoming', date: '7–8 July 2026', featured: false },
-              { label: 'Upcoming', date: '13–14 October 2026', featured: false },
-            ].map(({ label, date, featured }) => (
-              <div key={date} className="bg-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-blue-500/30 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${featured ? 'text-blue-400' : 'text-slate-400 bg-slate-700 border border-slate-600'}`} style={featured ? { background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' } : {}}>
-                    {label}
-                  </span>
-                  <span className="text-xs text-slate-500">Jakarta</span>
+              { course: 1, date: '21–22 April 2026', location: 'Malaysia, Kuala Lumpur', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
+              { course: 1, date: '27–28 April 2026', location: 'Indonesia, Jakarta', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
+              { course: 2, date: '20–21 May 2026', location: 'Live Virtual (Zoom)', format: 'Live Virtual (Zoom)', courseName: 'Leading Hyper-Productive Teams' },
+            ].map(({ course, date, location, format, courseName }) => {
+              const isC1 = course === 1;
+              return (
+                <div key={date} className="bg-slate-800 rounded-2xl p-6 transition-all" style={{ border: isC1 ? '1px solid rgba(59,130,246,0.2)' : '1px solid rgba(6,182,212,0.2)' }}>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium" style={isC1 ? { background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)', color: '#60a5fa' } : { background: 'rgba(6,182,212,0.1)', border: '1px solid rgba(6,182,212,0.2)', color: '#22d3ee' }}>
+                      Course {course}
+                    </span>
+                    <span className="text-xs text-slate-500">{format}</span>
+                  </div>
+                  <p className="text-2xl font-bold text-white mb-1">{date}</p>
+                  <p className="text-slate-400 text-sm mb-1">{courseName}</p>
+                  <p className="text-slate-500 text-xs mb-6">{location}</p>
+                  <a href="/jess/class-schedule.html" className="block text-center py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: isC1 ? 'linear-gradient(to right,#3b82f6,#06b6d4)' : 'linear-gradient(to right,#06b6d4,#10b981)' }}>Book a Seat →</a>
                 </div>
-                <p className="text-2xl font-bold text-white mb-1">{date}</p>
-                <p className="text-slate-400 text-sm mb-1">High Performance Agile Leader</p>
-                <p className="text-slate-500 text-xs mb-6">Course 1 · 2-Day Intensive</p>
-                {featured
-                  ? <a href="/jess/class-schedule.html" className="block text-center py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Book a Seat →</a>
-                  : <a href="/jess/class-schedule.html" className="block text-center py-3 border border-slate-600 text-white font-medium rounded-lg text-sm hover:bg-slate-700 transition-all">View Details →</a>
-                }
-              </div>
-            ))}
+              );
+            })}
           </div>
           <p className="text-center text-sm text-slate-500">More cities and dates available. <a href="/jess/class-schedule.html" className="text-cyan-400 hover:text-cyan-300">View full class schedule →</a></p>
         </div>

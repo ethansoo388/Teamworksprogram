@@ -8,8 +8,8 @@ export function ClassSchedulePage() {
     {
       month: "April 2026",
       courses: [
-        { location: "Indonesia", type: "Course 1", dates: "27th and 28th", icon: <MapPin className="w-5 h-5" /> },
         { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
+        { location: "Indonesia", type: "Course 1", dates: "27th and 28th", icon: <MapPin className="w-5 h-5" /> },
       ]
     },
     {
