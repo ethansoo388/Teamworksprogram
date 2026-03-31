@@ -455,6 +455,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-cyan-400 text-sm font-medium mt-1">Malaysia Airports Holdings Berhad</p>
                 </div>
                 <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
+                  <img src="/assets/img/jess/logo-mahb-white.webp" alt="Malaysia Airports Holdings Berhad" className="h-8 w-auto object-contain mb-3" />
                   <span className="text-blue-400 font-medium">400%+ improvement</span> in baggage transfer flow achieved in just 3 weeks — through rapid MVP iteration instead of traditional long-cycle projects
                 </div>
               </div>
@@ -501,6 +502,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-slate-500 text-xs mt-2 italic">Opening Keynote Speaker, AIDA Forum 2025</p>
                 </div>
                 <div className="rounded-xl p-4 text-xs text-slate-400" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid #334155' }}>
+                  <img src="/assets/img/jess/logo-bank-islam-white.webp" alt="Bank Islam Malaysia Berhad" className="h-8 w-auto object-contain mb-3" />
                   <span className="text-blue-400 font-medium">Presented live</span> at the AIDA Forum 2025 — Malaysia's premier Agile leadership summit
                 </div>
               </div>
