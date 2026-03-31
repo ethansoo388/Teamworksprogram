@@ -12,42 +12,107 @@ export function LeadershipTrainingPage() {
           <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Agile Leader Training" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30 z-10" />
-        <div className="relative z-20 w-full px-6 lg:px-16 pb-16">
+        <div className="relative z-20 w-full px-6 lg:px-16 py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
-                <div className="w-2 h-2 rounded-full bg-cyan-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
-                <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">Dr. Jeff Sutherland's Enterprise Agility Program</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+              {/* ── LEFT COLUMN ── */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
+                  <div className="w-2 h-2 rounded-full bg-cyan-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
+                  <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">Dr. Jeff Sutherland's Enterprise Agility Program</span>
+                </div>
+                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.05]">
+                  Enterprise Agile<br />Leadership Training.
+                </h1>
+                <p className="text-3xl lg:text-4xl font-bold mb-6 leading-snug" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  by the Inventor of Scrum.
+                </p>
+                <p className="text-xl text-white/85 leading-relaxed mb-4 max-w-xl">
+                  The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
+                </p>
+                <p className="text-lg text-white/65 mb-8 max-w-lg">
+                  Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
+                </p>
+                <div className="flex flex-wrap gap-4 mb-4">
+                  <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+                    Talk to a Program Advisor
+                  </a>
+                  <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+                    Explore the Program →
+                  </a>
+                </div>
+                {/* Trust + WhatsApp — grouped, more visible */}
+                <div className="flex flex-wrap items-center gap-4 mt-2">
+                  <span className="text-sm font-medium text-white/70">🔒 No obligation · We respond within 24 hours</span>
+                  <span className="text-slate-600 hidden sm:inline">|</span>
+                  <a href="https://wa.me/60192981055" className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                    💬 Chat on WhatsApp
+                  </a>
+                </div>
+                {/* Stats row — mobile only */}
+                <div className="flex flex-wrap gap-6 text-sm text-white/60 mt-10 lg:hidden">
+                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">3</span> International Credentials</div>
+                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">300+</span> Classes Delivered</div>
+                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">10+</span> Countries</div>
+                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">20 yrs</span> Trainer Experience</div>
+                </div>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
-                Enterprise Agile Leadership Training.<br />
-                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>by the Inventor of Scrum.</span>
-              </h1>
-              <p className="text-xl text-white/85 leading-relaxed mb-4 max-w-2xl">
-                The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
-              </p>
-              <p className="text-lg text-white/65 mb-10 max-w-xl">
-                Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-4">
-                <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
-                  Talk to a Program Advisor
-                </a>
-                <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
-                  Explore the Program →
-                </a>
+
+              {/* ── RIGHT COLUMN — desktop only ── */}
+              <div className="hidden lg:flex flex-col gap-5">
+                {/* Trainer card */}
+                <div className="rounded-2xl p-6 flex items-center gap-5" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
+                  <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(59,130,246,0.2)' }}>
+                    <img src="/assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-lg">Ethan Soo</p>
+                    <p className="text-cyan-400 text-sm">Asia Pacific Regional Partner, Scrum Inc.</p>
+                    <p className="text-slate-400 text-xs mt-1">Personally endorsed by Dr. Jeff Sutherland</p>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <span className="px-2 py-1 rounded text-xs text-blue-400" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>Scrum Fellow</span>
+                      <span className="px-2 py-1 bg-slate-700/80 rounded text-xs text-slate-300">1 of 3 Asia Pacific Partners</span>
+                    </div>
+                  </div>
+                </div>
+                {/* Stats grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { val: '300+', label: 'Scrum Classes Delivered' },
+                    { val: '20 yrs', label: 'Trainer Experience' },
+                    { val: '10+', label: 'Countries' },
+                    { val: '3', label: 'International Credentials' },
+                  ].map(({ val, label }) => (
+                    <div key={val} className="rounded-xl p-5 text-center" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.15)', backdropFilter: 'blur(12px)' }}>
+                      <div className="text-3xl font-black text-white mb-1">{val}</div>
+                      <div className="text-xs text-slate-400">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                {/* Credentials card */}
+                <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
+                  <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Certifications Issued by Scrum Inc. USA</p>
+                  <div className="space-y-3">
+                    {[
+                      ['RSM™', 'Registered Scrum Master'],
+                      ['RPO™', 'Registered Product Owner'],
+                      ['RS@SF™', 'Registered Scrum@Scale Fundamentals'],
+                    ].map(([code, name]) => (
+                      <div key={code} className="flex items-center gap-3">
+                        <span className="w-14 text-xs font-bold text-cyan-400 flex-shrink-0">{code}</span>
+                        <span className="text-slate-300 text-sm">{name}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-slate-700 flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" />
+                    <span className="text-slate-400 text-xs">Globally recognised · Issued by Scrum Inc. USA</span>
+                  </div>
+                </div>
               </div>
-              <p className="text-white/40 text-sm mb-4">🔒 No obligation · We respond within 24 hours</p>
-              <a href="https://wa.me/60192981055" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white/90 transition-colors mb-12">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-                💬 Or chat with us on WhatsApp
-              </a>
-              <div className="flex flex-wrap gap-6 text-sm text-white/60">
-                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">3</span> International Credentials</div>
-                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">300+</span> Classes Delivered</div>
-                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">10+</span> Countries</div>
-                <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">20 yrs</span> Trainer Experience</div>
-              </div>
+
             </div>
           </div>
         </div>
