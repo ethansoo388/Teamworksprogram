@@ -20,8 +20,8 @@ export function LeadershipTrainingPage() {
                 <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">Dr. Jeff Sutherland's Enterprise Agility Program</span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.05]">
-                Enterprise Agility.<br />
-                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Led as a System.</span>
+                Enterprise Agile Leadership Training.<br />
+                <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>by the Inventor of Scrum.</span>
               </h1>
               <p className="text-xl text-white/85 leading-relaxed mb-4 max-w-2xl">
                 The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
@@ -37,6 +37,7 @@ export function LeadershipTrainingPage() {
                   Explore the Program →
                 </a>
               </div>
+              <p className="text-white/40 text-sm mb-4">🔒 No obligation · We respond within 24 hours</p>
               <a href="https://wa.me/60192981055" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white/90 transition-colors mb-12">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
                 💬 Or chat with us on WhatsApp
@@ -620,6 +621,17 @@ export function LeadershipTrainingPage() {
         </div>
       </section>
 
+      {/* ═══ MID-PAGE CTA ═══ */}
+      <section className="py-14 bg-slate-900 border-y border-slate-800">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <p className="text-white text-2xl font-bold mb-2">Seen enough? Let's talk.</p>
+          <p className="text-slate-400 font-light mb-8">Talk to a Program Advisor — no obligation, we'll tell you honestly if this is the right fit.</p>
+          <a href="/contactus.html?source=jess-leadership-training&cta=mid-page-results#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+            Talk to a Program Advisor →
+          </a>
+        </div>
+      </section>
+
       {/* ═══ SECTION 8: TESTIMONIALS ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -878,6 +890,54 @@ export function LeadershipTrainingPage() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="text-center pt-2 pb-4">
+            <p className="text-slate-400 text-sm mb-6">Scrum Sage access is included for all enrolled students.</p>
+            <a href="/contactus.html?source=jess-leadership-training&cta=ai-section#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg border-2 hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+              Talk to a Program Advisor →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION: FAQ ═══ */}
+      <section className="py-16 lg:py-20 bg-slate-900">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Got Questions?</p>
+            <h2 className="text-4xl font-bold text-white">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Can I take Course 1 without Course 2?',
+                a: 'Yes. Each course is standalone. Course 1 covers Scrum@Scale strategy; Course 2 covers hyper-productive team execution. Many leaders start with Course 1 and return for Course 2 when their organisation is ready.',
+              },
+              {
+                q: 'Are these certifications recognised globally?',
+                a: 'Yes. All 3 credentials (RSM™, RPO™, RS@SF™) are issued by Scrum Inc. USA and recognised worldwide.',
+              },
+              {
+                q: "I've done basic Scrum training. Is this still relevant?",
+                a: "Yes. This program is for leaders driving transformation at scale — not team-level practitioners. If you've done introductory Scrum, this is the natural leadership-level progression.",
+              },
+              {
+                q: 'Where are classes held? Is online available?',
+                a: 'In-person in Kuala Lumpur and Jakarta, with live virtual (Zoom) options available. View the class schedule for upcoming dates.',
+              },
+              {
+                q: 'What is the investment?',
+                a: 'Talk to a Program Advisor for pricing and group rates.',
+              },
+            ].map(({ q, a }) => (
+              <details key={q} className="group rounded-xl overflow-hidden" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none text-white font-medium">
+                  {q}
+                  <span className="flex-shrink-0 text-cyan-400 text-xl font-light transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="px-6 pb-5 text-slate-400 text-sm leading-relaxed">{a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
