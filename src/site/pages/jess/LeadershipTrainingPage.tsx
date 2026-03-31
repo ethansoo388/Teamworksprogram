@@ -556,8 +556,8 @@ export function LeadershipTrainingPage() {
           {/* 3 global case studies */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {[
+              { org: 'Coca-Cola Japan · Japan', stat: '800%', desc: 'Faster product launches with Hyper-Productive Scrum', note: 'Revenue target achieved 200% faster' },
               { org: 'Rocket Mortgage · USA', stat: '86 → 42 days', desc: 'Cycle time for feature development halved', note: 'Largest mortgage provider in the US' },
-              { org: '3M Hospital Systems · USA', stat: '60% reduction', desc: 'In staff attrition — people love their job', note: 'Award-winning culture change' },
               { org: 'SAAB Aeronautics · Sweden', stat: '2,500 people', desc: 'Synchronised in just 1.25 hours', note: 'Gripen E jet fighter programme' },
             ].map(({ org, stat, desc, note }) => (
               <div key={org} className="rounded-2xl p-6" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
