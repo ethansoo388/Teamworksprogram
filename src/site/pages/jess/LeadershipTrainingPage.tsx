@@ -571,7 +571,7 @@ export function LeadershipTrainingPage() {
               { org: 'Rocket Mortgage · USA', stat: '86 → 42 days', desc: 'Cycle time for feature development halved', note: 'Largest mortgage provider in the US', logo: '/assets/img/jess/logo-rocket-mortgage.webp', logoAlt: 'Rocket Mortgage' },
             ].map(({ org, stat, desc, note, logo, logoAlt }) => (
               <div key={org} className="rounded-2xl p-6 flex flex-col" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
-                {logo && <img src={logo} alt={logoAlt} className={`w-auto object-contain object-left opacity-70 mb-4 ${logoAlt === 'SAAB Aeronautics' ? 'h-10' : 'h-8'}`} />}
+                {logo && <img src={logo} alt={logoAlt} className="h-8 w-auto object-contain object-left opacity-70 mb-4" />}
                 <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-3">{org}</p>
                 <p className="text-2xl font-black text-white mb-1">{stat}</p>
                 <p className="text-sm text-slate-400">{desc}</p>
