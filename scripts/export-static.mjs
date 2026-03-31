@@ -218,6 +218,7 @@ function stripHtmlToText(html) {
   return String(html)
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]*\baria-hidden="true"[^>]*>[^<]*<\/[a-z][a-z0-9]*>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')

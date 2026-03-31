@@ -9,7 +9,7 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 1: HERO ═══ */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-[72px]">
         <div className="absolute inset-0 z-0">
-          <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Agile Leader Training" className="w-full h-full object-cover" />
+          <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Enterprise Agile Leadership Training Malaysia" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30 z-10" />
         <div className="relative z-20 w-full px-6 lg:px-16 py-16">
@@ -120,8 +120,8 @@ export function LeadershipTrainingPage() {
 
       {/* STICKY SECTION NAV */}
       <div className="sticky top-[72px] z-40 bg-[#0F1724] border-b border-slate-700/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center">
+          <nav className="flex gap-8 sm:gap-12 overflow-x-auto flex-1 min-w-0">
             <span className="relative py-4 text-sm sm:text-base font-medium text-white whitespace-nowrap flex-shrink-0">
               Overview
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
@@ -130,6 +130,9 @@ export function LeadershipTrainingPage() {
             <a href="/jess/instructor.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Instructor</a>
             <a href="/jess/class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Class Schedule</a>
           </nav>
+          <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="ml-4 flex-shrink-0 px-4 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
+            Book a Seat →
+          </a>
         </div>
       </div>
 
@@ -428,7 +431,7 @@ export function LeadershipTrainingPage() {
                 <li>Tool-only Agile courses focused on mechanics</li>
                 <li>Theory-heavy certification without real-world application</li>
               </ul>
-              <p className="text-slate-500 text-xs mt-6 italic">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</p>
+              <a href="/contactus.html?source=jess-leadership-training&cta=who-this-is-for#contact-form" className="text-slate-500 hover:text-cyan-400 text-xs mt-6 italic underline block transition-colors">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</a>
             </div>
           </div>
         </div>
@@ -470,9 +473,12 @@ export function LeadershipTrainingPage() {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
                 <p className="text-xs text-blue-800 font-medium">Outcome: You leave equipped to architect the system — not just manage within it.</p>
               </div>
-              <div className="flex items-center justify-between">
-                <a href="/jess/class-schedule.html" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>View Class Schedule →</a>
-                <span className="text-xs text-slate-400">2-Day Intensive</span>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <a href="/contactus.html?source=jess-leadership-training&cta=course-card-1#contact-form" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Book a Seat →</a>
+                  <span className="text-xs text-slate-400">2-Day Intensive</span>
+                </div>
+                <a href="/jess/class-schedule.html" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Schedule →</a>
               </div>
             </div>
             {/* Course 2 */}
@@ -502,21 +508,27 @@ export function LeadershipTrainingPage() {
               <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-4 mb-6">
                 <p className="text-xs text-cyan-800 font-medium">Outcome: You build teams that deliver consistently — sprint after sprint.</p>
               </div>
-              <div className="flex items-center justify-between">
-                <a href="/jess/class-schedule.html" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>View Class Schedule →</a>
-                <span className="text-xs text-slate-400">2-Day Intensive</span>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <a href="/contactus.html?source=jess-leadership-training&cta=course-card-2#contact-form" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Book a Seat →</a>
+                  <span className="text-xs text-slate-400">2-Day Intensive</span>
+                </div>
+                <a href="/jess/class-schedule.html" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Schedule →</a>
               </div>
             </div>
           </div>
           <div className="bg-slate-800 rounded-2xl p-8 text-center border border-blue-500/20">
             <p className="text-white font-semibold text-lg mb-2">Take both courses for full-system mastery</p>
-            <p className="text-slate-400 font-light text-sm max-w-xl mx-auto">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
+            <p className="text-slate-400 font-light text-sm max-w-xl mx-auto mb-6">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
+            <a href="/contactus.html?source=jess-leadership-training&cta=both-courses-banner#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+              Talk to a Program Advisor →
+            </a>
           </div>
         </div>
       </section>
 
       {/* ═══ SECTION 9: 5-STAR EXPERIENCE ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-900">
+      <section className="py-16 lg:py-20 bg-[#0F1724]">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What You Get</p>
@@ -959,7 +971,7 @@ export function LeadershipTrainingPage() {
           </div>
           <div className="text-center pt-2 pb-4">
             <p className="text-slate-400 text-sm mb-6">Scrum Sage access is included for all enrolled students.</p>
-            <a href="/contactus.html?source=jess-leadership-training&cta=ai-section#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg border-2 hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+            <a href="/contactus.html?source=jess-leadership-training&cta=ai-section#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
               Talk to a Program Advisor →
             </a>
           </div>
@@ -999,7 +1011,7 @@ export function LeadershipTrainingPage() {
               <details key={q} className="group rounded-xl overflow-hidden" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none text-white font-medium">
                   {q}
-                  <span className="flex-shrink-0 text-cyan-400 text-xl font-light transition-transform group-open:rotate-45">+</span>
+                  <span aria-hidden="true" className="flex-shrink-0 text-cyan-400 text-xl font-light transition-transform group-open:rotate-45">+</span>
                 </summary>
                 <p className="px-6 pb-5 text-slate-400 text-sm leading-relaxed">{a}</p>
               </details>
