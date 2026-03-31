@@ -94,7 +94,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <div className="mb-10">
             <div className="flex flex-col items-center gap-1 mb-6">
-              <img src="/assets/img/jess/logo-smr-white.svg" alt="MIT Sloan Management Review" className="h-8 w-auto opacity-70" />
+              <img src="/assets/img/jess/logo-smr-white.svg" alt="MIT Sloan Management Review" className="h-12 w-auto opacity-70" />
               <span className="text-slate-500 text-xs uppercase tracking-widest">2020</span>
             </div>
             <div className="text-6xl lg:text-8xl font-black leading-none mb-4" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>ONLY 17%</div>
@@ -825,7 +825,6 @@ export function LeadershipTrainingPage() {
 
       {/* ═══ SECTION 13: AI SECTION ═══ */}
       <section className="py-16 lg:py-20 border-t-2 border-dashed border-slate-700 relative" style={{ background: 'linear-gradient(to bottom,#020617,#0f172a)' }}>
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs text-slate-400 uppercase tracking-widest">Optional Enhancement</div>
         <div className="max-w-5xl mx-auto px-6 lg:px-8 pt-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
