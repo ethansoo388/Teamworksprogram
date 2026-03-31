@@ -405,7 +405,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
-            <h2 className="text-4xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
           </div>
           <div className="mb-8 rounded-2xl overflow-hidden">
             <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
@@ -435,12 +435,12 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 6: TWO COURSES ═══ */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 bg-slate-50">
+      <section className="py-16 lg:py-20 px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">How to Get Started</p>
-            <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-4">Choose Your Agile Leadership Certification Path</h2>
-            <p className="text-xl text-slate-500 font-light max-w-2xl mx-auto">Each course stands alone. Together, they form a complete leadership-to-execution operating model.</p>
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">How to Get Started</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Choose Your Agile Leadership Certification Path</h2>
+            <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Each course stands alone. Together, they form a complete leadership-to-execution operating model.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
             {/* Course 1 */}
@@ -508,7 +508,7 @@ export function LeadershipTrainingPage() {
               </div>
             </div>
           </div>
-          <div className="bg-slate-900 rounded-2xl p-8 text-center border border-blue-500/20">
+          <div className="bg-slate-800 rounded-2xl p-8 text-center border border-blue-500/20">
             <p className="text-white font-semibold text-lg mb-2">Take both courses for full-system mastery</p>
             <p className="text-slate-400 font-light text-sm max-w-xl mx-auto">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
           </div>
@@ -516,12 +516,12 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 9: 5-STAR EXPERIENCE ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-50">
+      <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">What You Get</p>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">What's Included in Your Training</h2>
-            <p className="text-xl text-slate-500 font-light">From preparation to post-class support — every step is designed for real-world application.</p>
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What You Get</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">What's Included in Your Training</h2>
+            <p className="text-xl text-slate-400 font-light">From preparation to post-class support — every step is designed for real-world application.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
@@ -749,7 +749,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What Leaders Say</p>
-            <h2 className="text-4xl font-bold text-white">What Leaders Say About<br />This Agile Training</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">What Leaders Say About<br />This Agile Training</h2>
           </div>
           {/* Participant testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -886,7 +886,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Enrol Now</p>
-            <h2 className="text-4xl font-bold text-white mb-4">Upcoming Public Classes</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Upcoming Public Classes</h2>
             <p className="text-slate-400 font-light">Available in Malaysia, Indonesia &amp; live virtual — small cohorts, limited seats.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
@@ -930,7 +930,7 @@ export function LeadershipTrainingPage() {
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Bonus: AI-Powered Agile Coaching</span>
             </div>
-            <h2 className="text-3xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
             <p className="text-slate-400 font-light max-w-xl mx-auto">Our program now integrates Scrum Sage, a GPT built specifically on True Scrum knowledge — developed by JJ Sutherland, CEO of Scrum Inc.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
@@ -971,7 +971,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Got Questions?</p>
-            <h2 className="text-4xl font-bold text-white">Frequently Asked Questions</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[
