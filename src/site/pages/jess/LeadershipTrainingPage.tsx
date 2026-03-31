@@ -564,18 +564,18 @@ export function LeadershipTrainingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {[
               { org: 'Coca-Cola Japan · Japan', stat: '800%', desc: 'Faster product launches with Hyper-Productive Scrum', note: 'Revenue target achieved 200% faster', logo: '/assets/img/jess/logo-coca-cola.webp', logoAlt: 'Coca-Cola Japan' },
-              { org: 'Kasikorn Bank · Thailand', stat: '3 yrs → 6 mo', desc: '3-year project completed and deployed to market', note: 'K-Lab new business accelerator · Beyond Banking Division', logo: '/assets/img/jess/logo-kasikorn-bank.webp', logoAlt: 'Kasikorn Bank' },
+              { org: 'Kasikorn Bank · Thailand', stat: '3 years → 6 months', desc: '3-year project completed and deployed to market', note: 'K-Lab new business accelerator · Beyond Banking Division', logo: '/assets/img/jess/logo-kasikorn-bank.webp', logoAlt: 'Kasikorn Bank' },
               { org: 'SAAB Aeronautics · Sweden', stat: '2,500 people', desc: 'Synchronised in just 1.25 hours', note: 'Gripen E jet fighter programme', logo: '/assets/img/jess/logo-saab.webp', logoAlt: 'SAAB Aeronautics' },
-              { org: 'Cisco IP Phone BU · Global', stat: '3 mo → 4 days', desc: 'POC delivery speed — from concept to proof in just 4 days', note: '5 global R&D centres unified · ~200 people · US, India, China', logo: '/assets/img/jess/logo-cisco.webp', logoAlt: 'Cisco' },
-              { org: 'HSBC · China', stat: '200–300%', desc: 'Team productivity increase · 95% faster issue resolution (2 months → 3 days)', note: 'Meeting time cut from 1.5 hrs → 20 mins · 200 employees · 20+ roles', logo: '/assets/img/jess/logo-hsbc.webp', logoAlt: 'HSBC' },
+              { org: 'Cisco IP Phone BU · Global', stat: '3 months → 4 days', desc: 'POC delivery speed — from concept to proof in just 4 days', note: '5 global R&D centres unified · ~200 people · US, India, China', logo: '/assets/img/jess/logo-cisco.webp', logoAlt: 'Cisco' },
+              { org: 'HSBC · China', stat: '250%', desc: 'Team productivity increase · 95% faster issue resolution (2 months → 3 days)', note: 'Meeting time cut from 1.5 hrs → 20 mins · 200 employees · 20+ roles', logo: '/assets/img/jess/logo-hsbc-white.webp', logoAlt: 'HSBC' },
               { org: 'Rocket Mortgage · USA', stat: '86 → 42 days', desc: 'Cycle time for feature development halved', note: 'Largest mortgage provider in the US', logo: '/assets/img/jess/logo-rocket-mortgage.webp', logoAlt: 'Rocket Mortgage' },
             ].map(({ org, stat, desc, note, logo, logoAlt }) => (
               <div key={org} className="rounded-2xl p-6 flex flex-col" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
-                {logo && <img src={logo} alt={logoAlt} className={`w-auto object-contain object-left opacity-70 mb-4 ${logoAlt === 'SAAB Aeronautics' ? 'h-10' : 'h-8'}`} />}
+                {logo && <img src={logo} alt={logoAlt} className={`w-auto object-contain object-left opacity-70 mb-4 ${logoAlt === 'SAAB Aeronautics' ? 'h-10' : logoAlt === 'Kasikorn Bank' ? 'h-14' : 'h-8'}`} />}
                 <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-3">{org}</p>
                 <p className="text-2xl font-black text-white mb-1">{stat}</p>
                 <p className="text-sm text-slate-400">{desc}</p>
-                <p className="text-xs text-slate-600 mt-3 italic">{note}</p>
+                <p className="text-xs text-slate-400 mt-3 italic">{note}</p>
               </div>
             ))}
           </div>
