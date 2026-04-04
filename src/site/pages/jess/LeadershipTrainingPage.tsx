@@ -66,8 +66,8 @@ export function LeadershipTrainingPage() {
                 {/* ── CARD 1: Trainer Credibility ── */}
                 <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.88)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
                   {/* Card title */}
-                  <p className="mb-0.5 text-base font-bold leading-tight" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>The Only Trainer in SEA</p>
-                  <p className="text-xs text-slate-400 mb-4">with 30+ proven case studies.</p>
+                  <p className="mb-0.5 text-base font-bold leading-tight" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>The Only Trainer in South East Asia</p>
+                  <p className="text-xs text-slate-400 mb-4">with 30+ case studies with quantifiable outcomes.</p>
 
                   {/* Trainer info */}
                   <div className="flex items-center gap-4 mb-4">
@@ -108,7 +108,7 @@ export function LeadershipTrainingPage() {
                 <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.88)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
                   {/* Card title */}
                   <p className="mb-0.5 text-base font-bold leading-tight" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>3 Top Certifications.</p>
-                  <p className="text-xs text-slate-400 mb-4">For High Performance System Leaders.</p>
+                  <p className="text-xs text-slate-400 mb-4">For High Performance Leaders who lead the entire system.</p>
 
                   {/* Certifications list */}
                   <div className="space-y-3">
