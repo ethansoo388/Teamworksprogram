@@ -11,7 +11,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0 z-0">
           <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Enterprise Agile Leadership Training Malaysia" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/55 z-10" />
         <div className="relative z-20 w-full px-6 lg:px-16 py-16">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -20,13 +20,13 @@ export function LeadershipTrainingPage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
                   <div className="w-2 h-2 rounded-full bg-cyan-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
-                  <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">Dr. Jeff Sutherland's Enterprise Agility Program</span>
+                  <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">by Dr. Jeff Sutherland · Inventor of Scrum</span>
                 </div>
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.05]">
                   Enterprise Agile<br />Leadership Training.
                 </h1>
                 <p className="text-3xl lg:text-4xl font-bold mb-6 leading-snug" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  by the Inventor of Scrum.
+                  Led as a System.
                 </p>
                 <p className="text-xl text-white/85 leading-relaxed mb-4 max-w-xl">
                   The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
@@ -63,7 +63,7 @@ export function LeadershipTrainingPage() {
               {/* ── RIGHT COLUMN — desktop only ── */}
               <div className="hidden lg:flex flex-col gap-5">
                 {/* Trainer card */}
-                <div className="rounded-2xl p-6 flex items-center gap-5" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
+                <div className="rounded-2xl p-6 flex items-center gap-5" style={{ background: 'rgba(15,23,36,0.88)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
                   <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(59,130,246,0.2)' }}>
                     <img src="/assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo" className="w-full h-full object-cover" />
                   </div>
@@ -85,14 +85,14 @@ export function LeadershipTrainingPage() {
                     { val: '10+', label: 'Countries' },
                     { val: '3', label: 'International Credentials' },
                   ].map(({ val, label }) => (
-                    <div key={val} className="rounded-xl p-5 text-center" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.15)', backdropFilter: 'blur(12px)' }}>
+                    <div key={val} className="rounded-xl p-5 text-center" style={{ background: 'rgba(15,23,36,0.88)', border: '1px solid rgba(59,130,246,0.15)', backdropFilter: 'blur(12px)' }}>
                       <div className="text-3xl font-black text-white mb-1">{val}</div>
                       <div className="text-xs text-slate-400">{label}</div>
                     </div>
                   ))}
                 </div>
                 {/* Credentials card */}
-                <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.75)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
+                <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.88)', border: '1px solid rgba(59,130,246,0.2)', backdropFilter: 'blur(12px)' }}>
                   <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Certifications Issued by Scrum Inc. USA</p>
                   <div className="space-y-3">
                     {[
