@@ -51,13 +51,6 @@ export function LeadershipTrainingPage() {
                     💬 Chat on WhatsApp
                   </a>
                 </div>
-                {/* Stats row — mobile only */}
-                <div className="flex flex-wrap gap-6 text-sm text-white/60 mt-10 lg:hidden">
-                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">3</span> International Credentials</div>
-                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">300+</span> Classes Delivered</div>
-                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">12+</span> Countries</div>
-                  <div className="flex items-center gap-2"><span className="text-cyan-400 font-bold">23 yrs</span> Agile Implementation</div>
-                </div>
               </div>
 
               {/* ── RIGHT COLUMN — desktop only ── */}
@@ -76,7 +69,7 @@ export function LeadershipTrainingPage() {
                     </div>
                     <div>
                       <p className="text-white font-semibold text-base">Ethan Soo</p>
-                      <p className="text-cyan-400 text-xs mt-0.5">Asia Pacific Regional Partner,<br />Scrum Inc.</p>
+                      <p className="text-cyan-400 text-xs mt-0.5">Asia Pacific Regional Partner, Scrum Inc.</p>
                       <p className="text-slate-400 text-xs mt-0.5">Endorsed by Dr. Jeff Sutherland</p>
                       <div className="flex flex-wrap gap-1.5 mt-2">
                         <span className="px-2 py-0.5 rounded text-xs text-blue-400" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>Scrum Fellow</span>
@@ -136,6 +129,72 @@ export function LeadershipTrainingPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ═══ MOBILE CREDIBILITY CARDS — below hero, hidden on desktop ═══ */}
+      <section className="lg:hidden bg-[#0F1724] border-b border-slate-700/40 px-5 py-6 flex flex-col gap-4">
+
+        {/* Card 1 — Trainer Credibility */}
+        <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.95)', border: '1px solid rgba(59,130,246,0.2)' }}>
+          <p className="mb-0.5 text-base font-bold leading-tight" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>The Only Trainer in South East Asia</p>
+          <p className="text-xs text-slate-400 mb-4">with 30+ case studies with quantifiable outcomes.</p>
+
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(59,130,246,0.2)' }}>
+              <img src="/assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <p className="text-white font-semibold text-base">Ethan Soo</p>
+              <p className="text-cyan-400 text-xs mt-0.5">Asia Pacific Regional Partner, Scrum Inc.</p>
+              <p className="text-slate-400 text-xs mt-0.5">Endorsed by Dr. Jeff Sutherland</p>
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                <span className="px-2 py-0.5 rounded text-xs text-blue-400" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>Scrum Fellow</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-slate-700/60 my-4" />
+
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div>
+              <p className="text-2xl font-black text-white">300+</p>
+              <p className="text-xs text-slate-400 mt-0.5 leading-tight">Classes<br />Delivered</p>
+            </div>
+            <div className="border-x border-slate-700/60">
+              <p className="text-2xl font-black text-white">23 yrs</p>
+              <p className="text-xs text-slate-400 mt-0.5 leading-tight">Agile<br />Implementation</p>
+            </div>
+            <div>
+              <p className="text-2xl font-black text-white">12+</p>
+              <p className="text-xs text-slate-400 mt-0.5 leading-tight">Countries<br />Trained</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2 — Certification Credibility */}
+        <div className="rounded-2xl p-5" style={{ background: 'rgba(15,23,36,0.95)', border: '1px solid rgba(59,130,246,0.2)' }}>
+          <p className="mb-0.5 text-base font-bold leading-tight" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>3 Top Certifications.</p>
+          <p className="text-xs text-slate-400 mb-4">For High Performance Leaders who lead the entire system.</p>
+
+          <div className="space-y-3">
+            {[
+              ['RSM™', 'Registered Scrum Master'],
+              ['RPO™', 'Registered Product Owner'],
+              ['RS@SF™', 'Registered Scrum@Scale Fundamentals'],
+            ].map(([code, name]) => (
+              <div key={code} className="flex items-center gap-3">
+                <span className="w-14 text-xs font-bold text-cyan-400 flex-shrink-0">{code}</span>
+                <span className="text-slate-300 text-sm">{name}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t border-slate-700/60 mt-4 pt-3 flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" />
+            <span className="text-slate-400 text-xs">Globally recognised · Issued by Scrum Inc. USA</span>
+          </div>
+        </div>
+
       </section>
 
       {/* STICKY SECTION NAV */}
