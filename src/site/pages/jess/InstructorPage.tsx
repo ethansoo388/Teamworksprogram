@@ -102,11 +102,11 @@ export function InstructorPage() {
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
-                Ethan's exceptional training performance earned him the distinction of Scrum Fellow — one of Scrum Inc.'s highest honours. Dr. Jeff Sutherland personally invited Ethan to serve as Asia Pacific Regional Partner, with responsibility for adapting the Scrum Master, Product Owner, and Scrum@Scale credentialing programs to the learning culture of the East. His enterprise transformation work has since been recognised with the <strong>Platinum Agile Award from Scrum Inc. USA</strong> — the highest recognition in the Asia Pacific region.
+                Ethan's exceptional training performance earned him the distinction of Scrum Fellow — one of Scrum Inc.'s highest honours. Dr. Jeff Sutherland personally invited Ethan to serve as Asia Pacific Regional Partner, with responsibility for adapting the Scrum Master, Product Owner, and Scrum@Scale credentialing programs to the learning culture of the East. In this role, Ethan represents Scrum Inc. USA in recognising outstanding enterprise Agile transformations — presenting the <strong>Platinum Agile Award</strong> to Malaysia Airports Holdings Berhad (MAHB) and the <strong>Gold Agile Award</strong> to Bank Islam Malaysia Berhad.
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
-                Ethan also leads the Train the Trainer Program (TTT) for Scrum Inc., screening, coaching, mentoring, and certifying new Scrum and Scrum@Scale Trainers across the region — ensuring the highest standards of enterprise agile leadership training are maintained throughout Asia Pacific.
+                Ethan also leads the Train the Trainer Program (TTT) for Scrum Inc., screening, coaching, mentoring, and certifying new Scrum and Scrum@Scale Trainers across the region — ensuring the highest standards of enterprise agile leadership training are maintained throughout Asia Pacific. Beyond the classroom, Ethan is a recognised voice in the global Agile community — having spoken at over 100 Agile events across Asia Pacific over 15 years, and serving as organiser and host of Malaysia's premier Agile leadership forums, including AIDA Forum 2025 and Agile Tour Kuala Lumpur.
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
