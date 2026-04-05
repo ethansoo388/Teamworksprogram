@@ -172,19 +172,35 @@ export function InstructorPage() {
                   <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Alliance</span>
                 </div>
                 <div className="space-y-3">
-                  {[
-                    { code: 'CSM', name: 'Certified Scrum Master' },
-                    { code: 'CSPO', name: 'Certified Scrum Product Owner' },
-                    { code: 'CSP', name: 'Certified Scrum Professional' },
-                  ].map(({ code, name }) => (
-                    <div key={code} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
-                      <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{code}</p>
-                        <p className="text-xs text-slate-500 mt-0.5">{name}</p>
-                      </div>
+                  {/* CSP — first, with distinction callout */}
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">CSP</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified Scrum Professional</p>
                     </div>
-                  ))}
+                  </div>
+                  <div className="px-4 py-3 rounded-xl" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.25)' }}>
+                    <p className="text-xs text-amber-700 leading-relaxed">Ethan is one of the earliest professionals in Asia to have received the CSP credential — a distinction held by very few practitioners in the region.</p>
+                  </div>
+                  {/* CSM */}
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">CSM</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified Scrum Master</p>
+                      <p className="text-xs text-slate-400 italic mt-1">Granted in-person by Mike Cohn, Managing Director, Scrum Alliance · San Diego, USA</p>
+                    </div>
+                  </div>
+                  {/* CSPO */}
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">CSPO</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified Scrum Product Owner</p>
+                      <p className="text-xs text-slate-400 italic mt-1">Granted in-person by Mike Cohn, Managing Director, Scrum Alliance · San Diego, USA</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -199,6 +215,13 @@ export function InstructorPage() {
                     <div>
                       <p className="text-sm font-semibold text-slate-900">Agile Scrum Trainer</p>
                       <p className="text-xs text-slate-500 mt-0.5">Certified to deliver EXIN Agile Scrum curriculum</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Train-the-Trainer Master Trainer</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified to train and certify EXIN Agile Scrum Trainers</p>
                     </div>
                   </div>
                 </div>
@@ -217,28 +240,28 @@ export function InstructorPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Card 1 — Agile Awards */}
-              <div className="bg-slate-800 rounded-2xl p-6">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🏆🏅</div>
-                <p className="text-white font-semibold mb-1">Scrum Inc. Agile Awards — Asia Pacific</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">Presented on behalf of Scrum Inc. USA</p>
-                <p className="text-slate-400 text-sm leading-relaxed">As Asia Pacific Regional Partner, Ethan represents Scrum Inc. USA in recognising outstanding enterprise Agile transformations — presenting the Platinum Agile Award to Malaysia Airports Holdings Berhad (MAHB) and the Gold Agile Award to Bank Islam Malaysia Berhad.</p>
-                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Case Studies →</a>
+                <p className="text-slate-900 font-semibold mb-1">Scrum Inc. Agile Awards — Asia Pacific</p>
+                <p className="text-amber-600 text-xs font-medium mb-3">Presented on behalf of Scrum Inc. USA</p>
+                <p className="text-slate-600 text-sm leading-relaxed">As Asia Pacific Regional Partner, Ethan represents Scrum Inc. USA in recognising outstanding enterprise Agile transformations — presenting the Platinum Agile Award to Malaysia Airports Holdings Berhad (MAHB) and the Gold Agile Award to Bank Islam Malaysia Berhad.</p>
+                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-blue-600 hover:text-blue-500 transition-colors">View Case Studies →</a>
               </div>
 
               {/* Card 2 — Events Organiser */}
-              <div className="bg-slate-800 rounded-2xl p-6">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🎤</div>
-                <p className="text-white font-semibold mb-1">Agile Events — Organiser &amp; Host</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">Malaysia &amp; Asia Pacific</p>
-                <p className="text-slate-400 text-sm leading-relaxed">Organised and hosted Malaysia's premier Agile leadership events — including AIDA Forum 2025 and Agile Tour Kuala Lumpur 2023 &amp; 2024 — bringing together enterprise leaders and speakers from across the globe to advance Agile leadership practice in Asia Pacific.</p>
+                <p className="text-slate-900 font-semibold mb-1">Agile Events — Organiser &amp; Host</p>
+                <p className="text-amber-600 text-xs font-medium mb-3">Malaysia &amp; Asia Pacific</p>
+                <p className="text-slate-600 text-sm leading-relaxed">Organised and hosted Malaysia's premier Agile leadership events — including AIDA Forum 2025 and Agile Tour Kuala Lumpur 2023 &amp; 2024 — bringing together enterprise leaders and speakers from across the globe to advance Agile leadership practice in Asia Pacific.</p>
               </div>
 
               {/* Card 3 — Speaker Authority */}
-              <div className="bg-slate-800 rounded-2xl p-6">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🎙️</div>
-                <p className="text-white font-semibold mb-1">100+ Agile Events as Speaker</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">2010–2025 · Across Asia Pacific &amp; China</p>
-                <p className="text-slate-400 text-sm leading-relaxed">A recognised voice in the global Agile community — featured speaker at over 100 Agile events across 15 years, spanning Shanghai, Beijing, Shenzhen, Guangzhou, Singapore, Bangkok, Ho Chi Minh City, Kuala Lumpur, Taipei, and Tokyo.</p>
+                <p className="text-slate-900 font-semibold mb-1">100+ Agile Events as Speaker</p>
+                <p className="text-amber-600 text-xs font-medium mb-3">2010–2025 · Across Asia Pacific &amp; China</p>
+                <p className="text-slate-600 text-sm leading-relaxed">A recognised voice in the global Agile community — featured speaker at over 100 Agile events across 15 years, spanning Shanghai, Beijing, Shenzhen, Guangzhou, Singapore, Bangkok, Ho Chi Minh City, Kuala Lumpur, Taipei, and Tokyo.</p>
               </div>
             </div>
           </div>
@@ -288,7 +311,7 @@ export function InstructorPage() {
                     className="w-24 h-24 rounded-full mx-auto mb-4"
                   />
                   <h3 className="text-lg font-medium text-slate-900 text-center">Grace Chan</h3>
-                  <p className="text-sm text-slate-600 text-center">Executive Vice President, Product, and Innovation Mastercard China</p>
+                  <p className="text-sm text-slate-600 text-center">GM, Personal Banking, Standard Chartered Bank, Singapore</p>
                 </div>
                 <p className="text-slate-700 font-light italic text-sm leading-relaxed text-center">
                   "Ethan's expert team strives to help my company, as I now migrate into SCRUM, use it in full depth. The courses I have taken have gotten raving reviews and he has helped them drive impactful financial benefit and results."
