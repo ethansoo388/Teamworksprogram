@@ -23,7 +23,7 @@ export function InstructorPage() {
           <div className="text-xs font-medium text-slate-400 uppercase tracking-widest mb-6">
             Your Instructor
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-6 text-white tracking-tight leading-[1.43]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light mb-6 text-white tracking-tight leading-[1.43]">
             Ethan Soo — Enterprise Agile &amp; Scrum Trainer, Asia Pacific
           </h1>
           <p className="text-lg sm:text-xl text-slate-300 font-light max-w-3xl">
@@ -35,20 +35,20 @@ export function InstructorPage() {
       {/* ═══ STICKY NAV ═══ */}
       <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12">
-            <a href="leadership-training.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900">
+          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
+            <a href="leadership-training.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
               Overview
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="course-modules.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900">
+            <a href="course-modules.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
               Course Modules
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
               Instructor
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
             </span>
-            <a href="class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900">
+            <a href="class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
               Class Schedule
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
@@ -133,7 +133,7 @@ export function InstructorPage() {
 
           {/* ═══ JEFF SUTHERLAND FEATURED ENDORSEMENT ═══ */}
           <div className="mb-20" data-reveal>
-            <div className="rounded-2xl p-8 lg:p-12 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <div className="rounded-2xl p-6 lg:p-12 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
                 {/* Photo + identity */}
@@ -289,31 +289,57 @@ export function InstructorPage() {
               <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">What Makes Training with Ethan Different</h2>
               <p className="text-slate-500 font-light mb-10">Not all Scrum trainers are equal. Here's what separates Ethan from a typical certification provider.</p>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-200" data-reveal>
-              {/* Header row */}
-              <div className="grid grid-cols-2 bg-slate-100 text-sm font-medium">
-                <div className="px-6 py-4 text-slate-500 uppercase tracking-widest text-xs">Generic Scrum Trainer</div>
-                <div className="px-6 py-4 text-amber-600 uppercase tracking-widest text-xs border-l border-slate-200">Training with Ethan</div>
-              </div>
-              {/* Rows */}
-              {[
-                ['Teaches Scrum theory from a textbook', 'Teaches Dr. Sutherland\'s original curriculum — direct from the source, updated annually'],
-                ['Certification without real-world proof', '30+ enterprise case studies with quantifiable business outcomes'],
-                ['Classroom experience only', '23 years of live enterprise Agile transformation work across 12+ countries'],
-                ['Regional practitioner', 'Asia Pacific Regional Partner, Scrum Inc. — 1 of only 3 in the entire region'],
-                ['Trains participants', 'Also certifies other Scrum Trainers — sets the regional standard for training quality'],
-              ].map(([generic, ethan], i) => (
-                <div key={i} className={`grid grid-cols-2 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
-                  <div className="px-6 py-4 text-slate-500 flex items-start gap-2">
-                    <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
-                    {generic}
-                  </div>
-                  <div className="px-6 py-4 text-slate-800 font-medium flex items-start gap-2 border-l border-slate-200">
-                    <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
-                    {ethan}
-                  </div>
+            {/* Mobile: stacked cards. Desktop: two-column table */}
+            <div data-reveal>
+              {/* Desktop table — hidden on mobile */}
+              <div className="hidden lg:block rounded-2xl overflow-hidden border border-slate-200">
+                {/* Header row */}
+                <div className="grid grid-cols-2 bg-slate-100 text-sm font-medium">
+                  <div className="px-6 py-4 text-slate-500 uppercase tracking-widest text-xs">Generic Scrum Trainer</div>
+                  <div className="px-6 py-4 text-amber-600 uppercase tracking-widest text-xs border-l border-slate-200">Training with Ethan</div>
                 </div>
-              ))}
+                {/* Rows */}
+                {[
+                  ['Teaches Scrum theory from a textbook', "Teaches Dr. Sutherland's original curriculum — direct from the source, updated annually"],
+                  ['Certification without real-world proof', '30+ enterprise case studies with quantifiable business outcomes'],
+                  ['Classroom experience only', '23 years of live enterprise Agile transformation work across 12+ countries'],
+                  ['Regional practitioner', 'Asia Pacific Regional Partner, Scrum Inc. — 1 of only 3 in the entire region'],
+                  ['Trains participants', 'Also certifies other Scrum Trainers — sets the regional standard for training quality'],
+                ].map(([generic, ethan], i) => (
+                  <div key={i} className={`grid grid-cols-2 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                    <div className="px-6 py-4 text-slate-500 flex items-start gap-2">
+                      <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                      {generic}
+                    </div>
+                    <div className="px-6 py-4 text-slate-800 font-medium flex items-start gap-2 border-l border-slate-200">
+                      <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
+                      {ethan}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile cards — shown only on mobile */}
+              <div className="lg:hidden space-y-3">
+                {[
+                  ['Teaches Scrum theory from a textbook', "Teaches Dr. Sutherland's original curriculum — direct from the source, updated annually"],
+                  ['Certification without real-world proof', '30+ enterprise case studies with quantifiable business outcomes'],
+                  ['Classroom experience only', '23 years of live enterprise Agile transformation work across 12+ countries'],
+                  ['Regional practitioner', 'Asia Pacific Regional Partner, Scrum Inc. — 1 of only 3 in the entire region'],
+                  ['Trains participants', 'Also certifies other Scrum Trainers — sets the regional standard for training quality'],
+                ].map(([generic, ethan], i) => (
+                  <div key={i} className="rounded-xl border border-slate-200 overflow-hidden">
+                    <div className="px-4 py-3 bg-slate-50 flex items-start gap-2 text-sm text-slate-500">
+                      <span className="text-red-400 flex-shrink-0">✗</span>
+                      {generic}
+                    </div>
+                    <div className="px-4 py-3 bg-white flex items-start gap-2 text-sm text-slate-800 font-medium border-t border-slate-200">
+                      <span className="text-green-500 flex-shrink-0">✓</span>
+                      {ethan}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
