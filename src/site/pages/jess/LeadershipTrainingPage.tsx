@@ -244,6 +244,7 @@ export function LeadershipTrainingPage() {
       <section className="py-16 lg:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center,rgba(59,130,246,0.06),transparent 60%)' }} />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          {/* Stat */}
           <div className="mb-10">
             <div className="flex flex-col items-center gap-1 mb-6">
               <img src="/assets/img/jess/logo-smr-white.svg" alt="MIT Sloan Management Review" className="h-12 w-auto opacity-70" />
@@ -257,20 +258,34 @@ export function LeadershipTrainingPage() {
               The ones who survive redesign how they lead, prioritise, and execute.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12">
-            <div className="text-center">
-              <div className="text-4xl font-black text-white mb-1">10x</div>
-              <div className="text-sm text-slate-400">Results in 1/10 the Time</div>
+
+          {/* Bridge question */}
+          <p className="text-lg font-semibold text-white mb-10 uppercase tracking-widest">What separates the 17% who survive?</p>
+
+          {/* 3 Characteristics */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-left mb-12">
+            {/* 1 */}
+            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <p className="text-base font-bold text-white mb-3">Led from the Top. Agile + AI Ready.</p>
+              <p className="text-sm text-slate-400 leading-relaxed">The Agile + AI shift cannot be delegated. Leaders who survive understand how AI is changing the way organisations operate — and personally drive the transformation. Not assign it to a consultant. Not wait for teams to figure it out.</p>
             </div>
-            <div className="text-center border-x border-slate-700">
-              <div className="text-4xl font-black text-white mb-1">30+</div>
-              <div className="text-sm text-slate-400">Enterprise Transformations Delivered</div>
+            {/* 2 */}
+            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <p className="text-base font-bold text-white mb-3">Human + AI, Led as One System</p>
+              <p className="text-sm text-slate-400 leading-relaxed">The future enterprise is no longer human-only. The 17% build systems where people and AI work together — from strategy down to team execution — under one unified leadership model. AI doesn't lead itself. Leaders do.</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-black text-white mb-1">🏆</div>
-              <div className="text-sm text-slate-400">Platinum Agile Award · Scrum Inc. USA</div>
+            {/* 3 */}
+            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <p className="text-base font-bold text-white mb-3">Measured by Business Impact, in Real Time</p>
+              <p className="text-sm text-slate-400 leading-relaxed">They track what actually moves the business — revenue, delivery speed, quality, and customer outcomes. Not sprint velocity. Not framework compliance. With AI providing live signals, they act on what's happening now — not what the last quarterly report said.</p>
             </div>
           </div>
+
+          {/* Closing bridge */}
+          <p className="text-lg text-slate-300 font-light mb-6">This program is built to develop exactly these capabilities — in 4 days.</p>
+          <a href="#program" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
+            See How the Program Works →
+          </a>
         </div>
       </section>
 
