@@ -291,9 +291,9 @@ export function InstructorPage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-slate-200" data-reveal>
               {/* Header row */}
-              <div className="grid grid-cols-2 bg-slate-800 text-white text-sm font-medium">
-                <div className="px-6 py-4 text-slate-400 uppercase tracking-widest text-xs">Generic Scrum Trainer</div>
-                <div className="px-6 py-4 text-amber-400 uppercase tracking-widest text-xs border-l border-slate-700">Training with Ethan</div>
+              <div className="grid grid-cols-2 bg-slate-100 text-sm font-medium">
+                <div className="px-6 py-4 text-slate-500 uppercase tracking-widest text-xs">Generic Scrum Trainer</div>
+                <div className="px-6 py-4 text-amber-600 uppercase tracking-widest text-xs border-l border-slate-200">Training with Ethan</div>
               </div>
               {/* Rows */}
               {[
