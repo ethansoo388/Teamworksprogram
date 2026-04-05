@@ -213,15 +213,15 @@ export function InstructorPage() {
                   <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
                     <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Trainer</p>
-                      <p className="text-xs text-slate-500 mt-0.5">Certified to deliver EXIN Agile Scrum curriculum</p>
+                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Train-the-Trainer Master Trainer</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified to train and certify EXIN Agile Scrum Trainers</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
                     <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Train-the-Trainer Master Trainer</p>
-                      <p className="text-xs text-slate-500 mt-0.5">Certified to train and certify EXIN Agile Scrum Trainers</p>
+                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Trainer</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified to deliver EXIN Agile Scrum curriculum</p>
                     </div>
                   </div>
                 </div>
@@ -245,7 +245,7 @@ export function InstructorPage() {
                 <p className="text-slate-900 font-semibold mb-1">Scrum Inc. Agile Awards — Asia Pacific</p>
                 <p className="text-amber-600 text-xs font-medium mb-3">Presented on behalf of Scrum Inc. USA</p>
                 <p className="text-slate-600 text-sm leading-relaxed">As Asia Pacific Regional Partner, Ethan represents Scrum Inc. USA in recognising outstanding enterprise Agile transformations — presenting the Platinum Agile Award to Malaysia Airports Holdings Berhad (MAHB) and the Gold Agile Award to Bank Islam Malaysia Berhad.</p>
-                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-blue-600 hover:text-blue-500 transition-colors">View Case Studies →</a>
+                <a href="/jess/leadership-training.html#results" className="inline-block mt-4 text-xs text-blue-600 hover:text-blue-500 transition-colors">View Case Studies →</a>
               </div>
 
               {/* Card 2 — Events Organiser */}
@@ -302,22 +302,6 @@ export function InstructorPage() {
                 </p>
               </div>
 
-              {/* Grace Chan */}
-              <div className="bg-slate-50 p-8 rounded-2xl">
-                <div className="mb-6">
-                  <img
-                    src="/assets/img/jess/people-grace-chan.webp"
-                    alt="Grace Chan — Executive Vice President, Product and Innovation, Mastercard China"
-                    className="w-24 h-24 rounded-full mx-auto mb-4"
-                  />
-                  <h3 className="text-lg font-medium text-slate-900 text-center">Grace Chan</h3>
-                  <p className="text-sm text-slate-600 text-center">GM, Personal Banking, Standard Chartered Bank, Singapore</p>
-                </div>
-                <p className="text-slate-700 font-light italic text-sm leading-relaxed text-center">
-                  "Ethan's expert team strives to help my company, as I now migrate into SCRUM, use it in full depth. The courses I have taken have gotten raving reviews and he has helped them drive impactful financial benefit and results."
-                </p>
-              </div>
-
               {/* Mike Cohn */}
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
@@ -331,6 +315,22 @@ export function InstructorPage() {
                 </div>
                 <p className="text-slate-700 font-light italic text-sm leading-relaxed text-center">
                   "Ethan has been a strong proponent of doing Scrum well and has been of great assistance to Chinese companies looking to improve their Scrum, Kanban, and agile approaches."
+                </p>
+              </div>
+
+              {/* Grace Chan */}
+              <div className="bg-slate-50 p-8 rounded-2xl">
+                <div className="mb-6">
+                  <img
+                    src="/assets/img/jess/people-grace-chan.webp"
+                    alt="Grace Chan — GM Personal Banking, Standard Chartered Bank Singapore"
+                    className="w-24 h-24 rounded-full mx-auto mb-4"
+                  />
+                  <h3 className="text-lg font-medium text-slate-900 text-center">Grace Chan</h3>
+                  <p className="text-sm text-slate-600 text-center">GM, Personal Banking, Standard Chartered Bank, Singapore</p>
+                </div>
+                <p className="text-slate-700 font-light italic text-sm leading-relaxed text-center">
+                  "Ethan's expert team strives to help my company, as I now migrate into SCRUM, use it in full depth. The courses I have taken have gotten raving reviews and he has helped them drive impactful financial benefit and results."
                 </p>
               </div>
 

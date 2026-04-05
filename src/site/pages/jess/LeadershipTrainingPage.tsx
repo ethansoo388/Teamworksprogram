@@ -668,7 +668,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 8: REAL-WORLD RESULTS ═══ */}
-      <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
+      <section id="results" className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Proven Results</p>
