@@ -120,35 +120,55 @@ export function InstructorPage() {
             <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Scrum &amp; Agile Certifications</h2>
             <p className="text-slate-500 font-light mb-10">Credentials held across three internationally recognised certification bodies.</p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-              {/* Scrum Inc. */}
-              <div>
-                <div className="flex items-center gap-3 mb-5">
-                  <img src="/assets/img/jess/logo-scrum-inc.webp" alt="Scrum Inc." className="h-7 w-auto object-contain opacity-80" />
-                  <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Inc.</span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    { code: 'Scrum Fellow', name: 'Highest individual honour awarded by Scrum Inc.' },
-                    { code: 'Asia Pacific Regional Partner', name: 'Personally appointed by Dr. Jeff Sutherland' },
-                    { code: 'RST', name: 'Registered Scrum Trainer' },
-                    { code: 'RS@ST', name: 'Registered Scrum@Scale Trainer' },
-                  ].map(({ code, name }) => (
-                    <div key={code} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
-                      <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{code}</p>
-                        <p className="text-xs text-slate-500 mt-0.5">{name}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            {/* ── Scrum Inc. — Featured full-width block ── */}
+            <div className="rounded-2xl border border-slate-200 p-8 mb-6">
+              <div className="flex items-center gap-3 mb-8">
+                <img src="/assets/img/jess/logo-scrum-inc.webp" alt="Scrum Inc." className="h-7 w-auto object-contain opacity-80" />
+                <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Inc.</span>
               </div>
 
+              {/* Top tier — Prestige credentials */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                {[
+                  { code: 'Scrum Fellow', name: 'Highest individual honour awarded by Scrum Inc.' },
+                  { code: 'Asia Pacific Regional Partner', name: 'Personally appointed by Dr. Jeff Sutherland' },
+                ].map(({ code, name }) => (
+                  <div key={code} className="flex items-start gap-3 p-5 rounded-xl" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.25)' }}>
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0 mt-1"></span>
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">{code}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">{name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom tier — Trainer & Practitioner credentials */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { code: 'RST', name: 'Registered Scrum Trainer' },
+                  { code: 'RS@ST', name: 'Registered Scrum@Scale Trainer' },
+                  { code: 'RSASP', name: 'Registered Scrum@Scale Practitioner' },
+                  { code: 'RSM', name: 'Registered Scrum Master' },
+                  { code: 'RPO', name: 'Registered Product Owner' },
+                ].map(({ code, name }) => (
+                  <div key={code} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">{code}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">{name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── Bottom row — Scrum Alliance + EXIN side by side ── */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
               {/* Scrum Alliance */}
-              <div>
-                <div className="flex items-center gap-3 mb-5 h-7">
+              <div className="rounded-2xl border border-slate-200 p-8">
+                <div className="flex items-center gap-3 mb-6 h-7">
                   <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Alliance</span>
                 </div>
                 <div className="space-y-3">
@@ -169,53 +189,56 @@ export function InstructorPage() {
               </div>
 
               {/* EXIN */}
-              <div>
-                <div className="flex items-center gap-3 mb-5 h-7">
+              <div className="rounded-2xl border border-slate-200 p-8">
+                <div className="flex items-center gap-3 mb-6 h-7">
                   <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">EXIN</span>
                 </div>
                 <div className="space-y-3">
-                  {[
-                    { code: 'Agile Scrum Trainer', name: 'Certified to deliver EXIN Agile Scrum curriculum' },
-                  ].map(({ code, name }) => (
-                    <div key={code} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
-                      <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{code}</p>
-                        <p className="text-xs text-slate-500 mt-0.5">{name}</p>
-                      </div>
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0 mt-1.5"></span>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">Agile Scrum Trainer</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Certified to deliver EXIN Agile Scrum curriculum</p>
                     </div>
-                  ))}
+                  </div>
                 </div>
+                <p className="text-xs text-slate-400 font-light mt-6 leading-relaxed">
+                  EXIN is a globally recognised IT and digital skills certification body, operating in 165+ countries. Ethan is certified to deliver their Agile Scrum programme — broadening access to Agile training across enterprise and government sectors.
+                </p>
               </div>
 
             </div>
           </div>
 
-          {/* ═══ AWARDS & RECOGNITION ═══ */}
+          {/* ═══ INDUSTRY LEADERSHIP & RECOGNITION ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Awards &amp; Industry Recognition</h2>
-            <p className="text-slate-500 font-light mb-10">Recognised by Scrum Inc. USA for delivering measurable enterprise transformation outcomes across Asia Pacific.</p>
+            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Industry Leadership &amp; Recognition</h2>
+            <p className="text-slate-500 font-light mb-10">As Asia Pacific Regional Partner for Scrum Inc. USA, Ethan plays a leading role in recognising enterprise Agile excellence and building the Agile community across the region.</p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Card 1 — Agile Awards */}
               <div className="bg-slate-800 rounded-2xl p-6">
-                <div className="text-3xl mb-4">🏆</div>
-                <p className="text-white font-semibold mb-1">Platinum Agile Award</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">Scrum Inc. USA · Highest Honour</p>
-                <p className="text-slate-400 text-sm leading-relaxed">Awarded for the Malaysia Airports Holdings Berhad (MAHB) enterprise transformation — delivering measurable operational outcomes across 200+ employees.</p>
-                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Case Study →</a>
+                <div className="text-3xl mb-4">🏆🏅</div>
+                <p className="text-white font-semibold mb-1">Scrum Inc. Agile Awards — Asia Pacific</p>
+                <p className="text-amber-400 text-xs font-medium mb-3">Presented on behalf of Scrum Inc. USA</p>
+                <p className="text-slate-400 text-sm leading-relaxed">As Asia Pacific Regional Partner, Ethan represents Scrum Inc. USA in recognising outstanding enterprise Agile transformations — presenting the Platinum Agile Award to Malaysia Airports Holdings Berhad (MAHB) and the Gold Agile Award to Bank Islam Malaysia Berhad.</p>
+                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Case Studies →</a>
               </div>
-              <div className="bg-slate-800 rounded-2xl p-6">
-                <div className="text-3xl mb-4">🏅</div>
-                <p className="text-white font-semibold mb-1">Gold Agile Award</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">Scrum Inc. USA</p>
-                <p className="text-slate-400 text-sm leading-relaxed">Awarded for the Bank Islam Malaysia Berhad transformation — from failed Agile initiatives to enterprise-wide delivery in 7 months.</p>
-                <a href="leadership-training.html#results" className="inline-block mt-4 text-xs text-cyan-400 hover:text-cyan-300 transition-colors">View Case Study →</a>
-              </div>
+
+              {/* Card 2 — Events Organiser */}
               <div className="bg-slate-800 rounded-2xl p-6">
                 <div className="text-3xl mb-4">🎤</div>
-                <p className="text-white font-semibold mb-1">AIDA Forum 2025</p>
-                <p className="text-amber-400 text-xs font-medium mb-3">Featured Speaker &amp; Case Study Presenter</p>
-                <p className="text-slate-400 text-sm leading-relaxed">Case studies from MAHB and Bank Islam presented live at Malaysia's premier Agile leadership summit — in front of Asia Pacific's top transformation leaders.</p>
+                <p className="text-white font-semibold mb-1">Agile Events — Organiser &amp; Host</p>
+                <p className="text-amber-400 text-xs font-medium mb-3">Malaysia &amp; Asia Pacific</p>
+                <p className="text-slate-400 text-sm leading-relaxed">Organised and hosted Malaysia's premier Agile leadership events — including AIDA Forum 2025 and Agile Tour Kuala Lumpur 2023 &amp; 2024 — bringing together enterprise leaders and speakers from across the globe to advance Agile leadership practice in Asia Pacific.</p>
+              </div>
+
+              {/* Card 3 — Speaker Authority */}
+              <div className="bg-slate-800 rounded-2xl p-6">
+                <div className="text-3xl mb-4">🎙️</div>
+                <p className="text-white font-semibold mb-1">100+ Agile Events as Speaker</p>
+                <p className="text-amber-400 text-xs font-medium mb-3">2010–2025 · Across Asia Pacific &amp; China</p>
+                <p className="text-slate-400 text-sm leading-relaxed">A recognised voice in the global Agile community — featured speaker at over 100 Agile events across 15 years, spanning Shanghai, Beijing, Shenzhen, Guangzhou, Singapore, Bangkok, Ho Chi Minh City, Kuala Lumpur, Taipei, and Tokyo.</p>
               </div>
             </div>
           </div>
