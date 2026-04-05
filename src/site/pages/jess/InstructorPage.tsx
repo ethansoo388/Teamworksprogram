@@ -59,10 +59,10 @@ export function InstructorPage() {
       {/* ═══ BIO + STATS ═══ */}
       <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20" data-reveal-group data-stagger="120">
 
             {/* Left — Photo + Stats */}
-            <div>
+            <div data-reveal-item>
               <div className="mb-8">
                 <img
                   src="/assets/img/jess/people-ethan-soo.webp"
@@ -87,7 +87,7 @@ export function InstructorPage() {
             </div>
 
             {/* Right — Bio */}
-            <div className="space-y-6">
+            <div data-reveal-item className="space-y-6">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-light text-slate-900 mb-2">Ethan Soo</h2>
                 <p className="text-slate-600 font-light">Asia Pacific Regional Partner, Scrum Inc. · Scrum Fellow</p>
@@ -117,11 +117,13 @@ export function InstructorPage() {
 
           {/* ═══ CREDENTIALS ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Scrum &amp; Agile Certifications</h2>
-            <p className="text-slate-500 font-light mb-10">Credentials held across three internationally recognised certification bodies.</p>
+            <div data-reveal>
+              <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Scrum &amp; Agile Certifications</h2>
+              <p className="text-slate-500 font-light mb-10">Credentials held across three internationally recognised certification bodies.</p>
+            </div>
 
             {/* ── Scrum Inc. — Featured full-width block ── */}
-            <div className="rounded-2xl border border-slate-200 p-8 mb-6">
+            <div data-reveal className="rounded-2xl border border-slate-200 p-8 mb-6">
               <div className="flex items-center gap-3 mb-8">
                 <img src="/assets/img/jess/logo-scrum-inc.webp" alt="Scrum Inc." className="h-7 w-auto object-contain opacity-80" />
                 <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Inc.</span>
@@ -164,10 +166,10 @@ export function InstructorPage() {
             </div>
 
             {/* ── Bottom row — Scrum Alliance + EXIN side by side ── */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" data-reveal-group data-stagger="120">
 
               {/* Scrum Alliance */}
-              <div className="rounded-2xl border border-slate-200 p-8">
+              <div data-reveal-item className="rounded-2xl border border-slate-200 p-8">
                 <div className="flex items-center gap-3 mb-6 h-7">
                   <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Scrum Alliance</span>
                 </div>
@@ -205,7 +207,7 @@ export function InstructorPage() {
               </div>
 
               {/* EXIN */}
-              <div className="rounded-2xl border border-slate-200 p-8">
+              <div data-reveal-item className="rounded-2xl border border-slate-200 p-8">
                 <div className="flex items-center gap-3 mb-6 h-7">
                   <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">EXIN</span>
                 </div>
@@ -235,12 +237,14 @@ export function InstructorPage() {
 
           {/* ═══ INDUSTRY LEADERSHIP & RECOGNITION ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Industry Leadership &amp; Recognition</h2>
-            <p className="text-slate-500 font-light mb-10">As Asia Pacific Regional Partner for Scrum Inc. USA, Ethan plays a leading role in recognising enterprise Agile excellence and building the Agile community across the region.</p>
+            <div data-reveal>
+              <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Industry Leadership &amp; Recognition</h2>
+              <p className="text-slate-500 font-light mb-10">As Asia Pacific Regional Partner for Scrum Inc. USA, Ethan plays a leading role in recognising enterprise Agile excellence and building the Agile community across the region.</p>
+            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-reveal-group data-stagger="100">
               {/* Card 1 — Agile Awards */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <div data-reveal-item className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🏆🏅</div>
                 <p className="text-slate-900 font-semibold mb-1">Scrum Inc. Agile Awards — Asia Pacific</p>
                 <p className="text-amber-600 text-xs font-medium mb-3">Presented on behalf of Scrum Inc. USA</p>
@@ -249,7 +253,7 @@ export function InstructorPage() {
               </div>
 
               {/* Card 2 — Events Organiser */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <div data-reveal-item className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🎤</div>
                 <p className="text-slate-900 font-semibold mb-1">Agile Events — Organiser &amp; Host</p>
                 <p className="text-amber-600 text-xs font-medium mb-3">Malaysia &amp; Asia Pacific</p>
@@ -257,7 +261,7 @@ export function InstructorPage() {
               </div>
 
               {/* Card 3 — Speaker Authority */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <div data-reveal-item className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🎙️</div>
                 <p className="text-slate-900 font-semibold mb-1">100+ Agile Events as Speaker</p>
                 <p className="text-amber-600 text-xs font-medium mb-3">2010–2025 · Across Asia Pacific &amp; China</p>
@@ -268,9 +272,11 @@ export function InstructorPage() {
 
           {/* ═══ PREVIOUSLY LED TRANSFORMATION ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Agile Leadership Training Results Across Asia Pacific</h2>
-            <p className="text-slate-500 font-light mb-8">Organisations across Malaysia, Indonesia, Singapore, China, and beyond.</p>
-            <div className="bg-slate-800 p-8 rounded-2xl">
+            <div data-reveal>
+              <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">Agile Leadership Training Results Across Asia Pacific</h2>
+              <p className="text-slate-500 font-light mb-8">Organisations across Malaysia, Indonesia, Singapore, China, and beyond.</p>
+            </div>
+            <div data-reveal className="bg-slate-800 p-8 rounded-2xl">
               <div className="p-8 rounded-2xl flex items-center justify-center">
                 <img
                   src="/assets/img/jess/logo-client-logos.webp"
@@ -283,11 +289,11 @@ export function InstructorPage() {
 
           {/* ═══ TESTIMONIALS ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8">What Industry Leaders Say</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8" data-reveal>What Industry Leaders Say</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-reveal-group data-stagger="100">
 
               {/* Jeff Sutherland */}
-              <div className="bg-slate-50 p-8 rounded-2xl">
+              <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-jeff-sutherland.webp"
@@ -303,7 +309,7 @@ export function InstructorPage() {
               </div>
 
               {/* Mike Cohn */}
-              <div className="bg-slate-50 p-8 rounded-2xl">
+              <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-mike-cohn.webp"
@@ -319,7 +325,7 @@ export function InstructorPage() {
               </div>
 
               {/* Grace Chan */}
-              <div className="bg-slate-50 p-8 rounded-2xl">
+              <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-grace-chan.webp"
@@ -338,7 +344,7 @@ export function InstructorPage() {
           </div>
 
           {/* ═══ CTA ═══ */}
-          <div className="bg-slate-800 rounded-2xl p-10 text-center">
+          <div data-reveal className="bg-slate-800 rounded-2xl p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-light text-white mb-3">Train Directly with Ethan</h2>
             <p className="text-slate-400 font-light max-w-xl mx-auto mb-8">
               Join leaders from across Asia Pacific who have transformed their organisations through Ethan's enterprise agile leadership training programs.

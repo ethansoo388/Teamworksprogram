@@ -219,7 +219,7 @@ export function LeadershipTrainingPage() {
       <section className="py-10 bg-slate-900 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 uppercase tracking-widest mb-8">The same framework trusted by</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6" data-reveal-group data-stagger="60">
             {[
               { src: '/assets/img/jess/logo-amazon.webp', alt: 'Amazon' },
               { src: '/assets/img/jess/logo-microsoft.webp', alt: 'Microsoft' },
@@ -231,7 +231,7 @@ export function LeadershipTrainingPage() {
               { src: '/assets/img/jess/logo-rocket-mortgage.webp', alt: 'Rocket Mortgage' },
               { src: '/assets/img/jess/logo-maersk.webp', alt: 'Maersk' },
             ].map(({ src, alt }) => (
-              <div key={alt} className="w-24 lg:w-28 h-12 lg:h-14 bg-white rounded-lg p-2 flex items-center justify-center">
+              <div key={alt} data-reveal-item className="w-24 lg:w-28 h-12 lg:h-14 bg-white rounded-lg p-2 flex items-center justify-center">
                 <img src={src} alt={alt} className="max-w-full max-h-full object-contain" />
               </div>
             ))}
@@ -245,7 +245,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center,rgba(59,130,246,0.06),transparent 60%)' }} />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
           {/* Stat */}
-          <div className="mb-10">
+          <div className="mb-10" data-reveal>
             <div className="flex flex-col items-center gap-1 mb-6">
               <img src="/assets/img/jess/logo-smr-white.svg" alt="MIT Sloan Management Review" className="h-12 w-auto opacity-70" />
               <span className="text-slate-500 text-xs uppercase tracking-widest">2020</span>
@@ -260,30 +260,30 @@ export function LeadershipTrainingPage() {
           </div>
 
           {/* Bridge question */}
-          <p className="text-lg font-semibold text-white mb-10 uppercase tracking-widest">What separates the 17% who survive?</p>
+          <p className="text-lg font-semibold text-white mb-10 uppercase tracking-widest" data-reveal data-delay="100">What separates the 17% who survive?</p>
 
           {/* 3 Characteristics */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-left mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-left mb-12" data-reveal-group data-stagger="100">
             {/* 1 */}
-            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <div data-reveal-item className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <p className="text-base font-bold text-white mb-3">Led from the Top. Agile + AI Ready.</p>
               <p className="text-sm text-slate-400 leading-relaxed">The Agile + AI shift cannot be delegated. Leaders who survive understand how AI is changing the way organisations operate — and personally drive the transformation. Not assign it to a consultant. Not wait for teams to figure it out.</p>
             </div>
             {/* 2 */}
-            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <div data-reveal-item className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <p className="text-base font-bold text-white mb-3">Human + AI, Led as One System</p>
               <p className="text-sm text-slate-400 leading-relaxed">The future enterprise is no longer human-only. The 17% build systems where people and AI work together — from strategy down to team execution — under one unified leadership model. AI doesn't lead itself. Leaders do.</p>
             </div>
             {/* 3 */}
-            <div className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <div data-reveal-item className="rounded-2xl p-6" style={{ background: 'rgba(15,23,36,0.7)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <p className="text-base font-bold text-white mb-3">Measured by Business Impact, in Real Time</p>
               <p className="text-sm text-slate-400 leading-relaxed">They track what actually moves the business — revenue, delivery speed, quality, and customer outcomes. Not sprint velocity. Not framework compliance. With AI providing live signals, they act on what's happening now — not what the last quarterly report said.</p>
             </div>
           </div>
 
           {/* Closing bridge */}
-          <p className="text-lg text-slate-300 font-light mb-6">This program is built to develop exactly these capabilities — in 4 days.</p>
-          <a href="#program" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
+          <p className="text-lg text-slate-300 font-light mb-6" data-reveal>This program is built to develop exactly these capabilities — in 4 days.</p>
+          <a href="#program" data-reveal data-delay="100" className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg text-sm transition-all" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
             See How the Program Works →
           </a>
         </div>
@@ -292,7 +292,7 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 4: WHY TRANSFORMATIONS STALL ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">The Leadership Problem</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Why Agile Transformations Stall</h2>
             <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">
@@ -300,7 +300,7 @@ export function LeadershipTrainingPage() {
             </p>
           </div>
           {/* Failure patterns */}
-          <div className="flex flex-wrap gap-3 justify-center mb-8">
+          <div className="flex flex-wrap gap-3 justify-center mb-8" data-reveal-group data-stagger="60">
             {[
               'Teams improve, but leadership stays misaligned',
               'Governance contradicts agility',
@@ -308,11 +308,11 @@ export function LeadershipTrainingPage() {
               'Productivity gains stay local and temporary',
               'Consultants engaged before leaders are ready',
             ].map((text) => (
-              <span key={text} className="px-5 py-2.5 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-medium">{text}</span>
+              <span key={text} data-reveal-item className="px-5 py-2.5 bg-slate-800 border border-slate-700 rounded-full text-slate-300 text-sm font-medium">{text}</span>
             ))}
           </div>
           {/* Video */}
-          <div className="relative rounded-2xl overflow-hidden mb-4 bg-slate-950" style={{ aspectRatio: '16/7' }}>
+          <div data-reveal className="relative rounded-2xl overflow-hidden mb-4 bg-slate-950" style={{ aspectRatio: '16/7' }}>
             <video autoPlay muted loop playsInline poster="/assets/img/jess/agile-leader-training-hero.webp" className="absolute inset-0 w-full h-full object-cover opacity-80" id="jeffVideo">
               <source src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm" type="video/webm" />
             </video>
@@ -320,7 +320,7 @@ export function LeadershipTrainingPage() {
           </div>
           <p className="text-slate-500 text-xs text-center mb-8 italic">Dr. Jeff Sutherland explains why most Agile transformations fail to deliver at the leadership level — and what leaders must change.</p>
           {/* Pull quote */}
-          <div className="max-w-3xl mx-auto relative">
+          <div className="max-w-3xl mx-auto relative" data-reveal data-delay="200">
             <div className="text-8xl text-blue-500/15 font-black leading-none absolute -top-4 -left-2 select-none">"</div>
             <blockquote className="pl-8 border-l-2 border-cyan-500">
               <p className="text-2xl lg:text-3xl text-cyan-300 font-light leading-relaxed italic">
@@ -334,7 +334,7 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 5: PROGRAM OVERVIEW ═══ */}
       <section id="program" className="py-16 lg:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" data-reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Program Overview</span>
@@ -357,14 +357,14 @@ export function LeadershipTrainingPage() {
             {/* Combined timeline: all 7 stops */}
             <div className="relative">
               <div className="absolute left-0 right-0 h-px hidden lg:block" style={{ top: '152px', zIndex: 0, background: 'linear-gradient(to right,#334155 0%,#334155 40%,rgba(59,130,246,0.4) 55%,rgba(6,182,212,0.4) 100%)' }} />
-              <div className="grid grid-cols-3 lg:grid-cols-7 gap-6">
+              <div className="grid grid-cols-3 lg:grid-cols-7 gap-6" data-reveal-group data-stagger="80">
                 {/* First 3 stops — slate style */}
                 {[
                   { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', img: '/assets/img/jess/timeline-tps-1950.webp' },
                   { year: '1990s', title: 'Scrum Created', sub: 'Dr. Jeff Sutherland', img: '/assets/img/jess/timeline-scrum-guide-1990.webp' },
                   { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', img: '/assets/img/jess/timeline-agile-manifesto-2001.webp' },
                 ].map(({ year, title, sub, img }) => (
-                  <div key={year} className="flex flex-col items-center text-center relative z-10">
+                  <div key={year} data-reveal-item className="flex flex-col items-center text-center relative z-10">
                     <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg border border-slate-700">
                       <img src={img} alt={title} className="w-full h-full object-cover" />
                     </div>
@@ -376,7 +376,7 @@ export function LeadershipTrainingPage() {
                   </div>
                 ))}
                 {/* 2014 */}
-                <div className="flex flex-col items-center text-center relative z-10">
+                <div data-reveal-item className="flex flex-col items-center text-center relative z-10">
                   <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
                     <img src="/assets/img/jess/timeline-scrum-book-2014.webp" alt="Hyper-Productive Scrum" className="w-full h-full object-cover" />
                   </div>
@@ -387,7 +387,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-xs text-slate-400 mt-1">Global bestseller · Jeff Sutherland</p>
                 </div>
                 {/* 2019 */}
-                <div className="flex flex-col items-center text-center relative z-10">
+                <div data-reveal-item className="flex flex-col items-center text-center relative z-10">
                   <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
                     <img src="/assets/img/jess/timeline-scrumatscale-2019.webp" alt="Scrum@Scale" className="w-full h-full object-cover" />
                   </div>
@@ -398,7 +398,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-xs text-slate-400 mt-1">Enterprise-wide system</p>
                 </div>
                 {/* 2023 */}
-                <div className="flex flex-col items-center text-center relative z-10">
+                <div data-reveal-item className="flex flex-col items-center text-center relative z-10">
                   <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg" style={{ border: '1px solid rgba(59,130,246,0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
                     <img src="/assets/img/jess/timeline-first-principle-2023.webp" alt="Enterprise Productivity & Innovation" className="w-full h-full object-cover" />
                   </div>
@@ -409,7 +409,7 @@ export function LeadershipTrainingPage() {
                   <p className="text-xs text-slate-400 mt-1">Traditional management, upgraded</p>
                 </div>
                 {/* 2025 — AI standout */}
-                <div className="flex flex-col items-center text-center relative z-10">
+                <div data-reveal-item className="flex flex-col items-center text-center relative z-10">
                   <div className="relative w-24 h-36 mb-3 rounded-md overflow-hidden" style={{ border: '2px solid rgba(34,211,238,0.6)', boxShadow: '0 0 24px rgba(34,211,238,0.35),0 4px 20px rgba(0,0,0,0.4)' }}>
                     <div className="absolute top-1.5 left-0 right-0 flex justify-center z-10">
                       <span className="px-2 py-0.5 text-white font-bold rounded-full" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', fontSize: '9px', lineHeight: '1.4' }}>AI-POWERED</span>
@@ -428,19 +428,19 @@ export function LeadershipTrainingPage() {
 
           {/* Holistic model */}
           <div className="mb-16">
-            <div className="text-center mb-10">
+            <div className="text-center mb-10" data-reveal>
               <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
                 Command the Full Picture.<br className="hidden lg:block" />
                 <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Own Every Layer of Your Team.</span>
               </h3>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-product-owner.webp" alt="Product Owner Knowledge" className="w-full h-full object-cover" /></div>
-              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-scrum-master.webp" alt="Scrum Master Knowledge" className="w-full h-full object-cover" /></div>
-              <div className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/nova/nova_class.webp" alt="Class in Session" className="w-full h-full object-cover" /></div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8" data-reveal-group data-stagger="80">
+              <div data-reveal-item className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-product-owner.webp" alt="Product Owner Knowledge" className="w-full h-full object-cover" /></div>
+              <div data-reveal-item className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/fullsystem-scrum-master.webp" alt="Scrum Master Knowledge" className="w-full h-full object-cover" /></div>
+              <div data-reveal-item className="rounded-2xl overflow-hidden h-48"><img src="/assets/img/jess/nova/nova_class.webp" alt="Class in Session" className="w-full h-full object-cover" /></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-reveal-group data-stagger="100">
+              <div data-reveal-item className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                 </div>
@@ -449,7 +449,7 @@ export function LeadershipTrainingPage() {
                   <li>• Align business goals</li><li>• Evaluate and prioritise value</li><li>• Communicate effectively</li><li>• Increase revenue</li>
                 </ul>
               </div>
-              <div className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+              <div data-reveal-item className="rounded-2xl p-8 relative" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
 
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
@@ -459,7 +459,7 @@ export function LeadershipTrainingPage() {
                   <li>• Identify and eliminate waste</li><li>• Drive process change</li><li>• Motivate and improve team happiness</li><li>• Scale agility</li>
                 </ul>
               </div>
-              <div className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+              <div data-reveal-item className="rounded-2xl p-8 hover:border-blue-500/30 transition-all" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
@@ -473,7 +473,7 @@ export function LeadershipTrainingPage() {
           </div>
 
           {/* 3 credentials */}
-          <div className="rounded-2xl p-8" style={{ background: 'linear-gradient(to right,rgba(59,130,246,0.1),rgba(6,182,212,0.05),rgba(59,130,246,0.1))', border: '1px solid rgba(59,130,246,0.2)' }}>
+          <div data-reveal className="rounded-2xl p-8" style={{ background: 'linear-gradient(to right,rgba(59,130,246,0.1),rgba(6,182,212,0.05),rgba(59,130,246,0.1))', border: '1px solid rgba(59,130,246,0.2)' }}>
             <div className="flex justify-center mb-5">
               <img src="/assets/img/jess/logo-scrum-inc.webp" alt="Scrum Inc." className="h-8 w-auto object-contain opacity-80" />
             </div>
@@ -500,15 +500,15 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 7: WHO THIS IS FOR ═══ */}
       <section className="py-16 lg:py-20 bg-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
           </div>
-          <div className="mb-8 rounded-2xl overflow-hidden">
+          <div className="mb-8 rounded-2xl overflow-hidden" data-reveal>
             <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" data-reveal-group data-stagger="120">
+            <div data-reveal-item className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid #4b5563' }}>
               <p className="text-green-400 text-sm font-semibold uppercase tracking-wider mb-4">✓ This is for you if you are…</p>
               <ul className="list-disc list-inside space-y-3 text-sm text-slate-300">
                 <li>C-Suite or senior leader accountable for business outcomes</li>
@@ -518,7 +518,7 @@ export function LeadershipTrainingPage() {
                 <li>Department head preparing your organisation for transformation</li>
               </ul>
             </div>
-            <div className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
+            <div data-reveal-item className="rounded-2xl p-8" style={{ background: 'rgba(71,85,105,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
               <p className="text-red-400 text-sm font-semibold uppercase tracking-wider mb-4">✗ This is NOT for you if you need…</p>
               <ul className="list-disc list-inside space-y-3 text-sm text-slate-400">
                 <li>Entry-level or introductory Scrum training</li>
@@ -534,14 +534,14 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 6: TWO COURSES ═══ */}
       <section className="py-16 lg:py-20 px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">How to Get Started</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Choose Your Agile Leadership Certification Path</h2>
             <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Each course stands alone. Together, they form a complete leadership-to-execution operating model.</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10" data-reveal-group data-stagger="120">
             {/* Course 1 */}
-            <div className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-blue-300 transition-all flex flex-col">
+            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-blue-300 transition-all flex flex-col">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6 self-start">
                 <div className="w-2 h-2 rounded-full bg-blue-500" />
                 <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">Course 1</span>
@@ -576,7 +576,7 @@ export function LeadershipTrainingPage() {
               </div>
             </div>
             {/* Course 2 */}
-            <div className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-cyan-300 transition-all flex flex-col">
+            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-cyan-300 transition-all flex flex-col">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full mb-6 self-start">
                 <div className="w-2 h-2 rounded-full bg-cyan-500" />
                 <span className="text-sm font-medium text-cyan-600 uppercase tracking-wider">Course 2</span>
@@ -611,7 +611,7 @@ export function LeadershipTrainingPage() {
               </div>
             </div>
           </div>
-          <div className="bg-slate-800 rounded-2xl p-8 text-center border border-blue-500/20">
+          <div data-reveal className="bg-slate-800 rounded-2xl p-8 text-center border border-blue-500/20">
             <p className="text-white font-semibold text-lg mb-2">Take both courses for full-system mastery</p>
             <p className="text-slate-400 font-light text-sm max-w-xl mx-auto mb-6">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
             <a href="/contactus.html?source=jess-leadership-training&cta=both-courses-banner#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
@@ -624,13 +624,13 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 9: 5-STAR EXPERIENCE ═══ */}
       <section className="py-16 lg:py-20 bg-[#0F1724]">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What You Get</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">What's Included in Your Training</h2>
             <p className="text-xl text-slate-400 font-light">From preparation to post-class support — every step is designed for real-world application.</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-reveal-group data-stagger="100">
+            <div data-reveal-item className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4"><span className="text-2xl">📋</span></div>
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Before Class</h3>
               <ul className="space-y-3 text-sm text-slate-600">
@@ -639,7 +639,7 @@ export function LeadershipTrainingPage() {
                 <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Readiness assessment for your team</li>
               </ul>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+            <div data-reveal-item className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4"><span className="text-2xl">🎓</span></div>
               <h3 className="text-lg font-semibold text-slate-900 mb-4">During Class</h3>
               <ul className="space-y-3 text-sm text-slate-600">
@@ -649,7 +649,7 @@ export function LeadershipTrainingPage() {
                 <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5 font-bold">✓</span>Interactive games and exercises</li>
               </ul>
             </div>
-            <div className="rounded-2xl p-8 shadow-lg relative text-white" style={{ background: 'linear-gradient(135deg,#3b82f6,#06b6d4)' }}>
+            <div data-reveal-item className="rounded-2xl p-8 shadow-lg relative text-white" style={{ background: 'linear-gradient(135deg,#3b82f6,#06b6d4)' }}>
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-slate-900 text-cyan-400 text-xs font-bold rounded-full">HIGH VALUE</div>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.2)' }}><span className="text-2xl">⭐</span></div>
               <h3 className="text-lg font-semibold mb-4">After Class</h3>
@@ -670,13 +670,13 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 8: REAL-WORLD RESULTS ═══ */}
       <section id="results" className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Proven Results</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Proven Agile Training Results Across Asia Pacific</h2>
             <p className="text-xl text-slate-400 font-light">Real organisations. Specific numbers. Measured outcomes.</p>
           </div>
           {/* MAHB case study — Featured */}
-          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+          <div data-reveal className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
             {/* Mobile pill: in-flow, right-aligned */}
             <div className="flex justify-end mb-3 lg:hidden">
               <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Featured Case Study</div>
@@ -723,7 +723,7 @@ export function LeadershipTrainingPage() {
             </div>
           </div>
           {/* Bank Islam case study */}
-          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+          <div data-reveal className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
             {/* Mobile pill: in-flow, right-aligned */}
             <div className="flex justify-end mb-3 lg:hidden">
               <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
@@ -771,7 +771,7 @@ export function LeadershipTrainingPage() {
             </div>
           </div>
           {/* Bank of China case study */}
-          <div className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
+          <div data-reveal className="rounded-3xl p-8 lg:p-12 mb-10 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0F1724)', border: '1px solid rgba(59,130,246,0.3)' }}>
             {/* Mobile pill: in-flow, right-aligned */}
             <div className="flex justify-end mb-3 lg:hidden">
               <div className="px-3 py-1 text-white text-xs font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>Asia Pacific Case Study</div>
@@ -818,7 +818,7 @@ export function LeadershipTrainingPage() {
             </div>
           </div>
           {/* 6 global case studies */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-reveal-group data-stagger="80">
             {[
               { org: 'Coca-Cola Japan · Japan', stat: '800%', desc: 'Faster product launches with Hyper-Productive Scrum', note: 'Revenue target achieved 200% faster', logo: '/assets/img/jess/logo-coca-cola.webp', logoAlt: 'Coca-Cola Japan' },
               { org: 'Kasikorn Bank · Thailand', stat: '3 years → 6 months', desc: '3-year project completed and deployed to market', note: 'K-Lab new business accelerator · Beyond Banking Division', logo: '/assets/img/jess/logo-kasikorn-bank.webp', logoAlt: 'Kasikorn Bank' },
@@ -827,7 +827,7 @@ export function LeadershipTrainingPage() {
               { org: 'HSBC · China', stat: '250%', desc: 'Team productivity increase · 95% faster issue resolution (2 months → 3 days)', note: 'Meeting time cut from 1.5 hrs → 20 mins · 200 employees · 20+ roles', logo: '/assets/img/jess/logo-hsbc-white.webp', logoAlt: 'HSBC' },
               { org: 'Rocket Mortgage · USA', stat: '86 → 42 days', desc: 'Cycle time for feature development halved', note: 'Largest mortgage provider in the US', logo: '/assets/img/jess/logo-rocket-mortgage.webp', logoAlt: 'Rocket Mortgage' },
             ].map(({ org, stat, desc, note, logo, logoAlt }) => (
-              <div key={org} className="rounded-2xl p-6 flex flex-col" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+              <div key={org} data-reveal-item className="rounded-2xl p-6 flex flex-col" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 {logo && <img src={logo} alt={logoAlt} className="h-8 w-auto object-contain object-left opacity-70 mb-4" />}
                 <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-3">{org}</p>
                 <p className="text-2xl font-black text-white mb-1">{stat}</p>
@@ -841,7 +841,7 @@ export function LeadershipTrainingPage() {
 
       {/* ═══ MID-PAGE CTA ═══ */}
       <section className="py-14 bg-slate-900 border-y border-slate-800">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center" data-reveal>
           <p className="text-white text-2xl font-bold mb-2">Seen enough? Let's talk.</p>
           <p className="text-slate-400 font-light mb-8">Talk to a Program Advisor — no obligation, we'll tell you honestly if this is the right fit.</p>
           <a href="/contactus.html?source=jess-leadership-training&cta=mid-page-results#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
@@ -853,12 +853,12 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 8: TESTIMONIALS ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What Leaders Say</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">What Leaders Say About<br />This Agile Training</h2>
           </div>
           {/* Participant testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" data-reveal-group data-stagger="80">
             {[
               { img: '/assets/img/jess/people-inda-mulyani.webp', name: 'Inda Mulyani', role: 'Head of PMO · Bank Danamon Indonesia', quote: 'If you want to implement Scrum the right way, join this training.' },
               { img: '/assets/img/jess/people-fadly-rasyad.webp', name: 'Fadly Rasyad', role: 'Enterprise Agile Coach · Bank of Singapore', quote: 'Very practical, makes sense, and right on the money.' },
@@ -866,7 +866,7 @@ export function LeadershipTrainingPage() {
               { img: '/assets/img/jess/people-peichin-liew.webp', name: 'Pei Chin Liew', role: 'Assistant Vice President · Takaful Ikhlas Family Berhad', quote: 'Very useful for me. I like how this course was easy to follow.' },
               { img: '/assets/img/jess/people-aquib-nihal.webp', name: 'Aquib Nihal', role: 'Product Manager · MBUZZ', quote: 'Something worth investing your time in. A lot to learn and implement.' },
             ].map(({ img, name, role, quote }) => (
-              <div key={name} className="rounded-2xl p-6" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+              <div key={name} data-reveal-item className="rounded-2xl p-6" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 <div className="flex mb-3 text-yellow-400">★★★★★</div>
                 <p className="text-white text-sm leading-relaxed italic mb-4">"{quote}"</p>
                 <div className="flex items-center gap-3">
@@ -877,7 +877,7 @@ export function LeadershipTrainingPage() {
                 </div>
               </div>
             ))}
-            <div className="rounded-2xl p-6 flex items-center justify-center" style={{ background: 'rgba(30,41,59,0.3)', border: '1px dashed #334155' }}>
+            <div data-reveal-item className="rounded-2xl p-6 flex items-center justify-center" style={{ background: 'rgba(30,41,59,0.3)', border: '1px dashed #334155' }}>
               <div className="text-center">
                 <div className="text-3xl mb-2">🌏</div>
                 <p className="text-slate-500 text-sm">300+ classes delivered<br />across Asia Pacific</p>
@@ -887,7 +887,7 @@ export function LeadershipTrainingPage() {
           {/* Expert endorsements */}
           <div className="border-t border-slate-800 pt-12">
             <p className="text-center text-xs text-slate-500 uppercase tracking-widest mb-8">Endorsed by the World's Leading Agile Authorities</p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-reveal-group data-stagger="100">
               {[
                 {
                   img: '/assets/img/jess/people-jeff-sutherland.webp',
@@ -914,7 +914,7 @@ export function LeadershipTrainingPage() {
                   featured: false,
                 },
               ].map(({ img, name, role, sub, quote, featured }) => (
-                <div key={name} className="rounded-2xl p-8" style={featured ? { background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.3)' } : { background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+                <div key={name} data-reveal-item className="rounded-2xl p-8" style={featured ? { background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.3)' } : { background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0" style={{ border: featured ? '2px solid rgba(59,130,246,0.3)' : '2px solid #334155' }}>
                       <img src={img} alt={name} className="w-full h-full object-cover" />
@@ -936,8 +936,8 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 10: TRAINER AUTHORITY ═══ */}
       <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-reveal-group data-stagger="120">
+            <div data-reveal-item>
               <div className="flex items-start gap-6 mb-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0" style={{ border: '2px solid rgba(59,130,246,0.3)' }}>
                   <img src="/assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo" className="w-full h-full object-cover" />
@@ -966,7 +966,7 @@ export function LeadershipTrainingPage() {
               </ul>
               <a href="/jess/instructor.html" className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 border-b border-cyan-500/30 pb-0.5">View Full Instructor Profile →</a>
             </div>
-            <div className="rounded-2xl p-8" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <div data-reveal-item className="rounded-2xl p-8" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <p className="text-slate-400 text-xs uppercase tracking-widest mb-4">Personal Endorsement from Dr. Jeff Sutherland</p>
               <div className="text-5xl font-black leading-none mb-2" style={{ color: 'rgba(59,130,246,0.2)' }}>"</div>
               <blockquote className="text-white text-lg leading-relaxed italic mb-6">
@@ -990,12 +990,12 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 12: UPCOMING CLASSES ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Enrol Now</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Upcoming Public Classes</h2>
             <p className="text-slate-400 font-light">Available in Malaysia, Indonesia &amp; live virtual — small cohorts, limited seats.</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8" data-reveal-group data-stagger="100">
             {[
               { course: 1, date: '21–22 April 2026', location: 'Malaysia, Kuala Lumpur', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
               { course: 1, date: '6–7 May 2026', location: 'Indonesia, Jakarta', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
@@ -1003,7 +1003,7 @@ export function LeadershipTrainingPage() {
             ].map(({ course, date, location, format, courseName }) => {
               const isC1 = course === 1;
               return (
-                <div key={date} className="bg-slate-800 rounded-2xl p-6 transition-all" style={{ border: isC1 ? '1px solid rgba(59,130,246,0.2)' : '1px solid rgba(6,182,212,0.2)' }}>
+                <div key={date} data-reveal-item className="bg-slate-800 rounded-2xl p-6 transition-all" style={{ border: isC1 ? '1px solid rgba(59,130,246,0.2)' : '1px solid rgba(6,182,212,0.2)' }}>
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium" style={isC1 ? { background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)', color: '#60a5fa' } : { background: 'rgba(6,182,212,0.1)', border: '1px solid rgba(6,182,212,0.2)', color: '#22d3ee' }}>
                       Course {course}
@@ -1031,7 +1031,7 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION 13: AI SECTION ═══ */}
       <section className="py-16 lg:py-20 border-t-2 border-dashed border-slate-700 relative" style={{ background: 'linear-gradient(to bottom,#020617,#0f172a)' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8 pt-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Bonus: AI-Powered Agile Coaching</span>
@@ -1039,8 +1039,8 @@ export function LeadershipTrainingPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
             <p className="text-slate-400 font-light max-w-xl mx-auto">Our program now integrates Scrum Sage, a GPT built specifically on True Scrum knowledge — developed by JJ Sutherland, CEO of Scrum Inc.</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12" data-reveal-group data-stagger="120">
+            <div data-reveal-item>
               <p className="text-slate-400 text-xs uppercase tracking-widest mb-3">JJ Sutherland · CEO, Scrum Inc. USA</p>
               <div className="text-5xl font-black leading-none" style={{ color: 'rgba(59,130,246,0.2)' }}>"</div>
               <blockquote className="text-xl text-white font-light leading-relaxed italic mb-6">
@@ -1049,7 +1049,7 @@ export function LeadershipTrainingPage() {
               <p className="text-blue-400 text-sm font-semibold">— JJ Sutherland</p>
               <p className="text-slate-500 text-xs">CEO, Scrum Inc. · World Famous Author &amp; Thought Leader</p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div data-reveal-item className="grid grid-cols-2 gap-4">
               {[
                 { val: '90%', label: 'Less Overhead with Scrum' },
                 { val: '30x', label: 'Faster Working Time' },
@@ -1075,11 +1075,11 @@ export function LeadershipTrainingPage() {
       {/* ═══ SECTION: FAQ ═══ */}
       <section className="py-16 lg:py-20 bg-slate-900">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Got Questions?</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4" data-reveal-group data-stagger="60">
             {[
               {
                 q: 'Can I take Course 1 without Course 2?',
@@ -1102,7 +1102,7 @@ export function LeadershipTrainingPage() {
                 a: 'Talk to a Program Advisor for pricing and group rates.',
               },
             ].map(({ q, a }) => (
-              <details key={q} className="group rounded-xl overflow-hidden" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
+              <details key={q} data-reveal-item className="group rounded-xl overflow-hidden" style={{ background: 'rgba(30,41,59,0.6)', border: '1px solid #334155' }}>
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none text-white font-medium">
                   {q}
                   <span aria-hidden="true" className="flex-shrink-0 text-cyan-400 text-xl font-light transition-transform group-open:rotate-45">+</span>
@@ -1118,7 +1118,7 @@ export function LeadershipTrainingPage() {
       <section className="py-16 lg:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#0f172a,#1e293b,#0f172a)' }}>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top,rgba(59,130,246,0.12),transparent 60%)' }} />
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10" data-reveal>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             Ready to Lead the<br />Enterprise Agility Transformation?
           </h2>
