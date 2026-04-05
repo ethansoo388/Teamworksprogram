@@ -90,7 +90,7 @@ export function InstructorPage() {
                   <div className="text-xs text-slate-600 leading-tight">Case Studies with<br />Quantifiable Outcomes</div>
                 </div>
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">100+</div>
+                  <div className="text-3xl font-bold text-amber-500 mb-1">60+</div>
                   <div className="text-xs text-slate-600 leading-tight">Agile Events<br />as Speaker</div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function InstructorPage() {
               </div>
 
               <p className="text-slate-700 font-light leading-relaxed">
-                Ethan Soo is the leading enterprise Agile and Scrum trainer in South East Asia — the only trainer in the region with 30+ case studies with quantifiable business outcomes. As Asia Pacific Regional Partner at Scrum Inc. and a personally endorsed trainer of Dr. Jeff Sutherland, Inventor of Scrum, Ethan brings 23 years of Agile implementation experience across 12+ countries.
+                Over 23 years, Ethan has led or trained enterprise Agile transformations that have generated measurable outcomes across banks, airports, technology companies, and government organisations in 12+ countries across Asia Pacific — making him the only trainer in the region with 30+ case studies with quantifiable business results.
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
@@ -122,12 +122,44 @@ export function InstructorPage() {
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
-                Ethan also leads the Train the Trainer Program (TTT) for Scrum Inc., screening, coaching, mentoring, and certifying new Scrum and Scrum@Scale Trainers across the region — ensuring the highest standards of enterprise agile leadership training are maintained throughout Asia Pacific. Beyond the classroom, Ethan is a recognised voice in the global Agile community — having spoken at over 100 Agile events across Asia Pacific over 15 years, and serving as organiser and host of Malaysia's premier Agile leadership forums, including AIDA Forum 2025 and Agile Tour Kuala Lumpur.
+                Ethan also leads the Train the Trainer Program (TTT) for Scrum Inc., screening, coaching, mentoring, and certifying new Scrum and Scrum@Scale Trainers across the region — ensuring the highest standards of enterprise agile leadership training are maintained throughout Asia Pacific. Beyond the classroom, Ethan is a recognised voice in the global Agile community — having spoken at over 60 Agile events across Asia Pacific over 15 years, and serving as organiser and host of Malaysia's premier Agile leadership forums, including AIDA Forum 2025 and Agile Tour Kuala Lumpur.
               </p>
 
               <p className="text-slate-700 font-light leading-relaxed">
                 Today, Ethan is at the forefront of preparing leaders for the Agile + AI era — helping organisations build systems where human teams and AI collaborate under one unified leadership model. His enterprise leadership training programs are designed not just for today's challenges, but for the future of how high-performance organisations must operate.
               </p>
+            </div>
+          </div>
+
+          {/* ═══ JEFF SUTHERLAND FEATURED ENDORSEMENT ═══ */}
+          <div className="mb-20" data-reveal>
+            <div className="rounded-2xl p-8 lg:p-12 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#1e293b,#0f172a)', border: '1px solid rgba(59,130,246,0.2)' }}>
+              <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                {/* Photo + identity */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-28 h-28 rounded-full overflow-hidden mb-4" style={{ border: '2px solid rgba(59,130,246,0.3)' }}>
+                    <img src="/assets/img/jess/people-jeff-sutherland.webp" alt="Dr. Jeff Sutherland" className="w-full h-full object-cover" />
+                  </div>
+                  <p className="text-white font-semibold text-lg">Dr. Jeff Sutherland</p>
+                  <p className="text-slate-400 text-sm mt-1">Founder &amp; Chairman, Scrum Inc.</p>
+                  <p className="text-slate-500 text-xs mt-0.5">Inventor of Scrum · Co-signatory, Agile Manifesto</p>
+                  <div className="mt-4 px-3 py-1 rounded-full text-xs font-medium text-blue-300" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+                    Personal Endorsement
+                  </div>
+                </div>
+                {/* Quote */}
+                <div className="lg:col-span-2">
+                  <div className="text-7xl font-black leading-none mb-2 select-none" style={{ color: 'rgba(59,130,246,0.15)' }}>"</div>
+                  <blockquote className="text-xl lg:text-2xl text-white font-light leading-relaxed italic mb-6">
+                    Ethan recently spent two days in Tokyo with me planning his Scrum@Scale classes. Having reviewed the plan carefully, I strongly recommend training with Ethan. These will be excellent courses.
+                  </blockquote>
+                  <div className="h-px mb-6" style={{ background: 'rgba(59,130,246,0.2)' }} />
+                  <p className="text-slate-400 text-sm font-light">
+                    Dr. Sutherland personally invited Ethan to serve as Asia Pacific Regional Partner for Scrum Inc. — one of only three such appointments in the entire Asia Pacific region.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -251,6 +283,40 @@ export function InstructorPage() {
             </div>
           </div>
 
+          {/* ═══ WHY ETHAN OVER OTHERS ═══ */}
+          <div className="mb-20">
+            <div data-reveal>
+              <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-2">What Makes Training with Ethan Different</h2>
+              <p className="text-slate-500 font-light mb-10">Not all Scrum trainers are equal. Here's what separates Ethan from a typical certification provider.</p>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-slate-200" data-reveal>
+              {/* Header row */}
+              <div className="grid grid-cols-2 bg-slate-800 text-white text-sm font-medium">
+                <div className="px-6 py-4 text-slate-400 uppercase tracking-widest text-xs">Generic Scrum Trainer</div>
+                <div className="px-6 py-4 text-amber-400 uppercase tracking-widest text-xs border-l border-slate-700">Training with Ethan</div>
+              </div>
+              {/* Rows */}
+              {[
+                ['Teaches Scrum theory from a textbook', 'Teaches Dr. Sutherland\'s original curriculum — direct from the source, updated annually'],
+                ['Certification without real-world proof', '30+ enterprise case studies with quantifiable business outcomes'],
+                ['Classroom experience only', '23 years of live enterprise Agile transformation work across 12+ countries'],
+                ['Regional practitioner', 'Asia Pacific Regional Partner, Scrum Inc. — 1 of only 3 in the entire region'],
+                ['Trains participants', 'Also certifies other Scrum Trainers — sets the regional standard for training quality'],
+              ].map(([generic, ethan], i) => (
+                <div key={i} className={`grid grid-cols-2 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                  <div className="px-6 py-4 text-slate-500 flex items-start gap-2">
+                    <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                    {generic}
+                  </div>
+                  <div className="px-6 py-4 text-slate-800 font-medium flex items-start gap-2 border-l border-slate-200">
+                    <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
+                    {ethan}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* ═══ INDUSTRY LEADERSHIP & RECOGNITION ═══ */}
           <div className="mb-20">
             <div data-reveal>
@@ -279,9 +345,9 @@ export function InstructorPage() {
               {/* Card 3 — Speaker Authority */}
               <div data-reveal-item className="bg-white rounded-2xl p-6 border border-slate-200">
                 <div className="text-3xl mb-4">🎙️</div>
-                <p className="text-slate-900 font-semibold mb-1">100+ Agile Events as Speaker</p>
+                <p className="text-slate-900 font-semibold mb-1">60+ Agile Events as Speaker</p>
                 <p className="text-amber-600 text-xs font-medium mb-3">2010–2025 · Across Asia Pacific &amp; China</p>
-                <p className="text-slate-600 text-sm leading-relaxed">A recognised voice in the global Agile community — featured speaker at over 100 Agile events across 15 years, spanning Shanghai, Beijing, Shenzhen, Guangzhou, Singapore, Bangkok, Ho Chi Minh City, Kuala Lumpur, Taipei, and Tokyo.</p>
+                <p className="text-slate-600 text-sm leading-relaxed">A recognised voice in the global Agile community — featured speaker at over 60 Agile events across 15 years, spanning Shanghai, Beijing, Shenzhen, Guangzhou, Singapore, Bangkok, Ho Chi Minh City, Kuala Lumpur, Taipei, and Tokyo.</p>
               </div>
             </div>
           </div>
@@ -305,11 +371,12 @@ export function InstructorPage() {
 
           {/* ═══ TESTIMONIALS ═══ */}
           <div className="mb-20">
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8" data-reveal>What Industry Leaders Say</h2>
+            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 mb-8" data-reveal>Endorsed by the World's Top Agile Authorities</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-reveal-group data-stagger="100">
 
               {/* Jeff Sutherland */}
               <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
+                <div className="flex justify-center mb-3 text-yellow-400 text-lg">★★★★★</div>
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-jeff-sutherland.webp"
@@ -326,6 +393,7 @@ export function InstructorPage() {
 
               {/* Mike Cohn */}
               <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
+                <div className="flex justify-center mb-3 text-yellow-400 text-lg">★★★★★</div>
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-mike-cohn.webp"
@@ -343,6 +411,7 @@ export function InstructorPage() {
 
               {/* Grace Chan */}
               <div data-reveal-item className="bg-slate-50 p-8 rounded-2xl">
+                <div className="flex justify-center mb-3 text-yellow-400 text-lg">★★★★★</div>
                 <div className="mb-6">
                   <img
                     src="/assets/img/jess/people-grace-chan.webp"
