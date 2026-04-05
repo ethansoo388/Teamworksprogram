@@ -998,7 +998,7 @@ export function LeadershipTrainingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {[
               { course: 1, date: '21–22 April 2026', location: 'Malaysia, Kuala Lumpur', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
-              { course: 1, date: '27–28 April 2026', location: 'Indonesia, Jakarta', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
+              { course: 1, date: '6–7 May 2026', location: 'Indonesia, Jakarta', format: 'Face-to-face', courseName: 'High Performance Agile Leader' },
               { course: 2, date: '20–21 May 2026', location: 'Live Virtual (Zoom)', format: 'Live Virtual (Zoom)', courseName: 'Leading Hyper-Productive Teams' },
             ].map(({ course, date, location, format, courseName }) => {
               const isC1 = course === 1;
