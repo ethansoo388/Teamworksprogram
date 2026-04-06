@@ -79,10 +79,10 @@ export function ClassSchedulePage() {
       {/* Sticky Navigation Tabs */}
       <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12">
+          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
             <a
               href="leadership-training.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
             >
               Overview
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -90,7 +90,7 @@ export function ClassSchedulePage() {
 
             <a
               href="course-modules.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
             >
               Course Modules
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -98,13 +98,13 @@ export function ClassSchedulePage() {
 
             <a
               href="instructor.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900"
+              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
             >
               Instructor
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
 
-            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900">
+            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
               Class Schedule
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
             </span>
@@ -196,7 +196,7 @@ export function ClassSchedulePage() {
                 key={monthData.month}
                 id={monthId}
                 className={`bg-gradient-to-br from-slate-50 to-white border-2 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 scroll-mt-32 ${
-                  quarterInfo.color === 'blue' ? '/30 hover:' :
+                  quarterInfo.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500' :
                   quarterInfo.color === 'emerald' ? 'border-emerald-500/30 hover:border-emerald-500' :
                   quarterInfo.color === 'purple' ? 'border-purple-500/30 hover:border-purple-500' :
                   'border-slate-200'

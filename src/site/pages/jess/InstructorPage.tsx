@@ -72,25 +72,25 @@ export function InstructorPage() {
               </div>
               <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-4">
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">300+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1">300+</div>
                   <div className="text-xs text-slate-600 leading-tight">Classes<br />Delivered</div>
                 </div>
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">23 yrs</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1">23 yrs</div>
                   <div className="text-xs text-slate-600 leading-tight">Agile<br />Implementation</div>
                 </div>
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">12+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1">12+</div>
                   <div className="text-xs text-slate-600 leading-tight">Countries<br />Trained</div>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">30+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1">30+</div>
                   <div className="text-xs text-slate-600 leading-tight">Case Studies with<br />Quantifiable Outcomes</div>
                 </div>
                 <div className="text-center p-5 bg-slate-50 rounded-xl">
-                  <div className="text-3xl font-bold text-amber-500 mb-1">60+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1">60+</div>
                   <div className="text-xs text-slate-600 leading-tight">Agile Events<br />as Speaker</div>
                 </div>
               </div>
@@ -385,7 +385,7 @@ export function InstructorPage() {
               <p className="text-slate-500 font-light mb-8">Ethan has directly trained or led enterprise Agile transformations at the following organisations — from banks and airports to government agencies and technology companies across Malaysia, Indonesia, Singapore, China, and beyond.</p>
             </div>
             <div data-reveal className="bg-slate-800 p-8 rounded-2xl">
-              <div className="p-8 rounded-2xl flex items-center justify-center">
+              <div className="rounded-2xl flex items-center justify-center">
                 <img
                   src="/assets/img/jess/logo-client-logos.webp"
                   alt="Enterprise clients trained by Ethan Soo across Asia Pacific — including banks, airports, technology and government organisations"
@@ -456,7 +456,7 @@ export function InstructorPage() {
           </div>
 
           {/* ═══ CTA ═══ */}
-          <div data-reveal className="bg-slate-800 rounded-2xl p-10 text-center">
+          <div data-reveal className="bg-slate-800 rounded-2xl p-6 sm:p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-light text-white mb-3">Train Directly with Ethan</h2>
             <p className="text-slate-400 font-light max-w-xl mx-auto mb-8">
               Classes are small by design — limited to serious leaders ready to drive enterprise-wide change. If that's you, let's talk.

@@ -294,7 +294,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">The Leadership Problem</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Why Agile Transformations Stall</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Why Agile Transformations Stall</h2>
             <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">
               Most organisations invest in Agile training. Few redesign the system around it.
             </p>
@@ -502,7 +502,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Built for Leaders Driving Real Outcomes</h2>
           </div>
           <div className="mb-8 rounded-2xl overflow-hidden" data-reveal>
             <img src="/assets/img/jess/class-singapore-ntu.webp" alt="Leadership Excellence" className="w-full h-auto" />
@@ -536,7 +536,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">How to Get Started</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Choose Your Agile Leadership Certification Path</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Choose Your Agile Leadership Certification Path</h2>
             <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Each course stands alone. Together, they form a complete leadership-to-execution operating model.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10" data-reveal-group data-stagger="120">
@@ -546,7 +546,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-2 h-2 rounded-full bg-blue-500" />
                 <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">Course 1</span>
               </div>
-              <h3 className="text-3xl font-semibold text-slate-900 mb-3">High Performance Agile Leader</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-3">High Performance Agile Leader</h3>
               <p className="text-slate-500 font-light mb-2 text-sm italic">Registered Scrum@Scale Fundamentals™ (RS@SF)</p>
               <p className="text-slate-500 font-light mb-6">Master Jeff Sutherland's system. Lead with clarity. For leaders and managers who drive performance.</p>
               <div className="space-y-3 mb-8 flex-grow">
@@ -581,7 +581,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-2 h-2 rounded-full bg-cyan-500" />
                 <span className="text-sm font-medium text-cyan-600 uppercase tracking-wider">Course 2</span>
               </div>
-              <h3 className="text-3xl font-semibold text-slate-900 mb-3">Leading Hyper-Productive Teams</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-3">Leading Hyper-Productive Teams</h3>
               <p className="text-slate-500 font-light mb-2 text-sm italic">Registered Scrum Master — Product Owner™ (RSMPO)</p>
               <p className="text-slate-500 font-light mb-6">Execute with momentum. Create sustainable performance. For leaders building high-performance delivery teams.</p>
               <div className="space-y-3 mb-8 flex-grow">
@@ -626,7 +626,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What You Get</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">What's Included in Your Training</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">What's Included in Your Training</h2>
             <p className="text-xl text-slate-400 font-light">From preparation to post-class support — every step is designed for real-world application.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" data-reveal-group data-stagger="100">
@@ -672,7 +672,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Proven Results</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Proven Agile Training Results Across Asia Pacific</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Proven Agile Training Results Across Asia Pacific</h2>
             <p className="text-xl text-slate-400 font-light">Real organisations. Specific numbers. Measured outcomes.</p>
           </div>
           {/* MAHB case study — Featured */}
@@ -686,16 +686,16 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Malaysia Airports Holdings Berhad</p>
-                <h3 className="text-3xl font-bold text-white mb-2">From Slow Multi-Year Projects to Rapid Airport Transformation</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">From Slow Multi-Year Projects to Rapid Airport Transformation</h3>
                 <p className="text-slate-400 font-light mb-8">From fragmented airport initiatives to MVP-driven, outcome-first execution — across 200+ employees starting 2023.</p>
-                <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
                   {[
                     { val: '+47%', label: 'Peak Throughput\nIncrease' },
                     { val: '400%+', label: 'Baggage Transfer\nImprovement' },
                     { val: '3 wks', label: 'To Achieve\nBreakthrough Result' },
                   ].map(({ val, label }, i) => (
                     <div key={val} className={`text-center${i === 1 ? ' border-x border-slate-700' : ''}`}>
-                      <div className="text-4xl font-black text-cyan-400 mb-1">{val}</div>
+                      <div className="text-3xl sm:text-4xl font-black text-cyan-400 mb-1">{val}</div>
                       <div className="text-xs text-slate-400 whitespace-pre-line">{label}</div>
                     </div>
                   ))}
@@ -733,16 +733,16 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Bank Islam Malaysia Berhad</p>
-                <h3 className="text-3xl font-bold text-white mb-2">The Mobile Banking "Go-Beyond" Breakthrough</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">The Mobile Banking "Go-Beyond" Breakthrough</h3>
                 <p className="text-slate-400 font-light mb-8">From failed Agile initiatives to enterprise-wide transformation — delivered in 7 months.</p>
-                <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
                   {[
                     { val: '50%', label: 'Increase in\nRetail Deposits' },
                     { val: '3X', label: 'Jump in\nApp Store Ratings' },
                     { val: '4.5X', label: 'Faster\nTime-to-Market' },
                   ].map(({ val, label }, i) => (
                     <div key={val} className={`text-center${i === 1 ? ' border-x border-slate-700' : ''}`}>
-                      <div className="text-4xl font-black text-cyan-400 mb-1">{val}</div>
+                      <div className="text-3xl sm:text-4xl font-black text-cyan-400 mb-1">{val}</div>
                       <div className="text-xs text-slate-400 whitespace-pre-line">{label}</div>
                     </div>
                   ))}
@@ -781,19 +781,19 @@ export function LeadershipTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-cyan-400 text-sm font-medium uppercase tracking-wider mb-2">Bank of China</p>
-                <h3 className="text-3xl font-bold text-white mb-2">Transforming a Legacy Bank into a High-Performing Agile Organisation</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Transforming a Legacy Bank into a High-Performing Agile Organisation</h3>
                 <p className="text-slate-400 font-light mb-8">From fragmented, siloed teams to an enterprise-wide Agile system — measurable delivery outcomes across the organisation.</p>
-                <div className="grid grid-cols-2 gap-x-6 gap-y-6 mb-8">
+                <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-6 mb-8">
                   <div className="text-center">
-                    <div className="text-4xl font-black text-cyan-400 mb-1">84.6%</div>
+                    <div className="text-3xl sm:text-4xl font-black text-cyan-400 mb-1">84.6%</div>
                     <div className="text-xs text-slate-400">Faster Delivery<br /><span className="text-slate-500">(169 → 26 days)</span></div>
                   </div>
                   <div className="text-center border-l border-slate-700">
-                    <div className="text-4xl font-black text-cyan-400 mb-1">81.6%</div>
+                    <div className="text-3xl sm:text-4xl font-black text-cyan-400 mb-1">81.6%</div>
                     <div className="text-xs text-slate-400">Reduction<br />in Defects</div>
                   </div>
                   <div className="text-center col-span-2 pt-4 border-t border-slate-700">
-                    <div className="text-3xl font-black text-cyan-400 mb-1">169 → 26 <span className="text-lg font-semibold">days</span></div>
+                    <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-1">169 → 26 <span className="text-lg font-semibold">days</span></div>
                     <div className="text-xs text-slate-400">Delivery Lead Time Reduced — what used to take 169 days now takes 26</div>
                   </div>
                 </div>
@@ -855,7 +855,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What Leaders Say</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">What Leaders Say About<br />This Agile Training</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">What Leaders Say About<br />This Agile Training</h2>
           </div>
           {/* Participant testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" data-reveal-group data-stagger="80">
@@ -992,7 +992,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Enrol Now</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Upcoming Public Classes</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Upcoming Public Classes</h2>
             <p className="text-slate-400 font-light">Available in Malaysia, Indonesia &amp; live virtual — small cohorts, limited seats.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8" data-reveal-group data-stagger="100">
@@ -1036,7 +1036,7 @@ export function LeadershipTrainingPage() {
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Bonus: AI-Powered Agile Coaching</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">Scrum Sage — The AI Built for True Scrum</h2>
             <p className="text-slate-400 font-light max-w-xl mx-auto">Our program now integrates Scrum Sage, a GPT built specifically on True Scrum knowledge — developed by JJ Sutherland, CEO of Scrum Inc.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12" data-reveal-group data-stagger="120">
@@ -1077,7 +1077,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Got Questions?</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4" data-reveal-group data-stagger="60">
             {[
@@ -1119,7 +1119,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top,rgba(59,130,246,0.12),transparent 60%)' }} />
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10" data-reveal>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             Ready to Lead the<br />Enterprise Agility Transformation?
           </h2>
           <p className="text-slate-300 text-xl font-light mb-10 max-w-xl mx-auto">
