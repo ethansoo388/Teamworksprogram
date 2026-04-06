@@ -272,7 +272,7 @@ function DifferenceSection() {
           {/* Right — Image */}
           <div className="relative h-[400px] lg:h-[600px]">
             <img
-              src="/assets/img/main/ci-agile-staff-natasha.webp"
+              src="/assets/img/main/ci-agile-staff-natasha-2.webp"
               alt="CI Agile staff member"
               className="w-full h-full object-cover rounded-3xl"
             />
