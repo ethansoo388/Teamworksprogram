@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tell us how we can help — get a personalized recommendation in minutes.">
+    <link rel="canonical" href="https://www.ciagile.com/letstalk.html">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Let's Talk - CI Agile</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Let's Talk - CI Agile">
+    <meta property="og:description" content="Tell us how we can help — get a personalized recommendation in minutes.">
+    <meta property="og:url" content="https://www.ciagile.com/letstalk.html">
+    <meta property="og:image" content="https://www.ciagile.com/assets/og/main-og-v2.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CI Agile">
+    <meta property="og:locale" content="en_SG">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Let's Talk - CI Agile">
+    <meta name="twitter:description" content="Tell us how we can help — get a personalized recommendation in minutes.">
+    <meta name="twitter:image" content="https://www.ciagile.com/assets/og/main-og-v2.webp">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.ciagile.com/#organization","name":"CI Agile","url":"https://www.ciagile.com"},{"@type":"WebSite","@id":"https://www.ciagile.com/#website","url":"https://www.ciagile.com","name":"CI Agile","publisher":{"@id":"https://www.ciagile.com/#organization"}},{"@type":"WebPage","@id":"https://www.ciagile.com/letstalk.html#webpage","url":"https://www.ciagile.com/letstalk.html","name":"Let's Talk - CI Agile","description":"Tell us how we can help — get a personalized recommendation in minutes.","isPartOf":{"@id":"https://www.ciagile.com/#website"},"about":{"@id":"https://www.ciagile.com/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.ciagile.com/letstalk.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ciagile.com/"},{"@type":"ListItem","position":2,"name":"Let's Talk - CI Agile","item":"https://www.ciagile.com/letstalk.html"}]}]}</script>
+    <!-- Tailwind CSS CDN -->
+    <script>
+      // Extend Tailwind CDN config so Jess shadcn-style classes work
+      // (bg-background, text-foreground, border-border, etc.)
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+      theme: {
+      extend: {
+      colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+      },
+      borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'calc(var(--radius) - 2px)',
+      lg: 'var(--radius)',
+      xl: 'calc(var(--radius) + 4px)',
+      },
+      },
+      },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script defer src="https://unpkg.com/lucide@0.487.0">
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="antialiased site-main">
+    <main>
+      <div id="lt-page" style="background:#000;min-height:100vh;color:#fff;font-family:inherit">
+        <style>
+          body { background: #000 !important; }
+          #lt-page * { box-sizing: border-box; }
+          
+          /* ── Header ── */
+          #lt-header {
+          position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+          display: flex; align-items: center; gap: 20px; padding: 16px 24px;
+          }
+          #lt-logo { height: 26px; width: auto; object-fit: contain; display: block; }
+          
+          /* ── Progress bar ── */
+          #lt-progress {
+          flex: 1; height: 3px; background: rgba(255,255,255,0.12);
+          border-radius: 2px; overflow: hidden;
+          }
+          #lt-progress-fill {
+          height: 100%; width: 0%;
+          background: linear-gradient(to right, #3b82f6, #06b6d4);
+          transition: width 0.5s ease;
+          }
+          
+          /* ── Body wrapper ── */
+          #lt-body {
+          display: flex; align-items: center; justify-content: center;
+          min-height: 100vh; padding: 100px 24px 90px;
+          }
+          
+          /* ── Steps ── */
+          .lt-step { display: none; flex-direction: column; width: 100%; max-width: 640px; }
+          .lt-step.lt-active {
+          display: flex;
+          animation: lt-slide-in 0.38s ease forwards;
+          }
+          .lt-step.lt-active.lt-reverse {
+          animation: lt-slide-in-rev 0.38s ease forwards;
+          }
+          @keyframes lt-slide-in {
+          from { opacity: 0; transform: translateY(32px); }
+          to   { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes lt-slide-in-rev {
+          from { opacity: 0; transform: translateY(-32px); }
+          to   { opacity: 1; transform: translateY(0); }
+          }
+          
+          /* ── Question number ── */
+          .lt-qnum {
+          display: flex; align-items: center; gap: 8px;
+          margin-bottom: 14px; font-size: 13px; font-weight: 500;
+          color: rgba(255,255,255,0.5);
+          }
+          .lt-qnum-badge {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 22px; height: 22px;
+          background: rgba(255,255,255,0.1); border-radius: 4px;
+          font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.7);
+          }
+          
+          /* ── Question text ── */
+          .lt-question {
+          font-size: clamp(1.45rem, 4vw, 2.15rem); font-weight: 700;
+          color: #fff; line-height: 1.25; margin: 0 0 26px 0;
+          }
+          
+          /* ── Option buttons ── */
+          .lt-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+          .lt-opt {
+          display: flex; align-items: center; gap: 12px;
+          padding: 13px 16px;
+          border: 1px solid rgba(255,255,255,0.2); border-radius: 6px;
+          background: transparent; color: rgba(255,255,255,0.75);
+          font-size: 15px; text-align: left; cursor: pointer; width: 100%;
+          transition: border-color 0.15s, background 0.15s, color 0.15s;
+          font-family: inherit;
+          }
+          .lt-opt:hover { border-color: rgba(255,255,255,0.55); color: #fff; }
+          .lt-opt.lt-selected {
+          border-color: rgba(255,255,255,0.9);
+          background: rgba(255,255,255,0.06); color: #fff;
+          }
+          .lt-opt.lt-selected .lt-badge { background: #fff; color: #000; border-color: #fff; }
+          
+          .lt-badge {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 24px; height: 24px; min-width: 24px;
+          border: 1px solid rgba(255,255,255,0.3); border-radius: 4px;
+          font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.6);
+          background: transparent;
+          transition: background 0.15s, color 0.15s, border-color 0.15s;
+          }
+          
+          /* ── "Other" text reveal ── */
+          .lt-other-wrap { margin: 4px 0 16px 36px; }
+          .lt-other-wrap[hidden] { display: none; }
+          
+          /* ── Text inputs (underline style) ── */
+          .lt-text-input {
+          width: 100%; background: transparent;
+          border: none; border-bottom: 2px solid rgba(255,255,255,0.25);
+          color: #fff; font-size: 17px; padding: 8px 0; outline: none;
+          transition: border-color 0.2s; font-family: inherit;
+          }
+          .lt-text-input:focus { border-bottom-color: #3b82f6; }
+          .lt-text-input::placeholder { color: rgba(255,255,255,0.25); }
+          .lt-text-input.lt-error { border-bottom-color: #ef4444; }
+          
+          /* ── Checkbox ── */
+          .lt-checkbox-wrap { margin: 14px 0 22px; }
+          .lt-checkbox-label {
+          display: flex; align-items: flex-start; gap: 12px;
+          cursor: pointer; font-size: 14px; color: rgba(255,255,255,0.6);
+          line-height: 1.5; user-select: none;
+          }
+          .lt-checkbox-label input[type="checkbox"] { display: none; }
+          .lt-checkbox-custom {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 20px; height: 20px; min-width: 20px;
+          border: 2px solid rgba(255,255,255,0.35); border-radius: 4px;
+          background: transparent; margin-top: 1px;
+          transition: background 0.15s, border-color 0.15s;
+          font-size: 12px; font-weight: 700; color: #fff;
+          }
+          .lt-checkbox-label input:checked + .lt-checkbox-custom {
+          background: #3b82f6; border-color: #3b82f6;
+          }
+          .lt-checkbox-label input:checked + .lt-checkbox-custom::after { content: '✓'; }
+          
+          /* ── Actions row (OK button + hint) ── */
+          .lt-actions { display: flex; align-items: center; gap: 12px; }
+          .lt-ok-btn {
+          display: inline-flex; align-items: center; gap: 8px;
+          padding: 10px 20px; background: #fff; color: #000;
+          border: none; border-radius: 6px;
+          font-size: 14px; font-weight: 600; cursor: pointer;
+          transition: background 0.15s; font-family: inherit;
+          }
+          .lt-ok-btn:hover { background: #e5e7eb; }
+          .lt-hint { font-size: 12px; color: rgba(255,255,255,0.3); }
+          .lt-hint kbd {
+          display: inline-flex; align-items: center; padding: 1px 5px;
+          border: 1px solid rgba(255,255,255,0.25); border-radius: 3px;
+          font-size: 11px; font-family: inherit;
+          }
+          
+          /* ── Contact step fields ── */
+          .lt-contact-fields { display: flex; flex-direction: column; gap: 28px; margin-bottom: 30px; }
+          .lt-field label {
+          display: block; font-size: 11px; font-weight: 600;
+          color: rgba(255,255,255,0.45); text-transform: uppercase;
+          letter-spacing: 0.08em; margin-bottom: 6px;
+          }
+          .lt-optional { font-weight: 400; text-transform: none; letter-spacing: 0; }
+          .lt-field-error { color: #ef4444; font-size: 13px; margin-top: 6px; }
+          .lt-field-error[hidden] { display: none; }
+          
+          /* ── Submit button ── */
+          .lt-submit-btn {
+          display: inline-flex; align-items: center; gap: 10px;
+          padding: 14px 28px;
+          background: linear-gradient(to right, #3b82f6, #06b6d4);
+          color: #fff; border: none; border-radius: 8px;
+          font-size: 15px; font-weight: 600; cursor: pointer;
+          transition: opacity 0.15s; font-family: inherit;
+          }
+          .lt-submit-btn:hover { opacity: 0.88; }
+          .lt-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+          .lt-submitting-msg { color: rgba(255,255,255,0.45); font-size: 14px; margin-top: 10px; }
+          .lt-submitting-msg[hidden] { display: none; }
+          .lt-submit-error { color: #ef4444; font-size: 13px; margin-top: 10px; }
+          .lt-submit-error[hidden] { display: none; }
+          
+          /* ── Nav arrows (bottom-right) ── */
+          #lt-nav-arrows {
+          position: fixed; bottom: 24px; right: 24px;
+          display: flex; gap: 4px; z-index: 50;
+          }
+          .lt-nav-btn {
+          display: flex; align-items: center; justify-content: center;
+          width: 36px; height: 36px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.18); border-radius: 6px;
+          color: #fff; cursor: pointer; transition: background 0.15s;
+          }
+          .lt-nav-btn:hover { background: rgba(255,255,255,0.16); }
+          .lt-nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+          
+          @media (max-width: 640px) {
+          #lt-body { padding: 88px 16px 80px; }
+          .lt-question { font-size: 1.35rem; }
+          .lt-opt { font-size: 14px; padding: 12px 14px; }
+          }
+        </style>
+        <div id="lt-header">
+          <a href="/index.html">
+            <img height="56" width="134" id="lt-logo" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
+          </a>
+          <div id="lt-progress">
+            <div id="lt-progress-fill">
+            </div>
+          </div>
+        </div>
+        <div id="lt-body">
+          <div class="lt-step lt-active" data-lt-step="1">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge">1</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">Please tell us how we can help?</h2>
+            <div class="lt-options">
+              <button class="lt-opt" data-lt-value="training">
+                <span class="lt-badge">A</span>
+                <span>A training</span>
+              </button>
+              <button class="lt-opt" data-lt-value="consulting">
+                <span class="lt-badge">B</span>
+                <span>Consulting</span>
+              </button>
+              <button class="lt-opt" data-lt-value="general">
+                <span class="lt-badge">C</span>
+                <span>General Inquiry</span>
+              </button>
+            </div>
+            <div class="lt-actions">
+              <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
+              </button>
+              <span class="lt-hint">press <kbd>Enter</kbd> ↵</span>
+            </div>
+          </div>
+          <div class="lt-step" data-lt-step="2">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge">2</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">What best describes you?</h2>
+            <div class="lt-options">
+              <button class="lt-opt" data-lt-value="individual">
+                <span class="lt-badge">A</span>
+                <span>Individual professional (upskilling or certification)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="team-leader">
+                <span class="lt-badge">B</span>
+                <span>Team leader / manager (improving my team)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="executive">
+                <span class="lt-badge">C</span>
+                <span>Executive / decision-maker (enterprise transformation)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="other">
+                <span class="lt-badge">D</span>
+                <span>Other</span>
+              </button>
+            </div>
+            <div class="lt-other-wrap" id="lt-role-other-wrap" hidden="">
+              <input type="text" id="lt-role-other" class="lt-text-input" placeholder="Please describe your role..." autoComplete="off"/>
+            </div>
+            <div class="lt-checkbox-wrap">
+              <label class="lt-checkbox-label">
+                <input type="checkbox" id="lt-has-class"/>
+                <span class="lt-checkbox-custom">
+                </span>
+                <span>I already have a specific training class in mind</span>
+              </label>
+            </div>
+            <div class="lt-actions">
+              <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
+              </button>
+              <span class="lt-hint">press <kbd>Enter</kbd> ↵</span>
+            </div>
+          </div>
+          <div class="lt-step" data-lt-step="3a">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge">3</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">Which area interests you most?</h2>
+            <div class="lt-options">
+              <button class="lt-opt" data-lt-value="agile-scrum">
+                <span class="lt-badge">A</span>
+                <span>Agile &amp; Scrum certification or fundamentals</span>
+              </button>
+              <button class="lt-opt" data-lt-value="teamworks">
+                <span class="lt-badge">B</span>
+                <span>TeamWorks workshops</span>
+              </button>
+              <button class="lt-opt" data-lt-value="enterprise">
+                <span class="lt-badge">C</span>
+                <span>Enterprise agility &amp; transformation</span>
+              </button>
+              <button class="lt-opt" data-lt-value="assessment">
+                <span class="lt-badge">D</span>
+                <span>Free 30-min assessment</span>
+              </button>
+              <button class="lt-opt" data-lt-value="not-sure">
+                <span class="lt-badge">E</span>
+                <span>Not sure – help me decide</span>
+              </button>
+            </div>
+            <div class="lt-actions">
+              <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
+              </button>
+              <span class="lt-hint">press <kbd>Enter</kbd> ↵</span>
+            </div>
+          </div>
+          <div class="lt-step" data-lt-step="3b">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge">3</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">Which training interests you most?</h2>
+            <div class="lt-options">
+              <button class="lt-opt" data-lt-value="jeff-program">
+                <span class="lt-badge">A</span>
+                <span>Dr. Sutherland Enterprise Agility Program Training</span>
+              </button>
+              <button class="lt-opt" data-lt-value="nova-series">
+                <span class="lt-badge">B</span>
+                <span>Nova Series</span>
+              </button>
+              <button class="lt-opt" data-lt-value="teamworks-series">
+                <span class="lt-badge">C</span>
+                <span>TeamWorks Series</span>
+              </button>
+              <button class="lt-opt" data-lt-value="other-training">
+                <span class="lt-badge">D</span>
+                <span>Other Training</span>
+              </button>
+            </div>
+            <div class="lt-other-wrap" id="lt-interest-other-wrap" hidden="">
+              <input type="text" id="lt-interest-other" class="lt-text-input" placeholder="Please specify the training..." autoComplete="off"/>
+            </div>
+            <div class="lt-actions">
+              <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
+              </button>
+              <span class="lt-hint">press <kbd>Enter</kbd> ↵</span>
+            </div>
+          </div>
+          <div class="lt-step" data-lt-step="4">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge">4</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">How many people will join?</h2>
+            <div class="lt-options">
+              <button class="lt-opt" data-lt-value="just-me">
+                <span class="lt-badge">A</span>
+                <span>Just me</span>
+              </button>
+              <button class="lt-opt" data-lt-value="small-team">
+                <span class="lt-badge">B</span>
+                <span>2–10 people (small team)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="medium-team">
+                <span class="lt-badge">C</span>
+                <span>11–30 people (perfect for TeamWorks)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="enterprise">
+                <span class="lt-badge">D</span>
+                <span>30+ people (enterprise program)</span>
+              </button>
+              <button class="lt-opt" data-lt-value="not-sure">
+                <span class="lt-badge">E</span>
+                <span>Not sure</span>
+              </button>
+            </div>
+            <div class="lt-actions">
+              <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
+              </button>
+              <span class="lt-hint">press <kbd>Enter</kbd> ↵</span>
+            </div>
+          </div>
+          <div class="lt-step" data-lt-step="5">
+            <div class="lt-qnum">
+              <span class="lt-qnum-badge" id="lt-contact-step-num">5</span>
+              <span>→</span>
+            </div>
+            <h2 class="lt-question">Great! Where should we send your personalized recommendation?</h2>
+            <div class="lt-contact-fields">
+              <div class="lt-field">
+                <label for="lt-full-name">Full name *</label>
+                <input type="text" id="lt-full-name" class="lt-text-input" placeholder="Jane Smith" autoComplete="name"/>
+                <div class="lt-field-error" id="lt-full-name-error" hidden="">
+                </div>
+              </div>
+              <div class="lt-field">
+                <label for="lt-email">Work email *</label>
+                <input type="email" id="lt-email" class="lt-text-input" placeholder="jane@company.com" autoComplete="email"/>
+                <div class="lt-field-error" id="lt-email-error" hidden="">
+                </div>
+              </div>
+              <div class="lt-field">
+                <label for="lt-company">Company name <span class="lt-optional">(optional)</span>
+                </label>
+                <input type="text" id="lt-company" class="lt-text-input" placeholder="Acme Corp" autoComplete="organization"/>
+              </div>
+              <div class="lt-field">
+                <label for="lt-phone">Phone <span class="lt-optional">(optional)</span>
+                </label>
+                <input type="tel" id="lt-phone" class="lt-text-input" placeholder="+60 12 345 6789" autoComplete="tel"/>
+              </div>
+            </div>
+            <div class="lt-actions" style="flex-direction:column;align-items:flex-start;gap:8px">
+              <button class="lt-submit-btn" id="lt-submit-btn">Submit <span>→</span>
+              </button>
+              <div class="lt-submitting-msg" id="lt-submitting-msg" hidden="">Sending your message…</div>
+              <div class="lt-submit-error" id="lt-submit-error" hidden="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="lt-nav-arrows">
+          <button class="lt-nav-btn" id="lt-btn-up" aria-label="Previous question">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 9.5L7 4.5L12 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+          <button class="lt-nav-btn" id="lt-btn-down" aria-label="Next question">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts -->
+    <script defer src="js/main.js">
+    </script>
+    <script defer src="js/form.js">
+    </script>
+  </body>
+</html>
+
