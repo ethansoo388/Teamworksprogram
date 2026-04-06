@@ -487,7 +487,7 @@ export function LeadershipTrainingPage() {
           <div className="mb-16">
             <div className="text-center mb-10" data-reveal>
               <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
-                Command the Full Picture.<br className="hidden lg:block" />
+                Command the Full Picture.<br />
                 <span style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Own Every Layer of Your Team.</span>
               </h3>
             </div>
@@ -520,7 +520,7 @@ export function LeadershipTrainingPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: 'rgba(59,130,246,0.2)' }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3"><strong>Hyper-Productive</strong><br className="hidden lg:block" />Team Execution Knowledge</h3>
+                <h3 className="text-lg font-semibold text-white mb-3"><strong>Hyper-Productive</strong><br />Team Execution Knowledge</h3>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li>• Swarm to win on priorities</li><li>• Stability is essential</li><li>• Lean working principles</li><li>• Consistent quality delivery</li>
                 </ul>

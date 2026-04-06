@@ -48,10 +48,10 @@ export function ClassSchedulePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <MainSiteNavigation />
+      <MainSiteNavigation isDarkTheme />
 
       {/* Hero Section */}
-      <section className="relative bg-slate-800 py-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
+      <section className="relative bg-slate-800 pt-24 pb-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 text-base mb-8">
             <a

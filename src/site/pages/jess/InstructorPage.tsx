@@ -5,7 +5,7 @@ export function InstructorPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <MainSiteNavigation />
+      <MainSiteNavigation isDarkTheme />
 
       {/* ═══ HERO ═══ */}
       <section className="relative bg-slate-800 pt-24 pb-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
