@@ -38,10 +38,10 @@ export function InstructorPage() {
       {/* ═══ BIO + STATS ═══ */}
       <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20" data-reveal-group data-stagger="120">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
 
             {/* Left — Photo + Stats */}
-            <div data-reveal-item>
+            <div>
               <div className="mb-8">
                 <img
                   src="/assets/img/jess/people-ethan-soo.webp"
@@ -76,7 +76,7 @@ export function InstructorPage() {
             </div>
 
             {/* Right — Bio */}
-            <div data-reveal-item className="space-y-6">
+            <div className="space-y-6">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-light text-slate-900 mb-2">Ethan Soo</h2>
                 <p className="text-slate-600 font-light">Asia Pacific Regional Partner, Scrum Inc. · Scrum Fellow</p>

@@ -33,7 +33,7 @@ export function JessStickyNav({ activePage }: JessStickyNavProps) {
                   className="relative py-4 text-sm font-medium text-white whitespace-nowrap flex-shrink-0"
                 >
                   {label}
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+                  <div className="absolute bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
                 </span>
               ) : (
                 <a
