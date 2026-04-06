@@ -1,5 +1,6 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
+import { JessStickyNav } from "@/site/components/jess/JessStickyNav";
 
 export function InstructorPage() {
 
@@ -32,42 +33,7 @@ export function InstructorPage() {
         </div>
       </section>
 
-      {/* ═══ STICKY NAV ═══ */}
-      <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Row 1: nav links + desktop CTA */}
-          <div className="flex items-center">
-            <nav className="flex gap-6 sm:gap-10 overflow-x-auto flex-1 min-w-0">
-              <a href="leadership-training.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-                Overview
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </a>
-              <a href="course-modules.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-                Course Modules
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </a>
-              <span className="relative py-4 text-sm font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
-                Instructor
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-              </span>
-              <a href="class-schedule.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-                Class Schedule
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </a>
-            </nav>
-            {/* Desktop only CTA */}
-            <a href="/contactus.html?source=jess-instructor&cta=sticky-nav#contact-form" className="hidden lg:inline-flex ml-4 flex-shrink-0 px-4 py-2 text-slate-900 text-sm font-semibold rounded-lg whitespace-nowrap bg-amber-500 hover:bg-amber-400 transition-colors">
-              Book a Seat →
-            </a>
-          </div>
-          {/* Row 2: mobile CTA only */}
-          <div className="lg:hidden pb-3 flex justify-center">
-            <a href="/contactus.html?source=jess-instructor&cta=sticky-nav#contact-form" className="px-6 py-2 text-slate-900 text-sm font-semibold rounded-lg whitespace-nowrap bg-amber-500 hover:bg-amber-400 transition-colors">
-              Book a Seat →
-            </a>
-          </div>
-        </div>
-      </div>
+      <JessStickyNav activePage="instructor" />
 
       {/* ═══ BIO + STATS ═══ */}
       <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">

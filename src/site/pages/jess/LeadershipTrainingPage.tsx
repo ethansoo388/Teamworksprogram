@@ -1,5 +1,6 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
+import { JessStickyNav } from "@/site/components/jess/JessStickyNav";
 
 export function LeadershipTrainingPage() {
   return (
@@ -244,33 +245,7 @@ export function LeadershipTrainingPage() {
 
       </section>
 
-      {/* STICKY SECTION NAV */}
-      <div className="sticky top-[72px] z-40 bg-[#0F1724] border-b border-slate-700/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Row 1: nav links + desktop CTA */}
-          <div className="flex items-center">
-            <nav className="flex gap-6 sm:gap-10 flex-1 min-w-0">
-              <span className="relative py-4 text-sm font-medium text-white whitespace-nowrap flex-shrink-0">
-                Overview
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
-              </span>
-              <a href="/jess/course-modules.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Course Modules</a>
-              <a href="/jess/instructor.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Instructor</a>
-              <a href="/jess/class-schedule.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Class Schedule</a>
-            </nav>
-            {/* Desktop only CTA */}
-            <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="hidden lg:inline-flex ml-4 flex-shrink-0 px-4 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
-              Book a Seat →
-            </a>
-          </div>
-          {/* Row 2: mobile CTA only */}
-          <div className="lg:hidden pb-3 flex justify-center">
-            <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="px-6 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
-              Book a Seat →
-            </a>
-          </div>
-        </div>
-      </div>
+      <JessStickyNav activePage="overview" />
 
       {/* ═══ SECTION 2: TRUST BAR ═══ */}
       <section className="py-10 bg-slate-900 border-b border-slate-800">

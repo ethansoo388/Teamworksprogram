@@ -1,6 +1,7 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
 import { Calendar, MapPin, Globe } from "lucide-react";
+import { JessStickyNav } from "@/site/components/jess/JessStickyNav";
 
 export function ClassSchedulePage() {
 
@@ -76,41 +77,7 @@ export function ClassSchedulePage() {
         </div>
       </section>
 
-      {/* Sticky Navigation Tabs */}
-      <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
-            <a
-              href="leadership-training.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
-            >
-              Overview
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-
-            <a
-              href="course-modules.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
-            >
-              Course Modules
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-
-            <a
-              href="instructor.html"
-              className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0"
-            >
-              Instructor
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-
-            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
-              Class Schedule
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-            </span>
-          </nav>
-        </div>
-      </div>
+      <JessStickyNav activePage="class-schedule" />
 
       {/* Schedule Content */}
       <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">
