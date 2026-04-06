@@ -151,6 +151,18 @@ export const routes: RouteEntry[] = [
     includeFormJS: true,
   },
 
+  // ── Lead Capture ──────────────────────────────────────────────────────
+  {
+    modulePath: "/src/site/pages/letstalk/LetsTalkPage.tsx",
+    componentName: "LetsTalkPage",
+    filename: "letstalk.html",
+    title: "Let's Talk - CI Agile",
+    description:
+      "Tell us how we can help — get a personalized recommendation in minutes.",
+    siteType: "main",
+    includeFormJS: true,
+  },
+
   // ── JESS (Jeff's Enterprise Scrum System) ──────────────────────────────
   {
     modulePath: "/src/site/pages/jess/HomePage.tsx",

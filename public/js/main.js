@@ -971,6 +971,316 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ─── Let's Talk Multi-Step Form ───────────────────────────────────────────
+  (function () {
+    const ltPage = document.getElementById('lt-page');
+    if (!ltPage) return;
+
+    // ── State ──
+    const state = {
+      intent: '',        // training | consulting | general
+      role: '',          // individual | team-leader | executive | other
+      roleOther: '',
+      hasClass: false,   // checkbox on step 2
+      interest3a: '',    // step 3a selection
+      interest3b: '',    // step 3b selection
+      interestOther: '',
+      groupSize: '',     // step 4 selection
+    };
+
+    // History stack — always starts at step 1
+    const navHistory = ['1'];
+
+    // ── DOM refs ──
+    const progressFill = document.getElementById('lt-progress-fill');
+    const btnUp        = document.getElementById('lt-btn-up');
+    const btnDown      = document.getElementById('lt-btn-down');
+    const contactStepNumEl = document.getElementById('lt-contact-step-num');
+
+    // ── Progress calculation ──
+    function getProgress(stepId) {
+      const path = state.intent === 'training'
+        ? ['1', '2', state.hasClass ? '3b' : '3a', '4', '5']
+        : ['1', '5'];
+      const idx = path.indexOf(stepId);
+      return idx < 0 ? 0 : (idx + 1) / path.length * 100;
+    }
+
+    function updateContactStepNum() {
+      if (!contactStepNumEl) return;
+      contactStepNumEl.textContent = state.intent === 'training' ? '5' : '2';
+    }
+
+    // ── Navigation logic ──
+    function getNextId(id) {
+      if (id === '1') return state.intent === 'training' ? '2' : '5';
+      if (id === '2') return state.hasClass ? '3b' : '3a';
+      if (id === '3a' || id === '3b') return '4';
+      if (id === '4') return '5';
+      return null;
+    }
+
+    function getCurrentId() {
+      const active = ltPage.querySelector('.lt-step.lt-active');
+      return active ? active.getAttribute('data-lt-step') : null;
+    }
+
+    function goTo(stepId, reverse) {
+      const currentEl = ltPage.querySelector('.lt-step.lt-active');
+      const nextEl = ltPage.querySelector('[data-lt-step="' + stepId + '"]');
+      if (!nextEl) return;
+      if (currentEl) currentEl.classList.remove('lt-active', 'lt-reverse');
+      nextEl.classList.remove('lt-reverse');
+      if (reverse) nextEl.classList.add('lt-reverse');
+      nextEl.classList.add('lt-active');
+      window.scrollTo(0, 0);
+      const firstFocusable = nextEl.querySelector('button:not(:disabled), input');
+      if (firstFocusable) setTimeout(function () { firstFocusable.focus(); }, 50);
+      if (progressFill) progressFill.style.width = getProgress(stepId) + '%';
+      updateNavButtons(stepId);
+      updateContactStepNum();
+    }
+
+    function updateNavButtons(id) {
+      if (btnUp)   btnUp.disabled   = navHistory.length <= 1;
+      if (btnDown) btnDown.disabled = (id === '5');
+    }
+
+    // ── Validation ──
+    function validateStep(id) {
+      if (id === '1') return !!state.intent;
+      if (id === '2') {
+        if (!state.role) return false;
+        if (state.role === 'other') {
+          const inp = document.getElementById('lt-role-other');
+          if (!inp || !inp.value.trim()) return false;
+        }
+        return true;
+      }
+      if (id === '3a') return !!state.interest3a;
+      if (id === '3b') {
+        if (!state.interest3b) return false;
+        if (state.interest3b === 'other-training') {
+          const inp = document.getElementById('lt-interest-other');
+          if (!inp || !inp.value.trim()) return false;
+        }
+        return true;
+      }
+      if (id === '4') return !!state.groupSize;
+      return true;
+    }
+
+    function advance() {
+      const id = getCurrentId();
+      if (!id || id === '5') return;
+      if (!validateStep(id)) return;
+      if (id === '2') state.roleOther     = (document.getElementById('lt-role-other')?.value    || '').trim();
+      if (id === '3b') state.interestOther = (document.getElementById('lt-interest-other')?.value || '').trim();
+      const nextId = getNextId(id);
+      if (!nextId) return;
+      navHistory.push(nextId);
+      goTo(nextId, false);
+    }
+
+    function goBack() {
+      if (navHistory.length <= 1) return;
+      navHistory.pop();
+      goTo(navHistory[navHistory.length - 1], true);
+    }
+
+    // ── Option selection ──
+    function selectOption(stepEl, value) {
+      stepEl.querySelectorAll('.lt-opt').forEach(function (opt) {
+        opt.classList.toggle('lt-selected', opt.getAttribute('data-lt-value') === value);
+      });
+    }
+
+    function handleOptionClick(stepId, value) {
+      const stepEl = ltPage.querySelector('[data-lt-step="' + stepId + '"]');
+      if (!stepEl) return;
+      selectOption(stepEl, value);
+
+      if (stepId === '1') {
+        state.intent = value;
+      } else if (stepId === '2') {
+        state.role = value;
+        const wrap = document.getElementById('lt-role-other-wrap');
+        if (wrap) wrap.hidden = (value !== 'other');
+        if (value !== 'other') {
+          const inp = document.getElementById('lt-role-other');
+          if (inp) inp.value = '';
+        }
+      } else if (stepId === '3a') {
+        state.interest3a = value;
+      } else if (stepId === '3b') {
+        state.interest3b = value;
+        const wrap = document.getElementById('lt-interest-other-wrap');
+        if (wrap) wrap.hidden = (value !== 'other-training');
+        if (value !== 'other-training') {
+          const inp = document.getElementById('lt-interest-other');
+          if (inp) inp.value = '';
+        }
+      } else if (stepId === '4') {
+        state.groupSize = value;
+      }
+    }
+
+    // ── Event delegation ──
+    ltPage.addEventListener('click', function (e) {
+      const opt   = e.target.closest('.lt-opt');
+      const okBtn = e.target.closest('[data-lt-ok]');
+      if (opt) {
+        const stepEl = opt.closest('.lt-step');
+        if (stepEl) handleOptionClick(stepEl.getAttribute('data-lt-step'), opt.getAttribute('data-lt-value'));
+      }
+      if (okBtn) advance();
+    });
+
+    // ── Checkbox ──
+    var hasClassCb = document.getElementById('lt-has-class');
+    if (hasClassCb) {
+      hasClassCb.addEventListener('change', function () {
+        state.hasClass = hasClassCb.checked;
+      });
+    }
+
+    // ── Nav arrow buttons ──
+    if (btnUp)   btnUp.addEventListener('click', goBack);
+    if (btnDown) btnDown.addEventListener('click', advance);
+
+    // ── Keyboard shortcuts ──
+    document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('lt-page')) return;
+      const tag = e.target && e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+        if (e.key === 'Enter') { e.preventDefault(); advance(); }
+        return;
+      }
+      const id = getCurrentId();
+      if (!id || id === '5') return;
+      const stepEl = ltPage.querySelector('[data-lt-step="' + id + '"]');
+      if (!stepEl) return;
+      const opts = stepEl.querySelectorAll('.lt-opt');
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        advance();
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        let idx = -1;
+        opts.forEach(function (o, i) { if (o.classList.contains('lt-selected')) idx = i; });
+        const newIdx = e.key === 'ArrowUp'
+          ? (idx <= 0 ? opts.length - 1 : idx - 1)
+          : (idx >= opts.length - 1 ? 0 : idx + 1);
+        const newOpt = opts[newIdx];
+        if (newOpt) handleOptionClick(id, newOpt.getAttribute('data-lt-value'));
+      } else {
+        const letter = e.key.toUpperCase();
+        if (letter >= 'A' && letter <= 'E') {
+          const newOpt = opts[letter.charCodeAt(0) - 65];
+          if (newOpt) handleOptionClick(id, newOpt.getAttribute('data-lt-value'));
+        }
+      }
+    });
+
+    // ── Contact form submission ──
+    var submitBtn      = document.getElementById('lt-submit-btn');
+    var submittingMsg  = document.getElementById('lt-submitting-msg');
+    var submitError    = document.getElementById('lt-submit-error');
+
+    function validateContact() {
+      var valid = true;
+      var nameEl  = document.getElementById('lt-full-name');
+      var nameErr = document.getElementById('lt-full-name-error');
+      var emailEl  = document.getElementById('lt-email');
+      var emailErr = document.getElementById('lt-email-error');
+      if (nameEl && nameErr) {
+        if (!nameEl.value.trim()) {
+          nameEl.classList.add('lt-error');
+          nameErr.textContent = 'Please enter your full name.';
+          nameErr.hidden = false;
+          valid = false;
+        } else {
+          nameEl.classList.remove('lt-error');
+          nameErr.hidden = true;
+        }
+      }
+      if (emailEl && emailErr) {
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim());
+        if (!emailOk) {
+          emailEl.classList.add('lt-error');
+          emailErr.textContent = 'Please enter a valid email address.';
+          emailErr.hidden = false;
+          valid = false;
+        } else {
+          emailEl.classList.remove('lt-error');
+          emailErr.hidden = true;
+        }
+      }
+      return valid;
+    }
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!validateContact()) return;
+
+        var name    = document.getElementById('lt-full-name').value.trim();
+        var email   = document.getElementById('lt-email').value.trim();
+        var company = (document.getElementById('lt-company') ? document.getElementById('lt-company').value : '').trim();
+        var phone   = (document.getElementById('lt-phone')   ? document.getElementById('lt-phone').value   : '').trim();
+
+        var interestVal   = state.hasClass ? state.interest3b : state.interest3a;
+        var interestOther = state.hasClass ? state.interestOther : '';
+        var msgParts = [
+          'Source: letstalk-form',
+          'Intent: ' + state.intent,
+          state.role      ? 'Role: '       + state.role      + (state.roleOther  ? ' (' + state.roleOther  + ')' : '') : '',
+          interestVal     ? 'Interest: '   + interestVal     + (interestOther    ? ' (' + interestOther    + ')' : '') : '',
+          state.groupSize ? 'Group Size: ' + state.groupSize : '',
+          company         ? 'Company: '    + company         : '',
+          phone           ? 'Phone: '      + phone           : '',
+        ].filter(Boolean).join('\n');
+
+        submitBtn.disabled = true;
+        if (submittingMsg) submittingMsg.hidden = false;
+        if (submitError)   submitError.hidden   = true;
+
+        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4qs2PdLhwc0jsym3VisNOl4iGRuYIm8Ot4LVgiJZVYtG5LAyBiy19OwRXiILzLTFwpQ/exec';
+        var params = new URLSearchParams({
+          name: name, email: email, message: msgParts, source: 'letstalk-form', cta: 'lets-talk',
+        });
+        fetch(GAS_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params.toString(),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data && data.result === 'success') {
+              window.location.href = '/thankyou.html';
+            } else {
+              throw new Error('unexpected');
+            }
+          })
+          .catch(function () {
+            submitBtn.disabled = false;
+            if (submittingMsg) submittingMsg.hidden = true;
+            if (submitError) {
+              submitError.textContent = 'Something went wrong. Please try again or email us at hello@ciagile.com';
+              submitError.hidden = false;
+            }
+          });
+      });
+    }
+
+    // ── Init ──
+    if (progressFill) progressFill.style.width = getProgress('1') + '%';
+    updateNavButtons('1');
+    updateContactStepNum();
+
+  }());
+  // ─── End Let's Talk Form ──────────────────────────────────────────────────
+
 });
 
 
