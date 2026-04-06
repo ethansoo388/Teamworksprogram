@@ -23,7 +23,7 @@ export function LeadershipTrainingPage() {
           </div>
         </div>
         {/* Bottom: dark text panel */}
-        <div className="bg-[#0F1724] px-6 pt-6 pb-10">
+        <div className="bg-[#0F1724] px-6 pt-20 pb-14">
           <h1 className="text-4xl font-bold text-white mb-3 leading-[1.05]">
             Enterprise Agile<br />Leadership Training.
           </h1>
@@ -248,7 +248,7 @@ export function LeadershipTrainingPage() {
       <JessStickyNav activePage="overview" />
 
       {/* ═══ SECTION 2: TRUST BAR ═══ */}
-      <section className="py-10 bg-slate-900 border-b border-slate-800">
+      <section className="py-12 bg-slate-900 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 uppercase tracking-widest mb-8">The same framework trusted by</p>
           <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6" data-reveal-group data-stagger="60">
@@ -273,7 +273,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 3: URGENCY HOOK ═══ */}
-      <section className="py-16 lg:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
+      <section className="py-16 sm:py-20 lg:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center,rgba(59,130,246,0.06),transparent 60%)' }} />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
           {/* Stat */}
@@ -322,7 +322,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 4: WHY TRANSFORMATIONS STALL ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-900 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-28 bg-slate-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">The Leadership Problem</p>
@@ -364,7 +364,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 5: PROGRAM OVERVIEW ═══ */}
-      <section id="program" className="py-16 lg:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
+      <section id="program" className="py-16 sm:py-20 lg:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16" data-reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
@@ -530,7 +530,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 7: WHO THIS IS FOR ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-800">
+      <section className="py-16 sm:py-20 lg:py-28 bg-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Is This For You?</p>
@@ -564,7 +564,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 6: TWO COURSES ═══ */}
-      <section className="py-16 lg:py-20 px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 sm:py-20 lg:py-28 px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">How to Get Started</p>
@@ -654,7 +654,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 9: 5-STAR EXPERIENCE ═══ */}
-      <section className="py-16 lg:py-20 bg-[#0F1724]">
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#0F1724]">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What You Get</p>
@@ -700,7 +700,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 8: REAL-WORLD RESULTS ═══ */}
-      <section id="results" className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
+      <section id="results" className="py-16 sm:py-20 lg:py-28" style={{ background: 'linear-gradient(to bottom,#0f172a,#1e293b)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Proven Results</p>
@@ -872,7 +872,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ MID-PAGE CTA ═══ */}
-      <section className="py-14 bg-slate-900 border-y border-slate-800">
+      <section className="py-16 bg-slate-900 border-y border-slate-800">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center" data-reveal>
           <p className="text-white text-2xl font-bold mb-2">Seen enough? Let's talk.</p>
           <p className="text-slate-400 font-light mb-8">Talk to a Program Advisor — no obligation, we'll tell you honestly if this is the right fit.</p>
@@ -883,7 +883,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 8: TESTIMONIALS ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-900">
+      <section className="py-16 sm:py-20 lg:py-28 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">What Leaders Say</p>
@@ -966,7 +966,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 10: TRAINER AUTHORITY ═══ */}
-      <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
+      <section className="py-16 sm:py-20 lg:py-28" style={{ background: 'linear-gradient(to bottom,#0F1724,#0f172a)' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-reveal-group data-stagger="120">
             <div data-reveal-item>
@@ -1020,7 +1020,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 12: UPCOMING CLASSES ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-900">
+      <section className="py-16 sm:py-20 lg:py-28 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Enrol Now</p>
@@ -1061,7 +1061,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 13: AI SECTION ═══ */}
-      <section className="py-16 lg:py-20 border-t-2 border-dashed border-slate-700 relative" style={{ background: 'linear-gradient(to bottom,#020617,#0f172a)' }}>
+      <section className="py-16 sm:py-20 lg:py-28 border-t-2 border-dashed border-slate-700 relative" style={{ background: 'linear-gradient(to bottom,#020617,#0f172a)' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8 pt-6">
           <div className="text-center mb-12" data-reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
@@ -1105,7 +1105,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION: FAQ ═══ */}
-      <section className="py-16 lg:py-20 bg-slate-900">
+      <section className="py-16 sm:py-20 lg:py-28 bg-slate-900">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12" data-reveal>
             <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Got Questions?</p>
@@ -1147,7 +1147,7 @@ export function LeadershipTrainingPage() {
       </section>
 
       {/* ═══ SECTION 14: FINAL CTA ═══ */}
-      <section className="py-16 lg:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#0f172a,#1e293b,#0f172a)' }}>
+      <section className="py-16 sm:py-20 lg:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom right,#0f172a,#1e293b,#0f172a)' }}>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top,rgba(59,130,246,0.12),transparent 60%)' }} />
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10" data-reveal>

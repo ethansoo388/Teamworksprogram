@@ -11,7 +11,7 @@ export function FrameworkComparisonSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-20 px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-28 px-6 lg:px-8 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/5 rounded-full blur-3xl"></div>

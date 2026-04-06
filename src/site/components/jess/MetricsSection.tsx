@@ -1,6 +1,6 @@
 export function MetricsSection() {
   return (
-    <section className="py-16 lg:py-20 px-6 lg:px-8 relative border-t border-slate-800">
+    <section className="py-16 sm:py-20 lg:py-28 px-6 lg:px-8 relative border-t border-slate-800">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8" data-reveal-group data-stagger="90">
           <div className="text-center" data-reveal-item>

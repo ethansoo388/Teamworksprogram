@@ -25,7 +25,7 @@ export function Hero() {
         </div>
 
         {/* Bottom: Dark text panel */}
-        <div className="bg-[#0F1724] px-6 pt-6 pb-10">
+        <div className="bg-[#0F1724] px-6 pt-20 pb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-4"
             data-reveal
           >

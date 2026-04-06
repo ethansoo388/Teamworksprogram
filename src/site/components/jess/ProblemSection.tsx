@@ -57,7 +57,7 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <section id="problem" className="py-16 lg:py-20 px-6 lg:px-8 relative">
+    <section id="problem" className="py-16 sm:py-20 lg:py-28 px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div data-reveal>
