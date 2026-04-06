@@ -1247,20 +1247,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4qs2PdLhwc0jsym3VisNOl4iGRuYIm8Ot4LVgiJZVYtG5LAyBiy19OwRXiILzLTFwpQ/exec';
         var params = new URLSearchParams({
-          name: name, email: email, message: msgParts, source: 'letstalk-form', cta: 'lets-talk',
+          sheetName: 'LetsTalkForm',
+          fullName: name,
+          workEmail: email,
+          message: msgParts,
+          source: 'letstalk-form',
+          cta: 'lets-talk',
+          pageUrl: window.location.href,
+          referrer: document.referrer || 'Direct',
+          timestamp: new Date().toISOString(),
         });
         fetch(GAS_ENDPOINT, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: params.toString(),
+          body: params,
         })
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            if (data && data.result === 'success') {
-              window.location.href = '/thankyou.html';
-            } else {
-              throw new Error('unexpected');
+          .then(function (r) {
+            if (!r.ok) throw new Error('server-error');
+            return r.json().catch(function () { return null; });
+          })
+          .then(function (result) {
+            // Only throw if GAS explicitly returns a non-success status
+            if (result && result.status && result.status !== 'success') {
+              throw new Error(result.message || 'submission-failed');
             }
+            window.location.assign('/thankyou.html');
           })
           .catch(function () {
             submitBtn.disabled = false;
