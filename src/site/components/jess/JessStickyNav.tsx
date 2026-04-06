@@ -56,7 +56,7 @@ export function JessStickyNav({ activePage }: JessStickyNavProps) {
           </a>
         </div>
         {/* Row 2: mobile CTA only */}
-        <div className="lg:hidden pb-3 flex justify-center">
+        <div className="lg:hidden pb-3 flex justify-start">
           <a
             href={ctaHref}
             className="px-6 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap"
