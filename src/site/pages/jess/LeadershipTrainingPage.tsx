@@ -371,7 +371,7 @@ export function LeadershipTrainingPage() {
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Program Overview</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 pb-2" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Dr. Jeff Sutherland's<br />Enterprise Agility Program
             </h2>
             <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto">A Complete Leadership + Execution System</p>
@@ -1151,7 +1151,7 @@ export function LeadershipTrainingPage() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top,rgba(59,130,246,0.12),transparent 60%)' }} />
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right,transparent,rgba(59,130,246,0.4),transparent)' }} />
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10" data-reveal>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight pb-2" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             Ready to Lead the<br />Enterprise Agility Transformation?
           </h2>
           <p className="text-slate-300 text-xl font-light mb-10 max-w-xl mx-auto">
