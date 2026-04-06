@@ -22,7 +22,7 @@ export function LeadershipTrainingPage() {
                   <div className="w-2 h-2 rounded-full bg-cyan-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
                   <span className="text-sm font-medium text-blue-300 uppercase tracking-wider">by Dr. Jeff Sutherland · Inventor of Scrum</span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.05]">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.05]">
                   Enterprise Agile<br />Leadership Training.
                 </h1>
                 <p className="text-3xl lg:text-4xl font-bold mb-6 leading-snug" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -312,7 +312,7 @@ export function LeadershipTrainingPage() {
             ))}
           </div>
           {/* Video */}
-          <div data-reveal className="relative rounded-2xl overflow-hidden mb-4 bg-slate-950" style={{ aspectRatio: '16/7' }}>
+          <div data-reveal className="relative rounded-2xl overflow-hidden mb-4 bg-slate-950 aspect-video lg:aspect-[16/7]">
             <video autoPlay muted loop playsInline poster="/assets/img/jess/agile-leader-training-hero.webp" className="absolute inset-0 w-full h-full object-cover opacity-80" id="jeffVideo">
               <source src="/assets/video/jeff_sutherland_speech2_bg_optimized.webm" type="video/webm" />
             </video>
@@ -320,10 +320,10 @@ export function LeadershipTrainingPage() {
           </div>
           <p className="text-slate-500 text-xs text-center mb-8 italic">Dr. Jeff Sutherland explains why most Agile transformations fail to deliver at the leadership level — and what leaders must change.</p>
           {/* Pull quote */}
-          <div className="max-w-3xl mx-auto relative" data-reveal data-delay="200">
-            <div className="text-8xl text-blue-500/15 font-black leading-none absolute -top-4 -left-2 select-none">"</div>
-            <blockquote className="pl-8 border-l-2 border-cyan-500">
-              <p className="text-2xl lg:text-3xl text-cyan-300 font-light leading-relaxed italic">
+          <div className="max-w-3xl mx-auto relative overflow-hidden" data-reveal data-delay="200">
+            <div className="text-6xl lg:text-8xl text-blue-500/15 font-black leading-none absolute -top-4 -left-2 select-none">"</div>
+            <blockquote className="pl-5 lg:pl-8 border-l-2 border-cyan-500">
+              <p className="text-xl lg:text-3xl text-cyan-300 font-light leading-relaxed italic">
                 Agile transformation requires leadership alignment and execution capability — working as one system.
               </p>
             </blockquote>
@@ -339,7 +339,7 @@ export function LeadershipTrainingPage() {
               <div className="w-2 h-2 rounded-full bg-blue-400" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
               <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">Program Overview</span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-bold mb-4" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4" style={{ background: 'linear-gradient(to right,#ffffff,#bfdbfe,#a5f3fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Dr. Jeff Sutherland's<br />Enterprise Agility Program
             </h2>
             <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto">A Complete Leadership + Execution System</p>
@@ -357,7 +357,7 @@ export function LeadershipTrainingPage() {
             {/* Combined timeline: all 7 stops */}
             <div className="relative">
               <div className="absolute left-0 right-0 h-px hidden lg:block" style={{ top: '152px', zIndex: 0, background: 'linear-gradient(to right,#334155 0%,#334155 40%,rgba(59,130,246,0.4) 55%,rgba(6,182,212,0.4) 100%)' }} />
-              <div className="grid grid-cols-3 lg:grid-cols-7 gap-6" data-reveal-group data-stagger="80">
+              <div className="grid grid-cols-3 lg:grid-cols-7 gap-3 lg:gap-6" data-reveal-group data-stagger="80">
                 {/* First 3 stops — slate style */}
                 {[
                   { year: '1950', title: 'Toyota Production System', sub: 'Lean manufacturing foundations', img: '/assets/img/jess/timeline-tps-1950.webp' },
@@ -365,7 +365,7 @@ export function LeadershipTrainingPage() {
                   { year: '2001', title: 'Agile Manifesto', sub: 'Co-signed by Sutherland', img: '/assets/img/jess/timeline-agile-manifesto-2001.webp' },
                 ].map(({ year, title, sub, img }) => (
                   <div key={year} data-reveal-item className="flex flex-col items-center text-center relative z-10">
-                    <div className="w-24 h-36 mb-3 rounded-md overflow-hidden shadow-lg border border-slate-700">
+                    <div className="w-full max-w-[96px] h-36 mb-3 rounded-md overflow-hidden shadow-lg border border-slate-700">
                       <img src={img} alt={title} className="w-full h-full object-cover" />
                     </div>
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3 bg-slate-800 border-2 border-slate-600">
@@ -541,7 +541,7 @@ export function LeadershipTrainingPage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10" data-reveal-group data-stagger="120">
             {/* Course 1 */}
-            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-blue-300 transition-all flex flex-col">
+            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg hover:border-blue-300 transition-all flex flex-col">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6 self-start">
                 <div className="w-2 h-2 rounded-full bg-blue-500" />
                 <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">Course 1</span>
@@ -576,7 +576,7 @@ export function LeadershipTrainingPage() {
               </div>
             </div>
             {/* Course 2 */}
-            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-10 shadow-lg hover:border-cyan-300 transition-all flex flex-col">
+            <div data-reveal-item className="bg-white border-2 border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg hover:border-cyan-300 transition-all flex flex-col">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full mb-6 self-start">
                 <div className="w-2 h-2 rounded-full bg-cyan-500" />
                 <span className="text-sm font-medium text-cyan-600 uppercase tracking-wider">Course 2</span>
@@ -705,7 +705,7 @@ export function LeadershipTrainingPage() {
                 </blockquote>
               </div>
               <div className="flex flex-col items-center lg:items-start gap-6">
-                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-slate-600">
                   <img src="/assets/img/jess/azmel_rasheed.webp" alt="Azmel Rasheed" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
@@ -752,7 +752,7 @@ export function LeadershipTrainingPage() {
                 </blockquote>
               </div>
               <div className="flex flex-col items-center lg:items-start gap-6">
-                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-slate-600">
                   <img src="/assets/img/jess/people-iran-moriff.jpg" alt="Mr. Iran Moriff" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
@@ -802,7 +802,7 @@ export function LeadershipTrainingPage() {
                 </blockquote>
               </div>
               <div className="flex flex-col items-center lg:items-start gap-6">
-                <div className="w-48 h-48 rounded-2xl overflow-hidden border border-slate-600">
+                <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-slate-600">
                   <img src="/assets/img/jess/hk_yu.webp" alt="HK Yu" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
