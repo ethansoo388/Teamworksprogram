@@ -8,7 +8,7 @@ export function InstructorPage() {
       <MainSiteNavigation />
 
       {/* ═══ HERO ═══ */}
-      <section className="relative bg-slate-800 py-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
+      <section className="relative bg-slate-800 pt-24 pb-16 sm:py-20 lg:py-24 border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 text-base mb-8">
             <a
@@ -35,24 +35,37 @@ export function InstructorPage() {
       {/* ═══ STICKY NAV ═══ */}
       <div className="sticky top-0 z-40 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <nav className="flex gap-8 sm:gap-12 overflow-x-auto">
-            <a href="leadership-training.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-              Overview
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          {/* Row 1: nav links + desktop CTA */}
+          <div className="flex items-center">
+            <nav className="flex gap-6 sm:gap-10 overflow-x-auto flex-1 min-w-0">
+              <a href="leadership-training.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
+                Overview
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+              <a href="course-modules.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
+                Course Modules
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+              <span className="relative py-4 text-sm font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
+                Instructor
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
+              </span>
+              <a href="class-schedule.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
+                Class Schedule
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+            </nav>
+            {/* Desktop only CTA */}
+            <a href="/contactus.html?source=jess-instructor&cta=sticky-nav#contact-form" className="hidden lg:inline-flex ml-4 flex-shrink-0 px-4 py-2 text-slate-900 text-sm font-semibold rounded-lg whitespace-nowrap bg-amber-500 hover:bg-amber-400 transition-colors">
+              Book a Seat →
             </a>
-            <a href="course-modules.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-              Course Modules
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          {/* Row 2: mobile CTA only */}
+          <div className="lg:hidden pb-3 flex justify-center">
+            <a href="/contactus.html?source=jess-instructor&cta=sticky-nav#contact-form" className="px-6 py-2 text-slate-900 text-sm font-semibold rounded-lg whitespace-nowrap bg-amber-500 hover:bg-amber-400 transition-colors">
+              Book a Seat →
             </a>
-            <span className="relative py-4 text-sm sm:text-base font-medium text-slate-900 whitespace-nowrap flex-shrink-0">
-              Instructor
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B]"></div>
-            </span>
-            <a href="class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-600 hover:text-slate-900 whitespace-nowrap flex-shrink-0">
-              Class Schedule
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F59E0B] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </a>
-          </nav>
+          </div>
         </div>
       </div>
 

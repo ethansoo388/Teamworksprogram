@@ -6,8 +6,55 @@ export function LeadershipTrainingPage() {
     <div className="min-h-screen bg-[#0F1724]">
       <MainSiteNavigation isDarkTheme />
 
-      {/* ═══ SECTION 1: HERO ═══ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-[72px]">
+      {/* ═══ SECTION 1: HERO — MOBILE ═══ */}
+      <section className="block lg:hidden">
+        {/* Top: image */}
+        <div className="relative w-full overflow-hidden" style={{ height: '440px' }}>
+          <img
+            src="/assets/img/jess/agile-leader-training-hero.webp"
+            alt="Enterprise Agile Leadership Training Malaysia"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0F1724] to-transparent" />
+          <div className="absolute bottom-5 left-5 flex items-center gap-2 bg-[#0F1724]/85 backdrop-blur-sm border border-cyan-500/30 rounded-lg px-3 py-2 z-10">
+            <div className="w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0" style={{ animation: 'pulse 2s cubic-bezier(0.4,0,0.6,1) infinite' }} />
+            <span className="text-xs text-blue-300 font-medium">by Dr. Jeff Sutherland · Inventor of Scrum</span>
+          </div>
+        </div>
+        {/* Bottom: dark text panel */}
+        <div className="bg-[#0F1724] px-6 pt-6 pb-10">
+          <h1 className="text-4xl font-bold text-white mb-3 leading-[1.05]">
+            Enterprise Agile<br />Leadership Training.
+          </h1>
+          <p className="text-3xl font-bold mb-5 leading-snug" style={{ background: 'linear-gradient(to right,#60a5fa,#22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            Led as a System.
+          </p>
+          <p className="text-base text-white/85 leading-relaxed mb-3">
+            The only leadership program built on 70 years of management science — combining Dr. Jeff Sutherland's original Scrum knowledge with enterprise-scale execution systems.
+          </p>
+          <p className="text-sm text-white/65 mb-7">
+            Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
+          </p>
+          <div className="flex flex-col gap-3 mb-5">
+            <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+              Talk to a Program Advisor
+            </a>
+            <a href="#program" className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
+              Explore the Program →
+            </a>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-sm font-medium text-white/70">🔒 No obligation · We respond within 24 hours</span>
+            <a href="https://wa.me/60192981055" className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.865L.057 23.143a.75.75 0 00.916.916l5.356-1.478A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.704 9.704 0 01-5.031-1.404l-.36-.214-3.733 1.03 1.03-3.734-.214-.36A9.704 9.704 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              💬 Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 1: HERO — DESKTOP ═══ */}
+      <section className="hidden lg:flex relative min-h-screen items-center overflow-hidden pt-[72px]">
         <div className="absolute inset-0 z-0">
           <img src="/assets/img/jess/agile-leader-training-hero.webp" alt="Enterprise Agile Leadership Training Malaysia" className="w-full h-full object-cover" />
         </div>
@@ -42,7 +89,7 @@ export function LeadershipTrainingPage() {
                     Explore the Program →
                   </a>
                 </div>
-                {/* Trust + WhatsApp — grouped, more visible */}
+                {/* Trust + WhatsApp */}
                 <div className="flex flex-wrap items-center gap-4 mt-2">
                   <span className="text-sm font-medium text-white/70">🔒 No obligation · We respond within 24 hours</span>
                   <span className="text-slate-600 hidden sm:inline">|</span>
@@ -199,19 +246,29 @@ export function LeadershipTrainingPage() {
 
       {/* STICKY SECTION NAV */}
       <div className="sticky top-[72px] z-40 bg-[#0F1724] border-b border-slate-700/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center">
-          <nav className="flex gap-8 sm:gap-12 overflow-x-auto flex-1 min-w-0">
-            <span className="relative py-4 text-sm sm:text-base font-medium text-white whitespace-nowrap flex-shrink-0">
-              Overview
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
-            </span>
-            <a href="/jess/course-modules.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Course Modules</a>
-            <a href="/jess/instructor.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Instructor</a>
-            <a href="/jess/class-schedule.html" className="group relative py-4 text-sm sm:text-base font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Class Schedule</a>
-          </nav>
-          <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="ml-4 flex-shrink-0 px-4 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
-            Book a Seat →
-          </a>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Row 1: nav links + desktop CTA */}
+          <div className="flex items-center">
+            <nav className="flex gap-6 sm:gap-10 flex-1 min-w-0">
+              <span className="relative py-4 text-sm font-medium text-white whitespace-nowrap flex-shrink-0">
+                Overview
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+              </span>
+              <a href="/jess/course-modules.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Course Modules</a>
+              <a href="/jess/instructor.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Instructor</a>
+              <a href="/jess/class-schedule.html" className="group relative py-4 text-sm font-medium transition-colors text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0">Class Schedule</a>
+            </nav>
+            {/* Desktop only CTA */}
+            <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="hidden lg:inline-flex ml-4 flex-shrink-0 px-4 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
+              Book a Seat →
+            </a>
+          </div>
+          {/* Row 2: mobile CTA only */}
+          <div className="lg:hidden pb-3 flex justify-center">
+            <a href="/contactus.html?source=jess-leadership-training&cta=sticky-nav#contact-form" className="px-6 py-2 text-white text-sm font-semibold rounded-lg whitespace-nowrap" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)' }}>
+              Book a Seat →
+            </a>
+          </div>
         </div>
       </div>
 
