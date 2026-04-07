@@ -1,6 +1,5 @@
 import ciAgileLogoWhite from '@/assets/img/main/ci-agile-logo-white.png';
 import natasha from '@/assets/img/main/ci-agile-staff-natasha-2.webp';
-import heroImg from '@/assets/img/main/ciagile-home-hero-presenter-flipchart.webp';
 import logoShell from '@/assets/img/main/logo-shell.webp';
 import logoDbs from '@/assets/img/main/logo-dbs.webp';
 import logoHsbc from '@/assets/img/main/logo-hsbc.webp';
@@ -27,36 +26,64 @@ export function LetsTalkPage() {
           overflow: hidden;
         }
 
-        /* Left: dark hero */
+        /* Left: dark navy — Natasha centred */
         .lt-cover-left {
           flex: 0 0 38%;
           background: #0F1724;
           position: relative;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* padding reserves space for logo (top) and cred strip (bottom) */
+          padding: 64px 28px 96px;
         }
-        .lt-cover-bg-img {
-          position: absolute;
-          top: 0; left: 0; width: 100%; height: 100%;
-          object-fit: cover;
-          object-position: center top;
-          opacity: 0.35;
+        .lt-cover-natasha {
+          width: 72%;
+          max-width: 330px;
+          height: auto;
+          display: block;
+          border-radius: 14px;
+          flex-shrink: 0;
         }
-        .lt-cover-gradient {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(to top, rgba(15,23,36,0.9) 0%, rgba(15,23,36,0.3) 100%);
-        }
+        /* CI Agile logo — top-left */
         .lt-cover-logo-wrap {
           position: absolute;
-          bottom: 28px; left: 28px;
+          top: 24px; left: 28px;
           z-index: 1;
         }
         .lt-logo { height: 24px; width: auto; display: block; }
+        /* Credibility strip — bottom */
+        .lt-cover-cred {
+          position: absolute;
+          bottom: 28px; left: 28px; right: 28px;
+          z-index: 1;
+        }
+        .lt-cover-cred-sep {
+          width: 100%; height: 1px;
+          background: rgba(255,255,255,0.14);
+          margin-bottom: 13px;
+        }
+        .lt-cover-cred-tagline {
+          font-size: 11px; font-weight: 500;
+          color: rgba(255,255,255,0.48);
+          margin: 0 0 10px 0;
+          letter-spacing: 0.02em;
+        }
+        .lt-cover-cred-logos {
+          display: flex; gap: 18px; align-items: center;
+        }
+        .lt-cover-cred-logo {
+          height: 16px; width: auto;
+          filter: brightness(0) invert(1);
+          opacity: 0.48;
+          display: block;
+        }
 
-        /* Right: light CTA */
+        /* Right: CI Agile light blue */
         .lt-cover-right {
           flex: 1;
-          background: #FAFCFF;
+          background: #1A9BD4;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -67,7 +94,7 @@ export function LetsTalkPage() {
           display: inline-block;
           font-size: 11px; font-weight: 700;
           letter-spacing: 0.1em; text-transform: uppercase;
-          color: #3b82f6;
+          color: rgba(15,23,36,0.6);
           margin-bottom: 18px;
         }
         .lt-cover-headline {
@@ -78,12 +105,12 @@ export function LetsTalkPage() {
         }
         .lt-cover-subtitle {
           font-size: 16px; line-height: 1.65;
-          color: #4b5563;
+          color: rgba(15,23,36,0.75);
           margin: 0 0 26px 0;
         }
         .lt-cover-time {
           display: flex; align-items: center; gap: 7px;
-          font-size: 13px; color: #6b7280;
+          font-size: 13px; color: rgba(15,23,36,0.65);
           margin-bottom: 34px;
         }
         #lt-cover-start {
@@ -387,7 +414,17 @@ export function LetsTalkPage() {
         @media (max-width: 768px) {
           /* Cover — stacked */
           #lt-cover { flex-direction: column; }
-          .lt-cover-left { flex: 0 0 40vh; }
+          .lt-cover-left {
+            flex: 0 0 42vh;
+            padding: 52px 20px 80px;
+          }
+          .lt-cover-natasha { width: 52%; max-width: 200px; border-radius: 10px; }
+          .lt-cover-logo-wrap { top: 16px; left: 18px; }
+          .lt-cover-cred { bottom: 16px; left: 18px; right: 18px; }
+          .lt-cover-cred-sep { margin-bottom: 9px; }
+          .lt-cover-cred-tagline { font-size: 10px; margin-bottom: 7px; }
+          .lt-cover-cred-logos { gap: 12px; }
+          .lt-cover-cred-logo { height: 13px; }
           .lt-cover-right {
             flex: 1;
             padding: 28px 24px;
@@ -466,20 +503,35 @@ export function LetsTalkPage() {
           ════════════════════════════════════════ */}
       <div id="lt-cover">
 
-        {/* Left: hero image + logo */}
+        {/* Left: dark navy — Natasha centred + credibility strip */}
         <div className="lt-cover-left">
-          <img
-            className="lt-cover-bg-img"
-            src={heroImg}
-            alt=""
-            aria-hidden="true"
-          />
-          <div className="lt-cover-gradient" aria-hidden="true"></div>
+
+          {/* CI Agile logo — top-left */}
           <div className="lt-cover-logo-wrap">
             <a href="/index.html">
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
+
+          {/* Natasha — centred, natural size */}
+          <img
+            className="lt-cover-natasha"
+            src={natasha}
+            alt="Natasha, CI Agile Advisor"
+          />
+
+          {/* Credibility strip — bottom */}
+          <div className="lt-cover-cred">
+            <div className="lt-cover-cred-sep"></div>
+            <p className="lt-cover-cred-tagline">Trusted by 500+ organisations across Asia</p>
+            <div className="lt-cover-cred-logos">
+              <img className="lt-cover-cred-logo" src={logoShell} alt="Shell" />
+              <img className="lt-cover-cred-logo" src={logoDbs} alt="DBS" />
+              <img className="lt-cover-cred-logo" src={logoHsbc} alt="HSBC" />
+              <img className="lt-cover-cred-logo" src={logoCisco} alt="Cisco" />
+            </div>
+          </div>
+
         </div>
 
         {/* Right: headline + CTA */}
