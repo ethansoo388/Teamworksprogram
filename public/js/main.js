@@ -996,6 +996,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnUp        = document.getElementById('lt-btn-up');
     const btnDown      = document.getElementById('lt-btn-down');
     const contactStepNumEl = document.getElementById('lt-contact-step-num');
+    var ltCoverEl = document.getElementById('lt-cover');
+    var ltQuizEl  = document.getElementById('lt-quiz');
+
+    // ── Cover → Quiz transition ──
+    var ltCoverStart = document.getElementById('lt-cover-start');
+    if (ltCoverStart) {
+      ltCoverStart.addEventListener('click', function () {
+        if (ltCoverEl) ltCoverEl.classList.add('lt-hidden');
+        if (ltQuizEl)  ltQuizEl.classList.remove('lt-hidden');
+        if (progressFill) progressFill.style.width = getProgress('1') + '%';
+        updateNavButtons('1');
+        updateContactStepNum();
+        var firstBtn = ltPage.querySelector('.lt-step.lt-active button');
+        if (firstBtn) setTimeout(function () { firstBtn.focus(); }, 50);
+      });
+    }
 
     // ── Progress calculation — always 5 steps ──
     function getProgress(stepId) {
@@ -1040,7 +1056,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateNavButtons(id) {
-      if (btnUp)   btnUp.disabled   = navHistory.length <= 1;
+      // btnUp is always enabled inside quiz (back from step 1 returns to cover)
+      if (btnUp)   btnUp.disabled   = false;
       if (btnDown) btnDown.disabled = (id === '5');
     }
 
@@ -1081,7 +1098,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goBack() {
-      if (navHistory.length <= 1) return;
+      if (navHistory.length <= 1) {
+        // Back from step 1 → return to cover
+        if (ltQuizEl)  ltQuizEl.classList.add('lt-hidden');
+        if (ltCoverEl) ltCoverEl.classList.remove('lt-hidden');
+        if (progressFill) progressFill.style.width = '0%';
+        return;
+      }
       navHistory.pop();
       goTo(navHistory[navHistory.length - 1], true);
     }
