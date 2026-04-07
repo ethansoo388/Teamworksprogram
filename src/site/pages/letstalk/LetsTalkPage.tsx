@@ -27,9 +27,11 @@ export function LetsTalkPage() {
           position: relative;
           overflow: hidden;
           flex: 0 0 38%;
+          display: flex;
+          flex-direction: column;
         }
 
-        /* CI Agile logo — top-left */
+        /* CI Agile logo — top-left overlay */
         .lt-lp-logo {
           position: absolute;
           top: 24px; left: 28px;
@@ -37,34 +39,23 @@ export function LetsTalkPage() {
         }
         .lt-logo { height: 24px; width: auto; display: block; }
 
-        /* Natasha — full-bleed between logo and credibility strip */
+        /* Natasha — full width, proportional height, flows from top */
         .lt-lp-natasha {
-          position: absolute;
-          top: 60px; left: 0; right: 0;
-          bottom: 138px;          /* leaves room for credibility strip */
           width: 100%;
-          height: calc(100% - 60px - 138px);
-          object-fit: cover;
-          object-position: center top;
+          height: auto;
           display: block;
+          flex-shrink: 0;
         }
 
-        /* Gradient fade where Natasha meets credibility */
-        .lt-lp-gradient {
-          position: absolute;
-          bottom: 120px; left: 0; right: 0;
-          height: 90px;
-          background: linear-gradient(to bottom, transparent, rgba(15,23,36,0.9));
-          z-index: 1;
-          pointer-events: none;
-        }
-
-        /* Credibility strip — pinned to bottom, centred */
+        /* Credibility strip — fills remaining space below Natasha, vertically centred */
         .lt-lp-cred {
-          position: absolute;
-          bottom: 0; left: 0; right: 0;
-          padding: 18px 28px 44px;
-          background: rgba(15,23,36,0.88);
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 28px;
+          background: #0F1724;
           text-align: center;
           z-index: 2;
         }
@@ -83,11 +74,12 @@ export function LetsTalkPage() {
           display: flex; gap: 22px;
           align-items: center;
           justify-content: center;
+          flex-wrap: wrap;
         }
         .lt-lp-logo-img {
-          height: 24px; width: auto;
+          height: auto; width: auto; max-height: 40px;
           filter: brightness(0) invert(1);
-          opacity: 0.55;
+          opacity: 0.6;
           display: block;
         }
 
@@ -100,10 +92,10 @@ export function LetsTalkPage() {
           overflow: hidden;
         }
 
-        /* Right: CI Agile light blue */
+        /* Right: CI Agile bright blue (matched to Natasha image) */
         .lt-cover-right {
           flex: 1;
-          background: #1A9BD4;
+          background: #14BEE8;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -157,10 +149,10 @@ export function LetsTalkPage() {
           overflow: hidden;
         }
 
-        /* ── Right panel: CI Agile light blue (matches cover) ── */
+        /* ── Right panel: CI Agile bright blue (matches cover) ── */
         #lt-panel-right {
           flex: 1;
-          background: #1A9BD4;
+          background: #14BEE8;
           display: flex;
           flex-direction: column;
           position: relative;
@@ -234,13 +226,13 @@ export function LetsTalkPage() {
         .lt-opt {
           display: flex; align-items: center; gap: 10px;
           padding: 10px 14px;
-          border: 1px solid rgba(15,23,36,0.12); border-radius: 6px;
-          background: #fff; color: #374151;
+          border: 1.5px solid rgba(255,255,255,0.45); border-radius: 6px;
+          background: transparent; color: #0F1724;
           font-size: 14px; text-align: left; cursor: pointer; width: 100%;
           transition: border-color 0.15s, background 0.15s, color 0.15s;
           font-family: inherit;
         }
-        .lt-opt:hover { border-color: rgba(15,23,36,0.35); color: #0F1724; }
+        .lt-opt:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.15); color: #0F1724; }
         .lt-opt.lt-selected {
           background: #0F1724;
           border-color: #0F1724; color: #fff;
@@ -380,15 +372,16 @@ export function LetsTalkPage() {
             height: 38vh;
           }
           .lt-lp-natasha {
-            bottom: 110px;
-            height: calc(100% - 60px - 110px);
+            max-height: 26vh;
+            width: 100%; height: auto;
+            object-fit: cover;
+            object-position: center top;
           }
-          .lt-lp-gradient { bottom: 93px; height: 60px; }
-          .lt-lp-cred { padding: 14px 20px 28px; }
-          .lt-lp-sep { margin-bottom: 11px; }
-          .lt-lp-tagline { font-size: 12px; margin-bottom: 10px; }
-          .lt-lp-logos { gap: 14px; }
-          .lt-lp-logo-img { height: 18px; }
+          .lt-lp-cred { padding: 10px 16px; }
+          .lt-lp-sep { margin-bottom: 8px; }
+          .lt-lp-tagline { font-size: 11px; margin-bottom: 8px; }
+          .lt-lp-logos { gap: 12px; }
+          .lt-lp-logo-img { max-height: 22px; }
           .lt-lp-logo { top: 16px; left: 18px; }
           .lt-logo { height: 20px; }
 
@@ -433,7 +426,6 @@ export function LetsTalkPage() {
             </a>
           </div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
-          <div className="lt-lp-gradient" aria-hidden="true"></div>
           <div className="lt-lp-cred">
             <div className="lt-lp-sep"></div>
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
@@ -482,7 +474,6 @@ export function LetsTalkPage() {
             </a>
           </div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
-          <div className="lt-lp-gradient" aria-hidden="true"></div>
           <div className="lt-lp-cred">
             <div className="lt-lp-sep"></div>
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
