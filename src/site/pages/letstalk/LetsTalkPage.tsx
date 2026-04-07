@@ -18,66 +18,86 @@ export function LetsTalkPage() {
         .lt-hidden { display: none !important; }
 
         /* ════════════════════════════════════════
+           SHARED LEFT PANEL  (.lt-cover-left / #lt-panel-left)
+           Same layout on both cover and quiz pages.
+           ════════════════════════════════════════ */
+        .lt-cover-left,
+        #lt-panel-left {
+          background: #0F1724;
+          position: relative;
+          overflow: hidden;
+          flex: 0 0 38%;
+        }
+
+        /* CI Agile logo — top-left */
+        .lt-lp-logo {
+          position: absolute;
+          top: 24px; left: 28px;
+          z-index: 3;
+        }
+        .lt-logo { height: 24px; width: auto; display: block; }
+
+        /* Natasha — full-bleed between logo and credibility strip */
+        .lt-lp-natasha {
+          position: absolute;
+          top: 60px; left: 0; right: 0;
+          bottom: 138px;          /* leaves room for credibility strip */
+          width: 100%;
+          height: calc(100% - 60px - 138px);
+          object-fit: cover;
+          object-position: center top;
+          display: block;
+        }
+
+        /* Gradient fade where Natasha meets credibility */
+        .lt-lp-gradient {
+          position: absolute;
+          bottom: 120px; left: 0; right: 0;
+          height: 90px;
+          background: linear-gradient(to bottom, transparent, rgba(15,23,36,0.9));
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        /* Credibility strip — pinned to bottom, centred */
+        .lt-lp-cred {
+          position: absolute;
+          bottom: 0; left: 0; right: 0;
+          padding: 18px 28px 44px;
+          background: rgba(15,23,36,0.88);
+          text-align: center;
+          z-index: 2;
+        }
+        .lt-lp-sep {
+          width: 50%; height: 1px;
+          background: rgba(255,255,255,0.18);
+          margin: 0 auto 16px;
+        }
+        .lt-lp-tagline {
+          font-size: 15px; font-weight: 500;
+          color: rgba(255,255,255,0.65);
+          margin: 0 0 14px 0;
+          letter-spacing: 0.01em;
+        }
+        .lt-lp-logos {
+          display: flex; gap: 22px;
+          align-items: center;
+          justify-content: center;
+        }
+        .lt-lp-logo-img {
+          height: 24px; width: auto;
+          filter: brightness(0) invert(1);
+          opacity: 0.55;
+          display: block;
+        }
+
+        /* ════════════════════════════════════════
            COVER PAGE
            ════════════════════════════════════════ */
         #lt-cover {
           display: flex;
           height: 100vh;
           overflow: hidden;
-        }
-
-        /* Left: dark navy — Natasha centred */
-        .lt-cover-left {
-          flex: 0 0 38%;
-          background: #0F1724;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          /* padding reserves space for logo (top) and cred strip (bottom) */
-          padding: 64px 28px 96px;
-        }
-        .lt-cover-natasha {
-          width: 72%;
-          max-width: 330px;
-          height: auto;
-          display: block;
-          border-radius: 14px;
-          flex-shrink: 0;
-        }
-        /* CI Agile logo — top-left */
-        .lt-cover-logo-wrap {
-          position: absolute;
-          top: 24px; left: 28px;
-          z-index: 1;
-        }
-        .lt-logo { height: 24px; width: auto; display: block; }
-        /* Credibility strip — bottom */
-        .lt-cover-cred {
-          position: absolute;
-          bottom: 28px; left: 28px; right: 28px;
-          z-index: 1;
-        }
-        .lt-cover-cred-sep {
-          width: 100%; height: 1px;
-          background: rgba(255,255,255,0.14);
-          margin-bottom: 13px;
-        }
-        .lt-cover-cred-tagline {
-          font-size: 11px; font-weight: 500;
-          color: rgba(255,255,255,0.48);
-          margin: 0 0 10px 0;
-          letter-spacing: 0.02em;
-        }
-        .lt-cover-cred-logos {
-          display: flex; gap: 18px; align-items: center;
-        }
-        .lt-cover-cred-logo {
-          height: 16px; width: auto;
-          filter: brightness(0) invert(1);
-          opacity: 0.48;
-          display: block;
         }
 
         /* Right: CI Agile light blue */
@@ -137,75 +157,10 @@ export function LetsTalkPage() {
           overflow: hidden;
         }
 
-        /* ── Left panel: Natasha + credibility ── */
-        #lt-panel-left {
-          flex: 0 0 38%;
-          background: #0F1724;
-          position: relative;
-          overflow: hidden;
-        }
-        .lt-natasha-wrap {
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-        }
-        .lt-natasha-img {
-          width: 100%; height: 100%;
-          object-fit: cover;
-          object-position: center top;
-          display: block;
-        }
-        .lt-cred-overlay {
-          position: absolute;
-          bottom: 0; left: 0; right: 0;
-          padding: 20px 24px;
-          background: linear-gradient(to top,
-            rgba(15,23,36,0.97) 0%,
-            rgba(15,23,36,0.8) 50%,
-            transparent 100%
-          );
-          z-index: 1;
-        }
-        .lt-quote {
-          font-size: 12.5px; font-style: italic;
-          color: rgba(255,255,255,0.8);
-          line-height: 1.5; margin: 0 0 12px 0;
-          border-left: 2px solid rgba(255,255,255,0.25);
-          padding-left: 10px;
-        }
-        .lt-quote cite {
-          display: block; font-style: normal;
-          font-size: 11px; color: rgba(255,255,255,0.45);
-          margin-top: 5px;
-        }
-        .lt-stats {
-          display: flex; gap: 18px;
-          margin-bottom: 13px;
-        }
-        .lt-stat {
-          display: flex; flex-direction: column;
-          align-items: center; gap: 1px;
-        }
-        .lt-stat strong {
-          font-size: 15px; font-weight: 700; color: #fff;
-        }
-        .lt-stat span {
-          font-size: 9px; color: rgba(255,255,255,0.45);
-          text-transform: uppercase; letter-spacing: 0.06em;
-        }
-        .lt-client-logos {
-          display: flex; gap: 8px; align-items: center;
-        }
-        .lt-client-logo {
-          height: 16px; width: auto;
-          filter: brightness(0) invert(1);
-          opacity: 0.55;
-          display: block;
-        }
-
-        /* ── Right panel: steps ── */
+        /* ── Right panel: CI Agile light blue (matches cover) ── */
         #lt-panel-right {
           flex: 1;
-          background: #E8F4FF;
+          background: #1A9BD4;
           display: flex;
           flex-direction: column;
           position: relative;
@@ -213,12 +168,12 @@ export function LetsTalkPage() {
         }
         #lt-progress {
           height: 3px;
-          background: rgba(15,23,36,0.1);
+          background: rgba(255,255,255,0.2);
           flex-shrink: 0;
         }
         #lt-progress-fill {
           height: 100%; width: 0%;
-          background: linear-gradient(to right, #3b82f6, #06b6d4);
+          background: rgba(255,255,255,0.9);
           transition: width 0.5s ease;
         }
         #lt-body {
@@ -255,13 +210,13 @@ export function LetsTalkPage() {
         .lt-qnum {
           display: flex; align-items: center; gap: 8px;
           margin-bottom: 12px; font-size: 12px; font-weight: 500;
-          color: rgba(15,23,36,0.4);
+          color: rgba(15,23,36,0.55);
         }
         .lt-qnum-badge {
           display: inline-flex; align-items: center; justify-content: center;
           width: 20px; height: 20px;
-          background: rgba(15,23,36,0.08); border-radius: 4px;
-          font-size: 10px; font-weight: 700; color: rgba(15,23,36,0.5);
+          background: rgba(15,23,36,0.12); border-radius: 4px;
+          font-size: 10px; font-weight: 700; color: rgba(15,23,36,0.65);
         }
 
         /* ── Question text ── */
@@ -279,7 +234,7 @@ export function LetsTalkPage() {
         .lt-opt {
           display: flex; align-items: center; gap: 10px;
           padding: 10px 14px;
-          border: 1px solid rgba(15,23,36,0.15); border-radius: 6px;
+          border: 1px solid rgba(15,23,36,0.12); border-radius: 6px;
           background: #fff; color: #374151;
           font-size: 14px; text-align: left; cursor: pointer; width: 100%;
           transition: border-color 0.15s, background 0.15s, color 0.15s;
@@ -311,26 +266,26 @@ export function LetsTalkPage() {
         /* ── Text inputs (underline style) ── */
         .lt-text-input {
           width: 100%; background: transparent;
-          border: none; border-bottom: 1.5px solid rgba(15,23,36,0.2);
+          border: none; border-bottom: 1.5px solid rgba(15,23,36,0.35);
           color: #0F1724; font-size: 15px; padding: 7px 0; outline: none;
           transition: border-color 0.2s; font-family: inherit;
         }
         .lt-text-input:focus { border-bottom-color: #0F1724; }
-        .lt-text-input::placeholder { color: rgba(15,23,36,0.22); }
+        .lt-text-input::placeholder { color: rgba(15,23,36,0.35); }
         .lt-text-input.lt-error { border-bottom-color: #ef4444; }
 
         /* ── Checkbox ── */
         .lt-checkbox-wrap { margin: 10px 0 18px; }
         .lt-checkbox-label {
           display: flex; align-items: flex-start; gap: 10px;
-          cursor: pointer; font-size: 13px; color: rgba(15,23,36,0.55);
+          cursor: pointer; font-size: 13px; color: rgba(15,23,36,0.65);
           line-height: 1.5; user-select: none;
         }
         .lt-checkbox-label input[type="checkbox"] { display: none; }
         .lt-checkbox-custom {
           display: inline-flex; align-items: center; justify-content: center;
           width: 18px; height: 18px; min-width: 18px;
-          border: 1.5px solid rgba(15,23,36,0.3); border-radius: 3px;
+          border: 1.5px solid rgba(15,23,36,0.35); border-radius: 3px;
           background: transparent; margin-top: 1px;
           transition: background 0.15s, border-color 0.15s;
           font-size: 11px; font-weight: 700; color: #fff;
@@ -350,11 +305,11 @@ export function LetsTalkPage() {
           transition: background 0.15s; font-family: inherit;
         }
         .lt-ok-btn:hover { background: #1e293b; }
-        .lt-hint { font-size: 11px; color: rgba(15,23,36,0.3); }
+        .lt-hint { font-size: 11px; color: rgba(15,23,36,0.5); }
         .lt-hint kbd {
           display: inline-flex; align-items: center; padding: 1px 5px;
-          border: 1px solid rgba(15,23,36,0.2); border-radius: 3px;
-          font-size: 10px; font-family: inherit; color: rgba(15,23,36,0.35);
+          border: 1px solid rgba(15,23,36,0.3); border-radius: 3px;
+          font-size: 10px; font-family: inherit; color: rgba(15,23,36,0.5);
         }
 
         /* ── Contact step fields ── */
@@ -364,11 +319,11 @@ export function LetsTalkPage() {
         }
         .lt-field label {
           display: block; font-size: 10px; font-weight: 600;
-          color: rgba(15,23,36,0.4); text-transform: uppercase;
+          color: rgba(15,23,36,0.55); text-transform: uppercase;
           letter-spacing: 0.08em; margin-bottom: 5px;
         }
         .lt-optional { font-weight: 400; text-transform: none; letter-spacing: 0; }
-        .lt-field-error { color: #dc2626; font-size: 12px; margin-top: 5px; }
+        .lt-field-error { color: #7f1d1d; font-size: 12px; margin-top: 5px; }
         .lt-field-error[hidden] { display: none; }
 
         /* ── Optional row: Company + WhatsApp ── */
@@ -387,9 +342,9 @@ export function LetsTalkPage() {
         }
         .lt-submit-btn:hover { opacity: 0.85; }
         .lt-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .lt-submitting-msg { color: rgba(15,23,36,0.45); font-size: 13px; margin-top: 8px; }
+        .lt-submitting-msg { color: rgba(15,23,36,0.55); font-size: 13px; margin-top: 8px; }
         .lt-submitting-msg[hidden] { display: none; }
-        .lt-submit-error { color: #dc2626; font-size: 12px; margin-top: 8px; }
+        .lt-submit-error { color: #7f1d1d; font-size: 12px; margin-top: 8px; }
         .lt-submit-error[hidden] { display: none; }
 
         /* ── Nav arrows (absolute inside right panel) ── */
@@ -400,13 +355,13 @@ export function LetsTalkPage() {
         .lt-nav-btn {
           display: flex; align-items: center; justify-content: center;
           width: 34px; height: 34px;
-          background: rgba(15,23,36,0.07);
-          border: 1px solid rgba(15,23,36,0.18); border-radius: 6px;
-          color: #0F1724; cursor: pointer;
+          background: rgba(255,255,255,0.18);
+          border: 1px solid rgba(255,255,255,0.35); border-radius: 6px;
+          color: #fff; cursor: pointer;
           transition: background 0.15s;
         }
-        .lt-nav-btn:hover { background: rgba(15,23,36,0.13); }
-        .lt-nav-btn:disabled { opacity: 0.22; cursor: not-allowed; }
+        .lt-nav-btn:hover { background: rgba(255,255,255,0.28); }
+        .lt-nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
 
         /* ════════════════════════════════════════
            MOBILE  (≤ 768px)
@@ -414,17 +369,30 @@ export function LetsTalkPage() {
         @media (max-width: 768px) {
           /* Cover — stacked */
           #lt-cover { flex-direction: column; }
-          .lt-cover-left {
-            flex: 0 0 42vh;
-            padding: 52px 20px 80px;
+
+          /* Quiz — stacked */
+          #lt-quiz { flex-direction: column; }
+
+          /* Left panel — same height on both cover and quiz */
+          .lt-cover-left,
+          #lt-panel-left {
+            flex: none;
+            height: 38vh;
           }
-          .lt-cover-natasha { width: 52%; max-width: 200px; border-radius: 10px; }
-          .lt-cover-logo-wrap { top: 16px; left: 18px; }
-          .lt-cover-cred { bottom: 16px; left: 18px; right: 18px; }
-          .lt-cover-cred-sep { margin-bottom: 9px; }
-          .lt-cover-cred-tagline { font-size: 10px; margin-bottom: 7px; }
-          .lt-cover-cred-logos { gap: 12px; }
-          .lt-cover-cred-logo { height: 13px; }
+          .lt-lp-natasha {
+            bottom: 110px;
+            height: calc(100% - 60px - 110px);
+          }
+          .lt-lp-gradient { bottom: 93px; height: 60px; }
+          .lt-lp-cred { padding: 14px 20px 28px; }
+          .lt-lp-sep { margin-bottom: 11px; }
+          .lt-lp-tagline { font-size: 12px; margin-bottom: 10px; }
+          .lt-lp-logos { gap: 14px; }
+          .lt-lp-logo-img { height: 18px; }
+          .lt-lp-logo { top: 16px; left: 18px; }
+          .lt-logo { height: 20px; }
+
+          /* Right panel — both cover and quiz */
           .lt-cover-right {
             flex: 1;
             padding: 28px 24px;
@@ -434,52 +402,6 @@ export function LetsTalkPage() {
           .lt-cover-headline { font-size: 1.6rem; }
           .lt-cover-subtitle { font-size: 14px; }
 
-          /* Quiz — stacked */
-          #lt-quiz { flex-direction: column; }
-
-          /* Left panel — horizontal strip */
-          #lt-panel-left {
-            height: 26vh;
-            flex: none;
-            display: flex;
-            flex-direction: row;
-          }
-          .lt-natasha-wrap {
-            position: relative;
-            width: 38%;
-            flex-shrink: 0;
-            height: 100%;
-          }
-          .lt-natasha-img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            object-position: center top;
-          }
-          .lt-cred-overlay {
-            position: relative;
-            flex: 1;
-            background: rgba(15,23,36,0.92);
-            padding: 10px 13px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-          }
-          .lt-quote {
-            font-size: 10.5px;
-            margin-bottom: 7px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-          }
-          .lt-stats { gap: 12px; margin-bottom: 7px; }
-          .lt-stat strong { font-size: 12px; }
-          .lt-stat span { font-size: 8px; }
-          .lt-client-logos { gap: 5px; }
-          .lt-client-logo { height: 13px; }
-
-          /* Right panel */
           #lt-panel-right { flex: 1; }
           #lt-body { padding: 18px 20px 72px; }
           .lt-question { font-size: 1.05rem; }
@@ -503,35 +425,25 @@ export function LetsTalkPage() {
           ════════════════════════════════════════ */}
       <div id="lt-cover">
 
-        {/* Left: dark navy — Natasha centred + credibility strip */}
+        {/* Left panel — identical structure to quiz left */}
         <div className="lt-cover-left">
-
-          {/* CI Agile logo — top-left */}
-          <div className="lt-cover-logo-wrap">
+          <div className="lt-lp-logo">
             <a href="/index.html">
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
-
-          {/* Natasha — centred, natural size */}
-          <img
-            className="lt-cover-natasha"
-            src={natasha}
-            alt="Natasha, CI Agile Advisor"
-          />
-
-          {/* Credibility strip — bottom */}
-          <div className="lt-cover-cred">
-            <div className="lt-cover-cred-sep"></div>
-            <p className="lt-cover-cred-tagline">Trusted by 500+ organisations across Asia</p>
-            <div className="lt-cover-cred-logos">
-              <img className="lt-cover-cred-logo" src={logoShell} alt="Shell" />
-              <img className="lt-cover-cred-logo" src={logoDbs} alt="DBS" />
-              <img className="lt-cover-cred-logo" src={logoHsbc} alt="HSBC" />
-              <img className="lt-cover-cred-logo" src={logoCisco} alt="Cisco" />
+          <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
+          <div className="lt-lp-gradient" aria-hidden="true"></div>
+          <div className="lt-lp-cred">
+            <div className="lt-lp-sep"></div>
+            <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
+            <div className="lt-lp-logos">
+              <img className="lt-lp-logo-img" src={logoShell} alt="Shell" />
+              <img className="lt-lp-logo-img" src={logoDbs} alt="DBS" />
+              <img className="lt-lp-logo-img" src={logoHsbc} alt="HSBC" />
+              <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
-
         </div>
 
         {/* Right: headline + CTA */}
@@ -562,30 +474,23 @@ export function LetsTalkPage() {
           ════════════════════════════════════════ */}
       <div id="lt-quiz" className="lt-hidden">
 
-        {/* ── Left panel: Natasha + credibility ── */}
+        {/* ── Left panel — identical structure to cover left ── */}
         <div id="lt-panel-left">
-          <div className="lt-natasha-wrap">
-            <img
-              className="lt-natasha-img"
-              src={natasha}
-              alt="Natasha, CI Agile Advisor"
-            />
+          <div className="lt-lp-logo">
+            <a href="/index.html">
+              <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
+            </a>
           </div>
-          <div className="lt-cred-overlay">
-            <blockquote className="lt-quote">
-              "Practical, empowering, and immediately applicable to real teams."
-              <cite>— POS Aviation</cite>
-            </blockquote>
-            <div className="lt-stats">
-              <div className="lt-stat"><strong>500+</strong><span>Orgs</span></div>
-              <div className="lt-stat"><strong>98%</strong><span>Satisfaction</span></div>
-              <div className="lt-stat"><strong>3mo</strong><span>Impact</span></div>
-            </div>
-            <div className="lt-client-logos">
-              <img className="lt-client-logo" src={logoShell} alt="Shell" />
-              <img className="lt-client-logo" src={logoDbs} alt="DBS" />
-              <img className="lt-client-logo" src={logoHsbc} alt="HSBC" />
-              <img className="lt-client-logo" src={logoCisco} alt="Cisco" />
+          <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
+          <div className="lt-lp-gradient" aria-hidden="true"></div>
+          <div className="lt-lp-cred">
+            <div className="lt-lp-sep"></div>
+            <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
+            <div className="lt-lp-logos">
+              <img className="lt-lp-logo-img" src={logoShell} alt="Shell" />
+              <img className="lt-lp-logo-img" src={logoDbs} alt="DBS" />
+              <img className="lt-lp-logo-img" src={logoHsbc} alt="HSBC" />
+              <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
         </div>
@@ -619,7 +524,6 @@ export function LetsTalkPage() {
                   <span className="lt-badge">C</span><span>General Inquiry</span>
                 </button>
               </div>
-              {/* Shown only when Training is selected */}
               <div className="lt-checkbox-wrap" id="lt-training-extra" hidden>
                 <label className="lt-checkbox-label">
                   <input type="checkbox" id="lt-has-class" />
