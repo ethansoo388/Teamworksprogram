@@ -1231,15 +1231,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var interestVal   = state.hasClass ? state.interest3b : state.interest3a;
         var interestOther = state.hasClass ? state.interestOther : '';
-        var msgParts = [
-          'Source: letstalk-form',
-          'Intent: ' + state.intent,
-          state.role      ? 'Role: '       + state.role      + (state.roleOther  ? ' (' + state.roleOther  + ')' : '') : '',
-          interestVal     ? 'Interest: '   + interestVal     + (interestOther    ? ' (' + interestOther    + ')' : '') : '',
-          state.groupSize ? 'Group Size: ' + state.groupSize : '',
-          company         ? 'Company: '    + company         : '',
-          phone           ? 'Phone: '      + phone           : '',
-        ].filter(Boolean).join('\n');
+        var roleVal     = state.role + (state.roleOther    ? ' - ' + state.roleOther    : '');
+        var interestFull = interestVal  + (interestOther   ? ' - ' + interestOther      : '');
 
         submitBtn.disabled = true;
         if (submittingMsg) submittingMsg.hidden = false;
@@ -1247,15 +1240,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4qs2PdLhwc0jsym3VisNOl4iGRuYIm8Ot4LVgiJZVYtG5LAyBiy19OwRXiILzLTFwpQ/exec';
         var params = new URLSearchParams({
-          sheetName: 'LetsTalkForm',
-          fullName: name,
-          workEmail: email,
-          message: msgParts,
-          source: 'letstalk-form',
-          cta: 'lets-talk',
-          pageUrl: window.location.href,
-          referrer: document.referrer || 'Direct',
-          timestamp: new Date().toISOString(),
+          sheetName:  'LetsTalkForm',
+          fullName:   name,
+          workEmail:  email,
+          intent:     state.intent,
+          role:       roleVal,
+          interest:   interestFull,
+          groupSize:  state.groupSize,
+          company:    company,
+          phone:      phone,
+          pageUrl:    window.location.href,
+          referrer:   document.referrer || 'Direct',
+          timestamp:  new Date().toISOString(),
         });
         fetch(GAS_ENDPOINT, {
           method: 'POST',

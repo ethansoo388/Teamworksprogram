@@ -142,11 +142,11 @@ function showFormError_(errorEl, messages) {
           throw new Error('Server responded with error status');
         }
 
-        const result = await response.json().catch(() => null);
-
-        // Verify the response indicates success
-        if (!result || result.status !== 'success') {
-          throw new Error(result?.message || 'Form submission failed - invalid response from server');
+        let result = null;
+        try { result = await response.json(); } catch (e) { result = null; }
+        // If JSON isn't readable but request succeeded, treat as success.
+        if (result && result.status && result.status !== 'success') {
+          throw new Error(result.message || 'Form submission failed');
         }
 
         // Reset form
