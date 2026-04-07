@@ -279,7 +279,7 @@
             <div class="lt-options">
               <button class="lt-opt" data-lt-value="training">
                 <span class="lt-badge">A</span>
-                <span>A training</span>
+                <span>Training</span>
               </button>
               <button class="lt-opt" data-lt-value="consulting">
                 <span class="lt-badge">B</span>
@@ -289,6 +289,14 @@
                 <span class="lt-badge">C</span>
                 <span>General Inquiry</span>
               </button>
+            </div>
+            <div class="lt-checkbox-wrap" id="lt-training-extra" hidden="">
+              <label class="lt-checkbox-label">
+                <input type="checkbox" id="lt-has-class"/>
+                <span class="lt-checkbox-custom">
+                </span>
+                <span>I already have a specific training class in mind</span>
+              </label>
             </div>
             <div class="lt-actions">
               <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
@@ -322,14 +330,6 @@
             </div>
             <div class="lt-other-wrap" id="lt-role-other-wrap" hidden="">
               <input type="text" id="lt-role-other" class="lt-text-input" placeholder="Please describe your role..." autoComplete="off"/>
-            </div>
-            <div class="lt-checkbox-wrap">
-              <label class="lt-checkbox-label">
-                <input type="checkbox" id="lt-has-class"/>
-                <span class="lt-checkbox-custom">
-                </span>
-                <span>I already have a specific training class in mind</span>
-              </label>
             </div>
             <div class="lt-actions">
               <button class="lt-ok-btn" data-lt-ok="true">OK <span>✓</span>
@@ -463,7 +463,7 @@
                 <input type="text" id="lt-company" class="lt-text-input" placeholder="Acme Corp" autoComplete="organization"/>
               </div>
               <div class="lt-field">
-                <label for="lt-phone">Phone <span class="lt-optional">(optional)</span>
+                <label for="lt-phone">WhatsApp number <span class="lt-optional">(optional)</span>
                 </label>
                 <input type="tel" id="lt-phone" class="lt-text-input" placeholder="+60 12 345 6789" autoComplete="tel"/>
               </div>
