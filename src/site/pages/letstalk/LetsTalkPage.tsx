@@ -500,23 +500,23 @@ export function LetsTalkPage() {
                 <span className="lt-qnum-badge">1</span>
                 <span>→</span>
               </div>
-              <h2 className="lt-question">Please tell us how we can help?</h2>
+              <h2 className="lt-question">What brings you here today?</h2>
               <div className="lt-options">
                 <button className="lt-opt" data-lt-value="training">
-                  <span className="lt-badge">A</span><span>Training</span>
+                  <span className="lt-badge">A</span><span>I want to learn something new</span>
                 </button>
                 <button className="lt-opt" data-lt-value="consulting">
-                  <span className="lt-badge">B</span><span>Consulting</span>
+                  <span className="lt-badge">B</span><span>I need help fixing something</span>
                 </button>
                 <button className="lt-opt" data-lt-value="general">
-                  <span className="lt-badge">C</span><span>General Inquiry</span>
+                  <span className="lt-badge">C</span><span>I'm just exploring for now</span>
                 </button>
               </div>
               <div className="lt-checkbox-wrap" id="lt-training-extra" hidden>
                 <label className="lt-checkbox-label">
                   <input type="checkbox" id="lt-has-class" />
                   <span className="lt-checkbox-custom"></span>
-                  <span>I already have a specific training class in mind</span>
+                  <span>I already have a specific programme in mind</span>
                 </label>
               </div>
               <div className="lt-actions">
@@ -531,19 +531,19 @@ export function LetsTalkPage() {
                 <span className="lt-qnum-badge">2</span>
                 <span>→</span>
               </div>
-              <h2 className="lt-question">What best describes you?</h2>
+              <h2 className="lt-question">And who are we talking to? 😊</h2>
               <div className="lt-options">
                 <button className="lt-opt" data-lt-value="individual">
-                  <span className="lt-badge">A</span><span>Individual professional (upskilling or certification)</span>
+                  <span className="lt-badge">A</span><span>Just me — I want to grow my skills</span>
                 </button>
                 <button className="lt-opt" data-lt-value="team-leader">
-                  <span className="lt-badge">B</span><span>Team leader / manager (improving my team)</span>
+                  <span className="lt-badge">B</span><span>I lead a team and want to level them up</span>
                 </button>
                 <button className="lt-opt" data-lt-value="executive">
-                  <span className="lt-badge">C</span><span>Executive / decision-maker (enterprise transformation)</span>
+                  <span className="lt-badge">C</span><span>I'm driving change across the organisation</span>
                 </button>
                 <button className="lt-opt" data-lt-value="other">
-                  <span className="lt-badge">D</span><span>Other</span>
+                  <span className="lt-badge">D</span><span>Something else</span>
                 </button>
               </div>
               <div className="lt-other-wrap" id="lt-role-other-wrap" hidden>
@@ -551,7 +551,7 @@ export function LetsTalkPage() {
                   type="text"
                   id="lt-role-other"
                   className="lt-text-input"
-                  placeholder="Please describe your role..."
+                  placeholder="Tell us more about your role..."
                   autoComplete="off"
                 />
               </div>
@@ -567,10 +567,10 @@ export function LetsTalkPage() {
                 <span className="lt-qnum-badge">3</span>
                 <span>→</span>
               </div>
-              <h2 className="lt-question">Which area interests you most?</h2>
+              <h2 className="lt-question">What kind of support are you looking for?</h2>
               <div className="lt-options">
                 <button className="lt-opt" data-lt-value="agile-scrum">
-                  <span className="lt-badge">A</span><span>Agile &amp; Scrum certification or fundamentals</span>
+                  <span className="lt-badge">A</span><span>Agile &amp; Scrum — certs or the basics</span>
                 </button>
                 <button className="lt-opt" data-lt-value="teamworks">
                   <span className="lt-badge">B</span><span>TeamWorks workshops</span>
@@ -579,10 +579,10 @@ export function LetsTalkPage() {
                   <span className="lt-badge">C</span><span>Enterprise agility &amp; transformation</span>
                 </button>
                 <button className="lt-opt" data-lt-value="assessment">
-                  <span className="lt-badge">D</span><span>Free 30-min assessment</span>
+                  <span className="lt-badge">D</span><span>I'd love a free 30-min chat first</span>
                 </button>
                 <button className="lt-opt" data-lt-value="not-sure">
-                  <span className="lt-badge">E</span><span>Not sure – help me decide</span>
+                  <span className="lt-badge">E</span><span>Honestly not sure — help me figure it out</span>
                 </button>
               </div>
               <div className="lt-actions">
@@ -597,7 +597,7 @@ export function LetsTalkPage() {
                 <span className="lt-qnum-badge">3</span>
                 <span>→</span>
               </div>
-              <h2 className="lt-question">Which training interests you most?</h2>
+              <h2 className="lt-question">Got a programme in mind already?</h2>
               <div className="lt-options">
                 <button className="lt-opt" data-lt-value="jeff-program">
                   <span className="lt-badge">A</span><span>Dr. Sutherland Enterprise Agility Program Training</span>
@@ -609,7 +609,7 @@ export function LetsTalkPage() {
                   <span className="lt-badge">C</span><span>TeamWorks Series</span>
                 </button>
                 <button className="lt-opt" data-lt-value="other-training">
-                  <span className="lt-badge">D</span><span>Other Training</span>
+                  <span className="lt-badge">D</span><span>Something else — I'll tell you</span>
                 </button>
               </div>
               <div className="lt-other-wrap" id="lt-interest-other-wrap" hidden>
@@ -617,7 +617,7 @@ export function LetsTalkPage() {
                   type="text"
                   id="lt-interest-other"
                   className="lt-text-input"
-                  placeholder="Please specify the training..."
+                  placeholder="Tell us which one..."
                   autoComplete="off"
                 />
               </div>
@@ -633,7 +633,7 @@ export function LetsTalkPage() {
                 <span className="lt-qnum-badge">4</span>
                 <span>→</span>
               </div>
-              <h2 className="lt-question">How many people will join?</h2>
+              <h2 className="lt-question">How many people are we talking about?</h2>
               <div className="lt-options">
                 <button className="lt-opt" data-lt-value="just-me">
                   <span className="lt-badge">A</span><span>Just me</span>
@@ -642,10 +642,10 @@ export function LetsTalkPage() {
                   <span className="lt-badge">B</span><span>2–10 people (small team)</span>
                 </button>
                 <button className="lt-opt" data-lt-value="medium-team">
-                  <span className="lt-badge">C</span><span>11–30 people (perfect for TeamWorks)</span>
+                  <span className="lt-badge">C</span><span>11–30 people — sounds like a team programme!</span>
                 </button>
                 <button className="lt-opt" data-lt-value="enterprise">
-                  <span className="lt-badge">D</span><span>30+ people (enterprise program)</span>
+                  <span className="lt-badge">D</span><span>30+ people — this is a big one</span>
                 </button>
                 <button className="lt-opt" data-lt-value="not-sure">
                   <span className="lt-badge">E</span><span>Not sure</span>
