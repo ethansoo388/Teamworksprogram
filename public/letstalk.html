@@ -105,15 +105,16 @@
           flex-shrink: 0;
           }
           
-          /* Credibility strip — fills remaining space below Natasha, vertically centred */
+          /* Equal spacers flank Natasha+cred block — centres it vertically */
+          .lt-lp-spacer { flex: 1; }
+          
+          /* Credibility strip — natural height, sits below Natasha with gap, no bg */
           .lt-lp-cred {
-          flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
-          padding: 20px 28px;
-          background: #0F1724;
+          padding: 0 28px;
+          margin-top: 28px;
           text-align: center;
           z-index: 2;
           }
@@ -129,7 +130,7 @@
           letter-spacing: 0.01em;
           }
           .lt-lp-logos {
-          display: flex; gap: 22px;
+          display: flex; gap: 44px;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
@@ -435,10 +436,10 @@
           object-fit: cover;
           object-position: center top;
           }
-          .lt-lp-cred { padding: 10px 16px; }
+          .lt-lp-cred { padding: 0 16px; margin-top: 14px; }
           .lt-lp-sep { margin-bottom: 8px; }
           .lt-lp-tagline { font-size: 11px; margin-bottom: 8px; }
-          .lt-lp-logos { gap: 12px; }
+          .lt-lp-logos { gap: 20px; }
           .lt-lp-logo-img { max-height: 22px; }
           .lt-lp-logo { top: 16px; left: 18px; }
           .lt-logo { height: 20px; }
@@ -477,6 +478,8 @@
                 <img height="56" width="134" class="lt-logo" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
               </a>
             </div>
+            <div class="lt-lp-spacer">
+            </div>
             <img height="512" width="512" class="lt-lp-natasha" src="assets/img/main/ci-agile-staff-natasha-2.webp" alt="Natasha, CI Agile Advisor"/>
             <div class="lt-lp-cred">
               <div class="lt-lp-sep">
@@ -488,6 +491,8 @@
                 <img height="128" width="236" class="lt-lp-logo-img" src="assets/img/main/logo-hsbc.webp" alt="HSBC"/>
                 <img height="128" width="194" class="lt-lp-logo-img" src="assets/img/main/logo-cisco.webp" alt="Cisco"/>
               </div>
+            </div>
+            <div class="lt-lp-spacer">
             </div>
           </div>
           <div class="lt-cover-right">
@@ -514,6 +519,8 @@
                   <img height="56" width="134" class="lt-logo" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
                 </a>
               </div>
+              <div class="lt-lp-spacer">
+              </div>
               <img height="512" width="512" class="lt-lp-natasha" src="assets/img/main/ci-agile-staff-natasha-2.webp" alt="Natasha, CI Agile Advisor"/>
               <div class="lt-lp-cred">
                 <div class="lt-lp-sep">
@@ -525,6 +532,8 @@
                   <img height="128" width="236" class="lt-lp-logo-img" src="assets/img/main/logo-hsbc.webp" alt="HSBC"/>
                   <img height="128" width="194" class="lt-lp-logo-img" src="assets/img/main/logo-cisco.webp" alt="Cisco"/>
                 </div>
+              </div>
+              <div class="lt-lp-spacer">
               </div>
             </div>
             <div id="lt-panel-right">

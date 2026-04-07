@@ -47,15 +47,16 @@ export function LetsTalkPage() {
           flex-shrink: 0;
         }
 
-        /* Credibility strip — fills remaining space below Natasha, vertically centred */
+        /* Equal spacers flank Natasha+cred block — centres it vertically */
+        .lt-lp-spacer { flex: 1; }
+
+        /* Credibility strip — natural height, sits below Natasha with gap, no bg */
         .lt-lp-cred {
-          flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
-          padding: 20px 28px;
-          background: #0F1724;
+          padding: 0 28px;
+          margin-top: 28px;
           text-align: center;
           z-index: 2;
         }
@@ -71,7 +72,7 @@ export function LetsTalkPage() {
           letter-spacing: 0.01em;
         }
         .lt-lp-logos {
-          display: flex; gap: 22px;
+          display: flex; gap: 44px;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
@@ -377,10 +378,10 @@ export function LetsTalkPage() {
             object-fit: cover;
             object-position: center top;
           }
-          .lt-lp-cred { padding: 10px 16px; }
+          .lt-lp-cred { padding: 0 16px; margin-top: 14px; }
           .lt-lp-sep { margin-bottom: 8px; }
           .lt-lp-tagline { font-size: 11px; margin-bottom: 8px; }
-          .lt-lp-logos { gap: 12px; }
+          .lt-lp-logos { gap: 20px; }
           .lt-lp-logo-img { max-height: 22px; }
           .lt-lp-logo { top: 16px; left: 18px; }
           .lt-logo { height: 20px; }
@@ -425,6 +426,7 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
+          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
             <div className="lt-lp-sep"></div>
@@ -436,6 +438,7 @@ export function LetsTalkPage() {
               <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
+          <div className="lt-lp-spacer"></div>
         </div>
 
         {/* Right: headline + CTA */}
@@ -473,6 +476,7 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
+          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
             <div className="lt-lp-sep"></div>
@@ -484,6 +488,7 @@ export function LetsTalkPage() {
               <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
+          <div className="lt-lp-spacer"></div>
         </div>
 
         {/* ── Right panel: progress + steps + nav ── */}
