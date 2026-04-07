@@ -29,8 +29,10 @@ export function LetsTalkPage() {
           flex: 0 0 38%;
           display: flex;
           flex-direction: column;
-          padding-top: 60px;
         }
+
+        /* Single spacer above Natasha — pushes her to vertical centre */
+        .lt-lp-spacer { flex: 1; }
 
         /* CI Agile logo — top-left overlay */
         .lt-lp-logo {
@@ -209,7 +211,7 @@ export function LetsTalkPage() {
 
         /* ── Question text ── */
         .lt-question {
-          font-size: clamp(2.3rem, 4.4vw, 3.4rem);
+          font-size: clamp(1.75rem, 3.3vw, 2.55rem);
           font-weight: 700; color: #0F1724;
           line-height: 1.25; margin: 0 0 20px 0;
         }
@@ -224,7 +226,7 @@ export function LetsTalkPage() {
           padding: 13px 18px;
           border: 1.5px solid rgba(255,255,255,0.45); border-radius: 6px;
           background: transparent; color: #0F1724;
-          font-size: 28px; text-align: left; cursor: pointer; width: 100%;
+          font-size: 21px; text-align: left; cursor: pointer; width: 100%;
           transition: border-color 0.15s, background 0.15s, color 0.15s;
           font-family: inherit;
         }
@@ -366,7 +368,6 @@ export function LetsTalkPage() {
           #lt-panel-left {
             flex: none;
             height: 38vh;
-            padding-top: 48px;
           }
           .lt-lp-natasha {
             max-height: 20vh;
@@ -421,6 +422,7 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
+          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
@@ -468,6 +470,7 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
+          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
