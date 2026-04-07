@@ -1268,7 +1268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (submittingMsg) submittingMsg.hidden = false;
         if (submitError)   submitError.hidden   = true;
 
-        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4qs2PdLhwc0jsym3VisNOl4iGRuYIm8Ot4LVgiJZVYtG5LAyBiy19OwRXiILzLTFwpQ/exec';
+        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxShpuzJaLGQ8MHOvdPf6ocxf6ChBWncnB9rYmDV7yW6dfPeI97O8IMqbboHFCahRwVgA/exec';
         var params = new URLSearchParams({
           sheetName:  'LetsTalkForm',
           fullName:   name,
