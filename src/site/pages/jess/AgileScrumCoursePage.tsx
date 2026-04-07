@@ -164,7 +164,7 @@ export function AgileScrumCoursePage() {
 
             <div className="flex flex-col items-center lg:items-start">
               <a 
-                href="/contactus.html?source=nova-scrum201&cta=talk-private-run#contact-form"
+                href="/letstalk.html?from=nova-agile-scrum&section=hero"
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-sm sm:text-base whitespace-nowrap mb-2"
               >
                 <span>Talk to Program Advisor</span>
@@ -850,7 +850,7 @@ export function AgileScrumCoursePage() {
             <p className="text-sm text-slate-600 mb-4">
               Contact us to discuss the right delivery approach for your organization
             </p>
-            <a href="/contactus.html?source=nova-scrum201&cta=discuss-delivery-options#contact-form"
+            <a href="/letstalk.html?from=nova-agile-scrum&section=delivery-options"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
             >
               <span>Talk to Program Advisor</span>
@@ -876,7 +876,7 @@ export function AgileScrumCoursePage() {
               This is a no-obligation conversation to assess fit and approach.
             </p>
             
-            <a href="/contactus.html?source=nova-scrum201&cta=schedule-corporate-discussion#contact-form"
+            <a href="/letstalk.html?from=nova-agile-scrum&section=corporate-cta"
               className="px-10 py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg text-lg"
             >
               Talk to Program Advisor

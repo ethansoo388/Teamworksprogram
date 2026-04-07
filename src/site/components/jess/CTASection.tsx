@@ -23,7 +23,7 @@ export function CTASection() {
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
             >
               <a
-                href="/contactus.html?source=jess-home&cta=schedule-executive-briefing#contact-form"
+                href="/letstalk.html?from=jess-home&section=cta"
                 className="inline-flex items-center"
               >
                 <Calendar className="mr-2" size={20} />

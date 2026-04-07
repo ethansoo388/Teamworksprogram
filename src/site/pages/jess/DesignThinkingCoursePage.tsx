@@ -172,7 +172,7 @@ export function DesignThinkingCoursePage() {
               {/* CTA */}
               <div className="flex flex-col items-start mb-3">
                 <a
-                  href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
+                  href="/letstalk.html?from=nova-design-thinking&section=hero"
                   className="inline-flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 shadow-lg mb-2 text-sm lg:text-base"
                 >
                   <span>Talk to Program Advisor</span>
@@ -738,7 +738,7 @@ export function DesignThinkingCoursePage() {
             </div>
 
             <a
-              href="/contactus.html?source=nova-design-thinking&cta=discuss-private-corporate-run#contact-form"
+              href="/letstalk.html?from=nova-design-thinking&section=cta"
               className="inline-flex items-center gap-2 px-10 py-4 bg-white text-slate-900 font-bold text-lg rounded-lg hover:bg-slate-100 transition-all duration-300 mb-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span>Talk to Program Advisor</span>

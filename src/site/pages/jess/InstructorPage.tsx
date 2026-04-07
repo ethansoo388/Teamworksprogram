@@ -449,7 +449,7 @@ export function InstructorPage() {
                 Book a Seat →
               </a>
               <a
-                href="/contactus.html?source=jess-instructor&cta=program-advisor#contact-form"
+                href="/letstalk.html?from=jess-instructor&section=cta"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-white/5 transition-all text-base"
                 style={{ borderColor: 'rgba(34,211,238,0.5)' }}
               >

@@ -72,7 +72,7 @@ function HeroSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="/contactus.html"
+                  href="/letstalk.html?from=main-home&section=hero"
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 md:bg-gray-900 md:hover:bg-gray-800 md:text-white font-normal text-base h-12 px-8 transition-colors"
                 >
                   Talk to an Expert
@@ -638,7 +638,7 @@ function FinalCTASection() {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/contactus.html"
+            href="/letstalk.html?from=main-home&section=cta"
             className="inline-flex items-center justify-center gap-2 h-12 px-8 bg-[#0066CC] hover:bg-[#0052A3] text-white font-normal text-base transition-all"
           >
             Schedule Consultation

@@ -137,7 +137,7 @@ export function TeamLevelTrainingPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="/contactus.html#contact-form"
+                    href="/letstalk.html?from=jess-team-level&section=hero"
                     className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 text-lg overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -798,7 +798,7 @@ export function TeamLevelTrainingPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
               <a
-                href="/contactus.html#contact-form"
+                href="/letstalk.html?from=jess-team-level&section=cta"
                 className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 text-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

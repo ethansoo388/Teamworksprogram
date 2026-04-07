@@ -232,7 +232,7 @@ export function ClassSchedulePage() {
             {/* Primary and Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
-                href="/contactus.html?source=jess-class-schedule&cta=request-corporate-proposal#contact-form"
+                href="/letstalk.html?from=jess-class-schedule&section=enrollment-cta"
                 className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-medium text-lg hover:bg-amber-400 transition-colors duration-300 w-full sm:w-auto justify-center"
               >
                 Talk to a Program Advisor

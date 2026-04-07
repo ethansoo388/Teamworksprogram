@@ -298,7 +298,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                           </h4>
                         </a>
                         <a
-                          href="/contactus.html"
+                          href="/letstalk.html?from=main-nav&section=navbar"
                           className="block rounded-xl md:rounded-2xl p-4 md:p-5 no-underline"
                           style={{
                             background: 'linear-gradient(135deg, #7C3AED 0%, #3B0764 100%)',
@@ -468,7 +468,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                           </h4>
                         </a>
                         <a
-                          href="/contactus.html"
+                          href="/letstalk.html?from=main-nav&section=navbar"
                           className="block rounded-2xl p-5 no-underline"
                           style={{
                             background: 'linear-gradient(135deg, #7C3AED 0%, #3B0764 100%)',
@@ -634,7 +634,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                           </h4>
                         </a>
                         <a
-                          href="/contactus.html"
+                          href="/letstalk.html?from=main-nav&section=navbar"
                           className="block rounded-2xl p-5 no-underline"
                           style={{
                             background: 'linear-gradient(135deg, #7C3AED 0%, #3B0764 100%)',
@@ -664,7 +664,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
               Student Portal
             </a>
             <a
-              href="/contactus.html"
+              href="/letstalk.html?from=main-nav&section=navbar"
               className="px-6 py-2.5 bg-[#0066FF] text-white text-sm font-medium rounded-full hover:bg-[#0052CC] transition-colors no-underline"
             >
               Talk to an Expert
@@ -834,7 +834,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                       </h5>
                     </a>
                     <a
-                      href="/contactus.html"
+                      href="/letstalk.html?from=main-nav&section=navbar"
                       className="block rounded-xl p-4 no-underline"
                       style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #3B0764 100%)' }}
                       data-mobile-close
@@ -927,7 +927,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                 Student Portal
               </a>
               <a
-                href="/contactus.html"
+                href="/letstalk.html?from=main-nav&section=navbar"
                 className="block w-full px-6 py-3 bg-[#0066FF] text-white text-center font-medium rounded-full hover:bg-[#0052CC] transition-colors no-underline"
                 data-mobile-close
               >

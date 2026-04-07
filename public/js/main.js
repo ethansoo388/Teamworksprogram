@@ -981,9 +981,9 @@ document.addEventListener('DOMContentLoaded', () => {
       intent: '',        // training | consulting | general
       role: '',          // individual | team-leader | executive | other
       roleOther: '',
-      hasClass: false,   // checkbox on step 2
-      interest3a: '',    // step 3a selection
-      interest3b: '',    // step 3b selection
+      hasClass: false,   // checkbox on step 1 (training only)
+      interest3a: '',    // step 3a selection (default interest)
+      interest3b: '',    // step 3b selection (specific class)
       interestOther: '',
       groupSize: '',     // step 4 selection
     };
@@ -997,23 +997,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnDown      = document.getElementById('lt-btn-down');
     const contactStepNumEl = document.getElementById('lt-contact-step-num');
 
-    // ── Progress calculation ──
+    // ── Progress calculation — always 5 steps ──
     function getProgress(stepId) {
-      const path = state.intent === 'training'
-        ? ['1', '2', state.hasClass ? '3b' : '3a', '4', '5']
-        : ['1', '5'];
+      const path = ['1', '2', state.hasClass ? '3b' : '3a', '4', '5'];
       const idx = path.indexOf(stepId);
       return idx < 0 ? 0 : (idx + 1) / path.length * 100;
     }
 
     function updateContactStepNum() {
       if (!contactStepNumEl) return;
-      contactStepNumEl.textContent = state.intent === 'training' ? '5' : '2';
+      contactStepNumEl.textContent = '5';
     }
 
-    // ── Navigation logic ──
+    // ── Navigation logic — all intents go 1→2→3→4→5 ──
     function getNextId(id) {
-      if (id === '1') return state.intent === 'training' ? '2' : '5';
+      if (id === '1') return '2';
       if (id === '2') return state.hasClass ? '3b' : '3a';
       if (id === '3a' || id === '3b') return '4';
       if (id === '4') return '5';
@@ -1102,6 +1100,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (stepId === '1') {
         state.intent = value;
+        // Show training-only checkbox only when Training is selected
+        var trainingExtra = document.getElementById('lt-training-extra');
+        if (trainingExtra) trainingExtra.hidden = (value !== 'training');
+        // Reset hasClass if switching away from training
+        if (value !== 'training') {
+          state.hasClass = false;
+          var cb = document.getElementById('lt-has-class');
+          if (cb) cb.checked = false;
+        }
       } else if (stepId === '2') {
         state.role = value;
         const wrap = document.getElementById('lt-role-other-wrap');

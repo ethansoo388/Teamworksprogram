@@ -220,7 +220,7 @@ export function LetsTalkPage() {
           <h2 className="lt-question">Please tell us how we can help?</h2>
           <div className="lt-options">
             <button className="lt-opt" data-lt-value="training">
-              <span className="lt-badge">A</span><span>A training</span>
+              <span className="lt-badge">A</span><span>Training</span>
             </button>
             <button className="lt-opt" data-lt-value="consulting">
               <span className="lt-badge">B</span><span>Consulting</span>
@@ -228,6 +228,14 @@ export function LetsTalkPage() {
             <button className="lt-opt" data-lt-value="general">
               <span className="lt-badge">C</span><span>General Inquiry</span>
             </button>
+          </div>
+          {/* Shown only when Training is selected */}
+          <div className="lt-checkbox-wrap" id="lt-training-extra" hidden>
+            <label className="lt-checkbox-label">
+              <input type="checkbox" id="lt-has-class" />
+              <span className="lt-checkbox-custom"></span>
+              <span>I already have a specific training class in mind</span>
+            </label>
           </div>
           <div className="lt-actions">
             <button className="lt-ok-btn" data-lt-ok>OK <span>✓</span></button>
@@ -264,13 +272,6 @@ export function LetsTalkPage() {
               placeholder="Please describe your role..."
               autoComplete="off"
             />
-          </div>
-          <div className="lt-checkbox-wrap">
-            <label className="lt-checkbox-label">
-              <input type="checkbox" id="lt-has-class" />
-              <span className="lt-checkbox-custom"></span>
-              <span>I already have a specific training class in mind</span>
-            </label>
           </div>
           <div className="lt-actions">
             <button className="lt-ok-btn" data-lt-ok>OK <span>✓</span></button>
@@ -409,7 +410,7 @@ export function LetsTalkPage() {
             </div>
             <div className="lt-field">
               <label htmlFor="lt-phone">
-                Phone <span className="lt-optional">(optional)</span>
+                WhatsApp number <span className="lt-optional">(optional)</span>
               </label>
               <input
                 type="tel" id="lt-phone" className="lt-text-input"

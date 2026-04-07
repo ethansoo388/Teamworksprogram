@@ -37,7 +37,7 @@ export function LeadershipTrainingPage() {
             Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
           </p>
           <div className="flex flex-col gap-3 mb-5">
-            <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+            <a href="/letstalk.html?from=jess-leadership&section=hero" className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
               Talk to a Program Advisor
             </a>
             <a href="#program" className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
@@ -83,7 +83,7 @@ export function LeadershipTrainingPage() {
                   Used by Google, Amazon, Tesla, Spotify — and now delivering results across Asia Pacific.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-4">
-                  <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+                  <a href="/letstalk.html?from=jess-leadership&section=hero" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
                     Talk to a Program Advisor
                   </a>
                   <a href="#program" className="inline-flex items-center gap-3 px-8 py-4 border-2 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ borderColor: 'rgba(34,211,238,0.5)' }}>
@@ -557,7 +557,7 @@ export function LeadershipTrainingPage() {
                 <li>Tool-only Agile courses focused on mechanics</li>
                 <li>Theory-heavy certification without real-world application</li>
               </ul>
-              <a href="/contactus.html?source=jess-leadership-training&cta=who-this-is-for#contact-form" className="text-slate-500 hover:text-cyan-400 text-xs mt-6 italic underline block transition-colors">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</a>
+              <a href="/letstalk.html?from=jess-leadership&section=who-is-it-for" className="text-slate-500 hover:text-cyan-400 text-xs mt-6 italic underline block transition-colors">Not sure? Talk to a Program Advisor — we'll tell you honestly if this is the right fit.</a>
             </div>
           </div>
         </div>
@@ -646,7 +646,7 @@ export function LeadershipTrainingPage() {
           <div data-reveal className="bg-slate-800 rounded-2xl p-8 text-center border border-blue-500/20">
             <p className="text-white font-semibold text-lg mb-2">Take both courses for full-system mastery</p>
             <p className="text-slate-400 font-light text-sm max-w-xl mx-auto mb-6">Course 1 builds strategic clarity. Course 2 activates execution at the team level. Together: a complete enterprise agility operating model.</p>
-            <a href="/contactus.html?source=jess-leadership-training&cta=both-courses-banner#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+            <a href="/letstalk.html?from=jess-leadership&section=both-courses" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
               Talk to a Program Advisor →
             </a>
           </div>
@@ -876,7 +876,7 @@ export function LeadershipTrainingPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center" data-reveal>
           <p className="text-white text-2xl font-bold mb-2">Seen enough? Let's talk.</p>
           <p className="text-slate-400 font-light mb-8">Talk to a Program Advisor — no obligation, we'll tell you honestly if this is the right fit.</p>
-          <a href="/contactus.html?source=jess-leadership-training&cta=mid-page-results#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+          <a href="/letstalk.html?from=jess-leadership&section=mid-page-cta" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
             Talk to a Program Advisor →
           </a>
         </div>
@@ -1097,7 +1097,7 @@ export function LeadershipTrainingPage() {
           </div>
           <div className="text-center pt-2 pb-4">
             <p className="text-slate-400 text-sm mb-6">Scrum Sage access is included for all enrolled students.</p>
-            <a href="/contactus.html?source=jess-leadership-training&cta=ai-section#contact-form" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
+            <a href="/letstalk.html?from=jess-leadership&section=ai-section" className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}>
               Talk to a Program Advisor →
             </a>
           </div>
@@ -1158,7 +1158,7 @@ export function LeadershipTrainingPage() {
             Join the leaders across Asia Pacific who are redesigning how their organisations deliver results.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contactus.html?source=jess-leadership-training&cta=talk-to-program-advisor#contact-form" className="inline-flex items-center gap-3 px-10 py-5 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 20px 40px rgba(59,130,246,0.25)' }}>
+            <a href="/letstalk.html?from=jess-leadership&section=final-cta" className="inline-flex items-center gap-3 px-10 py-5 text-white font-semibold rounded-lg transition-all text-base" style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 20px 40px rgba(59,130,246,0.25)' }}>
               Talk to a Program Advisor →
             </a>
             <a href="/jess/class-schedule.html" className="inline-flex items-center gap-3 px-10 py-5 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all text-base" style={{ border: '2px solid rgba(34,211,238,0.5)' }}>
