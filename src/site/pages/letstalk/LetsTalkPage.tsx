@@ -29,6 +29,7 @@ export function LetsTalkPage() {
           flex: 0 0 38%;
           display: flex;
           flex-direction: column;
+          padding-top: 60px;
         }
 
         /* CI Agile logo — top-left overlay */
@@ -47,23 +48,17 @@ export function LetsTalkPage() {
           flex-shrink: 0;
         }
 
-        /* Equal spacers flank Natasha+cred block — centres it vertically */
-        .lt-lp-spacer { flex: 1; }
-
-        /* Credibility strip — natural height, sits below Natasha with gap, no bg */
+        /* Credibility strip — fills space below Natasha, content vertically centred
+           so gap above == gap below (equal breathing room on both sides) */
         .lt-lp-cred {
+          flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
           padding: 0 28px;
-          margin-top: 28px;
           text-align: center;
           z-index: 2;
-        }
-        .lt-lp-sep {
-          width: 50%; height: 1px;
-          background: rgba(255,255,255,0.18);
-          margin: 0 auto 16px;
         }
         .lt-lp-tagline {
           font-size: 15px; font-weight: 500;
@@ -107,7 +102,7 @@ export function LetsTalkPage() {
           display: inline-block;
           font-size: 11px; font-weight: 700;
           letter-spacing: 0.1em; text-transform: uppercase;
-          color: rgba(15,23,36,0.6);
+          color: rgba(15,23,36,0.85);
           margin-bottom: 18px;
         }
         .lt-cover-headline {
@@ -118,12 +113,12 @@ export function LetsTalkPage() {
         }
         .lt-cover-subtitle {
           font-size: 16px; line-height: 1.65;
-          color: rgba(15,23,36,0.75);
+          color: rgba(15,23,36,0.9);
           margin: 0 0 26px 0;
         }
         .lt-cover-time {
           display: flex; align-items: center; gap: 7px;
-          font-size: 13px; color: rgba(15,23,36,0.65);
+          font-size: 13px; color: rgba(15,23,36,0.85);
           margin-bottom: 34px;
         }
         #lt-cover-start {
@@ -202,19 +197,19 @@ export function LetsTalkPage() {
         /* ── Question number ── */
         .lt-qnum {
           display: flex; align-items: center; gap: 8px;
-          margin-bottom: 12px; font-size: 12px; font-weight: 500;
-          color: rgba(15,23,36,0.55);
+          margin-bottom: 12px; font-size: 14px; font-weight: 500;
+          color: rgba(15,23,36,0.85);
         }
         .lt-qnum-badge {
           display: inline-flex; align-items: center; justify-content: center;
-          width: 20px; height: 20px;
-          background: rgba(15,23,36,0.12); border-radius: 4px;
-          font-size: 10px; font-weight: 700; color: rgba(15,23,36,0.65);
+          width: 24px; height: 24px;
+          background: rgba(15,23,36,0.15); border-radius: 4px;
+          font-size: 12px; font-weight: 700; color: rgba(15,23,36,0.9);
         }
 
         /* ── Question text ── */
         .lt-question {
-          font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+          font-size: clamp(2.3rem, 4.4vw, 3.4rem);
           font-weight: 700; color: #0F1724;
           line-height: 1.25; margin: 0 0 20px 0;
         }
@@ -225,11 +220,11 @@ export function LetsTalkPage() {
           gap: 6px; margin-bottom: 18px;
         }
         .lt-opt {
-          display: flex; align-items: center; gap: 10px;
-          padding: 10px 14px;
+          display: flex; align-items: center; gap: 12px;
+          padding: 13px 18px;
           border: 1.5px solid rgba(255,255,255,0.45); border-radius: 6px;
           background: transparent; color: #0F1724;
-          font-size: 14px; text-align: left; cursor: pointer; width: 100%;
+          font-size: 28px; text-align: left; cursor: pointer; width: 100%;
           transition: border-color 0.15s, background 0.15s, color 0.15s;
           font-family: inherit;
         }
@@ -245,9 +240,9 @@ export function LetsTalkPage() {
         }
         .lt-badge {
           display: inline-flex; align-items: center; justify-content: center;
-          width: 22px; height: 22px; min-width: 22px;
-          border: 1px solid rgba(15,23,36,0.2); border-radius: 4px;
-          font-size: 10px; font-weight: 700; color: rgba(15,23,36,0.4);
+          width: 32px; height: 32px; min-width: 32px;
+          border: 1.5px solid rgba(15,23,36,0.5); border-radius: 4px;
+          font-size: 14px; font-weight: 700; color: rgba(15,23,36,0.75);
           background: transparent;
           transition: background 0.15s, color 0.15s, border-color 0.15s;
         }
@@ -259,26 +254,26 @@ export function LetsTalkPage() {
         /* ── Text inputs (underline style) ── */
         .lt-text-input {
           width: 100%; background: transparent;
-          border: none; border-bottom: 1.5px solid rgba(15,23,36,0.35);
+          border: none; border-bottom: 1.5px solid rgba(15,23,36,0.6);
           color: #0F1724; font-size: 15px; padding: 7px 0; outline: none;
           transition: border-color 0.2s; font-family: inherit;
         }
         .lt-text-input:focus { border-bottom-color: #0F1724; }
-        .lt-text-input::placeholder { color: rgba(15,23,36,0.35); }
+        .lt-text-input::placeholder { color: rgba(15,23,36,0.6); }
         .lt-text-input.lt-error { border-bottom-color: #ef4444; }
 
         /* ── Checkbox ── */
         .lt-checkbox-wrap { margin: 10px 0 18px; }
         .lt-checkbox-label {
           display: flex; align-items: flex-start; gap: 10px;
-          cursor: pointer; font-size: 13px; color: rgba(15,23,36,0.65);
+          cursor: pointer; font-size: 13px; color: rgba(15,23,36,0.85);
           line-height: 1.5; user-select: none;
         }
         .lt-checkbox-label input[type="checkbox"] { display: none; }
         .lt-checkbox-custom {
           display: inline-flex; align-items: center; justify-content: center;
           width: 18px; height: 18px; min-width: 18px;
-          border: 1.5px solid rgba(15,23,36,0.35); border-radius: 3px;
+          border: 1.5px solid rgba(15,23,36,0.6); border-radius: 3px;
           background: transparent; margin-top: 1px;
           transition: background 0.15s, border-color 0.15s;
           font-size: 11px; font-weight: 700; color: #fff;
@@ -298,11 +293,11 @@ export function LetsTalkPage() {
           transition: background 0.15s; font-family: inherit;
         }
         .lt-ok-btn:hover { background: #1e293b; }
-        .lt-hint { font-size: 11px; color: rgba(15,23,36,0.5); }
+        .lt-hint { font-size: 13px; color: rgba(15,23,36,0.8); }
         .lt-hint kbd {
           display: inline-flex; align-items: center; padding: 1px 5px;
-          border: 1px solid rgba(15,23,36,0.3); border-radius: 3px;
-          font-size: 10px; font-family: inherit; color: rgba(15,23,36,0.5);
+          border: 1px solid rgba(15,23,36,0.6); border-radius: 3px;
+          font-size: 12px; font-family: inherit; color: rgba(15,23,36,0.8);
         }
 
         /* ── Contact step fields ── */
@@ -312,7 +307,7 @@ export function LetsTalkPage() {
         }
         .lt-field label {
           display: block; font-size: 10px; font-weight: 600;
-          color: rgba(15,23,36,0.55); text-transform: uppercase;
+          color: rgba(15,23,36,0.85); text-transform: uppercase;
           letter-spacing: 0.08em; margin-bottom: 5px;
         }
         .lt-optional { font-weight: 400; text-transform: none; letter-spacing: 0; }
@@ -335,7 +330,7 @@ export function LetsTalkPage() {
         }
         .lt-submit-btn:hover { opacity: 0.85; }
         .lt-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .lt-submitting-msg { color: rgba(15,23,36,0.55); font-size: 13px; margin-top: 8px; }
+        .lt-submitting-msg { color: rgba(15,23,36,0.85); font-size: 13px; margin-top: 8px; }
         .lt-submitting-msg[hidden] { display: none; }
         .lt-submit-error { color: #7f1d1d; font-size: 12px; margin-top: 8px; }
         .lt-submit-error[hidden] { display: none; }
@@ -371,15 +366,15 @@ export function LetsTalkPage() {
           #lt-panel-left {
             flex: none;
             height: 38vh;
+            padding-top: 48px;
           }
           .lt-lp-natasha {
-            max-height: 26vh;
+            max-height: 20vh;
             width: 100%; height: auto;
             object-fit: cover;
             object-position: center top;
           }
-          .lt-lp-cred { padding: 0 16px; margin-top: 14px; }
-          .lt-lp-sep { margin-bottom: 8px; }
+          .lt-lp-cred { padding: 0 16px; }
           .lt-lp-tagline { font-size: 11px; margin-bottom: 8px; }
           .lt-lp-logos { gap: 20px; }
           .lt-lp-logo-img { max-height: 22px; }
@@ -426,10 +421,8 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
-          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
-            <div className="lt-lp-sep"></div>
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
             <div className="lt-lp-logos">
               <img className="lt-lp-logo-img" src={logoShell} alt="Shell" />
@@ -438,7 +431,6 @@ export function LetsTalkPage() {
               <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
-          <div className="lt-lp-spacer"></div>
         </div>
 
         {/* Right: headline + CTA */}
@@ -476,10 +468,8 @@ export function LetsTalkPage() {
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
-          <div className="lt-lp-spacer"></div>
           <img className="lt-lp-natasha" src={natasha} alt="Natasha, CI Agile Advisor" />
           <div className="lt-lp-cred">
-            <div className="lt-lp-sep"></div>
             <p className="lt-lp-tagline">Trusted by 500+ organisations across Asia</p>
             <div className="lt-lp-logos">
               <img className="lt-lp-logo-img" src={logoShell} alt="Shell" />
@@ -488,7 +478,6 @@ export function LetsTalkPage() {
               <img className="lt-lp-logo-img" src={logoCisco} alt="Cisco" />
             </div>
           </div>
-          <div className="lt-lp-spacer"></div>
         </div>
 
         {/* ── Right panel: progress + steps + nav ── */}
