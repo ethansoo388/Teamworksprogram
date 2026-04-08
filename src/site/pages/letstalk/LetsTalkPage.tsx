@@ -170,9 +170,10 @@ export function LetsTalkPage() {
         #lt-body {
           flex: 1;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 28px 48px 80px;
+          padding: 28px 48px 20px;
           overflow: hidden;
         }
 
@@ -338,10 +339,12 @@ export function LetsTalkPage() {
         .lt-submit-error { color: #7f1d1d; font-size: 12px; margin-top: 8px; }
         .lt-submit-error[hidden] { display: none; }
 
-        /* ── Nav arrows (absolute inside right panel) ── */
+        /* ── Nav arrows — in-flow, left-aligned below OK button ── */
         #lt-nav-arrows {
-          position: absolute; bottom: 20px; right: 20px;
-          display: flex; gap: 4px; z-index: 10;
+          display: flex; gap: 4px;
+          width: 100%; max-width: 580px;
+          margin-top: 16px;
+          align-self: center; /* centres the 580px block; items inside are left-aligned */
         }
         .lt-nav-btn {
           display: flex; align-items: center; justify-content: center;
@@ -407,7 +410,7 @@ export function LetsTalkPage() {
             padding: 22px 28px;
             overflow: hidden;
           }
-          .lt-cover-content { max-width: 100%; }
+          .lt-cover-content { max-width: 100%; margin: auto; }
           .lt-cover-label {
             font-size: 10px;
             color: rgba(255,255,255,0.55);
@@ -433,21 +436,22 @@ export function LetsTalkPage() {
           #lt-quiz { flex-direction: column; }
           #lt-panel-right { width: 100%; flex: 1; }
 
-          /* Body: start from top, no huge bottom padding (nav arrows now in-flow) */
+          /* Body: column, start from top */
           #lt-body {
             padding: 28px 28px 16px;
+            flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             overflow: hidden;
           }
           .lt-step { max-width: 100%; }
 
-          /* Nav arrows: in-flow below OK button (not floating in corner) */
+          /* Nav arrows: in-flow, left-aligned below OK button */
           #lt-nav-arrows {
             position: static;
-            margin-top: 12px;
+            margin-top: 10px;
+            max-width: 100%;
             align-self: flex-start;
-            justify-content: flex-start;
           }
 
           /* Question number */
@@ -794,14 +798,14 @@ export function LetsTalkPage() {
                 below the OK button. Desktop: position:absolute keeps them
                 pinned bottom-right of #lt-panel-right (positioned ancestor). */}
             <div id="lt-nav-arrows">
-              <button className="lt-nav-btn" id="lt-btn-up" aria-label="Previous question">
+              <button className="lt-nav-btn" id="lt-btn-up" aria-label="Previous">
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 9.5L7 4.5L12 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.5 2L4.5 7L9.5 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
-              <button className="lt-nav-btn" id="lt-btn-down" aria-label="Next question">
+              <button className="lt-nav-btn" id="lt-btn-down" aria-label="Next">
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M4.5 2L9.5 7L4.5 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
             </div>
