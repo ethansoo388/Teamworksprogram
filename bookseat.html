@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your seat on the JESS Leadership Training programme. A few quick questions and our Program Advisor will confirm everything with you.">
+    <link rel="canonical" href="https://www.ciagile.com/bookseat.html">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Book Your Seat - CI Agile</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Book Your Seat - CI Agile">
+    <meta property="og:description" content="Reserve your seat on the JESS Leadership Training programme. A few quick questions and our Program Advisor will confirm everything with you.">
+    <meta property="og:url" content="https://www.ciagile.com/bookseat.html">
+    <meta property="og:image" content="https://www.ciagile.com/assets/og/main-og-v2.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CI Agile">
+    <meta property="og:locale" content="en_SG">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Your Seat - CI Agile">
+    <meta name="twitter:description" content="Reserve your seat on the JESS Leadership Training programme. A few quick questions and our Program Advisor will confirm everything with you.">
+    <meta name="twitter:image" content="https://www.ciagile.com/assets/og/main-og-v2.webp">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.ciagile.com/#organization","name":"CI Agile","url":"https://www.ciagile.com"},{"@type":"WebSite","@id":"https://www.ciagile.com/#website","url":"https://www.ciagile.com","name":"CI Agile","publisher":{"@id":"https://www.ciagile.com/#organization"}},{"@type":"WebPage","@id":"https://www.ciagile.com/bookseat.html#webpage","url":"https://www.ciagile.com/bookseat.html","name":"Book Your Seat - CI Agile","description":"Reserve your seat on the JESS Leadership Training programme. A few quick questions and our Program Advisor will confirm everything with you.","isPartOf":{"@id":"https://www.ciagile.com/#website"},"about":{"@id":"https://www.ciagile.com/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.ciagile.com/bookseat.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ciagile.com/"},{"@type":"ListItem","position":2,"name":"Book Your Seat - CI Agile","item":"https://www.ciagile.com/bookseat.html"}]}]}</script>
+    <!-- Tailwind CSS CDN -->
+    <script>
+      // Extend Tailwind CDN config so Jess shadcn-style classes work
+      // (bg-background, text-foreground, border-border, etc.)
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+      theme: {
+      extend: {
+      colors: {
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+      popover: { DEFAULT: 'var(--popover)', foreground: 'var(--popover-foreground)' },
+      primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' },
+      secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+      muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+      accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+      destructive: { DEFAULT: 'var(--destructive)', foreground: 'var(--destructive-foreground)' },
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+      },
+      borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'calc(var(--radius) - 2px)',
+      lg: 'var(--radius)',
+      xl: 'calc(var(--radius) + 4px)',
+      },
+      },
+      },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script defer src="https://unpkg.com/lucide@0.487.0">
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="antialiased site-main">
+    <main>
+      <div id="bs-page">
+        <style>
+          html, body { height: 100%; overflow: hidden; margin: 0; padding: 0; }
+          main { height: 100%; overflow: hidden; } /* shell.html wraps in <main> */
+          #bs-page { height: 100vh; overflow: hidden; font-family: inherit; }
+          #bs-page * { box-sizing: border-box; }
+          
+          /* ── Utility ── */
+          .bs-hidden { display: none !important; }
+          
+          /* ════════════════════════════════════════
+          SHARED LEFT PANEL  (.bs-cover-left / #bs-panel-left)
+          Same layout on both cover and quiz pages.
+          ════════════════════════════════════════ */
+          .bs-cover-left,
+          #bs-panel-left {
+          background: #0F1724;
+          position: relative;
+          overflow: hidden;
+          flex: 0 0 38%;
+          display: flex;
+          flex-direction: column;
+          }
+          
+          /* Single spacer above Natasha — pushes her to vertical centre */
+          .bs-lp-spacer { flex: 1; }
+          
+          /* CI Agile logo — top-left overlay */
+          .bs-lp-logo {
+          position: absolute;
+          top: 24px; left: 28px;
+          z-index: 3;
+          }
+          .bs-logo { height: 24px; width: auto; display: block; }
+          
+          /* Natasha — full width, proportional height, flows from top */
+          .bs-lp-natasha {
+          width: 100%;
+          height: auto;
+          display: block;
+          flex-shrink: 0;
+          }
+          
+          /* Credibility strip */
+          .bs-lp-cred {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 28px;
+          text-align: center;
+          z-index: 2;
+          }
+          .bs-lp-tagline {
+          font-size: 15px; font-weight: 500;
+          color: rgba(255,255,255,0.65);
+          margin: 0 0 14px 0;
+          letter-spacing: 0.01em;
+          }
+          .bs-lp-logos {
+          display: flex; gap: 44px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          }
+          .bs-lp-logo-img {
+          height: auto; width: auto; max-height: 40px;
+          filter: brightness(0) invert(1);
+          opacity: 0.6;
+          display: block;
+          }
+          
+          /* ════════════════════════════════════════
+          COVER PAGE
+          ════════════════════════════════════════ */
+          #bs-cover {
+          display: flex;
+          height: 100vh;
+          overflow: hidden;
+          }
+          
+          /* Right: CI Agile bright blue */
+          .bs-cover-right {
+          flex: 1;
+          background: #14BEE8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 48px 52px;
+          }
+          .bs-cover-content { max-width: 460px; width: 100%; }
+          .bs-cover-label {
+          display: inline-block;
+          font-size: 11px; font-weight: 700;
+          letter-spacing: 0.1em; text-transform: uppercase;
+          color: rgba(15,23,36,0.85);
+          margin-bottom: 18px;
+          }
+          .bs-cover-headline {
+          font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+          font-weight: 800; line-height: 1.15;
+          color: #0F1724;
+          margin: 0 0 16px 0;
+          }
+          .bs-cover-subtitle {
+          font-size: 16px; line-height: 1.65;
+          color: rgba(15,23,36,0.9);
+          margin: 0 0 26px 0;
+          }
+          .bs-cover-time {
+          display: flex; align-items: center; gap: 7px;
+          font-size: 13px; color: rgba(15,23,36,0.85);
+          margin-bottom: 34px;
+          }
+          #bs-cover-start {
+          display: inline-flex; align-items: center; gap: 10px;
+          padding: 15px 30px;
+          background: #0F1724; color: #fff;
+          border: none; border-radius: 100px;
+          font-size: 15px; font-weight: 600;
+          cursor: pointer; font-family: inherit;
+          transition: background 0.2s, transform 0.15s;
+          letter-spacing: 0.01em;
+          }
+          #bs-cover-start:hover {
+          background: #1e293b;
+          transform: translateX(3px);
+          }
+          
+          /* ════════════════════════════════════════
+          QUIZ LAYOUT
+          ════════════════════════════════════════ */
+          #bs-quiz {
+          display: flex;
+          height: 100vh;
+          overflow: hidden;
+          }
+          
+          /* ── Right panel ── */
+          #bs-panel-right {
+          flex: 1;
+          background: #14BEE8;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          }
+          #bs-progress {
+          height: 3px;
+          background: rgba(255,255,255,0.2);
+          flex-shrink: 0;
+          }
+          #bs-progress-fill {
+          height: 100%; width: 0%;
+          background: rgba(255,255,255,0.9);
+          transition: width 0.5s ease;
+          }
+          #bs-body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 28px 48px 20px;
+          overflow: hidden;
+          }
+          
+          /* ── Steps ── */
+          .bs-step {
+          display: none; flex-direction: column;
+          width: 100%; max-width: 580px;
+          }
+          .bs-step.bs-active {
+          display: flex;
+          animation: bs-slide-in 0.35s ease forwards;
+          }
+          .bs-step.bs-active.bs-reverse {
+          animation: bs-slide-in-rev 0.35s ease forwards;
+          }
+          @keyframes bs-slide-in {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes bs-slide-in-rev {
+          from { opacity: 0; transform: translateY(-24px); }
+          to   { opacity: 1; transform: translateY(0); }
+          }
+          
+          /* ── Question number ── */
+          .bs-qnum {
+          display: flex; align-items: center; gap: 8px;
+          margin-bottom: 12px; font-size: 14px; font-weight: 500;
+          color: rgba(15,23,36,0.85);
+          }
+          .bs-qnum-badge {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 24px; height: 24px;
+          background: rgba(15,23,36,0.15); border-radius: 4px;
+          font-size: 12px; font-weight: 700; color: rgba(15,23,36,0.9);
+          }
+          
+          /* ── Question text ── */
+          .bs-question {
+          font-size: clamp(1.75rem, 3.3vw, 2.55rem);
+          font-weight: 700; color: #0F1724;
+          line-height: 1.25; margin: 0 0 20px 0;
+          }
+          
+          /* ── Option buttons ── */
+          .bs-options {
+          display: flex; flex-direction: column;
+          gap: 6px; margin-bottom: 18px;
+          }
+          .bs-opt {
+          display: flex; align-items: center; gap: 12px;
+          padding: 13px 18px;
+          border: 1.5px solid rgba(255,255,255,0.45); border-radius: 6px;
+          background: transparent; color: #0F1724;
+          font-size: 21px; text-align: left; cursor: pointer; width: 100%;
+          transition: border-color 0.15s, background 0.15s, color 0.15s;
+          font-family: inherit;
+          }
+          .bs-opt:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.15); color: #0F1724; }
+          .bs-opt.bs-selected {
+          background: #0F1724;
+          border-color: #0F1724; color: #fff;
+          }
+          .bs-opt.bs-selected .bs-badge {
+          background: rgba(255,255,255,0.15);
+          border-color: rgba(255,255,255,0.3);
+          color: #fff;
+          }
+          .bs-badge {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 32px; height: 32px; min-width: 32px;
+          border: 1.5px solid rgba(15,23,36,0.5); border-radius: 4px;
+          font-size: 14px; font-weight: 700; color: rgba(15,23,36,0.75);
+          background: transparent;
+          transition: background 0.15s, color 0.15s, border-color 0.15s;
+          }
+          
+          /* ── Text inputs (underline style) ── */
+          .bs-text-input {
+          width: 100%; background: transparent;
+          border: none; border-bottom: 1.5px solid rgba(15,23,36,0.6);
+          color: #0F1724; font-size: 15px; padding: 7px 0; outline: none;
+          transition: border-color 0.2s; font-family: inherit;
+          }
+          .bs-text-input:focus { border-bottom-color: #0F1724; }
+          .bs-text-input::placeholder { color: rgba(15,23,36,0.6); }
+          .bs-text-input.bs-error { border-bottom-color: #ef4444; }
+          
+          /* ── Actions row (OK button + hint) ── */
+          .bs-actions { display: flex; align-items: center; gap: 12px; }
+          .bs-ok-btn {
+          display: inline-flex; align-items: center; gap: 8px;
+          padding: 10px 20px; background: #0F1724; color: #fff;
+          border: none; border-radius: 6px;
+          font-size: 13px; font-weight: 600; cursor: pointer;
+          transition: background 0.15s; font-family: inherit;
+          }
+          .bs-ok-btn:hover { background: #1e293b; }
+          .bs-hint { font-size: 13px; color: rgba(15,23,36,0.8); }
+          .bs-hint kbd {
+          display: inline-flex; align-items: center; padding: 1px 5px;
+          border: 1px solid rgba(15,23,36,0.6); border-radius: 3px;
+          font-size: 12px; font-family: inherit; color: rgba(15,23,36,0.8);
+          }
+          
+          /* ── Contact step fields ── */
+          .bs-contact-fields {
+          display: flex; flex-direction: column;
+          gap: 18px; margin-bottom: 22px;
+          }
+          .bs-field label {
+          display: block; font-size: 10px; font-weight: 600;
+          color: rgba(15,23,36,0.85); text-transform: uppercase;
+          letter-spacing: 0.08em; margin-bottom: 5px;
+          }
+          .bs-optional { font-weight: 400; text-transform: none; letter-spacing: 0; }
+          .bs-field-error { color: #7f1d1d; font-size: 12px; margin-top: 5px; }
+          .bs-field-error[hidden] { display: none; }
+          
+          /* ── Optional row: Company + WhatsApp ── */
+          .bs-contact-optional-row {
+          display: flex; flex-direction: column; gap: 18px;
+          }
+          
+          /* ── Submit button ── */
+          .bs-submit-btn {
+          display: inline-flex; align-items: center; gap: 10px;
+          padding: 13px 26px;
+          background: #0F1724;
+          color: #fff; border: none; border-radius: 8px;
+          font-size: 14px; font-weight: 600; cursor: pointer;
+          transition: opacity 0.15s; font-family: inherit;
+          }
+          .bs-submit-btn:hover { opacity: 0.85; }
+          .bs-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+          .bs-submitting-msg { color: rgba(15,23,36,0.85); font-size: 13px; margin-top: 8px; }
+          .bs-submitting-msg[hidden] { display: none; }
+          .bs-submit-error { color: #7f1d1d; font-size: 12px; margin-top: 8px; }
+          .bs-submit-error[hidden] { display: none; }
+          
+          /* ── Nav arrows ── */
+          #bs-nav-arrows {
+          display: flex; gap: 4px;
+          width: 100%; max-width: 580px;
+          margin-top: 16px;
+          align-self: center;
+          }
+          .bs-nav-btn {
+          display: flex; align-items: center; justify-content: center;
+          width: 34px; height: 34px;
+          background: rgba(255,255,255,0.18);
+          border: 1px solid rgba(255,255,255,0.35); border-radius: 6px;
+          color: #fff; cursor: pointer;
+          transition: background 0.15s;
+          }
+          .bs-nav-btn:hover { background: rgba(255,255,255,0.28); }
+          .bs-nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+          
+          /* ════════════════════════════════════════
+          MOBILE COVER — only visible on mobile
+          ════════════════════════════════════════ */
+          .bs-cover-mobile-img  { display: none; }
+          .bs-cover-mobile-logo { display: none; }
+          
+          /* ════════════════════════════════════════
+          MOBILE  (≤ 768px)
+          ════════════════════════════════════════ */
+          @media (max-width: 768px) {
+          
+          body { position: fixed; width: 100%; height: 100%; }
+          
+          /* ── Hide desktop left panels entirely ── */
+          .bs-cover-left,
+          #bs-panel-left { display: none; }
+          
+          /* ── COVER: full-screen image-led layout ── */
+          #bs-cover {
+          flex-direction: column;
+          position: relative;
+          }
+          
+          /* Natasha: full width, proportional height, capped at 70vh */
+          .bs-cover-mobile-img {
+          display: block;
+          width: 100%; height: auto; max-height: 70vh;
+          object-fit: cover;
+          object-position: center top;
+          flex-shrink: 0;
+          }
+          
+          /* CI Agile logo overlaid top-left of Natasha */
+          .bs-cover-mobile-logo {
+          display: block;
+          position: absolute;
+          top: 18px; left: 20px;
+          z-index: 5;
+          }
+          .bs-cover-mobile-logo img { height: 22px; width: auto; display: block; }
+          
+          /* Bottom strip: dark navy */
+          .bs-cover-right {
+          flex: 1;
+          background: #0F1724;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 64px 28px 24px;
+          overflow: hidden;
+          }
+          .bs-cover-content { max-width: 100%; }
+          .bs-cover-label {
+          font-size: 10px;
+          color: rgba(255,255,255,0.55);
+          margin-bottom: 8px;
+          }
+          .bs-cover-headline {
+          font-size: 1.5rem;
+          color: #fff;
+          margin: 0 0 18px 0;
+          }
+          /* Hide subtitle and time on mobile */
+          .bs-cover-subtitle { display: none; }
+          .bs-cover-time     { display: none; }
+          #bs-cover-start {
+          background: #14BEE8;
+          color: #0F1724;
+          font-size: 15px;
+          padding: 13px 28px;
+          }
+          #bs-cover-start:hover { background: #0faccc; }
+          
+          /* ── QUIZ: full-screen right panel ── */
+          #bs-quiz { flex-direction: column; }
+          #bs-panel-right { width: 100%; flex: 1; }
+          
+          /* Body: column, start from top */
+          #bs-body {
+          padding: 64px 28px 16px;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          overflow: hidden;
+          }
+          .bs-step { max-width: 100%; }
+          
+          /* Nav arrows */
+          #bs-nav-arrows {
+          position: static;
+          margin-top: 10px;
+          max-width: 100%;
+          align-self: flex-start;
+          }
+          
+          /* Question number */
+          .bs-qnum { font-size: 14px; margin-bottom: 10px; }
+          .bs-qnum-badge { width: 26px; height: 26px; font-size: 12px; }
+          
+          /* Question */
+          .bs-question {
+          font-size: clamp(1.5rem, 5vw, 2rem);
+          margin: 0 0 18px 0;
+          }
+          
+          /* Options */
+          .bs-options { gap: 8px; margin-bottom: 16px; }
+          .bs-opt { font-size: 16px; padding: 14px 18px; }
+          .bs-badge { width: 28px; height: 28px; min-width: 28px; font-size: 12px; }
+          
+          /* Actions */
+          .bs-ok-btn { font-size: 14px; padding: 11px 22px; }
+          .bs-hint   { font-size: 12px; }
+          
+          /* Contact step */
+          .bs-text-input { font-size: 16px; } /* prevents iOS zoom */
+          .bs-contact-optional-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          }
+          
+          .bs-nav-btn { width: 36px; height: 36px; }
+          }
+        </style>
+        <div id="bs-cover">
+          <img height="512" width="512" class="bs-cover-mobile-img" src="assets/img/main/ci-agile-staff-natasha-2.webp" alt="Natasha, CI Agile Advisor"/>
+          <div class="bs-cover-mobile-logo">
+            <img height="56" width="134" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
+          </div>
+          <div class="bs-cover-left">
+            <div class="bs-lp-logo">
+              <a href="/index.html">
+                <img height="56" width="134" class="bs-logo" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
+              </a>
+            </div>
+            <div class="bs-lp-spacer">
+            </div>
+            <img height="512" width="512" class="bs-lp-natasha" src="assets/img/main/ci-agile-staff-natasha-2.webp" alt="Natasha, CI Agile Advisor"/>
+            <div class="bs-lp-cred">
+              <p class="bs-lp-tagline">Trusted by 500+ organisations across Asia</p>
+              <div class="bs-lp-logos">
+                <img height="128" width="246" class="bs-lp-logo-img" src="assets/img/main/logo-shell.webp" alt="Shell"/>
+                <img height="128" width="209" class="bs-lp-logo-img" src="assets/img/main/logo-dbs.webp" alt="DBS"/>
+                <img height="128" width="236" class="bs-lp-logo-img" src="assets/img/main/logo-hsbc.webp" alt="HSBC"/>
+                <img height="128" width="194" class="bs-lp-logo-img" src="assets/img/main/logo-cisco.webp" alt="Cisco"/>
+              </div>
+            </div>
+          </div>
+          <div class="bs-cover-right">
+            <div class="bs-cover-content">
+              <span class="bs-cover-label">CI Agile · Leadership Training</span>
+              <h1 class="bs-cover-headline">Let&#x27;s get you registered</h1>
+              <p class="bs-cover-subtitle">A couple of quick questions so our Program Advisor can confirm everything with you.</p>
+              <div class="bs-cover-time">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10">
+                  </circle>
+                  <polyline points="12 6 12 12 16 14">
+                  </polyline>
+                </svg>Takes about 2 minutes</div>
+                <button id="bs-cover-start" type="button">Reserve My Seat <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="bs-quiz" class="bs-hidden">
+            <div id="bs-panel-left">
+              <div class="bs-lp-logo">
+                <a href="/index.html">
+                  <img height="56" width="134" class="bs-logo" src="assets/img/main/ci-agile-logo-white.png" alt="CI Agile"/>
+                </a>
+              </div>
+              <div class="bs-lp-spacer">
+              </div>
+              <img height="512" width="512" class="bs-lp-natasha" src="assets/img/main/ci-agile-staff-natasha-2.webp" alt="Natasha, CI Agile Advisor"/>
+              <div class="bs-lp-cred">
+                <p class="bs-lp-tagline">Trusted by 500+ organisations across Asia</p>
+                <div class="bs-lp-logos">
+                  <img height="128" width="246" class="bs-lp-logo-img" src="assets/img/main/logo-shell.webp" alt="Shell"/>
+                  <img height="128" width="209" class="bs-lp-logo-img" src="assets/img/main/logo-dbs.webp" alt="DBS"/>
+                  <img height="128" width="236" class="bs-lp-logo-img" src="assets/img/main/logo-hsbc.webp" alt="HSBC"/>
+                  <img height="128" width="194" class="bs-lp-logo-img" src="assets/img/main/logo-cisco.webp" alt="Cisco"/>
+                </div>
+              </div>
+            </div>
+            <div id="bs-panel-right">
+              <div id="bs-progress">
+                <div id="bs-progress-fill">
+                </div>
+              </div>
+              <div id="bs-body">
+                <div class="bs-step bs-active" data-bs-step="1">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">1</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">What would you like to book?</h2>
+                  <div class="bs-options">
+                    <button class="bs-opt" data-bs-value="programme">
+                      <span class="bs-badge">A</span>
+                      <span>The full programme — Course 1 and Course 2 together</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="course1">
+                      <span class="bs-badge">B</span>
+                      <span>Course 1 only — High Performance Agile Leader</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="course2">
+                      <span class="bs-badge">C</span>
+                      <span>Course 2 only — Leading Hyper-Productive Team</span>
+                    </button>
+                  </div>
+                  <div class="bs-actions">
+                    <button class="bs-ok-btn" data-bs-ok="true">OK <span>✓</span>
+                    </button>
+                    <span class="bs-hint">press <kbd>Enter</kbd> ↵</span>
+                  </div>
+                </div>
+                <div class="bs-step" data-bs-step="2a">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">2</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">Which Course 1 date works for you?</h2>
+                  <div class="bs-options">
+                    <button class="bs-opt" data-bs-value="KL · 21 &amp; 22 Apr 2026">
+                      <span class="bs-badge">A</span>
+                      <span>Kuala Lumpur · 21 &amp; 22 Apr 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="KL · 21 &amp; 22 Jul 2026">
+                      <span class="bs-badge">B</span>
+                      <span>Kuala Lumpur · 21 &amp; 22 Jul 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Jakarta · 6 &amp; 7 May 2026">
+                      <span class="bs-badge">C</span>
+                      <span>Jakarta · 6 &amp; 7 May 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Jakarta · 7 &amp; 8 Jul 2026">
+                      <span class="bs-badge">D</span>
+                      <span>Jakarta · 7 &amp; 8 Jul 2026</span>
+                    </button>
+                  </div>
+                  <div class="bs-actions">
+                    <button class="bs-ok-btn" data-bs-ok="true">OK <span>✓</span>
+                    </button>
+                    <span class="bs-hint">press <kbd>Enter</kbd> ↵</span>
+                  </div>
+                </div>
+                <div class="bs-step" data-bs-step="2b">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">2</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">Which Course 2 date works for you?</h2>
+                  <div class="bs-options">
+                    <button class="bs-opt" data-bs-value="Online · 20 &amp; 21 May 2026">
+                      <span class="bs-badge">A</span>
+                      <span>Online · 20 &amp; 21 May 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Online · 19 &amp; 20 Aug 2026">
+                      <span class="bs-badge">B</span>
+                      <span>Online · 19 &amp; 20 Aug 2026</span>
+                    </button>
+                  </div>
+                  <div class="bs-actions">
+                    <button class="bs-ok-btn" data-bs-ok="true">OK <span>✓</span>
+                    </button>
+                    <span class="bs-hint">press <kbd>Enter</kbd> ↵</span>
+                  </div>
+                </div>
+                <div class="bs-step" data-bs-step="2c">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">2</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">Which intake would you like to start with?</h2>
+                  <div class="bs-options">
+                    <button class="bs-opt" data-bs-value="Kuala Lumpur · 21 Apr 2026">
+                      <span class="bs-badge">A</span>
+                      <span>Kuala Lumpur · 21 Apr 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Kuala Lumpur · 21 Jul 2026">
+                      <span class="bs-badge">B</span>
+                      <span>Kuala Lumpur · 21 Jul 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Jakarta · 6 May 2026">
+                      <span class="bs-badge">C</span>
+                      <span>Jakarta · 6 May 2026</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="Jakarta · 7 Jul 2026">
+                      <span class="bs-badge">D</span>
+                      <span>Jakarta · 7 Jul 2026</span>
+                    </button>
+                  </div>
+                  <div class="bs-actions">
+                    <button class="bs-ok-btn" data-bs-ok="true">OK <span>✓</span>
+                    </button>
+                    <span class="bs-hint">press <kbd>Enter</kbd> ↵</span>
+                  </div>
+                </div>
+                <div class="bs-step" data-bs-step="3">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">3</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">How will you be funding your seat?</h2>
+                  <div class="bs-options">
+                    <button class="bs-opt" data-bs-value="hrdf">
+                      <span class="bs-badge">A</span>
+                      <span>HRDF — I&#x27;m based in Malaysia 🇲🇾</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="ssg">
+                      <span class="bs-badge">B</span>
+                      <span>SSG / SkillsFuture — I&#x27;m based in Singapore 🇸🇬</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="company">
+                      <span class="bs-badge">C</span>
+                      <span>My company is paying directly</span>
+                    </button>
+                    <button class="bs-opt" data-bs-value="self">
+                      <span class="bs-badge">D</span>
+                      <span>I&#x27;ll be paying for it myself</span>
+                    </button>
+                  </div>
+                  <div class="bs-actions">
+                    <button class="bs-ok-btn" data-bs-ok="true">OK <span>✓</span>
+                    </button>
+                    <span class="bs-hint">press <kbd>Enter</kbd> ↵</span>
+                  </div>
+                </div>
+                <div class="bs-step" data-bs-step="4">
+                  <div class="bs-qnum">
+                    <span class="bs-qnum-badge">4</span>
+                    <span>→</span>
+                  </div>
+                  <h2 class="bs-question">Last step! How do we reach you?</h2>
+                  <div class="bs-contact-fields">
+                    <div class="bs-field">
+                      <label for="bs-full-name">Full name *</label>
+                      <input type="text" id="bs-full-name" class="bs-text-input" placeholder="Jane Smith" autoComplete="name"/>
+                      <div class="bs-field-error" id="bs-full-name-error" hidden="">
+                      </div>
+                    </div>
+                    <div class="bs-field">
+                      <label for="bs-email">Work email *</label>
+                      <input type="email" id="bs-email" class="bs-text-input" placeholder="jane@company.com" autoComplete="email"/>
+                      <div class="bs-field-error" id="bs-email-error" hidden="">
+                      </div>
+                    </div>
+                    <div class="bs-contact-optional-row">
+                      <div class="bs-field">
+                        <label for="bs-company">Company <span class="bs-optional">(optional)</span>
+                        </label>
+                        <input type="text" id="bs-company" class="bs-text-input" placeholder="Acme Corp" autoComplete="organization"/>
+                      </div>
+                      <div class="bs-field">
+                        <label for="bs-phone">WhatsApp <span class="bs-optional">(optional)</span>
+                        </label>
+                        <input type="tel" id="bs-phone" class="bs-text-input" placeholder="+60 12 345 6789" autoComplete="tel"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bs-actions" style="flex-direction:column;align-items:flex-start;gap:6px">
+                    <button class="bs-submit-btn" id="bs-submit-btn">Reserve My Seat <span>→</span>
+                    </button>
+                    <div class="bs-submitting-msg" id="bs-submitting-msg" hidden="">Sending your details…</div>
+                    <div class="bs-submit-error" id="bs-submit-error" hidden="">
+                    </div>
+                  </div>
+                </div>
+                <div id="bs-nav-arrows">
+                  <button class="bs-nav-btn" id="bs-btn-up" aria-label="Previous">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                      <path d="M9.5 2L4.5 7L9.5 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      </path>
+                    </svg>
+                  </button>
+                  <button class="bs-nav-btn" id="bs-btn-down" aria-label="Next">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                      <path d="M4.5 2L9.5 7L4.5 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Scripts -->
+      <script defer src="js/main.js">
+      </script>
+      <script defer src="js/form.js">
+      </script>
+    </body>
+  </html>
+  

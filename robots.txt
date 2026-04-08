@@ -3,4 +3,5 @@ Allow: /
 Disallow: /thankyou.html
 Disallow: /teamworks/bookConsultation.html
 Disallow: /letstalk.html
+Disallow: /bookseat.html
 Sitemap: https://www.ciagile.com/sitemap.xml
