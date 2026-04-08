@@ -407,7 +407,7 @@ export function LetsTalkPage() {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-            padding: 32px 28px 24px;
+            padding: 64px 28px 24px;
             overflow: hidden;
           }
           .lt-cover-content { max-width: 100%; }
