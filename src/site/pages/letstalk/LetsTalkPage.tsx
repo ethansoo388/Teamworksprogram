@@ -11,6 +11,7 @@ export function LetsTalkPage() {
 
       <style dangerouslySetInnerHTML={{ __html: `
         html, body { height: 100%; overflow: hidden; margin: 0; padding: 0; }
+        main { height: 100%; overflow: hidden; } /* shell.html wraps in <main> */
         #lt-page { height: 100vh; overflow: hidden; font-family: inherit; }
         #lt-page * { box-sizing: border-box; }
 
@@ -364,6 +365,10 @@ export function LetsTalkPage() {
            ════════════════════════════════════════ */
         @media (max-width: 768px) {
 
+          /* iOS Safari: position:fixed is the only reliable way to kill
+             momentum scrolling when overflow:hidden is set on body */
+          body { position: fixed; width: 100%; height: 100%; }
+
           /* ── Hide desktop left panels entirely ── */
           .lt-cover-left,
           #lt-panel-left { display: none; }
@@ -374,10 +379,10 @@ export function LetsTalkPage() {
             position: relative;
           }
 
-          /* Natasha: top 70vh, full width */
+          /* Natasha: full width, proportional height (auto), capped at 70vh */
           .lt-cover-mobile-img {
             display: block;
-            width: 100%; height: 70vh;
+            width: 100%; height: auto; max-height: 70vh;
             object-fit: cover;
             object-position: center top;
             flex-shrink: 0;
@@ -428,13 +433,22 @@ export function LetsTalkPage() {
           #lt-quiz { flex-direction: column; }
           #lt-panel-right { width: 100%; flex: 1; }
 
-          /* Body: generous padding, full width */
+          /* Body: start from top, no huge bottom padding (nav arrows now in-flow) */
           #lt-body {
-            padding: 32px 28px 88px;
+            padding: 28px 28px 16px;
             align-items: flex-start;
+            justify-content: flex-start;
             overflow: hidden;
           }
           .lt-step { max-width: 100%; }
+
+          /* Nav arrows: in-flow below OK button (not floating in corner) */
+          #lt-nav-arrows {
+            position: static;
+            margin-top: 12px;
+            align-self: flex-start;
+            justify-content: flex-start;
+          }
 
           /* Question number */
           .lt-qnum { font-size: 14px; margin-bottom: 10px; }
@@ -463,8 +477,6 @@ export function LetsTalkPage() {
             gap: 12px;
           }
 
-          /* Nav arrows */
-          #lt-nav-arrows { bottom: 18px; right: 18px; }
           .lt-nav-btn { width: 36px; height: 36px; }
         }
       ` }} />
@@ -778,21 +790,23 @@ export function LetsTalkPage() {
               </div>
             </div>
 
-          </div>{/* end #lt-body */}
+            {/* Nav arrows — inside #lt-body so mobile can render them in-flow
+                below the OK button. Desktop: position:absolute keeps them
+                pinned bottom-right of #lt-panel-right (positioned ancestor). */}
+            <div id="lt-nav-arrows">
+              <button className="lt-nav-btn" id="lt-btn-up" aria-label="Previous question">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 9.5L7 4.5L12 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button className="lt-nav-btn" id="lt-btn-down" aria-label="Next question">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
 
-          {/* Nav arrows */}
-          <div id="lt-nav-arrows">
-            <button className="lt-nav-btn" id="lt-btn-up" aria-label="Previous question">
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-                <path d="M2 9.5L7 4.5L12 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <button className="lt-nav-btn" id="lt-btn-down" aria-label="Next question">
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-                <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-          </div>
+          </div>{/* end #lt-body */}
 
         </div>{/* end #lt-panel-right */}
 
