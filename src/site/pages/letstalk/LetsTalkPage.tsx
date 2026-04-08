@@ -354,50 +354,109 @@ export function LetsTalkPage() {
         .lt-nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
 
         /* ════════════════════════════════════════
+           MOBILE COVER — only visible on mobile
+           ════════════════════════════════════════ */
+        .lt-cover-mobile-img  { display: none; }
+        .lt-cover-mobile-logo { display: none; }
+
+        /* ════════════════════════════════════════
            MOBILE  (≤ 768px)
            ════════════════════════════════════════ */
         @media (max-width: 768px) {
-          /* Cover — stacked */
-          #lt-cover { flex-direction: column; }
 
-          /* Quiz — stacked */
-          #lt-quiz { flex-direction: column; }
-
-          /* Left panel — same height on both cover and quiz */
+          /* ── Hide desktop left panels entirely ── */
           .lt-cover-left,
-          #lt-panel-left {
-            flex: none;
-            height: 38vh;
+          #lt-panel-left { display: none; }
+
+          /* ── COVER: full-screen image-led layout ── */
+          #lt-cover {
+            flex-direction: column;
+            position: relative;
           }
-          .lt-lp-natasha {
-            max-height: 20vh;
-            width: 100%; height: auto;
+
+          /* Natasha: top 70vh, full width */
+          .lt-cover-mobile-img {
+            display: block;
+            width: 100%; height: 70vh;
             object-fit: cover;
             object-position: center top;
+            flex-shrink: 0;
           }
-          .lt-lp-cred { padding: 0 16px; }
-          .lt-lp-tagline { font-size: 11px; margin-bottom: 8px; }
-          .lt-lp-logos { gap: 20px; }
-          .lt-lp-logo-img { max-height: 22px; }
-          .lt-lp-logo { top: 16px; left: 18px; }
-          .lt-logo { height: 20px; }
 
-          /* Right panel — both cover and quiz */
+          /* CI Agile logo overlaid top-left of Natasha */
+          .lt-cover-mobile-logo {
+            display: block;
+            position: absolute;
+            top: 18px; left: 20px;
+            z-index: 5;
+          }
+          .lt-cover-mobile-logo img { height: 22px; width: auto; display: block; }
+
+          /* Bottom strip: dark navy, ~30vh */
           .lt-cover-right {
             flex: 1;
-            padding: 28px 24px;
-            align-items: flex-start;
-            overflow-y: auto;
+            background: #0F1724;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 28px;
+            overflow: hidden;
           }
-          .lt-cover-headline { font-size: 1.6rem; }
-          .lt-cover-subtitle { font-size: 14px; }
+          .lt-cover-content { max-width: 100%; }
+          .lt-cover-label {
+            font-size: 10px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 8px;
+          }
+          .lt-cover-headline {
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0 0 18px 0;
+          }
+          /* Hide subtitle and time on mobile — strip is too compact */
+          .lt-cover-subtitle { display: none; }
+          .lt-cover-time     { display: none; }
+          #lt-cover-start {
+            background: #14BEE8;
+            color: #0F1724;
+            font-size: 15px;
+            padding: 13px 28px;
+          }
+          #lt-cover-start:hover { background: #0faccc; }
 
-          #lt-panel-right { flex: 1; }
-          #lt-body { padding: 18px 20px 72px; }
-          .lt-question { font-size: 1.05rem; }
-          .lt-opt { font-size: 13px; padding: 9px 12px; }
+          /* ── QUIZ: full-screen right panel ── */
+          #lt-quiz { flex-direction: column; }
+          #lt-panel-right { width: 100%; flex: 1; }
 
-          /* Step 5 optional fields — 2-col grid */
+          /* Body: generous padding, full width */
+          #lt-body {
+            padding: 32px 28px 88px;
+            align-items: flex-start;
+            overflow: hidden;
+          }
+          .lt-step { max-width: 100%; }
+
+          /* Question number */
+          .lt-qnum { font-size: 14px; margin-bottom: 10px; }
+          .lt-qnum-badge { width: 26px; height: 26px; font-size: 12px; }
+
+          /* Question — large and readable */
+          .lt-question {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            margin: 0 0 18px 0;
+          }
+
+          /* Options — comfortable tap targets */
+          .lt-options { gap: 8px; margin-bottom: 16px; }
+          .lt-opt { font-size: 16px; padding: 14px 18px; }
+          .lt-badge { width: 28px; height: 28px; min-width: 28px; font-size: 12px; }
+
+          /* Actions */
+          .lt-ok-btn { font-size: 14px; padding: 11px 22px; }
+          .lt-hint   { font-size: 12px; }
+
+          /* Contact step */
+          .lt-text-input { font-size: 16px; } /* prevents iOS zoom */
           .lt-contact-optional-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -405,8 +464,8 @@ export function LetsTalkPage() {
           }
 
           /* Nav arrows */
-          #lt-nav-arrows { bottom: 16px; right: 16px; }
-          .lt-nav-btn { width: 32px; height: 32px; }
+          #lt-nav-arrows { bottom: 18px; right: 18px; }
+          .lt-nav-btn { width: 36px; height: 36px; }
         }
       ` }} />
 
@@ -414,6 +473,14 @@ export function LetsTalkPage() {
           COVER PAGE
           ════════════════════════════════════════ */}
       <div id="lt-cover">
+
+        {/* Mobile-only: Natasha hero image (top 70vh) */}
+        <img className="lt-cover-mobile-img" src={natasha} alt="Natasha, CI Agile Advisor" />
+
+        {/* Mobile-only: CI Agile logo overlaid on Natasha */}
+        <div className="lt-cover-mobile-logo">
+          <img src={ciAgileLogoWhite} alt="CI Agile" />
+        </div>
 
         {/* Left panel — identical structure to quiz left */}
         <div className="lt-cover-left">
