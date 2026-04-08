@@ -17,7 +17,7 @@ const ctaSources: Record<JessStickyNavProps['activePage'], string> = {
 };
 
 export function JessStickyNav({ activePage }: JessStickyNavProps) {
-  const ctaHref = `/contactus.html?source=${ctaSources[activePage]}&cta=sticky-nav#contact-form`;
+  const ctaHref = `/bookseat.html?from=${ctaSources[activePage]}&section=sticky-nav`;
 
   return (
     <div className="sticky top-[72px] z-40 bg-[#0F1724] border-b border-slate-700/60">

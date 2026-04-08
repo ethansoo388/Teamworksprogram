@@ -162,6 +162,16 @@ export const routes: RouteEntry[] = [
     siteType: "main",
     includeFormJS: true,
   },
+  {
+    modulePath: "/src/site/pages/bookseat/BookSeatPage.tsx",
+    componentName: "BookSeatPage",
+    filename: "bookseat.html",
+    title: "Book Your Seat - CI Agile",
+    description:
+      "Reserve your seat on the JESS Leadership Training programme. A few quick questions and our Program Advisor will confirm everything with you.",
+    siteType: "main",
+    includeFormJS: true,
+  },
 
   // ── JESS (Jeff's Enterprise Scrum System) ──────────────────────────────
   {

@@ -45,7 +45,7 @@ export const seo: SEOConfig = {
   baseUrl: "https://www.ciagile.com",
   siteName: "CI Agile",
   locale: "en_SG",
-  excludeFromIndex: ["thankyou.html", "teamworks/bookConsultation.html", "letstalk.html"],
+  excludeFromIndex: ["thankyou.html", "teamworks/bookConsultation.html", "letstalk.html", "bookseat.html"],
   organizationName: "CI Agile",
   og: {
     type: "website",

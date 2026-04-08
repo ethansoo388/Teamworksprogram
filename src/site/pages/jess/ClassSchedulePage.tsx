@@ -10,12 +10,12 @@ export function ClassSchedulePage() {
       month: "April 2026",
       courses: [
         { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
-        { location: "Indonesia", type: "Course 1", dates: "6th and 7th", icon: <MapPin className="w-5 h-5" /> },
       ]
     },
     {
       month: "May 2026",
       courses: [
+        { location: "Indonesia", type: "Course 1", dates: "6th and 7th", icon: <MapPin className="w-5 h-5" /> },
         { location: "All countries - online", type: "Course 2", dates: "20th and 21st", icon: <Globe className="w-5 h-5" /> },
       ]
     },
@@ -232,10 +232,10 @@ export function ClassSchedulePage() {
             {/* Primary and Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
-                href="/letstalk.html?from=jess-class-schedule&section=enrollment-cta"
+                href="/bookseat.html?from=jess-class-schedule&section=enrollment-cta"
                 className="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-medium text-lg hover:bg-amber-400 transition-colors duration-300 w-full sm:w-auto justify-center"
               >
-                Talk to a Program Advisor
+                Book a Seat →
               </a>
             </div>
 

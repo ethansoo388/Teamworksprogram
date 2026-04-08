@@ -1268,7 +1268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (submittingMsg) submittingMsg.hidden = false;
         if (submitError)   submitError.hidden   = true;
 
-        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxShpuzJaLGQ8MHOvdPf6ocxf6ChBWncnB9rYmDV7yW6dfPeI97O8IMqbboHFCahRwVgA/exec';
+        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxBdpk_2QYM8EliBwZgcALMHj-S6ac4kuPJ3TStqWdLeBVAEnkC5bjXU91B6zCUW0GLvw/exec';
         var params = new URLSearchParams({
           sheetName:  'LetsTalkForm',
           fullName:   name,
@@ -1316,6 +1316,289 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }());
   // ─── End Let's Talk Form ──────────────────────────────────────────────────
+
+  // ─── Book a Seat Multi-Step Form ─────────────────────────────────────────
+  (function () {
+    var bsPage = document.getElementById('bs-page');
+    if (!bsPage) return;
+
+    // ── State ──
+    var state = {
+      bookingType: '',    // programme | course1 | course2
+      selectedDate: '',   // the chosen date string
+      lastDateStep: '2a', // which 2x step was visited (for back-nav from step 3)
+      paymentMethod: '',  // hrdf | ssg | company | self
+    };
+
+    // History stack
+    var navHistory = ['1'];
+
+    // ── DOM refs ──
+    var progressFill = document.getElementById('bs-progress-fill');
+    var btnUp        = document.getElementById('bs-btn-up');
+    var btnDown      = document.getElementById('bs-btn-down');
+    var bsCoverEl    = document.getElementById('bs-cover');
+    var bsQuizEl     = document.getElementById('bs-quiz');
+
+    // ── Cover → Quiz transition ──
+    var bsCoverStart = document.getElementById('bs-cover-start');
+    if (bsCoverStart) {
+      bsCoverStart.addEventListener('click', function () {
+        if (bsCoverEl) bsCoverEl.classList.add('bs-hidden');
+        if (bsQuizEl)  bsQuizEl.classList.remove('bs-hidden');
+        if (progressFill) progressFill.style.width = getProgress('1') + '%';
+        updateNavButtons('1');
+        var firstBtn = bsPage.querySelector('.bs-step.bs-active button');
+        if (firstBtn) setTimeout(function () { firstBtn.focus(); }, 50);
+      });
+    }
+
+    // ── Progress calculation — 4 steps total ──
+    function getProgress(stepId) {
+      var path = ['1', state.lastDateStep, '3', '4'];
+      var idx = path.indexOf(stepId);
+      // treat 2a/2b/2c all as position 1 in path
+      if (idx < 0 && (stepId === '2a' || stepId === '2b' || stepId === '2c')) idx = 1;
+      return idx < 0 ? 0 : (idx + 1) / path.length * 100;
+    }
+
+    // ── Navigation logic ──
+    function getNextId(id) {
+      if (id === '1') {
+        if (state.bookingType === 'course1')   return '2a';
+        if (state.bookingType === 'course2')   return '2b';
+        if (state.bookingType === 'programme') return '2c';
+        return null;
+      }
+      if (id === '2a' || id === '2b' || id === '2c') return '3';
+      if (id === '3') return '4';
+      return null;
+    }
+
+    function getCurrentId() {
+      var active = bsPage.querySelector('.bs-step.bs-active');
+      return active ? active.getAttribute('data-bs-step') : null;
+    }
+
+    function goTo(stepId, reverse) {
+      var currentEl = bsPage.querySelector('.bs-step.bs-active');
+      var nextEl    = bsPage.querySelector('[data-bs-step="' + stepId + '"]');
+      if (!nextEl) return;
+      if (currentEl) currentEl.classList.remove('bs-active', 'bs-reverse');
+      nextEl.classList.remove('bs-reverse');
+      if (reverse) nextEl.classList.add('bs-reverse');
+      nextEl.classList.add('bs-active');
+      window.scrollTo(0, 0);
+      var firstFocusable = nextEl.querySelector('button:not(:disabled), input');
+      if (firstFocusable) setTimeout(function () { firstFocusable.focus(); }, 50);
+      if (progressFill) progressFill.style.width = getProgress(stepId) + '%';
+      updateNavButtons(stepId);
+    }
+
+    function updateNavButtons(id) {
+      if (btnUp)   btnUp.disabled   = false;
+      if (btnDown) btnDown.disabled = (id === '4');
+    }
+
+    // ── Validation ──
+    function validateStep(id) {
+      if (id === '1') return !!state.bookingType;
+      if (id === '2a' || id === '2b' || id === '2c') return !!state.selectedDate;
+      if (id === '3') return !!state.paymentMethod;
+      return true;
+    }
+
+    function advance() {
+      var id = getCurrentId();
+      if (!id || id === '4') return;
+      if (!validateStep(id)) return;
+      // Track which date step was visited so back-from-3 returns to correct step
+      if (id === '2a' || id === '2b' || id === '2c') state.lastDateStep = id;
+      var nextId = getNextId(id);
+      if (!nextId) return;
+      navHistory.push(nextId);
+      goTo(nextId, false);
+    }
+
+    function goBack() {
+      if (navHistory.length <= 1) {
+        if (bsQuizEl)  bsQuizEl.classList.add('bs-hidden');
+        if (bsCoverEl) bsCoverEl.classList.remove('bs-hidden');
+        if (progressFill) progressFill.style.width = '0%';
+        return;
+      }
+      navHistory.pop();
+      goTo(navHistory[navHistory.length - 1], true);
+    }
+
+    // ── Option selection ──
+    function selectOption(stepEl, value) {
+      stepEl.querySelectorAll('.bs-opt').forEach(function (opt) {
+        opt.classList.toggle('bs-selected', opt.getAttribute('data-bs-value') === value);
+      });
+    }
+
+    function handleOptionClick(stepId, value) {
+      var stepEl = bsPage.querySelector('[data-bs-step="' + stepId + '"]');
+      if (!stepEl) return;
+      selectOption(stepEl, value);
+
+      if (stepId === '1') {
+        state.bookingType = value;
+        // Reset date selection when booking type changes
+        state.selectedDate = '';
+      } else if (stepId === '2a' || stepId === '2b' || stepId === '2c') {
+        state.selectedDate = value;
+      } else if (stepId === '3') {
+        state.paymentMethod = value;
+      }
+    }
+
+    // ── Event delegation ──
+    bsPage.addEventListener('click', function (e) {
+      var opt   = e.target.closest('.bs-opt');
+      var okBtn = e.target.closest('[data-bs-ok]');
+      if (opt) {
+        var stepEl = opt.closest('.bs-step');
+        if (stepEl) handleOptionClick(stepEl.getAttribute('data-bs-step'), opt.getAttribute('data-bs-value'));
+      }
+      if (okBtn) advance();
+    });
+
+    // ── Nav arrow buttons ──
+    if (btnUp)   btnUp.addEventListener('click', goBack);
+    if (btnDown) btnDown.addEventListener('click', advance);
+
+    // ── Keyboard shortcuts ──
+    document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('bs-page')) return;
+      var tag = e.target && e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+        if (e.key === 'Enter') { e.preventDefault(); advance(); }
+        return;
+      }
+      var id = getCurrentId();
+      if (!id || id === '4') return;
+      var stepEl = bsPage.querySelector('[data-bs-step="' + id + '"]');
+      if (!stepEl) return;
+      var opts = stepEl.querySelectorAll('.bs-opt');
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        advance();
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        var idx = -1;
+        opts.forEach(function (o, i) { if (o.classList.contains('bs-selected')) idx = i; });
+        var newIdx = e.key === 'ArrowUp'
+          ? (idx <= 0 ? opts.length - 1 : idx - 1)
+          : (idx >= opts.length - 1 ? 0 : idx + 1);
+        var newOpt = opts[newIdx];
+        if (newOpt) handleOptionClick(id, newOpt.getAttribute('data-bs-value'));
+      } else {
+        var letter = e.key.toUpperCase();
+        if (letter >= 'A' && letter <= 'D') {
+          var newOpt2 = opts[letter.charCodeAt(0) - 65];
+          if (newOpt2) handleOptionClick(id, newOpt2.getAttribute('data-bs-value'));
+        }
+      }
+    });
+
+    // ── Contact form submission ──
+    var submitBtn     = document.getElementById('bs-submit-btn');
+    var submittingMsg = document.getElementById('bs-submitting-msg');
+    var submitError   = document.getElementById('bs-submit-error');
+
+    function validateContact() {
+      var valid = true;
+      var nameEl  = document.getElementById('bs-full-name');
+      var nameErr = document.getElementById('bs-full-name-error');
+      var emailEl  = document.getElementById('bs-email');
+      var emailErr = document.getElementById('bs-email-error');
+      if (nameEl && nameErr) {
+        if (!nameEl.value.trim()) {
+          nameEl.classList.add('bs-error');
+          nameErr.textContent = 'Please enter your full name.';
+          nameErr.hidden = false;
+          valid = false;
+        } else {
+          nameEl.classList.remove('bs-error');
+          nameErr.hidden = true;
+        }
+      }
+      if (emailEl && emailErr) {
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim());
+        if (!emailOk) {
+          emailEl.classList.add('bs-error');
+          emailErr.textContent = 'Please enter a valid email address.';
+          emailErr.hidden = false;
+          valid = false;
+        } else {
+          emailEl.classList.remove('bs-error');
+          emailErr.hidden = true;
+        }
+      }
+      return valid;
+    }
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!validateContact()) return;
+
+        var name    = document.getElementById('bs-full-name').value.trim();
+        var email   = document.getElementById('bs-email').value.trim();
+        var company = (document.getElementById('bs-company') ? document.getElementById('bs-company').value : '').trim();
+        var phone   = (document.getElementById('bs-phone')   ? document.getElementById('bs-phone').value   : '').trim();
+
+        submitBtn.disabled = true;
+        if (submittingMsg) submittingMsg.hidden = false;
+        if (submitError)   submitError.hidden   = true;
+
+        var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxBdpk_2QYM8EliBwZgcALMHj-S6ac4kuPJ3TStqWdLeBVAEnkC5bjXU91B6zCUW0GLvw/exec';
+        var params = new URLSearchParams({
+          sheetName:      'BookSeatForm',
+          fullName:       name,
+          workEmail:      email,
+          bookingType:    state.bookingType,
+          selectedDate:   state.selectedDate,
+          paymentMethod:  state.paymentMethod,
+          company:        company,
+          whatsapp:       phone,
+          pageUrl:        window.location.href,
+          referrer:       document.referrer || 'Direct',
+          timestamp:      new Date().toISOString(),
+        });
+        fetch(GAS_ENDPOINT, {
+          method: 'POST',
+          body: params,
+        })
+          .then(function (r) {
+            if (!r.ok) throw new Error('server-error');
+            return r.json().catch(function () { return null; });
+          })
+          .then(function (result) {
+            if (result && result.status && result.status !== 'success') {
+              throw new Error(result.message || 'submission-failed');
+            }
+            window.location.assign('/thankyou.html');
+          })
+          .catch(function () {
+            submitBtn.disabled = false;
+            if (submittingMsg) submittingMsg.hidden = true;
+            if (submitError) {
+              submitError.textContent = 'Something went wrong. Please try again or email us at hello@ciagile.com';
+              submitError.hidden = false;
+            }
+          });
+      });
+    }
+
+    // ── Init ──
+    if (progressFill) progressFill.style.width = getProgress('1') + '%';
+    updateNavButtons('1');
+
+  }());
+  // ─── End Book a Seat Form ─────────────────────────────────────────────────
 
 });
 

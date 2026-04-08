@@ -442,7 +442,7 @@ export function InstructorPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <a
-                href="/contactus.html?source=jess-instructor&cta=book-a-seat#contact-form"
+                href="/bookseat.html?from=jess-instructor&section=enrollment-cta"
                 className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-lg transition-all text-base"
                 style={{ background: 'linear-gradient(to right,#3b82f6,#06b6d4)', boxShadow: '0 10px 25px rgba(59,130,246,0.25)' }}
               >
