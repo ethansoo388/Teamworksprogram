@@ -438,7 +438,7 @@ export function LetsTalkPage() {
 
           /* Body: column, start from top */
           #lt-body {
-            padding: 28px 28px 16px;
+            padding: 64px 28px 16px;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
