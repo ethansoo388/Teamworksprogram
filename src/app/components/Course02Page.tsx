@@ -30,8 +30,8 @@ const testimonials = [
 
 const faqItems = [
   {
-    question: "Will this work for non-tech products?",
-    answer: "Absolutely! Apple's design principles apply to any product or service—physical, digital, or hybrid. We'll show you how."
+    question: "Will this work for non-tech or service businesses?",
+    answer: "Absolutely. This approach works for any product, service, or process — physical, digital, or hybrid. Retail, operations, professional services — all covered."
   },
   {
     question: "What tools or software do we use?",
@@ -140,19 +140,19 @@ export function Course02Page() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
-                Win Customers Through<br /><span style={{ color: '#E91E8C' }}>Design.</span>
+                Win Customers Through<br /><span style={{ color: '#E91E8C' }}>Design</span>
               </h1>
 
               <p className="text-lg text-gray-600 italic mb-6">
-                Create customer-focused products and services using design thinking.
+                Stop losing customers to competitors who understand them better. Start building what they actually want to buy.
               </p>
 
               <p className="text-xl text-gray-600 leading-relaxed mb-4 max-w-lg">
-                Most teams don't fail because they lack ideas — they fail because they build the wrong things.
+                Most SME teams don't fail because they lack ideas — they fail because they invest time and money building the wrong things.
               </p>
 
               <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                <strong className="font-semibold">Win Customers Through Design</strong> helps teams understand customers and design products and services customers actually choose.
+                <strong className="font-semibold">Win Customers Through Design</strong> gives your team a repeatable method to uncover what customers truly want — and build it right the first time.
               </p>
 
               {/* Course Info Cards */}
@@ -209,10 +209,10 @@ export function Course02Page() {
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Stop Guessing. Start Solving.</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-4">
-              Learn a practical, step-by-step approach to understanding your customers, testing real problems, and designing solutions that actually work.
+              A practical, step-by-step approach to understanding customers, testing ideas cheaply, and designing solutions you can sell — without wasting months on the wrong direction.
             </p>
             <p className="text-xl text-gray-600">
-              This course helps teams move from opinions and assumptions to customer-driven decisions.
+              Move from gut-feel decisions to clear, evidence-based choices — so your team stops burning budget on the wrong things.
             </p>
           </div>
 
@@ -225,7 +225,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Think Differently</h3>
               <p className="text-gray-600 leading-relaxed">
-                Shift from internal opinions to real customer insight
+                Stop relying on opinions — decide based on what real customers tell you.
               </p>
             </div>
 
@@ -236,7 +236,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Save Time & Rework</h3>
               <p className="text-gray-600 leading-relaxed">
-                Validate ideas early before investing time and money
+                Catch bad ideas early — before they cost you time, money, and team morale.
               </p>
             </div>
 
@@ -247,7 +247,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Design What Customers Want</h3>
               <p className="text-gray-600 leading-relaxed">
-                Build solutions based on real needs, not assumptions
+                Build solutions based on real needs — not internal assumptions or wishful thinking.
               </p>
             </div>
 
@@ -256,9 +256,9 @@ export function Course02Page() {
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E91E8C' }}>
                 <Rocket className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">From Good Ideas to Market Fit</h3>
+              <h3 className="text-xl font-semibold mb-3">From Ideas to Market Fit</h3>
               <p className="text-gray-600 leading-relaxed">
-                Turn insights into products and services customers choose
+                Turn customer insights into products and services people pay for.
               </p>
             </div>
           </div>
@@ -280,7 +280,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Course Modules</h2>
             <p className="text-xl text-gray-600">
-              Five practical modules to help your team understand customers and design solutions that win.
+              Five focused modules. Real exercises. Practical tools your team applies immediately — no theory overload.
             </p>
           </div>
 
@@ -300,15 +300,20 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 1
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">Understanding Real Customer Problems</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-4">Identify the Right Customer Problems</h3>
+                  <p className="text-gray-600 mb-4">Stop building the wrong things — understand what customers actually need before you waste time and money on it.</p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Go beyond surface feedback to uncover what customers truly need</span>
+                      <span>Uncover real customer needs through structured conversations</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Identify the real problems worth solving</span>
+                      <span>Identify the problems that are truly worth solving</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-700">
+                      <span className="text-pink-500 mt-0.5">✓</span>
+                      <span>Turn insights into clear, actionable problem definitions your team can act on</span>
                     </li>
                   </ul>
                 </div>
@@ -322,15 +327,20 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 2
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">Mapping the Customer Experience</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-4">Find Where You're Losing Customers</h3>
+                  <p className="text-gray-600 mb-4">Every drop-off is lost revenue. See exactly where your customer experience breaks — and fix it.</p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>See your product or service from the customer's perspective</span>
+                      <span>Map the customer journey across key touchpoints</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
                       <span>Identify friction points that cause drop-offs or dissatisfaction</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-700">
+                      <span className="text-pink-500 mt-0.5">✓</span>
+                      <span>Pinpoint where and why customers disengage — so you know exactly what to fix first</span>
                     </li>
                   </ul>
                 </div>
@@ -358,15 +368,20 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 3
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">Turning Insights into Better Ideas</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-4">Turn Customer Pain into Valuable Solutions</h3>
+                  <p className="text-gray-600 mb-4">Stop guessing what to build. Use customer pain points to generate solutions people will actually pay for.</p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Translate customer insight into clear solution concepts</span>
+                      <span>Translate insights into clear problem statements your team agrees on</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Avoid feature overload and unfocused ideas</span>
+                      <span>Generate focused ideas that solve real customer pain — not internal wish lists</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-700">
+                      <span className="text-pink-500 mt-0.5">✓</span>
+                      <span>Prioritize solutions by business impact — not loudest opinion in the room</span>
                     </li>
                   </ul>
                 </div>
@@ -380,15 +395,20 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 4
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">Testing Before Committing</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-4">Validate Before You Commit</h3>
+                  <p className="text-gray-600 mb-4">Don't spend months building something customers don't want. Test and validate ideas before committing real budget.</p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Validate ideas early with customers</span>
+                      <span>Build simple, low-cost prototypes to test ideas quickly</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Reduce risk before spending time and budget</span>
+                      <span>Gather real customer feedback — not opinions from the office</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-700">
+                      <span className="text-pink-500 mt-0.5">✓</span>
+                      <span>Validate and refine ideas using evidence — before writing a single line of code or brief</span>
                     </li>
                   </ul>
                 </div>
@@ -416,15 +436,20 @@ export function Course02Page() {
                   <div className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-md mb-4">
                     Module 5
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-semibold mb-6">From Ideas to Action</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-4">From Insight to Execution</h3>
+                  <p className="text-gray-600 mb-4">Leave with a clear execution plan — not just another list of ideas gathering dust.</p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Turn tested ideas into practical next steps</span>
+                      <span>Translate validated ideas into a clear, prioritized action plan</span>
                     </li>
                     <li className="flex items-start gap-2 text-gray-700">
                       <span className="text-pink-500 mt-0.5">✓</span>
-                      <span>Align teams around what to build and why</span>
+                      <span>Align your team around what to build next — and why it matters to customers</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-700">
+                      <span className="text-pink-500 mt-0.5">✓</span>
+                      <span>Set success metrics so you know when the solution is working — and when to pivot</span>
                     </li>
                   </ul>
                 </div>
@@ -442,35 +467,35 @@ export function Course02Page() {
             <div>
               <h2 className="text-3xl lg:text-4xl mb-4 tracking-tight">Who Is This Course For?</h2>
               <p className="text-base text-gray-600 mb-10">
-                This course is perfect for the "Action Takers"
+                Built for SME leaders and teams who are tired of guessing — and ready to make decisions that actually grow the business.
               </p>
 
               <div className="space-y-6">
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
-                  <h3 className="font-semibold text-lg mb-2">Product Managers & Designers</h3>
+                  <h3 className="font-semibold text-lg mb-2">Business Owners & SME Founders</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Professionals who want to design solutions customers actually use and value.
+                    You've invested in products or services that didn't take off. This course helps you make smarter bets — grounded in what customers actually need.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
-                  <h3 className="font-semibold text-lg mb-2">SME Founders & Innovators</h3>
+                  <h3 className="font-semibold text-lg mb-2">Product & Customer-Facing Teams</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Business owners who want to reduce guesswork and invest in ideas that work.
+                    Your team ships features — but adoption is lower than expected. Learn to build what customers actually value, not what looks good in a meeting.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
                   <h3 className="font-semibold text-lg mb-2">Marketing & Growth Teams</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Teams looking to better understand customers and improve conversion and retention.
+                    Struggling with low conversion or high churn? Better customer understanding is the fastest way to fix both — before you spend more on ads.
                   </p>
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-500 hover:bg-pink-50/50 transition-all duration-300">
-                  <h3 className="font-semibold text-lg mb-2">UX & Creative Professionals</h3>
+                  <h3 className="font-semibold text-lg mb-2">Operations & Service Delivery Teams</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Practitioners who want to connect design decisions to real business outcomes.
+                    Your team executes well — but misalignment upstream causes rework, delays, and frustrated customers. Get aligned on what matters before work begins.
                   </p>
                 </div>
               </div>
@@ -481,7 +506,7 @@ export function Course02Page() {
               <div className="bg-gradient-to-br from-pink-600 via-pink-600 to-fuchsia-600 rounded-3xl p-10 lg:p-12 text-white shadow-2xl sticky top-24">
                 <h2 className="text-2xl lg:text-3xl mb-3 tracking-tight">What You'll Achieve</h2>
                 <p className="text-pink-100 mb-8 text-sm">
-                  Real outcomes that transform how you design and build products.
+                  Walk away with skills, tools, and a shared approach your team uses from day one.
                 </p>
 
                 <div className="space-y-5 mb-8">
@@ -489,41 +514,41 @@ export function Course02Page() {
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
-                    <span className="text-base leading-relaxed">Design products and experiences that customers emotionally connect with</span>
+                    <span className="text-base leading-relaxed">Design products and services customers actively choose — not just tolerate</span>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
-                    <span className="text-base leading-relaxed">Master rapid prototyping to validate ideas before building</span>
+                    <span className="text-base leading-relaxed">Avoid costly mistakes by validating ideas before committing budget</span>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
-                    <span className="text-base leading-relaxed">Apply Apple's simplicity principles to solve complex problems</span>
+                    <span className="text-base leading-relaxed">Make faster, more confident decisions using real customer evidence</span>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
-                    <span className="text-base leading-relaxed">Create user journeys that delight at every touchpoint</span>
+                    <span className="text-base leading-relaxed">Improve adoption, satisfaction, and repeat business</span>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <span className="text-white text-sm">✓</span>
                     </div>
-                    <span className="text-base leading-relaxed">Build a design-thinking mindset that drives innovation</span>
+                    <span className="text-base leading-relaxed">Go from ideas to a clear execution plan — with your whole team aligned</span>
                   </div>
                 </div>
 
                 <div className="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
                   <p className="text-sm leading-relaxed">
-                    <strong className="font-semibold">Real Impact:</strong> Teams applying design principles report 45% higher customer satisfaction scores and 60% increase in product adoption rates.
+                    Teams that validate ideas early consistently reduce rework, launch faster, and build products their customers actually use.
                   </p>
                 </div>
               </div>
@@ -538,7 +563,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-4 tracking-tight">Design Challenges We Solve</h2>
             <p className="text-lg text-gray-600">
-              Stop letting mediocre design hold your products back.
+              Every wrong assumption costs you time, money, and customers. Here's how we fix that.
             </p>
           </div>
 
@@ -549,7 +574,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Products That Don't Get Adopted</h3>
               <p className="text-gray-600 leading-relaxed">
-                Learn to design beyond functionality. Create experiences that customers fall in love with, not just tolerate.
+                When customers don't adopt your product, it's rarely about the features — it's because the problem wasn't understood deeply enough. We fix that.
               </p>
             </div>
 
@@ -561,7 +586,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Low Adoption Despite Good Features</h3>
               <p className="text-gray-600 leading-relaxed">
-                Master user-centered design to build what customers actually want, not what you think they need. Make products intuitive and irresistible.
+                Good features built on bad assumptions still fail. Learn to validate what's worth building before you invest — so adoption follows naturally.
               </p>
             </div>
 
@@ -571,7 +596,7 @@ export function Course02Page() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Teams Disagree on What to Build</h3>
               <p className="text-gray-600 leading-relaxed">
-                Apply Apple's simplicity and elegance principles. Stand out in crowded markets through superior design thinking and execution.
+                Disagreements based on opinions waste weeks and drain morale. Customer evidence ends the debate — and gives everyone a shared reason to move forward.
               </p>
             </div>
 
@@ -579,9 +604,9 @@ export function Course02Page() {
               <div className="w-12 h-12 bg-pink-100 group-hover:bg-pink-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                 <Lightbulb className="w-6 h-6 text-pink-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Designs That Don't Drive Results</h3>
+              <h3 className="text-xl font-semibold mb-3">Solutions That Don't Drive Results</h3>
               <p className="text-gray-600 leading-relaxed">
-                Use rapid prototyping to test concepts quickly and cheaply. Fail fast, learn faster, and build products people actually want.
+                SMEs can't afford to build and hope. Test your ideas with real customers early, learn fast, and only commit resources to what actually works.
               </p>
             </div>
           </div>
@@ -668,7 +693,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-4 tracking-tight">Common Questions</h2>
             <p className="text-base text-gray-600">
-              Everything you need to know about designing like Apple.
+              Everything you need to know about this course.
             </p>
           </div>
 
@@ -705,10 +730,10 @@ export function Course02Page() {
                 Course Investment
               </div>
               <h2 className="text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6">
-                Ready to Win More Customers?
+                Ready to Stop Guessing and Start Winning Customers?
               </h2>
               <p className="text-lg text-gray-600">
-                Give your team a practical, proven approach to understanding customers and building solutions that work.
+                Two days. One course. A practical, repeatable approach that changes how your team builds — and what your customers choose.
               </p>
             </div>
 
@@ -786,26 +811,26 @@ export function Course02Page() {
                   <div className="space-y-4 mb-8">
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">Customer-Centric Design</div>
-                      <div className="text-sm text-gray-600">Design products and services customers actually want — not based on assumptions.</div>
+                      <div className="text-sm text-gray-600">Design products and services customers actively seek out — grounded in real insight, not internal assumptions.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">Rapid Prototyping</div>
-                      <div className="text-sm text-gray-600">Validate ideas early before investing time and budget.</div>
+                      <div className="text-sm text-gray-600">Test ideas quickly and cheaply — before committing your team's time and your business budget.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">Design for Clarity & Focus</div>
-                      <div className="text-sm text-gray-600">Simplify complex problems and design solutions that are easy to understand and use.</div>
+                      <div className="text-sm text-gray-600">Cut through complexity. Design solutions that are clear, focused, and easy for customers to adopt.</div>
                     </div>
                     <div className="p-4 bg-white rounded-xl">
                       <div className="font-medium mb-1">User Journey Mapping</div>
-                      <div className="text-sm text-gray-600">Identify friction points and improve the end-to-end customer experience.</div>
+                      <div className="text-sm text-gray-600">See exactly where customers drop off or disengage — and design fixes that improve retention and satisfaction.</div>
                     </div>
                   </div>
 
                   <div className="bg-pink-50 rounded-xl p-6">
                     <div className="text-sm mb-2 font-semibold">💡 Real Impact</div>
                     <p className="text-sm text-gray-700">
-                      Teams that apply customer-focused design principles consistently report higher customer satisfaction and stronger product adoption.
+                      SME teams that validate ideas before building consistently ship faster, waste less, and see stronger customer adoption from day one.
                     </p>
                   </div>
                 </div>
