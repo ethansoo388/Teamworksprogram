@@ -24,8 +24,8 @@ const courses = [
   },
   {
     id: "02",
-    title: "Win Customers Through Design",
-    description: "Design products and services customers actually choose — based on real customer insight.",
+    title: "Build What Customers Want",
+    description: "Give your team a repeatable method to understand what customers truly need — and build the right thing, right the first time.",
     image: designThinkingImage,
     icon: Palette,
     colors: {
@@ -34,7 +34,7 @@ const courses = [
       dark: "#DB2777"
     },
     buttonText: "Learn more",
-    buttonLink: "design-thinking.html"
+    buttonLink: "build-what-customers-want.html"
   },
   {
     id: "03",

@@ -43,8 +43,8 @@ export const courseSchemaByFilename: Record<
     areaServed: 'MY',
     educationalLevel: 'Professional',
   },
-  'teamworks/design-thinking.html': {
-    name: 'Win Customers Through Design (Design Thinking)',
+  'teamworks/build-what-customers-want.html': {
+    name: 'Build What Customers Want',
     courseMode: 'In-person (private corporate) or live online',
     areaServed: 'MY',
     educationalLevel: 'Professional',

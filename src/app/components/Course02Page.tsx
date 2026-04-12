@@ -67,7 +67,7 @@ export function Course02Page() {
               </div>
               <div className="flex flex-col">
                 <div className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-semibold">TEAMWORKS · COURSE 02</div>
-                <div className="font-bold text-lg -mt-0.5">Win Customers Through Design</div>
+                <div className="font-bold text-lg -mt-0.5">Build What Customers Want</div>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export function Course02Page() {
             <span>/</span>
             <a href="/teamworks/index.html" className="hover:text-pink-600 transition-colors">Teamworks</a>
             <span>/</span>
-            <span className="text-gray-900 font-bold">Win Customers Through Design</span>
+            <span className="text-gray-900 font-bold">Build What Customers Want</span>
           </div>
         </div>
       </div>
@@ -140,19 +140,19 @@ export function Course02Page() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
-                Win Customers Through<br /><span style={{ color: '#E91E8C' }}>Design</span>
+                Build What Your<br /><span style={{ color: '#E91E8C' }}>Customers Want</span>
               </h1>
 
               <p className="text-lg text-gray-600 italic mb-6">
-                Stop losing customers to competitors who understand them better. Start building what they actually want to buy.
+                When sales are slow and customers keep complaining, the root cause is almost always the same — your team is building what they <em>think</em> customers want, not what customers <em>actually</em> need.
               </p>
 
               <p className="text-xl text-gray-600 leading-relaxed mb-4 max-w-lg">
-                Most SME teams don't fail because they lack ideas — they fail because they invest time and money building the wrong things.
+                Most SME teams don't have a customer problem. They have a customer-<strong className="font-semibold">understanding</strong> problem. They guess, launch, and hope. When it doesn't work, they rebuild and hope again.
               </p>
 
               <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
-                <strong className="font-semibold">Win Customers Through Design</strong> gives your team a repeatable method to uncover what customers truly want — and build it right the first time.
+                <strong className="font-semibold">Build What Customers Want</strong> gives your team a repeatable method to find out what customers truly need — and build the right thing, right the first time.
               </p>
 
               {/* Course Info Cards */}
@@ -186,6 +186,7 @@ export function Course02Page() {
                 <span className="font-medium">Talk to Us About Your Team</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
+              <p className="text-sm text-gray-500 mt-4">Every month your team builds something customers don't choose is budget you won't recover. The sooner they have this method, the sooner that stops.</p>
             </div>
 
             {/* Right: Image */}
@@ -197,6 +198,36 @@ export function Course02Page() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Is Your Business Facing These? Section */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl lg:text-5xl mb-6 tracking-tight">Is Your Business Facing These?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">If any of these sound like your business right now, the problem isn't your team's effort. It's the method. This course fixes that.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">📉</div>
+              <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Your Product Isn't Selling the Way It Should</h3>
+              <p className="text-gray-700 leading-relaxed relative z-10">You've invested time and money building it. But sales are lower than expected — and you're not sure why customers aren't choosing you.</p>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">😤</div>
+              <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Customers Are Unhappy With What They Received</h3>
+              <p className="text-gray-700 leading-relaxed relative z-10">Complaints, refund requests, poor reviews. Customers expected something different from what you delivered — and the gap keeps widening.</p>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">🔁</div>
+              <h3 className="text-xl mb-3 text-gray-900 font-semibold relative z-10">Your Team Keeps Building Things That Don't Land</h3>
+              <p className="text-gray-700 leading-relaxed relative z-10">You launch. Customers don't respond. You rebuild. It happens again. The cycle is expensive and demoralising — because the real customer need was never properly understood.</p>
             </div>
           </div>
         </div>
@@ -619,7 +650,7 @@ export function Course02Page() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl mb-4 tracking-tight">Excellence Stories</h2>
             <p className="text-xl text-gray-600">
-              See how teams changed the way they design — and the results they achieved.
+              What teams said after learning to build what customers actually want.
             </p>
           </div>
 
@@ -847,7 +878,7 @@ export function Course02Page() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <p className="mt-6 text-sm text-gray-500">
-                  A short discussion to understand your goals and team needs.
+                  Your customers are making decisions right now. Every month without this method is another month of missed sales and avoidable complaints.
                 </p>
               </div>
             </div>

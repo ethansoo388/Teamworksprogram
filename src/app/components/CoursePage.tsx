@@ -162,7 +162,7 @@ export function CoursePage() {
                 <span className="font-medium">Talk to Us About Your Team</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <p className="text-sm text-gray-500 mt-4">Sessions are capped at 30 people. One short conversation — no commitment needed.</p>
+              <p className="text-sm text-gray-500 mt-4">Every week your team stays stuck costs you time, money, and good people. The first step takes 10 minutes.</p>
             </div>
 
             {/* Right: Image */}
@@ -711,6 +711,49 @@ export function CoursePage() {
               </div>
             </div>
 
+            {/* What Changes After 2 Days */}
+            <div className="mt-10 pt-10 border-t border-gray-100">
+              <h3 className="font-semibold text-xl mb-6">What Changes After 2 Days:</h3>
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900 mb-1">Your team stops waiting for you</div>
+                    <div className="text-sm text-gray-600">People know what they own, make decisions independently, and flag problems before they reach your desk</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900 mb-1">Work gets done on time</div>
+                    <div className="text-sm text-gray-600">Delivery becomes predictable — deadlines stop slipping, and clients stop being surprised</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900 mb-1">You stop firefighting</div>
+                    <div className="text-sm text-gray-600">Your managers lead instead of react. You get your evenings and weekends back</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900 mb-1">The system sustains itself</div>
+                    <div className="text-sm text-gray-600">The team keeps improving on its own — you don't have to hold it together after the 2 days</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Enroll Button */}
             <div className="mt-12 text-center">
               <a href="/teamworks/bookConsultation.html" className="inline-flex items-center justify-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-xl hover:bg-purple-700 transition-all font-semibold text-lg group">
@@ -718,7 +761,7 @@ export function CoursePage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <p className="text-sm text-gray-600 mt-3">
-                Talk to us about running this course for your team.
+                The longer the chaos continues, the more it costs — in time, in money, and in the people you can't afford to lose.
               </p>
             </div>
           </div>
