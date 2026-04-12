@@ -139,7 +139,7 @@ export function Course02Page() {
                 <span>TEAMWORKS · CUSTOMER</span>
               </div>
 
-              <h1 className="text-5xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-4xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
                 Build What Your<br /><span style={{ color: '#E91E8C' }}>Customers Want</span>
               </h1>
 
@@ -157,7 +157,7 @@ export function Course02Page() {
 
               {/* Course Info Cards */}
               <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-6">
                   {/* Duration */}
                   <div className="text-center">
                     <Clock className="w-6 h-6 text-pink-600 mx-auto mb-2" />

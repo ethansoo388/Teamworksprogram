@@ -133,7 +133,7 @@ export function CoursePage() {
 
               {/* Course Info Cards */}
               <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-6">
                   {/* Duration */}
                   <div className="text-center">
                     <Clock className="w-6 h-6 text-purple-600 mx-auto mb-2" />
