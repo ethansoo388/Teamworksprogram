@@ -795,7 +795,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
               </li>
               <li>
                 <a href="/teamworks/build-what-customers-want.html" className={footerLinkClass}>
-                  Build What Customers Want
+                  Build What Customers Actually Buy
                 </a>
               </li>
               <li>

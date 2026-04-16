@@ -234,7 +234,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
                                 <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
-                                  Build What Customers Want
+                                  Build What Customers Actually Buy
                                 </h5>
                                 <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
                                   Give your team a repeatable method to build what customers actually need.
@@ -808,7 +808,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                             <p className="text-xs text-gray-600 mt-0.5">Build aligned teams that consistently deliver strong results.</p>
                           </a>
                           <a href="/teamworks/build-what-customers-want.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
-                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Build What Customers Want</h6>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Build What Customers Actually Buy</h6>
                             <p className="text-xs text-gray-600 mt-0.5">Give your team a repeatable method to build what customers actually need.</p>
                           </a>
                           <a href="/teamworks/critical-thinking-kanban.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>

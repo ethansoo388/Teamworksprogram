@@ -108,9 +108,9 @@ export const routes: RouteEntry[] = [
     modulePath: "/src/site/pages/teamworks/DesignLikeApplePage.tsx",
     componentName: "DesignLikeApplePage",
     filename: "teamworks/build-what-customers-want.html",
-    title: "Build What Customers Want - TeamWorks Course 02",
+    title: "Build What Customers Actually Buy - TeamWorks Course 02",
     description:
-      "Give your team a repeatable method to understand what customers truly need — and build the right thing, right the first time. Practical 2-day workshop for SME teams.",
+      "Give your team a proven method to understand what customers will pay for — and build it right the first time. Practical 2-day workshop for SME teams.",
     siteType: "teamworks",
   },
   {

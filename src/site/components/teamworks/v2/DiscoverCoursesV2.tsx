@@ -25,8 +25,8 @@ const courses = [
   },
   {
     id: "02",
-    title: "Build What Customers Want",
-    description: "Give your team a repeatable method to understand what customers truly need — and build the right thing, right the first time.",
+    title: "Build What Customers Actually Buy",
+    description: "Give your team a proven method to understand what customers will pay for — and build it right the first time.",
     image: designThinkingImage,
     icon: Palette,
     colors: {
