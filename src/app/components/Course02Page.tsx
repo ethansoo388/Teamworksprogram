@@ -130,7 +130,7 @@ export function Course02Page() {
       {/* Hero Section */}
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left: Content */}
             <div>
               {/* Badge */}
@@ -139,15 +139,16 @@ export function Course02Page() {
                 <span>TEAMWORKS · CUSTOMER</span>
               </div>
 
-              <h1 className="text-4xl lg:text-7xl leading-[1.1] mb-6 tracking-tight">
-                Build What Customers<br /><span style={{ color: '#E91E8C' }}>Actually Buy</span>
+              <h1 className="mb-6 tracking-tight">
+                <span className="block text-3xl lg:text-4xl leading-tight text-gray-900">Build What Customers</span>
+                <span className="block text-4xl lg:text-7xl leading-[1.1]" style={{ color: '#E91E8C' }}>Actually Buy</span>
               </h1>
 
               <p className="text-lg text-gray-600 italic mb-6">
                 Most SME teams don't fail for lack of effort — they fail because they build what they assume customers want, not what customers actually buy.
               </p>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-lg">
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 <strong className="font-semibold">Build What Customers Actually Buy</strong> gives your team a proven method to understand what customers will pay for — and build it right the first time.
               </p>
 
