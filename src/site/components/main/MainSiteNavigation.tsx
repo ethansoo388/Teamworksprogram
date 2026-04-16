@@ -263,6 +263,17 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                                 </p>
                               </a>
                               <a
+                                href="/teamworks/build-trust-win-hearts-close-sales.html"
+                                className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
+                              >
+                                <h5 className="text-xs md:text-sm font-semibold text-[#0F172A] group-hover/course:text-[#0066FF] transition-colors mb-1">
+                                  Build Trust, Win Hearts, Close Sales
+                                </h5>
+                                <p className="text-xs text-[#475569] group-hover/course:text-[#0066FF] leading-relaxed transition-colors">
+                                  Equip your frontline team with conversation frameworks to convert more customers.
+                                </p>
+                              </a>
+                              <a
                                 href="/teamworks/ai-skills-for-your-team.html"
                                 className="block group/course py-2 md:py-2.5 px-3 md:px-4 rounded-lg hover:bg-gray-100 transition-colors no-underline"
                               >
@@ -807,6 +818,10 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                           <a href="/teamworks/practical-lean-problem-solving.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
                             <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Proactive Problem Solving at Work</h6>
                             <p className="text-xs text-gray-600 mt-0.5">Train employees to analyse problems and recommend improvements.</p>
+                          </a>
+                          <a href="/teamworks/build-trust-win-hearts-close-sales.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
+                            <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">Build Trust, Win Hearts, Close Sales</h6>
+                            <p className="text-xs text-gray-600 mt-0.5">Equip your frontline team with conversation frameworks to convert more customers.</p>
                           </a>
                           <a href="/teamworks/ai-skills-for-your-team.html" className="block pl-2 border-l-2 border-gray-200 hover:border-[#0066FF] transition-colors no-underline" data-mobile-close>
                             <h6 className="text-xs font-semibold text-gray-900 hover:text-[#0066FF] transition-colors">AI Skills for YOUR Team</h6>

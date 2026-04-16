@@ -809,6 +809,11 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
                 </a>
               </li>
               <li>
+                <a href="/teamworks/build-trust-win-hearts-close-sales.html" className={footerLinkClass}>
+                  Build Trust, Win Hearts, Close Sales
+                </a>
+              </li>
+              <li>
                 <a href="/teamworks/ai-skills-for-your-team.html" className={footerLinkClass}>
                   AI Skills for YOUR Teams
                 </a>
