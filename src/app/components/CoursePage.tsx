@@ -167,7 +167,7 @@ export function CoursePage() {
 
             {/* Right: Image */}
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src={highEnergyTeamImage} 
                   alt="Team collaboration workshop"
