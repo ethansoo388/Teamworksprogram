@@ -427,7 +427,7 @@ export function CoursePage() {
                     <span className="text-white font-bold text-lg">2</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 2: Get Work Moving — Without Adding More People</h3>
+                    <h3 className="text-xl mb-3">Module 2: Fix the Flow of Work</h3>
                     <p className="text-gray-600 mb-3">Simple changes that remove the blockages and make delivery faster — without hiring or restructuring.</p>
                     <ul className="space-y-2 text-gray-600 list-disc pl-5">
                       <li>Make work visible and aligned</li>
@@ -459,7 +459,7 @@ export function CoursePage() {
                     <span className="text-white font-bold text-lg">4</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl mb-3">Module 4: Build a Team That Doesn't Need You to Hold It Together</h3>
+                    <h3 className="text-xl mb-3">Module 4: Build a Team That Improves Itself</h3>
                     <p className="text-gray-600 mb-3">The goal isn't one good week — it's a team that keeps getting better on its own.</p>
                     <ul className="space-y-2 text-gray-600 list-disc pl-5">
                       <li>Run simple routines to stay aligned</li>
