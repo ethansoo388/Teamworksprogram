@@ -1,10 +1,11 @@
-import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles } from "lucide-react";
+import { ArrowRight, Users, Palette, Zap, TrendingUp, Sparkles, MessageCircle } from "lucide-react";
 import { ImageWithFallback } from "@/shared/ImageWithFallback";
 import consultantImage from "@/assets/img/teamworks/ciagile-teamworks-consultation-cta-consultant-client.webp";
 import creatingSuperTeamsImage from "@/assets/img/teamworks/ciagile-teamworks-course01-creating-super-teams-hero.webp";
 import designThinkingImage from "@/assets/img/teamworks/ciagile-teamworks-course02-design-thinking-brainstorming.webp";
 import criticalThinkingImage from "@/assets/img/teamworks/ciagile-teamworks-course03-critical-thinking-hero.webp";
 import leanProblemSolvingImage from "@/assets/img/teamworks/ciagile-teamworks-course04-lean-problem-solving-group-discussion.webp";
+import buildTrustImage from "@/assets/img/teamworks/ciagile-teamworks-course05-build-trust-retail-sales-counter.webp";
 import aiSkillsImage from "@/assets/img/teamworks/ciagile-teamworks-course05-ai-skills-designer-desk.webp";
 
 const courses = [
@@ -66,6 +67,20 @@ const courses = [
   },
   {
     id: "05",
+    title: "Build Trust, Win Hearts, Close Sales",
+    description: "Communication mastery for retail frontliners — convert more walk-ins, upsell confidently, and handle objections without losing momentum.",
+    image: buildTrustImage,
+    icon: MessageCircle,
+    colors: {
+      primary: "#0097df",
+      light: "#E0F4FD",
+      dark: "#007db8"
+    },
+    buttonText: "Learn more",
+    buttonLink: "build-trust-win-hearts-close-sales.html"
+  },
+  {
+    id: "06",
     title: "AI Skills for YOUR Team",
     description: "Equip your team with practical AI skills to work faster and smarter — without technical complexity.",
     image: aiSkillsImage,
@@ -223,6 +238,7 @@ export function DiscoverCoursesV2() {
                     <div className="h-1 w-16 rounded-full bg-pink-500"></div>
                     <div className="h-1 w-16 rounded-full bg-amber-500"></div>
                     <div className="h-1 w-16 rounded-full bg-green-500"></div>
+                    <div className="h-1 w-16 rounded-full" style={{ backgroundColor: "#0097df" }}></div>
                     <div className="h-1 w-16 rounded-full bg-sky-500"></div>
                   </div>
                 </div>

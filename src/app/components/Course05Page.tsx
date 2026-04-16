@@ -29,7 +29,7 @@ export function Course05Page() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES · COURSE 05</div>
+                <div className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">TEAMWORKS COURSE SERIES · COURSE 06</div>
                 <div className="font-bold text-base text-gray-900 -mt-0.5">AI Skills for YOUR Team</div>
               </div>
             </div>

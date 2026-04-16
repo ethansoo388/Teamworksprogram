@@ -132,10 +132,19 @@ export const routes: RouteEntry[] = [
     siteType: "teamworks",
   },
   {
+    modulePath: "/src/site/pages/teamworks/BuildTrustSalesPage.tsx",
+    componentName: "BuildTrustSalesPage",
+    filename: "teamworks/build-trust-win-hearts-close-sales.html",
+    title: "Build Trust, Win Hearts, Close Sales - TeamWorks Course 05",
+    description:
+      "Communication mastery for retail frontliners. Equip your team with repeatable conversation frameworks to convert more walk-ins, upsell confidently, and handle objections without losing momentum.",
+    siteType: "teamworks",
+  },
+  {
     modulePath: "/src/site/pages/teamworks/AISkillsPage.tsx",
     componentName: "AISkillsPage",
     filename: "teamworks/ai-skills-for-your-team.html",
-    title: "AI Skills for YOUR Team - TeamWorks Course 05",
+    title: "AI Skills for YOUR Team - TeamWorks Course 06",
     description:
       "Equip your team with practical AI skills they can apply immediately — without coding or technical background. Cut drafting time, improve decisions, and use AI responsibly.",
     siteType: "teamworks",
