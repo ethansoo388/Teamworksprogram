@@ -66,6 +66,18 @@ function showFormError_(errorEl, messages) {
     consultationForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      // Get form data - properly handle multiple checkboxes
+      const formData = new FormData(consultationForm);
+
+      // Build data object to match exact field names
+      const fullName = formData.get('fullName') || '';
+      const workEmail = formData.get('workEmail') || '';
+      const phoneNumber = formData.get('phoneNumber') || '';
+      const companyName = formData.get('companyName') || '';
+      const teamSize = formData.get('teamSize') || '';
+      const deliveryFormatValue = formData.get('deliveryFormat') || '';
+      const contactMethodValue = formData.get('contactMethod') || '';
+
       // Validate required radio buttons
       const deliveryFormat = consultationForm.querySelector('input[name="deliveryFormat"]:checked');
       const contactMethod = consultationForm.querySelector('input[name="contactMethod"]:checked');
@@ -88,18 +100,6 @@ function showFormError_(errorEl, messages) {
         return;
       }
       setFieldError_(phoneNumberEl, false);
-
-      // Get form data - properly handle multiple checkboxes
-      const formData = new FormData(consultationForm);
-
-      // Build data object to match exact field names
-      const fullName = formData.get('fullName') || '';
-      const workEmail = formData.get('workEmail') || '';
-      const phoneNumber = formData.get('phoneNumber') || '';
-      const companyName = formData.get('companyName') || '';
-      const teamSize = formData.get('teamSize') || '';
-      const deliveryFormatValue = formData.get('deliveryFormat') || '';
-      const contactMethodValue = formData.get('contactMethod') || '';
 
       // Handle multiple outcomes checkboxes - collect all checked values
       const outcomes = formData.getAll('outcomes').join(', ') || '';
