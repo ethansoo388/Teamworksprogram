@@ -140,6 +140,23 @@ export function BookConsultationPage() {
                   </div>
                 </div>
 
+                {/* Contact Number */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-900 mb-2">
+                      Contact Number <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 focus:outline-none transition-all"
+                      placeholder="e.g., +60 12 345 6789"
+                    />
+                  </div>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Company Name */}
                   <div>
