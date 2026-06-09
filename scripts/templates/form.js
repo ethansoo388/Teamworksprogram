@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Google Apps Script Web App endpoint (Lead capture)
   // NOTE: Must be form-encoded (URLSearchParams). No JSON.
-  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxZEVPFREfz5j71r9U_3m0RNgipGBigFnXiLA2_tDWFP53A27KJlKDHpwTdqBnKI7PKTA/exec';
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwBzGMo33BKi-q9cOSNbLolKrgi-I12rhEBJUhiLm7x_7eECNZauKHnvEVQezyMOwdl-w/exec';
 
   
 
