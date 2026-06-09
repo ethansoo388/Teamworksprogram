@@ -80,12 +80,22 @@ function showFormError_(errorEl, messages) {
         return;
       }
 
+      // Validate phone number
+      const phoneNumberEl = consultationForm.querySelector('[name="phoneNumber"]');
+      if (!phoneNumber.trim()) {
+        setFieldError_(phoneNumberEl, true);
+        phoneNumberEl.focus();
+        return;
+      }
+      setFieldError_(phoneNumberEl, false);
+
       // Get form data - properly handle multiple checkboxes
       const formData = new FormData(consultationForm);
 
       // Build data object to match exact field names
       const fullName = formData.get('fullName') || '';
       const workEmail = formData.get('workEmail') || '';
+      const phoneNumber = formData.get('phoneNumber') || '';
       const companyName = formData.get('companyName') || '';
       const teamSize = formData.get('teamSize') || '';
       const deliveryFormatValue = formData.get('deliveryFormat') || '';
@@ -121,6 +131,7 @@ function showFormError_(errorEl, messages) {
           sheetName: 'TW_BookConsultationForm',
           fullName,
           workEmail,
+          phoneNumber,
           companyName,
           teamSize,
           deliveryFormat: deliveryFormatValue,
