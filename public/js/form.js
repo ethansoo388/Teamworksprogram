@@ -7,56 +7,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-// ===============================
-// Client-side validation helpers
-// ===============================
-function setFieldError_(fieldEl, hasError) {
-  if (!fieldEl) return;
-  const cls = ['border-red-500', 'ring-1', 'ring-red-500'];
-  if (hasError) cls.forEach(c => fieldEl.classList.add(c));
-  else cls.forEach(c => fieldEl.classList.remove(c));
-}
+  // ===============================
+  // Client-side validation helpers
+  // ===============================
+  const setFieldError_ = (fieldEl, hasError) => {
+    if (!fieldEl) return;
+    const cls = ['border-red-500', 'ring-1', 'ring-red-500'];
+    if (hasError) cls.forEach(c => fieldEl.classList.add(c));
+    else cls.forEach(c => fieldEl.classList.remove(c));
+  };
 
-function validateName_(value, label) {
-  const v = (value || '').trim();
-  if (!v) return { ok: false, msg: (label || 'Name') + ' is required.' };
-  const re = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
-  if (!re.test(v)) return { ok: false, msg: (label || 'Name') + ' must contain letters only (no numbers or special characters).' };
-  return { ok: true };
-}
+  const validateName_ = (value, label) => {
+    const v = (value || '').trim();
+    if (!v) return { ok: false, msg: (label || 'Name') + ' is required.' };
+    const re = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
+    if (!re.test(v)) return { ok: false, msg: (label || 'Name') + ' must contain letters only (no numbers or special characters).' };
+    return { ok: true };
+  };
 
-function validateEmail_(value) {
-  const v = (value || '').trim();
-  if (!v) return { ok: false, msg: 'Work Email is required.' };
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!re.test(v)) return { ok: false, msg: 'Please enter a valid email address.' };
-  return { ok: true };
-}
+  const validateEmail_ = (value) => {
+    const v = (value || '').trim();
+    if (!v) return { ok: false, msg: 'Work Email is required.' };
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!re.test(v)) return { ok: false, msg: 'Please enter a valid email address.' };
+    return { ok: true };
+  };
 
-function validateNumber_(value) {
-  const v = (value || '').trim();
-  if (!v) return { ok: false, msg: 'Contact Number is required.' };
-  const re = /^\d+$/;
-  if (!re.test(v)) return { ok: false, msg: 'Contact Number must be numeric.' };
-  return { ok: true };
-}
+  const validateNumber_ = (value) => {
+    const v = (value || '').trim();
+    if (!v) return { ok: false, msg: 'Contact Number is required.' };
+    const re = /^\d+$/;
+    if (!re.test(v)) return { ok: false, msg: 'Contact Number must be numeric.' };
+    return { ok: true };
+  };
 
-function ensureStatusEl_(form) {
-  let el = form.querySelector('.form-status-message');
-  if (!el) {
-    el = document.createElement('div');
-    el.className = 'form-status-message mt-4 text-sm text-blue-600';
-    form.appendChild(el);
-  }
-  return el;
-}
+  const ensureStatusEl_ = (form) => {
+    let el = form.querySelector('.form-status-message');
+    if (!el) {
+      el = document.createElement('div');
+      el.className = 'form-status-message mt-4 text-sm text-blue-600';
+      form.appendChild(el);
+    }
+    return el;
+  };
 
-function showFormError_(errorEl, messages) {
-  if (!errorEl) return;
-  const list = Array.isArray(messages) ? messages : [messages];
-  errorEl.textContent = list.filter(Boolean).join(' ');
-  errorEl.classList.remove('hidden');
-}
+  const showFormError_ = (errorEl, messages) => {
+    if (!errorEl) return;
+    const list = Array.isArray(messages) ? messages : [messages];
+    errorEl.textContent = list.filter(Boolean).join(' ');
+    errorEl.classList.remove('hidden');
+  };
 // ========================================
   // TEAMWORKS CONSULTATION FORM HANDLER
   // ========================================
