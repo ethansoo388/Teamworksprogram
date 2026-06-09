@@ -1,38 +1,33 @@
 import { MainSiteNavigation } from "@/site/components/main/MainSiteNavigation";
 import { MainSiteFooter } from "@/site/components/main/MainSiteFooter";
-import { Calendar, MapPin, Globe } from "lucide-react";
+import { MapPin, Globe } from "lucide-react";
 import { JessStickyNav } from "@/site/components/jess/JessStickyNav";
 
 export function ClassSchedulePage() {
 
-  const scheduleData = [
+  const course1Sessions = [
     {
-      month: "July 2026",
-      courses: [
-        { location: "Indonesia", type: "Course 1", dates: "7th and 8th", icon: <MapPin className="w-5 h-5" /> },
-        { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
-      ]
+      quarter: "Q3",
+      quarterLabel: "July – August",
+      sessions: [
+        { dates: "7 & 8 July", city: "Jakarta" },
+        { dates: "21 & 22 July", city: "Kuala Lumpur" },
+        { dates: "6 & 7 August", city: "Bangkok" },
+      ],
     },
     {
-      month: "August 2026",
-      courses: [
-        { location: "Thailand", type: "Course 1", dates: "6th and 7th", icon: <MapPin className="w-5 h-5" /> },
-        { location: "All countries - online", type: "Course 2", dates: "19th and 20th", icon: <Globe className="w-5 h-5" /> },
-      ]
+      quarter: "Q4",
+      quarterLabel: "October",
+      sessions: [
+        { dates: "13 & 14 October", city: "Jakarta" },
+        { dates: "20 & 21 October", city: "Kuala Lumpur" },
+      ],
     },
-    {
-      month: "October 2026",
-      courses: [
-        { location: "Indonesia", type: "Course 1", dates: "13th and 14th", icon: <MapPin className="w-5 h-5" /> },
-        { location: "Malaysia", type: "Course 1", dates: "20th and 21st", icon: <MapPin className="w-5 h-5" /> },
-      ]
-    },
-    {
-      month: "November 2026",
-      courses: [
-        { location: "All countries - online", type: "Course 2", dates: "18th and 19th", icon: <Globe className="w-5 h-5" /> },
-      ]
-    },
+  ];
+
+  const course2Sessions = [
+    { quarter: "Q3", quarterLabel: "August",   dates: "19 & 20 August",   city: "Online" },
+    { quarter: "Q4", quarterLabel: "November",  dates: "18 & 19 November", city: "Online" },
   ];
 
   return (
@@ -70,135 +65,99 @@ export function ClassSchedulePage() {
       {/* Schedule Content */}
       <section className="py-16 sm:py-24 lg:py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Horizontal Quarter Timeline - Top */}
-          <div className="mb-12 overflow-x-auto">
-            <div className="flex items-center justify-center gap-4 sm:gap-8 min-w-max mx-auto pb-4">
-              {/* Q3 - Emerald */}
-              <a href="#july-2026"
 
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <span className="text-white font-bold text-xs sm:text-sm">Q3</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-0.5 w-12 sm:w-20 bg-emerald-500"></div>
-                  <div className="text-xs sm:text-sm text-slate-600 font-medium whitespace-nowrap">
-                    Jul - Aug
+          {/* ── Course 1 ── */}
+          <div className="mb-16">
+
+            {/* Course 1 header */}
+            <div className="flex items-center gap-4 mb-10 pb-6 border-b-2 border-blue-100">
+              <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Course 1 · High Performance Agile Leader</h2>
+                <p className="text-slate-500 mt-1">Face-to-face · 2 days</p>
+              </div>
+            </div>
+
+            {/* Course 1 quarter groups */}
+            <div className="space-y-10">
+              {course1Sessions.map((group) => (
+                <div key={group.quarter}>
+                  {/* Quarter label */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-500 text-white text-sm font-bold">
+                      {group.quarter}
+                    </span>
+                    <span className="text-base font-medium text-slate-500">{group.quarterLabel}</span>
+                  </div>
+
+                  {/* Session cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {group.sessions.map((session) => (
+                      <div
+                        key={session.dates}
+                        className="bg-gradient-to-br from-slate-50 to-white border border-blue-100 rounded-2xl p-6 hover:border-blue-400 hover:shadow-md transition-all duration-300"
+                      >
+                        <p className="text-2xl font-semibold text-slate-900 mb-2">{session.dates}</p>
+                        <p className="text-slate-500">{session.city}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </a>
-
-              {/* Connector */}
-              <div className="h-0.5 w-8 sm:w-16 bg-slate-300"></div>
-
-              {/* Q4 - Purple */}
-              <a href="#october-2026"
-
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <span className="text-white font-bold text-xs sm:text-sm">Q4</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-0.5 w-12 sm:w-20 bg-purple-500"></div>
-                  <div className="text-xs sm:text-sm text-slate-600 font-medium whitespace-nowrap">
-                    Oct - Nov
-                  </div>
-                </div>
-              </a>
+              ))}
             </div>
           </div>
 
-          {/* Schedule Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {scheduleData.map((monthData, index) => {
-              // Determine quarter and color based on month
-              const getQuarterInfo = (month: string) => {
-                const monthName = month.split(' ')[0].toLowerCase();
-                if (['july', 'august'].includes(monthName)) return { quarter: 'Q3', color: 'emerald' };
-                if (['october', 'november'].includes(monthName)) return { quarter: 'Q4', color: 'purple' };
-                return { quarter: '', color: 'amber' };
-              };
-
-              // Generate ID from month
-              const monthId = monthData.month.toLowerCase().replace(' ', '-');
-
-              const quarterInfo = getQuarterInfo(monthData.month);
-
-              return (
-              <div
-                key={monthData.month}
-                id={monthId}
-                className={`bg-gradient-to-br from-slate-50 to-white border-2 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 scroll-mt-32 ${
-                  quarterInfo.color === 'blue' ? 'border-blue-500/30 hover:border-blue-500' :
-                  quarterInfo.color === 'emerald' ? 'border-emerald-500/30 hover:border-emerald-500' :
-                  quarterInfo.color === 'purple' ? 'border-purple-500/30 hover:border-purple-500' :
-                  'border-slate-200'
-                }`}
-              >
-                <div className="flex items-center justify-between gap-3 mb-6">
-                  <div className="flex items-center gap-3">
-                    <Calendar className={`w-6 h-6 ${
-                      quarterInfo.color === 'blue' ? 'text-blue-500' :
-                      quarterInfo.color === 'emerald' ? 'text-emerald-500' :
-                      quarterInfo.color === 'purple' ? 'text-purple-500' :
-                      'text-amber-500'
-                    }`} />
-                    <h2 className="text-2xl sm:text-3xl font-light text-slate-900">
-                      {monthData.month}
-                    </h2>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {monthData.courses.map((course, courseIndex) => (
-                    <div
-                      key={courseIndex}
-                      className="bg-white border border-slate-200 rounded-xl p-6 hover:border-amber-500 transition-colors duration-300"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="mt-1 text-blue-600">
-                          {course.icon}
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex flex-col gap-1 mb-2">
-                            <h3 className="text-lg font-medium text-slate-900">
-                              {course.location === "Malaysia" ? "Malaysia, Kuala Lumpur - Face-to-face" :
-                               course.location === "Indonesia" ? "Indonesia, Jakarta - Face-to-face" :
-                               course.location === "Thailand" ? "Thailand, Bangkok - Face-to-face" :
-                               course.location === "All countries - online" ? "Live Virtual (Zoom) – Singapore Time (GMT+8)" :
-                               course.location}
-                            </h3>
-                            <div className="text-slate-600 font-light">
-                              {course.type === "Course 1" ? "Course 1 - High Performance Agile Leader" : "Course 2 - Leading Hyper-Productive Team"}
-                            </div>
-                          </div>
-                          <p className="text-slate-700">
-                            {course.dates}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              );
-            })}
+          {/* ── Full Programme Callout ── */}
+          <div className="mb-16 border-l-4 border-amber-400 bg-amber-50 rounded-r-2xl px-8 py-6">
+            <p className="text-slate-800 text-base sm:text-lg leading-relaxed">
+              <span className="font-semibold">Most students take the full programme.</span> Choose a quarter, book Course 1 and Course 2 together — one cohort, one quarter, fully done. Individual courses are also available for those who need just one.
+            </p>
           </div>
 
-          {/* CTA Section */}
-          <div
-            className="mt-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-12 text-center"
-          >
+          {/* ── Course 2 ── */}
+          <div className="mb-16">
+
+            {/* Course 2 header */}
+            <div className="flex items-center gap-4 mb-10 pb-6 border-b-2 border-teal-100">
+              <div className="w-12 h-12 rounded-xl bg-teal-500 flex items-center justify-center flex-shrink-0">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Course 2 · Leading Hyper-Productive Team</h2>
+                <p className="text-slate-500 mt-1">Live Virtual · Zoom · Singapore Time (GMT+8)</p>
+              </div>
+            </div>
+
+            {/* Course 2 cards — two side by side */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {course2Sessions.map((session) => (
+                <div
+                  key={session.dates}
+                  className="bg-gradient-to-br from-slate-50 to-white border border-teal-100 rounded-2xl p-6 hover:border-teal-400 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-bold">
+                      {session.quarter}
+                    </span>
+                    <span className="text-sm font-medium text-slate-500">{session.quarterLabel}</span>
+                  </div>
+                  <p className="text-2xl font-semibold text-slate-900 mb-2">{session.dates}</p>
+                  <p className="text-slate-500">{session.city}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── CTA Section (unchanged) ── */}
+          <div className="mt-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-12 text-center">
             <h3 className="text-3xl sm:text-4xl font-light text-white mb-4">
               Ready to Enrol?
             </h3>
             <p className="text-lg text-slate-300 font-light mb-8 max-w-2xl mx-auto">
               Classes run in small cohorts — seats are limited. Talk to a Program Advisor to confirm your preferred date and reserve your place.
             </p>
-
-            {/* Primary and Secondary CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="/bookseat.html?from=jess-class-schedule&section=enrollment-cta"
@@ -207,8 +166,6 @@ export function ClassSchedulePage() {
                 Book a Seat →
               </a>
             </div>
-
-            {/* WhatsApp Link */}
             <div className="mt-4">
               <a
                 href="https://wa.me/60192981055"
@@ -218,6 +175,7 @@ export function ClassSchedulePage() {
               </a>
             </div>
           </div>
+
         </div>
       </section>
 
