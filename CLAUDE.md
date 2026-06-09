@@ -13,14 +13,16 @@ All code changes go into the React/TypeScript codebase only (`src/`, `scripts/`,
 When creating a zip of the codebase, always exclude:
 - `public/` (regenerated on build)
 - `node_modules/`
+- `.git/`
+- `.claude/` (contains Claude Code session data and worktrees with their own node_modules — not needed for build or deploy)
 
-The Bash tool's working directory persists between commands. Always verify `pwd` is the worktree root before zipping, then use `.` as the source:
+The Bash tool's working directory persists between commands. Always verify `pwd` is the project root before zipping, then use `.` as the source:
 
 ```
-# 1. Verify cwd is the worktree root
+# 1. Verify cwd is the project root
 pwd
-# Should be: /Users/ethansoo/Code/teamworks/Teamworksprogram/.claude/worktrees/sad-keller
+# Should be: /Users/ethan/Code/Teamworksprogram
 
 # 2. Zip using relative paths
-zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip . --exclude "public/*" --exclude "node_modules/*" --exclude ".git/*"
+zip -r ~/Downloads/Claude<NNN>_<what-changed>.zip . --exclude "public/*" --exclude "node_modules/*" --exclude ".git/*" --exclude ".claude/*"
 ```

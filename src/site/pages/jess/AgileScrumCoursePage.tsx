@@ -357,9 +357,9 @@ export function AgileScrumCoursePage() {
 
               {/* Circular Diagram */}
               <div className="flex justify-center">
-                <ImageWithFallback 
-                  src="/assets/img/jess/jess-agile-scrum-201-agile-iterative-process.webp"
-                  alt="Agile iterative process"
+                <ImageWithFallback
+                  src="/assets/img/jess/jess-agile-scrum-201-agile-iterative-process2.webp"
+                  alt="Agile Scrum iterative delivery cycle — sprint planning, execution, review, and continuous improvement"
                   className="w-full max-w-md"
                 />
               </div>
