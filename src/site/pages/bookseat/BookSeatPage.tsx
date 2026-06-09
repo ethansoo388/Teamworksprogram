@@ -581,17 +581,20 @@ export function BookSeatPage() {
               </div>
               <h2 className="bs-question">Which Course 1 date works for you?</h2>
               <div className="bs-options">
-                <button className="bs-opt" data-bs-value="KL · 21 &amp; 22 Apr 2026">
-                  <span className="bs-badge">A</span><span>Kuala Lumpur · 21 &amp; 22 Apr 2026</span>
-                </button>
-                <button className="bs-opt" data-bs-value="KL · 21 &amp; 22 Jul 2026">
-                  <span className="bs-badge">B</span><span>Kuala Lumpur · 21 &amp; 22 Jul 2026</span>
-                </button>
-                <button className="bs-opt" data-bs-value="Jakarta · 6 &amp; 7 May 2026">
-                  <span className="bs-badge">C</span><span>Jakarta · 6 &amp; 7 May 2026</span>
+                <button className="bs-opt" data-bs-value="Bangkok · 6 &amp; 7 Aug 2026">
+                  <span className="bs-badge">A</span><span>Bangkok · 6 &amp; 7 August</span>
                 </button>
                 <button className="bs-opt" data-bs-value="Jakarta · 7 &amp; 8 Jul 2026">
-                  <span className="bs-badge">D</span><span>Jakarta · 7 &amp; 8 Jul 2026</span>
+                  <span className="bs-badge">B</span><span>Jakarta · 7 &amp; 8 July</span>
+                </button>
+                <button className="bs-opt" data-bs-value="Jakarta · 13 &amp; 14 Oct 2026">
+                  <span className="bs-badge">C</span><span>Jakarta · 13 &amp; 14 October</span>
+                </button>
+                <button className="bs-opt" data-bs-value="KL · 21 &amp; 22 Jul 2026">
+                  <span className="bs-badge">D</span><span>Kuala Lumpur · 21 &amp; 22 July</span>
+                </button>
+                <button className="bs-opt" data-bs-value="KL · 20 &amp; 21 Oct 2026">
+                  <span className="bs-badge">E</span><span>Kuala Lumpur · 20 &amp; 21 October</span>
                 </button>
               </div>
               <div className="bs-actions">
@@ -608,11 +611,11 @@ export function BookSeatPage() {
               </div>
               <h2 className="bs-question">Which Course 2 date works for you?</h2>
               <div className="bs-options">
-                <button className="bs-opt" data-bs-value="Online · 20 &amp; 21 May 2026">
-                  <span className="bs-badge">A</span><span>Online · 20 &amp; 21 May 2026</span>
-                </button>
                 <button className="bs-opt" data-bs-value="Online · 19 &amp; 20 Aug 2026">
-                  <span className="bs-badge">B</span><span>Online · 19 &amp; 20 Aug 2026</span>
+                  <span className="bs-badge">A</span><span>Online · 19 &amp; 20 August</span>
+                </button>
+                <button className="bs-opt" data-bs-value="Online · 18 &amp; 19 Nov 2026">
+                  <span className="bs-badge">B</span><span>Online · 18 &amp; 19 November</span>
                 </button>
               </div>
               <div className="bs-actions">
@@ -629,17 +632,20 @@ export function BookSeatPage() {
               </div>
               <h2 className="bs-question">Which intake would you like to start with?</h2>
               <div className="bs-options">
-                <button className="bs-opt" data-bs-value="Kuala Lumpur · 21 Apr 2026">
-                  <span className="bs-badge">A</span><span>Kuala Lumpur · 21 Apr 2026</span>
-                </button>
-                <button className="bs-opt" data-bs-value="Kuala Lumpur · 21 Jul 2026">
-                  <span className="bs-badge">B</span><span>Kuala Lumpur · 21 Jul 2026</span>
-                </button>
-                <button className="bs-opt" data-bs-value="Jakarta · 6 May 2026">
-                  <span className="bs-badge">C</span><span>Jakarta · 6 May 2026</span>
+                <button className="bs-opt" data-bs-value="Bangkok · 6 Aug 2026">
+                  <span className="bs-badge">A</span><span>Bangkok · 6 August</span>
                 </button>
                 <button className="bs-opt" data-bs-value="Jakarta · 7 Jul 2026">
-                  <span className="bs-badge">D</span><span>Jakarta · 7 Jul 2026</span>
+                  <span className="bs-badge">B</span><span>Jakarta · 7 July</span>
+                </button>
+                <button className="bs-opt" data-bs-value="Jakarta · 13 Oct 2026">
+                  <span className="bs-badge">C</span><span>Jakarta · 13 October</span>
+                </button>
+                <button className="bs-opt" data-bs-value="KL · 21 Jul 2026">
+                  <span className="bs-badge">D</span><span>Kuala Lumpur · 21 July</span>
+                </button>
+                <button className="bs-opt" data-bs-value="KL · 20 Oct 2026">
+                  <span className="bs-badge">E</span><span>Kuala Lumpur · 20 October</span>
                 </button>
               </div>
               <div className="bs-actions">

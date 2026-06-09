@@ -7,19 +7,6 @@ export function ClassSchedulePage() {
 
   const scheduleData = [
     {
-      month: "April 2026",
-      courses: [
-        { location: "Malaysia", type: "Course 1", dates: "21st and 22nd", icon: <MapPin className="w-5 h-5" /> },
-      ]
-    },
-    {
-      month: "May 2026",
-      courses: [
-        { location: "Indonesia", type: "Course 1", dates: "6th and 7th", icon: <MapPin className="w-5 h-5" /> },
-        { location: "All countries - online", type: "Course 2", dates: "20th and 21st", icon: <Globe className="w-5 h-5" /> },
-      ]
-    },
-    {
       month: "July 2026",
       courses: [
         { location: "Indonesia", type: "Course 1", dates: "7th and 8th", icon: <MapPin className="w-5 h-5" /> },
@@ -29,6 +16,7 @@ export function ClassSchedulePage() {
     {
       month: "August 2026",
       courses: [
+        { location: "Thailand", type: "Course 1", dates: "6th and 7th", icon: <MapPin className="w-5 h-5" /> },
         { location: "All countries - online", type: "Course 2", dates: "19th and 20th", icon: <Globe className="w-5 h-5" /> },
       ]
     },
@@ -85,28 +73,9 @@ export function ClassSchedulePage() {
           {/* Horizontal Quarter Timeline - Top */}
           <div className="mb-12 overflow-x-auto">
             <div className="flex items-center justify-center gap-4 sm:gap-8 min-w-max mx-auto pb-4">
-              {/* Q2 - Blue */}
-              <a href="#april-2026"
-                
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <span className="text-white font-bold text-xs sm:text-sm">Q2</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-0.5 w-12 sm:w-20 bg-blue-500"></div>
-                  <div className="text-xs sm:text-sm text-slate-600 font-medium whitespace-nowrap">
-                    Apr - May
-                  </div>
-                </div>
-              </a>
-
-              {/* Connector */}
-              <div className="h-0.5 w-8 sm:w-16 bg-slate-300"></div>
-
               {/* Q3 - Emerald */}
               <a href="#july-2026"
-                
+
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
@@ -125,7 +94,7 @@ export function ClassSchedulePage() {
 
               {/* Q4 - Purple */}
               <a href="#october-2026"
-                
+
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
@@ -147,7 +116,6 @@ export function ClassSchedulePage() {
               // Determine quarter and color based on month
               const getQuarterInfo = (month: string) => {
                 const monthName = month.split(' ')[0].toLowerCase();
-                if (['april', 'may'].includes(monthName)) return { quarter: 'Q2', color: 'blue' };
                 if (['july', 'august'].includes(monthName)) return { quarter: 'Q3', color: 'emerald' };
                 if (['october', 'november'].includes(monthName)) return { quarter: 'Q4', color: 'purple' };
                 return { quarter: '', color: 'amber' };
@@ -198,6 +166,7 @@ export function ClassSchedulePage() {
                             <h3 className="text-lg font-medium text-slate-900">
                               {course.location === "Malaysia" ? "Malaysia, Kuala Lumpur - Face-to-face" :
                                course.location === "Indonesia" ? "Indonesia, Jakarta - Face-to-face" :
+                               course.location === "Thailand" ? "Thailand, Bangkok - Face-to-face" :
                                course.location === "All countries - online" ? "Live Virtual (Zoom) – Singapore Time (GMT+8)" :
                                course.location}
                             </h3>
