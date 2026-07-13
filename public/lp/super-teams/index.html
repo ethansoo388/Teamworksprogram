@@ -163,22 +163,24 @@
       
       /* ── Hero ────────────────────────────────────────────────────────────── */
       .lp-hero { padding-top: 20px; padding-bottom: 56px; }
+      /* HRD Corp badge — the seal is the trust signal Malaysians recognise on
+      sight, so it leads at full size; the text confirms "100% claimable". */
       .lp-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       background: var(--amber-tint);
       color: #92400E;
       border: 1px solid var(--amber);
       border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 13px;
+      padding: 8px 20px 8px 10px;
+      font-size: 15px;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       margin-bottom: 20px;
       }
-      .lp-badge img { width: 26px; height: 26px; }
+      .lp-badge img { width: 52px; height: 52px; }
       .lp-hero h1 {
       font-size: 31px;
       font-weight: 650;
@@ -688,18 +690,39 @@
       /* ── Booking (§15) ───────────────────────────────────────────────────── */
       .lp-booking { scroll-margin-top: 12px; }
       .lp-booking h2 { text-align: center; }
-      .lp-booking-hrd {
+      /* HRD Corp claim card — big seal + "100% claimable" lockup, reused in the
+      trainer section (price) and booking section (levy confirmation). */
+      .lp-hrd-card {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 14px;
+      gap: 16px;
+      background: var(--amber-tint);
+      border: 1px solid var(--amber);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-top: 24px;
+      text-align: left;
+      }
+      .lp-hrd-card img { width: 60px; height: 60px; flex-shrink: 0; }
+      .lp-hrd-card strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 750;
+      color: var(--ink);
+      line-height: 1.25;
+      }
+      .lp-hrd-card span {
+      display: block;
+      font-size: 14.5px;
       font-weight: 600;
       color: #92400E;
-      margin-bottom: 24px;
-      text-align: center;
+      margin-top: 2px;
       }
-      .lp-booking-hrd img { width: 30px; height: 30px; flex-shrink: 0; }
+      .lp-hrd-card-center {
+      justify-content: center;
+      max-width: 480px;
+      margin: 0 auto 24px;
+      }
       .lp-calendar-embed {
       min-height: 420px;
       margin-bottom: 20px;
@@ -962,7 +985,14 @@
                                 <cite>
                                   <strong>Dr. Jeff Sutherland</strong>co-creator of Scrum · Founder &amp; Chairman, Scrum Inc.</cite>
                                 </blockquote>
-                                <p class="lp-sme-pitch">Creating Super Teams takes the same team system that enterprises pay premium prices for — and rebuilds it for Malaysian SME teams. Same trainer. Same system. SME pricing: <strong>from RM350 per pax per day</strong> — 100% HRD Corp claimable.</p>
+                                <p class="lp-sme-pitch">Creating Super Teams takes the same team system that enterprises pay premium prices for — and rebuilds it for Malaysian SME teams. Same trainer. Same system. SME pricing.</p>
+                                <div class="lp-hrd-card">
+                                  <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="HRD Corp Claimable Course logo" width="192" height="192"/>
+                                  <div>
+                                    <strong>100% HRD Corp Claimable</strong>
+                                    <span>From RM350 per pax per day</span>
+                                  </div>
+                                </div>
                               </div>
                             </section>
                             <section id="offer">
@@ -1202,134 +1232,139 @@
                                         <section class="lp-booking" id="booking">
                                           <div class="lp-container">
                                             <h2>Ready? Pick your 15-minute slot — and get your Team Score.</h2>
-                                            <p class="lp-booking-hrd">
-                                              <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="" aria-hidden="true" width="192" height="192"/>100% HRD Corp Claimable — we confirm your levy eligibility on the call</p>
-                                              <div class="lp-calendar-embed lp-placeholder" id="calendar-embed">[PLACEHOLDER — scheduling widget embeds here. Paste your Calendly/booking embed code inside this container.]</div>
-                                              <p class="lp-booking-or">Prefer WhatsApp?</p>
-                                              <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
-                                                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                                  </path>
-                                                </svg> Chat with us on WhatsApp</a>
+                                            <div class="lp-hrd-card lp-hrd-card-center">
+                                              <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="" aria-hidden="true" width="192" height="192"/>
+                                              <div>
+                                                <strong>100% HRD Corp Claimable</strong>
+                                                <span>We confirm your levy eligibility on the call</span>
                                               </div>
-                                            </section>
-                                            <footer class="lp-footer">
-                                              <div class="lp-container">
-                                                <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
-                                                <p>
-                                                  <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
-                                                </p>
-                                              </div>
-                                            </footer>
-                                            <div class="lp-sticky" id="sticky-cta">
-                                              <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
                                             </div>
-                                            <script>/* ---------------------------------------------------------------------------
-                                              Landing page JS — inlined into landing-shell.html at build time.
-                                              Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
-                                              No libraries. Keep this file small — it ships inline.
-                                              --------------------------------------------------------------------------- */
-                                              (function () {
-                                              'use strict';
-                                              
-                                              // ── Meta Pixel bootstrap ──────────────────────────────────────────────
-                                              // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
-                                              // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
-                                              // but nothing is sent to Facebook.
-                                              var PIXEL_ID = window.META_PIXEL_ID || '';
-                                              var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
-                                              
-                                              (function (f, b, e, v, n, t, s) {
-                                              if (f.fbq) return;
-                                              n = f.fbq = function () {
-                                              n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                                              };
-                                              if (!f._fbq) f._fbq = n;
-                                              n.push = n;
-                                              n.loaded = true;
-                                              n.version = '2.0';
-                                              n.queue = [];
-                                              if (!pixelLive) return; // stub only — do not load fbevents.js yet
-                                              t = b.createElement(e);
-                                              t.async = true;
-                                              t.src = v;
-                                              s = b.getElementsByTagName(e)[0];
-                                              s.parentNode.insertBefore(t, s);
-                                              })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-                                              
-                                              if (pixelLive) {
-                                              window.fbq('init', PIXEL_ID);
-                                              window.fbq('track', 'PageView');
-                                              }
-                                              
-                                              // ── Custom event: WhatsApp click ──────────────────────────────────────
-                                              var waLinks = document.querySelectorAll('[data-wa-link]');
-                                              for (var i = 0; i < waLinks.length; i++) {
-                                              waLinks[i].addEventListener('click', function () {
-                                              window.fbq('trackCustom', 'WhatsAppClick', {
-                                              placement: this.getAttribute('data-placement') || 'unknown'
-                                              });
-                                              });
-                                              }
-                                              
-                                              // ── Lead event ────────────────────────────────────────────────────────
-                                              // Preferred: Calendly's booking-confirmed postMessage (fires on actual
-                                              // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
-                                              // on first interaction with the calendar container instead.
-                                              var leadFired = false;
-                                              function fireLead(source) {
-                                              if (leadFired) return;
-                                              leadFired = true;
-                                              window.fbq('track', 'Lead', { source: source });
-                                              }
-                                              
-                                              window.addEventListener('message', function (e) {
-                                              if (e.data && e.data.event === 'calendly.event_scheduled') {
-                                              fireLead('calendly_booking');
-                                              }
-                                              });
-                                              
-                                              var calendar = document.getElementById('calendar-embed');
-                                              if (calendar) {
-                                              calendar.addEventListener('pointerdown', function () {
-                                              var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
-                                              if (!isCalendly) fireLead('widget_interaction');
-                                              });
-                                              }
-                                              
-                                              // ── Sticky mobile CTA bar ─────────────────────────────────────────────
-                                              // Shown once the hero CTA scrolls out of view; hidden again while the
-                                              // booking section is on screen (so it never covers the calendar).
-                                              var bar = document.getElementById('sticky-cta');
-                                              var heroCta = document.getElementById('hero-cta');
-                                              var booking = document.getElementById('booking');
-                                              
-                                              if (bar && heroCta && booking && 'IntersectionObserver' in window) {
-                                              var pastHero = false;
-                                              var atBooking = false;
-                                              
-                                              function updateBar() {
-                                              var show = pastHero && !atBooking;
-                                              bar.classList.toggle('is-visible', show);
-                                              document.body.classList.toggle('lp-sticky-on', show);
-                                              }
-                                              
-                                              new IntersectionObserver(function (entries) {
-                                              pastHero = !entries[0].isIntersecting;
-                                              updateBar();
-                                              }).observe(heroCta);
-                                              
-                                              new IntersectionObserver(function (entries) {
-                                              atBooking = entries[0].isIntersecting;
-                                              updateBar();
-                                              }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
-                                              } else if (bar) {
-                                              // No IntersectionObserver: keep the bar always visible on mobile.
-                                              bar.classList.add('is-visible');
-                                              document.body.classList.add('lp-sticky-on');
-                                              }
-                                              })();
-                                            </script>
-                                          </body>
-                                        </html>
-                                        
+                                            <div class="lp-calendar-embed lp-placeholder" id="calendar-embed">[PLACEHOLDER — scheduling widget embeds here. Paste your Calendly/booking embed code inside this container.]</div>
+                                            <p class="lp-booking-or">Prefer WhatsApp?</p>
+                                            <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
+                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
+                                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                                </path>
+                                              </svg> Chat with us on WhatsApp</a>
+                                            </div>
+                                          </section>
+                                          <footer class="lp-footer">
+                                            <div class="lp-container">
+                                              <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
+                                              <p>
+                                                <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
+                                              </p>
+                                            </div>
+                                          </footer>
+                                          <div class="lp-sticky" id="sticky-cta">
+                                            <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
+                                          </div>
+                                          <script>/* ---------------------------------------------------------------------------
+                                            Landing page JS — inlined into landing-shell.html at build time.
+                                            Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
+                                            No libraries. Keep this file small — it ships inline.
+                                            --------------------------------------------------------------------------- */
+                                            (function () {
+                                            'use strict';
+                                            
+                                            // ── Meta Pixel bootstrap ──────────────────────────────────────────────
+                                            // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
+                                            // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
+                                            // but nothing is sent to Facebook.
+                                            var PIXEL_ID = window.META_PIXEL_ID || '';
+                                            var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
+                                            
+                                            (function (f, b, e, v, n, t, s) {
+                                            if (f.fbq) return;
+                                            n = f.fbq = function () {
+                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                                            };
+                                            if (!f._fbq) f._fbq = n;
+                                            n.push = n;
+                                            n.loaded = true;
+                                            n.version = '2.0';
+                                            n.queue = [];
+                                            if (!pixelLive) return; // stub only — do not load fbevents.js yet
+                                            t = b.createElement(e);
+                                            t.async = true;
+                                            t.src = v;
+                                            s = b.getElementsByTagName(e)[0];
+                                            s.parentNode.insertBefore(t, s);
+                                            })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                                            
+                                            if (pixelLive) {
+                                            window.fbq('init', PIXEL_ID);
+                                            window.fbq('track', 'PageView');
+                                            }
+                                            
+                                            // ── Custom event: WhatsApp click ──────────────────────────────────────
+                                            var waLinks = document.querySelectorAll('[data-wa-link]');
+                                            for (var i = 0; i < waLinks.length; i++) {
+                                            waLinks[i].addEventListener('click', function () {
+                                            window.fbq('trackCustom', 'WhatsAppClick', {
+                                            placement: this.getAttribute('data-placement') || 'unknown'
+                                            });
+                                            });
+                                            }
+                                            
+                                            // ── Lead event ────────────────────────────────────────────────────────
+                                            // Preferred: Calendly's booking-confirmed postMessage (fires on actual
+                                            // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
+                                            // on first interaction with the calendar container instead.
+                                            var leadFired = false;
+                                            function fireLead(source) {
+                                            if (leadFired) return;
+                                            leadFired = true;
+                                            window.fbq('track', 'Lead', { source: source });
+                                            }
+                                            
+                                            window.addEventListener('message', function (e) {
+                                            if (e.data && e.data.event === 'calendly.event_scheduled') {
+                                            fireLead('calendly_booking');
+                                            }
+                                            });
+                                            
+                                            var calendar = document.getElementById('calendar-embed');
+                                            if (calendar) {
+                                            calendar.addEventListener('pointerdown', function () {
+                                            var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
+                                            if (!isCalendly) fireLead('widget_interaction');
+                                            });
+                                            }
+                                            
+                                            // ── Sticky mobile CTA bar ─────────────────────────────────────────────
+                                            // Shown once the hero CTA scrolls out of view; hidden again while the
+                                            // booking section is on screen (so it never covers the calendar).
+                                            var bar = document.getElementById('sticky-cta');
+                                            var heroCta = document.getElementById('hero-cta');
+                                            var booking = document.getElementById('booking');
+                                            
+                                            if (bar && heroCta && booking && 'IntersectionObserver' in window) {
+                                            var pastHero = false;
+                                            var atBooking = false;
+                                            
+                                            function updateBar() {
+                                            var show = pastHero && !atBooking;
+                                            bar.classList.toggle('is-visible', show);
+                                            document.body.classList.toggle('lp-sticky-on', show);
+                                            }
+                                            
+                                            new IntersectionObserver(function (entries) {
+                                            pastHero = !entries[0].isIntersecting;
+                                            updateBar();
+                                            }).observe(heroCta);
+                                            
+                                            new IntersectionObserver(function (entries) {
+                                            atBooking = entries[0].isIntersecting;
+                                            updateBar();
+                                            }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
+                                            } else if (bar) {
+                                            // No IntersectionObserver: keep the bar always visible on mobile.
+                                            bar.classList.add('is-visible');
+                                            document.body.classList.add('lp-sticky-on');
+                                            }
+                                            })();
+                                          </script>
+                                        </body>
+                                      </html>
+                                      

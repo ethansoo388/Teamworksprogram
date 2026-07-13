@@ -372,10 +372,20 @@ export function SuperTeamsLandingPage() {
           <p className="lp-sme-pitch">
             Creating Super Teams takes the same team system that enterprises
             pay premium prices for — and rebuilds it for Malaysian SME teams.
-            Same trainer. Same system. SME pricing:{" "}
-            <strong>from RM350 per pax per day</strong> — 100% HRD Corp
-            claimable.
+            Same trainer. Same system. SME pricing.
           </p>
+          <div className="lp-hrd-card">
+            <img
+              src="/assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp"
+              alt="HRD Corp Claimable Course logo"
+              width="192"
+              height="192"
+            />
+            <div>
+              <strong>100% HRD Corp Claimable</strong>
+              <span>From RM350 per pax per day</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -773,7 +783,7 @@ export function SuperTeamsLandingPage() {
       <section className="lp-booking" id="booking">
         <div className="lp-container">
           <h2>Ready? Pick your 15-minute slot — and get your Team Score.</h2>
-          <p className="lp-booking-hrd">
+          <div className="lp-hrd-card lp-hrd-card-center">
             <img
               src="/assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp"
               alt=""
@@ -781,9 +791,11 @@ export function SuperTeamsLandingPage() {
               width="192"
               height="192"
             />
-            100% HRD Corp Claimable — we confirm your levy eligibility on the
-            call
-          </p>
+            <div>
+              <strong>100% HRD Corp Claimable</strong>
+              <span>We confirm your levy eligibility on the call</span>
+            </div>
+          </div>
           {/* TODO: paste the real scheduling embed (Calendly or similar)
               inside #calendar-embed, replacing the placeholder div. The
               inline JS already fires the Meta Pixel "Lead" event on

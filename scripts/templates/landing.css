@@ -136,22 +136,24 @@ section .lp-btn { margin-top: 28px; }
 
 /* ── Hero ────────────────────────────────────────────────────────────── */
 .lp-hero { padding-top: 20px; padding-bottom: 56px; }
+/* HRD Corp badge — the seal is the trust signal Malaysians recognise on
+   sight, so it leads at full size; the text confirms "100% claimable". */
 .lp-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   background: var(--amber-tint);
   color: #92400E;
   border: 1px solid var(--amber);
   border-radius: 999px;
-  padding: 7px 14px;
-  font-size: 13px;
+  padding: 8px 20px 8px 10px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.lp-badge img { width: 26px; height: 26px; }
+.lp-badge img { width: 52px; height: 52px; }
 .lp-hero h1 {
   font-size: 31px;
   font-weight: 650;
@@ -661,18 +663,39 @@ section .lp-btn { margin-top: 28px; }
 /* ── Booking (§15) ───────────────────────────────────────────────────── */
 .lp-booking { scroll-margin-top: 12px; }
 .lp-booking h2 { text-align: center; }
-.lp-booking-hrd {
+/* HRD Corp claim card — big seal + "100% claimable" lockup, reused in the
+   trainer section (price) and booking section (levy confirmation). */
+.lp-hrd-card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 16px;
+  background: var(--amber-tint);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  margin-top: 24px;
+  text-align: left;
+}
+.lp-hrd-card img { width: 60px; height: 60px; flex-shrink: 0; }
+.lp-hrd-card strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.lp-hrd-card span {
+  display: block;
+  font-size: 14.5px;
   font-weight: 600;
   color: #92400E;
-  margin-bottom: 24px;
-  text-align: center;
+  margin-top: 2px;
 }
-.lp-booking-hrd img { width: 30px; height: 30px; flex-shrink: 0; }
+.lp-hrd-card-center {
+  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
 .lp-calendar-embed {
   min-height: 420px;
   margin-bottom: 20px;
