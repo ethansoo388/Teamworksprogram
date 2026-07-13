@@ -115,14 +115,14 @@ export function SuperTeamsLandingPage() {
               100% HRD Corp Claimable
             </span>
             <h1>
-              Turn the team that needs chasing into a team that delivers —{" "}
-              <em>in 2 days</em>
+              Another missed deadline. Another angry customer.{" "}
+              <em>Another night chasing your team.</em>
             </h1>
             <p className="lp-hero-sub">
-              The team system that banks, airports and tech giants pay
-              enterprise prices for — rebuilt for Malaysian SME teams.
-              Hands-on, no slides marathon: your team learns by doing, on
-              their own real work.
+              Busy isn&rsquo;t the same as delivering. Creating Super Teams
+              installs the missing system in 2 days — the same one banks and
+              tech giants pay enterprise prices for, rebuilt for Malaysian
+              SMEs. Hands-on, on your team&rsquo;s real work.
             </p>
             <a href="#booking" className="lp-btn lp-btn-primary" id="hero-cta">
               {CTA_TEXT}
@@ -132,16 +132,15 @@ export function SuperTeamsLandingPage() {
             </p>
           </div>
           <div className="lp-hero-photo">
-            {/* TODO: real workshop photo — full-width, real photography of
-                Ethan actually training (any past class works). Never stock,
-                never illustration. Landscape 4:3, ~1200px wide, webp. */}
-            <div
-              className="lp-placeholder lp-placeholder-photo"
-              role="img"
-              aria-label="Placeholder for a real workshop photo"
-            >
-              [PLACEHOLDER — real workshop photo]
-            </div>
+            {/* INTERIM: still from the ad video (real class footage) — swap
+                for a dedicated photo of Ethan training when available.
+                Landscape 4:3, ~1200px wide, webp. */}
+            <img
+              src="/assets/img/lp/lp-hero-workshop.webp"
+              alt="Facilitator leading a hands-on team workshop"
+              width="1080"
+              height="810"
+            />
           </div>
         </div>
       </section>
@@ -175,30 +174,47 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── §4 Story — continues the ad's "Lia" narrative ───────────────── */}
+      {/* ── §4 Story — the "super employee" narrative (character named Lia,
+             matching the ad video, but self-contained for cold visitors) ── */}
       <section className="lp-story" id="story">
         <div className="lp-container lp-narrow">
           <h2>
-            Every company has a Lia.{" "}
-            <em>You&rsquo;re picturing yours right now.</em>
+            Is your company <em>one resignation away</em> from disaster?
           </h2>
           <p>
-            The one in meetings all day, answering messages non-stop. The one
-            everyone depends on — so much that the day she takes MC, the
-            whole company slows down, and people still call her on her sick
-            bed.
+            In most SMEs, 1&ndash;2 &ldquo;super employees&rdquo; quietly
+            carry 60&ndash;70% of the real work. You know exactly who yours
+            is: the one in meetings all day, answering messages non-stop —
+            the one everyone depends on. <strong>Let&rsquo;s call her
+            Lia.</strong>
+          </p>
+          <div className="lp-story-photos">
+            <img
+              src="/assets/img/lp/lp-story-lia-desk.webp"
+              alt="Overwhelmed employee working late at her desk"
+              width="1080"
+              height="760"
+              loading="lazy"
+            />
+            <img
+              src="/assets/img/lp/lp-story-lia-phone.webp"
+              alt="Employee answering non-stop work calls at her desk"
+              width="1080"
+              height="700"
+              loading="lazy"
+            />
+          </div>
+          <p>
+            The day Lia takes MC, the whole company slows down — and people
+            still call her on her sick bed. Because &ldquo;she&rsquo;s the
+            only one who can handle it,&rdquo; every urgent job lands on her
+            desk. Until the day she hands in her resignation — tired of
+            carrying colleagues who are paid the same to do less. And when
+            she walks out, she takes the SOPs with her. They were never
+            written down. They only ever existed in her head.
           </p>
           <p>
-            Here&rsquo;s how that story usually continues. Because
-            &ldquo;she&rsquo;s the only one who can handle it,&rdquo; every
-            urgent job lands on her desk. Until the day she hands in her
-            resignation — tired of carrying colleagues who are paid the same
-            to do less. And when she walks out, she takes the SOPs with her —
-            because they were never written down. They only ever existed in
-            her head.
-          </p>
-          <p>
-            Meanwhile you&rsquo;re not just the boss anymore. You&rsquo;re
+            Meanwhile, you&rsquo;re not just the boss anymore. You&rsquo;re
             the project manager, the quality checker, and the backup plan for
             every single job in the company. It&rsquo;s 9.40pm on a Tuesday
             and you&rsquo;re still on WhatsApp — chasing.
@@ -231,16 +247,15 @@ export function SuperTeamsLandingPage() {
       <section className="lp-reframe" id="reframe">
         <div className="lp-container lp-narrow">
           <h2>
-            It&rsquo;s not your people.{" "}
-            <em>It&rsquo;s the system they work in.</em>
+            Why does nothing move <em>unless you push?</em>
           </h2>
           <p>
-            Think about it: the same employee who &ldquo;lacks
-            initiative&rdquo; in your office somehow organises a wedding for
-            300 guests on the weekend. People don&rsquo;t lack ability — they
-            follow whatever system surrounds them. And when the workplace has
-            no system, they follow the oldest rule there is:{" "}
-            <em>wait for the boss to chase.</em>
+            Not because your people are lazy. Think about it: the same
+            employee who &ldquo;lacks initiative&rdquo; in your office
+            somehow organises a wedding for 300 guests on the weekend. People
+            don&rsquo;t lack ability — they follow whatever system surrounds
+            them. And when the workplace has no system, they follow the
+            oldest rule there is: <em>wait for the boss to chase.</em>
           </p>
           <p className="lp-reframe-lead">
             That&rsquo;s why the usual fixes keep failing:
@@ -264,7 +279,19 @@ export function SuperTeamsLandingPage() {
               chaos — and produce the same results within 90 days.
             </li>
           </ul>
+          <img
+            className="lp-reframe-photo"
+            src="/assets/img/lp/lp-reframe-workshop.webp"
+            alt="Team working through their real workflow in a hands-on workshop"
+            width="1080"
+            height="810"
+            loading="lazy"
+          />
           <p>
+            <strong>
+              You don&rsquo;t have a people problem. You have a missing
+              system.
+            </strong>{" "}
             High-performing teams in banks, airports and tech companies
             don&rsquo;t run on talent or motivation. They run on three
             boring-sounding things:
@@ -798,6 +825,6 @@ export const pageMeta: PageMeta = {
   title:
     "Creating Super Teams — 2-Day Team Training | 100% HRD Corp Claimable",
   description:
-    "Turn the team that needs chasing into a team that delivers — in 2 days. Hands-on training for Malaysian SMEs, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
+    "Missed deadlines, angry customers — but everyone looks busy? Creating Super Teams installs the missing team system in 2 days. Hands-on, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
   siteType: "teamworks",
 };

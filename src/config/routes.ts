@@ -174,7 +174,7 @@ export const routes: RouteEntry[] = [
     title:
       "Creating Super Teams — 2-Day Team Training | 100% HRD Corp Claimable",
     description:
-      "Turn the team that needs chasing into a team that delivers — in 2 days. Hands-on training for Malaysian SMEs, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
+      "Missed deadlines, angry customers — but everyone looks busy? Creating Super Teams installs the missing team system in 2 days. Hands-on, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
     siteType: "teamworks",
     shell: "landing",
   },
