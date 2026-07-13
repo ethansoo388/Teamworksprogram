@@ -1,18 +1,21 @@
 /* ---------------------------------------------------------------------------
    Landing page styles — inlined into landing-shell.html at build time.
    Mobile-first (designed at 375px). Keep this file lean: it ships in <head>.
-   Brand: TeamWorks purple (#6D28D9 / #5B21B6, tint #EDE9FE).
+   Design tokens aligned with /teamworks/creating-super-teams.html
+   (LP-super-teams-content-plan.md, 2026-07-14): purple #9333EA, near-black
+   headlines, gray-600 body, tight heading tracking, generous whitespace.
    --------------------------------------------------------------------------- */
 
 :root {
-  --purple: #6D28D9;
-  --purple-dark: #5B21B6;
-  --purple-tint: #EDE9FE;
+  --purple: #9333EA;
+  --purple-dark: #7E22CE;
+  --purple-tint: #FAF5FF;
   --amber: #F59E0B;
   --amber-tint: #FEF3C7;
-  --ink: #111827;
+  --ink: #0A0A0A;
   --ink-soft: #374151;
-  --muted: #6B7280;
+  --muted: #4B5563;
+  --muted-light: #6B7280;
   --line: #E5E7EB;
   --bg-soft: #F9FAFB;
   --wa-green: #1FAF54;
@@ -30,13 +33,14 @@ body.landing {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: #fff;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 img, svg { max-width: 100%; height: auto; display: block; }
 
 /* Visible focus states (a11y) */
-a:focus-visible, button:focus-visible, summary:focus-visible {
+a:focus-visible, button:focus-visible, summary:focus-visible,
+.lp-li-strip:focus-visible {
   outline: 3px solid var(--purple);
   outline-offset: 2px;
   border-radius: 4px;
@@ -49,15 +53,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   padding-left: 20px;
   padding-right: 20px;
 }
+/* Narrower measure for long-form copy sections */
+.lp-narrow { max-width: 720px; }
 
-section { padding: 48px 0; }
+section { padding: 64px 0; }
 
-h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
 
 h2 {
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
+h2 em { font-style: normal; color: var(--purple); }
+
+section p { color: var(--ink-soft); }
+section p + p { margin-top: 14px; }
 
 /* ── Buttons ─────────────────────────────────────────────────────────── */
 .lp-btn {
@@ -76,7 +87,7 @@ h2 {
 .lp-btn-primary {
   background: var(--purple);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.35);
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.35);
 }
 .lp-btn-primary:hover { background: var(--purple-dark); }
 .lp-btn-primary:active { transform: scale(0.98); }
@@ -87,6 +98,9 @@ h2 {
 }
 .lp-btn-outline:hover { border-color: var(--wa-green); }
 .lp-btn svg { display: inline-block; vertical-align: -3px; }
+/* Mid-page CTAs get breathing room from the copy above them */
+section .lp-btn { margin-top: 28px; }
+.lp-hero .lp-btn, .lp-offer-box .lp-btn, .lp-sticky .lp-btn { margin-top: 0; }
 
 /* ── Header ──────────────────────────────────────────────────────────── */
 .lp-header {
@@ -109,7 +123,7 @@ h2 {
 }
 
 /* ── Hero ────────────────────────────────────────────────────────────── */
-.lp-hero { padding-top: 16px; padding-bottom: 40px; }
+.lp-hero { padding-top: 20px; padding-bottom: 56px; }
 .lp-badge {
   display: inline-flex;
   align-items: center;
@@ -120,16 +134,17 @@ h2 {
   border-radius: 999px;
   padding: 7px 14px;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .lp-badge img { width: 26px; height: 26px; }
 .lp-hero h1 {
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 14px;
+  font-size: 31px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
 }
 .lp-hero h1 em {
   font-style: normal;
@@ -137,16 +152,16 @@ h2 {
 }
 .lp-hero-sub {
   font-size: 17px;
-  color: var(--ink-soft);
-  margin-bottom: 24px;
+  color: var(--muted);
+  margin-bottom: 28px;
 }
 .lp-trust-line {
   margin-top: 12px;
   font-size: 13px;
-  color: var(--muted);
+  color: var(--muted-light);
   text-align: center;
 }
-.lp-hero-photo { margin-top: 28px; border-radius: var(--radius); overflow: hidden; }
+.lp-hero-photo { margin-top: 32px; border-radius: var(--radius); overflow: hidden; }
 
 /* ── Placeholder blocks (replace with real assets) ───────────────────── */
 .lp-placeholder {
@@ -163,22 +178,6 @@ h2 {
   padding: 12px;
 }
 .lp-placeholder-photo { aspect-ratio: 4 / 3; width: 100%; }
-.lp-placeholder-logo { height: 44px; min-width: 100px; border-radius: 8px; }
-.lp-placeholder-avatar {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  border-radius: 50%;
-  padding: 0;
-  font-size: 10px;
-}
-.lp-placeholder-trainer {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  margin: 0 auto 16px;
-  padding: 0;
-}
 
 /* ── Pain section ────────────────────────────────────────────────────── */
 .lp-pain { background: var(--bg-soft); }
@@ -197,79 +196,375 @@ h2 {
 }
 .lp-pain-card svg { flex-shrink: 0; margin-top: 2px; }
 .lp-pain-closer {
-  margin-top: 24px;
+  margin-top: 28px;
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 650;
   text-align: center;
+  color: var(--ink);
 }
 .lp-pain-closer em {
   font-style: normal;
   color: var(--purple);
 }
 
-/* ── Offer box ───────────────────────────────────────────────────────── */
+/* ── Story (§4) ──────────────────────────────────────────────────────── */
+.lp-story p { font-size: 16.5px; }
+.lp-cost-heading {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-size: 19px;
+  font-weight: 600;
+}
+.lp-cost-list { list-style: none; }
+.lp-cost-list li {
+  padding: 12px 0 12px 18px;
+  border-left: 3px solid var(--amber);
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--ink-soft);
+  background: var(--bg-soft);
+  border-radius: 0 10px 10px 0;
+  padding-right: 14px;
+}
+.lp-cost-list strong { color: var(--ink); }
+
+/* ── Reframe (§5) ────────────────────────────────────────────────────── */
+.lp-reframe { background: var(--bg-soft); }
+.lp-reframe p { font-size: 16.5px; }
+.lp-reframe p em { font-style: normal; font-weight: 600; color: var(--ink); }
+.lp-reframe-lead { margin-top: 20px; font-weight: 600; color: var(--ink); }
+.lp-fail-list { list-style: none; margin: 14px 0 24px; }
+.lp-fail-list li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-size: 15.5px;
+  color: var(--ink-soft);
+}
+.lp-fail-list strong { color: var(--ink); }
+.lp-triad {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.lp-triad-item {
+  background: #fff;
+  border: 2px solid var(--purple);
+  border-radius: var(--radius);
+  padding: 18px;
+  text-align: center;
+}
+.lp-triad-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.lp-triad-item p { font-size: 14.5px; color: var(--muted); }
+.lp-reframe-closer {
+  font-size: 17.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.lp-reframe-closer em { color: var(--purple); }
+
+/* ── Trainer (§6) ────────────────────────────────────────────────────── */
+.lp-trainer { text-align: center; }
+.lp-trainer-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 8px auto 16px;
+}
+.lp-trainer h3 { font-size: 22px; font-weight: 650; margin-bottom: 6px; }
+.lp-trainer-creds {
+  font-size: 14.5px;
+  color: var(--purple);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.lp-trainer-bio {
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-align: left;
+}
+.lp-endorsement {
+  margin: 28px 0;
+  padding: 22px 24px;
+  background: var(--purple-tint);
+  border-left: 4px solid var(--purple);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  text-align: left;
+}
+.lp-endorsement p {
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.lp-endorsement cite {
+  font-style: normal;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.lp-endorsement cite strong {
+  display: block;
+  color: var(--ink);
+  font-size: 15px;
+}
+.lp-sme-pitch { font-size: 16.5px; color: var(--ink-soft); text-align: left; }
+.lp-sme-pitch strong { color: var(--ink); }
+
+/* ── Offer box (§7) ──────────────────────────────────────────────────── */
 .lp-offer-box {
   background: var(--purple-tint);
   border: 2px solid var(--purple);
   border-radius: var(--radius);
-  padding: 28px 22px;
+  padding: 32px 24px;
 }
 .lp-offer-box h2 { color: var(--purple-dark); }
-.lp-offer-lead { font-weight: 600; margin-bottom: 16px; }
-.lp-offer-list { list-style: none; margin-bottom: 24px; }
+.lp-offer-lead { font-weight: 600; color: var(--ink); margin-bottom: 16px; }
+.lp-offer-list { list-style: none; margin-bottom: 20px; }
 .lp-offer-list li {
   display: flex;
   gap: 10px;
   align-items: flex-start;
   padding: 8px 0;
   font-size: 16px;
+  color: var(--ink-soft);
 }
 .lp-offer-list svg { flex-shrink: 0; margin-top: 4px; }
+.lp-offer-note {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
 
-/* ── Proof ───────────────────────────────────────────────────────────── */
+/* ── Self-ID grid (§8) ───────────────────────────────────────────────── */
+.lp-idgrid-section { background: var(--bg-soft); }
+.lp-idgrid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.lp-idcard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.lp-idcard h3 { font-size: 17.5px; font-weight: 650; margin-bottom: 8px; }
+.lp-idcard p { font-size: 15px; color: var(--muted); }
+
+/* ── Causal ladder (§9) ──────────────────────────────────────────────── */
+.lp-ladder-section { text-align: center; }
+.lp-ladder { max-width: 480px; margin: 0 auto; }
+.lp-ladder-step {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--ink);
+  position: relative;
+  margin-bottom: 34px;
+}
+.lp-ladder-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 18px;
+  background: var(--purple);
+}
+.lp-ladder-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--purple);
+}
+.lp-ladder-final {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* ── Inside the 2 days (§10) ─────────────────────────────────────────── */
+.lp-days-section { background: var(--bg-soft); }
+.lp-days-lead { margin-bottom: 24px; font-size: 16.5px; }
+.lp-days { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.lp-day {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+}
+.lp-day-tag {
+  display: inline-block;
+  background: var(--purple);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 12px;
+}
+.lp-day h3 { font-size: 19px; font-weight: 650; margin-bottom: 14px; }
+.lp-day ul { list-style: none; }
+.lp-day li {
+  font-size: 15px;
+  color: var(--muted);
+  padding: 10px 0 10px 16px;
+  border-left: 2px solid var(--purple-tint);
+}
+.lp-day li + li { border-top: 1px solid var(--line); }
+.lp-day li strong { color: var(--ink); }
+.lp-days-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted-light);
+}
+
+/* ── Outcomes (§11) ──────────────────────────────────────────────────── */
+.lp-outcomes-section { text-align: center; }
+.lp-outcomes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  text-align: left;
+}
+.lp-outcome {
+  background: var(--purple-tint);
+  border: 1px solid #E9D5FF;
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.lp-outcome h3 {
+  font-size: 17.5px;
+  font-weight: 650;
+  color: var(--purple-dark);
+  margin-bottom: 8px;
+}
+.lp-outcome p { font-size: 15px; color: var(--ink-soft); }
+
+/* ── Proof (§12) ─────────────────────────────────────────────────────── */
+.lp-proof { background: var(--bg-soft); }
 .lp-stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 .lp-stat-number {
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--purple);
 }
-.lp-stat-label { font-size: 13px; color: var(--muted); }
+.lp-stat-label { font-size: 13px; color: var(--muted-light); }
+/* Client logo strip — infinite scroll. The track holds two copies of the
+   logo list; the keyframe slides it by exactly one copy (-50%), which lines
+   up seamlessly because spacing comes from per-logo margins, not flex gap. */
 .lp-logo-strip {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 32px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }
-.lp-logo-strip .lp-placeholder-logo { flex: 1 1 100px; }
-.lp-testimonials { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.lp-testimonial {
-  background: var(--bg-soft);
+.lp-logo-track {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  animation: lp-logo-scroll 30s linear infinite;
+}
+.lp-logo-track img {
+  height: 40px;
+  width: auto;
+  margin-right: 48px;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  opacity: 0.65;
+}
+@keyframes lp-logo-scroll {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-logo-strip { mask-image: none; -webkit-mask-image: none; }
+  .lp-logo-track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .lp-logo-track img[aria-hidden="true"] { display: none; }
+}
+.lp-proof-heading {
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.lp-pullquotes { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.lp-pullquote {
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 22px;
 }
-.lp-testimonial blockquote {
-  font-size: 15px;
+.lp-pullquote p {
+  font-size: 15.5px;
   color: var(--ink-soft);
   margin-bottom: 14px;
 }
-.lp-testimonial-person { display: flex; align-items: center; gap: 12px; }
-.lp-testimonial-person cite {
+.lp-pullquote cite {
   font-style: normal;
   font-size: 13px;
   color: var(--muted);
   line-height: 1.4;
 }
-.lp-testimonial-person strong { display: block; color: var(--ink); font-size: 14px; }
+.lp-pullquote cite strong { display: block; color: var(--ink); font-size: 14.5px; }
+.lp-li-caption {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted-light);
+}
+/* Horizontal swipe strip of real LinkedIn post screenshots (406x901). */
+.lp-li-strip {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+.lp-li-strip img {
+  width: 280px;
+  height: auto;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
 
-/* ── How it works ────────────────────────────────────────────────────── */
+/* ── How it works (§13) ──────────────────────────────────────────────── */
 .lp-steps { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .lp-step { display: flex; gap: 14px; align-items: flex-start; }
 .lp-step-number {
@@ -279,21 +574,17 @@ h2 {
   border-radius: 50%;
   background: var(--purple);
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.lp-step h3 { font-size: 17px; margin-bottom: 4px; }
+.lp-step h3 { font-size: 17px; font-weight: 650; margin-bottom: 4px; }
 .lp-step p { font-size: 15px; color: var(--muted); }
 
-/* ── Trainer ─────────────────────────────────────────────────────────── */
-.lp-trainer { background: var(--bg-soft); text-align: center; }
-.lp-trainer h3 { font-size: 20px; margin-bottom: 8px; }
-.lp-trainer p { font-size: 15px; color: var(--muted); max-width: 460px; margin: 0 auto; }
-
-/* ── FAQ ─────────────────────────────────────────────────────────────── */
+/* ── FAQ (§14) ───────────────────────────────────────────────────────── */
+.lp-faq { background: var(--bg-soft); }
 .lp-faq details {
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -303,7 +594,7 @@ h2 {
 .lp-faq summary {
   padding: 16px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -327,9 +618,21 @@ h2 {
   color: var(--ink-soft);
 }
 
-/* ── Booking ─────────────────────────────────────────────────────────── */
+/* ── Booking (§15) ───────────────────────────────────────────────────── */
 .lp-booking { scroll-margin-top: 12px; }
 .lp-booking h2 { text-align: center; }
+.lp-booking-hrd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #92400E;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.lp-booking-hrd img { width: 30px; height: 30px; flex-shrink: 0; }
 .lp-calendar-embed {
   min-height: 420px;
   margin-bottom: 20px;
@@ -337,20 +640,21 @@ h2 {
 .lp-booking-or {
   text-align: center;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--muted-light);
   margin-bottom: 14px;
 }
+.lp-booking .lp-btn { margin-top: 0; }
 
 /* ── Footer ──────────────────────────────────────────────────────────── */
 .lp-footer {
   border-top: 1px solid var(--line);
   padding: 28px 0 40px;
   font-size: 13px;
-  color: var(--muted);
+  color: var(--muted-light);
   text-align: center;
 }
-.lp-footer p { margin-bottom: 6px; }
-.lp-footer a { color: var(--muted); }
+.lp-footer p { margin-bottom: 6px; color: var(--muted-light); }
+.lp-footer a { color: var(--muted-light); }
 
 /* ── Sticky mobile CTA bar ───────────────────────────────────────────── */
 .lp-sticky {
@@ -372,17 +676,28 @@ body.lp-sticky-on { padding-bottom: 76px; }
 
 /* ── Tablet & up (768px) ─────────────────────────────────────────────── */
 @media (min-width: 768px) {
-  section { padding: 64px 0; }
-  h2 { font-size: 32px; }
-  .lp-hero h1 { font-size: 40px; max-width: 640px; }
-  .lp-hero-sub { max-width: 560px; }
+  section { padding: 96px 0; }
+  h2 { font-size: 38px; margin-bottom: 28px; }
+  .lp-hero h1 { font-size: 44px; max-width: 640px; }
+  .lp-hero-sub { max-width: 560px; font-size: 18px; }
   .lp-btn { display: inline-block; width: auto; min-width: 320px; }
   .lp-trust-line { text-align: left; }
   .lp-pain-grid { grid-template-columns: 1fr 1fr; }
-  .lp-testimonials { grid-template-columns: 1fr 1fr; }
+  .lp-story p, .lp-reframe p { font-size: 17.5px; }
+  .lp-triad { grid-template-columns: 1fr 1fr 1fr; }
+  .lp-idgrid { grid-template-columns: 1fr 1fr 1fr; }
+  .lp-days { grid-template-columns: 1fr 1fr; }
+  .lp-outcomes { grid-template-columns: 1fr 1fr 1fr; }
+  .lp-pullquotes { grid-template-columns: 1fr 1fr; }
+  .lp-li-strip img { width: 320px; }
   .lp-steps { grid-template-columns: 1fr 1fr 1fr; }
   .lp-step { flex-direction: column; }
-  .lp-offer-box { padding: 40px; }
+  .lp-offer-box { padding: 48px; }
+  .lp-trainer h2, .lp-ladder-section h2, .lp-outcomes-section h2,
+  .lp-days-section h2, .lp-idgrid-section h2 { text-align: center; }
+  .lp-ladder-section .lp-btn, .lp-outcomes-section .lp-btn,
+  .lp-reframe .lp-btn { margin-top: 40px; }
+  .lp-reframe .lp-btn { display: block; width: fit-content; margin-left: auto; margin-right: auto; }
   .lp-booking .lp-btn-outline { display: block; width: fit-content; margin: 0 auto; }
   .lp-booking .lp-btn-primary { display: block; width: fit-content; margin: 0 auto; }
 }

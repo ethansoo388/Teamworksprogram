@@ -8,11 +8,16 @@ import type { PageMeta } from "@/types";
 //   - Rendered with the lean "landing" shell (no Tailwind CDN, no Lucide,
 //     no main.js) — styles/JS live in scripts/templates/landing.css / .js
 //   - Styled with lp-* classes, not Tailwind utilities
+//
+// Copy architecture: LP-super-teams-content-plan.md (approved 2026-07-14).
+// The page continues the Facebook ad's "Lia" story — key phrases ("No
+// System", "SOPs / Ownership / Workflows", "busy but results are slow",
+// "RM350/pax") intentionally mirror the ad captions. Keep them in sync.
 // ---------------------------------------------------------------------------
 
-// TODO: replace with the real WhatsApp number (country code, digits only,
-// e.g. "60123456789"). Used by every WhatsApp link on the page.
-const WHATSAPP_NUMBER = "REPLACE_WITH_WHATSAPP_NUMBER";
+// WhatsApp number (country code + digits only). Used by every WhatsApp link
+// on the page.
+const WHATSAPP_NUMBER = "60192981055";
 
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   "Hi CI Agile, I'd like to book a free 15-min Team Diagnostic."
@@ -20,9 +25,35 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 const CTA_TEXT = "Book my free 15-min Team Diagnostic";
 
+// Client logos shared with the main site's homepage strip — famous
+// multinationals + Malaysian organisations only (no Thai/Indonesian brands).
+const CLIENT_LOGOS = [
+  { name: "Bank Negara Malaysia", logo: "/assets/img/main/logo-bank-negara-malaysia.webp" },
+  { name: "Shell", logo: "/assets/img/main/logo-shell.webp" },
+  { name: "HSBC", logo: "/assets/img/main/logo-hsbc.webp" },
+  { name: "Cisco", logo: "/assets/img/main/logo-cisco.webp" },
+  { name: "DBS", logo: "/assets/img/main/logo-dbs.webp" },
+  { name: "Infineon", logo: "/assets/img/main/logo-infineon.webp" },
+  { name: "Bank of China", logo: "/assets/img/main/logo-bank-of-china.webp" },
+  { name: "ZTE", logo: "/assets/img/main/logo-zte.webp" },
+];
+
+// Real LinkedIn posts from past participants (screenshots extracted from
+// oldsite.ciagile.com "Reviews and Stories"). Quotes are from Ethan's Scrum
+// Master / Product Owner classes — framed truthfully as trainer proof, not
+// as Super Teams alumni.
+const LINKEDIN_POSTS = [
+  { file: "sg1", alt: "LinkedIn post by Fadzlianie Yusof, Project Manager, about missed deadlines and workload transparency before training with Ethan Soo" },
+  { file: "my2", alt: "LinkedIn post by Amiroel Yusof, Senior Manager at MAHB, thanking trainer Ethan Soo" },
+  { file: "my1", alt: "LinkedIn post by Farhana Aina Fu'ad, Head of Digital Services, about mindset change in Ethan Soo's class" },
+  { file: "th2", alt: "LinkedIn post by Navarat Veerawongchai, Project Manager, with workshop photos from a CI Agile class" },
+  { file: "sg2", alt: "LinkedIn post by Jiaying Boh about learning to work effectively in a team, with class photos" },
+  { file: "th1", alt: "LinkedIn post by Phiroon Rattanaverojvilai, Senior Manager, thanking Ethan Soo after a 2-day class" },
+];
+
 function CheckIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M20 6L9 17l-5-5" />
     </svg>
   );
@@ -70,7 +101,7 @@ export function SuperTeamsLandingPage() {
         </a>
       </header>
 
-      {/* ── 1. Hero ─────────────────────────────────────────────────────── */}
+      {/* ── §2 Hero ─────────────────────────────────────────────────────── */}
       <section className="lp-hero" id="hero">
         <div className="lp-container">
           <div>
@@ -88,8 +119,10 @@ export function SuperTeamsLandingPage() {
               <em>in 2 days</em>
             </h1>
             <p className="lp-hero-sub">
-              Creating Super Teams: hands-on training for Malaysian SMEs. No
-              slides marathon — your team learns by doing.
+              The team system that banks, airports and tech giants pay
+              enterprise prices for — rebuilt for Malaysian SME teams.
+              Hands-on, no slides marathon: your team learns by doing, on
+              their own real work.
             </p>
             <a href="#booking" className="lp-btn lp-btn-primary" id="hero-cta">
               {CTA_TEXT}
@@ -99,9 +132,9 @@ export function SuperTeamsLandingPage() {
             </p>
           </div>
           <div className="lp-hero-photo">
-            {/* TODO: real workshop photo — full-width, real photography of an
-                actual CI Agile workshop in progress. Never stock, never
-                illustration. Recommended: landscape 4:3, ~1200px wide, webp. */}
+            {/* TODO: real workshop photo — full-width, real photography of
+                Ethan actually training (any past class works). Never stock,
+                never illustration. Landscape 4:3, ~1200px wide, webp. */}
             <div
               className="lp-placeholder lp-placeholder-photo"
               role="img"
@@ -113,7 +146,7 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 2. Pain section (wording matches the Facebook ad — do not edit) */}
+      {/* ── §3 Pain section (wording matches the Facebook ad — do not edit) */}
       <section className="lp-pain" id="pain">
         <div className="lp-container">
           <h2>Does this sound like your team?</h2>
@@ -142,7 +175,172 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 3. The offer — the call as lead magnet ─────────────────────── */}
+      {/* ── §4 Story — continues the ad's "Lia" narrative ───────────────── */}
+      <section className="lp-story" id="story">
+        <div className="lp-container lp-narrow">
+          <h2>
+            Every company has a Lia.{" "}
+            <em>You&rsquo;re picturing yours right now.</em>
+          </h2>
+          <p>
+            The one in meetings all day, answering messages non-stop. The one
+            everyone depends on — so much that the day she takes MC, the
+            whole company slows down, and people still call her on her sick
+            bed.
+          </p>
+          <p>
+            Here&rsquo;s how that story usually continues. Because
+            &ldquo;she&rsquo;s the only one who can handle it,&rdquo; every
+            urgent job lands on her desk. Until the day she hands in her
+            resignation — tired of carrying colleagues who are paid the same
+            to do less. And when she walks out, she takes the SOPs with her —
+            because they were never written down. They only ever existed in
+            her head.
+          </p>
+          <p>
+            Meanwhile you&rsquo;re not just the boss anymore. You&rsquo;re
+            the project manager, the quality checker, and the backup plan for
+            every single job in the company. It&rsquo;s 9.40pm on a Tuesday
+            and you&rsquo;re still on WhatsApp — chasing.
+          </p>
+          <h3 className="lp-cost-heading">
+            Here&rsquo;s what running with no system is really costing you:
+          </h3>
+          <ul className="lp-cost-list">
+            <li>
+              <strong>Clients.</strong> One missed deadline is forgiven. A
+              pattern gets you replaced.
+            </li>
+            <li>
+              <strong>Your best people.</strong> A-players don&rsquo;t quit
+              companies — they quit chaos.
+            </li>
+            <li>
+              <strong>Growth.</strong> You can&rsquo;t take on more business
+              while every current project needs your push to cross the line.
+            </li>
+            <li>
+              <strong>Your life.</strong> Be honest: when was your last
+              holiday without the phone?
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ── §5 Reframe — the system, not the people ─────────────────────── */}
+      <section className="lp-reframe" id="reframe">
+        <div className="lp-container lp-narrow">
+          <h2>
+            It&rsquo;s not your people.{" "}
+            <em>It&rsquo;s the system they work in.</em>
+          </h2>
+          <p>
+            Think about it: the same employee who &ldquo;lacks
+            initiative&rdquo; in your office somehow organises a wedding for
+            300 guests on the weekend. People don&rsquo;t lack ability — they
+            follow whatever system surrounds them. And when the workplace has
+            no system, they follow the oldest rule there is:{" "}
+            <em>wait for the boss to chase.</em>
+          </p>
+          <p className="lp-reframe-lead">
+            That&rsquo;s why the usual fixes keep failing:
+          </p>
+          <ul className="lp-fail-list">
+            <li>
+              <strong>The motivational talk.</strong> Everyone claps. Two
+              weeks later the energy is gone, because Monday morning still
+              works exactly like before.
+            </li>
+            <li>
+              <strong>KPIs and dashboards.</strong> People learn to explain
+              the numbers instead of owning the outcome.
+            </li>
+            <li>
+              <strong>Hiring more staff.</strong> Adding people to a team
+              with no system just gives you more people to chase.
+            </li>
+            <li>
+              <strong>Replacing people.</strong> New hires inherit the same
+              chaos — and produce the same results within 90 days.
+            </li>
+          </ul>
+          <p>
+            High-performing teams in banks, airports and tech companies
+            don&rsquo;t run on talent or motivation. They run on three
+            boring-sounding things:
+          </p>
+          <div className="lp-triad">
+            <div className="lp-triad-item">
+              <h3>SOPs</h3>
+              <p>that live on paper, not in one employee&rsquo;s head</p>
+            </div>
+            <div className="lp-triad-item">
+              <h3>Ownership</h3>
+              <p>so clear that nobody waits to be chased</p>
+            </div>
+            <div className="lp-triad-item">
+              <h3>Workflows</h3>
+              <p>
+                everyone can see — so &ldquo;I thought he was doing it&rdquo;
+                dies
+              </p>
+            </div>
+          </div>
+          <p className="lp-reframe-closer">
+            A system is not a personality trait. It can be{" "}
+            <em>installed</em>. That&rsquo;s what Creating Super Teams does —
+            in 2 days, with your real team, on your real work.
+          </p>
+          <a href="#booking" className="lp-btn lp-btn-primary">
+            Diagnose my team — free
+          </a>
+        </div>
+      </section>
+
+      {/* ── §6 Trainer authority (carries the proof for the new product) ── */}
+      <section className="lp-trainer" id="trainer">
+        <div className="lp-container lp-narrow">
+          <h2>The trainer banks and airports trust with their teams</h2>
+          <img
+            src="/assets/img/jess/people-ethan-soo.webp"
+            alt="Ethan Soo, lead trainer"
+            className="lp-trainer-photo"
+            width="128"
+            height="128"
+          />
+          <h3>Ethan Soo</h3>
+          <p className="lp-trainer-creds">
+            Scrum Fellow · Asia Pacific Regional Partner, Scrum Inc.
+          </p>
+          <p className="lp-trainer-bio">
+            For 23 years, Ethan has built high-performance team systems
+            inside organisations most SMEs only read about — banks, airports,
+            tech multinationals and government agencies across 12+ countries.
+            He has trained 5,000+ people in 300+ sessions, and represented
+            Scrum Inc. USA in presenting enterprise transformation awards to
+            Malaysia Airports and Bank Islam.
+          </p>
+          <blockquote className="lp-endorsement">
+            <p>
+              &ldquo;Having reviewed the plan carefully, I strongly recommend
+              training with Ethan. These will be excellent courses.&rdquo;
+            </p>
+            <cite>
+              <strong>Dr. Jeff Sutherland</strong>
+              co-creator of Scrum · Founder &amp; Chairman, Scrum Inc.
+            </cite>
+          </blockquote>
+          <p className="lp-sme-pitch">
+            Creating Super Teams takes the same team system that enterprises
+            pay premium prices for — and rebuilds it for Malaysian SME teams.
+            Same trainer. Same system. SME pricing:{" "}
+            <strong>from RM350 per pax per day</strong> — 100% HRD Corp
+            claimable.
+          </p>
+        </div>
+      </section>
+
+      {/* ── §7 The offer — the call as lead magnet ──────────────────────── */}
       <section id="offer">
         <div className="lp-container">
           <div className="lp-offer-box">
@@ -161,8 +359,8 @@ export function SuperTeamsLandingPage() {
               <li>
                 <CheckIcon />
                 <span>
-                  The <strong>#1 fix</strong> for your team, from a senior
-                  trainer
+                  The <strong>#1 fix</strong> for your team, from Ethan
+                  himself
                 </span>
               </li>
               <li>
@@ -173,6 +371,10 @@ export function SuperTeamsLandingPage() {
                 </span>
               </li>
             </ul>
+            <p className="lp-offer-note">
+              Not a sales pitch. If we can&rsquo;t help your team, we&rsquo;ll
+              say so in the first five minutes.
+            </p>
             <a href="#booking" className="lp-btn lp-btn-primary">
               Pick a time slot
             </a>
@@ -180,80 +382,237 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 4. Proof ────────────────────────────────────────────────────── */}
-      <section id="proof">
+      {/* ── §8 Self-identification grid ─────────────────────────────────── */}
+      <section className="lp-idgrid-section" id="who">
         <div className="lp-container">
-          {/* TODO: verify these numbers before launch (5,000+ trained, 10+
-              years) — flagged in TODO-super-teams.md */}
+          <h2>This is for you if you&rsquo;re&hellip;</h2>
+          <div className="lp-idgrid">
+            <div className="lp-idcard">
+              <h3>The owner or founder</h3>
+              <p>
+                Still personally chasing every project — and you can&rsquo;t
+                remember the last real holiday.
+              </p>
+            </div>
+            <div className="lp-idcard">
+              <h3>The GM or department head</h3>
+              <p>Your projects only move when you push.</p>
+            </div>
+            <div className="lp-idcard">
+              <h3>The HR or L&amp;D manager</h3>
+              <p>
+                Tired of booking trainings that people enjoy on the day and
+                forget by Friday.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── §9 Causal ladder ────────────────────────────────────────────── */}
+      <section className="lp-ladder-section" id="ladder">
+        <div className="lp-container lp-narrow">
+          <h2>What one working system changes</h2>
+          <div className="lp-ladder">
+            <div className="lp-ladder-step">Install a team system</div>
+            <div className="lp-ladder-step">Ownership without chasing</div>
+            <div className="lp-ladder-step">Deadlines that hold</div>
+            <div className="lp-ladder-step lp-ladder-final">
+              A business that grows — without burning you out
+            </div>
+          </div>
+          <a href="#booking" className="lp-btn lp-btn-primary">
+            Yes, I want this for my team
+          </a>
+        </div>
+      </section>
+
+      {/* ── §10 Inside the 2 days (real curriculum: Day 1 = M1–2, Day 2 =
+             M3–4, condensed from /teamworks/creating-super-teams.html) ──── */}
+      <section className="lp-days-section" id="curriculum">
+        <div className="lp-container">
+          <h2>Inside the 2 days</h2>
+          <p className="lp-days-lead">
+            No slides marathon. Your team works on their own real projects
+            from the first hour — the workshop is built around your business,
+            not case studies.
+          </p>
+          <div className="lp-days">
+            <div className="lp-day">
+              <div className="lp-day-tag">Day 1</div>
+              <h3>See the problem. Fix the flow.</h3>
+              <ul>
+                <li>
+                  <strong>
+                    Module 1: Why your team is busy but results are slow
+                  </strong>{" "}
+                  — experience how overload slows teams down, and find your
+                  team&rsquo;s hidden bottlenecks, unclear priorities and
+                  invisible work
+                </li>
+                <li>
+                  <strong>Module 2: Fix the flow of work</strong> — make work
+                  visible and aligned, reduce overload, and focus on
+                  finishing instead of starting more
+                </li>
+              </ul>
+            </div>
+            <div className="lp-day">
+              <div className="lp-day-tag">Day 2</div>
+              <h3>Make it stick. Keep improving.</h3>
+              <ul>
+                <li>
+                  <strong>
+                    Module 3: Stop the back-and-forth — make decisions stick
+                  </strong>{" "}
+                  — clear ownership and accountability, faster decisions,
+                  less rework
+                </li>
+                <li>
+                  <strong>Module 4: Build a team that improves itself</strong>{" "}
+                  — simple routines your team runs on their own, surfacing
+                  problems early, improving every week without the boss
+                  pushing
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className="lp-days-note">
+            At your office or ours · English / BM / 中文
+          </p>
+        </div>
+      </section>
+
+      {/* ── §11 Named outcomes (future pacing) ──────────────────────────── */}
+      <section className="lp-outcomes-section" id="outcomes">
+        <div className="lp-container">
+          <h2>What your Monday mornings look like after</h2>
+          <div className="lp-outcomes">
+            <div className="lp-outcome">
+              <h3>Ownership without chasing</h3>
+              <p>
+                Status updates arrive before you ask. Problems come to you
+                with proposed solutions attached.
+              </p>
+            </div>
+            <div className="lp-outcome">
+              <h3>Deadlines that hold</h3>
+              <p>
+                Commitments are made by the team, tracked by the team,
+                defended by the team.
+              </p>
+            </div>
+            <div className="lp-outcome">
+              <h3>A boss who can step back</h3>
+              <p>
+                Take the two-week holiday. The system doesn&rsquo;t go on
+                leave.
+              </p>
+            </div>
+          </div>
+          <a href="#booking" className="lp-btn lp-btn-primary">
+            I&rsquo;m ready to stop chasing
+          </a>
+        </div>
+      </section>
+
+      {/* ── §12 Proof cluster — stats, logos, testimonials ──────────────── */}
+      <section className="lp-proof" id="proof">
+        <div className="lp-container">
           <div className="lp-stats">
             <div>
               <div className="lp-stat-number">5,000+</div>
               <div className="lp-stat-label">people trained</div>
             </div>
             <div>
-              <div className="lp-stat-number">10+</div>
-              <div className="lp-stat-label">years in Malaysia</div>
+              <div className="lp-stat-number">300+</div>
+              <div className="lp-stat-label">training sessions</div>
             </div>
             <div>
-              <div className="lp-stat-number">RM350</div>
-              <div className="lp-stat-label">from, per pax/day</div>
+              <div className="lp-stat-number">23</div>
+              <div className="lp-stat-label">years&rsquo; experience</div>
             </div>
           </div>
 
-          {/* TODO: real client logos (with permission) — replace placeholders */}
+          {/* Client logo strip — infinite scroll, pure CSS (keyframes in
+              landing.css). The list is rendered twice for a seamless loop;
+              the duplicate copy is hidden from assistive tech. */}
           <div className="lp-logo-strip">
-            <div className="lp-placeholder lp-placeholder-logo">[Client logo]</div>
-            <div className="lp-placeholder lp-placeholder-logo">[Client logo]</div>
-            <div className="lp-placeholder lp-placeholder-logo">[Client logo]</div>
-            <div className="lp-placeholder lp-placeholder-logo">[Client logo]</div>
+            <div className="lp-logo-track">
+              {CLIENT_LOGOS.map((client) => (
+                <img
+                  key={client.name}
+                  src={client.logo}
+                  alt={client.name}
+                  height="40"
+                  loading="lazy"
+                />
+              ))}
+              {CLIENT_LOGOS.map((client) => (
+                <img
+                  key={`${client.name}-dup`}
+                  src={client.logo}
+                  alt=""
+                  aria-hidden="true"
+                  height="40"
+                  loading="lazy"
+                />
+              ))}
+            </div>
           </div>
 
-          {/* TODO: two real testimonials — photo, short quote about a concrete
-              result (delays, ownership, morale), name · role · company */}
-          <div className="lp-testimonials">
-            <div className="lp-testimonial">
-              <blockquote>
-                [PLACEHOLDER — real client quote about a concrete result, e.g.
-                projects stopped slipping after the training.]
-              </blockquote>
-              <div className="lp-testimonial-person">
-                <div
-                  className="lp-placeholder lp-placeholder-avatar"
-                  role="img"
-                  aria-label="Placeholder for client photo"
-                >
-                  [Photo]
-                </div>
-                <cite>
-                  <strong>[Client name]</strong>
-                  [Role] · [Company]
-                </cite>
-              </div>
-            </div>
-            <div className="lp-testimonial">
-              <blockquote>
-                [PLACEHOLDER — real client quote about a concrete result, e.g.
-                team members now take ownership without being chased.]
-              </blockquote>
-              <div className="lp-testimonial-person">
-                <div
-                  className="lp-placeholder lp-placeholder-avatar"
-                  role="img"
-                  aria-label="Placeholder for client photo"
-                >
-                  [Photo]
-                </div>
-                <cite>
-                  <strong>[Client name]</strong>
-                  [Role] · [Company]
-                </cite>
-              </div>
-            </div>
+          {/* Quotes from past classes (Scrum Master / Product Owner) —
+              honestly framed as proof of the trainer, not of this course. */}
+          <h3 className="lp-proof-heading">
+            What participants say about training with Ethan
+          </h3>
+          <div className="lp-pullquotes">
+            <blockquote className="lp-pullquote">
+              <p>
+                &ldquo;The main impediments I have encountered are missing
+                deadlines and lack of transparency on what is our
+                teammates&rsquo; workload — at the end of the day, someone
+                has to pick up the slack! [Now] I understand why&hellip; it
+                is always about transparency, inspect and adapt.&rdquo;
+              </p>
+              <cite>
+                <strong>Fadzlianie Yusof</strong>
+                Project Manager, Product Validation
+              </cite>
+            </blockquote>
+            <blockquote className="lp-pullquote">
+              <p>
+                &ldquo;Change and uncertainty are not an inconvenience, but a
+                source of opportunity. Thank you to the excellent Trainer
+                Ethan Soo for his valuable insights and exercises.&rdquo;
+              </p>
+              <cite>
+                <strong>Amiroel Yusof</strong>
+                Senior Manager, Operational Excellence &amp; Guest Experience,
+                MAHB (Malaysia Airports)
+              </cite>
+            </blockquote>
+          </div>
+
+          <p className="lp-li-caption">
+            Real posts from participants on LinkedIn — swipe to read
+          </p>
+          <div className="lp-li-strip" tabIndex={0}>
+            {LINKEDIN_POSTS.map((post) => (
+              <img
+                key={post.file}
+                src={`/assets/img/lp/linkedin-testi-${post.file}.webp`}
+                alt={post.alt}
+                width="406"
+                height="901"
+                loading="lazy"
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── 5. How it works ─────────────────────────────────────────────── */}
+      {/* ── §13 How it works ────────────────────────────────────────────── */}
       <section id="how-it-works">
         <div className="lp-container">
           <h2>How it works</h2>
@@ -283,34 +642,9 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 6. Trainer credibility ──────────────────────────────────────── */}
-      <section className="lp-trainer" id="trainer">
-        <div className="lp-container">
-          <h2>Who trains your team</h2>
-          {/* TODO: real trainer photo (round crop), name, and two lines:
-              years of experience + certifications + notable companies trained */}
-          <div
-            className="lp-placeholder lp-placeholder-trainer"
-            role="img"
-            aria-label="Placeholder for trainer photo"
-          >
-            [Trainer photo]
-          </div>
-          <h3>[Trainer name]</h3>
-          <p>
-            [PLACEHOLDER — years of experience and certifications, e.g.
-            &ldquo;15+ years training teams across Malaysia · Certified …&rdquo;]
-          </p>
-          <p>
-            [PLACEHOLDER — notable companies trained]
-          </p>
-        </div>
-      </section>
-
-      {/* ── 7. FAQ (native <details> — keyboard-operable, zero JS) ─────── */}
-      {/* NOTE: draft answers written from the brief — review before launch. */}
+      {/* ── §14 FAQ (native <details> — keyboard-operable, zero JS) ─────── */}
       <section className="lp-faq" id="faq">
-        <div className="lp-container">
+        <div className="lp-container lp-narrow">
           <h2>Frequently Asked Questions</h2>
           <details>
             <summary>How does the HRD Corp claim work?</summary>
@@ -322,6 +656,43 @@ export function SuperTeamsLandingPage() {
               before the training and the claim after. Not sure if you&rsquo;re
               eligible? We&rsquo;ll confirm your levy eligibility for you
               during the free 15-minute Team Diagnostic.
+            </p>
+          </details>
+          <details>
+            <summary>We&rsquo;re too busy for 2 days of training.</summary>
+            <p>
+              That&rsquo;s usually the strongest sign you need it. The
+              busyness is the symptom — chasing, rework and fire-fighting
+              consume far more than 2 days every month. And because the
+              workshop runs on your team&rsquo;s real projects, the work
+              doesn&rsquo;t stop for the training: your team keeps moving it
+              forward inside the room.
+            </p>
+          </details>
+          <details>
+            <summary>
+              We&rsquo;ve done team training before. Nothing changed.
+            </summary>
+            <p>
+              Most training fails the Monday-morning test: inspiring on the
+              day, zero change to how work actually flows. Creating Super
+              Teams doesn&rsquo;t teach concepts and hope. It installs a
+              concrete system — ownership, visible work, a delivery rhythm —
+              onto your team&rsquo;s actual projects during the workshop, and
+              your team leaves with a 30-day plan they built themselves. What
+              changes on Monday is decided before Day 2 ends.
+            </p>
+          </details>
+          <details>
+            <summary>My industry is different — will this work for us?</summary>
+            <p>
+              The system isn&rsquo;t industry-specific: it works anywhere
+              work arrives, gets divided among people, and has to ship. Ethan
+              has installed it in banks, airports, manufacturers, government
+              agencies and tech companies. Because the 2 days run on your
+              team&rsquo;s real work, it fits your industry by construction —
+              and if we honestly think your case isn&rsquo;t a fit,
+              we&rsquo;ll tell you that on the free 15-minute call.
             </p>
           </details>
           <details>
@@ -359,10 +730,21 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 8. Final CTA — booking ──────────────────────────────────────── */}
+      {/* ── §15 Final CTA — booking ─────────────────────────────────────── */}
       <section className="lp-booking" id="booking">
         <div className="lp-container">
-          <h2>Ready? Pick your 15-minute slot below.</h2>
+          <h2>Ready? Pick your 15-minute slot — and get your Team Score.</h2>
+          <p className="lp-booking-hrd">
+            <img
+              src="/assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp"
+              alt=""
+              aria-hidden="true"
+              width="192"
+              height="192"
+            />
+            100% HRD Corp Claimable — we confirm your levy eligibility on the
+            call
+          </p>
           {/* TODO: paste the real scheduling embed (Calendly or similar)
               inside #calendar-embed, replacing the placeholder div. The
               inline JS already fires the Meta Pixel "Lead" event on
@@ -386,11 +768,12 @@ export function SuperTeamsLandingPage() {
         </div>
       </section>
 
-      {/* ── 9. Footer (minimal — legally required items only) ──────────── */}
+      {/* ── Footer (minimal — legally required items only) ──────────────── */}
       <footer className="lp-footer">
         <div className="lp-container">
-          {/* TODO: real company registration number */}
-          <p>CI Agile · Company Registration No.: [TODO — reg. no.]</p>
+          <p>
+            Creating Super Teams is a 100% HRD Corp claimable programme.
+          </p>
           <p>
             <a href="/privacy-policy.html">Privacy Policy</a>
             {" · "}

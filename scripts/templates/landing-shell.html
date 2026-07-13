@@ -30,13 +30,17 @@
          and scripts/templates/landing.js — keep them small. -->
     <style>{{INLINE_CSS}}</style>
 
-    <!-- TODO: replace with your real Meta Pixel ID (numbers only). Events stay
-         disabled until this no longer starts with "REPLACE". -->
-    <script>window.META_PIXEL_ID = 'REPLACE_WITH_META_PIXEL_ID';</script>
+    <!-- Meta Pixel ID (numbers only). Events stay disabled if this starts
+         with "REPLACE". Must match the ID in the <noscript> fallback below. -->
+    <script>window.META_PIXEL_ID = '896556959557749';</script>
 
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 </head>
 <body class="landing">
+    <!-- Meta Pixel no-JS fallback — ID must match window.META_PIXEL_ID above -->
+    <noscript><img height="1" width="1" style="display:none" alt=""
+        src="https://www.facebook.com/tr?id=896556959557749&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
 {{BODY_HTML}}
     <script>{{INLINE_JS}}</script>
 </body>
