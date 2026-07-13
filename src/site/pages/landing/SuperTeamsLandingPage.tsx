@@ -51,6 +51,18 @@ const LINKEDIN_POSTS = [
   { file: "th1", alt: "LinkedIn post by Phiroon Rattanaverojvilai, Senior Manager, thanking Ethan Soo after a 2-day class" },
 ];
 
+function FiveStars() {
+  return (
+    <div className="lp-stars" role="img" aria-label="Rated 5 out of 5 stars">
+      {[1, 2, 3, 4, 5].map((n) => (
+        <svg key={n} width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+          <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function CheckIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -613,10 +625,14 @@ export function SuperTeamsLandingPage() {
           {/* Quotes from past classes (Scrum Master / Product Owner) —
               honestly framed as proof of the trainer, not of this course. */}
           <h3 className="lp-proof-heading">
-            What participants say about training with Ethan
+            5-star reviews, class after class
           </h3>
+          <p className="lp-proof-subheading">
+            Real feedback from Ethan&rsquo;s training classes
+          </p>
           <div className="lp-pullquotes">
             <blockquote className="lp-pullquote">
+              <FiveStars />
               <p>
                 &ldquo;The main impediments I have encountered are missing
                 deadlines and lack of transparency on what is our
@@ -630,6 +646,7 @@ export function SuperTeamsLandingPage() {
               </cite>
             </blockquote>
             <blockquote className="lp-pullquote">
+              <FiveStars />
               <p>
                 &ldquo;Change and uncertainty are not an inconvenience, but a
                 source of opportunity. Thank you to the excellent Trainer
