@@ -23,7 +23,7 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
   "Hi CI Agile, I'd like to book a free 15-min Team Diagnostic."
 ).replace(/'/g, "%27")}`;
 
-const CTA_TEXT = "Book my free 15-min Team Diagnostic";
+const CTA_TEXT = "Get my free Team Diagnostic";
 
 // Client logos shared with the main site's homepage strip — famous
 // multinationals + Malaysian organisations only (no Thai/Indonesian brands).
@@ -128,7 +128,7 @@ export function SuperTeamsLandingPage() {
               {CTA_TEXT}
             </a>
             <p className="lp-trust-line">
-              No obligation · Zoom or phone · English / BM / 中文
+              15 minutes · No obligation · Zoom or phone · English / BM / 中文
             </p>
           </div>
           <div className="lp-hero-photo">
@@ -152,19 +152,31 @@ export function SuperTeamsLandingPage() {
           <div className="lp-pain-grid">
             <div className="lp-pain-card">
               <AlertIcon />
-              <span>Deadlines slip — every project needs chasing</span>
+              <div>
+                <strong>Deadlines slip</strong>
+                <span>every project needs chasing</span>
+              </div>
             </div>
             <div className="lp-pain-card">
               <AlertIcon />
-              <span>One &lsquo;super employee&rsquo; carries everyone else</span>
+              <div>
+                <strong>One &lsquo;super employee&rsquo;</strong>
+                <span>carries everyone else</span>
+              </div>
             </div>
             <div className="lp-pain-card">
               <AlertIcon />
-              <span>Broken communication between departments</span>
+              <div>
+                <strong>Broken communication</strong>
+                <span>between departments</span>
+              </div>
             </div>
             <div className="lp-pain-card">
               <AlertIcon />
-              <span>Nobody takes ownership when things go wrong</span>
+              <div>
+                <strong>Nobody takes ownership</strong>
+                <span>when things go wrong</span>
+              </div>
             </div>
           </div>
           <p className="lp-pain-closer">
