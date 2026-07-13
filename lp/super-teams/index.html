@@ -47,6 +47,8 @@
       --line: #E5E7EB;
       --bg-soft: #F9FAFB;
       --wa-green: #1FAF54;
+      --cta-green: #16A34A;
+      --cta-green-dark: #15803D;
       --radius: 14px;
       }
       
@@ -99,8 +101,9 @@
       section p + p { margin-top: 14px; }
       
       /* ── Buttons ─────────────────────────────────────────────────────────────
-      Visual grammar: ONLY clickable elements are solid purple. Buttons are
-      pills with a trailing arrow; decorative accents use --purple-soft tints. */
+      Visual grammar: ONLY clickable elements are solid GREEN pills with a
+      trailing arrow. Purple is reserved for brand/decorative accents (tints),
+      so buttons are unmistakable against the rest of the page. */
       .lp-btn {
       display: block;
       width: 100%;
@@ -115,15 +118,15 @@
       transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
       }
       .lp-btn-primary {
-      background: var(--purple);
+      background: var(--cta-green);
       color: #fff;
-      box-shadow: 0 6px 20px rgba(147, 51, 234, 0.45);
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
       }
       .lp-btn-primary::after { content: " \2192"; font-weight: 700; }
       .lp-btn-primary:hover {
-      background: var(--purple-dark);
+      background: var(--cta-green-dark);
       transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(147, 51, 234, 0.5);
+      box-shadow: 0 10px 26px rgba(22, 163, 74, 0.48);
       }
       .lp-btn-primary:active { transform: scale(0.98); }
       .lp-btn-outline {
@@ -226,11 +229,21 @@
       display: flex;
       gap: 12px;
       align-items: flex-start;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--ink-soft);
       }
       .lp-pain-card svg { flex-shrink: 0; margin-top: 2px; }
+      .lp-pain-card strong {
+      display: block;
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 3px;
+      }
+      .lp-pain-card span {
+      display: block;
+      font-size: 14.5px;
+      color: var(--muted);
+      }
       .lp-pain-closer {
       margin-top: 28px;
       font-size: 19px;
@@ -802,8 +815,8 @@
               <h1>Another missed deadline. Another angry customer. <em>Another night chasing your team.</em>
               </h1>
               <p class="lp-hero-sub">Busy isn’t the same as delivering. Creating Super Teams installs the missing system in 2 days — the same one banks and tech giants pay enterprise prices for, rebuilt for Malaysian SMEs. Hands-on, on your team’s real work.</p>
-              <a href="#booking" class="lp-btn lp-btn-primary" id="hero-cta">Book my free 15-min Team Diagnostic</a>
-              <p class="lp-trust-line">No obligation · Zoom or phone · English / BM / 中文</p>
+              <a href="#booking" class="lp-btn lp-btn-primary" id="hero-cta">Get my free Team Diagnostic</a>
+              <p class="lp-trust-line">15 minutes · No obligation · Zoom or phone · English / BM / 中文</p>
             </div>
             <div class="lp-hero-photo">
               <img src="../../assets/img/lp/lp-hero-workshop.webp" alt="Facilitator leading a hands-on team workshop" width="1080" height="810"/>
@@ -823,7 +836,10 @@
                   <line x1="12" y1="17" x2="12.01" y2="17">
                   </line>
                 </svg>
-                <span>Deadlines slip — every project needs chasing</span>
+                <div>
+                  <strong>Deadlines slip</strong>
+                  <span>every project needs chasing</span>
+                </div>
               </div>
               <div class="lp-pain-card">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -834,7 +850,10 @@
                   <line x1="12" y1="17" x2="12.01" y2="17">
                   </line>
                 </svg>
-                <span>One ‘super employee’ carries everyone else</span>
+                <div>
+                  <strong>One ‘super employee’</strong>
+                  <span>carries everyone else</span>
+                </div>
               </div>
               <div class="lp-pain-card">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -845,7 +864,10 @@
                   <line x1="12" y1="17" x2="12.01" y2="17">
                   </line>
                 </svg>
-                <span>Broken communication between departments</span>
+                <div>
+                  <strong>Broken communication</strong>
+                  <span>between departments</span>
+                </div>
               </div>
               <div class="lp-pain-card">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -856,7 +878,10 @@
                   <line x1="12" y1="17" x2="12.01" y2="17">
                   </line>
                 </svg>
-                <span>Nobody takes ownership when things go wrong</span>
+                <div>
+                  <strong>Nobody takes ownership</strong>
+                  <span>when things go wrong</span>
+                </div>
               </div>
             </div>
             <p class="lp-pain-closer">The problem isn’t your people. <em>It’s a business running with no system.</em>
@@ -1197,7 +1222,7 @@
                                               </div>
                                             </footer>
                                             <div class="lp-sticky" id="sticky-cta">
-                                              <a href="#booking" class="lp-btn lp-btn-primary">Book my free 15-min Team Diagnostic</a>
+                                              <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
                                             </div>
                                             <script>/* ---------------------------------------------------------------------------
                                               Landing page JS — inlined into landing-shell.html at build time.
