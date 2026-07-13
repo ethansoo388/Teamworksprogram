@@ -48,6 +48,35 @@ function createHTMLShell(title, bodyHTML, options = {}) {
     ? `\n    <script defer src="${prefix}js/form.js"></script>`
     : '';
 
+  // Lean landing shell — no Tailwind CDN, no Lucide, no main.js.
+  // landing.css / landing.js are inlined so the page ships as one request.
+  if (options.shell === 'landing') {
+    const landingShell = fs.readFileSync(path.join(templatesDir, 'landing-shell.html'), 'utf8');
+    const landingCss = fs.readFileSync(path.join(templatesDir, 'landing.css'), 'utf8');
+    const landingJs = fs.readFileSync(path.join(templatesDir, 'landing.js'), 'utf8');
+
+    // Replacer callbacks avoid `$&`-style substitution in file contents.
+    return landingShell
+      .replace('{{DESCRIPTION}}', () => description)
+      .replace('{{CANONICAL_URL}}', () => canonicalUrl)
+      .replace('{{ROBOTS_META}}', () => robotsMeta)
+      .replace('{{TITLE}}', () => title)
+      .replace('{{OG_TITLE}}', () => ogTitle || title)
+      .replace('{{OG_DESCRIPTION}}', () => ogDescription || description)
+      .replace('{{OG_URL}}', () => ogUrl || canonicalUrl)
+      .replace('{{OG_IMAGE}}', () => ogImage)
+      .replace('{{OG_TYPE}}', () => ogType)
+      .replace('{{OG_SITE_NAME}}', () => ogSiteName)
+      .replace('{{OG_LOCALE}}', () => ogLocale)
+      .replace('{{TWITTER_TITLE}}', () => ogTitle || title)
+      .replace('{{TWITTER_DESCRIPTION}}', () => ogDescription || description)
+      .replace('{{TWITTER_IMAGE}}', () => ogImage)
+      .replace('{{JSON_LD}}', () => jsonLd)
+      .replace('{{INLINE_CSS}}', () => landingCss)
+      .replace('{{BODY_HTML}}', () => bodyHTML)
+      .replace('{{INLINE_JS}}', () => landingJs);
+  }
+
   const shell = fs.readFileSync(path.join(templatesDir, 'shell.html'), 'utf8');
   return shell
     .replace('{{DESCRIPTION}}', description)
@@ -882,7 +911,8 @@ async function generateHTMLFiles() {
         const canonicalUrl = joinUrl(seo.baseUrl, canonicalPath);
 
         const excluded = Array.isArray(seo?.excludeFromIndex) ? seo.excludeFromIndex : [];
-        const robotsMeta = excluded.includes(page.filename)
+        const noindexCrawlable = Array.isArray(seo?.noindexCrawlable) ? seo.noindexCrawlable : [];
+        const robotsMeta = excluded.includes(page.filename) || noindexCrawlable.includes(page.filename)
           ? '<meta name="robots" content="noindex, nofollow">'
           : '';
 
@@ -906,6 +936,7 @@ async function generateHTMLFiles() {
         const html = createHTMLShell(page.title, bodyWithDims, {
           description: page.description,
           includeFormJS: page.includeFormJS || false,
+          shell: page.shell || 'default',
           siteType,
           filename: page.filename,
           pageClass,
@@ -1016,6 +1047,9 @@ async function exportStaticSite() {
     console.log('🔎 Generating SEO files (robots.txt + sitemap.xml)...');
 
     const excluded = Array.isArray(seo?.excludeFromIndex) ? seo.excludeFromIndex : [];
+    // noindexCrawlable pages: out of sitemap, but NOT robots.txt-disallowed —
+    // social/ad crawlers must still be able to read their OG tags.
+    const noindexCrawlable = Array.isArray(seo?.noindexCrawlable) ? seo.noindexCrawlable : [];
     const disallowPaths = excluded.map((f) => normalizeUrlPathFromFilename(f));
     const lastmodISO = new Date().toISOString();
 
@@ -1029,7 +1063,7 @@ async function exportStaticSite() {
     const sitemapXml = generateSitemapXml({
       pages,
       baseUrl: seo.baseUrl,
-      excludedFilenames: excluded,
+      excludedFilenames: [...excluded, ...noindexCrawlable],
       lastmodISO,
     });
     fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml);

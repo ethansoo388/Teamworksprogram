@@ -501,7 +501,7 @@ export function LetsTalkPage() {
         {/* Left panel — identical structure to quiz left */}
         <div className="lt-cover-left">
           <div className="lt-lp-logo">
-            <a href="/index.html">
+            <a href="/">
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
@@ -549,7 +549,7 @@ export function LetsTalkPage() {
         {/* ── Left panel — identical structure to cover left ── */}
         <div id="lt-panel-left">
           <div className="lt-lp-logo">
-            <a href="/index.html">
+            <a href="/">
               <img className="lt-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>

@@ -96,7 +96,7 @@ export function TeamLevelTrainingPage() {
         {/* Back Button - Above Hero */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
           <a
-            href="/jess/index.html"
+            href="/jess/"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors group"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />

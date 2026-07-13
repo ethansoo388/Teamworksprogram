@@ -54,13 +54,17 @@ if ( $status != 0 ) then
 endif
 
 # Wipe hostinger branch contents (careful!) and copy new build
+# NOTE: shell globs (*) skip dotfiles, so .htaccess must be wiped and copied
+# explicitly — otherwise the live site keeps a stale .htaccess forever.
+# .git is untouched: rm -rf * skips dotfiles, and public/ contains no .git.
 echo "⚠️  Clearing branch contents..."
 rm -rf *
+rm -f .htaccess
 
-echo "➡️  Copying ../public/* -> repo root..."
-cp -R ../public/* .
+echo "➡️  Copying ../public contents (including .htaccess) -> repo root..."
+cp -R ../public/. .
 if ( $status != 0 ) then
-  echo "❌ Error: Failed copying ../public/* into repo root."
+  echo "❌ Error: Failed copying ../public contents into repo root."
   git checkout main
   exit 1
 endif

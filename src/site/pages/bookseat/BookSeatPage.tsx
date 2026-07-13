@@ -473,7 +473,7 @@ export function BookSeatPage() {
         {/* Left panel */}
         <div className="bs-cover-left">
           <div className="bs-lp-logo">
-            <a href="/index.html">
+            <a href="/">
               <img className="bs-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>
@@ -521,7 +521,7 @@ export function BookSeatPage() {
         {/* ── Left panel ── */}
         <div id="bs-panel-left">
           <div className="bs-lp-logo">
-            <a href="/index.html">
+            <a href="/">
               <img className="bs-logo" src={ciAgileLogoWhite} alt="CI Agile" />
             </a>
           </div>

@@ -74,7 +74,7 @@ export function ThankYouPage() {
             {/* Manual Link */}
             <div className="mt-6 md:mt-8 px-4">
               <a 
-                href="/index.html" 
+                href="/" 
                 className="text-blue-600 hover:text-blue-800 underline text-base sm:text-lg inline-flex items-center gap-2"
               >
                 <svg 
@@ -114,7 +114,7 @@ export function ThankYouPage() {
                 
                 if (countdown <= 0) {
                   clearInterval(interval);
-                  window.location.href = 'index.html';
+                  window.location.href = '/';
                 }
               }, 1000);
             })();

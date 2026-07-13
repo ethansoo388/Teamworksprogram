@@ -13,6 +13,14 @@ export interface SEOConfig {
   /** Output filenames that should NOT be indexed or listed in sitemap.xml */
   excludeFromIndex: string[];
 
+  /**
+   * Output filenames that get a noindex meta tag and are excluded from
+   * sitemap.xml, but are NOT disallowed in robots.txt — so social crawlers
+   * (e.g. Facebook's, for ad link previews) can still read their OG tags.
+   * Use for paid-traffic landing pages.
+   */
+  noindexCrawlable: string[];
+
   /** Organization name used for Schema.org JSON-LD. */
   organizationName: string;
 
@@ -46,6 +54,7 @@ export const seo: SEOConfig = {
   siteName: "CI Agile",
   locale: "en_SG",
   excludeFromIndex: ["thankyou.html", "teamworks/bookConsultation.html", "letstalk.html", "bookseat.html"],
+  noindexCrawlable: ["lp/super-teams/index.html"],
   organizationName: "CI Agile",
   og: {
     type: "website",

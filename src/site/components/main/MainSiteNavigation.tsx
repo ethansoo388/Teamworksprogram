@@ -40,7 +40,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/index.html" className="flex items-center space-x-2 no-underline">
+            <a href="/" className="flex items-center space-x-2 no-underline">
               <img
                 alt="CI Agile Logo"
                 className={isDarkTheme ? "h-[34px] w-auto object-contain" : "h-[24px] w-auto object-contain"}
@@ -105,7 +105,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                         {/* Jeff Sutherland's Enterprise Agility Program */}
                         <div className="space-y-2 md:space-y-3">
                           <a
-                            href="/jess/index.html"
+                            href="/jess/"
                             className="block group/program py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-colors no-underline"
                           >
                             <div className="flex items-center space-x-2 mb-1 md:mb-2">
@@ -203,7 +203,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                         {/* TeamWorks Program */}
                         <div className="space-y-2 md:space-y-3">
                           <a
-                            href="/teamworks/index.html"
+                            href="/teamworks/"
                             className="block group/program py-2 md:py-3 px-3 md:px-4 -mx-3 md:-mx-4 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-colors no-underline"
                           >
                             <h4 className="text-sm md:text-base font-semibold text-[#0F172A] group-hover/program:text-[#0066FF] transition-colors mb-1 md:mb-2">
@@ -560,7 +560,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                           </p>
                         </a>
                         <a
-                          href="/index.html#methodology"
+                          href="/#methodology"
                           className="block group py-3 px-4 -mx-4 rounded-2xl hover:bg-gray-100 transition-colors no-underline"
                         >
                           <h4 className="text-base font-semibold text-[#0F172A] group-hover:text-[#0066FF] transition-colors mb-2">
@@ -739,7 +739,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                     {/* JESS Program */}
                     <div className="space-y-2">
                       <a
-                        href="/jess/index.html"
+                        href="/jess/"
                         className="block group/program rounded-lg px-2 py-2 hover:bg-gray-50 transition-colors no-underline"
                         data-mobile-close
                       >
@@ -793,7 +793,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <a
-                        href="/teamworks/index.html"
+                        href="/teamworks/"
                         className="block group/program rounded-lg px-2 py-2 hover:bg-gray-50 transition-colors no-underline"
                         data-mobile-close
                       >
@@ -918,7 +918,7 @@ export function MainSiteNavigation({ isHomeOverlay = false, isDarkTheme = false 
                 <div>
                   <h4 className={"text-xs font-semibold uppercase mb-2 text-gray-500"}>About</h4>
                   <a href="/aboutus.html" className={mobileLinkClass} data-mobile-close>About Us</a>
-                  <a href="/index.html#methodology" className={mobileLinkClass} data-mobile-close>Our Methodology</a>
+                  <a href="/#methodology" className={mobileLinkClass} data-mobile-close>Our Methodology</a>
                   <a href="/contactus.html" className={mobileLinkClass} data-mobile-close>Contact Us</a>
                 </div>
                 <div>

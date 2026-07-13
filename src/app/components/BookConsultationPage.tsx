@@ -8,14 +8,14 @@ export function BookConsultationPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/teamworks/index.html" className="text-2xl tracking-tight font-semibold hover:text-gray-700 transition-colors">
+            <a href="/teamworks/" className="text-2xl tracking-tight font-semibold hover:text-gray-700 transition-colors">
               TeamWorks
             </a>
 
             {/* Desktop Menu - Centered */}
             <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-              <a href="index.html#courses" className="text-sm hover:text-gray-600 transition-colors">Courses</a>
-              <a href="index.html#testimonials" className="text-sm hover:text-gray-600 transition-colors">Testimonials</a>
+              <a href="/teamworks/#courses" className="text-sm hover:text-gray-600 transition-colors">Courses</a>
+              <a href="/teamworks/#testimonials" className="text-sm hover:text-gray-600 transition-colors">Testimonials</a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -29,8 +29,8 @@ export function BookConsultationPage() {
           {/* Mobile Menu */}
           <div id="mobile-menu" className="hidden md:hidden py-6 border-t border-gray-200">
             <div className="flex flex-col gap-4">
-              <a href="index.html#courses" className="text-sm py-2">Courses</a>
-              <a href="index.html#testimonials" className="text-sm py-2">Testimonials</a>
+              <a href="/teamworks/#courses" className="text-sm py-2">Courses</a>
+              <a href="/teamworks/#testimonials" className="text-sm py-2">Testimonials</a>
             </div>
           </div>
         </div>

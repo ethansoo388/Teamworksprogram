@@ -13,6 +13,12 @@ export interface RouteEntry {
   description: string;
   siteType: SiteType;
   includeFormJS?: boolean;
+  /**
+   * HTML shell template. "landing" uses the lean landing-shell.html
+   * (no Tailwind CDN, no Lucide, no main.js — CSS/JS inlined at build).
+   * Omit for the default shell.html.
+   */
+  shell?: "default" | "landing";
 }
 
 export const routes: RouteEntry[] = [
@@ -158,6 +164,19 @@ export const routes: RouteEntry[] = [
       "Schedule a free consultation to discuss which TeamWorks course is perfect for your team.",
     siteType: "teamworks",
     includeFormJS: true,
+  },
+
+  // ── Landing pages (paid traffic — standalone, lean shell, no site nav) ──
+  {
+    modulePath: "/src/site/pages/landing/SuperTeamsLandingPage.tsx",
+    componentName: "SuperTeamsLandingPage",
+    filename: "lp/super-teams/index.html",
+    title:
+      "Creating Super Teams — 2-Day Team Training | 100% HRD Corp Claimable",
+    description:
+      "Turn the team that needs chasing into a team that delivers — in 2 days. Hands-on training for Malaysian SMEs, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
+    siteType: "teamworks",
+    shell: "landing",
   },
 
   // ── Lead Capture ──────────────────────────────────────────────────────

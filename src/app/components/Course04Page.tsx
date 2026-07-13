@@ -72,9 +72,9 @@ export function Course04Page() {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="../index.html" className="hover:text-[#16A34A] transition-colors">Home</a>
+            <a href="/" className="hover:text-[#16A34A] transition-colors">Home</a>
             <span>/</span>
-            <a href="/teamworks/index.html" className="hover:text-[#16A34A] transition-colors">Teamworks</a>
+            <a href="/teamworks/" className="hover:text-[#16A34A] transition-colors">Teamworks</a>
             <span>/</span>
             <span className="text-gray-900 font-bold">Proactive Problem Solving at Work</span>
           </div>

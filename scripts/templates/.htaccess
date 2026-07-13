@@ -78,7 +78,6 @@ RewriteRule ^agile_tour_kuala_lumpur - [G,L]
 RewriteRule ^en-[a-z]{2}/?$ - [G,L]
 
 # --- Misc old pages with no equivalent ---
-RewriteRule ^index\.html$ - [G,L]
 RewriteRule ^index/$ - [G,L]
 RewriteRule ^quick-start- - [G,L]
 RewriteRule ^(en-[a-z]{2}/)?step-by-step-guide- - [G,L]
@@ -102,6 +101,12 @@ RewriteRule ^results-oriented - [G,L]
 # ============================================================
 # SECTION 4: 301 PERMANENT REDIRECTS - Old URLs to new pages
 # ============================================================
+
+# Homepage duplicate: /index.html -> / (canonical form).
+# THE_REQUEST guard: only match the original client request, never the
+# internal DirectoryIndex subrequest that serves "/" — avoids a redirect loop.
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
 
 # About Us
 RewriteRule ^about-us/?$ /aboutus.html [R=301,L]

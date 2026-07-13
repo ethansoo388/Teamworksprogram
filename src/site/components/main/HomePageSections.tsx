@@ -297,7 +297,7 @@ function ProgramsSection() {
       image: agileTeamImage,
       features: ["Agile fundamentals", "Team collaboration", "Delivery optimization", "Continuous improvement"],
       // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
-      link: "/teamworks/index.html",
+      link: "/teamworks/",
     },
     {
       title: "Enterprise Execution & Transformation",
@@ -308,7 +308,7 @@ function ProgramsSection() {
       image: businessPresentationImage,
       features: ["Executive alignment", "Operating model design", "AI enablement", "Scale transformation"],
       // Use absolute paths so links resolve correctly from nested pages (e.g., /jess/*)
-      link: "/jess/index.html?source=main-home&cta=enterprise-learn-more",
+      link: "/jess/?source=main-home&cta=enterprise-learn-more",
     },
   ];
 
@@ -696,7 +696,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
         <div className="pt-16">
           <div className="mb-6">
             <a
-              href="/index.html"
+              href="/"
               className="inline-block"
             >
               <img
@@ -745,7 +745,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
           {/* Enterprise Pathways */}
           <div>
             <h3 className={headingClass}>Enterprise Pathways</h3>
-            <a href="/jess/index.html" className={footerSubsectionLinkClass}>
+            <a href="/jess/" className={footerSubsectionLinkClass}>
               Jeff Sutherland&apos;s Enterprise Agility Program
             </a>
             <ul className="space-y-3 mt-4">
@@ -784,7 +784,7 @@ export function MainSiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'light
           {/* Capability Tracks */}
           <div>
             <h3 className={headingClass}>Capability Tracks</h3>
-            <a href="/teamworks/index.html" className={footerSubsectionLinkClass}>
+            <a href="/teamworks/" className={footerSubsectionLinkClass}>
               TeamWorks Program
             </a>
             <ul className="space-y-3 mt-4">
