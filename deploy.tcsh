@@ -23,10 +23,17 @@ echo "🚀 Deploy started. Commit message: $msg"
 # MAIN branch commit + push
 echo "➡️  Committing & pushing on main..."
 git add .
-git commit -m "$msg"
-if ( $status != 0 ) then
-  echo "❌ Error: git commit failed on main (maybe nothing to commit?)."
-  exit 1
+
+# Tolerate a clean main: skip the commit but still push and deploy.
+git diff --cached --quiet
+if ( $status == 0 ) then
+  echo "ℹ️  Nothing to commit on main — skipping commit, continuing deploy."
+else
+  git commit -m "$msg"
+  if ( $status != 0 ) then
+    echo "❌ Error: git commit failed on main."
+    exit 1
+  endif
 endif
 
 git push
@@ -72,11 +79,18 @@ endif
 # Hostinger branch commit + push
 echo "➡️  Committing & pushing on hostinger..."
 git add .
-git commit -m "$msg"
-if ( $status != 0 ) then
-  echo "❌ Error: git commit failed on hostinger (maybe nothing to commit?)."
-  git checkout main
-  exit 1
+
+# Tolerate an unchanged build: skip the commit but still push.
+git diff --cached --quiet
+if ( $status == 0 ) then
+  echo "ℹ️  Build identical to last deploy — nothing to commit on hostinger."
+else
+  git commit -m "$msg"
+  if ( $status != 0 ) then
+    echo "❌ Error: git commit failed on hostinger."
+    git checkout main
+    exit 1
+  endif
 endif
 
 git push
