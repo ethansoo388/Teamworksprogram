@@ -71,6 +71,33 @@
     });
   }
 
+  // ── Lazy looping clips (Lia story, SOPs/workflows) ─────────────────────
+  // Each <video data-video-src> ships with no src (preload=none + poster
+  // only). The mp4 is attached and played only when that section approaches
+  // the screen, so the clips never compete with initial page load.
+  var lazyClips = document.querySelectorAll('video[data-video-src]');
+  function armLazyClip(clip) {
+    function startClip() {
+      if (clip.src) return;
+      clip.src = clip.getAttribute('data-video-src');
+      clip.muted = true; // required for programmatic autoplay
+      clip.load();
+      var playing = clip.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          startClip();
+          obs.disconnect();
+        }
+      }, { rootMargin: '300px 0px' }).observe(clip);
+    } else {
+      startClip();
+    }
+  }
+  for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
+
   // ── Sticky mobile CTA bar ─────────────────────────────────────────────
   // Shown once the hero CTA scrolls out of view; hidden again while the
   // booking section is on screen (so it never covers the calendar).

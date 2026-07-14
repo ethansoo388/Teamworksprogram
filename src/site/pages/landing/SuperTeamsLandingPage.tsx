@@ -212,21 +212,22 @@ export function SuperTeamsLandingPage() {
             the one everyone depends on. <strong>Let&rsquo;s call her
             Lia.</strong>
           </p>
-          <div className="lp-story-photos">
-            <img
-              src="/assets/img/lp/lp-story-lia-desk.webp"
-              alt="Overwhelmed employee working late at her desk"
-              width="1080"
-              height="760"
-              loading="lazy"
-            />
-            <img
-              src="/assets/img/lp/lp-story-lia-phone.webp"
-              alt="Employee answering non-stop work calls at her desk"
-              width="1080"
-              height="700"
-              loading="lazy"
-            />
+          {/* Muted looping clip from the ad video (12s–21s: the day Lia took
+              MC). Lazy-loaded by landing.js via IntersectionObserver — the
+              mp4 is only fetched when the section nears the viewport, and
+              muted/play are set in JS (React drops the muted attribute in
+              static renders, and autoplay policies require JS-muted play). */}
+          <div className="lp-story-video">
+            <video
+              loop
+              playsInline
+              preload="none"
+              width="720"
+              height="1280"
+              poster="/assets/img/lp/lp-lia-story-poster.webp"
+              data-video-src="/assets/video/lp-lia-story-loop.mp4"
+              aria-label="Short clip: the day Lia took MC, the whole company slowed down — people still called her on sick leave"
+            ></video>
           </div>
           <p>
             The day Lia takes MC, the whole company slows down — and people
@@ -303,14 +304,22 @@ export function SuperTeamsLandingPage() {
               chaos — and produce the same results within 90 days.
             </li>
           </ul>
-          <img
-            className="lp-reframe-photo"
-            src="/assets/img/lp/lp-reframe-workshop.webp"
-            alt="Team working through their real workflow in a hands-on workshop"
-            width="1080"
-            height="810"
-            loading="lazy"
-          />
+          {/* Muted looping clip from the ad video (24.5s–34.4s: the SOPs /
+              Ownership / Workflows solution sequence) — loops beside the
+              triad cards below, which repeat the same three words. Lazy-
+              loaded by the same landing.js observer as the Lia story clip. */}
+          <div className="lp-story-video">
+            <video
+              loop
+              playsInline
+              preload="none"
+              width="720"
+              height="1280"
+              poster="/assets/img/lp/lp-reframe-system-poster.webp"
+              data-video-src="/assets/video/lp-reframe-system-loop.mp4"
+              aria-label="Short clip: a hands-on workshop building SOPs, ownership and workflows, so the team knows their role and executes with clarity"
+            ></video>
+          </div>
           <p>
             <strong>
               You don&rsquo;t have a people problem. You have a missing
