@@ -671,23 +671,32 @@ export function SuperTeamsLandingPage() {
               verbatim his. Do not merge the lead-in into the quotation. */}
           <div className="lp-featured-quote">
             <p className="lp-featured-lead">
-              Bank Islam rebuilt how its teams work with Ethan&rsquo;s help.
-              Their Group COO&rsquo;s own words:
+              Bank Islam upgraded how its teams work with Ethan&rsquo;s help
+              — their Group COO&rsquo;s own words:
             </p>
             <blockquote>
               <p>
-                &ldquo;<strong>In just seven months, we achieved a 50% surge
-                in retail deposits</strong>, and for the first time in Bank
+                <strong>In just seven months, we achieved a 50% surge in
+                retail deposits</strong>, and for the first time in Bank
                 Islam&rsquo;s history, <strong>our mobile app rating
                 tripled</strong>. Even more impressively,{" "}
                 <strong>project delivery was accelerated by 4.5 times</strong>,
-                reducing the timeline by a full seven months.&rdquo;
+                reducing the timeline by a full seven months.
               </p>
+            </blockquote>
+            <div className="lp-featured-person">
+              <img
+                src="/assets/img/lp/lp-moriff-avatar.webp"
+                alt="Mr. Iran Moriff"
+                width="160"
+                height="160"
+                loading="lazy"
+              />
               <cite>
                 <strong>Mr. Iran Moriff</strong>
                 Group Chief Operating Officer, Bank Islam Malaysia Berhad
               </cite>
-            </blockquote>
+            </div>
           </div>
 
           {/* Quotes from past classes (Scrum Master / Product Owner) —

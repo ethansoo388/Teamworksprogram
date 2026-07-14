@@ -577,32 +577,64 @@ section .lp-btn { margin-top: 28px; }
   }
   .lp-logo-track img[aria-hidden="true"] { display: none; }
 }
-/* Featured enterprise-result quote (Bank Islam Group COO) */
+/* Featured enterprise-result quote (Bank Islam Group COO) — styled as a
+   proper testimonial: white card, oversized quote mark, avatar + name row,
+   so it reads as "a person said this", not a marketing box. */
 .lp-featured-quote {
-  background: var(--purple-tint);
-  border: 2px solid var(--purple);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--purple);
   border-radius: var(--radius);
-  padding: 26px 24px;
+  padding: 24px 24px 20px;
   margin-bottom: 36px;
+  box-shadow: 0 6px 24px rgba(17, 24, 39, 0.06);
 }
 .lp-featured-lead {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  color: var(--purple-dark);
-  margin-bottom: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.lp-featured-quote blockquote {
+  position: relative;
+  padding-top: 34px;
+}
+.lp-featured-quote blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -8px;
+  left: -4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 72px;
+  line-height: 1;
+  color: #D8B4FE;
 }
 .lp-featured-quote blockquote p {
-  font-size: 17px;
+  font-size: 17.5px;
   color: var(--ink);
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
-.lp-featured-quote cite {
+.lp-featured-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.lp-featured-person img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.lp-featured-person cite {
   font-style: normal;
   font-size: 13.5px;
   color: var(--muted);
   line-height: 1.4;
 }
-.lp-featured-quote cite strong {
+.lp-featured-person cite strong {
   display: block;
   color: var(--ink);
   font-size: 15px;
