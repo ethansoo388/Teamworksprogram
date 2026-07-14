@@ -212,11 +212,13 @@ export function SuperTeamsLandingPage() {
             the one everyone depends on. <strong>Let&rsquo;s call her
             Lia.</strong>
           </p>
-          {/* Muted looping clip from the ad video (12s–21s: the day Lia took
-              MC). Lazy-loaded by landing.js via IntersectionObserver — the
-              mp4 is only fetched when the section nears the viewport, and
-              muted/play are set in JS (React drops the muted attribute in
-              static renders, and autoplay policies require JS-muted play). */}
+          {/* Muted looping clip from the ad video (13.2s–21s: Lia at her
+              overloaded desk — "the problem isn't Lia… a business with No
+              System… the capable employee carries everyone else"). Lazy-
+              loaded by landing.js via IntersectionObserver — the mp4 is only
+              fetched when the section nears the viewport, and muted/play are
+              set in JS (React drops the muted attribute in static renders,
+              and autoplay policies require JS-muted play). */}
           <div className="lp-story-video">
             <video
               loop
@@ -226,7 +228,7 @@ export function SuperTeamsLandingPage() {
               height="1280"
               poster="/assets/img/lp/lp-lia-story-poster.webp"
               data-video-src="/assets/video/lp-lia-story-loop.mp4"
-              aria-label="Short clip: the day Lia took MC, the whole company slowed down — people still called her on sick leave"
+              aria-label="Short clip: Lia at her overloaded desk — the problem isn't Lia, it's a business with no system, and the capable employee ends up carrying everyone else"
             ></video>
           </div>
           <p>
