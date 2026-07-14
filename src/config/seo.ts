@@ -88,6 +88,12 @@ export const seo: SEOConfig = {
           "Asia Pacific's only official Scrum@Scale leadership training — endorsed by Dr. Jeff Sutherland. Drive Agile transformation at scale. Earn 3 internationally recognised credentials. Classes in Malaysia, Indonesia and online.",
         image: "/assets/og/jess-og.webp",
       },
+      // Super Teams ad LP — dedicated OG (real coaching photo + HRD Corp
+      // seal) so WhatsApp/FB link previews match the page instead of the
+      // generic Teamworks image.
+      "lp/super-teams/index.html": {
+        image: "/assets/og/super-teams-og.webp",
+      },
     },
   },
 };
