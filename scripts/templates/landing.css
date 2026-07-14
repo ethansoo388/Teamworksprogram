@@ -234,6 +234,8 @@ section .lp-btn { margin-top: 28px; }
 /* ── Story (§4) ──────────────────────────────────────────────────────── */
 .lp-story p { font-size: 16.5px; }
 .lp-story-video { margin: 24px auto; max-width: 340px; }
+/* Landscape-cropped "after" clip gets a wider frame than the vertical reels */
+.lp-video-after { max-width: 440px; }
 .lp-story-video video {
   display: block;
   width: 100%;

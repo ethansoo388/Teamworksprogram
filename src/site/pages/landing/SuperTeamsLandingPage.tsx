@@ -304,20 +304,21 @@ export function SuperTeamsLandingPage() {
               chaos — and produce the same results within 90 days.
             </li>
           </ul>
-          {/* Muted looping clip from the ad video (24.5s–34.4s: the SOPs /
-              Ownership / Workflows solution sequence) — loops beside the
-              triad cards below, which repeat the same three words. Lazy-
-              loaded by the same landing.js observer as the Lia story clip. */}
-          <div className="lp-story-video">
+          {/* Muted looping clip — the AFTER state (calm, in-control Lia,
+              cropped caption-free from the ad's closing footage). Deliberate
+              contrast: the copy diagnoses the chaos while the visual shows
+              the order a system brings. Mood clip, so no text (the story
+              clip in §4 keeps its captions — that one narrates). */}
+          <div className="lp-story-video lp-video-after">
             <video
               loop
               playsInline
               preload="none"
               width="720"
-              height="1280"
-              poster="/assets/img/lp/lp-reframe-system-poster.webp"
-              data-video-src="/assets/video/lp-reframe-system-loop.mp4"
-              aria-label="Short clip: a hands-on workshop building SOPs, ownership and workflows, so the team knows their role and executes with clarity"
+              height="600"
+              poster="/assets/img/lp/lp-reframe-after-poster.webp"
+              data-video-src="/assets/video/lp-reframe-after-loop.mp4"
+              aria-label="Short clip: a calm employee working smoothly — what a workday feels like when a system runs the team"
             ></video>
           </div>
           <p>
@@ -507,6 +508,22 @@ export function SuperTeamsLandingPage() {
             from the first hour — the workshop is built around your business,
             not case studies.
           </p>
+          {/* Muted looping clip from the ad video (24.5s–34.4s): real
+              workshop footage whose captions spell out the SOPs / Ownership /
+              Workflows sequence — mechanism footage in the mechanism
+              section. Lazy-loaded via landing.js. */}
+          <div className="lp-story-video">
+            <video
+              loop
+              playsInline
+              preload="none"
+              width="720"
+              height="1280"
+              poster="/assets/img/lp/lp-days-workshop-poster.webp"
+              data-video-src="/assets/video/lp-days-workshop-loop.mp4"
+              aria-label="Short clip: a hands-on workshop building SOPs, ownership and workflows, so the team knows their role and executes with clarity"
+            ></video>
+          </div>
           <div className="lp-days">
             <div className="lp-day">
               <div className="lp-day-tag">Day 1</div>
