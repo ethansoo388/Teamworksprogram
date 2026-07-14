@@ -510,20 +510,21 @@ export function SuperTeamsLandingPage() {
             from the first hour — the workshop is built around your business,
             not case studies.
           </p>
-          {/* Muted looping clip from the ad video (24.5s–34.4s): real
-              workshop footage whose captions spell out the SOPs / Ownership /
-              Workflows sequence — mechanism footage in the mechanism
-              section. Lazy-loaded via landing.js. */}
-          <div className="lp-story-video">
+          {/* Muted looping clip from Ethan's real class recording (three
+              beats: group exercise energy → participants presenting → team
+              working the sticky-note board). Mechanism footage in the
+              mechanism section; no captions — the Day 1/2 cards narrate.
+              Lazy-loaded via landing.js. */}
+          <div className="lp-story-video lp-video-square">
             <video
               loop
               playsInline
               preload="none"
               width="720"
-              height="1280"
-              poster="/assets/img/lp/lp-days-workshop-poster.webp"
-              data-video-src="/assets/video/lp-days-workshop-loop.mp4"
-              aria-label="Short clip: a hands-on workshop building SOPs, ownership and workflows, so the team knows their role and executes with clarity"
+              height="672"
+              poster="/assets/img/lp/lp-days-class-poster.webp"
+              data-video-src="/assets/video/lp-days-class-loop.mp4"
+              aria-label="Short clip from a real class: a group exercise, participants presenting, and a team working a sticky-note planning board"
             ></video>
           </div>
           <div className="lp-days">

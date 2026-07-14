@@ -236,6 +236,8 @@ section .lp-btn { margin-top: 28px; }
 .lp-story-video { margin: 24px auto; max-width: 340px; }
 /* Landscape-cropped "after" clip gets a wider frame than the vertical reels */
 .lp-video-after { max-width: 440px; }
+/* Square class-recording clip (Inside the 2 days) */
+.lp-video-square { max-width: 460px; }
 .lp-story-video video {
   display: block;
   width: 100%;
