@@ -144,14 +144,13 @@ export function SuperTeamsLandingPage() {
             </p>
           </div>
           <div className="lp-hero-photo">
-            {/* INTERIM: still from the ad video (real class footage) — swap
-                for a dedicated photo of Ethan training when available.
-                Landscape 4:3, ~1200px wide, webp. */}
+            {/* Real photo: Ethan coaching a small group at a flipchart —
+                visualises the subhead's "hands-on, no slides marathon". */}
             <img
-              src="/assets/img/lp/lp-hero-workshop.webp"
-              alt="Facilitator leading a hands-on team workshop"
-              width="1080"
-              height="810"
+              src="/assets/img/lp/lp-hero-coaching.webp"
+              alt="Ethan Soo coaching a small team around a flipchart in a hands-on workshop"
+              width="1440"
+              height="1080"
             />
           </div>
         </div>
@@ -307,10 +306,10 @@ export function SuperTeamsLandingPage() {
             </li>
           </ul>
           {/* Muted looping clip — the AFTER state (calm, in-control Lia,
-              cropped caption-free from the ad's closing footage). Deliberate
-              contrast: the copy diagnoses the chaos while the visual shows
-              the order a system brings. Mood clip, so no text (the story
-              clip in §4 keeps its captions — that one narrates). */}
+              from the raw text-free source, gentle 0.85x slow-motion for
+              serenity). Deliberate contrast: the copy diagnoses the chaos
+              while the visual shows the order a system brings. The caption
+              is an HTML overlay (crisp, editable without re-encoding). */}
           <div className="lp-story-video lp-video-after">
             <video
               loop
@@ -320,8 +319,11 @@ export function SuperTeamsLandingPage() {
               height="600"
               poster="/assets/img/lp/lp-reframe-after-poster.webp"
               data-video-src="/assets/video/lp-reframe-after-loop.mp4"
-              aria-label="Short clip: a calm employee working smoothly — what a workday feels like when a system runs the team"
+              aria-label="Short clip: a calm employee working smoothly — meanwhile, in a company with a system"
             ></video>
+            <span className="lp-video-caption" aria-hidden="true">
+              Meanwhile, in a company with a system&hellip;
+            </span>
           </div>
           <p>
             <strong>
@@ -486,6 +488,19 @@ export function SuperTeamsLandingPage() {
       <section className="lp-ladder-section" id="ladder">
         <div className="lp-container lp-narrow">
           <h2>What one working system changes</h2>
+          <figure className="lp-photo-figure">
+            <img
+              src="/assets/img/lp/lp-ladder-teaching.webp"
+              alt="Ethan Soo teaching a class, with a flipchart that reads: work comes to the team, not the other way round"
+              width="1400"
+              height="933"
+              loading="lazy"
+            />
+            <figcaption>
+              On the flipchart, in Ethan&rsquo;s handwriting: &ldquo;Work
+              comes to the team — NOT the other way round.&rdquo;
+            </figcaption>
+          </figure>
           <div className="lp-ladder">
             <div className="lp-ladder-step">Install a team system</div>
             <div className="lp-ladder-step">Ownership without chasing</div>
@@ -649,6 +664,30 @@ export function SuperTeamsLandingPage() {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Featured enterprise result — Group COO of Bank Islam. The
+              credit line is OURS (outside the quote); every quoted word is
+              verbatim his. Do not merge the lead-in into the quotation. */}
+          <div className="lp-featured-quote">
+            <p className="lp-featured-lead">
+              Bank Islam rebuilt how its teams work with Ethan&rsquo;s help.
+              Their Group COO&rsquo;s own words:
+            </p>
+            <blockquote>
+              <p>
+                &ldquo;<strong>In just seven months, we achieved a 50% surge
+                in retail deposits</strong>, and for the first time in Bank
+                Islam&rsquo;s history, <strong>our mobile app rating
+                tripled</strong>. Even more impressively,{" "}
+                <strong>project delivery was accelerated by 4.5 times</strong>,
+                reducing the timeline by a full seven months.&rdquo;
+              </p>
+              <cite>
+                <strong>Mr. Iran Moriff</strong>
+                Group Chief Operating Officer, Bank Islam Malaysia Berhad
+              </cite>
+            </blockquote>
           </div>
 
           {/* Quotes from past classes (Scrum Master / Product Owner) —
@@ -842,6 +881,18 @@ export function SuperTeamsLandingPage() {
               <span>We confirm your levy eligibility on the call</span>
             </div>
           </div>
+          <figure className="lp-photo-figure lp-photo-narrow">
+            <img
+              src="/assets/img/lp/lp-booking-ethan.webp"
+              alt="Ethan Soo welcoming a class with open arms"
+              width="750"
+              height="960"
+              loading="lazy"
+            />
+            <figcaption>
+              The 15-minute call is with Ethan himself — not a salesperson.
+            </figcaption>
+          </figure>
           {/* TODO: paste the real scheduling embed (Calendly or similar)
               inside #calendar-embed, replacing the placeholder div. The
               inline JS already fires the Meta Pixel "Lead" event on
