@@ -316,7 +316,7 @@ export function SuperTeamsLandingPage() {
               playsInline
               preload="none"
               width="720"
-              height="600"
+              height="786"
               poster="/assets/img/lp/lp-reframe-after-poster.webp"
               data-video-src="/assets/video/lp-reframe-after-loop.mp4"
               aria-label="Short clip: a calm employee working smoothly — meanwhile, in a company with a system"
