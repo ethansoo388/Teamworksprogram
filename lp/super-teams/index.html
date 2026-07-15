@@ -1609,6 +1609,17 @@
                                                   loadCalendly();
                                                   }
                                                   
+                                                  // Warm start: fetch the widget shortly after the page finishes loading
+                                                  // (after LCP/critical work), no matter where the visitor is. By the
+                                                  // time anyone reads enough to click a CTA, the calendar is already
+                                                  // rendered — no 2-3s boot delay on direct jumps to #booking.
+                                                  var warmStart = function () { setTimeout(loadCalendly, 1200); };
+                                                  if (document.readyState === 'complete') {
+                                                  warmStart();
+                                                  } else {
+                                                  window.addEventListener('load', warmStart);
+                                                  }
+                                                  
                                                   // Calendly reports its rendered content height on every step change.
                                                   // Track it so the widget always fits snugly (no blank tail after the
                                                   // calendar, enough room for the questions form), and use the first
