@@ -98,6 +98,37 @@
   }
   for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
 
+  // ── Calendly widget: lazy-inject the script near the booking section ──
+  // The inline-widget div ships empty; Calendly's widget.js (which scans
+  // for .calendly-inline-widget on load) is added when the visitor nears
+  // the booking section, or immediately when any #booking CTA is clicked.
+  var calendlyHost = document.querySelector('.calendly-inline-widget');
+  if (calendlyHost) {
+    var calendlyLoaded = false;
+    var loadCalendly = function () {
+      if (calendlyLoaded) return;
+      calendlyLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.body.appendChild(s);
+    };
+    var bookingLinks = document.querySelectorAll('a[href="#booking"]');
+    for (var b = 0; b < bookingLinks.length; b++) {
+      bookingLinks[b].addEventListener('click', loadCalendly);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          loadCalendly();
+          obs.disconnect();
+        }
+      }, { rootMargin: '600px 0px' }).observe(calendlyHost);
+    } else {
+      loadCalendly();
+    }
+  }
+
   // ── Sticky mobile CTA bar ─────────────────────────────────────────────
   // Shown once the hero CTA scrolls out of view; hidden again while the
   // booking section is on screen (so it never covers the calendar).

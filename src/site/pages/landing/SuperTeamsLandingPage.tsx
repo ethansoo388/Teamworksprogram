@@ -902,14 +902,17 @@ export function SuperTeamsLandingPage() {
               The 15-minute call is with Ethan himself — not a salesperson.
             </figcaption>
           </figure>
-          {/* TODO: paste the real scheduling embed (Calendly or similar)
-              inside #calendar-embed, replacing the placeholder div. The
-              inline JS already fires the Meta Pixel "Lead" event on
-              Calendly's booking confirmation (or on first widget interaction
-              for non-Calendly widgets). */}
-          <div className="lp-calendar-embed lp-placeholder" id="calendar-embed">
-            [PLACEHOLDER — scheduling widget embeds here. Paste your
-            Calendly/booking embed code inside this container.]
+          {/* Calendly inline embed — widget.js is lazy-injected by
+              landing.js when this section nears the viewport (or when any
+              #booking CTA is clicked), so it costs nothing at page load.
+              landing.js fires the Meta Pixel "Lead" event on Calendly's
+              booking-confirmed postMessage. */}
+          <div className="lp-calendar-embed" id="calendar-embed">
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&primary_color=16a34a"
+              style={{ minWidth: "320px", height: "700px" }}
+            ></div>
           </div>
           <p className="lp-booking-or">Prefer WhatsApp?</p>
           <a

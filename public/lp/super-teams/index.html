@@ -906,6 +906,7 @@
     with "REPLACE". Must match the ID in the <noscript> fallback below. -->
     <script>window.META_PIXEL_ID = '896556959557749';</script>
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
   </head>
   <body class="landing">
     <!-- Meta Pixel no-JS fallback — ID must match window.META_PIXEL_ID above -->
@@ -1404,7 +1405,10 @@
                                                   <img src="../../assets/img/lp/lp-booking-ethan.webp" alt="Ethan Soo welcoming a class with open arms" width="750" height="960" loading="lazy"/>
                                                   <figcaption>The 15-minute call is with Ethan himself — not a salesperson.</figcaption>
                                                 </figure>
-                                                <div class="lp-calendar-embed lp-placeholder" id="calendar-embed">[PLACEHOLDER — scheduling widget embeds here. Paste your Calendly/booking embed code inside this container.]</div>
+                                                <div class="lp-calendar-embed" id="calendar-embed">
+                                                  <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;primary_color=16a34a" style="min-width:320px;height:700px">
+                                                  </div>
+                                                </div>
                                                 <p class="lp-booking-or">Prefer WhatsApp?</p>
                                                 <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
                                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
@@ -1523,6 +1527,37 @@
                                                 }
                                                 }
                                                 for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
+                                                
+                                                // ── Calendly widget: lazy-inject the script near the booking section ──
+                                                // The inline-widget div ships empty; Calendly's widget.js (which scans
+                                                // for .calendly-inline-widget on load) is added when the visitor nears
+                                                // the booking section, or immediately when any #booking CTA is clicked.
+                                                var calendlyHost = document.querySelector('.calendly-inline-widget');
+                                                if (calendlyHost) {
+                                                var calendlyLoaded = false;
+                                                var loadCalendly = function () {
+                                                if (calendlyLoaded) return;
+                                                calendlyLoaded = true;
+                                                var s = document.createElement('script');
+                                                s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                                                s.async = true;
+                                                document.body.appendChild(s);
+                                                };
+                                                var bookingLinks = document.querySelectorAll('a[href="#booking"]');
+                                                for (var b = 0; b < bookingLinks.length; b++) {
+                                                bookingLinks[b].addEventListener('click', loadCalendly);
+                                                }
+                                                if ('IntersectionObserver' in window) {
+                                                new IntersectionObserver(function (entries, obs) {
+                                                if (entries[0].isIntersecting) {
+                                                loadCalendly();
+                                                obs.disconnect();
+                                                }
+                                                }, { rootMargin: '600px 0px' }).observe(calendlyHost);
+                                                } else {
+                                                loadCalendly();
+                                                }
+                                                }
                                                 
                                                 // ── Sticky mobile CTA bar ─────────────────────────────────────────────
                                                 // Shown once the hero CTA scrolls out of view; hidden again while the
