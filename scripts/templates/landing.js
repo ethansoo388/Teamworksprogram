@@ -11,7 +11,11 @@
   // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
   // but nothing is sent to Facebook.
   var PIXEL_ID = window.META_PIXEL_ID || '';
-  var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
+  // Fire only on the production domain — staging/local visits must not
+  // pollute the real pixel's data or retargeting audiences.
+  var pixelHost = window.location.hostname.indexOf('www.ciagile.com') === 0 ||
+    window.location.hostname === 'ciagile.com';
+  var pixelLive = pixelHost && PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
 
   (function (f, b, e, v, n, t, s) {
     if (f.fbq) return;

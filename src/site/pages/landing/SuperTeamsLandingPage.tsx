@@ -518,6 +518,7 @@ export function SuperTeamsLandingPage() {
             className="lp-trainer-photo"
             width="128"
             height="128"
+            loading="lazy"
           />
           <h3>Ethan Soo</h3>
           <p className="lp-trainer-creds">
