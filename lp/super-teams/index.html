@@ -1186,7 +1186,7 @@
                                 <section class="lp-trainer" id="trainer">
                                   <div class="lp-container lp-narrow">
                                     <h2>The trainer banks and airports trust with their teams</h2>
-                                    <img src="../../assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo, lead trainer" class="lp-trainer-photo" width="128" height="128"/>
+                                    <img src="../../assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo, lead trainer" class="lp-trainer-photo" width="128" height="128" loading="lazy"/>
                                     <h3>Ethan Soo</h3>
                                     <p class="lp-trainer-creds">Scrum Fellow · Asia Pacific Regional Partner, Scrum Inc.</p>
                                     <p class="lp-trainer-bio">For 23 years, Ethan has built high-performance team systems inside organisations most SMEs only read about — banks, airports, tech multinationals and government agencies across 12+ countries. He has trained 5,000+ people in 300+ sessions, and represented Scrum Inc. USA in presenting enterprise transformation awards to Malaysia Airports and Bank Islam.</p>
@@ -1485,7 +1485,11 @@
                                                 // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
                                                 // but nothing is sent to Facebook.
                                                 var PIXEL_ID = window.META_PIXEL_ID || '';
-                                                var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
+                                                // Fire only on the production domain — staging/local visits must not
+                                                // pollute the real pixel's data or retargeting audiences.
+                                                var pixelHost = window.location.hostname.indexOf('www.ciagile.com') === 0 ||
+                                                window.location.hostname === 'ciagile.com';
+                                                var pixelLive = pixelHost && PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
                                                 
                                                 (function (f, b, e, v, n, t, s) {
                                                 if (f.fbq) return;
