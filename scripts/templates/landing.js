@@ -102,8 +102,12 @@
   // The inline-widget div ships empty; Calendly's widget.js (which scans
   // for .calendly-inline-widget on load) is added when the visitor nears
   // the booking section, or immediately when any #booking CTA is clicked.
+  // A skeleton (spinner + text) covers the container until Calendly paints,
+  // and the container is resized live from Calendly's page_height messages
+  // so there is never dead space below the widget.
   var calendlyHost = document.querySelector('.calendly-inline-widget');
   if (calendlyHost) {
+    var calendlyContainer = document.getElementById('calendar-embed');
     var calendlyLoaded = false;
     var loadCalendly = function () {
       if (calendlyLoaded) return;
@@ -123,10 +127,23 @@
           loadCalendly();
           obs.disconnect();
         }
-      }, { rootMargin: '600px 0px' }).observe(calendlyHost);
+      }, { rootMargin: '1400px 0px' }).observe(calendlyHost);
     } else {
       loadCalendly();
     }
+
+    // Calendly reports its rendered content height on every step change.
+    // Track it so the widget always fits snugly (no blank tail after the
+    // calendar, enough room for the questions form), and use the first
+    // height report as the "painted" signal that hides the skeleton.
+    window.addEventListener('message', function (e) {
+      if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
+      var d = e.data;
+      if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
+        calendlyHost.style.height = d.payload.height;
+        if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
+      }
+    });
   }
 
   // ── Sticky mobile CTA bar ─────────────────────────────────────────────

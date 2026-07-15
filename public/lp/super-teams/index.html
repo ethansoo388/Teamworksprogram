@@ -818,16 +818,50 @@
       .lp-calendar-embed {
       margin-bottom: 20px;
       overflow-x: hidden;
+      position: relative;
       }
-      /* Calendly single-column widget: taller on mobile (its mobile flow stacks
-      calendar, times, and the questions form vertically), tighter on desktop. */
+      /* Calendly single-column widget. The height here is only the starting
+      value — landing.js resizes it live from Calendly's page_height messages,
+      so the widget always fits its current step with no blank tail. */
       .lp-calendar-embed .calendly-inline-widget {
       min-width: 300px;
-      height: 1000px;
+      height: 540px;
+      transition: height 0.25s ease;
       }
       .lp-calendar-embed iframe { width: 100%; }
-      @media (min-width: 768px) {
-      .lp-calendar-embed .calendly-inline-widget { height: 720px; }
+      /* Loading skeleton — covers the container until Calendly's first
+      page_height message adds .lp-cal-loaded. */
+      .lp-cal-skeleton {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--muted-light);
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 1;
+      }
+      .lp-cal-loaded .lp-cal-skeleton { display: none; }
+      .lp-spinner {
+      width: 28px;
+      height: 28px;
+      border: 3px solid var(--line);
+      border-top-color: var(--cta-green);
+      border-radius: 50%;
+      animation: lp-spin 0.8s linear infinite;
+      }
+      @keyframes lp-spin {
+      to { transform: rotate(360deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+      .lp-spinner { animation: none; }
+      .lp-calendar-embed .calendly-inline-widget { transition: none; }
       }
       .lp-booking-or {
       text-align: center;
@@ -1416,192 +1450,212 @@
                                                   <figcaption>The 15-minute call is with Ethan himself — not a salesperson.</figcaption>
                                                 </figure>
                                                 <div class="lp-calendar-embed" id="calendar-embed">
-                                                  <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;hide_event_type_details=1&amp;hide_landing_page_details=1&amp;primary_color=16a34a">
+                                                  <div class="lp-cal-skeleton" aria-hidden="true">
+                                                    <span class="lp-spinner">
+                                                    </span>Loading live calendar…</div>
+                                                    <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;hide_event_type_details=1&amp;hide_landing_page_details=1&amp;primary_color=16a34a">
+                                                    </div>
                                                   </div>
+                                                  <p class="lp-booking-or">Prefer WhatsApp?</p>
+                                                  <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
+                                                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                                      </path>
+                                                    </svg> Chat with us on WhatsApp</a>
+                                                  </div>
+                                                </section>
+                                                <footer class="lp-footer">
+                                                  <div class="lp-container">
+                                                    <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
+                                                    <p>
+                                                      <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
+                                                    </p>
+                                                  </div>
+                                                </footer>
+                                                <div class="lp-sticky" id="sticky-cta">
+                                                  <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
                                                 </div>
-                                                <p class="lp-booking-or">Prefer WhatsApp?</p>
-                                                <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
-                                                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
-                                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                                    </path>
-                                                  </svg> Chat with us on WhatsApp</a>
-                                                </div>
-                                              </section>
-                                              <footer class="lp-footer">
-                                                <div class="lp-container">
-                                                  <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
-                                                  <p>
-                                                    <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
-                                                  </p>
-                                                </div>
-                                              </footer>
-                                              <div class="lp-sticky" id="sticky-cta">
-                                                <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
-                                              </div>
-                                              <script>/* ---------------------------------------------------------------------------
-                                                Landing page JS — inlined into landing-shell.html at build time.
-                                                Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
-                                                No libraries. Keep this file small — it ships inline.
-                                                --------------------------------------------------------------------------- */
-                                                (function () {
-                                                'use strict';
-                                                
-                                                // ── Meta Pixel bootstrap ──────────────────────────────────────────────
-                                                // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
-                                                // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
-                                                // but nothing is sent to Facebook.
-                                                var PIXEL_ID = window.META_PIXEL_ID || '';
-                                                var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
-                                                
-                                                (function (f, b, e, v, n, t, s) {
-                                                if (f.fbq) return;
-                                                n = f.fbq = function () {
-                                                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                                                };
-                                                if (!f._fbq) f._fbq = n;
-                                                n.push = n;
-                                                n.loaded = true;
-                                                n.version = '2.0';
-                                                n.queue = [];
-                                                if (!pixelLive) return; // stub only — do not load fbevents.js yet
-                                                t = b.createElement(e);
-                                                t.async = true;
-                                                t.src = v;
-                                                s = b.getElementsByTagName(e)[0];
-                                                s.parentNode.insertBefore(t, s);
-                                                })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-                                                
-                                                if (pixelLive) {
-                                                window.fbq('init', PIXEL_ID);
-                                                window.fbq('track', 'PageView');
-                                                }
-                                                
-                                                // ── Custom event: WhatsApp click ──────────────────────────────────────
-                                                var waLinks = document.querySelectorAll('[data-wa-link]');
-                                                for (var i = 0; i < waLinks.length; i++) {
-                                                waLinks[i].addEventListener('click', function () {
-                                                window.fbq('trackCustom', 'WhatsAppClick', {
-                                                placement: this.getAttribute('data-placement') || 'unknown'
-                                                });
-                                                });
-                                                }
-                                                
-                                                // ── Lead event ────────────────────────────────────────────────────────
-                                                // Preferred: Calendly's booking-confirmed postMessage (fires on actual
-                                                // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
-                                                // on first interaction with the calendar container instead.
-                                                var leadFired = false;
-                                                function fireLead(source) {
-                                                if (leadFired) return;
-                                                leadFired = true;
-                                                window.fbq('track', 'Lead', { source: source });
-                                                }
-                                                
-                                                window.addEventListener('message', function (e) {
-                                                if (e.data && e.data.event === 'calendly.event_scheduled') {
-                                                fireLead('calendly_booking');
-                                                }
-                                                });
-                                                
-                                                var calendar = document.getElementById('calendar-embed');
-                                                if (calendar) {
-                                                calendar.addEventListener('pointerdown', function () {
-                                                var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
-                                                if (!isCalendly) fireLead('widget_interaction');
-                                                });
-                                                }
-                                                
-                                                // ── Lazy looping clips (Lia story, SOPs/workflows) ─────────────────────
-                                                // Each <video data-video-src> ships with no src (preload=none + poster
-                                                // only). The mp4 is attached and played only when that section approaches
-                                                // the screen, so the clips never compete with initial page load.
-                                                var lazyClips = document.querySelectorAll('video[data-video-src]');
-                                                function armLazyClip(clip) {
-                                                function startClip() {
-                                                if (clip.src) return;
-                                                clip.src = clip.getAttribute('data-video-src');
-                                                clip.muted = true; // required for programmatic autoplay
-                                                clip.load();
-                                                var playing = clip.play();
-                                                if (playing && playing.catch) playing.catch(function () {});
-                                                }
-                                                if ('IntersectionObserver' in window) {
-                                                new IntersectionObserver(function (entries, obs) {
-                                                if (entries[0].isIntersecting) {
-                                                startClip();
-                                                obs.disconnect();
-                                                }
-                                                }, { rootMargin: '300px 0px' }).observe(clip);
-                                                } else {
-                                                startClip();
-                                                }
-                                                }
-                                                for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
-                                                
-                                                // ── Calendly widget: lazy-inject the script near the booking section ──
-                                                // The inline-widget div ships empty; Calendly's widget.js (which scans
-                                                // for .calendly-inline-widget on load) is added when the visitor nears
-                                                // the booking section, or immediately when any #booking CTA is clicked.
-                                                var calendlyHost = document.querySelector('.calendly-inline-widget');
-                                                if (calendlyHost) {
-                                                var calendlyLoaded = false;
-                                                var loadCalendly = function () {
-                                                if (calendlyLoaded) return;
-                                                calendlyLoaded = true;
-                                                var s = document.createElement('script');
-                                                s.src = 'https://assets.calendly.com/assets/external/widget.js';
-                                                s.async = true;
-                                                document.body.appendChild(s);
-                                                };
-                                                var bookingLinks = document.querySelectorAll('a[href="#booking"]');
-                                                for (var b = 0; b < bookingLinks.length; b++) {
-                                                bookingLinks[b].addEventListener('click', loadCalendly);
-                                                }
-                                                if ('IntersectionObserver' in window) {
-                                                new IntersectionObserver(function (entries, obs) {
-                                                if (entries[0].isIntersecting) {
-                                                loadCalendly();
-                                                obs.disconnect();
-                                                }
-                                                }, { rootMargin: '600px 0px' }).observe(calendlyHost);
-                                                } else {
-                                                loadCalendly();
-                                                }
-                                                }
-                                                
-                                                // ── Sticky mobile CTA bar ─────────────────────────────────────────────
-                                                // Shown once the hero CTA scrolls out of view; hidden again while the
-                                                // booking section is on screen (so it never covers the calendar).
-                                                var bar = document.getElementById('sticky-cta');
-                                                var heroCta = document.getElementById('hero-cta');
-                                                var booking = document.getElementById('booking');
-                                                
-                                                if (bar && heroCta && booking && 'IntersectionObserver' in window) {
-                                                var pastHero = false;
-                                                var atBooking = false;
-                                                
-                                                function updateBar() {
-                                                var show = pastHero && !atBooking;
-                                                bar.classList.toggle('is-visible', show);
-                                                document.body.classList.toggle('lp-sticky-on', show);
-                                                }
-                                                
-                                                new IntersectionObserver(function (entries) {
-                                                pastHero = !entries[0].isIntersecting;
-                                                updateBar();
-                                                }).observe(heroCta);
-                                                
-                                                new IntersectionObserver(function (entries) {
-                                                atBooking = entries[0].isIntersecting;
-                                                updateBar();
-                                                }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
-                                                } else if (bar) {
-                                                // No IntersectionObserver: keep the bar always visible on mobile.
-                                                bar.classList.add('is-visible');
-                                                document.body.classList.add('lp-sticky-on');
-                                                }
-                                                })();
-                                              </script>
-                                            </body>
-                                          </html>
-                                          
+                                                <script>/* ---------------------------------------------------------------------------
+                                                  Landing page JS — inlined into landing-shell.html at build time.
+                                                  Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
+                                                  No libraries. Keep this file small — it ships inline.
+                                                  --------------------------------------------------------------------------- */
+                                                  (function () {
+                                                  'use strict';
+                                                  
+                                                  // ── Meta Pixel bootstrap ──────────────────────────────────────────────
+                                                  // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
+                                                  // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
+                                                  // but nothing is sent to Facebook.
+                                                  var PIXEL_ID = window.META_PIXEL_ID || '';
+                                                  var pixelLive = PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
+                                                  
+                                                  (function (f, b, e, v, n, t, s) {
+                                                  if (f.fbq) return;
+                                                  n = f.fbq = function () {
+                                                  n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                                                  };
+                                                  if (!f._fbq) f._fbq = n;
+                                                  n.push = n;
+                                                  n.loaded = true;
+                                                  n.version = '2.0';
+                                                  n.queue = [];
+                                                  if (!pixelLive) return; // stub only — do not load fbevents.js yet
+                                                  t = b.createElement(e);
+                                                  t.async = true;
+                                                  t.src = v;
+                                                  s = b.getElementsByTagName(e)[0];
+                                                  s.parentNode.insertBefore(t, s);
+                                                  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                                                  
+                                                  if (pixelLive) {
+                                                  window.fbq('init', PIXEL_ID);
+                                                  window.fbq('track', 'PageView');
+                                                  }
+                                                  
+                                                  // ── Custom event: WhatsApp click ──────────────────────────────────────
+                                                  var waLinks = document.querySelectorAll('[data-wa-link]');
+                                                  for (var i = 0; i < waLinks.length; i++) {
+                                                  waLinks[i].addEventListener('click', function () {
+                                                  window.fbq('trackCustom', 'WhatsAppClick', {
+                                                  placement: this.getAttribute('data-placement') || 'unknown'
+                                                  });
+                                                  });
+                                                  }
+                                                  
+                                                  // ── Lead event ────────────────────────────────────────────────────────
+                                                  // Preferred: Calendly's booking-confirmed postMessage (fires on actual
+                                                  // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
+                                                  // on first interaction with the calendar container instead.
+                                                  var leadFired = false;
+                                                  function fireLead(source) {
+                                                  if (leadFired) return;
+                                                  leadFired = true;
+                                                  window.fbq('track', 'Lead', { source: source });
+                                                  }
+                                                  
+                                                  window.addEventListener('message', function (e) {
+                                                  if (e.data && e.data.event === 'calendly.event_scheduled') {
+                                                  fireLead('calendly_booking');
+                                                  }
+                                                  });
+                                                  
+                                                  var calendar = document.getElementById('calendar-embed');
+                                                  if (calendar) {
+                                                  calendar.addEventListener('pointerdown', function () {
+                                                  var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
+                                                  if (!isCalendly) fireLead('widget_interaction');
+                                                  });
+                                                  }
+                                                  
+                                                  // ── Lazy looping clips (Lia story, SOPs/workflows) ─────────────────────
+                                                  // Each <video data-video-src> ships with no src (preload=none + poster
+                                                  // only). The mp4 is attached and played only when that section approaches
+                                                  // the screen, so the clips never compete with initial page load.
+                                                  var lazyClips = document.querySelectorAll('video[data-video-src]');
+                                                  function armLazyClip(clip) {
+                                                  function startClip() {
+                                                  if (clip.src) return;
+                                                  clip.src = clip.getAttribute('data-video-src');
+                                                  clip.muted = true; // required for programmatic autoplay
+                                                  clip.load();
+                                                  var playing = clip.play();
+                                                  if (playing && playing.catch) playing.catch(function () {});
+                                                  }
+                                                  if ('IntersectionObserver' in window) {
+                                                  new IntersectionObserver(function (entries, obs) {
+                                                  if (entries[0].isIntersecting) {
+                                                  startClip();
+                                                  obs.disconnect();
+                                                  }
+                                                  }, { rootMargin: '300px 0px' }).observe(clip);
+                                                  } else {
+                                                  startClip();
+                                                  }
+                                                  }
+                                                  for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
+                                                  
+                                                  // ── Calendly widget: lazy-inject the script near the booking section ──
+                                                  // The inline-widget div ships empty; Calendly's widget.js (which scans
+                                                  // for .calendly-inline-widget on load) is added when the visitor nears
+                                                  // the booking section, or immediately when any #booking CTA is clicked.
+                                                  // A skeleton (spinner + text) covers the container until Calendly paints,
+                                                  // and the container is resized live from Calendly's page_height messages
+                                                  // so there is never dead space below the widget.
+                                                  var calendlyHost = document.querySelector('.calendly-inline-widget');
+                                                  if (calendlyHost) {
+                                                  var calendlyContainer = document.getElementById('calendar-embed');
+                                                  var calendlyLoaded = false;
+                                                  var loadCalendly = function () {
+                                                  if (calendlyLoaded) return;
+                                                  calendlyLoaded = true;
+                                                  var s = document.createElement('script');
+                                                  s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                                                  s.async = true;
+                                                  document.body.appendChild(s);
+                                                  };
+                                                  var bookingLinks = document.querySelectorAll('a[href="#booking"]');
+                                                  for (var b = 0; b < bookingLinks.length; b++) {
+                                                  bookingLinks[b].addEventListener('click', loadCalendly);
+                                                  }
+                                                  if ('IntersectionObserver' in window) {
+                                                  new IntersectionObserver(function (entries, obs) {
+                                                  if (entries[0].isIntersecting) {
+                                                  loadCalendly();
+                                                  obs.disconnect();
+                                                  }
+                                                  }, { rootMargin: '1400px 0px' }).observe(calendlyHost);
+                                                  } else {
+                                                  loadCalendly();
+                                                  }
+                                                  
+                                                  // Calendly reports its rendered content height on every step change.
+                                                  // Track it so the widget always fits snugly (no blank tail after the
+                                                  // calendar, enough room for the questions form), and use the first
+                                                  // height report as the "painted" signal that hides the skeleton.
+                                                  window.addEventListener('message', function (e) {
+                                                  if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
+                                                  var d = e.data;
+                                                  if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
+                                                  calendlyHost.style.height = d.payload.height;
+                                                  if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
+                                                  }
+                                                  });
+                                                  }
+                                                  
+                                                  // ── Sticky mobile CTA bar ─────────────────────────────────────────────
+                                                  // Shown once the hero CTA scrolls out of view; hidden again while the
+                                                  // booking section is on screen (so it never covers the calendar).
+                                                  var bar = document.getElementById('sticky-cta');
+                                                  var heroCta = document.getElementById('hero-cta');
+                                                  var booking = document.getElementById('booking');
+                                                  
+                                                  if (bar && heroCta && booking && 'IntersectionObserver' in window) {
+                                                  var pastHero = false;
+                                                  var atBooking = false;
+                                                  
+                                                  function updateBar() {
+                                                  var show = pastHero && !atBooking;
+                                                  bar.classList.toggle('is-visible', show);
+                                                  document.body.classList.toggle('lp-sticky-on', show);
+                                                  }
+                                                  
+                                                  new IntersectionObserver(function (entries) {
+                                                  pastHero = !entries[0].isIntersecting;
+                                                  updateBar();
+                                                  }).observe(heroCta);
+                                                  
+                                                  new IntersectionObserver(function (entries) {
+                                                  atBooking = entries[0].isIntersecting;
+                                                  updateBar();
+                                                  }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
+                                                  } else if (bar) {
+                                                  // No IntersectionObserver: keep the bar always visible on mobile.
+                                                  bar.classList.add('is-visible');
+                                                  document.body.classList.add('lp-sticky-on');
+                                                  }
+                                                  })();
+                                                </script>
+                                              </body>
+                                            </html>
+                                            

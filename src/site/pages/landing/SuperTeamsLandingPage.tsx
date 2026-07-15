@@ -911,8 +911,13 @@ export function SuperTeamsLandingPage() {
             {/* hide_event_type_details + hide_landing_page_details force
                 Calendly's single-column layout — its two-column desktop
                 layout squeezed into this container caused horizontal
-                scrolling and jumping form fields. Heights live in CSS
-                (responsive), not inline styles. */}
+                scrolling and jumping form fields. The skeleton shows until
+                Calendly's first page_height message (landing.js), which also
+                resizes the widget live so there's no blank tail. */}
+            <div className="lp-cal-skeleton" aria-hidden="true">
+              <span className="lp-spinner"></span>
+              Loading live calendar&hellip;
+            </div>
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1&primary_color=16a34a"
