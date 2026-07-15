@@ -45,10 +45,12 @@ Shell/CSS/JS: `scripts/templates/landing-shell.html`, `landing.css`, `landing.js
 - [x] **WhatsApp number** — `60192981055` set in `SuperTeamsLandingPage.tsx`.
       Powers all WhatsApp links (header, booking section) with the pre-filled
       message "Hi CI Agile, I'd like to book a free 15-min Team Diagnostic."
-- [ ] **Scheduling embed URL** (Calendly or similar) — paste the embed inside
-      the `#calendar-embed` container in the booking section. The inline JS
-      already fires the Meta Pixel `Lead` event on Calendly's booking
-      confirmation, or on first widget interaction for non-Calendly widgets.
+- [x] **Scheduling embed** — RESOLVED (2026-07-16): Calendly inline embed,
+      event "15 Minute Team Diagnostic" at
+      calendly.com/ethansoo-ciagile/team-diagnostic (slug renamed from /30min).
+      Widget lazy-loads near the booking section / on CTA click; Meta Pixel
+      `Lead` fires on Calendly's booking-confirmed postMessage (verified on
+      staging via synthetic event — PageView → Lead chain confirmed).
 - [x] **Meta Pixel ID** — `896556959557749` set in
       `scripts/templates/landing-shell.html`, with a `<noscript>` PageView
       fallback added. Tracking is ARMED — fires as soon as the page deploys.

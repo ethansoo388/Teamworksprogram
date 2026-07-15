@@ -789,8 +789,18 @@ section .lp-btn { margin-top: 28px; }
   margin: 0 auto 24px;
 }
 .lp-calendar-embed {
-  min-height: 420px;
   margin-bottom: 20px;
+  overflow-x: hidden;
+}
+/* Calendly single-column widget: taller on mobile (its mobile flow stacks
+   calendar, times, and the questions form vertically), tighter on desktop. */
+.lp-calendar-embed .calendly-inline-widget {
+  min-width: 300px;
+  height: 1000px;
+}
+.lp-calendar-embed iframe { width: 100%; }
+@media (min-width: 768px) {
+  .lp-calendar-embed .calendly-inline-widget { height: 720px; }
 }
 .lp-booking-or {
   text-align: center;

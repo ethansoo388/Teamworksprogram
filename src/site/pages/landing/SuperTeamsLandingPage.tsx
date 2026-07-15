@@ -908,10 +908,14 @@ export function SuperTeamsLandingPage() {
               landing.js fires the Meta Pixel "Lead" event on Calendly's
               booking-confirmed postMessage. */}
           <div className="lp-calendar-embed" id="calendar-embed">
+            {/* hide_event_type_details + hide_landing_page_details force
+                Calendly's single-column layout — its two-column desktop
+                layout squeezed into this container caused horizontal
+                scrolling and jumping form fields. Heights live in CSS
+                (responsive), not inline styles. */}
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&primary_color=16a34a"
-              style={{ minWidth: "320px", height: "700px" }}
+              data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1&primary_color=16a34a"
             ></div>
           </div>
           <p className="lp-booking-or">Prefer WhatsApp?</p>

@@ -816,8 +816,18 @@
       margin: 0 auto 24px;
       }
       .lp-calendar-embed {
-      min-height: 420px;
       margin-bottom: 20px;
+      overflow-x: hidden;
+      }
+      /* Calendly single-column widget: taller on mobile (its mobile flow stacks
+      calendar, times, and the questions form vertically), tighter on desktop. */
+      .lp-calendar-embed .calendly-inline-widget {
+      min-width: 300px;
+      height: 1000px;
+      }
+      .lp-calendar-embed iframe { width: 100%; }
+      @media (min-width: 768px) {
+      .lp-calendar-embed .calendly-inline-widget { height: 720px; }
       }
       .lp-booking-or {
       text-align: center;
@@ -1406,7 +1416,7 @@
                                                   <figcaption>The 15-minute call is with Ethan himself — not a salesperson.</figcaption>
                                                 </figure>
                                                 <div class="lp-calendar-embed" id="calendar-embed">
-                                                  <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;primary_color=16a34a" style="min-width:320px;height:700px">
+                                                  <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;hide_event_type_details=1&amp;hide_landing_page_details=1&amp;primary_color=16a34a">
                                                   </div>
                                                 </div>
                                                 <p class="lp-booking-or">Prefer WhatsApp?</p>
