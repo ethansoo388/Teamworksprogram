@@ -124,23 +124,20 @@ export function SuperTeamsLandingPage() {
                 width="192"
                 height="192"
               />
-              100% HRD Corp Claimable
+              2-Day Training · 100% HRD Corp Claimable
             </span>
             <h1>
-              Another missed deadline. Another angry customer.{" "}
-              <em>Another night chasing your team.</em>
+              Is your company <em>one resignation away</em> from disaster?
             </h1>
+            {/* No CTA in the hero (deliberate): the fear question flows
+                straight into Lia's story with no sales interruption. The
+                sticky bar (all screen sizes) and six later CTAs convert. */}
             <p className="lp-hero-sub">
-              Busy isn&rsquo;t the same as delivering. Creating Super Teams
-              installs the missing system in 2 days — the same one banks and
-              tech giants pay enterprise prices for, rebuilt for Malaysian
-              SMEs. Hands-on, on your team&rsquo;s real work.
-            </p>
-            <a href="#booking" className="lp-btn lp-btn-primary" id="hero-cta">
-              {CTA_TEXT}
-            </a>
-            <p className="lp-trust-line">
-              15 minutes · No obligation · Zoom or phone · English / BM / 中文
+              In most SMEs, 1&ndash;2 &ldquo;super employees&rdquo; quietly
+              carry 60&ndash;70% of the real work. You know exactly who
+              yours is: the one in meetings all day, answering messages
+              non-stop — the one everyone depends on.{" "}
+              <strong>Let&rsquo;s call her Lia.</strong>
             </p>
           </div>
           <div className="lp-hero-photo">
@@ -202,15 +199,9 @@ export function SuperTeamsLandingPage() {
       <section className="lp-story" id="story">
         <div className="lp-container lp-narrow">
           <h2>
-            Is your company <em>one resignation away</em> from disaster?
+            Another missed deadline. Another angry customer.{" "}
+            <em>Another night chasing your team.</em>
           </h2>
-          <p>
-            In most SMEs, 1&ndash;2 &ldquo;super employees&rdquo; quietly
-            carry 60&ndash;70% of the real work. You know exactly who yours
-            is: the one in meetings all day, answering messages non-stop —
-            the one everyone depends on. <strong>Let&rsquo;s call her
-            Lia.</strong>
-          </p>
           {/* Muted looping clip from the ad video (13.2s–21s: Lia at her
               overloaded desk — "the problem isn't Lia… a business with No
               System… the capable employee carries everyone else"). Lazy-
@@ -395,6 +386,25 @@ export function SuperTeamsLandingPage() {
               co-creator of Scrum · Founder &amp; Chairman, Scrum Inc.
             </cite>
           </blockquote>
+          {/* Founder story — first-person "why", polished from Ethan's own
+              words (2026-07-16). Keeps the emotional register distinct from
+              the third-person credentials above. */}
+          <div className="lp-founder-story">
+            <p className="lp-founder-kicker">Why I built this</p>
+            <p>
+              &ldquo;In 23 years of enterprise work, I kept meeting SME
+              bosses with all the hunger in the world — and none of the
+              management tools. For two decades, Agile has transformed how
+              the world&rsquo;s biggest companies operate; almost none of
+              that knowledge ever reached the SME. That never sat right with
+              me. Now the AI + human age is arriving — and it will reward
+              teams that run on a system, not on chasing. Creating Super
+              Teams is my answer: the essential management knowledge of
+              those 23 years, condensed into 2 days, and built to work on
+              Monday morning.&rdquo;
+            </p>
+            <p className="lp-founder-sign">— Ethan</p>
+          </div>
           <p className="lp-sme-pitch">
             Creating Super Teams takes the same team system that enterprises
             pay premium prices for — and rebuilds it for Malaysian SME teams.
@@ -887,7 +897,10 @@ export function SuperTeamsLandingPage() {
             />
             <div>
               <strong>100% HRD Corp Claimable</strong>
-              <span>We confirm your levy eligibility on the call</span>
+              <span>
+                The 15-min call is free — the claimable part is the 2-day
+                training. We confirm your levy eligibility on the call.
+              </span>
             </div>
           </div>
           <figure className="lp-photo-figure lp-photo-narrow">
@@ -967,6 +980,6 @@ export const pageMeta: PageMeta = {
   title:
     "Creating Super Teams — 2-Day Team Training | 100% HRD Corp Claimable",
   description:
-    "Missed deadlines, angry customers — but everyone looks busy? Creating Super Teams installs the missing team system in 2 days. Hands-on, 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
+    "Is your company one resignation away from disaster? Creating Super Teams — a hands-on 2-day training that installs the missing team system. 100% HRD Corp claimable. Book a free 15-min Team Diagnostic.",
   siteType: "teamworks",
 };

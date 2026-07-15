@@ -161,7 +161,9 @@
   // Shown once the hero CTA scrolls out of view; hidden again while the
   // booking section is on screen (so it never covers the calendar).
   var bar = document.getElementById('sticky-cta');
-  var heroCta = document.getElementById('hero-cta');
+  // The hero deliberately has no CTA button — the bar appears once the hero
+  // section itself scrolls out of view.
+  var heroCta = document.getElementById('hero-cta') || document.getElementById('hero');
   var booking = document.getElementById('booking');
 
   if (bar && heroCta && booking && 'IntersectionObserver' in window) {
