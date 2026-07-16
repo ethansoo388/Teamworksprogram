@@ -267,31 +267,19 @@
       border-radius: var(--radius);
       background: #000;
       }
-      .lp-cost-heading {
-      margin-top: 32px;
-      margin-bottom: 14px;
-      font-size: 19px;
-      font-weight: 600;
-      }
-      .lp-cost-list { list-style: none; }
-      .lp-cost-list li {
-      padding: 12px 0 12px 18px;
-      border-left: 3px solid var(--amber);
-      margin-bottom: 10px;
-      font-size: 16px;
-      color: var(--ink-soft);
-      background: var(--bg-soft);
-      border-radius: 0 10px 10px 0;
-      padding-right: 14px;
-      }
-      .lp-cost-list strong { color: var(--ink); }
-      
       /* ── Reframe (§5) ────────────────────────────────────────────────────── */
       /* Reframe stays white — the pain section (bg-soft) now sits directly
       above it, and the product section (bg-soft) directly below. */
       .lp-reframe { background: #fff; }
       .lp-reframe p { font-size: 16.5px; }
       .lp-reframe p em { font-style: normal; font-weight: 600; color: var(--ink); }
+      /* The pivot question after the wedding anecdote — larger, purple, its own
+      beat before the list of failed fixes. */
+      .lp-reframe-ask {
+      margin-top: 18px;
+      font-size: 20px;
+      color: var(--purple);
+      }
       .lp-reframe-lead { margin-top: 20px; font-weight: 600; color: var(--ink); }
       .lp-fail-list { list-style: none; margin: 14px 0 24px; }
       .lp-fail-list li {
@@ -382,8 +370,8 @@
       /* Product reveal section (§4) */
       .lp-product { background: var(--bg-soft); }
       .lp-product p { font-size: 16.5px; }
-      /* Product header's second line: "is the perfect solution" — italic purple
-      (the only italic h2 line on the page; deliberate, it's the pivot). */
+      /* Product header's second line ("the proven solution that works
+      immediately") — the only italic h2 line on the page; it's the pivot. */
       .lp-product h2 em { font-style: italic; }
       .lp-product .lp-hrd-card { background: #fff; }
       /* Founder story — first-person block after the credentials/endorsement */
@@ -973,702 +961,693 @@
             <video loop="" playsinline="" preload="none" width="720" height="786" poster="/assets/img/lp/lp-lia-story-poster.webp" data-video-src="/assets/video/lp-lia-story-loop.mp4" aria-label="Short clip: Lia at her overloaded desk — the problem isn&#x27;t Lia, it&#x27;s a business with no system, and the capable employee ends up carrying everyone else">
             </video>
           </div>
-          <p>The day Lia takes MC, the whole company slows down. The day she resigns, it’s a <strong>disaster</strong> — because her SOPs were never written down. They only ever existed in her head.</p>
+          <p>The day Lia takes MC, the whole company slows down. The day she resigns, it’s a <strong>disaster</strong>.</p>
           <p>Meanwhile, you’re the project manager, the quality checker, and the backup plan for every job in the company. It’s 9.40pm on a Tuesday, and you’re still on WhatsApp — chasing.</p>
-          <h3 class="lp-cost-heading">Here’s what running with no system is really costing you:</h3>
-          <ul class="lp-cost-list">
+        </div>
+      </section>
+      <section class="lp-pain" id="pain">
+        <div class="lp-container">
+          <h2>Does this sound like you?</h2>
+          <div class="lp-pain-grid">
+            <div class="lp-pain-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13">
+                </line>
+                <line x1="12" y1="17" x2="12.01" y2="17">
+                </line>
+              </svg>
+              <div>
+                <strong>You miss deadlines</strong>
+                <span>every project is a headache</span>
+              </div>
+            </div>
+            <div class="lp-pain-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13">
+                </line>
+                <line x1="12" y1="17" x2="12.01" y2="17">
+                </line>
+              </svg>
+              <div>
+                <strong>You rely on 1–2 ‘super employees’</strong>
+                <span>if they’re not here, things don’t get done</span>
+              </div>
+            </div>
+            <div class="lp-pain-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13">
+                </line>
+                <line x1="12" y1="17" x2="12.01" y2="17">
+                </line>
+              </svg>
+              <div>
+                <strong>Communication is difficult</strong>
+                <span>no transparency and slow decisions</span>
+              </div>
+            </div>
+            <div class="lp-pain-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13">
+                </line>
+                <line x1="12" y1="17" x2="12.01" y2="17">
+                </line>
+              </svg>
+              <div>
+                <strong>Nobody takes ownership</strong>
+                <span>when things go wrong</span>
+              </div>
+            </div>
+          </div>
+          <p class="lp-pain-closer">The problem isn’t your people.<br/>
+          <em>It’s because you don’t have a good system.</em>
+        </p>
+      </div>
+    </section>
+    <section class="lp-reframe" id="reframe">
+      <div class="lp-container lp-narrow">
+        <h2>Why does nothing move <em>unless you push?</em>
+        </h2>
+        <p>Not because your people are lazy or incapable. The same person who “can’t get anything done” at work can organise their own 300-guest wedding, or their own perfect vacation.</p>
+        <p class="lp-reframe-ask">
+          <strong>So why can’t they perform for you?</strong>
+        </p>
+        <p class="lp-reframe-lead">You tried these, but they only work marginally:</p>
+        <ul class="lp-fail-list">
+          <li>
+            <strong>The motivational talk.</strong> Everyone claps. Two weeks later, nothing has changed.</li>
             <li>
-              <strong>Clients.</strong> One missed deadline is forgiven. A pattern gets you replaced.</li>
+              <strong>KPIs and dashboards.</strong> People learn to explain the numbers instead of owning the outcome.</li>
               <li>
-                <strong>Your best people.</strong> A-players don’t quit companies — they quit chaos.</li>
+                <strong>Hiring more staff.</strong> Adding people to a team with no system just gives you more people to chase.</li>
                 <li>
-                  <strong>Growth.</strong> You can’t take on more business while every current project needs your push to cross the line.</li>
-                  <li>
-                    <strong>Your life.</strong> Be honest: when was your last holiday without the phone?</li>
-                  </ul>
+                  <strong>Replacing people.</strong> New hires inherit the same chaos — and produce the same results within 90 days.</li>
+                </ul>
+                <div class="lp-story-video lp-video-after">
+                  <video loop="" playsinline="" preload="none" width="720" height="786" poster="/assets/img/lp/lp-reframe-after-poster.webp" data-video-src="/assets/video/lp-reframe-after-loop.mp4" aria-label="Short clip: a calm employee working smoothly — meanwhile, in a company with a system">
+                  </video>
+                  <span class="lp-video-caption" aria-hidden="true">Meanwhile, in a company with a system…</span>
                 </div>
-              </section>
-              <section class="lp-pain" id="pain">
-                <div class="lp-container">
-                  <h2>Does this sound like you?</h2>
-                  <div class="lp-pain-grid">
-                    <div class="lp-pain-card">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
-                        </path>
-                        <line x1="12" y1="9" x2="12" y2="13">
-                        </line>
-                        <line x1="12" y1="17" x2="12.01" y2="17">
-                        </line>
-                      </svg>
-                      <div>
-                        <strong>You miss deadlines</strong>
-                        <span>every project is a headache</span>
-                      </div>
+                <p>
+                  <strong>You don’t have a people problem — you have a missing system.</strong> High-performing teams at MNCs and leading tech companies run on three boring-sounding things:</p>
+                  <div class="lp-triad">
+                    <div class="lp-triad-item">
+                      <h3>SOPs</h3>
+                      <p>that live on paper, not in one employee’s head</p>
                     </div>
-                    <div class="lp-pain-card">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
-                        </path>
-                        <line x1="12" y1="9" x2="12" y2="13">
-                        </line>
-                        <line x1="12" y1="17" x2="12.01" y2="17">
-                        </line>
-                      </svg>
-                      <div>
-                        <strong>You rely on 1–2 ‘super employees’</strong>
-                        <span>if they’re not here, things don’t get done</span>
-                      </div>
+                    <div class="lp-triad-item">
+                      <h3>Ownership</h3>
+                      <p>so clear that nobody waits to be chased</p>
                     </div>
-                    <div class="lp-pain-card">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
-                        </path>
-                        <line x1="12" y1="9" x2="12" y2="13">
-                        </line>
-                        <line x1="12" y1="17" x2="12.01" y2="17">
-                        </line>
-                      </svg>
-                      <div>
-                        <strong>Communication is difficult</strong>
-                        <span>no transparency and slow decisions</span>
-                      </div>
-                    </div>
-                    <div class="lp-pain-card">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z">
-                        </path>
-                        <line x1="12" y1="9" x2="12" y2="13">
-                        </line>
-                        <line x1="12" y1="17" x2="12.01" y2="17">
-                        </line>
-                      </svg>
-                      <div>
-                        <strong>Nobody takes ownership</strong>
-                        <span>when things go wrong</span>
-                      </div>
+                    <div class="lp-triad-item">
+                      <h3>Workflows</h3>
+                      <p>everyone can see — so “I thought he was doing it” dies</p>
                     </div>
                   </div>
-                  <p class="lp-pain-closer">The problem isn’t your people.<br/>
-                  <em>It’s because you don’t have a good system.</em>
+                  <p class="lp-reframe-closer">A system can be <em>installed</em>. That’s what Creating Super Teams does — in 2 days, on your team’s real work.</p>
+                  <a href="#booking" class="lp-btn lp-btn-primary">Diagnose my team — free</a>
+                </div>
+              </section>
+              <section class="lp-product" id="product">
+                <div class="lp-container lp-narrow">
+                  <h2>Creating Super Teams<br/>
+                  <em>the proven solution that works immediately</em>
+                </h2>
+                <div class="lp-story-video lp-video-square">
+                  <video loop="" playsinline="" preload="none" width="720" height="672" poster="/assets/img/lp/lp-days-class-poster.webp" data-video-src="/assets/video/lp-days-class-loop.mp4" aria-label="Short clip from a real class: a group exercise, participants presenting, and a team working a sticky-note planning board">
+                  </video>
+                </div>
+                <p>Creating Super Teams is a hands-on 2-day training that installs the missing system in your company — the <strong>SOPs, ownership and workflows</strong> you just read about — built directly on your team’s real work, not case studies.</p>
+                <p>And it’s built for Malaysian SMEs specifically: no corporate bureaucracy, no consultant-speak, no six-month transformation project. Your actual team, in one room, for two days — and the system keeps running after everyone goes home. <strong>Even if your Lia one day resigns.</strong>
                 </p>
+                <div class="lp-hrd-card">
+                  <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="HRD Corp Claimable Course logo" width="192" height="192"/>
+                  <div>
+                    <strong>100% HRD Corp Claimable</strong>
+                    <span>From RM350 per pax per day</span>
+                  </div>
+                </div>
               </div>
             </section>
-            <section class="lp-reframe" id="reframe">
-              <div class="lp-container lp-narrow">
-                <h2>Why does nothing move <em>unless you push?</em>
-                </h2>
-                <p>Not because your people are lazy. The same employee who “looks incapable” at work can organise their own 300-guest wedding — or their own perfect vacation. Their performance follows the work system in your office: when there’s no system, everyone waits, <em>and you keep chasing.</em>
-                </p>
-                <p class="lp-reframe-lead">That’s why the usual fixes keep failing:</p>
-                <ul class="lp-fail-list">
-                  <li>
-                    <strong>The motivational talk.</strong> Everyone claps. Two weeks later, nothing has changed.</li>
-                    <li>
-                      <strong>KPIs and dashboards.</strong> People learn to explain the numbers instead of owning the outcome.</li>
+            <section class="lp-days-section" id="curriculum">
+              <div class="lp-container">
+                <h2>Inside the 2 days</h2>
+                <p class="lp-days-lead">No slides marathon. Your team works on their own real projects from the first hour — the workshop is built around your business, not case studies.</p>
+                <div class="lp-photo-figure">
+                  <img src="../../assets/img/lp/lp-hero-coaching.webp" alt="Ethan Soo coaching a small team around a flipchart in a hands-on workshop" width="1440" height="1080" loading="lazy"/>
+                </div>
+                <div class="lp-days">
+                  <div class="lp-day">
+                    <div class="lp-day-tag">Day 1</div>
+                    <h3>See the problem. Fix the flow.</h3>
+                    <ul>
                       <li>
-                        <strong>Hiring more staff.</strong> Adding people to a team with no system just gives you more people to chase.</li>
+                        <strong>Module 1: Why your team is busy but results are slow</strong> — experience how overload slows teams down, and find your team’s hidden bottlenecks, unclear priorities and invisible work</li>
                         <li>
-                          <strong>Replacing people.</strong> New hires inherit the same chaos — and produce the same results within 90 days.</li>
+                          <strong>Module 2: Fix the flow of work</strong> — make work visible and aligned, reduce overload, and focus on finishing instead of starting more</li>
                         </ul>
-                        <div class="lp-story-video lp-video-after">
-                          <video loop="" playsinline="" preload="none" width="720" height="786" poster="/assets/img/lp/lp-reframe-after-poster.webp" data-video-src="/assets/video/lp-reframe-after-loop.mp4" aria-label="Short clip: a calm employee working smoothly — meanwhile, in a company with a system">
-                          </video>
-                          <span class="lp-video-caption" aria-hidden="true">Meanwhile, in a company with a system…</span>
-                        </div>
-                        <p>
-                          <strong>You don’t have a people problem — you have a missing system.</strong> High-performing teams at MNCs and leading tech companies run on three boring-sounding things:</p>
-                          <div class="lp-triad">
-                            <div class="lp-triad-item">
-                              <h3>SOPs</h3>
-                              <p>that live on paper, not in one employee’s head</p>
-                            </div>
-                            <div class="lp-triad-item">
-                              <h3>Ownership</h3>
-                              <p>so clear that nobody waits to be chased</p>
-                            </div>
-                            <div class="lp-triad-item">
-                              <h3>Workflows</h3>
-                              <p>everyone can see — so “I thought he was doing it” dies</p>
-                            </div>
-                          </div>
-                          <p class="lp-reframe-closer">A system can be <em>installed</em>. That’s what Creating Super Teams does — in 2 days, on your team’s real work.</p>
-                          <a href="#booking" class="lp-btn lp-btn-primary">Diagnose my team — free</a>
-                        </div>
-                      </section>
-                      <section class="lp-product" id="product">
-                        <div class="lp-container lp-narrow">
-                          <h2>Creating Super Teams<br/>
-                          <em>is the perfect solution</em>
-                        </h2>
-                        <div class="lp-story-video lp-video-square">
-                          <video loop="" playsinline="" preload="none" width="720" height="672" poster="/assets/img/lp/lp-days-class-poster.webp" data-video-src="/assets/video/lp-days-class-loop.mp4" aria-label="Short clip from a real class: a group exercise, participants presenting, and a team working a sticky-note planning board">
-                          </video>
-                        </div>
-                        <p>Creating Super Teams is a hands-on 2-day training that installs the missing system in your company — the <strong>SOPs, ownership and workflows</strong> you just read about — built directly on your team’s real work, not case studies.</p>
-                        <p>And it’s built for Malaysian SMEs specifically: no corporate bureaucracy, no consultant-speak, no six-month transformation project. Your actual team, in one room, for two days — and the system keeps running after everyone goes home. <strong>Even if your Lia one day resigns.</strong>
-                        </p>
-                        <div class="lp-hrd-card">
-                          <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="HRD Corp Claimable Course logo" width="192" height="192"/>
-                          <div>
-                            <strong>100% HRD Corp Claimable</strong>
-                            <span>From RM350 per pax per day</span>
+                      </div>
+                      <div class="lp-day">
+                        <div class="lp-day-tag">Day 2</div>
+                        <h3>Make it stick. Keep improving.</h3>
+                        <ul>
+                          <li>
+                            <strong>Module 3: Stop the back-and-forth — make decisions stick</strong> — clear ownership and accountability, faster decisions, less rework</li>
+                            <li>
+                              <strong>Module 4: Build a team that improves itself</strong> — simple routines your team runs on their own, surfacing problems early, improving every week without the boss pushing</li>
+                            </ul>
                           </div>
                         </div>
+                        <p class="lp-days-note">At your office or ours · English / BM / 中文</p>
                       </div>
                     </section>
-                    <section class="lp-days-section" id="curriculum">
-                      <div class="lp-container">
-                        <h2>Inside the 2 days</h2>
-                        <p class="lp-days-lead">No slides marathon. Your team works on their own real projects from the first hour — the workshop is built around your business, not case studies.</p>
-                        <div class="lp-photo-figure">
-                          <img src="../../assets/img/lp/lp-hero-coaching.webp" alt="Ethan Soo coaching a small team around a flipchart in a hands-on workshop" width="1440" height="1080" loading="lazy"/>
+                    <section class="lp-ladder-section" id="ladder">
+                      <div class="lp-container lp-narrow">
+                        <h2>What one working system changes</h2>
+                        <figure class="lp-photo-figure">
+                          <img src="../../assets/img/lp/lp-ladder-teaching.webp" alt="Ethan Soo teaching a class, with a flipchart that reads: work comes to the team, not the other way round" width="1400" height="933" loading="lazy"/>
+                          <figcaption>On the flipchart, in Ethan’s handwriting: “Work comes to the team — NOT the other way round.”</figcaption>
+                        </figure>
+                        <div class="lp-ladder">
+                          <div class="lp-ladder-step">Install a team system</div>
+                          <div class="lp-ladder-step">Ownership without chasing</div>
+                          <div class="lp-ladder-step">Deadlines that hold</div>
+                          <div class="lp-ladder-step lp-ladder-final">A business that grows — without burning you out</div>
                         </div>
-                        <div class="lp-days">
-                          <div class="lp-day">
-                            <div class="lp-day-tag">Day 1</div>
-                            <h3>See the problem. Fix the flow.</h3>
-                            <ul>
-                              <li>
-                                <strong>Module 1: Why your team is busy but results are slow</strong> — experience how overload slows teams down, and find your team’s hidden bottlenecks, unclear priorities and invisible work</li>
-                                <li>
-                                  <strong>Module 2: Fix the flow of work</strong> — make work visible and aligned, reduce overload, and focus on finishing instead of starting more</li>
-                                </ul>
-                              </div>
-                              <div class="lp-day">
-                                <div class="lp-day-tag">Day 2</div>
-                                <h3>Make it stick. Keep improving.</h3>
-                                <ul>
-                                  <li>
-                                    <strong>Module 3: Stop the back-and-forth — make decisions stick</strong> — clear ownership and accountability, faster decisions, less rework</li>
-                                    <li>
-                                      <strong>Module 4: Build a team that improves itself</strong> — simple routines your team runs on their own, surfacing problems early, improving every week without the boss pushing</li>
-                                    </ul>
-                                  </div>
+                        <a href="#booking" class="lp-btn lp-btn-primary">Yes, I want this for my team</a>
+                      </div>
+                    </section>
+                    <section class="lp-outcomes-section" id="outcomes">
+                      <div class="lp-container">
+                        <h2>What your Monday mornings look like after</h2>
+                        <div class="lp-outcomes">
+                          <div class="lp-outcome">
+                            <h3>Ownership without chasing</h3>
+                            <p>Status updates arrive before you ask. Problems come to you with proposed solutions attached.</p>
+                          </div>
+                          <div class="lp-outcome">
+                            <h3>Deadlines that hold</h3>
+                            <p>Commitments are made by the team, tracked by the team, defended by the team.</p>
+                          </div>
+                          <div class="lp-outcome">
+                            <h3>A boss who can step back</h3>
+                            <p>Take the two-week holiday. The system doesn’t go on leave.</p>
+                          </div>
+                        </div>
+                        <a href="#booking" class="lp-btn lp-btn-primary">I’m ready to stop chasing</a>
+                      </div>
+                    </section>
+                    <section class="lp-trainer" id="trainer">
+                      <div class="lp-container lp-narrow">
+                        <h2>The trainer banks and airports trust with their teams</h2>
+                        <img src="../../assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo, lead trainer" class="lp-trainer-photo" width="128" height="128" loading="lazy"/>
+                        <h3>Ethan Soo</h3>
+                        <p class="lp-trainer-creds">Scrum Fellow · Asia Pacific Regional Partner, Scrum Inc.</p>
+                        <p class="lp-trainer-bio">For 23 years, Ethan has built high-performance team systems inside organisations most SMEs only read about — banks, airports, tech multinationals and government agencies across 12+ countries. He has trained 5,000+ people in 300+ sessions, and represented Scrum Inc. USA in presenting enterprise transformation awards to Malaysia Airports and Bank Islam.</p>
+                        <blockquote class="lp-endorsement">
+                          <p>“Having reviewed the plan carefully, I strongly recommend training with Ethan. These will be excellent courses.”</p>
+                          <cite>
+                            <strong>Dr. Jeff Sutherland</strong>co-creator of Scrum · Founder &amp; Chairman, Scrum Inc.</cite>
+                          </blockquote>
+                          <div class="lp-founder-story">
+                            <p class="lp-founder-kicker">Why I built this</p>
+                            <p>“In 23 years of enterprise work, I kept meeting SME bosses with all the hunger in the world — and none of the management tools. For two decades, Agile has transformed how the world’s biggest companies operate; almost none of that knowledge ever reached the SME. That never sat right with me. Now the AI + human age is arriving — and it will reward teams that run on a system, not on chasing. Creating Super Teams is my answer: the essential management knowledge of those 23 years, condensed into 2 days, and built to work on Monday morning.”</p>
+                            <p class="lp-founder-sign">— Ethan</p>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="lp-proof" id="proof">
+                        <div class="lp-container">
+                          <div class="lp-stats">
+                            <div>
+                              <div class="lp-stat-number">5,000+</div>
+                              <div class="lp-stat-label">people trained</div>
+                            </div>
+                            <div>
+                              <div class="lp-stat-number">300+</div>
+                              <div class="lp-stat-label">training sessions</div>
+                            </div>
+                            <div>
+                              <div class="lp-stat-number">23</div>
+                              <div class="lp-stat-label">years’ experience</div>
+                            </div>
+                          </div>
+                          <div class="lp-logo-strip">
+                            <div class="lp-logo-track">
+                              <img width="302" src="../../assets/img/main/logo-bank-negara-malaysia.webp" alt="Bank Negara Malaysia" height="40" loading="lazy"/>
+                              <img width="246" src="../../assets/img/main/logo-shell.webp" alt="Shell" height="40" loading="lazy"/>
+                              <img width="236" src="../../assets/img/main/logo-hsbc.webp" alt="HSBC" height="40" loading="lazy"/>
+                              <img width="194" src="../../assets/img/main/logo-cisco.webp" alt="Cisco" height="40" loading="lazy"/>
+                              <img width="209" src="../../assets/img/main/logo-dbs.webp" alt="DBS" height="40" loading="lazy"/>
+                              <img width="241" src="../../assets/img/main/logo-infineon.webp" alt="Infineon" height="40" loading="lazy"/>
+                              <img width="360" src="../../assets/img/main/logo-bank-of-china.webp" alt="Bank of China" height="40" loading="lazy"/>
+                              <img width="148" src="../../assets/img/main/logo-zte.webp" alt="ZTE" height="40" loading="lazy"/>
+                              <img width="302" src="../../assets/img/main/logo-bank-negara-malaysia.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="246" src="../../assets/img/main/logo-shell.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="236" src="../../assets/img/main/logo-hsbc.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="194" src="../../assets/img/main/logo-cisco.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="209" src="../../assets/img/main/logo-dbs.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="241" src="../../assets/img/main/logo-infineon.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="360" src="../../assets/img/main/logo-bank-of-china.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                              <img width="148" src="../../assets/img/main/logo-zte.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                            </div>
+                          </div>
+                          <div class="lp-featured-quote">
+                            <p class="lp-featured-lead">Bank Islam upgraded how its teams work with Ethan’s help — their Group COO’s own words:</p>
+                            <blockquote>
+                              <p>
+                                <strong>In just seven months, we achieved a 50% surge in retail deposits</strong>, and for the first time in Bank Islam’s history, <strong>our mobile app rating tripled</strong>. Even more impressively, <strong>project delivery was accelerated by 4.5 times</strong>, reducing the timeline by a full seven months.</p>
+                              </blockquote>
+                              <div class="lp-featured-person">
+                                <img src="../../assets/img/lp/lp-moriff-avatar.webp" alt="Mr. Iran Moriff" width="160" height="160" loading="lazy"/>
+                                <cite>
+                                  <strong>Mr. Iran Moriff</strong>Group Chief Operating Officer, Bank Islam Malaysia Berhad</cite>
                                 </div>
-                                <p class="lp-days-note">At your office or ours · English / BM / 中文</p>
                               </div>
-                            </section>
-                            <section class="lp-ladder-section" id="ladder">
-                              <div class="lp-container lp-narrow">
-                                <h2>What one working system changes</h2>
-                                <figure class="lp-photo-figure">
-                                  <img src="../../assets/img/lp/lp-ladder-teaching.webp" alt="Ethan Soo teaching a class, with a flipchart that reads: work comes to the team, not the other way round" width="1400" height="933" loading="lazy"/>
-                                  <figcaption>On the flipchart, in Ethan’s handwriting: “Work comes to the team — NOT the other way round.”</figcaption>
-                                </figure>
-                                <div class="lp-ladder">
-                                  <div class="lp-ladder-step">Install a team system</div>
-                                  <div class="lp-ladder-step">Ownership without chasing</div>
-                                  <div class="lp-ladder-step">Deadlines that hold</div>
-                                  <div class="lp-ladder-step lp-ladder-final">A business that grows — without burning you out</div>
-                                </div>
-                                <a href="#booking" class="lp-btn lp-btn-primary">Yes, I want this for my team</a>
-                              </div>
-                            </section>
-                            <section class="lp-outcomes-section" id="outcomes">
-                              <div class="lp-container">
-                                <h2>What your Monday mornings look like after</h2>
-                                <div class="lp-outcomes">
-                                  <div class="lp-outcome">
-                                    <h3>Ownership without chasing</h3>
-                                    <p>Status updates arrive before you ask. Problems come to you with proposed solutions attached.</p>
+                              <h3 class="lp-proof-heading">5-star reviews, class after class</h3>
+                              <p class="lp-proof-subheading">Real feedback from Ethan’s training classes</p>
+                              <div class="lp-pullquotes">
+                                <blockquote class="lp-pullquote">
+                                  <div class="lp-stars" role="img" aria-label="Rated 5 out of 5 stars">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                      </path>
+                                    </svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                      </path>
+                                    </svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                      </path>
+                                    </svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                      </path>
+                                    </svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                      </path>
+                                    </svg>
                                   </div>
-                                  <div class="lp-outcome">
-                                    <h3>Deadlines that hold</h3>
-                                    <p>Commitments are made by the team, tracked by the team, defended by the team.</p>
-                                  </div>
-                                  <div class="lp-outcome">
-                                    <h3>A boss who can step back</h3>
-                                    <p>Take the two-week holiday. The system doesn’t go on leave.</p>
-                                  </div>
-                                </div>
-                                <a href="#booking" class="lp-btn lp-btn-primary">I’m ready to stop chasing</a>
-                              </div>
-                            </section>
-                            <section class="lp-trainer" id="trainer">
-                              <div class="lp-container lp-narrow">
-                                <h2>The trainer banks and airports trust with their teams</h2>
-                                <img src="../../assets/img/jess/people-ethan-soo.webp" alt="Ethan Soo, lead trainer" class="lp-trainer-photo" width="128" height="128" loading="lazy"/>
-                                <h3>Ethan Soo</h3>
-                                <p class="lp-trainer-creds">Scrum Fellow · Asia Pacific Regional Partner, Scrum Inc.</p>
-                                <p class="lp-trainer-bio">For 23 years, Ethan has built high-performance team systems inside organisations most SMEs only read about — banks, airports, tech multinationals and government agencies across 12+ countries. He has trained 5,000+ people in 300+ sessions, and represented Scrum Inc. USA in presenting enterprise transformation awards to Malaysia Airports and Bank Islam.</p>
-                                <blockquote class="lp-endorsement">
-                                  <p>“Having reviewed the plan carefully, I strongly recommend training with Ethan. These will be excellent courses.”</p>
+                                  <p>“The main impediments I have encountered are missing deadlines and lack of transparency on what is our teammates’ workload — at the end of the day, someone has to pick up the slack! [Now] I understand why… it is always about transparency, inspect and adapt.”</p>
                                   <cite>
-                                    <strong>Dr. Jeff Sutherland</strong>co-creator of Scrum · Founder &amp; Chairman, Scrum Inc.</cite>
+                                    <strong>Fadzlianie Yusof</strong>Project Manager, Product Validation</cite>
                                   </blockquote>
-                                  <div class="lp-founder-story">
-                                    <p class="lp-founder-kicker">Why I built this</p>
-                                    <p>“In 23 years of enterprise work, I kept meeting SME bosses with all the hunger in the world — and none of the management tools. For two decades, Agile has transformed how the world’s biggest companies operate; almost none of that knowledge ever reached the SME. That never sat right with me. Now the AI + human age is arriving — and it will reward teams that run on a system, not on chasing. Creating Super Teams is my answer: the essential management knowledge of those 23 years, condensed into 2 days, and built to work on Monday morning.”</p>
-                                    <p class="lp-founder-sign">— Ethan</p>
+                                  <blockquote class="lp-pullquote">
+                                    <div class="lp-stars" role="img" aria-label="Rated 5 out of 5 stars">
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                        </path>
+                                      </svg>
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                        </path>
+                                      </svg>
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                        </path>
+                                      </svg>
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                        </path>
+                                      </svg>
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+                                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
+                                        </path>
+                                      </svg>
+                                    </div>
+                                    <p>“Change and uncertainty are not an inconvenience, but a source of opportunity. Thank you to the excellent Trainer Ethan Soo for his valuable insights and exercises.”</p>
+                                    <cite>
+                                      <strong>Amiroel Yusof</strong>Senior Manager, Operational Excellence &amp; Guest Experience, MAHB (Malaysia Airports)</cite>
+                                    </blockquote>
+                                  </div>
+                                  <p class="lp-li-caption">Real posts from participants on LinkedIn — swipe to read</p>
+                                  <div class="lp-li-strip" tabindex="0">
+                                    <img src="../../assets/img/lp/linkedin-testi-sg1.webp" alt="LinkedIn post by Fadzlianie Yusof, Project Manager, about missed deadlines and workload transparency before training with Ethan Soo" width="406" height="901" loading="lazy"/>
+                                    <img src="../../assets/img/lp/linkedin-testi-my2.webp" alt="LinkedIn post by Amiroel Yusof, Senior Manager at MAHB, thanking trainer Ethan Soo" width="406" height="901" loading="lazy"/>
+                                    <img src="../../assets/img/lp/linkedin-testi-my1.webp" alt="LinkedIn post by Farhana Aina Fu&#x27;ad, Head of Digital Services, about mindset change in Ethan Soo&#x27;s class" width="406" height="901" loading="lazy"/>
+                                    <img src="../../assets/img/lp/linkedin-testi-th2.webp" alt="LinkedIn post by Navarat Veerawongchai, Project Manager, with workshop photos from a CI Agile class" width="406" height="901" loading="lazy"/>
+                                    <img src="../../assets/img/lp/linkedin-testi-sg2.webp" alt="LinkedIn post by Jiaying Boh about learning to work effectively in a team, with class photos" width="406" height="901" loading="lazy"/>
+                                    <img src="../../assets/img/lp/linkedin-testi-th1.webp" alt="LinkedIn post by Phiroon Rattanaverojvilai, Senior Manager, thanking Ethan Soo after a 2-day class" width="406" height="901" loading="lazy"/>
                                   </div>
                                 </div>
                               </section>
-                              <section class="lp-proof" id="proof">
+                              <section class="lp-idgrid-section" id="who">
                                 <div class="lp-container">
-                                  <div class="lp-stats">
-                                    <div>
-                                      <div class="lp-stat-number">5,000+</div>
-                                      <div class="lp-stat-label">people trained</div>
+                                  <h2>This is for you if you’re…</h2>
+                                  <div class="lp-idgrid">
+                                    <div class="lp-idcard">
+                                      <h3>The owner or founder</h3>
+                                      <p>Still personally chasing every project — and you can’t remember the last real holiday.</p>
                                     </div>
-                                    <div>
-                                      <div class="lp-stat-number">300+</div>
-                                      <div class="lp-stat-label">training sessions</div>
+                                    <div class="lp-idcard">
+                                      <h3>The GM or department head</h3>
+                                      <p>Your projects only move when you push.</p>
                                     </div>
-                                    <div>
-                                      <div class="lp-stat-number">23</div>
-                                      <div class="lp-stat-label">years’ experience</div>
-                                    </div>
-                                  </div>
-                                  <div class="lp-logo-strip">
-                                    <div class="lp-logo-track">
-                                      <img width="302" src="../../assets/img/main/logo-bank-negara-malaysia.webp" alt="Bank Negara Malaysia" height="40" loading="lazy"/>
-                                      <img width="246" src="../../assets/img/main/logo-shell.webp" alt="Shell" height="40" loading="lazy"/>
-                                      <img width="236" src="../../assets/img/main/logo-hsbc.webp" alt="HSBC" height="40" loading="lazy"/>
-                                      <img width="194" src="../../assets/img/main/logo-cisco.webp" alt="Cisco" height="40" loading="lazy"/>
-                                      <img width="209" src="../../assets/img/main/logo-dbs.webp" alt="DBS" height="40" loading="lazy"/>
-                                      <img width="241" src="../../assets/img/main/logo-infineon.webp" alt="Infineon" height="40" loading="lazy"/>
-                                      <img width="360" src="../../assets/img/main/logo-bank-of-china.webp" alt="Bank of China" height="40" loading="lazy"/>
-                                      <img width="148" src="../../assets/img/main/logo-zte.webp" alt="ZTE" height="40" loading="lazy"/>
-                                      <img width="302" src="../../assets/img/main/logo-bank-negara-malaysia.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="246" src="../../assets/img/main/logo-shell.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="236" src="../../assets/img/main/logo-hsbc.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="194" src="../../assets/img/main/logo-cisco.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="209" src="../../assets/img/main/logo-dbs.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="241" src="../../assets/img/main/logo-infineon.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="360" src="../../assets/img/main/logo-bank-of-china.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
-                                      <img width="148" src="../../assets/img/main/logo-zte.webp" alt="" aria-hidden="true" height="40" loading="lazy"/>
+                                    <div class="lp-idcard">
+                                      <h3>The HR or L&amp;D manager</h3>
+                                      <p>Tired of booking trainings that people enjoy on the day and forget by Friday.</p>
                                     </div>
                                   </div>
-                                  <div class="lp-featured-quote">
-                                    <p class="lp-featured-lead">Bank Islam upgraded how its teams work with Ethan’s help — their Group COO’s own words:</p>
-                                    <blockquote>
-                                      <p>
-                                        <strong>In just seven months, we achieved a 50% surge in retail deposits</strong>, and for the first time in Bank Islam’s history, <strong>our mobile app rating tripled</strong>. Even more impressively, <strong>project delivery was accelerated by 4.5 times</strong>, reducing the timeline by a full seven months.</p>
-                                      </blockquote>
-                                      <div class="lp-featured-person">
-                                        <img src="../../assets/img/lp/lp-moriff-avatar.webp" alt="Mr. Iran Moriff" width="160" height="160" loading="lazy"/>
-                                        <cite>
-                                          <strong>Mr. Iran Moriff</strong>Group Chief Operating Officer, Bank Islam Malaysia Berhad</cite>
-                                        </div>
+                                </div>
+                              </section>
+                              <section id="offer">
+                                <div class="lp-container">
+                                  <div class="lp-offer-box">
+                                    <h2>Free 15-minute Team Diagnostic</h2>
+                                    <p class="lp-offer-lead">Walk away with (even if you never buy):</p>
+                                    <ul class="lp-offer-list">
+                                      <li>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                          <path d="M20 6L9 17l-5-5">
+                                          </path>
+                                        </svg>
+                                        <span>Your <strong>Team Score</strong>, benchmarked against 5,000+ people we’ve trained</span>
+                                      </li>
+                                      <li>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                          <path d="M20 6L9 17l-5-5">
+                                          </path>
+                                        </svg>
+                                        <span>The <strong>#1 fix</strong> for your team, from Ethan himself</span>
+                                      </li>
+                                      <li>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                          <path d="M20 6L9 17l-5-5">
+                                          </path>
+                                        </svg>
+                                        <span>Your <strong>HRD Corp levy eligibility</strong> — confirmed for you</span>
+                                      </li>
+                                    </ul>
+                                    <p class="lp-offer-note">Not a sales pitch. If we can’t help your team, we’ll say so in the first five minutes.</p>
+                                    <a href="#booking" class="lp-btn lp-btn-primary">Pick a time slot</a>
+                                  </div>
+                                </div>
+                              </section>
+                              <section id="how-it-works">
+                                <div class="lp-container">
+                                  <h2>How it works</h2>
+                                  <div class="lp-steps">
+                                    <div class="lp-step">
+                                      <div class="lp-step-number">1</div>
+                                      <div>
+                                        <h3>Book the 15-min call</h3>
+                                        <p>Pick a slot that suits you.</p>
                                       </div>
-                                      <h3 class="lp-proof-heading">5-star reviews, class after class</h3>
-                                      <p class="lp-proof-subheading">Real feedback from Ethan’s training classes</p>
-                                      <div class="lp-pullquotes">
-                                        <blockquote class="lp-pullquote">
-                                          <div class="lp-stars" role="img" aria-label="Rated 5 out of 5 stars">
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                              </path>
-                                            </svg>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                              </path>
-                                            </svg>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                              </path>
-                                            </svg>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                              </path>
-                                            </svg>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                              <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                              </path>
-                                            </svg>
-                                          </div>
-                                          <p>“The main impediments I have encountered are missing deadlines and lack of transparency on what is our teammates’ workload — at the end of the day, someone has to pick up the slack! [Now] I understand why… it is always about transparency, inspect and adapt.”</p>
-                                          <cite>
-                                            <strong>Fadzlianie Yusof</strong>Project Manager, Product Validation</cite>
-                                          </blockquote>
-                                          <blockquote class="lp-pullquote">
-                                            <div class="lp-stars" role="img" aria-label="Rated 5 out of 5 stars">
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                                <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                                </path>
-                                              </svg>
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                                <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                                </path>
-                                              </svg>
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                                <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                                </path>
-                                              </svg>
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                                <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                                </path>
-                                              </svg>
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
-                                                <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z">
-                                                </path>
-                                              </svg>
-                                            </div>
-                                            <p>“Change and uncertainty are not an inconvenience, but a source of opportunity. Thank you to the excellent Trainer Ethan Soo for his valuable insights and exercises.”</p>
-                                            <cite>
-                                              <strong>Amiroel Yusof</strong>Senior Manager, Operational Excellence &amp; Guest Experience, MAHB (Malaysia Airports)</cite>
-                                            </blockquote>
-                                          </div>
-                                          <p class="lp-li-caption">Real posts from participants on LinkedIn — swipe to read</p>
-                                          <div class="lp-li-strip" tabindex="0">
-                                            <img src="../../assets/img/lp/linkedin-testi-sg1.webp" alt="LinkedIn post by Fadzlianie Yusof, Project Manager, about missed deadlines and workload transparency before training with Ethan Soo" width="406" height="901" loading="lazy"/>
-                                            <img src="../../assets/img/lp/linkedin-testi-my2.webp" alt="LinkedIn post by Amiroel Yusof, Senior Manager at MAHB, thanking trainer Ethan Soo" width="406" height="901" loading="lazy"/>
-                                            <img src="../../assets/img/lp/linkedin-testi-my1.webp" alt="LinkedIn post by Farhana Aina Fu&#x27;ad, Head of Digital Services, about mindset change in Ethan Soo&#x27;s class" width="406" height="901" loading="lazy"/>
-                                            <img src="../../assets/img/lp/linkedin-testi-th2.webp" alt="LinkedIn post by Navarat Veerawongchai, Project Manager, with workshop photos from a CI Agile class" width="406" height="901" loading="lazy"/>
-                                            <img src="../../assets/img/lp/linkedin-testi-sg2.webp" alt="LinkedIn post by Jiaying Boh about learning to work effectively in a team, with class photos" width="406" height="901" loading="lazy"/>
-                                            <img src="../../assets/img/lp/linkedin-testi-th1.webp" alt="LinkedIn post by Phiroon Rattanaverojvilai, Senior Manager, thanking Ethan Soo after a 2-day class" width="406" height="901" loading="lazy"/>
-                                          </div>
-                                        </div>
-                                      </section>
-                                      <section class="lp-idgrid-section" id="who">
-                                        <div class="lp-container">
-                                          <h2>This is for you if you’re…</h2>
-                                          <div class="lp-idgrid">
-                                            <div class="lp-idcard">
-                                              <h3>The owner or founder</h3>
-                                              <p>Still personally chasing every project — and you can’t remember the last real holiday.</p>
-                                            </div>
-                                            <div class="lp-idcard">
-                                              <h3>The GM or department head</h3>
-                                              <p>Your projects only move when you push.</p>
-                                            </div>
-                                            <div class="lp-idcard">
-                                              <h3>The HR or L&amp;D manager</h3>
-                                              <p>Tired of booking trainings that people enjoy on the day and forget by Friday.</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </section>
-                                      <section id="offer">
-                                        <div class="lp-container">
-                                          <div class="lp-offer-box">
-                                            <h2>Free 15-minute Team Diagnostic</h2>
-                                            <p class="lp-offer-lead">Walk away with (even if you never buy):</p>
-                                            <ul class="lp-offer-list">
-                                              <li>
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                                  <path d="M20 6L9 17l-5-5">
-                                                  </path>
-                                                </svg>
-                                                <span>Your <strong>Team Score</strong>, benchmarked against 5,000+ people we’ve trained</span>
-                                              </li>
-                                              <li>
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                                  <path d="M20 6L9 17l-5-5">
-                                                  </path>
-                                                </svg>
-                                                <span>The <strong>#1 fix</strong> for your team, from Ethan himself</span>
-                                              </li>
-                                              <li>
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                                  <path d="M20 6L9 17l-5-5">
-                                                  </path>
-                                                </svg>
-                                                <span>Your <strong>HRD Corp levy eligibility</strong> — confirmed for you</span>
-                                              </li>
-                                            </ul>
-                                            <p class="lp-offer-note">Not a sales pitch. If we can’t help your team, we’ll say so in the first five minutes.</p>
-                                            <a href="#booking" class="lp-btn lp-btn-primary">Pick a time slot</a>
-                                          </div>
-                                        </div>
-                                      </section>
-                                      <section id="how-it-works">
-                                        <div class="lp-container">
-                                          <h2>How it works</h2>
-                                          <div class="lp-steps">
-                                            <div class="lp-step">
-                                              <div class="lp-step-number">1</div>
-                                              <div>
-                                                <h3>Book the 15-min call</h3>
-                                                <p>Pick a slot that suits you.</p>
-                                              </div>
-                                            </div>
-                                            <div class="lp-step">
-                                              <div class="lp-step-number">2</div>
-                                              <div>
-                                                <h3>We design your session</h3>
-                                                <p>Tailored to your team’s real problems.</p>
-                                              </div>
-                                            </div>
-                                            <div class="lp-step">
-                                              <div class="lp-step-number">3</div>
-                                              <div>
-                                                <h3>Team transformed in 2 days</h3>
-                                                <p>Hands-on training at your office or ours.</p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </section>
-                                      <section class="lp-faq" id="faq">
-                                        <div class="lp-container lp-narrow">
-                                          <h2>Frequently Asked Questions</h2>
-                                          <details>
-                                            <summary>How does the HRD Corp claim work?</summary>
-                                            <p>Creating Super Teams is 100% HRD Corp claimable. If your company contributes to the HRD Corp levy, the training cost can be claimed from your existing levy — often at no extra cash cost to you. We guide you through the paperwork: the grant application before the training and the claim after. Not sure if you’re eligible? We’ll confirm your levy eligibility for you during the free 15-minute Team Diagnostic.</p>
-                                          </details>
-                                          <details>
-                                            <summary>We’re too busy for 2 days of training.</summary>
-                                            <p>That’s usually the strongest sign you need it. The busyness is the symptom — chasing, rework and fire-fighting consume far more than 2 days every month. And because the workshop runs on your team’s real projects, the work doesn’t stop for the training: your team keeps moving it forward inside the room.</p>
-                                          </details>
-                                          <details>
-                                            <summary>We’ve done team training before. Nothing changed.</summary>
-                                            <p>Most training fails the Monday-morning test: inspiring on the day, zero change to how work actually flows. Creating Super Teams doesn’t teach concepts and hope. It installs a concrete system — ownership, visible work, a delivery rhythm — onto your team’s actual projects during the workshop, and your team leaves with a 30-day plan they built themselves. What changes on Monday is decided before Day 2 ends.</p>
-                                          </details>
-                                          <details>
-                                            <summary>My industry is different — will this work for us?</summary>
-                                            <p>The system isn’t industry-specific: it works anywhere work arrives, gets divided among people, and has to ship. Ethan has installed it in banks, airports, manufacturers, government agencies and tech companies. Because the 2 days run on your team’s real work, it fits your industry by construction — and if we honestly think your case isn’t a fit, we’ll tell you that on the free 15-minute call.</p>
-                                          </details>
-                                          <details>
-                                            <summary>What if my team is small (under 10 pax)?</summary>
-                                            <p>That’s normal for SMEs — many of the teams we train are small. The workshop is hands-on and works best when your real, everyday team is in the room together, even if that’s only a handful of people. Book the free Team Diagnostic and we’ll recommend the best format and pricing for your team size.</p>
-                                          </details>
-                                          <details>
-                                            <summary>Is this classroom lecturing?</summary>
-                                            <p>No. There is no slides marathon. Creating Super Teams is a hands-on 2-day workshop: your team works through exercises, simulations, and their own real work problems — and applies what they learn on the spot. Your people learn by doing, because that’s what actually changes how they work when they’re back at their desks.</p>
-                                          </details>
-                                          <details>
-                                            <summary>How much does the full training cost?</summary>
-                                            <p>From RM350 per pax per day for the 2-day program. The final quote depends on your team size and location. Because the training is 100% HRD Corp claimable, your HRD Corp levy may cover the full cost. We’ll confirm the exact number — and your levy eligibility — on the free 15-minute call.</p>
-                                          </details>
-                                        </div>
-                                      </section>
-                                      <section class="lp-booking" id="booking">
-                                        <div class="lp-container">
-                                          <h2>Ready? Pick your 15-minute slot — and get your Team Score.</h2>
-                                          <div class="lp-hrd-card lp-hrd-card-center">
-                                            <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="" aria-hidden="true" width="192" height="192"/>
-                                            <div>
-                                              <strong>100% HRD Corp Claimable</strong>
-                                              <span>The 15-min call is free — the claimable part is the 2-day training. We confirm your levy eligibility on the call.</span>
-                                            </div>
-                                          </div>
-                                          <p class="lp-booking-note">The 15-minute call is with Ethan himself — not a salesperson.</p>
-                                          <div class="lp-calendar-embed" id="calendar-embed">
-                                            <div class="lp-cal-skeleton" aria-hidden="true">
-                                              <span class="lp-spinner">
-                                              </span>Loading live calendar…</div>
-                                              <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;hide_event_type_details=1&amp;hide_landing_page_details=1&amp;primary_color=16a34a">
-                                              </div>
-                                            </div>
-                                            <p class="lp-booking-or">Prefer WhatsApp?</p>
-                                            <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
-                                              <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
-                                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                                </path>
-                                              </svg> Chat with us on WhatsApp</a>
-                                            </div>
-                                          </section>
-                                          <footer class="lp-footer">
-                                            <div class="lp-container">
-                                              <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
-                                              <p>
-                                                <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
-                                              </p>
-                                            </div>
-                                          </footer>
-                                          <div class="lp-sticky" id="sticky-cta">
-                                            <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
-                                          </div>
-                                          <script>/* ---------------------------------------------------------------------------
-                                            Landing page JS — inlined into landing-shell.html at build time.
-                                            Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
-                                            No libraries. Keep this file small — it ships inline.
-                                            --------------------------------------------------------------------------- */
-                                            (function () {
-                                            'use strict';
-                                            
-                                            // ── Meta Pixel bootstrap ──────────────────────────────────────────────
-                                            // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
-                                            // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
-                                            // but nothing is sent to Facebook.
-                                            var PIXEL_ID = window.META_PIXEL_ID || '';
-                                            // Fire only on the production domain — staging/local visits must not
-                                            // pollute the real pixel's data or retargeting audiences.
-                                            var pixelHost = window.location.hostname.indexOf('www.ciagile.com') === 0 ||
-                                            window.location.hostname === 'ciagile.com';
-                                            var pixelLive = pixelHost && PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
-                                            
-                                            (function (f, b, e, v, n, t, s) {
-                                            if (f.fbq) return;
-                                            n = f.fbq = function () {
-                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                                            };
-                                            if (!f._fbq) f._fbq = n;
-                                            n.push = n;
-                                            n.loaded = true;
-                                            n.version = '2.0';
-                                            n.queue = [];
-                                            if (!pixelLive) return; // stub only — do not load fbevents.js yet
-                                            t = b.createElement(e);
-                                            t.async = true;
-                                            t.src = v;
-                                            s = b.getElementsByTagName(e)[0];
-                                            s.parentNode.insertBefore(t, s);
-                                            })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-                                            
-                                            if (pixelLive) {
-                                            window.fbq('init', PIXEL_ID);
-                                            window.fbq('track', 'PageView');
-                                            }
-                                            
-                                            // ── Custom event: WhatsApp click ──────────────────────────────────────
-                                            var waLinks = document.querySelectorAll('[data-wa-link]');
-                                            for (var i = 0; i < waLinks.length; i++) {
-                                            waLinks[i].addEventListener('click', function () {
-                                            window.fbq('trackCustom', 'WhatsAppClick', {
-                                            placement: this.getAttribute('data-placement') || 'unknown'
-                                            });
-                                            });
-                                            }
-                                            
-                                            // ── Lead event ────────────────────────────────────────────────────────
-                                            // Preferred: Calendly's booking-confirmed postMessage (fires on actual
-                                            // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
-                                            // on first interaction with the calendar container instead.
-                                            var leadFired = false;
-                                            function fireLead(source) {
-                                            if (leadFired) return;
-                                            leadFired = true;
-                                            window.fbq('track', 'Lead', { source: source });
-                                            }
-                                            
-                                            window.addEventListener('message', function (e) {
-                                            if (e.data && e.data.event === 'calendly.event_scheduled') {
-                                            fireLead('calendly_booking');
-                                            }
-                                            });
-                                            
-                                            var calendar = document.getElementById('calendar-embed');
-                                            if (calendar) {
-                                            calendar.addEventListener('pointerdown', function () {
-                                            var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
-                                            if (!isCalendly) fireLead('widget_interaction');
-                                            });
-                                            }
-                                            
-                                            // ── Lazy looping clips (Lia story, SOPs/workflows) ─────────────────────
-                                            // Each <video data-video-src> ships with no src (preload=none + poster
-                                            // only). The mp4 is attached and played only when that section approaches
-                                            // the screen, so the clips never compete with initial page load.
-                                            var lazyClips = document.querySelectorAll('video[data-video-src]');
-                                            function armLazyClip(clip) {
-                                            function startClip() {
-                                            if (clip.src) return;
-                                            clip.src = clip.getAttribute('data-video-src');
-                                            clip.muted = true; // required for programmatic autoplay
-                                            clip.load();
-                                            var playing = clip.play();
-                                            if (playing && playing.catch) playing.catch(function () {});
-                                            }
-                                            if ('IntersectionObserver' in window) {
-                                            new IntersectionObserver(function (entries, obs) {
-                                            if (entries[0].isIntersecting) {
-                                            startClip();
-                                            obs.disconnect();
-                                            }
-                                            }, { rootMargin: '300px 0px' }).observe(clip);
-                                            } else {
-                                            startClip();
-                                            }
-                                            }
-                                            for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
-                                            
-                                            // ── Calendly widget: lazy-inject the script near the booking section ──
-                                            // The inline-widget div ships empty; Calendly's widget.js (which scans
-                                            // for .calendly-inline-widget on load) is added when the visitor nears
-                                            // the booking section, or immediately when any #booking CTA is clicked.
-                                            // A skeleton (spinner + text) covers the container until Calendly paints,
-                                            // and the container is resized live from Calendly's page_height messages
-                                            // so there is never dead space below the widget.
-                                            var calendlyHost = document.querySelector('.calendly-inline-widget');
-                                            if (calendlyHost) {
-                                            var calendlyContainer = document.getElementById('calendar-embed');
-                                            var calendlyLoaded = false;
-                                            var loadCalendly = function () {
-                                            if (calendlyLoaded) return;
-                                            calendlyLoaded = true;
-                                            var s = document.createElement('script');
-                                            s.src = 'https://assets.calendly.com/assets/external/widget.js';
-                                            s.async = true;
-                                            document.body.appendChild(s);
-                                            };
-                                            var bookingLinks = document.querySelectorAll('a[href="#booking"]');
-                                            for (var b = 0; b < bookingLinks.length; b++) {
-                                            bookingLinks[b].addEventListener('click', loadCalendly);
-                                            }
-                                            if ('IntersectionObserver' in window) {
-                                            new IntersectionObserver(function (entries, obs) {
-                                            if (entries[0].isIntersecting) {
-                                            loadCalendly();
-                                            obs.disconnect();
-                                            }
-                                            }, { rootMargin: '1400px 0px' }).observe(calendlyHost);
-                                            } else {
-                                            loadCalendly();
-                                            }
-                                            
-                                            // Warm start: fetch the widget shortly after the page finishes loading
-                                            // (after LCP/critical work), no matter where the visitor is. By the
-                                            // time anyone reads enough to click a CTA, the calendar is already
-                                            // rendered — no 2-3s boot delay on direct jumps to #booking.
-                                            var warmStart = function () { setTimeout(loadCalendly, 1200); };
-                                            if (document.readyState === 'complete') {
-                                            warmStart();
-                                            } else {
-                                            window.addEventListener('load', warmStart);
-                                            }
-                                            
-                                            // Calendly reports its rendered content height on every step change.
-                                            // Track it so the widget always fits snugly (no blank tail after the
-                                            // calendar, enough room for the questions form), and use the first
-                                            // height report as the "painted" signal that hides the skeleton.
-                                            window.addEventListener('message', function (e) {
-                                            if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
-                                            var d = e.data;
-                                            if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
-                                            calendlyHost.style.height = d.payload.height;
-                                            if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
-                                            }
-                                            });
-                                            }
-                                            
-                                            // ── Sticky mobile CTA bar ─────────────────────────────────────────────
-                                            // Shown once the hero CTA scrolls out of view; hidden again while the
-                                            // booking section is on screen (so it never covers the calendar).
-                                            var bar = document.getElementById('sticky-cta');
-                                            // The hero deliberately has no CTA button — the bar appears once the hero
-                                            // section itself scrolls out of view.
-                                            var heroCta = document.getElementById('hero-cta') || document.getElementById('hero');
-                                            var booking = document.getElementById('booking');
-                                            
-                                            if (bar && heroCta && booking && 'IntersectionObserver' in window) {
-                                            var pastHero = false;
-                                            var atBooking = false;
-                                            
-                                            function updateBar() {
-                                            var show = pastHero && !atBooking;
-                                            bar.classList.toggle('is-visible', show);
-                                            document.body.classList.toggle('lp-sticky-on', show);
-                                            }
-                                            
-                                            new IntersectionObserver(function (entries) {
-                                            pastHero = !entries[0].isIntersecting;
-                                            updateBar();
-                                            }).observe(heroCta);
-                                            
-                                            new IntersectionObserver(function (entries) {
-                                            atBooking = entries[0].isIntersecting;
-                                            updateBar();
-                                            }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
-                                            } else if (bar) {
-                                            // No IntersectionObserver: keep the bar always visible on mobile.
-                                            bar.classList.add('is-visible');
-                                            document.body.classList.add('lp-sticky-on');
-                                            }
-                                            })();
-                                          </script>
-                                        </body>
-                                      </html>
-                                      
+                                    </div>
+                                    <div class="lp-step">
+                                      <div class="lp-step-number">2</div>
+                                      <div>
+                                        <h3>We design your session</h3>
+                                        <p>Tailored to your team’s real problems.</p>
+                                      </div>
+                                    </div>
+                                    <div class="lp-step">
+                                      <div class="lp-step-number">3</div>
+                                      <div>
+                                        <h3>Team transformed in 2 days</h3>
+                                        <p>Hands-on training at your office or ours.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
+                              <section class="lp-faq" id="faq">
+                                <div class="lp-container lp-narrow">
+                                  <h2>Frequently Asked Questions</h2>
+                                  <details>
+                                    <summary>How does the HRD Corp claim work?</summary>
+                                    <p>Creating Super Teams is 100% HRD Corp claimable. If your company contributes to the HRD Corp levy, the training cost can be claimed from your existing levy — often at no extra cash cost to you. We guide you through the paperwork: the grant application before the training and the claim after. Not sure if you’re eligible? We’ll confirm your levy eligibility for you during the free 15-minute Team Diagnostic.</p>
+                                  </details>
+                                  <details>
+                                    <summary>We’re too busy for 2 days of training.</summary>
+                                    <p>That’s usually the strongest sign you need it. The busyness is the symptom — chasing, rework and fire-fighting consume far more than 2 days every month. And because the workshop runs on your team’s real projects, the work doesn’t stop for the training: your team keeps moving it forward inside the room.</p>
+                                  </details>
+                                  <details>
+                                    <summary>We’ve done team training before. Nothing changed.</summary>
+                                    <p>Most training fails the Monday-morning test: inspiring on the day, zero change to how work actually flows. Creating Super Teams doesn’t teach concepts and hope. It installs a concrete system — ownership, visible work, a delivery rhythm — onto your team’s actual projects during the workshop, and your team leaves with a 30-day plan they built themselves. What changes on Monday is decided before Day 2 ends.</p>
+                                  </details>
+                                  <details>
+                                    <summary>My industry is different — will this work for us?</summary>
+                                    <p>The system isn’t industry-specific: it works anywhere work arrives, gets divided among people, and has to ship. Ethan has installed it in banks, airports, manufacturers, government agencies and tech companies. Because the 2 days run on your team’s real work, it fits your industry by construction — and if we honestly think your case isn’t a fit, we’ll tell you that on the free 15-minute call.</p>
+                                  </details>
+                                  <details>
+                                    <summary>What if my team is small (under 10 pax)?</summary>
+                                    <p>That’s normal for SMEs — many of the teams we train are small. The workshop is hands-on and works best when your real, everyday team is in the room together, even if that’s only a handful of people. Book the free Team Diagnostic and we’ll recommend the best format and pricing for your team size.</p>
+                                  </details>
+                                  <details>
+                                    <summary>Is this classroom lecturing?</summary>
+                                    <p>No. There is no slides marathon. Creating Super Teams is a hands-on 2-day workshop: your team works through exercises, simulations, and their own real work problems — and applies what they learn on the spot. Your people learn by doing, because that’s what actually changes how they work when they’re back at their desks.</p>
+                                  </details>
+                                  <details>
+                                    <summary>How much does the full training cost?</summary>
+                                    <p>From RM350 per pax per day for the 2-day program. The final quote depends on your team size and location. Because the training is 100% HRD Corp claimable, your HRD Corp levy may cover the full cost. We’ll confirm the exact number — and your levy eligibility — on the free 15-minute call.</p>
+                                  </details>
+                                </div>
+                              </section>
+                              <section class="lp-booking" id="booking">
+                                <div class="lp-container">
+                                  <h2>Ready? Pick your 15-minute slot — and get your Team Score.</h2>
+                                  <div class="lp-hrd-card lp-hrd-card-center">
+                                    <img src="../../assets/img/teamworks/ciagile-teamworks-hrdcorp-claimable-logo.webp" alt="" aria-hidden="true" width="192" height="192"/>
+                                    <div>
+                                      <strong>100% HRD Corp Claimable</strong>
+                                      <span>The 15-min call is free — the claimable part is the 2-day training. We confirm your levy eligibility on the call.</span>
+                                    </div>
+                                  </div>
+                                  <p class="lp-booking-note">The 15-minute call is with Ethan himself — not a salesperson.</p>
+                                  <div class="lp-calendar-embed" id="calendar-embed">
+                                    <div class="lp-cal-skeleton" aria-hidden="true">
+                                      <span class="lp-spinner">
+                                      </span>Loading live calendar…</div>
+                                      <div class="calendly-inline-widget" data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&amp;hide_event_type_details=1&amp;hide_landing_page_details=1&amp;primary_color=16a34a">
+                                      </div>
+                                    </div>
+                                    <p class="lp-booking-or">Prefer WhatsApp?</p>
+                                    <a href="https://wa.me/60192981055?text=Hi%20CI%20Agile%2C%20I%27d%20like%20to%20book%20a%20free%2015-min%20Team%20Diagnostic." class="lp-btn lp-btn-outline" data-wa-link="true" data-placement="booking-section" target="_blank" rel="noopener noreferrer">
+                                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#1FAF54" aria-hidden="true">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                        </path>
+                                      </svg> Chat with us on WhatsApp</a>
+                                    </div>
+                                  </section>
+                                  <footer class="lp-footer">
+                                    <div class="lp-container">
+                                      <p>Creating Super Teams is a 100% HRD Corp claimable programme.</p>
+                                      <p>
+                                        <a href="/privacy-policy.html">Privacy Policy</a> · <a href="mailto:services@ciagile.com">services@ciagile.com</a>
+                                      </p>
+                                    </div>
+                                  </footer>
+                                  <div class="lp-sticky" id="sticky-cta">
+                                    <a href="#booking" class="lp-btn lp-btn-primary">Get my free Team Diagnostic</a>
+                                  </div>
+                                  <script>/* ---------------------------------------------------------------------------
+                                    Landing page JS — inlined into landing-shell.html at build time.
+                                    Scope: Meta Pixel bootstrap + Lead/WhatsApp events + sticky CTA bar.
+                                    No libraries. Keep this file small — it ships inline.
+                                    --------------------------------------------------------------------------- */
+                                    (function () {
+                                    'use strict';
+                                    
+                                    // ── Meta Pixel bootstrap ──────────────────────────────────────────────
+                                    // Pixel ID is set in the shell head (window.META_PIXEL_ID). While it still
+                                    // holds the REPLACE placeholder, the fbq stub exists (so calls never throw)
+                                    // but nothing is sent to Facebook.
+                                    var PIXEL_ID = window.META_PIXEL_ID || '';
+                                    // Fire only on the production domain — staging/local visits must not
+                                    // pollute the real pixel's data or retargeting audiences.
+                                    var pixelHost = window.location.hostname.indexOf('www.ciagile.com') === 0 ||
+                                    window.location.hostname === 'ciagile.com';
+                                    var pixelLive = pixelHost && PIXEL_ID && PIXEL_ID.indexOf('REPLACE') === -1;
+                                    
+                                    (function (f, b, e, v, n, t, s) {
+                                    if (f.fbq) return;
+                                    n = f.fbq = function () {
+                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                                    };
+                                    if (!f._fbq) f._fbq = n;
+                                    n.push = n;
+                                    n.loaded = true;
+                                    n.version = '2.0';
+                                    n.queue = [];
+                                    if (!pixelLive) return; // stub only — do not load fbevents.js yet
+                                    t = b.createElement(e);
+                                    t.async = true;
+                                    t.src = v;
+                                    s = b.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                                    
+                                    if (pixelLive) {
+                                    window.fbq('init', PIXEL_ID);
+                                    window.fbq('track', 'PageView');
+                                    }
+                                    
+                                    // ── Custom event: WhatsApp click ──────────────────────────────────────
+                                    var waLinks = document.querySelectorAll('[data-wa-link]');
+                                    for (var i = 0; i < waLinks.length; i++) {
+                                    waLinks[i].addEventListener('click', function () {
+                                    window.fbq('trackCustom', 'WhatsAppClick', {
+                                    placement: this.getAttribute('data-placement') || 'unknown'
+                                    });
+                                    });
+                                    }
+                                    
+                                    // ── Lead event ────────────────────────────────────────────────────────
+                                    // Preferred: Calendly's booking-confirmed postMessage (fires on actual
+                                    // bookings). Fallback: if the embedded widget is not Calendly, fire Lead
+                                    // on first interaction with the calendar container instead.
+                                    var leadFired = false;
+                                    function fireLead(source) {
+                                    if (leadFired) return;
+                                    leadFired = true;
+                                    window.fbq('track', 'Lead', { source: source });
+                                    }
+                                    
+                                    window.addEventListener('message', function (e) {
+                                    if (e.data && e.data.event === 'calendly.event_scheduled') {
+                                    fireLead('calendly_booking');
+                                    }
+                                    });
+                                    
+                                    var calendar = document.getElementById('calendar-embed');
+                                    if (calendar) {
+                                    calendar.addEventListener('pointerdown', function () {
+                                    var isCalendly = calendar.querySelector('iframe[src*="calendly"]');
+                                    if (!isCalendly) fireLead('widget_interaction');
+                                    });
+                                    }
+                                    
+                                    // ── Lazy looping clips (Lia story, SOPs/workflows) ─────────────────────
+                                    // Each <video data-video-src> ships with no src (preload=none + poster
+                                    // only). The mp4 is attached and played only when that section approaches
+                                    // the screen, so the clips never compete with initial page load.
+                                    var lazyClips = document.querySelectorAll('video[data-video-src]');
+                                    function armLazyClip(clip) {
+                                    function startClip() {
+                                    if (clip.src) return;
+                                    clip.src = clip.getAttribute('data-video-src');
+                                    clip.muted = true; // required for programmatic autoplay
+                                    clip.load();
+                                    var playing = clip.play();
+                                    if (playing && playing.catch) playing.catch(function () {});
+                                    }
+                                    if ('IntersectionObserver' in window) {
+                                    new IntersectionObserver(function (entries, obs) {
+                                    if (entries[0].isIntersecting) {
+                                    startClip();
+                                    obs.disconnect();
+                                    }
+                                    }, { rootMargin: '300px 0px' }).observe(clip);
+                                    } else {
+                                    startClip();
+                                    }
+                                    }
+                                    for (var c = 0; c < lazyClips.length; c++) armLazyClip(lazyClips[c]);
+                                    
+                                    // ── Calendly widget: lazy-inject the script near the booking section ──
+                                    // The inline-widget div ships empty; Calendly's widget.js (which scans
+                                    // for .calendly-inline-widget on load) is added when the visitor nears
+                                    // the booking section, or immediately when any #booking CTA is clicked.
+                                    // A skeleton (spinner + text) covers the container until Calendly paints,
+                                    // and the container is resized live from Calendly's page_height messages
+                                    // so there is never dead space below the widget.
+                                    var calendlyHost = document.querySelector('.calendly-inline-widget');
+                                    if (calendlyHost) {
+                                    var calendlyContainer = document.getElementById('calendar-embed');
+                                    var calendlyLoaded = false;
+                                    var loadCalendly = function () {
+                                    if (calendlyLoaded) return;
+                                    calendlyLoaded = true;
+                                    var s = document.createElement('script');
+                                    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                                    s.async = true;
+                                    document.body.appendChild(s);
+                                    };
+                                    var bookingLinks = document.querySelectorAll('a[href="#booking"]');
+                                    for (var b = 0; b < bookingLinks.length; b++) {
+                                    bookingLinks[b].addEventListener('click', loadCalendly);
+                                    }
+                                    if ('IntersectionObserver' in window) {
+                                    new IntersectionObserver(function (entries, obs) {
+                                    if (entries[0].isIntersecting) {
+                                    loadCalendly();
+                                    obs.disconnect();
+                                    }
+                                    }, { rootMargin: '1400px 0px' }).observe(calendlyHost);
+                                    } else {
+                                    loadCalendly();
+                                    }
+                                    
+                                    // Warm start: fetch the widget shortly after the page finishes loading
+                                    // (after LCP/critical work), no matter where the visitor is. By the
+                                    // time anyone reads enough to click a CTA, the calendar is already
+                                    // rendered — no 2-3s boot delay on direct jumps to #booking.
+                                    var warmStart = function () { setTimeout(loadCalendly, 1200); };
+                                    if (document.readyState === 'complete') {
+                                    warmStart();
+                                    } else {
+                                    window.addEventListener('load', warmStart);
+                                    }
+                                    
+                                    // Calendly reports its rendered content height on every step change.
+                                    // Track it so the widget always fits snugly (no blank tail after the
+                                    // calendar, enough room for the questions form), and use the first
+                                    // height report as the "painted" signal that hides the skeleton.
+                                    window.addEventListener('message', function (e) {
+                                    if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
+                                    var d = e.data;
+                                    if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
+                                    calendlyHost.style.height = d.payload.height;
+                                    if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
+                                    }
+                                    });
+                                    }
+                                    
+                                    // ── Sticky mobile CTA bar ─────────────────────────────────────────────
+                                    // Shown once the hero CTA scrolls out of view; hidden again while the
+                                    // booking section is on screen (so it never covers the calendar).
+                                    var bar = document.getElementById('sticky-cta');
+                                    // The hero deliberately has no CTA button — the bar appears once the hero
+                                    // section itself scrolls out of view.
+                                    var heroCta = document.getElementById('hero-cta') || document.getElementById('hero');
+                                    var booking = document.getElementById('booking');
+                                    
+                                    if (bar && heroCta && booking && 'IntersectionObserver' in window) {
+                                    var pastHero = false;
+                                    var atBooking = false;
+                                    
+                                    function updateBar() {
+                                    var show = pastHero && !atBooking;
+                                    bar.classList.toggle('is-visible', show);
+                                    document.body.classList.toggle('lp-sticky-on', show);
+                                    }
+                                    
+                                    new IntersectionObserver(function (entries) {
+                                    pastHero = !entries[0].isIntersecting;
+                                    updateBar();
+                                    }).observe(heroCta);
+                                    
+                                    new IntersectionObserver(function (entries) {
+                                    atBooking = entries[0].isIntersecting;
+                                    updateBar();
+                                    }, { rootMargin: '0px 0px -20% 0px' }).observe(booking);
+                                    } else if (bar) {
+                                    // No IntersectionObserver: keep the bar always visible on mobile.
+                                    bar.classList.add('is-visible');
+                                    document.body.classList.add('lp-sticky-on');
+                                    }
+                                    })();
+                                  </script>
+                                </body>
+                              </html>
+                              
