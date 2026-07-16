@@ -123,9 +123,7 @@ export function SuperTeamsLandingPage() {
           </h1>
           <p>
             In most SMEs, 1&ndash;2 &ldquo;super employees&rdquo; quietly
-            carry 60&ndash;70% of the real work. You know exactly who yours
-            is: the one in meetings all day, answering messages non-stop —
-            the one everyone depends on.{" "}
+            carry 70% of the work. You know exactly who yours is.{" "}
             <strong>Let&rsquo;s call her Lia.</strong>
           </p>
           {/* Muted looping clip from the ad video (13.2s–21s: Lia at her
@@ -148,19 +146,15 @@ export function SuperTeamsLandingPage() {
             ></video>
           </div>
           <p>
-            The day Lia takes MC, the whole company slows down — and people
-            still call her on her sick bed. Because &ldquo;she&rsquo;s the
-            only one who can handle it,&rdquo; every urgent job lands on her
-            desk. Until the day she hands in her resignation — tired of
-            carrying colleagues who are paid the same to do less. And when
-            she walks out, she takes the SOPs with her. They were never
-            written down. They only ever existed in her head.
+            The day Lia takes MC, the whole company slows down. The day she
+            resigns, it&rsquo;s a <strong>disaster</strong> — because her
+            SOPs were never written down. They only ever existed in her head.
           </p>
           <p>
-            Meanwhile, you&rsquo;re not just the boss anymore. You&rsquo;re
-            the project manager, the quality checker, and the backup plan for
-            every single job in the company. It&rsquo;s 9.40pm on a Tuesday
-            and you&rsquo;re still on WhatsApp — chasing.
+            Meanwhile, you&rsquo;re the project manager, the quality checker,
+            and the backup plan for every job in the company. It&rsquo;s
+            9.40pm on a Tuesday, and you&rsquo;re still on WhatsApp —
+            chasing.
           </p>
           <h3 className="lp-cost-heading">
             Here&rsquo;s what running with no system is really costing you:
@@ -237,12 +231,12 @@ export function SuperTeamsLandingPage() {
             Why does nothing move <em>unless you push?</em>
           </h2>
           <p>
-            Not because your people are lazy. Think about it: the same
-            employee who &ldquo;lacks initiative&rdquo; in your office
-            somehow organises a wedding for 300 guests on the weekend. People
-            don&rsquo;t lack ability — they follow whatever system surrounds
-            them. And when the workplace has no system, they follow the
-            oldest rule there is: <em>wait for the boss to chase.</em>
+            Not because your people are lazy. The same employee who
+            &ldquo;looks incapable&rdquo; at work can organise their own
+            300-guest wedding — or their own perfect vacation. Their
+            performance follows the work system in your office: when
+            there&rsquo;s no system, everyone waits,{" "}
+            <em>and you keep chasing.</em>
           </p>
           <p className="lp-reframe-lead">
             That&rsquo;s why the usual fixes keep failing:
@@ -250,8 +244,7 @@ export function SuperTeamsLandingPage() {
           <ul className="lp-fail-list">
             <li>
               <strong>The motivational talk.</strong> Everyone claps. Two
-              weeks later the energy is gone, because Monday morning still
-              works exactly like before.
+              weeks later, nothing has changed.
             </li>
             <li>
               <strong>KPIs and dashboards.</strong> People learn to explain
@@ -288,12 +281,11 @@ export function SuperTeamsLandingPage() {
           </div>
           <p>
             <strong>
-              You don&rsquo;t have a people problem. You have a missing
+              You don&rsquo;t have a people problem — you have a missing
               system.
             </strong>{" "}
-            High-performing teams in banks, airports and tech companies
-            don&rsquo;t run on talent or motivation. They run on three
-            boring-sounding things:
+            High-performing teams at MNCs and leading tech companies run on
+            three boring-sounding things:
           </p>
           <div className="lp-triad">
             <div className="lp-triad-item">
@@ -313,9 +305,8 @@ export function SuperTeamsLandingPage() {
             </div>
           </div>
           <p className="lp-reframe-closer">
-            A system is not a personality trait. It can be{" "}
-            <em>installed</em>. That&rsquo;s what Creating Super Teams does —
-            in 2 days, with your real team, on your real work.
+            A system can be <em>installed</em>. That&rsquo;s what Creating
+            Super Teams does — in 2 days, on your team&rsquo;s real work.
           </p>
           <a href="#booking" className="lp-btn lp-btn-primary">
             Diagnose my team — free
