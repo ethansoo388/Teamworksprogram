@@ -240,31 +240,19 @@ h1 em {
   border-radius: var(--radius);
   background: #000;
 }
-.lp-cost-heading {
-  margin-top: 32px;
-  margin-bottom: 14px;
-  font-size: 19px;
-  font-weight: 600;
-}
-.lp-cost-list { list-style: none; }
-.lp-cost-list li {
-  padding: 12px 0 12px 18px;
-  border-left: 3px solid var(--amber);
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: var(--ink-soft);
-  background: var(--bg-soft);
-  border-radius: 0 10px 10px 0;
-  padding-right: 14px;
-}
-.lp-cost-list strong { color: var(--ink); }
-
 /* ── Reframe (§5) ────────────────────────────────────────────────────── */
 /* Reframe stays white — the pain section (bg-soft) now sits directly
    above it, and the product section (bg-soft) directly below. */
 .lp-reframe { background: #fff; }
 .lp-reframe p { font-size: 16.5px; }
 .lp-reframe p em { font-style: normal; font-weight: 600; color: var(--ink); }
+/* The pivot question after the wedding anecdote — larger, purple, its own
+   beat before the list of failed fixes. */
+.lp-reframe-ask {
+  margin-top: 18px;
+  font-size: 20px;
+  color: var(--purple);
+}
 .lp-reframe-lead { margin-top: 20px; font-weight: 600; color: var(--ink); }
 .lp-fail-list { list-style: none; margin: 14px 0 24px; }
 .lp-fail-list li {
@@ -355,8 +343,8 @@ h1 em {
 /* Product reveal section (§4) */
 .lp-product { background: var(--bg-soft); }
 .lp-product p { font-size: 16.5px; }
-/* Product header's second line: "is the perfect solution" — italic purple
-   (the only italic h2 line on the page; deliberate, it's the pivot). */
+/* Product header's second line ("the proven solution that works
+   immediately") — the only italic h2 line on the page; it's the pivot. */
 .lp-product h2 em { font-style: italic; }
 .lp-product .lp-hrd-card { background: #fff; }
 /* Founder story — first-person block after the credentials/endorsement */

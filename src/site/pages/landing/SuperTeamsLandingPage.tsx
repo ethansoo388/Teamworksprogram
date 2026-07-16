@@ -147,8 +147,7 @@ export function SuperTeamsLandingPage() {
           </div>
           <p>
             The day Lia takes MC, the whole company slows down. The day she
-            resigns, it&rsquo;s a <strong>disaster</strong> — because her
-            SOPs were never written down. They only ever existed in her head.
+            resigns, it&rsquo;s a <strong>disaster</strong>.
           </p>
           <p>
             Meanwhile, you&rsquo;re the project manager, the quality checker,
@@ -156,27 +155,6 @@ export function SuperTeamsLandingPage() {
             9.40pm on a Tuesday, and you&rsquo;re still on WhatsApp —
             chasing.
           </p>
-          <h3 className="lp-cost-heading">
-            Here&rsquo;s what running with no system is really costing you:
-          </h3>
-          <ul className="lp-cost-list">
-            <li>
-              <strong>Clients.</strong> One missed deadline is forgiven. A
-              pattern gets you replaced.
-            </li>
-            <li>
-              <strong>Your best people.</strong> A-players don&rsquo;t quit
-              companies — they quit chaos.
-            </li>
-            <li>
-              <strong>Growth.</strong> You can&rsquo;t take on more business
-              while every current project needs your push to cross the line.
-            </li>
-            <li>
-              <strong>Your life.</strong> Be honest: when was your last
-              holiday without the phone?
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -231,15 +209,16 @@ export function SuperTeamsLandingPage() {
             Why does nothing move <em>unless you push?</em>
           </h2>
           <p>
-            Not because your people are lazy. The same employee who
-            &ldquo;looks incapable&rdquo; at work can organise their own
-            300-guest wedding — or their own perfect vacation. Their
-            performance follows the work system in your office: when
-            there&rsquo;s no system, everyone waits,{" "}
-            <em>and you keep chasing.</em>
+            Not because your people are lazy or incapable. The same person
+            who &ldquo;can&rsquo;t get anything done&rdquo; at work can
+            organise their own 300-guest wedding, or their own perfect
+            vacation.
+          </p>
+          <p className="lp-reframe-ask">
+            <strong>So why can&rsquo;t they perform for you?</strong>
           </p>
           <p className="lp-reframe-lead">
-            That&rsquo;s why the usual fixes keep failing:
+            You tried these, but they only work marginally:
           </p>
           <ul className="lp-fail-list">
             <li>
@@ -323,7 +302,7 @@ export function SuperTeamsLandingPage() {
           <h2>
             Creating Super Teams
             <br />
-            <em>is the perfect solution</em>
+            <em>the proven solution that works immediately</em>
           </h2>
           {/* The class-recording loop lives at the product reveal — the
               page's strongest asset at its emotional pivot (poster frame is
