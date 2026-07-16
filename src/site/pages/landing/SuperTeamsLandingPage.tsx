@@ -135,13 +135,13 @@ export function SuperTeamsLandingPage() {
               fetched when the section nears the viewport, and muted/play are
               set in JS (React drops the muted attribute in static renders,
               and autoplay policies require JS-muted play). */}
-          <div className="lp-story-video">
+          <div className="lp-story-video lp-video-after">
             <video
               loop
               playsInline
               preload="none"
               width="720"
-              height="1280"
+              height="786"
               poster="/assets/img/lp/lp-lia-story-poster.webp"
               data-video-src="/assets/video/lp-lia-story-loop.mp4"
               aria-label="Short clip: Lia at her overloaded desk — the problem isn't Lia, it's a business with no system, and the capable employee ends up carrying everyone else"
@@ -191,30 +191,27 @@ export function SuperTeamsLandingPage() {
              themselves the "does this sound like your team?" answer. */}
       <section className="lp-pain" id="pain">
         <div className="lp-container">
-          <h2>
-            Another missed deadline. Another angry customer.{" "}
-            <em>Another night chasing your team.</em>
-          </h2>
+          <h2>Does this sound like you?</h2>
           <div className="lp-pain-grid">
             <div className="lp-pain-card">
               <AlertIcon />
               <div>
-                <strong>Deadlines slip</strong>
-                <span>every project needs chasing</span>
+                <strong>You miss deadlines</strong>
+                <span>every project is a headache</span>
               </div>
             </div>
             <div className="lp-pain-card">
               <AlertIcon />
               <div>
-                <strong>One &lsquo;super employee&rsquo;</strong>
-                <span>carries everyone else</span>
+                <strong>You rely on 1&ndash;2 &lsquo;super employees&rsquo;</strong>
+                <span>if they&rsquo;re not here, things don&rsquo;t get done</span>
               </div>
             </div>
             <div className="lp-pain-card">
               <AlertIcon />
               <div>
-                <strong>Broken communication</strong>
-                <span>between departments</span>
+                <strong>Communication is difficult</strong>
+                <span>no transparency and slow decisions</span>
               </div>
             </div>
             <div className="lp-pain-card">
@@ -226,8 +223,9 @@ export function SuperTeamsLandingPage() {
             </div>
           </div>
           <p className="lp-pain-closer">
-            The problem isn&rsquo;t your people.{" "}
-            <em>It&rsquo;s a business running with no system.</em>
+            The problem isn&rsquo;t your people.
+            <br />
+            <em>It&rsquo;s because you don&rsquo;t have a good system.</em>
           </p>
         </div>
       </section>
@@ -331,16 +329,25 @@ export function SuperTeamsLandingPage() {
              your Lia one day resigns"). */}
       <section className="lp-product" id="product">
         <div className="lp-container lp-narrow">
-          <p className="lp-section-kicker">The solution</p>
-          <h2>Creating Super Teams</h2>
-          <div className="lp-photo-figure">
-            <img
-              src="/assets/img/lp/lp-hero-coaching.webp"
-              alt="Ethan Soo coaching a small team around a flipchart in a hands-on workshop"
-              width="1440"
-              height="1080"
-              loading="lazy"
-            />
+          <h2>
+            Creating Super Teams
+            <br />
+            <em>is the perfect solution</em>
+          </h2>
+          {/* The class-recording loop lives at the product reveal — the
+              page's strongest asset at its emotional pivot (poster frame is
+              Ethan mid-teaching). Lazy-loaded via landing.js. */}
+          <div className="lp-story-video lp-video-square">
+            <video
+              loop
+              playsInline
+              preload="none"
+              width="720"
+              height="672"
+              poster="/assets/img/lp/lp-days-class-poster.webp"
+              data-video-src="/assets/video/lp-days-class-loop.mp4"
+              aria-label="Short clip from a real class: a group exercise, participants presenting, and a team working a sticky-note planning board"
+            ></video>
           </div>
           <p>
             Creating Super Teams is a hands-on 2-day training that installs
@@ -381,22 +388,17 @@ export function SuperTeamsLandingPage() {
             from the first hour — the workshop is built around your business,
             not case studies.
           </p>
-          {/* Muted looping clip from Ethan's real class recording (three
-              beats: group exercise energy → participants presenting → team
-              working the sticky-note board). Mechanism footage in the
-              mechanism section; no captions — the Day 1/2 cards narrate.
-              Lazy-loaded via landing.js. */}
-          <div className="lp-story-video lp-video-square">
-            <video
-              loop
-              playsInline
-              preload="none"
-              width="720"
-              height="672"
-              poster="/assets/img/lp/lp-days-class-poster.webp"
-              data-video-src="/assets/video/lp-days-class-loop.mp4"
-              aria-label="Short clip from a real class: a group exercise, participants presenting, and a team working a sticky-note planning board"
-            ></video>
+          {/* Coaching photo — calm, concrete support for the module detail
+              the reader is analysing here (the class video now lives at the
+              product reveal). */}
+          <div className="lp-photo-figure">
+            <img
+              src="/assets/img/lp/lp-hero-coaching.webp"
+              alt="Ethan Soo coaching a small team around a flipchart in a hands-on workshop"
+              width="1440"
+              height="1080"
+              loading="lazy"
+            />
           </div>
           <div className="lp-days">
             <div className="lp-day">
@@ -905,18 +907,9 @@ export function SuperTeamsLandingPage() {
               </span>
             </div>
           </div>
-          <figure className="lp-photo-figure lp-photo-narrow">
-            <img
-              src="/assets/img/lp/lp-booking-ethan.webp"
-              alt="Ethan Soo welcoming a class with open arms"
-              width="750"
-              height="960"
-              loading="lazy"
-            />
-            <figcaption>
-              The 15-minute call is with Ethan himself — not a salesperson.
-            </figcaption>
-          </figure>
+          <p className="lp-booking-note">
+            The 15-minute call is with Ethan himself — not a salesperson.
+          </p>
           {/* Calendly inline embed — widget.js is lazy-injected by
               landing.js when this section nears the viewport (or when any
               #booking CTA is clicked), so it costs nothing at page load.

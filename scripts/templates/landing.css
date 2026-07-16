@@ -145,15 +145,6 @@ h1 em {
   font-style: normal;
   color: var(--purple);
 }
-/* Section kicker (small purple label above a section title) */
-.lp-section-kicker {
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--purple);
-  margin-bottom: 8px;
-}
 
 /* ── Placeholder blocks (replace with real assets) ───────────────────── */
 .lp-placeholder {
@@ -242,7 +233,6 @@ h1 em {
   font-style: italic;
   text-align: center;
 }
-.lp-photo-narrow { max-width: 320px; }
 .lp-story-video video {
   display: block;
   width: 100%;
@@ -365,6 +355,9 @@ h1 em {
 /* Product reveal section (§4) */
 .lp-product { background: var(--bg-soft); }
 .lp-product p { font-size: 16.5px; }
+/* Product header's second line: "is the perfect solution" — italic purple
+   (the only italic h2 line on the page; deliberate, it's the pivot). */
+.lp-product h2 em { font-style: italic; }
 .lp-product .lp-hrd-card { background: #fff; }
 /* Founder story — first-person block after the credentials/endorsement */
 .lp-founder-story {
@@ -845,6 +838,14 @@ h1 em {
   font-size: 14px;
   color: var(--muted-light);
   margin-bottom: 14px;
+}
+/* De-risking line above the calendar (replaced the booking photo) */
+.lp-booking-note {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
 }
 .lp-booking .lp-btn { margin-top: 0; }
 
