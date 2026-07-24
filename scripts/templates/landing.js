@@ -176,18 +176,36 @@
       window.addEventListener('load', warmStart);
     }
 
-    // Calendly reports its rendered content height on every step change —
-    // an ENHANCEMENT only (some browsers, notably Chrome desktop, never
-    // send it). When it arrives the widget fits its content snugly;
-    // otherwise the CSS base heights apply. Never gate visibility on this.
-    window.addEventListener('message', function (e) {
-      if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
-      var d = e.data;
-      if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
-        calendlyHost.style.height = d.payload.height;
-        hideCalSkeleton();
-      }
-    });
+    // ── Dynamic sizing: MOBILE ONLY (deliberate) ───────────────────────
+    // Calendly's widget.js already self-sizes the inline embed. Our own
+    // page_height handler is a SECOND controller writing the same height,
+    // and on Chrome desktop that race collapsed the widget to ~26px (the
+    // calendar rendered, then vanished). Desktop/tablet therefore use
+    // Calendly's stock self-sizing untouched; phones keep our handler,
+    // where it is confirmed working and prevents a blank tail.
+    var isPhone = window.matchMedia('(max-width: 767px)').matches;
+    if (isPhone) {
+      document.documentElement.classList.add('lp-cal-dynamic');
+      window.addEventListener('message', function (e) {
+        if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
+        var d = e.data;
+        if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
+          calendlyHost.style.height = d.payload.height;
+          hideCalSkeleton();
+        }
+      });
+    }
+
+    // Fallback link: report usage to the pixel so we can measure how often
+    // the embed still fails in browsers we cannot test.
+    var calFallback = document.querySelector('[data-cal-fallback]');
+    if (calFallback) {
+      calFallback.addEventListener('click', function () {
+        window.fbq('trackCustom', 'CalendarFallbackClick', {
+          viewport: isPhone ? 'phone' : 'desktop_tablet'
+        });
+      });
+    }
   }
 
   // ── Sticky mobile CTA bar ─────────────────────────────────────────────

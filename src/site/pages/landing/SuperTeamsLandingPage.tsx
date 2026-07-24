@@ -889,9 +889,9 @@ export function SuperTeamsLandingPage() {
             {/* hide_event_type_details + hide_landing_page_details force
                 Calendly's single-column layout — its two-column desktop
                 layout squeezed into this container caused horizontal
-                scrolling and jumping form fields. The skeleton shows until
-                Calendly's first page_height message (landing.js), which also
-                resizes the widget live so there's no blank tail. */}
+                scrolling and jumping form fields. Sizing: stock Calendly
+                self-sizing on desktop/tablet; landing.js drives the height
+                from page_height messages on phones only (see landing.js). */}
             <div className="lp-cal-skeleton" aria-hidden="true">
               <span className="lp-spinner"></span>
               Loading live calendar&hellip;
@@ -901,6 +901,20 @@ export function SuperTeamsLandingPage() {
               data-url="https://calendly.com/ethansoo-ciagile/team-diagnostic?hide_gdpr_banner=1&hide_event_type_details=1&hide_landing_page_details=1&primary_color=16a34a"
             ></div>
           </div>
+          {/* Always-visible escape hatch: a failed embed can never block a
+              booking. Clicks fire a CalendarFallbackClick pixel event so we
+              can measure how often the embed fails in the wild. */}
+          <p className="lp-cal-fallback">
+            Calendar not loading?{" "}
+            <a
+              href="https://calendly.com/ethansoo-ciagile/team-diagnostic"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cal-fallback
+            >
+              Open it here &rarr;
+            </a>
+          </p>
           <p className="lp-booking-or">Prefer WhatsApp?</p>
           <a
             href={WHATSAPP_LINK}

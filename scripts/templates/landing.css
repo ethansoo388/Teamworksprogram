@@ -778,18 +778,20 @@ h1 em {
   overflow-x: hidden;
   position: relative;
 }
-/* Calendly single-column widget. These are BASE heights that must be
-   usable on their own: landing.js resizes the widget from Calendly's
-   page_height messages when they arrive, but some browsers (Chrome
-   desktop) never send them, so the widget must fit its booking flow
-   without any message. Mobile stacks taller than desktop. */
+/* Calendly widget sizing.
+   DESKTOP/TABLET: stock behaviour — Calendly's widget.js self-sizes and
+   nothing here interferes. No height transition: animating the very
+   element Calendly measures caused it to read mid-animation values and
+   collapse the widget to ~26px on Chrome desktop.
+   PHONES: landing.js adds .lp-cal-dynamic to <html> and drives the height
+   from Calendly's page_height messages (confirmed working there). */
 .lp-calendar-embed .calendly-inline-widget {
   min-width: 300px;
+  height: 700px;
+}
+.lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget {
   height: 1000px;
   transition: height 0.25s ease;
-}
-@media (min-width: 768px) {
-  .lp-calendar-embed .calendly-inline-widget { height: 700px; }
 }
 .lp-calendar-embed iframe { width: 100%; }
 /* Loading skeleton — covers the container until Calendly's first
@@ -824,7 +826,19 @@ h1 em {
 }
 @media (prefers-reduced-motion: reduce) {
   .lp-spinner { animation: none; }
-  .lp-calendar-embed .calendly-inline-widget { transition: none; }
+  .lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget { transition: none; }
+}
+/* Escape hatch beneath the calendar — always visible, so a failed embed
+   can never block a booking. */
+.lp-cal-fallback {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted-light);
+  margin-bottom: 18px;
+}
+.lp-cal-fallback a {
+  color: var(--cta-green-dark);
+  font-weight: 600;
 }
 .lp-booking-or {
   text-align: center;
