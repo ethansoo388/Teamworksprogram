@@ -775,25 +775,33 @@ h1 em {
 }
 .lp-calendar-embed {
   margin-bottom: 20px;
-  overflow-x: hidden;
-  /* Explicit — without this, browsers compute overflow-y as auto whenever
-     overflow-x is non-visible, silently giving this wrapper its OWN
-     scrollbar (independent of, and in addition to, anything happening
-     inside Calendly's iframe) if the child ever renders taller than it. */
-  overflow-y: visible;
   position: relative;
+}
+/* overflow-x: hidden is PHONE ONLY (kept identical to the confirmed-
+   working config — it guards against Calendly's old two-column layout
+   squeeze). On desktop/tablet it is deliberately absent: per the CSS
+   overflow spec, browsers force overflow-y to "auto" on any element where
+   overflow-x is non-visible and overflow-y is visible — this cannot be
+   overridden by also declaring overflow-y explicitly. That forced "auto"
+   gave this wrapper its OWN scrollbar (independent of Calendly's iframe)
+   whenever content was even a few px taller than the box. Desktop/tablet
+   accept the box being sometimes taller than a given step's content
+   (blank space below) as the trade-off for never showing a scrollbar. */
+@media (max-width: 767px) {
+  .lp-calendar-embed { overflow-x: hidden; }
 }
 /* Calendly widget sizing.
    DESKTOP/TABLET: a plain static height, no JS ever touches it (see
-   landing.js — the page_height listener is phone-only). 950px is sized to
-   clear the tallest step in the flow (the "Enter Details" form: name,
-   email, three custom questions, terms text, button) so Calendly's iframe
-   never needs to scroll internally.
+   landing.js — the page_height listener is phone-only). 970px clears the
+   tallest step measured (the "Enter Details" form, ~957px) with a little
+   headroom; any shorter step (e.g. date/time selection) shows blank space
+   below it instead — an accepted trade-off, since overflow-x is no longer
+   forcing a scrollbar for whatever doesn't fit exactly.
    PHONE: unchanged from the confirmed-working config — landing.js drives
    this height live from page_height messages, floored at the same value. */
 .lp-calendar-embed .calendly-inline-widget {
   min-width: 300px;
-  height: 950px;
+  height: 970px;
 }
 @media (max-width: 767px) {
   .lp-calendar-embed .calendly-inline-widget { height: 900px; }
