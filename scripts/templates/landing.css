@@ -779,19 +779,17 @@ h1 em {
   position: relative;
 }
 /* Calendly widget sizing.
-   DESKTOP/TABLET: stock behaviour — Calendly's widget.js self-sizes and
-   nothing here interferes. No height transition: animating the very
-   element Calendly measures caused it to read mid-animation values and
-   collapse the widget to ~26px on Chrome desktop.
-   PHONES: landing.js adds .lp-cal-dynamic to <html> and drives the height
-   from Calendly's page_height messages (confirmed working there). */
+   These are only the INITIAL heights, shown until Calendly's first
+   page_height message arrives; landing.js then drives the height (floored
+   at the same values, so it can never collapse). Deliberately NO height
+   transition: animating the element Calendly measures made it read
+   mid-animation values and collapse to ~26px on Chrome desktop. */
 .lp-calendar-embed .calendly-inline-widget {
   min-width: 300px;
   height: 700px;
 }
-.lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget {
-  height: 1000px;
-  transition: height 0.25s ease;
+@media (max-width: 767px) {
+  .lp-calendar-embed .calendly-inline-widget { height: 900px; }
 }
 .lp-calendar-embed iframe { width: 100%; }
 /* Loading skeleton — covers the container until Calendly's first
@@ -826,7 +824,6 @@ h1 em {
 }
 @media (prefers-reduced-motion: reduce) {
   .lp-spinner { animation: none; }
-  .lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget { transition: none; }
 }
 /* Escape hatch beneath the calendar — always visible, so a failed embed
    can never block a booking. */

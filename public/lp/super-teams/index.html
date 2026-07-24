@@ -806,19 +806,17 @@
       position: relative;
       }
       /* Calendly widget sizing.
-      DESKTOP/TABLET: stock behaviour — Calendly's widget.js self-sizes and
-      nothing here interferes. No height transition: animating the very
-      element Calendly measures caused it to read mid-animation values and
-      collapse the widget to ~26px on Chrome desktop.
-      PHONES: landing.js adds .lp-cal-dynamic to <html> and drives the height
-      from Calendly's page_height messages (confirmed working there). */
+      These are only the INITIAL heights, shown until Calendly's first
+      page_height message arrives; landing.js then drives the height (floored
+      at the same values, so it can never collapse). Deliberately NO height
+      transition: animating the element Calendly measures made it read
+      mid-animation values and collapse to ~26px on Chrome desktop. */
       .lp-calendar-embed .calendly-inline-widget {
       min-width: 300px;
       height: 700px;
       }
-      .lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget {
-      height: 1000px;
-      transition: height 0.25s ease;
+      @media (max-width: 767px) {
+      .lp-calendar-embed .calendly-inline-widget { height: 900px; }
       }
       .lp-calendar-embed iframe { width: 100%; }
       /* Loading skeleton — covers the container until Calendly's first
@@ -853,7 +851,6 @@
       }
       @media (prefers-reduced-motion: reduce) {
       .lp-spinner { animation: none; }
-      .lp-cal-dynamic .lp-calendar-embed .calendly-inline-widget { transition: none; }
       }
       /* Escape hatch beneath the calendar — always visible, so a failed embed
       can never block a booking. */
@@ -1649,25 +1646,27 @@
                                     window.addEventListener('load', warmStart);
                                     }
                                     
-                                    // ── Dynamic sizing: MOBILE ONLY (deliberate) ───────────────────────
-                                    // Calendly's widget.js already self-sizes the inline embed. Our own
-                                    // page_height handler is a SECOND controller writing the same height,
-                                    // and on Chrome desktop that race collapsed the widget to ~26px (the
-                                    // calendar rendered, then vanished). Desktop/tablet therefore use
-                                    // Calendly's stock self-sizing untouched; phones keep our handler,
-                                    // where it is confirmed working and prevents a blank tail.
+                                    // ── Dynamic sizing, CLAMPED (all viewports) ────────────────────────
+                                    // Calendly's inline embed does NOT size itself — the height is the
+                                    // embedder's job (their own snippet hardcodes one), which is why the
+                                    // page_height event exists. So we drive it, but never trust the value
+                                    // blindly: Chrome desktop sometimes emits a bogus tiny height (~26px)
+                                    // during load, and writing that straight through is what collapsed the
+                                    // widget to a sliver. Flooring it keeps the calendar fitted to each
+                                    // step (no scrollbar, no blank tail) while making collapse impossible.
                                     var isPhone = window.matchMedia('(max-width: 767px)').matches;
-                                    if (isPhone) {
-                                    document.documentElement.classList.add('lp-cal-dynamic');
+                                    var CAL_MIN_HEIGHT = isPhone ? 900 : 700;
                                     window.addEventListener('message', function (e) {
                                     if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
                                     var d = e.data;
                                     if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
-                                    calendlyHost.style.height = d.payload.height;
+                                    var reported = parseInt(d.payload.height, 10);
+                                    if (!isNaN(reported)) {
+                                    calendlyHost.style.height = Math.max(reported, CAL_MIN_HEIGHT) + 'px';
+                                    }
                                     hideCalSkeleton();
                                     }
                                     });
-                                    }
                                     
                                     // Fallback link: report usage to the pixel so we can measure how often
                                     // the embed still fails in browsers we cannot test.
