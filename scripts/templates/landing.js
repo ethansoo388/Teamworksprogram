@@ -114,16 +114,53 @@
     var calendlyContainer = document.getElementById('calendar-embed');
     var calendlyLoaded = false;
     var skeletonHidden = false;
+    var shellReady = false;
+    var visibleSince = null;
+    // Confirmed by direct testing: our outer shell (script + iframe) is
+    // ready well before the section is ever scrolled to — Calendly's OWN
+    // internal render (fetching live slots, painting the UI) only starts
+    // once the iframe is actually visible, and takes ~2-3s from THAT
+    // moment, regardless of how early we prepared the shell. Revealing on
+    // shell-ready alone exposed that gap as blank space. So the skeleton
+    // now waits for BOTH shell-ready AND this many ms since true
+    // visibility, to mask Calendly's own boot time instead of exposing it.
+    var MIN_VISIBLE_MS = 2500;
 
     // Fail-OPEN: the skeleton must never be able to cover a working
-    // calendar. Any of these reveals it — iframe load, Calendly's
-    // page_height message, or a hard timeout. (Chrome desktop never sends
-    // page_height, which previously left the overlay up forever.)
-    var hideCalSkeleton = function () {
-      if (skeletonHidden) return;
+    // calendar forever. markShellReady() signals "our side is done"; any
+    // of iframe load, Calendly's page_height message, or a hard timeout
+    // call it. (Chrome desktop never sends page_height, which previously
+    // left the overlay up forever if nothing else had fired.)
+    var revealCalendar = function () {
+      if (skeletonHidden || !shellReady || visibleSince === null) return;
+      var elapsed = Date.now() - visibleSince;
+      if (elapsed < MIN_VISIBLE_MS) {
+        setTimeout(revealCalendar, MIN_VISIBLE_MS - elapsed);
+        return;
+      }
       skeletonHidden = true;
       if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
     };
+    var markShellReady = function () {
+      if (shellReady) return;
+      shellReady = true;
+      revealCalendar();
+    };
+
+    // Exact moment the section is genuinely visible — separate from the
+    // 1400px early-trigger observer below (which starts the network
+    // fetch early; this one only times the reveal).
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          visibleSince = Date.now();
+          obs.disconnect();
+          revealCalendar();
+        }
+      }).observe(calendlyContainer || calendlyHost);
+    } else {
+      visibleSince = Date.now();
+    }
 
     // Watch for the iframe Calendly injects, then reveal on its load event.
     if ('MutationObserver' in window) {
@@ -131,10 +168,10 @@
         var ifr = calendlyHost.querySelector('iframe');
         if (!ifr) return;
         calWatcher.disconnect();
-        ifr.addEventListener('load', hideCalSkeleton);
+        ifr.addEventListener('load', markShellReady);
         // If load already fired before this listener attached, reveal
         // shortly after the iframe exists.
-        setTimeout(hideCalSkeleton, 1500);
+        setTimeout(markShellReady, 1500);
       });
       calWatcher.observe(calendlyHost, { childList: true, subtree: true });
     }
@@ -148,7 +185,7 @@
       document.body.appendChild(s);
       // Backstop: reveal regardless of any signal (blocked script, no
       // MutationObserver, silent Calendly).
-      setTimeout(hideCalSkeleton, 5000);
+      setTimeout(markShellReady, 5000);
     };
     var bookingLinks = document.querySelectorAll('a[href="#booking"]');
     for (var b = 0; b < bookingLinks.length; b++) {
@@ -196,7 +233,7 @@
           if (!isNaN(reported)) {
             calendlyHost.style.height = Math.max(reported, CAL_MIN_HEIGHT) + 'px';
           }
-          hideCalSkeleton();
+          markShellReady();
         }
       });
     }
