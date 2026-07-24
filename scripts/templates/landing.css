@@ -778,13 +778,18 @@ h1 em {
   overflow-x: hidden;
   position: relative;
 }
-/* Calendly single-column widget. The height here is only the starting
-   value — landing.js resizes it live from Calendly's page_height messages,
-   so the widget always fits its current step with no blank tail. */
+/* Calendly single-column widget. These are BASE heights that must be
+   usable on their own: landing.js resizes the widget from Calendly's
+   page_height messages when they arrive, but some browsers (Chrome
+   desktop) never send them, so the widget must fit its booking flow
+   without any message. Mobile stacks taller than desktop. */
 .lp-calendar-embed .calendly-inline-widget {
   min-width: 300px;
-  height: 540px;
+  height: 1000px;
   transition: height 0.25s ease;
+}
+@media (min-width: 768px) {
+  .lp-calendar-embed .calendly-inline-widget { height: 700px; }
 }
 .lp-calendar-embed iframe { width: 100%; }
 /* Loading skeleton — covers the container until Calendly's first

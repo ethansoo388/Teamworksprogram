@@ -113,6 +113,32 @@
   if (calendlyHost) {
     var calendlyContainer = document.getElementById('calendar-embed');
     var calendlyLoaded = false;
+    var skeletonHidden = false;
+
+    // Fail-OPEN: the skeleton must never be able to cover a working
+    // calendar. Any of these reveals it — iframe load, Calendly's
+    // page_height message, or a hard timeout. (Chrome desktop never sends
+    // page_height, which previously left the overlay up forever.)
+    var hideCalSkeleton = function () {
+      if (skeletonHidden) return;
+      skeletonHidden = true;
+      if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
+    };
+
+    // Watch for the iframe Calendly injects, then reveal on its load event.
+    if ('MutationObserver' in window) {
+      var calWatcher = new MutationObserver(function () {
+        var ifr = calendlyHost.querySelector('iframe');
+        if (!ifr) return;
+        calWatcher.disconnect();
+        ifr.addEventListener('load', hideCalSkeleton);
+        // If load already fired before this listener attached, reveal
+        // shortly after the iframe exists.
+        setTimeout(hideCalSkeleton, 1500);
+      });
+      calWatcher.observe(calendlyHost, { childList: true, subtree: true });
+    }
+
     var loadCalendly = function () {
       if (calendlyLoaded) return;
       calendlyLoaded = true;
@@ -120,6 +146,9 @@
       s.src = 'https://assets.calendly.com/assets/external/widget.js';
       s.async = true;
       document.body.appendChild(s);
+      // Backstop: reveal regardless of any signal (blocked script, no
+      // MutationObserver, silent Calendly).
+      setTimeout(hideCalSkeleton, 5000);
     };
     var bookingLinks = document.querySelectorAll('a[href="#booking"]');
     for (var b = 0; b < bookingLinks.length; b++) {
@@ -147,16 +176,16 @@
       window.addEventListener('load', warmStart);
     }
 
-    // Calendly reports its rendered content height on every step change.
-    // Track it so the widget always fits snugly (no blank tail after the
-    // calendar, enough room for the questions form), and use the first
-    // height report as the "painted" signal that hides the skeleton.
+    // Calendly reports its rendered content height on every step change —
+    // an ENHANCEMENT only (some browsers, notably Chrome desktop, never
+    // send it). When it arrives the widget fits its content snugly;
+    // otherwise the CSS base heights apply. Never gate visibility on this.
     window.addEventListener('message', function (e) {
       if (!e.origin || e.origin.indexOf('calendly.com') === -1) return;
       var d = e.data;
       if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
         calendlyHost.style.height = d.payload.height;
-        if (calendlyContainer) calendlyContainer.classList.add('lp-cal-loaded');
+        hideCalSkeleton();
       }
     });
   }
